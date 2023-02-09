@@ -1,0 +1,47 @@
+Que déclenche une mise à jour des fichiers sur Transifex?
+=========================================================
+indexhtml/
+  Il ne devrait plus y en avoir, sauf correction. A traiter au cas par cas.
+
+newhomepage/
+package/
+installer/
+  sauvegarder l'ancienne page si elle existe
+  vérifier la nouvelle page (erreurs détectées par asciidoc ou traduction intempestive ou insuffisante)
+    - si OK effacer la sauvegarde éventuelle
+    - si KO revenir à la verson sauvegardée et alerter le coordinateur
+    
+pkgtools/
+slackpkg/
+  cp <fichier nouveau ou mis à jour> ~/slint/wip
+  cd ~/slint/tools-for-translators
+  ./generate_man_pages <ll>.[pkgtools|slackpkg]
+  Vérifier les pages de manuel générées dans  ~/slint/wip
+    - si OK, les recopier dans ~/slint/data/32-13.37/man[pkgtools|slackpkg],
+      puis exécuter admin/link_man_pages_to_32-13.37.sh
+    - sinon, alerter le coordinateur
+    
+slintdotsh/
+  cp <fichier nouveau ou mis à jour > ~/slint/wip
+  cd ~/slint/tools-for-translators
+  ./toolbox_slint_dot_sh => Check_PO
+  Vérifier les messages du script
+    - si OK, ./toolbox_slint_dot_sh => format_PO
+    - sinon, alerter le coordinateur
+    
+/templatepo
+  ll=`echo <fichier_nouveau_ou_modifié>|awk -F"." '{print $2}'`
+  po4a-translate -f xhml -l slint.conf -p <fichier nouveau ou modifié> -l ~/slint.fr/wip/slint.conf.$ll
+  Verifier le nouveau patron en l'utilisant.
+    - si OK, "cp -f ~/slint.fr/wip/slint.conf.$ll ~/slint.fr
+    - si KO, alerter le coordinateur
+
+Commment ré-générer le site après une mise à jour d'un fichier (traduction ou un des fichiers en Anglais)
+=========================================================================================================
+
+index.html.*: RAS
+
+{contribute,installer,package,slint,tools,translators}.html.en
+  lister les langues dans lesquelles <page> est disponibles à partir de `ls <page>*txt`, avec pl_PL=> pl et tr_TR=> tr
+  régénérer la page à partir de <page>.txt en incluant la liste des langues dans laquelle elle est disponible
+

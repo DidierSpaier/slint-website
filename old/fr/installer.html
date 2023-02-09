@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>L&#8217;installateur Slint</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Accueil</a></div>
+      <div><a href="installer.html">Installateur Slint</a></div>
+      <div><a href="package.html">Paquet Slint</a></div>
+      <div><a href="translators.html">Traducteurs</a></div>
+      <div><a href="contribute.html">Contribuer</a></div>
+      <div><a href="tools.html">Outils</a></div>
+      <div><a href="changelog.html">Journal de bord</a></div>
+      <div id="page-source"><a href="../installer.fr.txt">Texte source</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Le projet d'internationalisation de Slackware</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/installer.html">de</a> | <a href="../en/installer.html">en</a> | <a href="../es/installer.html">es</a> | <a href="../fr/installer.html">fr</a> | <a href="../ia/installer.html">ia</a> | <a href="../id/installer.html">id</a> | <a href="../it/installer.html">it</a> | <a href="../nl/installer.html">nl</a> | <a href="../pl/installer.html">pl</a> | <a href="../pt_BR/installer.html">pt_BR</a> | <a href="../pt_PT/installer.html">pt_PT</a> | <a href="../ru/installer.html">ru</a> | <a href="../sv/installer.html">sv</a> | <a href="../tr/installer.html">tr</a> | <a href="../uk/installer.html">uk</a> |</div>
+        <h1>L&#8217;installateur Slint</h1>
+      </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>L&#8217;installateur Slint vous permet d&#8217;utiliser votre langue préférée durant
+l&#8217;installation, et ajoute des outils d&#8217;administration polyglottes et des
+pages de manuels traduites à Slackware.</p></div>
+<div class="paragraph"><p>Un terminal Braille peut aussi être utilisé pour installer, puis piloter le
+système. Un mode d&#8217;emploi est disponible ici:
+<a href="https://slint.fr/docs/README_BRLTTY">https://slint.fr/docs/README_BRLTTY</a></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_télécharger_et_vérifier_l_8217_image_iso_de_l_8217_installateur">Télécharger et vérifier l&#8217;image  ISO de l&#8217;installateur</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Deux tailles d&#8217;images ISO sont disponibles :</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Les <a href="http://sourceforge.net/projects/slint/files/">images ISO DVD + USB
+  complètes</a> contiennent tout ce dont vous avez besoin pour installer
+  Slackware.
+</p>
+</li>
+<li>
+<p>
+Les <a href="https://slint.fr/installers">petites images ISO CD + USB</a> ont besoin en
+  complément d&#8217;un média contenant les paquets Slackware, par exemple un DVD
+  Slackware.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Pour télécharger une image ISO complète, cliquez d&#8217;abord sur son numéro de
+version, par exemple 14.1</p></div>
+<div class="paragraph"><p>Vous pouvez vérifier l&#8217;intégrité de l&#8217;image ISO avec sa somme de contrôle
+md5.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Pour les petites images ISO, en téléchageant et en utilisant le fichier md5
+  associé (dont le nom se termine par .md5).
+</p>
+</li>
+<li>
+<p>
+Pour l&#8217;image ISO complète, vous pouvez afficher la somme de contrôle en
+  cliquant sur la lettre i dans le disque noir à droite du lien vers l&#8217;image
+  ISO.
+  Par exemple, pour obtenir un installateur polyglotte d&#8217;une Slackware
+64-14.1 internationalisée, téléchargez l&#8217;image ISO (et le fichier md5, dans
+le cas d&#8217;un petit installateur), puis dans le même répertoire tapez par
+exemple l&#8217;une des commandes suivantes :
+</p>
+</li>
+</ul></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>md5sum -c slint64-14.1.iso.md5 # le résultat devrait être : OK
+md5sum slint64-14.1-full.iso # le résultat devrait être le même que celui affiché sur le site Internet</code></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_graver_l_8217_image_iso_sur_un_dvd_un_cd_ou_une_clef_usb">Graver l&#8217;image ISO sur un DVD, un CD ou une clef USB</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_faire_une_clef_usb_amorçable">Faire une clef USB amorçable</h3>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">
+<div class="ulist"><ul>
+<li>
+<p>
+Tous le contenu précédent de la clef USB sera PERDU
+</p>
+</li>
+<li>
+<p>
+Relisez soigneusement votre commande pour vous assurer de n&#8217;avoir pas écrit
+  le nom d&#8217;une partition de disque dur au lieu de celui de la clef USB car le
+  contenu de cette partition serait IRRÉMÉDIABLEMENT PERDU
+</p>
+</li>
+</ul></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Sous <em>Linux</em> insérez la clef USB, puis vérifiez son nom grâce aux commandes
+suivantes :</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cat /proc/partitions
+dmesg | tail</code></pre>
+</div></div>
+<div class="paragraph"><p>Si par exemple son nom est /dev/sdc, tapez :</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>dd if=&lt;nomdefichier.iso&gt; of=/dev/sdc bs=1M</code></pre>
+</div></div>
+<div class="paragraph"><p>Sous <em>Windows</em> utilisez l&#8217;application <a href="http://rufus.akeo.ie/">Rufus</a> ,
+gratuite et à code source ouvert.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_faire_un_cd_bootable_petit_installateur_ou_un_dvd_grand_installateur">faire un CD bootable (petit installateur) ou un DVD (grand installateur)</h3>
+<div class="paragraph"><p>Sous <em>Linux</em> tapez une commande comme la première ci-dessous pour un CD, ou
+la seconde pour un DVD.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cat slint64-14.1.iso | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso</code></pre>
+</div></div>
+<div class="paragraph"><p>Sous <em>Windows 2000/XP/Vista/7</em> utilisez l&#8217;application
+<a href="http://infrarecorder.org/">InfraRecorder</a>, gratuite et à code source ouvert.</p></div>
+<div class="paragraph"><p>Sous <em>Windows 7/8</em> utilisez l&#8217;application
+<a href="http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file">Graveur
+d&#8217;Image Disque Windows</a>, livrée avec Windows 7 et 8</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_utilisez_votre_installateur_polyglotte">Utilisez votre installateur polyglotte</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Insérez simplement le support d&#8217;installation (CD, DVD ou clef USB) et
+redémarrez votre machine.</p></div>
+<div class="paragraph"><p>Sur l'écran d&#8217;accueil, vous choisirez votre langue préférée pour
+l&#8217;installation en tapant le code à deux chiffres correspondant.</p></div>
+<div class="paragraph"><p>En plus d'être polyglotte, les installateurs Slint ajoutent les
+fonctionnalités suivantes à celles des installateurs Slackware d&#8217;origine:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Police par défaut et plan de clavier sont adaptés à la langue utilisée pour
+  l&#8217;installation.
+</p>
+</li>
+<li>
+<p>
+Quand c&#8217;est possible une police True Type est utilisée durant
+  l&#8217;installation, pour adapter automatiquement la taille de police à la
+  résolution d'écran (pour Slackware versions 14.0 et 14.1 seulement).
+</p>
+</li>
+<li>
+<p>
+Il vous est proposé de créer des comptes d&#8217;utilisateurs ordinaires à la fin
+  de l&#8217;installation (avant redémarrage).
+</p>
+</li>
+<li>
+<p>
+Il vous est proposé de définir comme valeurs par défaut dans le système
+  installé la langue et le plan de clavier utilisés durant l&#8217;installation, et
+  d&#8217;effectuer des réglages correspondants du clavier sous X, si le serveur X
+  est installé.
+</p>
+</li>
+<li>
+<p>
+Un paquet Slint est installé, qui procure des traductions des principaux
+  outils Slackware et de leurs pages de manuels, listées dans
+  <a href="package.html">Paquet Slint</a>, et des documents placés dans
+  /usr/doc/slint-&lt;version&gt;-&lt;date&gt;, y compris un Slint-HOWTO.txt et un script
+  reinstall-slackware-packages.sh.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Si vous utilisez une petite version de l&#8217;installateur, vous aurez aussi
+besoin durant l&#8217;installation d&#8217;un <em>média source</em>, autrement dit un média
+contenant les paquets Slackware. Les paquets peuvent être installés à partir
+de DVD/CDs Slackware, d&#8217;une clef USB Slackware, d&#8217;un partage Samba, de NFS
+(Network File System), d&#8217;un serveur FTP/HTTP. Quand vous choisissez SOURCE
+dans le menu, l&#8217;installateur vous dit quoi faire selon le type de média
+choisi.</p></div>
+<div class="paragraph"><p>Pour vous procurer un support source, suivez ce lien :
+<a href="http://www.slackware.com/getslack/">Obtenir Slack</a></p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">au besoin vous pouvez remplacer le média d&#8217;installation par un autre
+contenant les paquets, car le moment venu d&#8217;installer les paquets
+l&#8217;installateur aura déjà été chargé en mémoire.</td>
+</tr></table>
+</div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Dernière mise à jour 2016-04-23 16:20:26 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

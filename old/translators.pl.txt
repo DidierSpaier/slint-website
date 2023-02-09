@@ -1,0 +1,83 @@
+= Tłumacze i inni kontrybutorzy projektu Slint
+
+Strona to zawiera wszystkich tłumaczy i recenzentów projektu Slint zarejestrowanych na platformie Transifex.
+
+Wszystkim wielkie dzięki!
+
+Didier Spaier
+
+[cols="50,50",format="csv",width="80%",options="header"]
+|========
+Tłumacz,Język
+dlee99 (Dik Leenheer),holenderski
+Eric Hameleers,holenderski
+Kaj Huisman,holenderski
+ponce,włoski
+celyr,włoski
+giogio, włoski
+giuseppep (Giuseppe Pignataro),włoski
+ihaveadrin,włoski
+kooru,włoski
+Sébastien Boillod,francuski
+Didier Spaier,francuski
+Nicolas Kovacs,francuski
+Marcin Herda,polski
+Piotr Maksymiec,polski
+elesmod,polski
+lokkon,polski
+Christian Ruesch,niemiecki
+franzen,niemiecki
+Johannes Georgi,niemiecki
+Maik Wagner,niemiecki
+Marcel Saegebarth,niemiecki
+spongetron,niemiecki
+Sammyboy (Marek Srejma),niemiecki
+titopoquito,niemiecki
+Adriano Balani,portugalski (brazylijski)
+Enrico Nicoletto,portugalski (brazylijski)
+Fela,portugalski (brazylijski)
+Gabriel Magno,portugalski (brazylijski)
+Icavalheiro,portugalski (brazylijski)
+Retalhador,portugalski (brazylijski)
+br_Orion,portugalski (brazylijski)
+igaldino,portugalski (brazylijski)
+Malkon Rodrigo,portugalski (brazylijski)
+marcelo.castro,portugalski (brazylijski)
+Xerxes Lins,portugalski (brazylijski)
+hugok (Hugo Carvalho), portugalski (Portugalia)
+Dimitris Tzemos,grecki
+dreamwalking,grecki
+George Vlahavas,grecki
+Efstathios Iosifidis,grecki
+Constantine Mousafiris,grecki
+Diantre,hiszpański (Ameryka Łacińska)
+AlvaroG,hiszpański (Ameryka Łacińska)
+ecoslacker,hiszpański (Ameryka Łacińska)
+sombragris,hiszpański (Ameryka Łacińska)
+Serg Bormant,rosyjski
+Sergey Ignatev,rosyjski
+Yaroslav Shmelev,rosyjski
+Graf,rosyjski
+adioe3,bośniacki (Bośnia i Hercegowina)
+Malsasa,indonezyjski
+willysr,indonezyjski
+tuapembual,indonezyjski
+kisil,ukraiński
+uatech,ukraiński
+xuser13,ukraiński
+Koljan1970 (Микола Ткач),ukraiński
+AaLeSsHhKka (Oleh Tsyupka), ukraiński
+StreamThreader,ukraiński
+Ekin Akoğlu,turecki
+kaanureyen07,turecki
+Kemal Ökmen,turecki
+Orhan Orhan,turecki
+Onur Özdemir,turecki
+Samet Yilmaz,turecki
+Vilender,turecki
+zm1990s (Zhang Min),chiński (Chiny)
+guanx,chiński (Chiny)
+Smokey,rumuński
+tuxbg (Krustio),bułgarski
+giogio, Interlingua
+|========

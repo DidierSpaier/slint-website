@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Didier Spaier <didier@slint.fr>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: slintwebsite\n"
+"POT-Creation-Date: 2014-12-04 00:47+0100\n"
+"PO-Revision-Date: 2014-12-07 11:33+0000\n"
+"Last-Translator: Didier Spaier <didier@slint.fr>\n"
+"Language-Team: Indonesian (Indonesia) (http://www.transifex.com/projects/p/slintwebsite/language/id_ID/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id_ID\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. type: Title =
+#: translators.en.txt:1
+#, no-wrap
+msgid "Translators and other Slint contributors"
+msgstr "Penterjemah dan kontributor Slint"
+
+#. type: Plain text
+#: translators.en.txt:4
+msgid ""
+"This page lists all Slint translators registered on the Transifex platform, "
+"and reviewers."
+msgstr "Halaman ini berisi daftar semua penterjemah dan reviewer Slint yang terdaftar pada Transifex."
+
+#. type: Plain text
+#: translators.en.txt:6
+msgid "Huge thanks to all!"
+msgstr "Banyak terima kasih kepada semua!"
+
+#. type: Plain text
+#: translators.en.txt:8
+msgid "Didier Spaier"
+msgstr "Didier Spaier"
+
+#. type: delimited block |
+#: translators.en.txt:83
+#, no-wrap
+msgid ""
+"Translator,Language\n"
+"dlee99 (Dik Leenheer),Dutch\n"
+"Eric Hameleers,Dutch\n"
+"Kaj Huisman,Dutch\n"
+"ponce,Italian\n"
+"celyr,Italian\n"
+"giogio, Italian\n"
+"giuseppep (Giuseppe Pignataro),Italian\n"
+"ihaveadrin,Italian\n"
+"kooru,Italian\n"
+"Sébastien Boillod,French\n"
+"Didier Spaier,French\n"
+"Nicolas Kovacs, French\n"
+"Marcin Herda,Polish\n"
+"Piotr Maksymiec,Polish\n"
+"elesmod,Polish\n"
+"lukkon,Polish\n"
+"Christian Ruesch,German\n"
+"franzen,German\n"
+"Johannes Georgi,German\n"
+"Maik Wagner,German\n"
+"Marcel Saegebarth,German\n"
+"spongetron,German\n"
+"Sammyboy (Marek Srejma),German\n"
+"titopoquito,German\n"
+"Adriano Balani,Brazilian Portuguese\n"
+"Enrico Nicoletto,Brazilian Portuguese\n"
+"Fela,Brazilian Portuguese\n"
+"Gabriel Magno,Brazilian Portuguese\n"
+"Icavalheiro,Brazilian Portuguese\n"
+"Retalhador,Brazilian Portuguese\n"
+"br_Orion,Brazilian Portuguese\n"
+"igaldino,Brazilian Portuguese\n"
+"Malkon Rodrigo,Brazilian Portuguese\n"
+"marcelo.castro,Brazilian Portuguese\n"
+"Xerxes Lins,Brazilian Portuguese\n"
+"hugok (Hugo Carvalho), Portuguese (Portugal)\n"
+"Dimitris Tzemos,Greek\n"
+"dreamwalking,Greek\n"
+"George Vlahavas,Greek\n"
+"Efstathios Iosifidis,Greek\n"
+"Constantine Mousafiris,Greek\n"
+"Diantre,Spanish (Latin America)\n"
+"AlvaroG,Spanish (Latin America)\n"
+"ecoslacker,Spanish (Latin America)\n"
+"sombragris,Spanish (Latin America)\n"
+"Serg Bormant,Russian\n"
+"Sergey Ignatev,Russian\n"
+"Yaroslav Shmelev,Russian\n"
+"Graf,Russian\n"
+"adioe3,Bosnian (Bosnia and Herzegovina)\n"
+"Malsasa,Indonesian\n"
+"willysr,Indonesian\n"
+"tuapembual,Indonesian\n"
+"kisil,Ukrainian\n"
+"uatech,Ukrainian\n"
+"xuser13,Ukrainian\n"
+"Koljan1970 (Микола Ткач),Ukrainian\n"
+"AaLeSsHhKka (Oleh Tsyupka),Ukrainian\n"
+"StreamThreader,Ukrainian\n"
+"Ekin Akoğlu,Turkish\n"
+"kaanureyen07, Turkish\n"
+"Kemal Ökmen,Turkish\n"
+"Orhan Orhan, Turkish\n"
+"Onur Özdemir,Turkish\n"
+"Samet Yilmaz,Turkish\n"
+"Vilender,Turkish\n"
+"zm1990s (Zhang Min),Chinese (China)\n"
+"guanx,Chinese (China)\n"
+"Smokey,Romanian\n"
+"tuxbg (Krustio),Bulgarian\n"
+"giogio, Interlingua\n"
+msgstr "Penterjemah, Bahasa\ndlee99,Belanda\nEric Hameleers,Belanda\nKaj Huisman,Belanda\nponce,Italia\ncelyr,Italia\ngiogio, Italia\nkooru,Italia\ngiuseppep ,Italia\ngiogio, Italia\nSébastien Boillod,Perancis\nDidier Spaier,Perancis\nNicolas Kovacs, Perancis\nMarcin Herda,Polandia\nPiotr Maksymiec,Polandia\nelesmod,Polandia\nlukkon,Polandia\nChristian Ruesch,Jerman\nfranzen,Jerman\nJohannes Georgi,Jerman\nMaik Wagner,Jerman\nMarcel Saegebarth,Jerman\nspongetron,Jerman\nSammyboy (Marek Srejma),Jerman\ntitopoquito,Jerman\nAdriano Balani,Portugis Brazil\nEnrico Nicoletto,Portugis Brazil\nFela,Portugis Brazil\nGabriel Magno,Portugis Brazil\nIcavalheiro,Portugis Brazil\nRetalhador,Portugis Brazil\nbr_Orion,Portugis Brazil\nigaldino,Portugis Brazil\nMalkom Rodrigo,Portugis Brazil\nmarcelo.castro,Portugis Brazil\nXerxes Lins,Portugis Brazil\nhugok (Hugo Carvalho), Portugis (Portugal)\nDimitris Tzemos, Yunani\ndreamwalking,Yunani\nGeorge Vlahavas,Yunani\nEfstathios Iosifidis,Yunani\nConstantine Mousafiris,Yunani\nDiantre, Spanyol (Amerika Latin)\nAlvaroG,Spanyol (Amerika Latin)\necoslacker,Spanyol (Amerika Latin)\nsombragris,Spanyol (Amerika Latin)\nSerg Bormant,Rusia\nSergev Ignatev,Rusia\nYaroslav Shmelev,Rusia\nGraf,Rusia\nadioe3,Bosnia (Bosnia dan Herzegovina)\nMalsasa,Indonesia\nwillysr,Indonesia\ntuapembual,Indonesia\nkisil,Ukraina\nuatech,Ukraina\nxuser13,Ukraina\nKoljan1970 (Микола Ткач),Ukrania\nAaLeSsHhKka (Oleh Tsyupka),Ukraina\nStreamThreader,Ukrainian\nEkin Akoğlu,Turki\nkaanureyen07, Turki\nKemal Ökmen,Turki\nOrhan Orhan, Turki\nOnur Özdemir,Turki\nSamet Yilmaz,Turki\nVilender,Turki\nzm1990s (Zhang Min), (China)\nguanx, (China)\nSmokey, Romania\ntuxbg (Krustio),Bulgaria\ngiogio, Interlingua\n"

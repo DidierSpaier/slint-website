@@ -1,0 +1,84 @@
+= Переводчики и прочие участники Slint
+
+На этой странице приведён список всех переводчиков и рецензентов Slint,
+зарегистрированных на платформе Transifex.
+
+Огромное спасибо всем!
+
+Didier Spaier
+
+[cols="50,50", format="csv", width="80%", options="header"]
+|========
+Переводчик, язык
+dlee99 (Dik Leenheer), нидерландский 
+Eric Hameleers, нидерландский
+Kaj Huisman, нидерландский 
+ponce, итальянский
+celyr, итальянский
+giogio, итальянский
+giuseppep (Giuseppe Pignataro), итальянский
+ihaveadrin, итальянский
+kooru, итальянский
+Sébastien Boillod, французский
+Didier Spaier, французский
+Nicolas Kovacs, французский
+Marcin Herda, польский
+Piotr Maksymiec, польский
+elesmod, польский
+lukkon, польский
+Christian Ruesch, немецкий
+franzen, немецкий
+Johannes Georgi, немецкий
+Maik Wagner, немецкий
+Marcel Saegebarth, немецкий
+spongetron, немецкий
+Sammyboy (Marek Srejma),немецкий
+titopoquito, немецкий
+Adriano Balani, бразильский (португальский)
+Enrico Nicoletto, бразильский (португальский)
+Fela, бразильский (португальский)
+Gabriel Magno, бразильский (португальский)
+Icavalheiro, бразильский (португальский)
+Retalhador, бразильский (португальский)
+br_Orion, бразильский (португальский)
+igaldino, бразильский (португальский)
+Malkon Rodrigo, бразильский (португальский)
+marcelo.castro, бразильский (португальский)
+Xerxes Lins, бразильский (португальский)
+hugok (Hugo Carvalho), португальский (Португалия)
+Dimitris Tzemos, греческий
+dreamwalking, греческий
+George Vlahavas, греческий
+Efstathios Iosifidis, греческий
+Constantine Mousafiris, греческий
+Diantre, испанский (латиноамериканский)
+AlvaroG, испанский (латиноамериканский)
+ecoslacker, испанский (латиноамериканский)
+sombragris, испанский (латиноамериканский)
+Serg Bormant, русский
+Sergey Ignatev, русский
+Yaroslav Shmelev, русский
+Graf, русский
+adioe3, боснийский (Босния и Герцеговина)
+Malsasa, индонезийский
+willysr, индонезийский
+tuapembual, индонезийский
+kisil, украинский
+uatech, украинский
+xuser13, украинский
+Koljan1970 (Микола Ткач), украинский
+AaLeSsHhKka (Oleh Tsyupka),Украина
+StreamThreader, украинский
+Ekin Akoğlu, турецкий
+kaanureyen07, турецкий
+Kemal Ökmen, турецкий
+Orhan Orhan,  турецкий
+Onur Özdemir, турецкий
+Samet Yilmaz, турецкий
+Vilender, турецкий
+zm1990s (Zhang Min), китайский (Китай)
+guanx, китайский (Китай)
+Smokey, румынский
+tuxbg (Krustio), болгарский
+giogio, интерлингва
+|========

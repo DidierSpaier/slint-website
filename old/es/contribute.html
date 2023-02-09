@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Contribuir al Proyecto Slint</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Inicio</a></div>
+      <div><a href="installer.html">Instalador Slint</a></div>
+      <div><a href="package.html">Paquete Slint</a></div>
+      <div><a href="translators.html">Traductores</a></div>
+      <div><a href="contribute.html">Contribuir</a></div>
+      <div><a href="tools.html">Herramientas</a></div>
+      <div><a href="changelog.html">ChangeLog</a></div>
+      <div id="page-source"><a href="../contribute.es.txt">Texto Fuente</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />El Proyecto de Internacionalización de Slackware</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/contribute.html">de</a> | <a href="../en/contribute.html">en</a> | <a href="../es/contribute.html">es</a> | <a href="../fr/contribute.html">fr</a> | <a href="../ia/contribute.html">ia</a> | <a href="../it/contribute.html">it</a> | <a href="../nl/contribute.html">nl</a> | <a href="../pl/contribute.html">pl</a> | <a href="../pt_PT/contribute.html">pt_PT</a> | <a href="../ru/contribute.html">ru</a> | <a href="../tr/contribute.html">tr</a> | <a href="../uk/contribute.html">uk</a> |</div>
+        <h1>Contribuir al Proyecto Slint</h1>
+      </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>¿Así que quiere ayudar y contribuir al proyecto Slint? !Bienvenido a bordo!</p></div>
+<div class="paragraph"><p>El trabajo necesario para proveer los productos de Slint es en su mayoría
+traducción y revisión de scripts de shell, los cuales forman los
+instaladores y herramientas de administración de Slackware, así como
+documentación orientada a los usuarios de Slackware en forma de archivos de
+texto o páginas de manual.</p></div>
+<div class="paragraph"><p>Idealmente, nos gustaría que los traductores:</p></div>
+<div class="ulist compact"><ul>
+<li>
+<p>
+sean capaces de comunicarse en Inglés y que tengan bastante fluidez en el
+  lenguaje destino, preferiblemente su lenguaje nativo
+</p>
+</li>
+<li>
+<p>
+entiendan vocabulario técnico relacionado con la instalación y
+  administración de un sistema Linux
+</p>
+</li>
+<li>
+<p>
+sean usuarios de Slackware
+</p>
+</li>
+<li>
+<p>
+sean capaces de leer y entender scripts de shell simples
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Pero aunque no cumpla estas expectativas, no dude en ofrecerse como
+voluntario: hay muchas tareas en las que su talento puede ser útil.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hágase_voluntario_y_defina_sus_contribuciones">Hágase voluntario y defina sus contribuciones</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Para ofrecerse como traductor voluntario, preferiblemente utilice la
+plataforma Transifex: primero
+<a href="https://www.transifex.com/signup/contributor/">regístrese en Transifex</a> (es
+gratis), luego vaya a <a href="https://www.transifex.com/projects/p/slint/">la página
+del proyecto Slint</a> en Transifex:</p></div>
+<div class="ulist compact"><ul>
+<li>
+<p>
+Si su lenguaje está listado, haga click en él, luego en la página del
+  lenguaje haga click en "Unirse al equipo".
+</p>
+</li>
+<li>
+<p>
+De otra forma, haga click en "Solicitar un lenguaje" (en la barra celeste
+  justo arriba de la lista de lenguajes)
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Pero si desea hacer preguntas primero, o proponer su ayuda para otras tareas
+diferentes de la traducción, envíe un correo electrónico al encargado de
+Slint: didier punto spaier arroba epsm punto fr.</p></div>
+<div class="paragraph"><p>Entonces podrá consultar con el coordinador de su equipo o el administrador
+de Slint para definir el "por qué", "qué", "cómo" y el "cuándo" de sus
+contribuciones a Slint.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conozca_nuestros_métodos_y_herramientas_y_esté_listo_a_comunicarse_dentro_del_equipo_slint">Conozca nuestros métodos y herramientas y esté listo a comunicarse dentro del equipo Slint</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Por favor lea <a href="#recommendations">Recomendaciones prácticas para traductores</a>
+abajo.</p></div>
+<div class="paragraph"><p>Entonces, familiarícese con con las <a href="tools.html">Herramientas</a> que
+usamos. Para utilizarlas mejor necesitará tener instalada una distribución
+de Linux, preferiblemente un sistema Slackware completo, incluyendo los
+siguientes paquetes:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+../extra/aspell-words-lists/&lt;paquetes para su lenguaje&gt; para revisión
+  ortográfica
+</p>
+</li>
+<li>
+<p>
+../kdei/&lt;paquete kde-l10n para su lenguaje&gt; para localizar la interfaz de
+  usuario de Lokalize si lo utiliza
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Por último, si bien no menos importante, necesitamos trabajar juntos como un
+equipo, así que:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Por favor regístrese en Transifex, aunque no utilice su editor en línea, y
+  luego revise toda la
+  <a href="https://www.transifex.com/settings/notices/">configuración de
+  notificaciones</a>. De esta forma es más fácil mantener a todos los
+  colaboradores informados de inmediato sobre cualquier cosa de interés
+  general. Por favor indique su nombre completo, aún si usa un apodo.
+</p>
+</li>
+<li>
+<p>
+Le sugerimos enfáticamente que se suscriba a la
+  <a href="https://lists.sourceforge.net/lists/listinfo/slint-translators">lista de
+  correo slint-translators</a>. Esto le permitirá hacer y contestar preguntas,
+  participar en discusiones, hacer sugerencias y propuestas.
+</p>
+</li>
+<li>
+<p>
+Esté preparado para proveer una dirección de correo electrónico, para que el
+  coordinador de su equipo y el encargado de Slint puedan comunicarse.
+</p>
+</li>
+<li>
+<p>
+Puede también utilizar la función de Discusiones en Transifex en la página
+  de su lenguaje del proyecto Slint.
+</p>
+</li>
+<li>
+<p>
+Puede también seguir
+  <a href="http://www.linuxquestions.org/questions/slackware-14/internationalized-slackware-14-installer-what-languages-to-start-4175455701/">este
+  hilo</a> en el foro de Slackware de LinuxQuestions.org. Para hacer esto,
+  regístrese en LQ y ponga un mensaje en el hilo, o despliéguelo y haga click
+  en "Thread Tools &#8658; Subscribe to this Thread" (en la barra azul justo arriba
+  del primer mensaje).
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alcance_de_la_traducción">Alcance de la traducción</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_lenguajes_destino">Lenguajes destino</h3>
+<div class="paragraph"><p>Al momento de escribir esto, el instalador slint y las principales
+herramientas de administración de Slackware están completamente traducidas
+en Francés, Alemán, Polaco, Portugués, Ruso, Español y Ucraniano. Otras
+traducciones están en progreso, su estado actual puede ser revisado en
+<a href="https://www.transifex.com/projects/p/slint/resource/slint/">esta página</a>.</p></div>
+<div class="paragraph"><p>Las páginas de manual están traducidas en más lenguajes, las traducciones
+completas están listadas en el archivo
+<a href="https://slint.fr/packages/MAN_PAGES.TXT">MAN_PAGES.TXT</a></p></div>
+</div>
+<div class="sect2">
+<h3 id="_contenido_traducido">Contenido traducido</h3>
+<div class="paragraph"><p>El contenido traducido se conforma de archivos que incluyen los mensajes
+originales en Inglés junto a su traducción, llamados archivos PO. Estos
+archivos son producidos y procesados por la aplicación GNU <em>gettext</em>. Cada
+grupo de mensajes (en Inglés en el caso de Slint) para la traducción se
+almacenan en un archivo POT, a partir del cual se genera un archivo PO
+correspondiente para cada lenguaje destino. Vea la página
+<a href="http://docs.slackware.com/howtos:misc:internationalization_and_localization_of_shell_scripts">Internationalización
+y localización de scripts de shell</a> en
+<a href="http://docs.slackware.com/start">SlackDocs</a> para saber más sobre esto.</p></div>
+<div class="paragraph"><p>Los mensajes incluidos en un archivo POT son obtenidos de uno o varios
+scripts de shell o páginas de manual. A continuación está la lista de los
+archivos POT actuales en Slint y sus alcances (vea la página
+<a href="tools.html">Herramientas</a> para saber cómo usar las herramientas
+relacionadas).</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Archivo POT</th>
+<th align="left" valign="top">Nombre del Recurso (Transifex)</th>
+<th align="left" valign="top">Alcance</th>
+<th align="left" valign="top">Herramienta asociada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><div class="verse">slackware.pot</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/slint/">slint</a></div></td>
+<td align="left" valign="top"><div class="verse">Instalador Slint
+Paquete Slint (sin páginas de manual)</div></td>
+<td align="left" valign="top"><div class="verse">toolbox.sh</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">pkgtools.pot</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/pkgtools/">pkgtools</a></div></td>
+<td align="left" valign="top"><div class="verse">páginas de manual contenidas en el paquete <em>pkgtools</em></div></td>
+<td align="left" valign="top"><div class="verse">gen_man_pages</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">slackpkg.pot</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/slackpkg/">slackpkg</a></div></td>
+<td align="left" valign="top"><div class="verse">páginas de manual contenidas en el paquete <em>slackpkg</em></div></td>
+<td align="left" valign="top"><div class="verse">gen_man_pages</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">slint.pot</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/">POT file for slint.sh</a></div></td>
+<td align="left" valign="top"><div class="verse">script slint.sh, vea la página <a href="tools.html">Herramientas</a></div></td>
+<td align="left" valign="top"><div class="verse">toolbox_slint_sh</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">index.html.pot</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/indexhtml/">index.html</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="index.html">Página de inicio antigua de Slint</a></div></td>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">template.pot</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/templatepo/">template.po</a></div></td>
+<td align="left" valign="top"><div class="verse">Barra lateral y título superior de las páginas de Slint</div></td>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/slinttxt/">slint.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="slint.html">Página de Inicio de Slint</a></div></td>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/installertxt/">installer.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="installer.html">Instalador Slint</a></div></td>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/packagetxt/">package.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="package.html">Paquete Slint</a></div></td>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/translatorstxt/">translators.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="translators.html">Traductores</a></div></td>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/contributetxt/">contribute.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="contribute.html">Contribuir</a></div></td>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/toolstxt/">tools.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="tools.html">Herramientas</a></div></td>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/changelogtxt/">changelog.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="changelog.html">ChangeLog</a></div></td>
+<td align="left" valign="top"><div class="verse">(ninguno)</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transición_de_las_páginas_web_antiguas_a_las_nuevas">Transición de las páginas web antiguas a las nuevas</h3>
+<div class="paragraph"><p>Nuestra <a href="index.html">página de inicio antigua</a> había sido escrita
+directamente en xhtml. Esta página ha sido traducida a 13 lenguajes, y será
+reemplazada progresivamente por la página actual, llamada tentativamente
+<a href="slint.html">slint.html</a>.</p></div>
+<div class="paragraph"><p>Las páginas web están listadas en el menú en la barra lateral. El enlace
+<a href="slint.html">página de inicio</a> reemplazará progresivamente el antiguo, el
+cual ya no será traducido a más lenguajes ni será actualizado.</p></div>
+</div>
+<div class="sect2">
+<h3 id="new_web_pages">Traducción de páginas web</h3>
+<div class="paragraph"><p>Algunas de las páginas web están orientadas al usuario final:
+<a href="slint.html">slint.html</a>, <a href="installer.html">installer.html</a> and
+<a href="package.html">package.html</a>. Estas páginas, así como
+<a href="https://www.transifex.com/projects/p/slint/resource/templatepo/">template.po</a>
+(usado para generar el título superior traducido y la barra lateral
+izquierda de las páginas web) deben ser traducidas con prioridad.</p></div>
+<div class="paragraph"><p>Otras páginas web: <a href="contribute.html">Contribuir</a>,
+<a href="translators.html">Traductores</a>, <a href="tools.html">Herramientas</a> y
+<a href="changelog.html">ChangeLog</a> también pueden ser traducidas (eso depende de
+cada equipo de traducción) pero <em>después</em> de que las páginas listadas en el
+párrafo anterior han sido traducidas.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/note.png" alt="Note" />
+</td>
+<td class="content">Para un lenguaje dado, al traducir template.po, es mejor dejar los nombres
+en Inglés de las páginas web sin traducir (por ahora), de forma que los
+visitantes entiendan que al hacer click en los enlaces correspondientes en
+el menú se desplegarán estas páginas en Inglés.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Todas las páginas nuevas se generan utilizando la aplicación
+<a href="http://asciidoc.org"><em>AsciiDoc</em></a>, incluída en Slackware (se encuentra en el
+paquete linuxdoc-tools). Los archivos fuente son archivos de texto,
+incluyendo las instrucciones de formato para asciidoc, por ejemplo, dos
+símbolos de igual al principio de una línea son considerados como un
+encabezado de segundo nivel, el cual será convertido a una etiqueta &lt;h2&gt; en
+el archivo XHTML generado por asciidoc.</p></div>
+<div class="paragraph"><p>Instrucciones específicas y consejos para traducir archivos de texto
+procesados por <em>AsciiDoc</em> se proveen en la página
+<a href="tools.html#asciidoc">Traducción de archivos de texto para ser procesados
+con <em>AsciiDoc</em> para generar páginas web</a>.</p></div>
+<div class="paragraph"><p>Para cada lenguaje, cuando la traducción de template.po,
+<a href="slint.html">slint.html</a>, <a href="installer.html">installer.html</a> y
+<a href="package.html">package.html</a> esté completa, la página de inicio antigua
+será reemplazada con la nueva, de forma que los usuarios se beneficien con
+las nuevas páginas en cada lenguaje.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="recommendations">Recomendaciones prácticas para traductores</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Dependiendo de la cantidad de trabajo necesario y de los recursos
+  disponibles, puede haber un traductor o un grupo de traductores por cada
+  lenguaje destino. En todos los casos, recomiendo que por lo menos una
+  persona sea responsable de organizar el trabajo de equipo, revisando las
+  traducciones y transmitiendo el archivo PO revisado al
+  administrador. Llamemos a esta persona el coordinador del equipo.
+</p>
+</li>
+<li>
+<p>
+No se sienta obligado de hacer una traducción literal. Rara vez esta es la
+  mejor manera de expresar el significado, y adicionalmente genera oraciones
+  muy largas que no caben en el espacio permitido.
+</p>
+</li>
+<li>
+<p>
+Utilice un editor PO especializado, <em>no</em> un editor de texto general. Esto le
+  ayuda a prevenir editar involuntariamente textos <em>msgid</em>, también facilita
+  el trabajo y automatiza revisiones adicionales, tales como la presencia de
+  una variable en la traducción con la misma ortografía que en el original.
+</p>
+</li>
+<li>
+<p>
+Al traducir, seleccione una fuente serif con ancho fijo (o "monoespacio"),
+  como Courier. Esto le permite distinguir visualmente caracteres que de otra
+  forma se verían igual, además de permitirle revisar el largo de las líneas
+  cuando es importante.
+Si es posible, revise la disposición de los mensajes. Puede hacer esto
+observando el contexto en el archivo origen correspondiente. Aún mejor,
+simplemente ejecute el script traducido.  Esto es especialmente importante
+si está traduciendo cajas de diálogo. En particular, tenga cuidado de no
+escribir oraciones muy largas en una sola línea si es aparente que el texto
+no continuará en la siguiente línea.
+</p>
+</li>
+<li>
+<p>
+Tenga presente que en el modo VGA (utilizado por instaladores en
+  particular), el largo de las líneas es en teoría 80 caracteres, pero en la
+  práctica frecuentemente es 74.
+</p>
+</li>
+<li>
+<p>
+No agregue signos de pregunta que no están presentes en el mensaje original.
+</p>
+</li>
+<li>
+<p>
+Si el mensaje se refiere a etiquetas (texto en los botones) en cajas de
+  diálogo, tales como "OK", "Yes", "NO", "Continue" y "Cancel", revise como
+  estas etiquetas están traducidas en la interfaz de los diálogos en su
+  lenguaje, y use las mismas palabras.
+</p>
+</li>
+<li>
+<p>
+Evite coloquialismos y argot técnico.
+</p>
+</li>
+<li>
+<p>
+Para "cortar" (o terminar) una línea dentro de una caja de "diálogo", debe
+  escribir \n: presionar [Enter] <em>no</em> insertará un caracter de "nueva línea"
+  en el texto que ve el usuario.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Adicionalmente, es necesario cumplir con los requerimientos de gettext para
+que funcione:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Si una palabra que empieza con un símbolo de dólar se incluye en el texto
+  original, ésta debe estar presente en la traducción con exactamente la misma
+  ortografía (la distinción entre mayúsculas y minúsculas es importante).
+</p>
+</li>
+<li>
+<p>
+El texto de la traducción debe incluir un caracter de "nueva línea" (o
+  cambio de línea, representado por "\n") al principio o al final, exactamente
+  como lo tenga el texto original. Del mismo modo, si el texto original no
+  tiene el caracter, entonces la traducción no debe tenerlo.
+</p>
+</li>
+<li>
+<p>
+Un caracter de barra invertida "\" por sí mismo no está permitido en la
+  traducción.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Para revisar que su traducción pase los requerimientos de gettext, puede
+ejecutar el siguiente comando:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  msgfmt -c &lt;nombre del archivo PO&gt;</code></pre>
+</div></div>
+<div class="sect2">
+<h3 id="warning_man_pages">Advertencia sobre la traducción de páginas de manual</h3>
+<div class="paragraph"><p>Preserve cuidadosamente la sintaxis de las páginas de manual con el marcado
+en Inglés. Por ejemplo, no reemplace:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<em>B&lt;</em> con <em>B &lt;</em> (no inserte un espacio)
+</p>
+</li>
+<li>
+<p>
+<em>B&lt;</em> con <em>b&lt;</em> (mantenga la B mayúscula - no la reemplace por la letra griega
+  mayúscula BETA, que se ve similar en la pantalla)
+</p>
+</li>
+<li>
+<p>
+"I" con <em>|</em> (no reemplace la I mayúscula con un símbolo de barra vertical)
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Al traducir comandos de shell, preserve los nombres en inglés de las rutas
+de directorios cuando sea necesario. Pero puede y debe traducir los
+argumentos que se reemplazan con un valor como <em>packagename</em>.</p></div>
+</div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Última actualización 2016-04-23 16:20:18 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

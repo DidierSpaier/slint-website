@@ -1,0 +1,91 @@
+
+= Slint paket
+
+Slint paketet innehåller flerspråkiga administrationsverktyg och manualsidor
+samt översättningsfiler, som tillhandahålls av Slint projektet.
+
+Denna sida förklarar hur man tar och installera det, och beskriver dess
+innehåll så att du vet vad som översatts och på vilka språk.
+
+Slint paketets omfattning kommer att expandera successivt, så bara
+uppgradering gör att du kan få uppdaterade och nyligen översatta verktyg och
+översättningar på fler språk så snart de blir tillgängliga.
+
+== Ladda ner och installera eller uppgradera Slint paket
+
+Om du bara använt Slint installationsprogram, finns det ingen anledning att
+installera Slint paketet: det är redan gjort av installationsprogrammet.
+
+Ett Slint paket tillhandahålls för varje stödd Slackware version (Slackware
+13.37, Slackware 14.0 och Slackware 14.1) i katalogen
+https://slint.fr/packages[packages/]. Samma paket kan installeras på
+32-bitars och 64-versioner. För att hämta, kontrollera och installera (eller
+uppgradera) "Slint paketet" (för Slackware 14.1 i detta exempel), gör så
+här:
+
+----
+wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # du får det senaste "Slint paketet" och dess tillhörande md5-fil
+md5sum -c "Slint-14.1 * md5 # svaret ska vara "OK", annars är det hämtade paketet korrupt
+su # få rootbehörighet
+upgradepkg --install-new --reinstall slint-14.1*txz # detta kommando installerar eller uppgradera paketet
+----
+
+TIP: För att förhindra att "slackpkg 'tar bort' "Slint paketet" , lägg till en
+rad i /etc/slackpkg/blacklist med enbart detta ord: + slint
+
+[[what_is_translated]]
+== Vad är översatt, på vilka språk?
+
+Slint paketet innehåller flerspråkiga verktyg och översättningsfiler.
+
+Vid skrivande stund, ingår följande språk: franska, tyska, polska,
+portugisiska (Brasilien), ryska, spanska (Latinamerika) och ukrainska.
+
+Vissa manualsidor är också översatt till andra språk, såsom anges i
+https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT].
+
+Tabellen nedan listar flerspråkiga administrationsverktyg och deras syften.
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|Flerspråkiga verktyg|Syfte|Översatt manualsida
+|adduser|Lägg till en användaren till systemet|
+|explodepkg|Extrahera innehållet i ett Slackware paket i den aktuella katalogen|man explodepkg
+|installpkg|Installera Slackwarepaket|man installpkg
+|makebootdisk|Skapa en bootbar Linux diskett
+(endast i Slackware 13.37 och 14.0)|
+|makepkg|Skapa Slackwarepaket|man makepkg
+|pkgtool|Underhålla programvarupaket och utföra konfigurationsuppgifter:
+=> Ställa in tjänster som skall köras vid uppstart
+=> Skapa ett USB-boot-minne
+=> Ställa in typ av mus|man pkgtool
+|removepkg|Ta bort Slackwarepaket|man removepkg
+|upgradepkg|Uppgradera Slackwarepaket|man upgradepkg
+|eliloconfig|Konfigurera "elilo" starthanteraren
+(endast i Slackware 14,1)|
+|liloconfig|Konfigurera 'lilo' starthanterare|
+|netconfig|Konfigurera nätverket|
+|timeconfig|Ställa in tidszon|
+|setconsolefont|Ställer in ett skärm teckensnitt|
+|setup.mouse|Konfigurera mus|
+|xorgsetup|Konfigurera X-servern|
+|xwmconfig|Ställa in standard fönsterhanterare eller skrivbord|
+|slackpkg|automatiserade verktyg för hantering av Slackwarepaket
+(endast manualsidor är översatta)|man slackpkg
+man slackpkg.conf
+|========
+ 
+NOTE: För att se flerspråkiga verktygs meddelande och manualsidor på ditt språk,
+bör du, såsom anges på Slint hemsida, link:slint.html#anchor-1[ställa in
+ditt föredragna språk]
+
+Dessutom Slint paketet installerar även dokument i mappen
+/usr/docs/slint-<version>-<datum>, inklusive en Slint-HOWTO.txt och ett
+skript reinstall-slackware-packages.sh.
+
+TIP: för att lista vad ett Slint paket har installerat, skriv bara i en terminal:
+----
+less /var/log/packages/slint*
+----
+Använd upp och ner pilarna för att navigera i listan, tryck på bokstaven "q"
+för att avsluta.

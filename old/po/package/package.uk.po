@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: slintwebsite\n"
+"POT-Creation-Date: 2015-01-31 18:18+0100\n"
+"PO-Revision-Date: 2015-01-31 17:26+0000\n"
+"Last-Translator: Didier Spaier <didier@slint.fr>\n"
+"Language-Team: Ukrainian (Ukraine) (http://www.transifex.com/projects/p/slintwebsite/language/uk_UA/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#.  Before translating this file, please read instructions about it in
+#. https://slint.fr/contribute.html and https://slint.fr/tools.html. Copy this
+#. comment verbatim in your translation or just the leading // to tell it's a
+#. comment that won't be included in generated html file.
+#. type: Title =
+#: package.en.txt:3
+#, no-wrap
+msgid "Slint package"
+msgstr "Пакунок Slint"
+
+#. type: Plain text
+#: package.en.txt:6
+msgid ""
+"Slint package contains polyglot administration tools and manual pages as "
+"well as translation files, provided by the Slint project."
+msgstr "Пакунок Slint містить багатомовні інструменти адміністратора та сторінки керівництв, а також файли перекладів, надані проєктом Slint."
+
+#. type: Plain text
+#: package.en.txt:8
+msgid ""
+"This page explains how to get and install it, then describes its content so "
+"you know what is translated in which languages."
+msgstr "Ця сторінка пояснює, як отримати та встановити пакунок, а також дає опис його вмісту, у тому числі, що та якими мовами перекладено."
+
+#. type: Plain text
+#: package.en.txt:10
+msgid ""
+"Slint package's scope will expand gradually, so just ugrading it will allow "
+"you to get updated and newly translated tools and translations in more "
+"languages as soon as they become available."
+msgstr "До пакунку Slint поступово додаватиметься новий вміст, простим оновленням пакунку ви зможете отримувати нові переклади інструментів і текстів, як і додаткові мови, у міру їх випуску."
+
+#. type: Title ==
+#: package.en.txt:11
+#, no-wrap
+msgid "Download and install or upgrade a Slint package"
+msgstr "Завантажити, встановити чи оновити пакунок Slint"
+
+#. type: Plain text
+#: package.en.txt:14
+msgid ""
+"If you just used Slint installer, there is no need to install the Slint "
+"package in addition: that's already done by the installer."
+msgstr "НОТАТКА: Якщо ви використовували встановник Slint, додатково встановлювати пакунок Slint не потрібно, це вже зроблено інсталятором."
+
+#. type: Plain text
+#: package.en.txt:16
+msgid ""
+"A Slint package is provided for each supported Slackware edition (Slackware "
+"13.37, Slackware 14.0 and Slackware 14.1) in directory "
+"https://slint.fr/packages[packages/]. The same package can be installed on 32"
+" bit and 64 versions. To get, check and install (or upgrade) 'Slint package'"
+" (for Slackware 14.1 in this example), do this:"
+msgstr "Пакунок Slint надано для кожного підтримуваного випуску Slackware (Slackware 13.37, Slackware 14.0 та Slackware 14.1) у каталозі https://slint.fr/packages[packages/]. Пакунок підходить як для 32-розрядної, так і для 64-розрядної редакції. Щоб отримати, перевірити та встановити (або оновити) пакунок Slint (наприклад, для Slackware 14.1), виконайте таке:"
+
+#. type: delimited block -
+#: package.en.txt:22
+#, no-wrap
+msgid ""
+"wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # you will get the most recent Slint package and its associated md5 file\n"
+"md5sum -c slint-14.1*md5 # answer should be \"OK\", else downloaded package is corrupt\n"
+"su # get root's privileges\n"
+"upgradepkg --install-new --reinstall slint-14.1*txz # this command installs or upgrade the package\n"
+msgstr "wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # отримайте найновіший пакунок Slint та файл md5\nmd5sum -c slint-14.1*md5 # відповідь повинна бути позитивною, інакше завантажений пакунок пошкоджено\nsu # отримайте права root-а\nupgradepkg --install-new --reinstall slint-14.1*txz # ця команда встановить або оновить пакунок\n"
+
+#. type: Plain text
+#: package.en.txt:26
+msgid ""
+"To prevent 'slackpkg' from removing 'Slint package', add a line to "
+"/etc/slackpkg/blacklist with only this word: + slint"
+msgstr "Аби 'slackpkg' не вилучав 'пакунок Slint', додайте до /etc/slackpkg/blacklist рядок, що містить: + slint"
+
+#. type: Title ==
+#: package.en.txt:28
+#, no-wrap
+msgid "What is translated, in what languages?"
+msgstr "Що перекладено, якими мовами?"
+
+#. type: Plain text
+#: package.en.txt:31
+msgid "A Slint package contains polyglot tools and translation files."
+msgstr "Пакунок Slint містить багатомовні інструменти та файли перекладу."
+
+#. type: Plain text
+#: package.en.txt:33
+msgid ""
+"At the time of writing, the following languages are included: French, "
+"German, Polish, Portuguese (Brazil), Russian, Spanish (Latin America) and "
+"Ukrainian."
+msgstr "На дату складання цього документу включено такі мови: українська, російська, французька, німецька, польська, портуґальська (Бразилія) та іспанська (Латинська Америка)."
+
+#. type: Plain text
+#: package.en.txt:35
+msgid ""
+"Some manual pages are also translated to other languages, as indicated in "
+"https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT]."
+msgstr "Деякі сторінки керівництв також перекладено іншими мовами, їхній перелік наведено у https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT]."
+
+#. type: Plain text
+#: package.en.txt:37
+msgid "Table below list polyglot administration tools and their purposes."
+msgstr "У таблиці нижче наведено багатомовні інструменти адміністратора та їх призначення."
+
+#. type: delimited block |
+#: package.en.txt:65
+#, no-wrap
+msgid ""
+"|Polyglot tool|Purpose|Translated man page\n"
+"|adduser|Add an user to the system|\n"
+"|explodepkg|Extract the content of a Slackware package in the current directory|man explodepkg\n"
+"|installpkg|Install Slackware packages|man installpkg\n"
+"|makebootdisk|Make a bootable Linux floppy disk\n"
+"(only in Slackware 13.37 and 14.0)|\n"
+"|makepkg|Make Slackware packages|man makepkg\n"
+"|pkgtool|Maintain software packages and perform configuration tasks:\n"
+"=> set services to run at startup\n"
+"=> make an USB boot stick\n"
+"=> set the mouse type|man pkgtool\n"
+"|removepkg|Remove Slackware packages|man removepkg\n"
+"|upgradepkg|Upgrade Slackware packages|man upgradepkg\n"
+"|eliloconfig|Configure 'elilo' boot loader\n"
+"(only in Slackware 14.1)|\n"
+"|liloconfig|Configure 'lilo' boot loader|\n"
+"|netconfig|Configure the network|\n"
+"|timeconfig|Sets the timezone|\n"
+"|setconsolefont|Sets a screen font|\n"
+"|setup.mouse|Sets the mouse type|\n"
+"|xorgsetup|Configure the X server|\n"
+"|xwmconfig|Sets the default windows manager or desktop|\n"
+"|slackpkg|Automated tools for managing Slackware packages\n"
+"(only manual pages are translated)|man slackpkg\n"
+"man slackpkg.conf\n"
+msgstr "|Багатомовний інструмент|Призначення|Перекладена сторінка керівництва\n|adduser|Додає користувача до системи|\n|explodepkg|Витягує вміст пакунку Slackware до поточного каталоґу|man explodepkg\n|installpkg|Встановлює пакунки Slackware|man installpkg\n|makebootdisk|Створює завантажувальну дискету Linux\n(лише у Slackware 13.37 та 14.0)|\n|makepkg|Створює пакунки Slackware|man makepkg\n|pkgtool|Обслуговує пакунки проґрамного забезпечення та виконує завдання налаштування:\n=> обрати сервіси для запуску при завантаженні\n=> створити завантажувальний USB-носій\n=> обрати тип мишки|man pkgtool\n|removepkg|Вилучає пакунки Slackware|man removepkg\n|upgradepkg|Оновлює пакунки Slackware|man upgradepkg\n|eliloconfig|Налаштовує завантажувач 'elilo'\n(лише у Slackware 14.1)|\n|liloconfig|Налаштовує завантажувач 'lilo'|\n|netconfig|Налаштовує мережу|\n|timeconfig|Обирає часову зону|\n|setconsolefont|Встановлює шрифт консолі|\n|setup.mouse|Обирає тип мишки|\n|xorgsetup|Налаштовує X сервер|\nxwmconfig|Обирає типовий віконний менеджер або стільницю|\n|slackpkg|Автоматизовані інструменти для керування пакунками Slackware\n(перекладено лише сторінки керівництв)|man slackpkg\nman slackpkg.conf\n"
+
+#. type: Plain text
+#: package.en.txt:68
+msgid ""
+"To see polyglot tools' messages and manual pages in your language, you "
+"should, as indicated in Slint home page, link:slint.html#anchor-1[set up "
+"your prefered locale]"
+msgstr "Аби бачити повідомлення багатомовних інструментів та сторінки керівництв Вашою мовою, Ви повинні, як показано на домашній сторінці Slint, link:slint.html#anchor-1[встановити бажану локаль]"
+
+#. type: Plain text
+#: package.en.txt:70
+msgid ""
+"In addition, the Slint package also installs documents in the folder "
+"/usr/docs/slint-<version>-<date>, including a Slint-HOWTO.txt and a script "
+"reinstall-slackware-packages.sh."
+msgstr "Крім того, пакунок Slint встановлює документацію у директорію /usr/docs/slint-<version>-<date>, включаючи Slint-HOWTO.txt та файл сценарію reinstall-slackware-packages.sh."
+
+#. type: Plain text
+#: package.en.txt:72
+msgid "to list what a Slint package has installed, just type in a terminal:"
+msgstr "за для переліку того, що встановив пакунок Slint, наберіть у терміналі:"
+
+#. type: delimited block -
+#: package.en.txt:74
+#, no-wrap
+msgid "less /var/log/packages/slint*\n"
+msgstr "less /var/log/packages/slint*\n"
+
+#. type: Plain text
+#: package.en.txt:75
+msgid ""
+"Use the up and down arrows to navigate in the list, press the letter 'q' to "
+"quit."
+msgstr "Для навігації по списку використовуйте стрілки вгору та вниз, щоб вийти натисніть букву 'q' ."

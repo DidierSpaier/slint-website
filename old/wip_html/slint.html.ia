@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Pagina principal o domo de Slint</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="./slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Domo o Initio</a></div>
+      <div><a href="installer.html">Installator de Slint</a></div>
+      <div><a href="package.html">Pacchetto de Slint </a></div>
+      <div><a href="translators.html">Traductores</a></div>
+      <div><a href="contribute.html">Contribution</a></div>
+      <div><a href="tools.html">Instrumentos</a></div>
+      <div><a href="changelog.html">ChangeLog - Lista de modificationes</a></div>
+      <div id="page-source"><a href="slint.ia.txt">Fonte de pagina</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">Le Projecto de internationalisation de Slackware</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <h1>Pagina principal o domo de Slint</h1>
+      </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Nunc tu pote installar e usar <a href="http://slackware.com">Slackware</a> in tu
+linguage!</p></div>
+<div class="paragraph"><p>In le momento que on scribe, le sequente linguages es disponibile:</p></div>
+<div class="tableblock">
+<table rules="none"
+width="100%"
+frame="void"
+cellspacing="0" cellpadding="4">
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table"><em>Nederlandese</em></p></td>
+<td align="left" valign="top"><p class="table"><em>Polonese</em></p></td>
+<td align="left" valign="top"><p class="table"><em>Svedese</em></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><em>Anglese (SUA)</em></p></td>
+<td align="left" valign="top"><p class="table"><em>Portugese (Brasil)</em></p></td>
+<td align="left" valign="top"><p class="table"><em>Turco</em></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><em>Francese</em></p></td>
+<td align="left" valign="top"><p class="table"><em>Portugese (Portugal)</em></p></td>
+<td align="left" valign="top"><p class="table"><em>Ukrainiano</em></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><em>Germano</em></p></td>
+<td align="left" valign="top"><p class="table"><em>Russo</em></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"><em>Greco</em></p></td>
+<td align="left" valign="top"><p class="table"><em>Espaniol (America Latin)</em></p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p>Gratias a nostre dozenas de <a href="translatores">translatores benevolente</a>
+Slint face celle sonio un realitate.</p></div>
+<div class="paragraph"><p>Le projecto de  Slint project es ni affiliate ni appoiate per
+Slackware<sup><span class="blue"><a href="#note-1">[1]</a></span></sup> ma necessita de illo, assi nos incoragia
+omne usatores de Slint a <a href="https://store.slackware.com/cgi-bin/store">supportar
+financiariemente</a> Slackware.</p></div>
+<div class="ulist"><div class="title">Le projecto de Slint forni:</div><ul>
+<li>
+<p>
+<em>Installatores de Slint</em> Polyglotte (<em>Slint Installers</em>), disponibile per
+  Slackware 13.37, 14.0 e 14.1
+</p>
+</li>
+<li>
+<p>
+<em>Pacchettos de Slint</em> (<em>Slint Packages</em>), que reimplacia instrumentos de
+  administration de Slackware con los polyglotte e installa files de
+  traduction e altere documentos.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Omne <em>Installatores de Slint</em> installa un <em>Pacchetto de Slint</em> pro le mesme
+version de Slackware, que anque pote esser installate in un authentic
+Slackware, e actualisate como illo necessita esser.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installa_slackware_in_tu_linguage_o_pone_lo_international_postea">Installa Slackware in tu linguage o pone lo international postea</h2>
+<div class="sectionbody">
+<div class="paragraph"><div class="title">Installa Slackware in tu linguage per usar <em>Installator de Slackware</em></div><p>Duo grandores de imagines ISO es disponibile, ambes a facer installatores
+bootabile:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Le <a href="http://sourceforge.net/projects/slint/files/">DVD + USB plen imagines ISO</a>
+  contine omne cosas tu necessita pro installar.
+</p>
+</li>
+<li>
+<p>
+Le <a href="https://slint.fr/installers">CD + parve imagines ISO de USB</a> necessita
+  esser completate per un medio continente le pacchettos de Slackware, pro
+  exemplo un DVD de Slackware.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Vide pagina <a href="installer.html">Installatores de Slint</a> pro saber como
+discargar le imagine, pone lo sur un DVD o un clave USB  e  usa lo.</p></div>
+<div class="paragraph"><p>Un terminal Braille anque pote esser usate pro installar e postea pilotar le
+systema. Instructiones pro usar es disponibile in
+<a href="https://slint.fr/docs/README_BRLTTY">https://slint.fr/docs/README_BRLTTY</a>.</p></div>
+<div class="paragraph"><div class="title">Internationalisa tu genuin Slackware o actualisa instrumentos de traductiones per (re)installar un <em>Pacchetto de Slint</em></div><p>Pacchettos de Slint es locate in directorio
+<a href="https://slint.fr/packages">packages/</a>. Vide pagina <a href="package.html">Pacchetto
+de Slint</a> pro saper como installar un pacchetto de Slint pro tu edition de
+Slackware e lo que tu obtene per tu moneta :-)</p></div>
+<div class="paragraph"><p>Installa o reinstalla un <em>Pacchetto de Slint</em> si tu vole:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+internationalisa un Slackware 13.37, 14.0 o 4.1 jam installate ( si tu non
+  usava un installator de Slint)
+</p>
+</li>
+<li>
+<p>
+obtene nove instrumentos traducite, correctiones e traductiones in nove
+  linguages.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usa_tu_slackware_polyglotte">Usa tu Slackware polyglotte</h2>
+<div class="sectionbody">
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/note.png" alt="Note" />
+</td>
+<td class="content">Un locale es le definition del subinsimul de un ambiente de usator que
+depende sur linguage e conventiones cultural.</td>
+</tr></table>
+</div>
+<div class="paragraph" id="anchor-1"><div class="title">Stabili tu localisation preferite</div><p>Le installator de Slint face preferentias de locale predefinite in le
+systema installate secundo le linguage usate durante le installation, ma si
+tu installava un pacchetto pro internationalisar un genuin Slackware tu
+necessitara facer iste preferentias pro tu mesme.</p></div>
+<div class="paragraph"><p>Pro vider messages in tu linguage preferite, solmente fixa le parametro LANG
+in consequentia in file /etc/profile.d/lang.sh<sup><span class="blue"><a href="#note-2">[2]</a></span></sup> Pro
+exemplo, pro monstrar messages in Portugese Brasilian, tu reimplaciara le
+fixation predefinite <code>en_US</code>  como isto:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>exporta LANG=pt_BR.utf8 # nomine de locale deberea terminar in .utf8 pro corresponder a codification UTF-8 de messages traducite</code></pre>
+</div></div>
+<div class="paragraph"><p>De plus , pro monstrar correctemente paginas de manual traducite que es
+codificate in UTF-8, inserta <em>un</em> de sequente commandos in tu ~/.bashrc:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>export GROFF_ENCODING=utf8 # si omne paginas de man que tu lege es o in anglese o codificate in UTF-8
+alias uman="GROFF_ENCODING=utf8 man" # si tu anque lege paginas de man in altere codificationes</code></pre>
+</div></div>
+<div class="paragraph"><p>Si tu usa iste, tu typara"uman" in vice de "man" in un terminal pro monstrar
+paginas de manual codificate in UTF-8.</p></div>
+<div class="paragraph"><div class="title">Administra Slackware in tu linguage</div><p><em>Installatores de Slint</em> assi como <em>Pacchettos de Slint</em> reimplacia le
+instrumentos principal de Slackware per illos polyglotte, e adde paginas de
+man traducite.</p></div>
+<div class="paragraph"><p>Omne instrumentos polyglotte currentemente disponibile es listate in le
+pagina <a href="package#what_is_translated">Slint package</a>. Illos permitte te de:</p></div>
+<div class="ulist compact"><ul>
+<li>
+<p>
+Gere pacchettos software
+</p>
+</li>
+<li>
+<p>
+Adde usatores
+</p>
+</li>
+<li>
+<p>
+(re)configurar tu systema: decide qual daemons(servicios) de systema initiar
+  in le momento de boot, crear nove usatores, reconfigurar tu cargator de
+  boot, seliger le gerente predefinite de fenestras, configurar tu rete, facer
+  un clave USB de boot de Linux
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contribue_obtene_adjuta_remane_syntonisate">Contribue, obtene adjuta, remane syntonisate</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Si tu vole contribuer al Projecto Slint, e como traductor e alteremente,
+vide le pagina <a href="contribute">Contribue</a></p></div>
+<div class="paragraph"><p>Si tu necessita adjuta tu pote postar in  Linux Questions'
+<a href="http://www.linuxquestions.org/questions/slackware-14/">Slackware forum</a> (in
+Anglese).</p></div>
+<div class="paragraph"><p>Pro demandas general o suggestiones, como adder nove instrumentos traducite
+in <em>Pacchettos de Slint</em>, registrate a nostre
+<a href="https://lists.sourceforge.net/lists/listinfo/slint-translators">mailing-list</a>.</p></div>
+<div class="paragraph"><p>Pro remaner syntonisate e beneficiar de nove instrumentos traducite e
+traductiones in nove linguages, consulta le <a href="changelog">ChangeLog</a></p></div>
+<hr />
+<div class="paragraph"><p><a id="note-1"></a><sup>1. Slackware &#174; es un
+<a href="http://slackware.com/trademark/trademark.php">marca de fabrica registrate</a> de
+Slackware Linux inc.</sup></p></div>
+<div class="paragraph"><p><a id="note-2"></a><sup>2. Debite a un falta ma solmente in Slackware 13.37, post <em>su</em> tu
+necessitara fixar LANG ante cata commando. Per exemplo: <em>LANG=fr_FR.utf8
+pkgtool</em></sup></p></div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Ultime actualisation 2016-02-07 20:02:46 CET
+      </div>
+    </div>
+  </div>
+</body>
+</html>

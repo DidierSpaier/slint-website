@@ -1,0 +1,271 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-12-28 12:13+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: /home/didier/slint.fr/contribute.en.txt:1
+#, fuzzy, no-wrap
+msgid "Contribute to the Slint project"
+msgstr "Contribuir al Proyecto Slint"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:4
+#, fuzzy
+msgid "So, you want to help and contribute to the Slint project? Welcome on board!"
+msgstr "¿Así que quiere ayudar y contribuir al proyecto Slint? !Bienvenido a bordo!"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:6
+#, fuzzy
+msgid ""
+"Needed work to provide Slint's products is mostly translating and reviewing "
+"shell scripts, that make up Slackware's installers and administration tools, "
+"and documentation intended for Slackware users taking the form of text files "
+"or manual pages."
+msgstr ""
+"El trabajo necesario para proveer los productos de Slint es en su mayoría "
+"traducción y revisión de scripts de shell, los cuales forman los "
+"instaladores y herramientas de administración de Slackware, así como "
+"documentación orientada a los usuarios de Slackware en forma de archivos de "
+"texto o páginas de manual."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:8
+#, fuzzy
+msgid "Ideally, we would like that translators:"
+msgstr "Idealmente, nos gustaría que los traductores:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:10
+#, fuzzy
+msgid ""
+"be able to communicate in English and very fluent in the target language, "
+"preferably their native language"
+msgstr ""
+"sean capaces de comunicarse en Inglés y que tengan bastante fluidez en el "
+"lenguaje destino, preferiblemente su lenguaje nativo"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:11
+#, fuzzy
+msgid ""
+"understand technical vocabulary associated to installation and "
+"administration of a Linux system"
+msgstr ""
+"entiendan vocabulario técnico relacionado con la instalación y "
+"administración de un sistema Linux"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:12
+#, fuzzy
+msgid "be Slackware users"
+msgstr "sean usuarios de Slackware"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:13
+#, fuzzy
+msgid "be able to read and understand simple shell scripts"
+msgstr "sean capaces de leer y entender scripts de shell simples"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:15
+#, fuzzy
+msgid ""
+"But even if you don't meet all of these expectations, don't hesitate to "
+"volunteer: there still are many tasks that can benefit of your skills."
+msgstr ""
+"Pero aunque no cumpla estas expectativas, no dude en ofrecerse como "
+"voluntario: hay muchas tareas en las que su talento puede ser útil."
+
+#. type: Title ==
+#: /home/didier/slint.fr/contribute.en.txt:16
+#, fuzzy, no-wrap
+msgid "Volunteer and define your contributions"
+msgstr "Hágase voluntario y defina sus contribuciones"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:19
+#, fuzzy
+msgid ""
+"To volunteer as a translator, preferably use the Transifex platform: first "
+"https://www.transifex.com/signup/contributor/[register on Transifex] (it's "
+"free), then go to Transifex' "
+"https://www.transifex.com/projects/p/slint/[Slint project page]:"
+msgstr ""
+"Para ofrecerse como traductor voluntario, preferiblemente utilice la "
+"plataforma Transifex: primero "
+"https://www.transifex.com/signup/contributor/[regístrese en Transifex] (es "
+"gratis), luego vaya a https://www.transifex.com/projects/p/slint/[la página "
+"del proyecto Slint] en Transifex:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:21
+#, fuzzy
+msgid ""
+"If your language is listed, click on it, then in that language's page click "
+"\"Join the team\"."
+msgstr ""
+"Si su lenguaje está listado, haga click en él, luego en la página del "
+"lenguaje haga click en \"Unirse al equipo\"."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:22
+#, fuzzy
+msgid ""
+"Else, click \"Request a language\" (in the light blue stripe just above "
+"languages' list)"
+msgstr ""
+"De otra forma, haga click en \"Solicitar un lenguaje\" (en la barra celeste "
+"justo arriba de la lista de lenguajes)"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:24
+#, fuzzy
+msgid ""
+"But if you'd like to ask questions before, or propose your help for other "
+"tasks than translation, send an email to Slint's maintainer: didier dot "
+"spaier at epsm dot fr."
+msgstr ""
+"Pero si desea hacer preguntas primero, o proponer su ayuda para otras tareas "
+"diferentes de la traducción, envíe un correo electrónico al encargado de "
+"Slint: didier punto spaier arroba epsm punto fr."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:26
+#, fuzzy
+msgid ""
+"Then you will consult with your team's coordinator or Slint maintainer to "
+"define the \"why\", \"what\", \"how\" and \"when\" of your contributions to "
+"Slint."
+msgstr ""
+"Entonces podrá consultar con el coordinador de su equipo o el administrador "
+"de Slint para definir el \"por qué\", \"qué\", \"cómo\" y el \"cuándo\" de "
+"sus contribuciones a Slint."
+
+#. type: Title ==
+#: /home/didier/slint.fr/contribute.en.txt:27
+#, fuzzy, no-wrap
+msgid "Know our methods & tools and be ready to communicate inside Slint team"
+msgstr ""
+"Conozca nuestros métodos y herramientas y esté listo a comunicarse dentro "
+"del equipo Slint"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:30
+#, fuzzy
+msgid ""
+"Please read <<recommendations,Practical recommendations for translators>> "
+"below."
+msgstr ""
+"Por favor lea <<recommendations,Recomendaciones prácticas para traductores>> "
+"abajo."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:32
+#, fuzzy
+msgid ""
+"Then, get acquainted with the link:tools.html[Tools] we use. To better use "
+"them you'll need to have installed a Linux distribution, preferably a full "
+"Slackware system, including following packages:"
+msgstr ""
+"Entonces, familiarícese con con las link:tools.html[Herramientas] que "
+"usamos. Para utilizarlas mejor necesitará tener instalada una distribución "
+"de Linux, preferiblemente un sistema Slackware completo, incluyendo los "
+"siguientes paquetes:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:34
+#, fuzzy
+msgid "../extra/aspell-words-lists/<packages for your language> for spelling checks"
+msgstr ""
+"../extra/aspell-words-lists/<paquetes para su lenguaje> para revisión "
+"ortográfica"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:35
+#, fuzzy
+msgid ""
+"../kdei/<package kde-l10n for your language> to localize UI of Lokalize if "
+"you use it"
+msgstr ""
+"../kdei/<paquete kde-l10n para su lenguaje> para localizar la interfaz de "
+"usuario de Lokalize si lo utiliza"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:37
+#, fuzzy
+msgid "Last but not least, we need to work together as a team, so:"
+msgstr ""
+"Por último, si bien no menos importante, necesitamos trabajar juntos como un "
+"equipo, así que:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:39
+#, fuzzy
+msgid ""
+"Please register on Transifex, even if you don't use its on line editor, then "
+"check all https://www.transifex.com/settings/notices/[notification "
+"settings], as it makes easier to keep all contributors informed at once of "
+"anything of general interest. Please indicate you full name, even if you use "
+"a nickname."
+msgstr ""
+"Por favor regístrese en Transifex, aunque no utilice su editor en línea, y "
+"luego revise toda la "
+"https://www.transifex.com/settings/notices/[configuración de "
+"notificaciones]. De esta forma es más fácil mantener a todos los "
+"colaboradores informados de inmediato sobre cualquier cosa de interés "
+"general. Por favor indique su nombre completo, aún si usa un apodo.  Le "
+"sugerimos enfáticamente que se suscriba a la "
+"https://lists.sourceforge.net/lists/listinfo/slint-translators[lista de "
+"correo slint-translators]. Esto le permitirá hacer y contestar preguntas, "
+"participar en discusiones, hacer sugerencias y propuestas."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:40
+#, fuzzy
+msgid ""
+"We strongly suggest that you subscribe to "
+"https://lists.sourceforge.net/lists/listinfo/slint-translators[slint-translators "
+"mailing-list]. This will allow you to ask and answer questions, participate "
+"in discussions, make suggestions and proposals."
+msgstr ""
+"Esté preparado para proveer una dirección de correo electrónico, para que el "
+"coordinador de su equipo y el encargado de Slint puedan comunicarse."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:41
+#, fuzzy
+msgid ""
+"Be ready to provide an email address allowing your team's coordinator and "
+"Slint's maintainer to reach you."
+msgstr ""
+"Puede también utilizar la función de Discusiones en Transifex en la página "
+"de su lenguaje del proyecto Slint."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:42
+#, fuzzy
+msgid ""
+"You can also use the Discussion feature available on Transifex in your "
+"language's page of the Slint project."
+msgstr ""
+"Puede también seguir "
+"http://www.linuxquestions.org/questions/slackware-14/internationalized-slackware-14-installer-what-languages-to-start-4175455701/[este "
+"hilo] en el foro de Slackware de LinuxQuestions.org. Para hacer esto, "
+"regístrese en LQ y ponga un mensaje en el hilo, o despliéguelo y haga click "
+"en \"Thread Tools => Subscribe to this Thread\" (en la barra azul justo "
+"arriba del primer mensaje)."

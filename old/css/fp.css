@@ -1,0 +1,82 @@
+* { margin:0;font-family:sans-serif;text-decoration: none;border-collapse:collapse}
+BODY {background-color: #000099;color:#FFFFFF;padding:0;height:100%;width:100%;text-align:center}
+P, TABLE {margin: 0.5em 1em 0 2em; font-family: sans-serif;text-align:justify}
+TABLE TR TD, TABLE TR TH {padding-left:1em;padding-right:1em;padding-top:0.2em;padding-bottom:0.2em;text-align:left}
+LI {text-align:justify}
+H1, .forum {font-size: 2em;margin-bottom: 0;line-height: 0.92em;margin-top:0}
+H1, #devise, .menuwacko, .forum {text-align:center;color:#ffffff}
+H1 SPAN {font-family:serif}
+DIV H1 {margin-top:0.8em;color:#000000;margin-bottom:0.69em;}
+H2    {font-size: 1.5em;margin-bottom: 0.624em;margin-top: 0.83em;line-height: 1.11}
+/*Malheureusement, IE ne comprend pas ce qui suit :*/
+/*.cadre > H2:first-child {margin-top:0;}*/
+/*Donc pour compenser :*/*
+.premierh2 {margin-top:0;border-top:none;font-weight:bold; font-family:sans-serif}
+#hautdepage {height:2em; margin-top:1em}
+#hautdepagewacko {height:6em}
+H3 {font-size: 1em;margin-bottom: 0.5em;margin-top: 1em}
+H4 {margin-bottom: 0.5em;margin-top: 0.5em}
+H1, H2, H3, H4 {font-family: serif}
+H1, H2, H3, STRONG {font-weight: bold}
+OL, UL, DD {padding-left:0;margin:0 1em 0 4em}
+P + UL {margin-top:0.25em;margin-bottom:0}
+UL {list-style:square outside}
+UL UL {list-style: circle outside}
+OL  {list-style: decimal outside}
+TH  {font-weight: bolder;text-align: center;font-style:italic}
+CAPTION {text-align: center}
+HR {border: 1px inset}
+P IMG {position: relative;top:3px;}
+.cadre a:link, .cadre a:visited, .cadresuivant a:link, .cadresuivant a:visited, .cadreauto a:link, .cadreauto a:visited {background-color: #ffffff;color: #0000ff}
+.cadre a:hover, .cadre a:active, .cadresuivant a:hover, .cadresuivant a:active, .cadreauto a:hover, .cadreauto a:active {background-color: #ffff00;color: #0000ff;text-decoration:underline}
+.menu a:link, .menu a:visited {background-color: #880000;color: #ffffff}
+.menu a:hover, .menu a:active {background-color: #ffffff;color: #880000}
+.menu a.surligne:link, .menu a.surligne:visited {background-color: #ffffff;color: #880000}
+.menu a.surligne:hover, .menu a.surligne:active {background-color: #880000;color: #ffffff}
+a#logo:link, a#logo:visited {background-color: #880000;color: #ffffff}
+a#logo:hover, a#logo:active {background-color: white;color: #000099}
+.entete A:link, .entete A:visited {background-color: #d7f1ff;color: #880000}
+.entete A:hover, .entete A:active {background-color: #880000;color: #ffffff}
+.entete A.surligne:link, .entete A.surligne:visited {background-color: #d7f1ff;color: #000000}
+.entete A.surligne:hover, .entete A.surligne:active {background-color: #d7f1ff;color: #000000}
+#logo {font: small-caps 1.6em serif;border: none;padding: 0 0.15em 0 0.3em}
+#devise {font-size:1.2em; margin-bottom:0; margin-top:0.6em}
+.menu A  {font-size: 0.9em;border: none;padding: 0 0.3em 0em 0.3em;margin-left: 0.2em}
+.w16 {width:14.5%}
+.w32 {width:28.5%}
+.w50 {width: 47%}
+.w665 {width:62%}
+.w825 {width:76.5%}
+.w100 {width:94%}
+.w80 {width:80%}
+.center {text-align:center}
+.italic {font-style:italic}
+.bold {font-weight:bold}
+#photocv {float:left;margin-left:2em; margin-right:0.5em;}
+.hmenu LI {list-style-type:none}
+.hmenu {margin-left:2em}
+@media print {
+.menu, .entete {display:none}
+* {color:black; background-color:white}
+}
+@media screen {
+.menu {position:absolute;}
+/* ci-avant .menu {position: absolute} car IE6 ne connait pas "fixed" et la traite comme "static" */
+/* ci-après .menu {position: fixed} car c'est l'effet valeur souhaitée */
+body > *.menu, body > *.entete{position: fixed}
+H3 SPAN {border:2px solid #8abddf; padding:1px 2px 1px 2px;}
+H2 {color:#000099; background-color:#D7F1FF; padding: 2px 0px 2px 0.3em;font-weight:bold;border-top:1px solid #8abddf;border-bottom:1px solid #8abddf}
+H3 {color:#000099;border-left :0.5em solid #8abddf;padding:3px 0px 3px 0.3em}
+.menu, .entete, .cadre, .cadresuivant, .cadreauto {text-align:left}
+.menu, .entete {position:absolute;width:100%;z-index:2}
+.menu {top:0;left:0;height:2.2em;background-color: #880000;color: #ffffff}
+.entete {top:0;left:0;border-bottom:0.2em solid #8abddf;height:1.4em;background-color: #D7F1FF;color: #000000;padding-left:0.5em;font-size:1.1em}
+.cadre, .cadresuivant, .cadreauto {background-color: #FFFFFF;color:#000000;border:0.2em solid #8abddf;padding-bottom:1em;margin-top:0;margin-bottom:0}
+H1 + .cadre {margin-top:2em;border-left-width:0.3em;border-right-width:0.3em}
+.cadre + .cadre {border-top-width:0}
+.cadre + .cadresuivant {border-left-width:0; border-top-width:0}
+.cadre + .cadre, .cadre + .cadresuivant {min-height:70em; margin-bottom:3em}
+.cadre {left:3%;float:left;position:relative;}
+.cadresuivant {float:left;padding-bottom:1em;margin-left:3%;}
+.cadreauto {margin-left:auto; margin-right:auto}
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Useful tools for Slint contributors</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Home</a></div>
+      <div><a href="installer.html">Slint installer</a></div>
+      <div><a href="package.html">Slint package</a></div>
+      <div><a href="translators.html">Translators</a></div>
+      <div><a href="contribute.html">Contribute</a></div>
+      <div><a href="tools.html">Tools</a></div>
+      <div><a href="changelog.html">ChangeLog</a></div>
+      <div id="page-source"><a href="../tools.en.txt">Page Source</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />The Slackware Internationalization Project</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/tools.html">de</a> | <a href="../en/tools.html">en</a> | <a href="../es/tools.html">es</a> | <a href="../fr/tools.html">fr</a> | <a href="../it/tools.html">it</a> | <a href="../nl/tools.html">nl</a> | <a href="../pl/tools.html">pl</a> | <a href="../pt_PT/tools.html">pt_PT</a> | <a href="../ru/tools.html">ru</a> | <a href="../tr/tools.html">tr</a> | <a href="../uk/tools.html">uk</a> |</div>
+        <h1>Useful tools for Slint contributors</h1>
+      </div>
+<div class="sect1">
+<h2 id="_transifex">Transifex</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The Transifex platform eases cooperation between translators, being a place where each translation team can centralize its PO files and share information. It provides an on line editor, that can also be used to review translations.</p></div>
+<div class="paragraph"><p>To learn how to to use it visit the <a href="http://support.transifex.com/">Transifex Help Desk</a>.</p></div>
+<div class="paragraph"><p>You may use Transifex' on line editor as it comes handy, but:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+don&#8217;t forget to make frequent local backups, just in case
+</p>
+</li>
+<li>
+<p>
+text formatting of translations is easier to do and check locally, using a specialized PO editor like <strong>Lokalize</strong> or <strong>Poedit</strong>
+</p>
+</li>
+<li>
+<p>
+preferably, set your browser to use a serif fixed width (mono spaced) font like Courier
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>To translate webpages in asciidoc format, usage of Transifex is mandatory (see below).</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">If you prefer to translate locally, be sure to check in Transifex <em>Download for translation</em> (not <em>Download for use</em>). This could avoid duplicating efforts&#8230; But two team members can share the same big PO file, as long as they first agree on who translates what.</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Transifex doesn&#8217;t wrap lines of translated text. This can lead to <strong>very</strong> long lines, hard to read in a text editor and that can even make it crash eating all the CPU. To avoid that, after having downloaded the PO file, just type:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  msgcat file_downloaded_from_Transifex &gt; file_renamed</code></pre>
+</div></div>
+<div class="paragraph"><p>then use <em>Lokalize</em> or <em>Poedit</em> to translate <strong>file_renamed</strong>. This file will have wrapped lines but will be otherwise identical to downloaded one, so that won&#8217;t hurt.</p></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>If you translate locally don&#8217;t forget to upload edited file on Transifex when you&#8217;re idle, not to let it locked uselessly.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lokalize">Lokalize</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>Lokalize</em> is included in Slackware. You can either read the Lokalize Handbook <a href="http://docs.kde.org/development/en/kdesdk/lokalize/index.html">on line</a> or access it from the Help menu of pressing [F1]. Recommended settings:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Settings &#8658; Configure Lokalize &#8658; Identity: Choose your language (set to target language).
+</p>
+</li>
+<li>
+<p>
+Settings &#8658; Configure Lokalize &#8658; Appearance: Choose a serif fixed width (mono spaced) font like Courier. This will help you distinguish 0 (the digit) and O (the letter) or | (the pipe) from I (the letter) and check formatting, for instance first word&#8217;s alignment on consecutive lines.
+</p>
+</li>
+<li>
+<p>
+Settings &#8658; Configure Lokalize &#8658; Appearance: Check <em>LEDS to indicate Fuzzy and Untranslated status</em> as well as <em>cursor column number</em>, very handy to check line&#8217;s length when that matters.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_poedit">Poedit</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>Poedit</em> is not shipped in Slackware but is available @ <a href="http://slackbuilds.org">SlackBuilds.org</a>.</p></div>
+<div class="paragraph"><p>It lacks a handy way to check line&#8217;s length, but this put aside its features are similar to those of Lokalize, so choosing one or the other is a matter of personal preference.</p></div>
+<div class="paragraph"><p>In Edit &#8658; Preferences &#8658; Editor, check <em>Automatic spell checking</em> and, as with Lokalize, choose a serif fixed width font.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage_of_scripts_included_in_slint_8217_s_tarball">Usage of scripts included in Slint&#8217;s tarball</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>This compressed archive includes all that is needed to build slint products as well as tools intended for slint contributors. It is named slint-[date].tar.xz and provided in directory <a href="https://slint.fr/pub">pub/</a>.</p></div>
+<div class="paragraph"><p>To unpack it, type:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  tar xf slint-[date].tar.xz</code></pre>
+</div></div>
+<div class="paragraph"><p>This will output a directory slint-[date]. See file CONTENT.TXT in it for details, and the README in the directories slint-[date]/build and slint-[date]/tools-for-translators if you want to use some of the scripts used to build slint products, and tools intended for translators. All paths indicated are relative to that directory.</p></div>
+<div class="paragraph"><p>The stuff in the directory slint-[date] is especially useful to check some of the translations (see below).</p></div>
+<div class="sect2">
+<h3 id="_how_to_check_your_translations_of_slackware_8217_s_installer_administration_scripts_and_man_pages">How-to check your translations of Slackware&#8217;s installer, administration scripts and man pages</h3>
+<div class="paragraph"><p>Resource <a href="https://www.transifex.com/projects/p/slint/resource/slint/">slint</a> &#8658; installer, administration scripts</p></div>
+<div class="paragraph"><p>Resource <a href="https://www.transifex.com/projects/p/slint/resource/pkgtools/">pkgtools</a> &#8658; man pages for the <em>pkgtools</em> package</p></div>
+<div class="paragraph"><p>Resource <a href="https://www.transifex.com/projects/p/slint/resource/slackpkg/">slackpkg</a> &#8658; man pages for the <em>slackpkg</em> package</p></div>
+<div class="paragraph"><p>When you are done with the translation(s), just follow the instructions in slint-[date]/tools-for-translators/TESTING_HOW-TO</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/note.png" alt="Note" />
+</td>
+<td class="content">to check the man pages you will need to have installed the software <em>po4a</em>, for which build material is available @ <a href="http://slackbuilds.org">SlackBuilds.org</a>.</td>
+</tr></table>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Last updated 2016-04-23 16:20:46 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

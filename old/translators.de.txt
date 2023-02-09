@@ -1,0 +1,84 @@
+= Übersetzer und andere an Slint Mitwirkende
+
+Auf dieser Seite sind alle Slint- Übersetzer und Lektoren, die auf der
+Transifex-Plattform registriert sind, aufgelistet.
+
+Vielen Dank allen!
+
+Didier Spaier
+
+[cols="50,50", format="csv", width="80%", options="header"]
+|========
+Übersetzer,Sprache
+dlee99 (Dik Leenheer), Niederländisch
+Eric Hameleers,Niederländisch
+Kaj Huisman, Niederländisch
+ponce,Italienisch
+celyr,Italienisch
+giogio, Italienisch
+giuseppep (Giuseppe Pignataro), Italienisch
+ihaveadrin, Italienisch
+kooru,Italienisch
+Sébastien Boillod,Französisch
+Didier Spaier,Französisch
+Nicolas Kovacs, Französisch
+Marcin Herda,Polnisch
+Piotr Maksymiec,Polnisch
+elesmod,Polnisch
+lukkon,Polnisch
+Christian Ruesch,Deutsch
+franzen,Deutsch
+Johannes Georgi,Deutsch
+Maik Wagner,Deutsch
+Marcel Saegebarth,Deutsch
+spongetron,Deutsch
+Sammyboy (Marek Srejma), Deutsch
+titopoquito,Deutsch
+Adriano Balani,Portugiesisch Brasilien
+Enrico Nicoletto,Portugiesisch Brasilien
+Fela,Brazilian Portugiesisch
+Gabriel Magno,Portugiesisch Brasilien
+Icavalheiro,Portugiesisch Brasilien
+Retalhador,Portugiesisch Brasilien
+br_Orion,Portugiesisch Brasilien
+igaldino,Portugiesisch Brasilien
+Malkon Rodrigo,Portugiesisch Brasilien
+marcelo.castro,Portugiesisch Brasilien
+Xerxes Lins,Portugiesisch Brasilien
+hugok (Hugo Carvalho), Portugiesisch (Portugal)
+Dimitris Tzemos,Griechisch
+dreamwalking,Griechisch
+George Vlahavas,Griechisch
+Efstathios Iosifidis,Griechisch
+Constantine Mousafiris,Griechisch
+Diantre,Spanisch (Lateinamerika)
+AlvaroG,Spanisch (Lateinamerika)
+ecoslacker,Spanisch (Lateinamerika)
+sombragris,Spanisch (Lateinamerika)
+Serg Bormant,Russisch
+Sergey Ignatev,Russisch
+Yaroslav Shmelev,Russisch
+Graf,Russisch
+adioe3,Bosnisch (Bosnien und Herzegowina)
+Malsasa, Indonesisch
+willysr,Indonesisch
+tuapembual, Indonesisch
+kisil,Ukrainisch
+uatech,Ukrainisch
+xuser13,Ukrainisch
+Koljan1970 (Микола Ткач),Ukrainisch
+AaLeSsHhKka (Oleh Tsyupka),Ukrainisch
+StreamThreader, Ukrainisch
+Ekin Akoğlu,Türkisch
+kaanureyen07, Türkisch
+Kemal Ökmen,Türkisch
+Orhan Orhan, Türkisch
+Onur Özdemir,Türkisch
+Samet Yilmaz,Türkisch
+Vilender,Türkisch
+zm1990s (Zhang Min),Chinesisch (China)
+guanx,Chinesisch (China)
+Smokey,Rumänisch
+tuxbg (Krustio),Bulgarisch
+giogio, Interlingua
+|========

@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Slint kurucu</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Anasayfa</a></div>
+      <div><a href="installer.html">Slint yükleyici</a></div>
+      <div><a href="package.html">Slint paketi</a></div>
+      <div><a href="translators.html">Çevirmenler</a></div>
+      <div><a href="contribute.html">Katkıda bulun</a></div>
+      <div><a href="tools.html">Araçlar</a></div>
+      <div><a href="changelog.html">Değişiklik Listesi</a></div>
+      <div id="page-source"><a href="../installer.tr.txt">Sayfa Kaynağı</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Slackware Yerelleştirme Projesi</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/installer.html">de</a> | <a href="../en/installer.html">en</a> | <a href="../es/installer.html">es</a> | <a href="../fr/installer.html">fr</a> | <a href="../ia/installer.html">ia</a> | <a href="../id/installer.html">id</a> | <a href="../it/installer.html">it</a> | <a href="../nl/installer.html">nl</a> | <a href="../pl/installer.html">pl</a> | <a href="../pt_BR/installer.html">pt_BR</a> | <a href="../pt_PT/installer.html">pt_PT</a> | <a href="../ru/installer.html">ru</a> | <a href="../sv/installer.html">sv</a> | <a href="../tr/installer.html">tr</a> | <a href="../uk/installer.html">uk</a> |</div>
+        <h1>Slint kurucu</h1>
+      </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Slint kurucu kurulum sırasında tercih ettiğiniz dili kullanmanıza izin
+verir, ve Slackware&#8217;e tercüme edilmiş yönetim araçlarını ve kılavuz
+sayfalarını ekler.</p></div>
+<div class="paragraph"><p>Sistemi yüklemek için <em>Braille terminali</em> kullanılabilir. Kullanım
+talimatlarına <a href="https://slint.fr/docs/README_BRLTTY">https://slint.fr/docs/README_BRLTTY</a> adresinden ulaşabilirsiniz.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_indirin_ve_kurucu_iso_kalıbını_kontrol_edin">İndirin ve kurucu ISO kalıbını kontrol edin</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>İki farklı boyutta kullanılabilir ISO kalıbı var:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://sourceforge.net/projects/slint/files/">DVD + USB tam ISO kalıpları</a>
+  Slackware&#8217;i yüklemek için ihtiyacınız olan her şeyi içerir.
+</p>
+</li>
+<li>
+<p>
+<a href="https://slint.fr/installers">CD + USB küçük ISO kalıpları</a> Slackware
+  paketlerini içeren bir medyayla tamamlanmalıdır, örneğin bir Slackware
+  DVD&#8217;si.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Bir tam ISO kalıbını indirmek için önce sürüm numarasına tıklayın, örneğin
+14.1.</p></div>
+<div class="paragraph"><p>ISO kalıbının bütünlüğünü doğrumalak için md5 checksum kullanabilirsiniz.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Küçük ISO kalıpları için ilgili md5 dosyasını (ismi .md5 ile biten) indirip
+  kullanabilirsiniz
+</p>
+</li>
+<li>
+<p>
+Tam ISO kalıpları için ISO kalıbı bağlantısının sağında siyah çember içine
+  alınmış i harfine tıklayarak checksum bilgisini görüntüleyebilirsiniz.
+  Örneğin, yerelleştirilmiş Slackware64-14.1 çokdilli kurucusunu yapmak için
+ISO kalıbını (eğer küçük kurucuyu kullanıyorsanız md5 dosyasını da) indirin
+ve aynı klasördeyken şu komutlardan birini uygulayın
+</p>
+</li>
+</ul></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>md5sum -c slint64-14.1.iso.md5 # yanıt OK olmalı
+md5sum slint64-14.1-full.iso # çıktısı web sayfasında gösterilenle aynı olmalıdır</code></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_iso_kalıbı_cd_dvd_veya_usb_bellek_üzerine_yazın">ISO kalıbı CD, DVD veya USB bellek üzerine yazın</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_önyüklenebilir_usb_bellek_oluşturun">Önyüklenebilir USB bellek oluşturun</h3>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">
+<div class="ulist"><ul>
+<li>
+<p>
+USB belleğin önceki tüm içeriği SİLİNECEK
+</p>
+</li>
+<li>
+<p>
+Bu bölüm içeriğininde KURTARILAMAZ KAYIP olabileceğinden USB Belleğin ismi
+  yerine Disk bölümünün ismini yazmadığınızdan emin olmak için komutunuzu
+  dikkatlice tekrar okuyunuz.
+</p>
+</li>
+</ul></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p><em>Linux</em>'da USB belleği takın, sonra şu komutlarla ismini kontrol edin:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cat /proc/partitions
+dmesg | tail</code></pre>
+</div></div>
+<div class="paragraph"><p>Eğer ismi /dev/sdc ise örneğin, şunu yazın:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>dd if=&lt;dosyaadı.iso&gt; of=/dev/sdc bs=1M</code></pre>
+</div></div>
+<div class="paragraph"><p><em>Windows</em> üzerinde özgür ve açık kaynak kodlu olan
+<a href="http://rufus.akeo.ie/">Rufus</a> yazılımını kullanın.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_önyüklenebilir_bir_cd_küçük_kurucu_veya_dvd_büyük_kurucu_oluşturun">Önyüklenebilir bir CD (küçük kurucu) veya DVD (büyük kurucu) oluşturun</h3>
+<div class="paragraph"><p><em>Linux</em> üzerinde aşağıdaki komutlardan CD için birinciyi, DVD için ikinciyi
+girin:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cat slint64-14.1.iso | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso</code></pre>
+</div></div>
+<div class="paragraph"><p><em>Windows 2000/XP/Vista/7</em> üzerinde özgür ve açık kaynak kodlu olan
+<a href="http://infrarecorder.org/">InfraRecorder</a> yazılımını kullanın.</p></div>
+<div class="paragraph"><p><em>Windows 7/8</em> üzerinde Windows 7 ve 8 ile gelen
+<a href="http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file">Windows
+Disk Image Burner</a> kullanın</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_çokdilli_kurucunuzu_kullanın">Çokdilli kurucunuzu kullanın</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Kurulum ortamını (CD, DVD veya USB bellek) takın ve makinenizi yeniden
+başlatın.</p></div>
+<div class="paragraph"><p>Karşılama ekranında yükleme için tercih ettiğiniz dili ilgili iki harflik
+kodu yazarak seçeceksiniz.</p></div>
+<div class="paragraph"><p>Sliny kurucular çokdilli olmalarının yanında Slackware kurucularına ek
+olarak aşağıdaki özellikleri de sunar:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Varsayılan yazı tipi ve tuş haritası kurulum için kullanılan dile
+  uyarlanmıştır.
+</p>
+</li>
+<li>
+<p>
+Kurulum esnasında yazı tipinin ekran çözünürlüğüne otomatik olarak
+  uyarlanması için mümkün olduğu taktirde True Type yazı tipleri kullanılır
+  (sadece Slackware 14.0 ve 14.1 sürümleri için)
+</p>
+</li>
+<li>
+<p>
+Yükleme sonunda (yeniden başlatmadan önce) düzenli kullanıcı hesaplarının
+  oluşturulması seçeneği sunulmaktadır.
+</p>
+</li>
+<li>
+<p>
+Kurulum sırasında kullandığınız dil ve karakter haritasını, kurulan sistemde
+  varsayılan olarak ayarlama seçenekleri sunulur ve eğer X sunucusu
+  yüklenmişse X altında gerekli ayarlarlamalar da yapılır.
+</p>
+</li>
+<li>
+<p>
+Bir Slink paketi yüklendi, bu paket <a href="package.html">Slint paketi</a>
+  listesinde de gösterilen ana Slackware araçları bunların kullanım
+  kılavuzları için çevirileri sağlıyor. Ayrıca /usr/doc/slint-&lt;version&gt;-&lt;date&gt;
+  altına bir Slint-HOWTO.txt ve reinstall-slackware-packages.sh betiği de
+  içeren dökümanlar yüklendi.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Eğer kurucunun küçük sürümünü kullanıyorsanız, kurulum sırasında ayrıca bir
+<em>kaynak ortam</em> a, diğer bir deyişle Slackware peketleri içeren bir ortama,
+onlar Slint kurucusu içinde olmadığından, ihtiyacınız olacak. Paketler
+Slackware CDsinden veya DVDsinden, Slackware USB belleğinden, bağlanmış bir
+dizinden, bir sabit disk bölümünden, Samba paylaşımından, NFS (Ağ Dosya
+Sistemi)inden, FTP/HTTP sunucudan kurulabilir. Menüde KANAK ı seçtiğinizde,
+kurucu size seçilen ortamın türüne göre ne yapılacağını söyler.</p></div>
+<div class="paragraph"><p>Bir kaynak ortam almak için şu bağlantıyı takip edin:
+<a href="http://www.slackware.com/getslack/">Get Slack</a></p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">Gerekliyse, bu aşamada kurucu halihazırda belleğe yüklendiği için, kurulum
+CDnizi, paketleri içeren bir DVD ile değiştirebilirsiniz.</td>
+</tr></table>
+</div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Son güncelleme 2016-04-23 16:20:31 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

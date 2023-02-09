@@ -1,0 +1,2381 @@
+
+=  Slint Handbook (14.2.1)
+:toc: left
+:toclevels: 2
+:toc-title: Inhoud
+:pdf-themesdir: themes
+:pdf-theme: default
+:sectnums:
+
+==  Inleiding
+
+=== Over Slint
+
+Slint is een meertalige, eenvoudig te installeren, veelzijdige en beginnersvriendelijke op http://www.slackware.com/[Slackware] gebaseerde voor visueel beperkten toegankelijke https://en.wikipedia.org/wiki/Linux_distribution[Linux distributie].
+
+Een Slint systeem is direct functioneel en kan worden aangepast om aan de meeste computervereisten te voldoen.
+
+==== Functionaliteit
+
+Je kunt kiezen uit twee installatiemogelijkheden: Automatisch (zonder het typen van Linux commando's) en Handmatig voor een aangepaste installatie. Het installatieprogramma bevat tevens documentatie.
+
+Slint is van installatie tot gebruik door middel van spraak en braille in zowel een console als in grafische omgevingen toegankelijk voor visueel beperkte gebruikers.
+
+Op ieder Slint-systeem wordt een uitgebreide collectie software voor servers, desktops en laptops geïnstalleerd waaronder verschillende grafische omgevingen: KDE (optioneel), LXDE, MATE, XFCE en lichtgewicht vensterbeheerders. Alle grafische omgevingen bieden toegang tot alle applicaties en systeembewerkingen zoals het automatisch aankoppelen van verwijderbare apparaten, meldingen van beschikbare updates voor geïnstalleerde software, onmiddellijke internettoegang en het stoppen, herstarten en in slaapstand brengen van het systeem. Elke desktopomgeving heeft een vergelijkbare lay-out van de panelen en het applicatiemenu en bieden daardoor een consistente werkomgeving.
+
+Voor geïnternationaliseerde toepassingen wordt de gekozen taal gebruikt.
+
+Het Slint Dashboard centraliseert de toegang tot hardware- en systeeminstellingen, pakkettenbeheer, documentatie en (systeem)hulpprogramma's.
+
+Slint bevat standaard veel toepassingen om documenten in verschillende formaten te maken, te bekijken en te converteren, te communiceren per e-mail, tekst- en audiochat, audio- en video af te spelen, onderling documenten te verzenden en te ontvangen, audio-, video- en grafische documenten te bewerken en applicaties te ontwikkelen. Slint is te gebruiken als een volwaardige server via een console en/of met behulp van een van de verschillende bijgeleverde desktops.
+
+Veel toepassingen zijn met behulp van een ruime keuze aan TTS en bijbehorende stemmen toegankelijk voor visueel beperkten. Mocht je er nog meer nodig hebben, zijn ze voor zowel de console als voor grafische omgevingen eenvoudig te installeren.
+
+Verschillende interne tools vergemakkelijken het beheer en de configuratie van je Slint systeem.
+
+Heel veel meer applicaties zijn eenvoudig als softwarepakket via een eenvoudige opdracht of enkele muisklikken te installeren. Duizenden softwarepakketten zijn binnen handbereik!
+
+Als Slint gebruiker wordt je op de hoogte gehouden van upgrades voor de geïnstalleerde pakketten als deze beschikbaar zijn en die indien gewenst worden geïnstalleerd. Dit houdt je systeem veilig.
+
+De standaard ingestelde voorkeurstoepassingen kunnen eenvoudig worden aangepast.
+
+==== Inhoud, versies en release-model.
+
+Het Slint-installatieprogramma kent alleen een volledige installatie. De KDE desktop is echter optioneel.
+
+Omdat Slint is gebaseerd op Slackware, proberen we om kort na het uitkomen van een nieuwe Slackware versie ook een nieuwe versie van Slint uit te brengen.
+
+Slint volgt echter een "semi-rolling" release-model wat betekent dat gedurende de levenscyclus van een bepaalde versie naast (beveiligings)-updates sommige applicaties selectief worden bijgewerkt om verbeteringen aan te brengen en/of functies toe te voegen. Dit is het geval voor software die er voor zorgt om Slint toegankelijk te maken voor slechtzienden zoals schermlezers.
+
+We adviseren gebruikers om zo snel mogelijk na het verschijnen van een nieuwe versie hiernaar om te schakelen. Tot op heden zijn we in staat geweest instructies en hulpbestanden te voorzien om te kunnen upgraden in plaats van helemaal opnieuw te installeren. We doen ons best om dat ook voor toekomstige versies te kunnen doen, hoewel een volledige back-up van gebruikersbestanden gevolgd door een nieuwe installatie en het terugzetten van de back-up, vooral voor een desktop of laptop, soms gemakkelijker kan zijn.
+
+=== Over dit boek en andere informatiebronnen
+
+Dit boek is bedoeld om de beginnende Slint-gebruiker te helpen bij de installatie en het gebruik van Slint. De concepten en afspraken specifiek voor Slint en andere Linux-distributies komen aan bod en er is een woordenlijst.
+
+We proberen gebruikers van Windows en MacOS, maar ook die van andere distributies zoals Ubuntu zo veel mogelijk tegemoet te komen.
+
+In een Slint systeem is over het algemeen documentatie van de geïnstalleerde software aanwezig. We zullen in dit boek aangeven waar je die kunt vinden.
+
+Andere informatiebronnen zijn:
+
+* De informatie die op de website van de makers van de in Slint opgenomen software aanwezig is.
+* http://docs.slackware.com/[Het Slackware documentatieproject] en dan met name de http://docs.slackware.com/howtos:start[HOWTO artikelen]. Veel hiervan zijn direct van toepassing op Slint, sommige in aangepaste vorm.
+* De ArchWiki biedt behalve voor de Arch distributie zelf veel nuttige artikelen over software die ook in Slint aanwezig is. Het zoeken naar "arch wiki mate" bijvoorbeeld leidt naar https://wiki.archlinux.org/index.php/MATE[deze pagina over MATE]. Let op: de hier aanwezige informatie geldt soms in aangepaste vorm omdat Slint en Arch op sommige punten van elkaar verschillen. Arch gebruikt bijvoorbeeld systemd als init-systeem en het kan zijn dat bepaalde software in Slint en Arch standaard verschillend moet worden geconfigureerd.
+* En natuurlijk kan een zoekmachine via internet vaak helpen antwoorden te vinden op vragen en bij het oplossen van problemen.
+
+=== Ondersteuning
+
+Je kunt hulp vinden via deze kanalen:
+
+* De Slint mailing list is het primaire support kanaal. Je kunt je hiervoor registreren door een e-mail te sturen naar slint-request@freelists.org met het onderwerp: 'subscribe' en vervolgens de ontvangen bevestigingsmail te beantwoorden. Stuur voor meer informatie een e-mail naar slint-request@freelists.org met als onderwerp 'commands' of 'help'. Na registratie kun je e-mailen naar slint@freelists.org.
+* De archieven van de mailing list die https://www.freelists.org/archive/slint[hier] beschikbaar zijn.
+* Op IRC: chat via het #slint kanaal, server irc.libera.chat, registratie hiervoor is niet nodig.
+* Mumble: server slint.fr (op afspraak die je maakt via een ander kanaal).
+* Het https://forum.salixos.org/viewforum.php?f=44[Slint forum]: gehost door onze vrienden bij Salix (een andere Slackware afgeleide). Hiervoor moet je je registreren.
+
+
+Zie voor meer informatie de links onder het Slint Dasboard, bezoek onze https://slint.fr/wiki/doku.php?id=en/start[wiki] of typ na installatie gewoon slint-doc in een terminal.
+
+=== Vertaling en andere bijdragen aan het Slint-project
+
+Slint heeft vertalers nodig! Lees als je wilt helpen met vertalen de instructies in https://slint.fr/doc/translate_slint.html[Vertaal Slint].
+
+De vertaalbestanden worden gehost op https://crowdin.com/project/slint[Crowdin].
+
+Als je aan het Slint-project wilt bijdragen door te helpen met andere taken post je gewoon in de mailing list of stuur je een mail naar: didieratslintdotfr. Uiteraard zijn vertalers ook welkom op de mailing list!
+
+===  Dankwoord
+
+Het Slint-project bestaat vooral dankzij het werk van de vertalers van Slint en andere bijdragers, bedankt allemaal!
+
+Dank ook aan George Vlahavas voor zijn advies en tools en aan de medewerkers van het SlackBuilds.org project, met wiens hulp veel extra software voor Slackware en afgeleiden kan worden gecompileerd.
+
+Slint is gebaseerd op Slackware dat is ontwikkeld door Patrick J. Volkerding en zijn team. Bedankt! Ik moedig alle Slint gebruikers aan door middel van een donatie financieel bij te dragen aan Slackware en Salix.
+
+De Slint repositories worden gratis gehost door Darren 'Tadgy' Austin. Ik moedig alle Slint gebruikers aan bij te dragen aan de financiering van de host https://slackware.uk/
+
+Links for financial contributions: +
+https://www.patreon.com/slackwarelinux[Become a Slackware patron] or https://paypal.me/volkerdi[Ondersteuning Slackware] +
+Follow the links on top of http://slackware.uk/slint/x86_64/slint-14.2.1/[this page] to support Slackware UK +
+https://salixos.org/donations.html[Donations to Salix]
+
+==  Slint installeren
+
+Dit deel van het handboek doorloopt het proces van het downloaden van Slint, het controleren van het ISO-beeldbestand met een controlesom, het schrijven van het ISO-bestand naar een installatiemedium, het partitioneren van je harde schijf en beschrijft in het kort het installatieproces zelf.
+
+=== Vereisten
+
+De huidige Slint versie kan worden geïnstalleerd op computers die aan de volgende eisen voldoen:
+
+* Architectuur: x86_64 (64-bit CPU), ook bekend als AMD64
+* Beschikbare vrije ruimte op schijf (harde schijven, SSD, NVME, eMMC): ten minste 28G in Auto modus. Een volledige Slint installatie heeft ongeveer 20G nodig, zonder gebruikersbestanden of add-ons.
+* RAM: minstens 2G
+* Een DVD-station of een USB-poort beschikbaar, met de mogelijkheid om van een DVD of USB-stick op te starten. Een lege DVD of een USB-stick van minimaal 4G kan als installatiemedium worden gebruikt.
+
+NOTE: Secure Boot moet zijn uitgeschakeld om Slint te kunnen installeren.
+
+=== Functies van het installatieprogramma
+
+* Het installatieprogramma is een "live systeem" dat in het geheugen wordt uitgevoerd: het zal niets aan het al geïnstalleerde systeem wijzigen tenzij en totdat jij daar opdracht toe geeft.
+* Het installatieprogramma is voor visueel beperkte gebruikers volledig met Braille en spraak met behulp van de "Speakup" schermlezer te gebruiken.
+* Voor ervaren gebruikers beschikt het over alle benodigde tools om het <<drive, station>> waar Slint op zal worden geïnstalleerd voor te bereiden.
+* In automatische installatiemodus hoeft de gebruiker alleen vragen in contextuele vorm te beantwoorden.
+* Het installatieprogramma kan onder bepaalde voorwaarden ruimte vrijmaken op het station waarin je Slint naast een ander Linux systeem wilt installeren.
+* Als Slint als het enige systeem op een verwijderbaar apparaat wordt geïnstalleerd dat via USB verbonden is, kan deze "portable" worden gemaakt. D.w.z. bruikbaar op elke computer die vanaf een USB-stick kan opstarten.
+* Het installatieprogramma kan de schijf waarop Slint als het enige systeem is geïnstalleerd versleutelen. Dit voorkomt diefstal van de gegevens die er op aanwezig zijn in geval van verlies of diefstal van de machine of van een verwijderbaar apparaat.
+* Slint kan op zijn eigen schijf geïnstalleerd worden of naast een ander systeem.
+
+=== Voorbereiding
+
+<<download_and_verify, Downloaden en controleren van een Slint ISO-beeldbestand>> +
+<<write_the_iso, Het ISO-beeldbestand naar een installatiemedium schrijven>> +
+<<make_room_for_Slint, Ruimte vrijmaken voor Slint>> +
+<<create_partitions_for_Slint, Partities voor Slint aanmaken>>
+
+[[download_and_verify]]
+====  Downloaden en controleren van een Slint ISO-beeldbestand
+
+De laatste versie van de Slint distributie is 14.2.1
+
+Het meest recente installatie ISO-beeldbestand is altijd in https://slackware.uk/slint/x86_64/slint-14.2.1/iso[deze map] beschikbaar
+
+[TIP]
+====
+Zolang je Slint versie 14.2.1 gebruikt is het niet nodig om helemaal opnieuw te installeren als er een nieuw ISO-beeldbestand beschikbaar komt. Dit is omdat er alleen nieuwe functies van het installatieprogramma en nieuwe of geüpgrade pakketten worden toegevoegd die ook bij het reguliere up-to-date houden van je systeem worden geinstalleerd.
+====
+
+De bestandsnaam van onderstaand ISO-beeldbestand is slechts een voorbeeld die je tijdens het downloaden kunt wijzigen in de actuele naam.
+
+Een internet zoekopdracht "check sha256sum windows" vertelt je hoe je onder Windows het ISO-beeldbestand kunt controleren.
+
+Als je Linux gebruikt kun je het ISO-beeldbestand en de sha256 checksum met de volgende opdrachten downloaden:
+----
+wget https://slackware.uk/slint/x86_64/slint-14.2.1/iso/slint64-14.2.1.4.iso
+wget https://slackware.uk/slint/x86_64/slint-14.2.1/iso/slint64-14.2.1.4.iso.sha256
+----
+
+Om de integriteit van de gedownloade bestanden te controleren, typ je de volgende opdracht:
+
+----
+sha256sum -c slint64-14.2.1.4.iso.sha256
+----
+Het resultaat moet zijn: OK +
+Anders moet je de bestanden opnieuw downloaden.
+
+[[write_the_iso]]
+====  Het ISO-beeldbestand naar een installatiemedium schrijven
+
+Je kunt een DVD of een USB-stick als installatiemedium gebruiken.
+
+[[make_a_bootable_usb_stick]]
+===== Een opstartbare USB-stick maken
+
+On a ++Linux++ system, plug in the USB stick, and check it's name with the following command:
+
+----
+lsblk -o model,name,fstype,mountpoint
+----
+
+[WARNING]
+====
+Controleer zorgvuldig de uitvoer van het commando om er zeker van te zijn dat je niet de apparaatnaam van een harde schijfpartitie invoert in plaats van de apparaatnaam van je USB-stick.  Alle aanwezige gegevens op de USB-stick of op een foutief gekozen harde schijfpartitie zullen *ONHERSTELBAAR VERLOREN GAAN*.
+====
+
+Stel dat de apparaatnaam van de USB-stick /dev/sdb is. De naam kan op jouw systeem anders zijn dus neem de volgende opdracht niet blind over.  De schrijfwijze van het commando om het Slint ISO-beeldbestand naar een USB-stick te schrijven die zich in /dev/sdb bevindt is als volgt:
+
+----
+dd if=slint64-14.2.1.4.iso of=/dev/sdb bs=1M status=progress && sync
+----
+
+[NOTE]
+====
+In het bovenstaande commando verwijst *if=* naar het pad van het Slint ISO-beeldbestand en *of=* naar de apparaatnaam van de USB-stick.  Deze waarden kunnen voor jouw systeem dus anders zijn.
+====
+
+On ++Windows++ use an application like http://rufus.akeo.ie/[Rufus].  Het is gratis en open-source.
+
+1. Start het gedownloade Rufus programma.
+2. Selecteer "Create a bootable disk" en kies het ISO-beeldbestand in het dropdown menu.
+   Klik op het schijfpictogram en blader naar het Slint .iso-bestand en selecteer het.
+3. Om er voor te zorgen dat de USB-stick compatibel is met UEFI, selecteer je FAT32 als <<file_system, bestandssysteem>>.
+4. Om een USB-stick te maken die opstart met de melding "Druk op een toets om op te starten vanaf USB" selecteer je de optie "Create extended label and icon files".
+5. Wanneer je de gewenste opties geselecteerd hebt klik je op Start en bevestig je dat je de USB-stick wilt wissen.
+6. De .iso-bestanden worden nu naar de USB-stick gekopiëerd (dit proces kan enkele minuten duren). Wanneer Rufus klaar is sluit je het programma af en kan de USB-stick worden verwijderd.
+
+[[make_a_bootable_DVD_disc]]
+=====  Make a Bootable DVD Disc
+
+On a ++Linux++ system insert the DVD and type the following command:
+
+----
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.2.4.iso
+----
+
+Zorg ervoor dat je het volledige pad naar het Slint ISO-beeldbestand opgeeft.
+
+On ++Microsoft Windows 2000/XP/Vista/7++ you can write to a DVD using the application http://infrarecorder.org/[InfraRecorder].  Het is gratis en open-source.
+
+On ++Microsoft Windows 7/8/10++ you can use the http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file[Windows Disk Image Burner] utility that is shipped with Microsoft Windows.
+
+[[make_room_for_Slint]]
+====  Ruimte vrijmaken voor Slint
+
+De hele computer of op zijn minst een hele schijf aan Slint toewijzen maakt de installatie eenvoudiger en wordt dus aanbevolen. Sla in dat geval de volgende stappen over en ga direct door met het installatieprogramma.
+
+Je kunt echter ook een schijf delen met een reeds geïnstalleerd besturingssysteem zoals Windows, Mac OS, *BSD of een andere Linux-distributie.
+
+Je hebt dan vrije ruimte voor Slint nodig aan het einde van de partitietabel (na de laatste partitie) van de desbetreffende schijf. Er is ten minste 20G nodig voor het systeem zelf, maar ook extra ruimte voor gebruikersbestanden en andere software. Als je een ervaren Linux-gebruiker bent kun je de laatste partitie van het station na het starten van het installatieprogramma verkleinen met behulp van Linux commando's. In Auto Modus kan het installatieprogramma dit onder de volgende voorwaarden voor je doen:
+
+* Het station bevat een GUID Partitietabel (GPT).
+* De laatste partitie heeft een ext <<file_system, bestandssysteem>>.
+* Er kan ten minste 28G aan schijfruimte worden vrijgemaakt.
+* De machine is opgestart in EFI modus (niet in Legacy)
+
+Als dat niet het geval is moet je voordat je Slint installeert ruimte vrijmaken met `gparted` of in Windows (aanbevolen als Windows is geïnstalleerd). Onder bepaalde omstandigheden kan Slint dit voor je doen zoals beschreven in
+<<Automatic_installation, Automatische installatie>>
+
+===== Ruimte vrijmaken in een Windows-volume
+
+Hieronder volgt een samenvatting van de stappen aangegeven in
+https://docs.microsoft.com/en-us/windows-server/storage/disk-management/shrink-a-basic-volume[dit document].
+
+1. Open in Windows een opdrachtprompt en typ:
++
+`diskpart`
+
+2. Bij de diskpart-prompt typ je:
++
+`list volume`
++
+Noteer het nummer van het eenvoudige volume dat je wilt verkleinen.
+
+3. Selecteer het volume dat een ntfs bestandssysteem moet hebben en dat je wil verkleinen door te typen:
++
+`select volume <number>`
+
+4. En om te bepalen tot welke maximale grootte het volume kan worden verkleind:
++
+`shrink querymax`
+
+5. Geef de <size> in megabytes van de ruimte die je wil vrijmaken. Deze mag niet groter zijn dan de maximale grootte gevonden door de vorige opdracht. Je wil misschien ook wat ruimte in het Windows-volume vrijhouden voor gegevensopslag.
+
+6. Typ dit commando:
++
+`shrink desired =<size>`
++
+size is een getal in MB, voor 30 GB bijvoorbeeld, wetende dat 1G=1024M:
++
+`shrink desired=30720`
++
+Hou genoeg vrije ruimte op het systeemvolume om het installeren van Windows-updates mogelijk te maken.
+
+Alternatief kun je ook 'Schijfbeheer' gebruiken: selecteer het volume dat je wilt verkleinen, rechtsklik er op en selecteer 'Volume verkleinen', wacht tot de maximale ruimte waarvan het volume kan worden verkleind wordt weergegeven, pas de waarde aan om
+vrije ruimte over te laten als je dat wilt en klik vervolgens op de knop 'verkleinen'.
+
+===== Ruimte vrijmaken onder Linux
+
+Je kunt gebruik maken van http://gparted.org/index.php[Gparted], of een in je distributie aanwezige grafische tool voor partitiebeheer.
+
+TIP: Als 28G vrijgemaakt kan worden in de laatste partitie van een schijf met een GPT en een ext4 bestandssysteem kan het installatieprogramma die voor je verkleinen.
+
+[[create_partitions_for_Slint]]
+====  Partities voor Slint aanmaken
+
+Als je de automatische installatiemodus hebt gekozen en een volledig station aan Slint toewijst, zal het installatieprogramma dit voor je partitioneren. Hierna kun je als je dat wilt nog steeds zelf de indeling van de partities aanpassen met behulp van een van de eerdergenoemde onderaan weergegeven commando's.
+
+Als je van plan bent om de handmatige installatiemodus te gebruiken, kun je de partities voor Slint voor of tijdens de installatie aanmaken.
+
+Als je niet bekend bent met Linux zal het waarschijnlijk makkelijker zijn om dit vóór de installatie te doen. We adviseren hier http://gparted.org/index.php[gparted] voor te gebruiken. Gparted kan zowel bestaande partities verkleinen om ruimte vrij te maken als nieuwe partities maken in vrijgemaakte ruimte.  Als je een systeem hebt dat Gparted niet ondersteunt (Microsoft Windows) kun je http://gparted.org/livecd.php[Gparted Live] gebruiken.
+De programma's cfdisk, fdisk, gdisk, cgfdisk en parted zijn allemaal beschikbaar vanuit het installatieprogramma. Je kunt ze gebruiken om een station te partitioneren of om partities voor Slint in eerder vrijgemaakte ruimte te maken.
+
+Vereisten voor de installatie van Slint zijn:
+
+* Een partitie van het type Linux van ten minste 20G, meer is beter (ten minste 30 G aanbevolen).
+* Als je opstart in EFI-modus: een "EFI System" partitie(code ef00) van ten minste 100M. Zelfs als je opstart in EFI-modus kan het geen kwaad als deze aanwezig is.
+* In het geval van een GPT (GUID Partition Table): een partitie van het type BIOS Boot (ef02),  4M groot, om op te kunnen starten in  Legacy-modus. Zelfs als je opstart in EFI-modus kan de aanwezigheid hiervan geen kwaad.
+* Optioneel een partitie van het type "swap". Dit wordt vooral aangeraden als je minder dan 8G aan RAM hebt en je je machine in slaapstand wilt kunnen zetten. Je kunt ook na installatie nog een swap bestand instellen.
+
+Je kunt ook een partitie toewijzen aan /home (maar dit hoeft niet, ik doe dat ook niet) en andere partities voor specifieke doeleinden.
+
+[NOTE]
+====
+Slint zelf heeft ongeveer 20 Gigabytes ruimte nodig, maar 50 Gigabytes wordt aanbevolen. Misschien wil je extra software installeren of heb je meer ruimte nodig om bestanden op te slaan.  Hoe meer ruimte, hoe beter, vooral als je foto's, video's, muziek etc. wilt opslaan.
+====
+
+=== Slint installatie
+
+<<Start_of_the_installation, Start of the installation>> +
+<<Accessibility_of_the_installer, Toegankelijkheid of the installer>> +
+<<Usage_of_the_installer, Usage of the installer>> +
+<<Automatic_installation, Automatic installation>> +
+<<Manual_installation, Manual installation>> +
+<<Slint_in_an_encrypted_drive, Slint in an encrypted drive>> +
+<<first_steps_after_installation, First steps after installation>>
+
+[[Start_of_the_installation]]
+==== De installatie starten
+
+Stel indien nodig de firmware van de machine in om vanaf de DVD of USB-stick die je hebt voorbereid op te starten
+
+Plaats het installatiemedium (DVD of USB stick) en start je machine opnieuw op. Visueel beperkte gebruikers zullen een 'beep' horen wanneer het opstartmenu wordt weergegeven.
+
+Start het installatieprogramma door op Enter te drukken.
+
+Het installatieprogramma zal eerst je geluidskaarten proberen te detecteren.
+
+Dit helpt je een werkende als standaard in te stellen om ook te gebruiken voor spraak tijdens de installatie door visueel beperkte gebruikers.
+
+Het installatieprogramma zegt voor iedere gevonden geluidskaart: +
+druk op Enter om deze geluidskaart te kiezen <sound card id> +
+Druk op Enter om te bevestigen zodra je hoort dat de voorgestelde geluidskaart werkt. Deze instelling zal op het nieuwe systeem worden opgeslagen in /etc/asound.conf.
+
+Bij de volgende stap bevestig je (typ s en Enter) dat je tijdens de installatie spraak wilt gebruiken of niet (alleen Enter). Braille is tijdens de installatie altijd beschikbaar.
+
+Vervolgens kunt je de tijdens de installatie gebruikte taal kiezen of wijzigen. Het installatieprogramma wordt dan verder in de gekozen taal weergegeven mits de vertaling in die taal compleet is.
+
+Als je extra kernel-parameters wilt meegeven aan de boot opdrachtregel doe dan het volgende voor je op Enter drukt:
+[NOTE]
+====
+Wees je ervan bewust dat bij het typen van tekst de Amerikaanse toetsenbordindeling wordt gebruikt. +
+Ctrl+x betekent "Houd de Ctrl of Control toets ingedrukt en druk tegelijkertijd op de X toets"
+====
+----
+Druk op de e-toets, druk drie keer op pijl omlaag, dan op de End-toets en daarna op de spatiebalk.
+Typ vervolgens de kernel parameters (zie voorbeelden hieronder) en aansluitend op Ctrl+X.
+Druk dan pas op Enter om te starten.
+----
+
+Om de speakup driver voor je hardware synthesizer te configureren, kun je bijvoorbeeld een kernel parameter typen zoals:
+----
+speakup.synth=apollo
+----
+Je kunt op de boot opdrachtregel ook op de volgende manier de instellingen voor je Braille-apparaat opgeven:
+-----
+brltty=<driver code>,<device>,<text table>
+-----
+Een Papenmeier apparaat met een Franse teksttabel dat via USB aangesloten is installeer je bijvoorbeeld als volgt:
+-----
+brltty=pm,usb:,fr_FR
+-----
+NOTE: Als een braille-apparaat dat via USB is aangesloten niet herkend wordt is misschien de verkeerde teksttabel gekozen.
+
+Aangezien er geen time-out is, zal het opstarten pas beginnen als je op [Enter] drukt.
+
+Spraak- en Braille zullen nu beschikbaar zijn als de installatie begint.
+
+[[Usage_of_the_installer]]
+==== Gebruik van het installatieprogramma
+
+Als je bekend bent met de Linux console kun je dit onderwerp overslaan.
+
+Hieronder wordt het hoofdinstallatiemenu weergegeven:
+....
+Welkom bij het Slint installatieprogramma! (versie 14.2.1)
+
+Beschikbare opdrachten (in te voeren zonder aanhalingstekens):
+
+'doc' om de functies en het gebruik van het installatieprogramma weer te geven.
+'auto' om een semi-automatische begeleide installatie te starten.
+'setup' om een handmatige installatie te starten.
+
+We adviseren je met 'doc' te beginnen voordat je een handmatige installatie wilt starten, als je het station waarin Slint wordt geïnstalleerd wilt versleutelen, of als je de grootte van een partitie moet verkleinen om vrije ruimte voor Slint te maken naast een ander systeem.
+Wanneer je klaar bent met lezen keer je terug naar dit menu.
+....
+
+Zodra dit menu wordt weergegeven kun je beginnen met het installatieproces.
+
+Je typt opdrachten en leest het de uitvoer hiervan in een zogenaamde <<virtual_terminal, virtuele terminal>>. Het installatieprogramma beschikt over verschillende virtuele terminals die hetzelfde fysieke toetsenbord en scherm delen en naast elkaar kunnen worden gebruikt.
+
+Het installatieprogramma start in virtuele terminal 1 genaamd *tty1* maar je kunt naar een andere terminal overschakelen. Je kunt bijvoorbeeld overschakelen naar *tty2* door op
+*Alt-F2* te drukken en later weer terug naar *tty1* met *Alt-F1* zonder informatie in beide terminals te verliezen.
+*Alt-F1* betekent: hou de *Alt* toets ingedrukt en druk tegelijkertijd op de *F1* toets.
+
+Dit kan bijvoorbeeld handig zijn voor het lezen van de documentatie tijdens de installatie:
+je kunt overschakelen naar *tty2* waar je de installatie start, weer terug naar *tty1* om verder te gaan met lezen en vervolgens weer naar *tty2* om verder te gaan met de volgende installatiestap.
+
+Zo kun je ook de woordenlijst raadplegen tijdens het lezen van andere documenten.
+
+De vierde virtuele terminal of *tty4* geeft slechts informatie weer die nuttig kan zijn voor foutopsporing.
+
+Het installatieprogramma heeft verschillende manieren van interactie met jou, de gebruiker:
+
+. Je voert opdrachten in bij de prompt en leest hun uitvoer.
+. Het installatieprogramma stelt een vraag, je typt het antwoord en je bevestigt dit door op Enter te drukken.
+. Het installatieprogramma toont een keuzemenu met meerdere opties: je selecteert er één met behulp van de pijltjestoetsen omhoog en omlaag en je bevestigt vervolgens je keuze door op Enter te drukken of op Esc om te annuleren.
+. Het installatieprogramma geeft informatie weer in een pager. Gebruik de pijltjestoetsen om de vorige of volgende regel te lezen, druk op de spatiebalk om de volgende pagina weer te geven of Q om de pager te verlaten.
+
+[[Automatic_installation]]
+==== Automatische installatie
+
+In automatische modus gebruikt het installatieprogramma de standaardinstellingen zoals de gebruikte grafische omgeving (Mate). Na het opstarten van je nieuwe systeem kun je alle instellingen altijd weer wijzigen.
+
+De installatiestappen zijn hieronder beschreven.
+
+. De installatie van Slint heeft minstens 28G schijfruimte nodig. Het installatieprogramma zal eerst de schijven en de hierop beschikbare ruimte controleren. Afhankelijk van het resultaat kun je Slint op een volledig toegewezen schijf of in de vrije ruimte op een schijf installeren.
+.. Installatie op een volledig toegewezen schijf.
++
+In deze installatiemodus worden alle aanwezige gegevens in het station gewist. Als het bestanden bevat die je wilt bewaren zul je die eerst ergens anders moeten opslaan!
++
+Als het een verwijderbaar station is, verbonden via USB, kan het installatieprogramma Slint 'portable' maken waardoor het mogelijk is om het op elke computer te gebruiken die van een externe USB-schijf kan opstarten.
++
+Optioneel kan het station worden versleuteld om je gegevens te beschermen in geval van diefstal of verlies van het station of de computer. Aangezien hier belangrijke aandachtspunten van toepassing zijn, wordt je aangeraden eerst zorgvuldig het document 'encryptie' te lezen.
+
+.. Installatie op een schijf gedeeld met een ander systeem. Dit maakt het mogelijk om Slint naast een ander systeem op dezelfde schijf te installeren.
++
+Dit is mogelijk als de schijf ten minste 28G vrije ruimte heeft of als die aan het einde kan worden vrijgemaakt, een GPT (GUID partitie tabel) heeft en het installatieprogramma is gestart in de EFI-modus: in deze configuratie kunnen beide systeem opstarten zonder elkaar in de weg te zitten.
+
+. Je bepaalt het formaat van de Slint partitie en eventueel de grootte van een extra partitie, laat optioneel enige vrije ruimte op de schijf voor toekomstig gebruik.
++
+De hoofdpartitie heeft over het algemeen een ext4 bestandssysteem. Op een SD kaart of eMMC schijf heeft deze echter een f2fs bestandssysteem.
++
+Je kunt je keuzes overwegen en wijzigen voordat de installatie begint.
++
+Na bevestiging worden de basispakketten geïnstalleerd, dit duurt een paar seconden.
+
+. Als je voor een versleutelde schijf hebt gekozen, typ je de wachtwoordzin die zal worden gebruikt om de schijf bij elke boot te ontgrendelen.
+. Je kiest een wachtwoord voor de gebruiker "root." Dit is de systeembeheerder die alle machtigingen heeft. Je maakt ook een standaard gebruikersaccount aan, geeft aan of je braille-uitvoer wilt en of je in tekst of grafische modus bij Slint wilt inloggen.
++
+[NOTE]
+====
+Als je tijdens de installatie de Engelse (USA) taal gebruikte kies je nu welke taal je voor het geïnstalleerde systeem wilt gebruiken, anders stelt het installatieprogramma dezelfde taal in als tijdens de installatie.
+====
+. Het installatieprogramma probeert nu een internetverbinding te maken om een tijdzone die overeenkomt met je geografische locatie voor te stellen en later, indien nodig, pakketten op afstand te kunnen installeren. Je kunt deze hier zelf instellen of de voorgestelde instellingen accepteren.
+. Het installatieprogramma maakt vervolgens een wisselbestand aan in de systeem-partitie waarvan je de grootte na de installatie nog kunt wijzigen. Standaard zal telkens wanneer Slint wordt opgestart de grootte hiervan op 1,8x de grootte van het fysieke RAM in zram worden ingesteld.
+. De pakketten worden geïnstalleerd op de schijf (de KDE-pakkettenserie is optioneel). Het installatieprogramma probeert een internetverbinding tot stand te brengen zodat het de meest recente versie van elk pakket sinds het vrijgeven van het ISO-beeldbestand kan downloaden en installeren. Deze nieuwe of bijgewerkte pakketten hoef je na de installatie dus niet meer te downloaden en te installeren.
++
+Afhankelijk van de hardware duurt de installatie van alle pakketten 10 tot 40 minuten.
+
+. Vervolgens wordt het systeem geconfigureerd en de GRUB boot manager geïnstalleerd. Als Slint is geïnstalleerd op een volledig toegewezen schijf kan die in zowel Legacy als EFI modus opstarten. In het andere geval kan er alleen in EFI-modus worden opgestart. In beide gevallen heeft het boot-menu een extra "rescue" boot item om het geinstalleerde besturingssysteem te detecteren en op te starten.
+. Nu wordt je gevraagd of je een 'rescue' USB-stick wilt maken. Je kunt die gebruiken om Slint op te starten als dat niet lukt via het boot-menu.
+
+Verwijder tenslotte het installatiemedium en herstart je nieuwe Slint-systeem.
+Voordat je opnieuw opstart is het mogelijk een voorbeeld van het opstartmenu weer te geven.
+
+[[Manual_installation]]
+==== Handmatige installatie
+
+Een handmatige installatie bestaat uit twee hoofdstappen.
+
+. De schijf (of schijven) op de installatie voorbereiden. Dit bestaat uit het bepalen van de indeling van de partities, het aanmaken van die partities en optioneel het formatteren hiervan in het gewenste bestandsformaat. Het installatieprogramma kan desgewenst de Linux-partities formatteren.
+. Typ *setup* om de verdere voorbereiding, installatie en configuratie uit te voeren.
+
+===== Schijf (of schijven) op de installatie voorbereiden
+
+Installeer Slint indien mogelijk in een volledig toegewezen station.
+
+Je kunt Slint ook installeren op een schijf die wordt gedeeld met een ander systeem en dan bij voorkeur opstartend in EFI modus zodat elk systeem met zijn eigen OS-loader onafhankelijk van elkaar draait. Je zult wel ruimte moeten vrijmaken om Slint op het desbetreffende station te kunnen installeren. Als de laatste partitie van de schijf een ext2, ext3 of ext4 bestandssysteem heeft kun je daar het 'freespace' commando in het Slint installatieprogramma voor gebruiken, anders doe je dit vanuit het reeds op de schijf geïnstalleerde OS.
+
+Laat de machine, indien mogelijk, opstarten in EFI modus en stel voor maximale flexibiliteit een GPT (GUID partitietabel) in voor de doelschijf.
+
+Het installatieprogramma maakt voor het opstarten in zowel EFI als Legacy modus gebruik van GRUB.
+
+Om Slint te installeren op een volledig toegewezen schijf is het volgende vereist:
+
+* Een partitie van het type BIOS Boot om met GRUB in Legacy modus en een GPT op te kunnen starten. Voor deze partitie volstaat een grootte van 1 M. Deze is gereserveerd voor GRUB en hoeft niet geformatteerd te worden.
+* Om in EFI-modus op te starten een partitie van het type ESP (EFI System Partition) van 100M voor het opslaan van de EFI OS-loader. Deze partitie kan zowel in een GPT worden aangemaakt als in
+een DOS partitie tabel.
+* Een partitie van het type Linux van ten minste 28G voor het Slint systeem.
+
+In het geval van een GPT adviseren we voor meer flexibiliteit een BIOS Boot partitie en een ESP aan te maken zodat Slint kan opstarten in zowel EFI als Legacy modus.
+
+Het aanmaken van andere partities is optioneel. Als je een swap partitie wilt, moet deze van
+het type Linux swap zijn. Als alternatief of daarnaast kun je een wisselbestand
+instellen. 'setup' zal voorstellen om deze in te stellen nadat je het bestandssysteem van de root partitie hebt aangemaakt.
+
+Het installatieprogramma bevat verschillende partitioneringsprogramma's: cfdisk, fdisk, sfdisk,
+cgdisk, gdisk, sgdisk en parted. De applicaties met een "g" in hun naam kunnen alleen overweg met GPT maar parted kan worden gebruikt met zowel DOS partitietabellen als GPT. fdisk, cfdisk en sfdisk kunnen overweg met DOS partitietabellen. Tevens zijn wipefs
+(om eerdere partitietabel en bestandssysteemgegevens te wissen) en partprobe
+(om de kernel over wijzigingen van de partitietabel te informeren) beschikbaar.
+Het lsblk programma toont informatie over blokapparaten en partities.
+
+Je kunt de partities zelf formatteren of dit overlaten aan het installatieprogramma. 'Formatteren' betekent: een bestandssysteem maken om bestanden in de partitie te beheren. Onthoud dat het ESP een vfat bestandssysteem moet hebben en een Bios Boot partitie helemaal geen bestandsysteem. Het Slint installatieprogramma kan Linux partities formatteren in de bestandssysteemformaten: btrfs, ext2, ext4, f2fs, jfs, reiserfs, xfs.
+
+Het installatieprogramma kan aankoppelpunten instellen voor partities die worden gedeeld met of gebruikt door
+Windows voor toegang vanuit Slint. Ze moeten een bestandssysteem van het type
+vfat, msdos of ntfs hebben die zijn aangemaakt door Windows of zijn aangemaakt voor het starten van het installatieprogramma.
+
+===== Acties uitgevoerd door het installatieprogramma
+
+Het installatieprogramma toont een menu met de volgende items of stappen:
+....
+KEYMAP om je toetsenbordindeling opnieuw in te stellen(optioneel)
+ADDSWAP om een swap partitie(s) in te stellen (optioneel)
+TARGET om je doelpartities in te stellen
+SOURCE om bronmedia te selecteren die de software pakketten bevatten
+INSTALL om de softwarepakketten te installeren
+CONFIGURE om je Slint systeem te configureren.
+....
+
+Deze items worden hieronder beschreven. De stappen TARGET, SOURCE, INSTALL en CONFIGURE
+zijn verplicht en moeten in deze volgorde worden uitgevoerd.
+
+* KEYMAP kan worden gebruikt om de oorspronkelijk gekozen toetsenbordindeling te wijzigen.
+* ADDSWAP kan worden gebruikt voor het instellen van een wisselbestandpartitie(s). In plaats daarvan kun je ook een wisselbestand en/of een wisselgeheugen in zram instellen na de installatie.
+* In de TARGET stap vraagt het installatieprogramma je aan welke Linux partitie het de root (/) directory moet aankoppelen en of je daar een bestandssysteem in wilt aanmaken. Je MOET hiermee akkoord gaan omdat anders de installatie bij stap INSTALL zal MISLUKKEN omdat er geen ruimte beschikbaar is om de pakketten te installeren. Kies vervolgens een van de voorgestelde bestandssystemen.
++
+Het installatieprogramma toont een lijst van alle andere Linux partities en stelt voor om voor toegang vanuit Slint voor iedere partitie een aankoppelpunt en bestandssysteem te maken.
+* In de SOURCE stap selecteer je het medium dat de te installeren softwarepakketten bevat. Dit zal waarschijnlijk hetzelfde zijn dat het installatieprogramma bevat.
+* In de INSTALL stap worden alle pakketten vanaf het installatiemedium geïnstalleerd, behalve de KDE-pakketten als die als niet te installeren zijn ingesteld.
+* In de CONFIGURE stap stel je met het installatieprogramma Slint in tot alles naar je zin is. Het gaat om de volgende instellingen of opties:
++
+** Het maken van een opstartbare 'rescue' USB-stick.
+** Installeren en configuren van de GRUB boot manager en bijbehorende OS loader(s).
+** Kiezen om de muis wel of niet in de console te gebruiken.
+** Het netwerk configureren.
+** Bepalen welke services bij het opstarten moet worden gestart.
+** Selecteren of de hardware-klok UTC of lokale tijd gebruikt en de tijdzone instellen.
+** Het kiezen van de inlogmanager: console of grafische modus.
+** Het instellen van de standaard grafische omgeving.
+** Het instellen van de standaard taal en regionale variant van het zojuist geïnstalleerde systeem. Vervolgens worden de pakketten die specifiek voor de gekozen taal zijn geïnstalleerd.
+
+De installatie is nu voltooid, verwijder het installatiemedium en herstart om Slint op te starten.
+
+[[Slint_in_an_encrypted_drive]]
+==== Slint op een versleutelde schijf
+
+In Auto Modus stelt het installatieprogramma voor om de schijf waarop Slint wordt geïnstalleerd als deze volledig aan Slint is toegewezen te versleutelen. Als je hiermee akkoord gaat zal GRUB telkens als je opstart naar je wachtwoordzin om de schijf te ontgrendelen vragen die je hebt opgegeven tijdens de installatie voordat het opstartmenu wordt weergegeven. Wees je ervan bewust dat het ontgrendelen van het station een paar seconden duurt (ongeveer tien seconden).
+
+Met een versleutelde schijf voorkomt u diefstal van gegevens die er op staan in geval van verlies of diefstal van de machine of van een verwijderbare schijf. Het beschermt je echter niet als je de computer onbewaakt aan laat staan en alleen als de computer volledig is uitgeschakeld!
+
+Tijdens de installatie zal de Slint systeempartitie evenals de gewenste extra partities worden versleuteld.
+
+De naam van een versleutelde Slint systeem (of root) partitie is: /dev/mapper/cryptroot
+
+Dit kun je zien is door het invoeren van deze opdracht:
+
+----
+lsblk -lpo name,fstype,mountpoint /h grep /$
+----
+
+Met het volgende resultaat:
+----
+/dev/mapper/cryptroot ext4 /
+----
+
+Deze opdracht echter:
+
+----
+lsblk -lpo name,fstype,mountpoint | grep /dev/sda3
+----
+
+geeft:
+
+----
+/dev/sda3             cryptoLUKS
+----
+
+/dev/sda3 is een "raw" partitie die de zogenaamde "LUKS header" bevat waar je nooit directe toegang toe zult hebben maar dat is ook niet nodig.  Het bevat alles wat nodig is om de partitie /dev/mapper/cryptroot die eigenlijk jouw gegevens bevat (in dit voorbeeld het Slint-systeem) te versleutelen.
+
+[WARNING]
+====
+Als u de wachtwoordzin vergeet, zullen alle gegevens in het station onherstelbaar verloren gaan!
+Noteer deze wachtwoordzin of neem deze op en bewaar deze meteen op een veilige plaats.
+
+Schijven gaan vroeg of laat kapot. Als dat gebeurt en de schijf is versleuteld gaan je gegevens verloren.
+Dus is het regelmatig een back-up maken van je waardevolle gegevens niet optioneel maar essentieel!
+
+Maak ook een back-up van de LUKS header zodat je die je kunt herstellen zou de LUKS partitie om welke reden dan ook beschadigen. Het commando zou in ons
+voorbeeld kunnen staan:
+----
+luksHeaderBackup /dev/sda3 --header-backup-file <file>
+----
+waar <file> de naam is van het back-upbestand dat je op een veilige plek bewaart.
+
+Als je de back-up zou willen herstellen typ je:
+----
+luksHeaderHerstel /dev/sda3 --header-backup-file <file>
+----
+
+Wijzig nooit de grootte van een partitie van een versleutelde schijf omdat deze hierna voorgoed ontoegankelijk is en de gegevens die er op staan verloren zijn gegaan! Als je echt meer ruimte nodig hebt moet je een backup maken van alle bestanden die je
+wilt behouden, Slint opnieuw installeren en de geback-upte bestanden herstellen.
+
+Kies een sterke wachtwoordzin, zodat het voor een inbreker lastig genoeg is die te raden en hij het uiteindelijk zal opgeven.
+
+Rommel nooit aan de zogenaamde "LUKS-header" op de 'raw' partitie
+(de derde zoals bv. . /dev/sda3 voor de 'raw' partitie boven de Slint
+systeempartitie).  Maak geen bestandssysteem aan in deze partitie,
+laat het geen deel uitmaken van een RAID array en schrijf er geen gegevens naar toe: hierdoor zullen alle gegevens onherstelbaar verloren gaan!
+====
+
+Om zwakke wachtwoordzinnen te vermijden vereist het installatieprogramma dat de wachtwoordzin bestaat uit:
+
+. Ten minste 8 tekens.
+. Alleen niet-geaccentueerde kleine letters en hoofdletters, cijfers van 0 tot 9, spaties en de volgende leestekens:
++
+----
+ ' ! " # $ %  & ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~
+----
++
+Dit garandeert dat zelfs een nieuw toetsenbord alle tekens heeft die nodig zijn om
+het wachtwoord te typen.
+
+. Ten minste één cijfer, één kleine letter, één hoofdletter en één leesteken.
+
+GRUB gaat ervan uit dat een "VS" toetsenbord wordt gebruikt wanneer je de wachtwoordzin typt.
+Om deze reden stelt het installatieprogramma als je tijdens de installatie gebruik maakt van een andere dan de "VS"-toetsenbordindeling deze hierop in voordat je de wachtwoordzin typt en deze weer terug naar de indeling die je hier voor gebruikte als je hier mee klaar bent. In dit geval spelt het installatieprogramma ook elk ingetypt teken van de wachtwoordzin omdat dit kan
+verschillen van het teken dat op de toets geschreven staat.
+
+
+Om de schijf te versleutelen wordt het programma cryptsetup gebruikt. Voor meer informatie typ je na de installatie: +
+-----
+man cryptsetup
+-----
+Lees er nog meer over in https://gitlab.com/cryptsetup/cryptsetup/-/wikis/FrequentlyAskedQuestions[deze FAQ].
+
+[[first_steps_after_installation]]
+==== De eerste stappen na de installatie
+
+Hier volgen de eerste taken die na de installatie moeten worden uitgevoerd
+
+In dit document is alle tekst na een # commentaar op de voorgestelde
+commando's dat niet ingetypt dient te worden.
+
+===== Initiële software-update
+
+Na installatie moet het systeem worden bijgewerkt om de meest recente
+versie van elk programma te krijgen, evenals nieuwe software die is uitgekomen sinds de
+versie van het ISO-beeldbestand. Dit is vooral nodig als er geen netwerkverbinding
+beschikbaar was tijdens de installatie omdat dan alleen de pakketten in het
+distributiemedium welke verouderd kunnen zijn werden geïnstalleerd.
+
+De meeste commando's die hieronder worden weergegeven vereisen administratieve rechten gekoppeld aan een specifiek account met de naam 'root' waarvoor je tijdens de installatie een wachtwoord hebt ingegeven.
+
+Om een opdracht als root uit te voeren typ je eerst
+----
+su -
+----
+vervolgens geef je het wachtwoord voor root en druk je op Enter voordat je het commando invoert.
+
+Dit vervangt 'sudo' dat in andere distributies wordt gebruikt.
+
+Wanneer je klaar bent met het uitvoeren van commando's als 'root' druk je op Ctrl+d of typ je 'exit' om
+weer de "gewone gebruiker" status terug te krijgen.
+
+Typ om te het systeem te updaten als root in een console of een grafische terminal:
+----
+slapt-get --add-keys # ophalen de sleutels om de pakketten te verifiëren
+slapt-get -u # bijwerken van de lijst van pakketten in de mirrors
+slapt-get --install-set slint # download de nieuwe pakketten
+slapt-get --upgrade # Installeer de nieuwe versies van geïnstalleerde pakketten
+dotnew # toont gewijzigde configuratiebestanden
+----
+Accepteer wanneer je dotnew uitvoert dat alle oude configuratiebestanden door nieuwe vervangen worden.
+Dit is veilig omdat je nog niets aan het systeem hebt aangepast.
+
+Je kunt ook de grafische varianten van deze toepassingen gebruiken: gslapt in plaats van
+slapt-get en dotnew-gtk in plaats van dotnew.
+
+Om meer over slapt-get te weten te komen typ je:
+----
+man slapt-get
+----
+of als root:
+----
+slapt-get --help
+----
+en lees /usr/doc/slapt-get*/README.slaptgetrc.Slint
+
+===== Configuratie
+
+Hier zijn de tools die je kunt gebruiken om na
+installatie je Slint-systeem opnieuw te configureren. They are presented in further details in chapter <<Manage_your_system, Je systeem beheren>>.
+
+Tenzij anders aangegeven moeten deze tools als root worden uitgevoerd. Om root te worden d.w.z. de 'admin' status en machtigingen te krijgen, typ je "su -" en dan het wachtwoord van root.
+Om naar de standaard gebruikersstatus terug te keren typ je Ctrl+d of exit.
+
+De meeste tools zijn er in een terminal- en een grafische versie. De terminal-versie wordt hieronder als eerste weergegeven. Tenzij anders aangegeven worden alle commando's als root ingevoerd.
+
+*Algemene instellingen*
+
+* Voor gebruikersbeheer: usersetup of gtkusersetup
+* De taal en regio wijzigen: localesetup of gtklocalesetup
+* Om de toetsenbordindeling en de invoermethode te wijzigen: keyboardsetup of gtkkeyboardsetup
+* Om de datum, de tijd of de tijdzone te configureren: clocksetup en gtkclocksetup.
+* Om te kiezen welke services bij het opstarten moeten starten: servicesetup en gtkservicesetup.
+* Om het netwerk te (re)configureren: netsetup.
+* Om te kiezen of je wilt starten in de tekst of grafische modus en in het laatste geval de grafische login manager: login-chooser
+* Om een bureaublad of grafische omgeving te kiezen: session-chooser (als gewone gebruiker)
+* Om als KDE is geïnstalleerd de applicaties hiervan in het menu van andere grafische omgevingen weer te geven of te verbergen: show-kde-apps of hide-kde-apps.
+
+*Toegankelijkheidsinstellingen*
+
+Om een consoleschermlezer te kiezen en in- of allemaal uit te schakelen, typ je als root:
+----
+speak-with
+----
+
+Vanaf Slint versie 14.2.1 is voor de eerste tijdens de installatie aangemaakte normale gebruiker spraak en braille ingeschakeld als tijdens de installatie spraak was gebruikt en braille ingesteld. Andere gebruikers zullen hiervoor aanvullende instellingen zoals hieronder is aangegeven moeten controleren of wijzigen,.
+
+Om braille te activeren:
+
+. Maak je /etc/rc.d/rc.brltty uitvoerbaar door als root te typen:
++
+----
+chmod 755 /etc/rc.d/rc.brltty
+----
+. En maak je jezelf lid van de braille groep door als root te typen:
++
+----
+usermod -G braille -a gebruikersnaam
+----
++
+In het bovenstaande commando vervang je gebruikersnaam voor je inlognaam.
+. Voeg dan als root je instellingen toe aan het bestand /etc/brltty.conf.
+
+Om spraak op systeemniveau in te schakelen typ je als root:
+----
+login-chooser
+----
+en kies een een inlogmodus die spraak ondersteund zoals: tekst, lightdm of gdm
+
+Om spraak te activeren in grafische omgevingen typ je als normale gebruiker:
+----
+orca-on
+----
+De Orca schermlezer zal de volgende keer als je een grafische omgeving start beginnen met spreken
+
+Om spraak uit te schakelen in grafische omgevingen type je:
+----
+orca-off
+----
+
+==  Slint gebruiken
+
+Dit hoofdstuk beschrijft de manieren waarop je met je Slint-systeem kunt communiceren zodat het
+doet wat je wilt.
+
+=== Wat is een Slint-systeem?
+
+Slint is een verzameling software die grofweg uit de volgende categorieën bestaat:
+
+* Het besturingssysteem, gemaakt van de Linux <<kernel, kernel>> en <<utilities, services>>. Het fungeert als een interface tussen de gebruiker, de applicaties en de hardware
+* De <<Applications, applicaties>> die de taken uitvoeren die gebruikers gedaan willen krijgen.
+
+Slint kan gebruikt worden in twee modi die zich onderscheiden door het uiterlijk van het scherm
+en de manier waarop ze met het systeem communiceren:
+
+* In tekstmodus typ je opdrachten die worden geïnterpreteerd door een <<shell, shell>>. Deze commando's kunnen een hulpprogramma of applicatie starten. De tekstmodus wordt ook wel <<console, console>>modus genoemd. In deze modus toont het scherm alleen de commando's en hun uitvoer op een (meestal zwarte) achtergrond.
+* In grafische modus worden grafische elementen zoals vensters, panelen of pictogrammen weergegeven op het scherm, meestal geassocieerd met toepassingen of hulpprogramma's. De interactie met de gebruiker en het systeem gebeurt met behulp van een muis en/of een toetsenbord.
+
+Opdrachten kunnen in grafische modus ook worden getypt in een venster dat is gekoppeld aan
+een <<terminal, terminal>> waarin een shell wordt uitgevoerd.
+
+=== Hoe Slint opstart
+
+Tijdens de installatie is de software die meekwam in het installatie ISO-beeldbestand of
+van de externe repositories geïnstalleerd op een <<drive, schijf>>.
+
+Wanneer je Slint opstart controleert de <<firmware, firmware>> eerst de hardware en vervolgens
+zoekt het naar een programma dat een OS-loader heet (meestal een boot loader genoemd) en voert dit uit.
+
+Er kunnen meerdere OS-loaders op de machine aanwezig zijn. In dit geval toont de firmware de gebruiker een menu om te kiezen welke OS-loader het moet starten.
+
+In Slint is GRUB de software die een boot lader maakt en installeert. Feitelijk is de boot loader
+gemaakt door GRUB ook een boot manager, omdat het je laat kiezen welk OS je wilt starten als er
+meerdere zijn geïnstalleerd.
+
+De GRUB OS-loader kan worden geïnstalleerd in een boot sector (in geval van Legacy booting) of in een EFI System Partition of ESP (bij EFI booting).
+
+Het doel van de Slint-loader is het starten van het Slint-systeem. Hiervoor laadt het als eerste de <<kernel, kernel>> in het RAM en daarna de <<initrd, initrd>> die op zijn beurt
+het Slint-systeem initialiseert.
+
+In de laatste stap van deze initialisatie wordt de gebruiker gevraagd zich aan te melden bij het systeem. Hiertoe typ je eerst je gebruikersnaam (of inlognaam) en vervolgens het wachtwoord waarvan de
+geldigheid wordt gecontroleerd. Slint, dat evenals andere Linux distributies multi-user is, geeft deze gebruiker toegang tot zijn eigen bestanden maar niet tot die van andere gebruikers.
+
+Tijdens de installatie heb je gekozen om Slint in tekst- of grafische modus te starten.
+
+* Als je na initialisatie van het systeem C voor <<console, console>> hebt gekozen, typ je je gebruikersnaam (of loginnaam) en je wachtwoord dat je bevestigd door op de Enter toets te drukken. Daarna kun je opdrachten typen.
+* Als je G (grafisch) gekozen hebt, typ je dezelfde informatie in een <<display_manager, displaymanager>> of login manager, die op zijn beurt de <<graphical_environment, grafische omgeving>> opstart.
+
+Na installatie kun je als root deze modus wijzigen door de opdracht `login-chooser` te typen in zowel consolemodus als in een <<terminal, terminal>> in grafische modus. Dit commando stelt je in staat om `tekst` te kiezen (synoniem van consolemodus), of voor
+grafische modus, tussen verschillende display managers. Je keuze zal bij volgende keer opstarten van de computer worden doorgevoerd.
+
+We zullen nu de grafische omgevingen beschrijven en daarna het gebruik van de shell.
+
+=== De grafische omgevingen
+
+<<the_windows, De vensters>> +
+<<the_work_spaces, De werkruimtes>> +
+<<the_desktop, Het bureaublad>> +
+<<the_top_panel, Het bovenpaneel>> +
+<<the_bottom_panel, Het onderpaneel>> +
+<<the_slint_control_center, Het Slint Control Center>> +
+<<graphical_terminals, Grafische terminals>> +
+<<key_bindings, Sneltoetsen>>
+
+Een volledige grafische omgeving bevat verschillende componenten waaronder een window manager die vensters, geassocieerd met toepassingen, op het scherm tekent en deze verplaatst, aanpast en sluit.
+
+Slint biedt verschillende grafische omgevingen: BlackBox, Fluxbox, KDE, LXDE en MATE, TWM, XFCE en WindowMaker. Welke je kiest is een kwestie van persoonlijke voorkeur.
+
+KDE, LXDE MATE en XFCE zijn complete desktops, de andere voornamelijk
+vensterbeheerders, maar ze bevatten ook een paneel met een programmamenu. Elke omgeving geeft je meestal in een nieuw geopend venster toegang tot je documenten en toepassingen en heeft een paneel en een menu.
+
+De standaard grafische omgeving kan worden gewijzigd door als normale gebruiker `session-chooser` te typen. In Grafische modus kun je je omgeving ook kiezen wanneer je inlogt.
+
+We zullen nu kort de onderdelen van Mate Desktop beschrijven, dat de standaard omgeving is en ook het meest toegankelijk met spraak en braille. De andere volledige desktop-omgevingen hebben vergelijkbare functies.
+
+Met behulp van de muis kun je van elk component de functies ontdekken door rechts, midden of links te klikken of dit te simuleren. Het verplaatsen of verwijderen van de meeste componenten of ze veranderen en nieuwe toevoegen gaat op dezelfde manier.
+
+Deze componenten kunnen worden bereikt met muisbewegingen en via sneltoeten. We geven hieronder tussen haakjes de sneltoetsen waarmee je de focus op een bepaald element kunt leggen. We geven ook een samenvatting van de <<key_bindings, toetscombinaties>> voor Mate Desktop (met de standaard Marco windows manager) en voor de Compiz windows manager.
+
+[TIP]
+====
+Je kunt de meeste functies van toepassingen en andere componenten van Slint ontdekken door met de muis te rechts-, midden- of linksklikken.  Door bijvoorbeeld te klikken op de titelbalk, de linker- of rechter vensterknoppen, een icoon in het paneel of op een lege ruimte van het scherm.
+====
+[[the_windows]]
+==== De vensters
+
+Een venster is een rechthoekig gebied dat met een applicatie is geassocieerd. Vensters kunnen worden verplaatst, herschikt, gemaximaliseerd, hersteld en gesloten (beëindigt het programma dat er in wordt uitgevoerd) met de muis of sneltoetsen.
+
+[[the_work_spaces]]
+==== De werkruimtes
+
+Om een groot aantal vensters op een ordelijke manier te kunnen openen biedt de grafische omgeving meerdere werkruimtes waar je tussen kunt wisselen. Elke werkruimte geeft hetzelfde bureaublad en dezelfde panelen weer maar de vensters kunnen worden geplaatst in een specifieke werkruimte of in alle werkruimtes. Deze instelling is te wijzigen door met de rechtermuisknop op de bovenrand van het venster te klikken. Je kunt overschakelen naar een andere werkruimte door te klikken op de work space changer in het onderpaneel van het scherm zoals onderaan aangegeven.
+
+[[the_desktop]]
+==== Het bureaublad
+
+Het bureaublad omvat het hele scherm waarop andere componenten kunnen worden geplaatst. In het geval van de met Slint meegeleverde Mate Desktop zijn dat het boven- en onderpaneel en vier pictogrammen die van boven naar beneden de volgende vensters openen:
+
+* de hoofdmap in de bestandsbeheerder
+* je home directory in de bestandsbeheerder
+* het Slint Control Center
+* de prullenbak waar bestanden worden geplaatst die je van plan bent te verwijderen maar dat nog niet daadwerkelijk hebt gedaan.
+
+Vensters van gestarte toepassingen worden ook op het bureaublad weergegeven.
+
+Mate bevat twee panelen weergegeven als slanke rechthoekige horizontale zones, één bovenaan en één onderaan het scherm.
+
+Met het indrukken van Ctrl+Alt+Tab wissel je tussen het bureaublad en het boven- en onderpaneel
+
+Het indrukken van Alt+Tab maakt het mogelijk om te wisselen tussen de vensters op het bureaublad.
+
+[[the_top_panel]]
+==== Het bovenpaneel
+
+Dit bestaat van links naar rechts uit:
+
+* Drie menu's:
+** Een Applicatiemenu dat kan worden geopend door op Alt+F1 te drukken. Hier vanaf kun je met behulp van de rechter pijltjestoets de andere menu's openen. Met de pijltjestoetsen kun je het andere menu te bereiken.
+** Het menu Plaatsen.
+** Een systeemmenu dat toegang geeft tot een voorkeuren submenu, het Mate Control Center en knoppen voor bureaubladhulp, schermvergrendeling en het afsluiten de sessie of de computer.
+* Applicatiestarters voor mate-terminal, de bestandsmanager Caja, de e-mailclient Thunderbird, de webbrowser Firefox en de teksteditor Geany.
+* Een gebied waar meldingen en applets zoals een Bluetooth-manager, een geluidsmixer, een netwerkbeheerder en een "update beschikbaar" melding worden weergegeven.
+* Een klok en agenda.
+* De schermvergrendeling.
+* Een dialoogvenster voor het afsluiten van de sessie.
+* Een dialoogvenster voor het afsluiten van de computer.
+
+[TIP]
+====
+* Je kunt het paneel naar je eigen wensen aanpassen door met de rechtermuisknop op een lege ruimte in het paneel te klikken.
+* Als je een item op het paneel wilt verplaatsen klik je met de middelste muisknop op het element en sleep je het naar waar je de middelste knop weer loslaat.
+* Voor contextuele hulp druk je op F1
+====
+
+[[the_bottom_panel]]
+==== Het onderpaneel
+
+Van links naar rechts wordt hierop weergegeven:
+
+* Een vensterlijst die kan worden geconfigureerd door met de rechtermuisknop op de drie verticaal boven elkaar geplaatste punten te klikken en voorkeuren te kiezen. Dit maakt het ook mogelijk de systeemmonitor in een venster te starten.
+* Een *Toon bureaublad* knop. Linksklikken hierop minimaliseert of verbergt alle vensters, door opnieuw te klikken worden de vensters in hun vorige status hersteld.
+* Een werkruimte-switcher of pager. Hiermee schakel je tussen werkruimtes of verplaats je vensters van de ene werkruimte naar de andere door ze te verslepen.
+
+De window-managers in Slint zijn al geconfigureerd en zonder iets in te stellen gebruiksklaar. Je kunt ze echter ook weer naar je eigen zin instellen. De manier waarop varieert van window-manager tot window-manager. Meer informatie is te vinden op: http://docs.slackware.com/en:user_settings[Gebruikersinstellingen].
+
+[[the_slint_control_center]]
+====  Het Slint Control Center
+
+We besluiten deze introductie tot Slint met het Slint Control Center. Je kunt het bereiken via het programmamenu in het bovenpaneel of door op het pictogram op het bureaublad te klikken of qcontrolcenter te typen in het dialoogvenster "Uitvoeren..." dat je start met Alt+F2
+
+Het doel van het controlepaneel is het op een consistente manier verzamelen van toepassingen voor systeembeheer. documentatie en instellingen in alle window managers.  Door op een categorie in het linkermenu te klikken worden overeenkomstige toepassingen in het rechterpaneel weergegeven.  Ze worden in de tabel hieronder beschreven.  Dit geeft ons de mogelijkheid om de beheer-tools die ook een grafische gebruikersinterface hebben te beschrijven.
+
+De meeste beheer-tools moeten worden uitgevoerd met root gebruikersrechten.  Er zal worden gevraagd naar het wachtwoord van je root account om een tool te starten.
+
+[options="autowidth"]
+|====
+<|**Categorie** <|**Hulpprogramma** <|**Doel en opmerkingen**
+<|Applicaties <|Dotnew <|Dit hulpprogramma stelt je in staat om de nieuwe configuratiebestanden (genaamd _iets.new_, vandaar de naam van de tool) versus de oude te beheren na het bijwerken van sommige pakketten.  Het is een goede gewoonte dit na een upgrade uit te voeren.  Het geeft aan of er iets gedaan moet worden aan de hand van een aantal keuze-opties.
+<|Applicaties <|Gslapt Pakket Manager <|Glapt is een grafische front-end voor slapt-get.  Het is een handig hulpmiddel voor <<software_management, softwarebeheer in Slint>>.  Je kunt er softwarepakketten mee zoeken, verwijderen, bijwerken en configureren.
+<|Applicaties <|Sourcery SlackBuild Manager <|Sourcery is een grafische front-end voor slapt-src.  Je zoekt ermee naar SlackBuilds-scripts die het gebruikt voor het automatiseren van het compilatieproces en de installatie van softwarepakketten.  Het kan ook pakketten op je systeem verwijderen en opnieuw installeren.
+<|Applicaties <|Applicatiezoeker <|Zoek en start op je systeem geïnstalleerde applicaties.  Het zoekveld is erg handig voor het zoeken van toepassingen in vergelijking met het handmatig doorzoeken van het applicatiemenu.
+<|Hardware <|Printer instellen <|Wordt gebruikt om alle aangesloten printers in te stellen.  Het is een frontend voor de CUPS print-server, die in Slint standaard wordt uitgevoerd.
+<|Hardware <|Cups Print Control <|Dit programma is voor het configureren van de CUPS-service, printerbeheer en het beheer van afdruktaken via een webbrowser.
+<|Hardware <|Toetsenbord <|Met dit hulpprogramma kun je het type toetsenbord, de toetsenbordindeling instellen en de SCIM-service inschakelen.  Met SCIM kun je tekens typen waarvoor geen toets op het toetsenbord aanwezig is (zoals in veel Aziatische talen).
+<|Informatie <|SlackDocs Website <|De documenten in deze wiki zijn voornamelijk bedoeld Slackware-gebruikers, maar veel ervan zijn ook toepasbaar voor Slint-gebruikers.  *Waarschuwing:*  Sommige van de vermelde hulpprogramma's zoals slackpkg, mogen *niet* in Slint worden gebruikt.
+<|Informatie <|Slackware documentatie <|Deze documentatie kan ook nuttig zijn voor gebruikers van Slint.  Slint is namelijk gebaseerd op Slackware.
+<|Informatie <|Slint documentatie <|Dit zijn de lokaal beschikbare documenten zoals die ook op de website van Slint beschikbaar zijn.
+<|Informatie <|Slint Forum <|Gebruikers met een niet-Engelse moedertaal kunnen ook posten in de gelokaliseerde Salix forums.
+<|Informatie <|Slint website <|Op de Slint website vind je documentatie, links en informatie over waar je de ISO's en pakketten kunt vinden.
+<|Informatie <|Systeem informatie <|Dit hulpprogramma verzamelt informatie over je computer zoals aangesloten apparaten (intern en extern) en toont dit alles op één plek.  Je kunt er ook een systeemprestatiemeting uitvoeren.
+<|Instellingen <|Systeemklok <|Hier stel je de systeemklok in.
+<|Instellingen <|Hostnamen <|Met dit hulpprogramma kun je IP-adressen aan domeinnamen en hostnamen koppelen.
+<|Instellingen <|Systeemtaal <|Hiermee stel je de landinstellingen van het systeem in (taal- en geografische eigenschappen) zodat de applicaties die je gebruikt informatie weergeven in deze landinstelling (indien beschikbaar).
+<|Systeem <|Systeemklok <|Met dit hulpprogramma stel je de tijdzone in en kies je of de klok moet worden gesynchroniseerd met de internetservers (dit wordt aanbevolen, maar er is dan natuurlijk wel een internetverbinding nodig) of dat je de datum en tijd handmatig instelt.
+<|Systeem <|Hostnamen <|Hier kun je in de hostnaam van het systeem instellen. Dit is vooral van belang als je je Slint installatie gebruikt als een server op een lokaal netwerk of op het internet.  Met de hostnaam kunnen computers op het netwerk elkaar met een gewone naam identificeren als er geen domeinnaam systeem in gebruik is.
+<|Systeem <|Pictogrammen-cache opnieuw opbouwen <|Dit hulpprogramma bouwt de pictogrammen-cache opnieuw op. Dit is een bestand waarin alle pictogrammen van het systeem geregistreerd zijn waardoor ze sneller toegankelijk zijn. Voer het uit wanneer er nieuwe pictogrammen op je systeem geïnstalleerd zijn.
+<|Systeem <|Systeem-services <|Met dit hulpprogramma kies je welke diensten worden ingeschakeld bij het opstarten.  Bijvoorbeeld Bluetooth, de CUPS printserver of een webserver.  Wijzig de standaardinstellingen alleen als je weet wat je doet.
+<|Systeem <|Gebruikers en groepen <|Hiermee kun je gebruikersaccounts en groepen toevoegen, verwijderen en instellen. Dit is vooral van toepassing op systemen met meerdere gebruikers.
+<|Systeem <|GUEFI Boot Manager <|Dit hulpprogramma is een grafische front-end voor het efibootmanager commando.  Je bewerkt er het opstartmenu van de EFI firmware mee.  Het toevoegen, verwijderen of wijzigen van de volgorde van menu-items.
+<|Systeem <|MATE systeemmonitor<|Hier wordt informatie getoond over het systeem zoals draaiende processen, het gebruik van systeembronnen (RAM, CPU, netwerkverkeer) en het gebruik van bestandssystemen.
+|====
+
+[[graphical_terminals]]
+==== Grafische terminals
+
+Je kunt in grafische modus net als in console modus commando's typen als je een venster opent met hierin een terminal. Druk in Mate gewoon op Ctrl+Alt+t of klik op het mate-terminal pictogram in het bovenpaneel of open een "Run... " dialoog met Alt+F2 en typ `mate-terminal` in het kleine venster dat wordt geopend.
+
+De meeste van de onderstaande informatie over de opdrachtregel en de shell in de Console
+modus is ook van toepassing op commando's in een terminal. Je kunt de mate-terminal sluiten
+door zoals bij elk ander venster op Alt+F4 te drukken.
+
+[[key_bindings]]
+==== Sneltoetsen
+
+In dit hoofdstuk volgt een beschrijving van de standaard sneltoetsen voor Compiz window-manager en Mate Desktop en hoe deze kunnen worden aangepast.
+
+[NOTE]
+====
+Wanneer een sneltoets één of meer *+* tekens bevat druk je van links naar rechts de toetsen behalve de laatste en houd ze ingedrukt zoals een `Shift` toets en druk dan op de laatste toets.
+====
+===== Sneltoetsen voor Mate Desktop
+
+Bij het gebruik van Mate in Slint zijn sommige sneltoetsen voor de Marco of Compiz window-managers gelijk. Ze staan hieronder weergegeven:
+----
+Alt+Tab Wisselen tussen vensters
+Shift+Alt+Tab Wissel achteruit tussen vensters
+Control+Alt+Tab Wissel tussen panelen en bureaublad
+Shift+Control+Alt+Tab Wissel achteruit tussen panelen en bureaublad
+----
+Eenmaal in een grafische omgeving kun je schakelen tussen deze omgeving en een
+console. Stel dat je tty2 wilt gebruiken (tty1 is bezig):
+Dan druk je op `Ctrl+Alt+F2`en log dan in. +
+Druk op `Ctrl+Alt+F7` om terug te gaan naar de grafische omgeving.
+
+In alle grafische omgevingen worden dezelfde algemene sneltoetsen gebruikt
+met uitzondering van Mod1 dat over het algemeen de linker Alt-toets is: +
+----
+Mod1+F1 activeert het programmamenu van het paneel.
+Mod1+F2 activeert een 'uitvoeren...' dialoog maar in Fluxbox een lxterminal.
+----
+Ook geldt in Fluxbox:
+----
+Mod1+F3 herstart Fluxbox.
+Mod1+F4 sluit het actieve venster.
+----
+Het applicatiemenu van het paneel heeft in alle grafische omgevingen dezelfde lay-out als in MATE. Van boven naar beneden:
+
+Terminal emulator: standaard `mate-terminal` in MATE`, lxterminal` in alle andere +
+Bestandsbeheerder: standaard `Caja` in MATE, `PCManfm` in alle andere +
+webbrowser: standaard`Firefox`  +
+Mail client: standaard `Thunderbird`  +
+Voorkeuren +
+Slint Dashboard (niet toegankelijk omdat het een Qt4-programma is) +
+Applicaties gesorteerd op categorie +
+Uitvoeren dialoogvenster +
+Uitloggen (ook om af te sluiten en te herstarten)
+
+U kunt de pijltjestoetsen gebruiken om in het menu te navigeren.
+
+In MATE bevat het bovenste paneel van links naar rechts:
+
+het Applicaties, Plaatsen en Systeemmenu +
+starters voor mate-terminal, Caja (bestandsbeheerder), Firefox, Thunderbird en de Geany
+teksteditor. +
+Aan de rechterkant:
+een meldingengebied +
+een knop voor schermvergrendeling +
+een uitlogknop +
+een stop of herstart knop.
+
+Het onderpaneel heeft van links naar rechts:
+
+een vensterlijst +
+een "toon bureaublad" plugin +
+een werkruimte-switcher of pager.
+
+In Mate kunnen slechtziende gebruikers ook de Compiz of de standaard Marco window manager gebruiken.
+
+Typ als een gewone gebruiker:
+----
+gsettings set org.mate.session.required-components windowmanager compiz
+----
+En om weer terug te gaan naar Marco:
+----
+gsettings set org.mate.session.required-components windowmanager marco
+----
+Deze instelling wordt doorgevoerd bij de start van een nieuwe MATE sessie.
+
+Of om de window manager alleen voor de huidige sessie te wijzigen:
+----
+compiz --replace &
+----
+en terug naar Marco:
+----
+marco --replace &
+----
+Deze wijziging is meteen effectief.
+
+Deze instelling is ook te wijzigen vanuit het grafische hulpprogramma mate-tweak in de categorie Vensters.
+
+Voor toegang tot specifieke Compiz-instellingen typ je:
+----
+ccsm &
+----
+===== Sneltoetsen voor de Compiz window manager
+
+In de hieronder aangegeven standaardinstellingen worden de toetsen of muisknoppen
+als volgt genoemd:
+
+Super: Windows-toets op de meeste toetsenborden +
+Knop1: Linker muisknop (indien gebruikt met de rechterhand) +
+Knop2: Middelste muisknop, of klik met het scrollwiel) +
+Knop3: Rechter muisknop (indien gebruikt met de rechterhand) +
+Knop4: Scroll wiel omhoog +
+Knop5: Scroll wiel omlaag
+Knop6: (Weet ik niet, ik dacht dat dit voor op muizen voor gamers was) +
+
+De hieronder op categorie weergegeven instellingen kunnen worden gewijzigd in het CCSM. Tussen vierkante haken staat de korte naam van de plugin.
+
+. Categorie Algemeen
++
+[core] Algemene opties, tab "sneltoetsen": +
+close_window_key = Alt+F4 +
+raise_window_button = Control+Knop6 +
+lower_window_button = Alt+Knop6 +
+minimize_window_key = Alt+F9 +
+maximize_window_key = Alt+F10 +
+unmaximize_window_key = Alt+F5 +
+window_menu_key = Alt+spatiebalk +
+window_menu_button = Alt+Knop3 +
+show_desktop_key = Control Alt+d +
+toggle_window_shaded_key = Control+Alt +
++
+[matecompat] Mate Compatibility +
+main_menu_key = Alt+F1 +
+run_key = Alt+F2 +
+
+. Categorie Toegankelijkheid
++
+[addhelper] Dim inactive (niet actieve vensters donkerder) +
+toggle_key = Super+p +
++
+[colorfilter] (kleurenfilter voor toegankelijkheidsdoeleinden) +
+toggle_window_key = Super+Alt+f +
+toggle_screen_key = Super+Alt+d +
+switch_filter_key = Super+Alt+s +
++
+[ezoom] Enhanced Zoom Desktop +
+zoom_in_button = Super+Knop4 +
+zoom_out_button = Super+Knop5 +
+zoom_box_button = Super+Knop2 (uitzoomen naar normaal) +
++
+[neg] Negative (toggle inverse kleuren voor venster of scherm) +
+window_toggle_key = Super+n +
+screen_toggle_key = Super+m +
++
+[obs] Instellingen voor transparantie, helderheid en verzadiging +
+opacity_increase_button = Alt+Knop4 +
+opacity_decrease_button = Alt+Knop5 +
++
+[showmouse] (Verhoog zichtbaarheid van de muisaanwijzer) +
+initiate = Super+k +
+
+. Categorie Vensterbeheer
++
+[move] Venster verplaatsen +
+initiate_button = Alt+Knop1 (houd Knop1 ingedrukt tijdens bewegen van de muis) +
+initiate_key = Alt+F7 (Esc om beweging te stoppen) +
++
+[resize] Venstergroote wijzigen +
+initiate_button = Alt+Knop2 (houd Knop2 ingedrukt tijdens het bewegen van de muis) +
+initiate_key = Alt+F8 (Esc om beweging te stoppen) +
++
+[switcher] Applicatie switcher (schakelen tussen vensters of panelen en het bureaublad) +
+next_window_key = Alt+Tab (schakelen tussen vensters) +
+prev_window_key = Shift+Alt+Tab +
+next_panel_key = Control+Alt+Tab (schakelen tussen panelen en het bureaublad) +
+prev_panel_key = Shift+Control+Alt+Tab +
+
+
+===== Een eigen sneltoets aan MATE toevoegen.
+
+Om bijvoorbeeld Firefox te starten met Alt+F3
+typ je in een terminal of in de Uitvoeren dialoog (opgeroepen met Alt+F2):
+----
+mate-keybinding-properties
+----
+In het venster wat nu verschijnt kun je met de pijltjestoetsen omlaag en omhoog navigeren in de lijst met bestaande sneltoetsen.
+
+Om een nieuwe sneltoets in te stellen druk je twee keer op Tab om de cursor op Toevoegen te zetten en daarna op Enter. In het kleine dialoogvenster dat verschijnt typ je de naam van de
+nieuwe sneltoets, bijvoorbeeld firefox, druk op Tab, typ het
+van toepassing zijnde commando, in dit geval firefox, druk dan twee keer op Tab om
+de cursor op Toepassen te zetten en druk op Enter.
+
+Om de nieuwe onderaan de lijst is toegevoegde sneltoets te activeren selecteer je deze en druk je op Enter.
+
+De volgende keer dat je Alt+F3 drukt zal Firefox starten
+
+=== De shell
+
+NOTE: Dit hoofdstuk is slechts een korte inleiding. Meer diepgaande informatie vind je in het document https://slint.fr/doc/shell_and_bash_scripts.html[Shell en bash scripts], grotendeels geleend van SUSE.
+
+Wanneer de computer in de console modus start wordt nadat u bent ingelogd door het typen van uw gebruikersnaam en wachtwoord door de <<shell, shell>> een "prompt" weergegeven zoals: +
+`didier@darkstar:~$` +
+In dit voorbeeld:
+
+* is `didier` de gebruikersnaam
+* `darkstar` de naam van de machine
+* de tilde `~` vertegenwoordigt de home directory van de gebruiker, in dit voorbeeld `/home/didier`
+* het dollarteken `$` geeft aan dat de gebruiker een "gewone gebruiker" is en geen "super user" (zie onderaan).
+
+Achter de prompt wordt de cursor weergegeven.
+
+De gebruiker kan nu op deze regel een commando typen (vandaar de naam "command line") en bevestigen als hij op Enter drukt. De shell then analyzes the command and execute it if valid, else output a message like for instance "command not found". Je kunt de opdracht bewerken voordat je op Enter drukt met behulp van de linker- en rechterpijltjestoetsen en Backspace, Home, End en Del.
+
+Tijdens de uitvoering kan een commando uitvoer op het scherm weergeven of niet. In alle gevallen zal na de uitvoering de prompt weer op een nieuwe regel worden weergegeven wat betekent dat de shell wacht op het volgende commando.
+
+Om dit te laten werken moet de gebruiker weten welke commando's beschikbaar zijn en hun schrijfwijze. Sommige commando's worden uitgevoerd door de shell zelf terwijl andere externe programma's starten. Onderaan staan verschillende voorbeelden van commando's. Meer vind je in https://slint.fr/doc/shell_and_bash_scripts.html[Shell en bash scripts]
+
+Er zijn meerdere shells beschikbaar waaruit Linux kan kiezen; de standaard in Slint gebruikte shell heet *bash*.
+
+Om meerdere programma's op hetzelfde moment uit te kunnen voeren biedt Linux meerdere "virtuele consoles", genummerd vanaf 1, die hetzelfde toetsenbord en beeldscherm delen. Aanvankelijk start het systeem in console (of virtuele terminal) nummer 1 die ook *tty1* wordt genoemd (de naam is een afkorting van "teletype"). Daar vandaan kan de gebruiker overschakelen naar een andere console of tty; om bijvoorbeeld over te schakelen naar tty nummer twee druk je Alt+F2, waar een andere shell opnieuw zal vragen naar je gebruikersnaam en wachtwoord. Om terug te gaan naar tty1, druk je op Alt+F1. Standaard zijn in Slint 6 tty beschikbaar, maar dit kan worden aangepast in het bestand /etc/inittab.
+
+Wanneer de shell wordt gebruikt in een grafische omgeving (in een grafische terminal), gedraagt de shell zich op dezelfde manier, maar de prompt wijkt iets af zoals hieronder weergegeven: +
+`didier[~]$` +
+
+Je kunt heen en weer schakelen tussen de console en een grafische omgeving:
+
+* Vanuit de grafische omgeving druk je bijvoorbeeld op Ctrl+Alt+F3 om naar tty3 te gaan. De eerste keer dat je naar een tty gaat, moet je je gebruikersnaam en wachtwoord invoeren.
+* Vanaf een console of tty schakel je door Alt+F7 te drukken over naar de grafische omgeving mits deze al actief is. Anders typ je `startx` om deze te starten.
+
+==== Commando's als root uitvoeren
+
+*root* is de conventionele naam van de "supergebruiker" die alle rechten heeft om administratieve taken uit te voeren, ook als die het systeem zouden kunnen beschadigen of zelfs vernietigen.
+
+Je kunt direct als root inloggen (ook al wordt dat niet aanbevolen voor beginners). Je doet dat door *root* als gebruikersnaam in te typen en vervolgens het root wachtwoord.
+Om je te informeren (en te waarschuwen voor de bijbehorende risico's en verantwoordelijkheden) ziet de prompt er als volgt uit: +
+*root@darkstar:s~#* +
+het teken # (hekje of hash) geeft aan dat de commando's zullen worden ingevoerd als root (niet als gewone gebruiker) met de daarmee samenhangende rechten maar ook met risico's en verantwoordelijkheden.
+
+Als je al als gewone gebruiker bent ingelogd wordt je root door het typen van: +
+*su -* +
+en vervolgens op Enter te drukken. In dit commando is `su` (wat staat voor "Super User") de naam van het commando, en het teken *-* (minteken) vertelt je dat je een "login shell" opent: er wordt eerst gevraagd naar het root wachtwoord en vervolgens word je doorgestuurd naar de home directory /home/root alsof je bent ingelogd als root bij het opstarten. Dit voorkomt dat je per ongeluk bestanden in je home directory schrijft als gewone gebruiker (/home/didier in het voorbeeld) die later problemen kunnen veroorzaken.
+
+=== Blokkeringsproblemen oplossen
+
+Met een "blokkeringsprobleem" bedoelen we een probleem waardoor Slint niet of niet volledig kan worden uitgevoerd zoals:
+
+* Het systeem kan niet opstarten.
+* Het systeem start op maar het opstarten wordt onderbroken voordat dit is voltooid. Dit kan bijvoorbeeld gebeuren als de root systeempartitie niet kan worden aangekoppeld vanwege een fout in /etc/fstab, een beschadigd root bestandssysteem of een ontbrekende kernelmodule die nodig is om de root partitie aan te koppelen, of het systeem start wel op, maar je weet het root wachtwoord niet.
+
+Als het systeem helemaal niet opstart, probeer dan de onderstaande oplossingen in aangegeven volgorde totdat er één werkt.
+
+. Als dit gebeurt na een kernel upgrade, probeer dan in plaats van het eerste het tweede opstart-item.
+. Gebruik het laatste opstart-item van het GRUB-menu. Het zou Slint kunnen vinden en laten opstarten.
+. Probeer op te starten met de 'rescue' USB-stick die je hebt laten maken aan het eind van de installatie.
+. Verplaats je in Slint zoals hieronder is uitgelegd en probeer het te repareren.
+. Vraag hulp door te mailen naar slint@freelists.org en geef zo veel mogelijk relevante informatie die kan helpen bij de oplossing van het probleem. Meld je als je dat nog niet gedaan hebt aan bij de mailinglist door een mail te sturen naar slint-request@freelists.org met in het onderwerp 'subscribe' waarna je antwoord op de e-mail die je ontvangt. Alleen als je niet kunt e-mailen kun je hulp vragen in het IRC-kanaal #slint, server irc.libera.chat en blijf in het kanaal tot iemand antwoord geeft.
+
+Als het opstartproces wordt onderbroken verplaats je dan in Slint vanuit het installatieprogramma om het probleem op te lossen. Plaats het installatiemedium (USB-stick of DVD waarop het ISO-beeldbestand is geschreven) en volg de instructies hieronder.
+
+. Start het installatieprogramma.
+. Zodra je bent ingelogd als root typ dan het volgende om de schijven en partities weer te geven:
++
+----
+lsblk -lpo name,size,fstype
+----
+. Vind in de uitvoer de naam van de Slint root-partitie en controleer de grootte en het type bestandssysteem gelabeld FSTYPE.
+. Koppel deze partitie aan en controleer of het de juiste is. Als het bijvoorbeeld /dev/sda3 is, typ dan:
++
+----
+mount /dev/sda3 /mnt
+cat /mnt/etc/slint-version
+----
++
+[NOTE]
+====
+Als het bestandssysteem van de Slint root-partitie beschadigd lijkt, koppel het dan nog niet aan maar probeer het eerst te repareren door deze opdracht uit te voeren:
+----
+fsck <name of the root partition>
+----
+Als dat is gelukt herstart dan de machine.
+====
++
+Ervan uitgaande dat je Slint64-14.21 hebt geïnstalleerd zou het resultaat moeten zijn:
++
+*Slint 14.2.1*
++
+Als de uitvoer "bestand niet gevonden" is, is dat niet de partitie die je zocht. In dit geval typ je:
++
+----
+umount /mnt
+----
++
+Keer dan terug naar de lijst van schijven en partities en probeer een andere tot je de goede gevonden hebt.
++
+Daarna koppel je de pseudo bestandssystemen /dev, /proc en /sys in het Slint-systeem door te typen:
++
+----
+mount -B /dev /mnt/dev
+mount -B /proc /mnt/proc
+mount -B /dev /mnt/sys
+----
++
+Geef het volgende commando om naar je Slint omgeving te gaan:
++
+----
+chroot /mnt
+----
++
+chroot betekent "wijzig de root (van het systeem)": we bevinden ons dan niet meer in het installatieprogramma, maar in Slint zelf. Vanaf daar kunt je het wijzigingen aan het systeem aanbrengen om het probleem op te lossen. Hier volgen enkele voorbeelden:
+
+* Voer "update-grub" uit.
+
+* Voer "grub-emu" uit.
+
+* Installeer GRUB opnieuw met behulp van de opdracht "grub-install drivename", waarbij drivename de schijf is waar GRUB op moet worden geïnstalleerd. Voordat je dat doet typ je als je in EFI modus opstart eerst "mount /boot/efi".
+
+* Typ "passwd" om het wachtwoord voor root te wijzigen.
+
+* Verwijder, installeer of upgrade softwarepakketten.
+
+. Wanneer je klaar bent verwijder je het installatiemedium en typ je:
++
+----
+exit
+reboot
+----
+
+[[Accessibility]]
+== Accessibility
+
+Als je tijdens de installatie hebt aangegeven dat je spraak wilde behouden zal dit bij het opstarten zowel in een console als in grafische omgevingen worden ingeschakeld.
+
+=== Gebruik van Slint met braille
+
+Slint bevat de brltty software om braille displays aan te sturen.
+
+De tijdens het opstarten op de opdrachtregel opgegeven of later gemaakte instellingen hier voor worden op het geïnstalleerde systeem opgeslagen in /etc/brltty.conf.
+
+Een uitgebreide handleiding voor brltty is in het Engels, Frans en
+Portugees in verschillende formaten inclusief platte tekst (txt) beschikbaar op deze URL:
+https://mielke.cc/brltty/doc/Manual-BRLTTY/
+
+Om braille in te schakelen als het is uitgeschakeld of het niet werd ingeschakeld tijdens de installatie doe je het volgende:
+
+. Maak /etc/rc.d/rc.brltty uitvoerbaar door als root te typen:
++
+----
+chmod 755 /etc/rc.d/rc.brltty
+----
+. Maak jezelf lid van de braille groep en typ weer als root:
++
+----
+usermod -G braille -a gebruikersnaam
+----
++
+In de bovenstaande commando vervang je gebruikersnaam met je inlognaam.
+
+Om braille uit te schakelen typ je als root:
+----
+chmod 64 /etc/rc.d/rc.brltty
+----
+
+=== Spraak in grafische omgevingen
+
+De Orca schermlezer wordt in grafische omgevingen ingeschakeld door te typen:
+----
+orca-on
+----
+
+Hoe je Orca moet gebruiken inclusief de specifieke sneltoetsen zie je als je typt:
+----
+man orca
+----
+
+In het kort, in een grafische omgeving in grafische modus:
+----
+Insert+Space: start de Orca voorkeuren dialoog.
+Insert+S: activeer of deactiveer de stemsynthese
+Insert+H: activeer de leermodus. In deze modus:
+   Druk op een toets om de functie te beluisteren
+   F1: de documentatie van de schermlezer
+   F2: een opsomming van de sneltoetsen
+   F3: toon het toetsenbord voor de huidige applicatie
+   Esc: einde leermodus
+----
+
+=== Stemmen en TTS in Slint
+
+De volgende TTS (Text To Speech) synthesizers worden elk met een set stemmen bij Slint64-14.2.1.2 meegeleverd: +
+espeak-ng +
+flite +
+pico +
+mbrola +
+RHVoice +
+
+Meestal worden deze TTS met de bijbehorende stemmen en talen
+beheerd door speech-dispatcher via zogenoemde "modules" (grofweg is een module gekoppeld aan een TTS).
+
+Het speciale hulpprogramma spd-list geeft antwoord op vragen over synthesizers, stemmen en talen. Het intypen van spd-list toont het volgende:
+----
+Dit script toont talen en synthesizers die beschikbaar zijn voor applicaties die gebruik maken van Speech Dispatcher zoals Orca en speech-up. Elk commando hieronder beantwoordt de vraag die erop volgt.
+Voer de opdrachten in zonder aanhalingstekens.
+"/usr/bin/spd-list" in gebruik?
+"/usr/bin/spd-list -s" welke synthesizers zijn beschikbaar?
+"/usr/bin/spd-list -l" welke taalcodes zijn beschikbaar?
+"/usr/bin/spd-list -ls <synthesizer>" welke talen zijn beschikbaar voor deze synthesizer?
+"/usr/bin/spd-list -sl <language code>" welke synthesizers hebben stemmen in deze taal?
+De taalcode heeft meestal twee tekens, zoals 'en' 'nl' of 'fr'
+----
+Alle weergegeven stemmen zijn beschikbaar in Orca en speech-up, en ook in fenrir indien geconfigureerd voor het gebruik van speech-dispatcher.
+
+Er zijn extra stemmen voor flite and mbrola, geassocieerd met de
+modules flite-generic en espeak-ng-mbrola-generic.
+
+Als je wilt weten welke daarvan geïnstalleerd zijn typ je als root een van deze commando's:
+----
+slapt-get --search mbrola-voice
+slap-get --search flite-voice
+----
+en installeer dan een nog niet geïnstalleerde zoals b.v.
+----
+slapt-get -i mbrola-voice-it2
+----
+Naast de gratis (zoals in gratis bier) stemmen die bij Slint worden meegeleverd zijn er stemmen te koop voor: +
+voxin, https://oralux.org/voice.php +
+voxygen, via een e-mail naar contact@hypra.fr
+
+Als er later meer stemmen en synthesizers beschikbaar komen zal  dat worden aangekondigd in de
+Slint mailing list en in deze http://slackware.uk/slint/x86_64/slint-14.2.1/ChangeLog.txt[ChangeLog]
+
+Sneltoetsen voor grafische omgevingen worden besproken in <<key_bindings, Sneltoetsen>>.
+
+=== Inloggen met spraak
+
+Er zijn twee grafische login managers die Orca voor spraak ondersteunen: lightdm of gdm, de laatste wordt aanbevolen als volledig toegankelijk.
+
+In gdm is in eerste instantie het invoerveld van de gebruikersnaam actief. Typ je gebruikers- of
+inlognaam en druk Enter en daarna je wachtwoord.
+
+Via sneltoetsen krijg je toegang tot andere functies van gdm : +
+Alt+A: Acties (shutdown of reboot) +
+Alt+E: Sessie menu +
+Alt+L: Verander de taal voor de eerstvolgende sessie en mogelijke vervolgsessies, mogelijk ook voor gdm zelf. +
+Alt+T: Thema. +
+Je kunt de Tab toets gebruiken om te navigeren tussen de invoervelden en de omhoog en
+omlaag toetsen voor menu's.
+
+In lightdm op F4 drukken zet het geluid aan of uit. In eerste instantie is het invoerveld van het wachtwoord actief. Drukken op Tab activeert de "login drukknop" en daarna
+de lijst van gebruikers of "combo box". In deze lijst op de spatiebalk drukken
+toont de momenteel geselecteerde gebruiker. Gebruik de pijltjestoetsen om een andere
+te kiezen en typ vervolgens het bijbehorende wachtwoord. "Andere..."
+voegt een veld toe waar je de inlognaam van een niet in de lijst voorkomende gebruiker kunt typen.
+Nog steeds in lightdm toont F10 een menu om te herstarten of af te sluiten.
+Alt+F4 brengt direct een dialoogvenster met de afsluit- of annuleer knoppen.
+
+=== Een console-schermlezer kiezen
+
+Slint levert deze console-schermlezers mee: +
+espeakup +
+speechd-up +
+fenrir
+
+Daarnaast kunnen met behulp van speakup in console modus meerdere hardware spraaksynthesizers gebruikt worden.
+
+Om een schermlezer te kiezen voer je deze opdracht uit als root:
+----
+speak-with
+----
+De uitvoer van dit commando zonder argument:
+----
+root[~]# speak-with
+Usage: /usr/sbin/speak-with <screen reader> or <hard synthesizer> or none
+Een console-schermlezer kiezen to talk with among:
+  espeakup (Console screen reader connecting espeak-ng and speakup)
+  fenrir (Modular, flexible and fast console screen reader)
+  speechd-up (Console screen reader connecting Speech Dispatcher and speakup)
+or use one of the supported hard synthesizers:
+  acntsa apollo audptr bns dectlk decext ltlk soft spkout txprt
+or type  "/usr/sbin/speak-with none" to mute all screen readers.
+root[~]#
+----
+De getoonde hardware spraaksynthesizers zijn reeds beschikbaar in de draaiende kernel of als geïnstalleerde modules.
+
+Voorbeeld van commando's en bijbehorende uitvoer:
+
+----
+root[~]# speak-with speechd-up
+Starting speechd-up
+Should speechd-up be also started at next boot? [Y/n]
+OK
+root[~]# Done.
+----
+Zodra u het commando typt, zullen eerder gebruikte schermlezers worden
+gestopt en speech-up begint te praten.
+
+Als je Y (standaard) antwoordt op de vraag: +
+Should speechd-up be also started at next boot? +
+zal speechd-up ook gebruikt blijven worden bij de volgende keer opnieuw opstarten. +
+Als je in plaats daarvan N antwoordt zal na het opstarten de vorige actieve schermlezer worden gebruikt.
+
+Andere voorbeelden:
+
+----
+root[~]# speak-with apollo
+Stopping speechd-up...
+Should apollo be also used at next boot? [Y/n]
+OK
+root[~]# Done.
+
+root[~]# speak-with none
+Do you also want a mute console at next boot? [Y/n]
+OK
+root[~]#
+----
+
+=== Configuratie van de console-schermlezer
+
+Slint kan hardware spraaksynthesizers aansturen met behulp van speakup en biedt de espeakup en speechd-up schermlezers.
+
+Je kunt gemaakte instellingen opslaan, bijvoorbeeld de spreeksnelheid of het geluidsvolume. Typ als root:
+speakup-save. Dit slaat alle huidige instellingen op inclusief de specifieke instellingen van de hardware synthesizer indien van toepassing.
+
+Al deze instellingen worden toegepast bij de volgende keer opstarten: vanuit de opstartscripts rc.espeakup en rc.speechd-up wordt het commando speakup-restore uitgevoerd.
+
+Als je de opgeslagen instellingen niet wilt toepassen typ je als root: +
+chmod -x /usr/sbin/speakup-restore
+
+Als je ze wel weer wilt toepassen typ je weer als root: +
+chmod +x /usr/sbin/speakup-restore
+
+Hier zijn enkele sneltoetsen voor instellingen in speakup en speechd-up:
+----
+spk key_f9   punctuation_level_decrease
+spk key_f10  punctuation_level_increase
+spk key_f11  reading_punctuation_decrease
+spk key_f12  reading_punctuation_increase
+spk key_1    volume_decrease (werkt niet met speechd-up)
+spk key_2    volume_increase (werkt niet met speechd-up)
+spk key_3    pitch_decrease (werkt niet met speechd-up)
+spk key_4    pitch_increase (werkt niet met speechd-up)
+spk key_5    rate_decrease
+spk key_6    rate_increase
+----
+In de tabel hierboven is de speakup-toets CapsLock of Ins/0 op een numeriek toetsenblok. Als je bijvoorbeeld de snelheid wilt verhogen houd je de
+CapsLock-toets ingedrukt en druk je vervolgens op de 6 toets.
+
+Voor sommige instellingen die alleen beschikbaar zijn voor specifieke hardware synthesizers zijn er geen sneltoetsen. Deze stel je in door nieuwe waarden met de opdracht echo te schrijven naar
+/sys/accessibility/speakup/<synth>/<parameter>
+
+Om bijvoorbeeld de stem gebruikt door een apollo 2 te veranderen typ je: +
+echo 2 > /sys/accessibility/speakup/apollo/voice
+
+speakup-save zal ook deze instelling opslaan.
+
+Let wel: Ik heb nooit een hardware spraaksynthesizer gebruikt, dus de uitleg hieronder
+is slechts een veronderstelling gebaseerd op de handleiding van de speakup_apollo driver die je kunt vinden op: +
+https://archive.org/stream/DolphinApollo2Manual/Dolphin_Apollo_2_Manual_djvu.txt
+
+[[desktop_keys]]
+==== Speakup sneltoetsen voor de desktop computer
+
+Bijna alle hieronder vermelde sneltoetsen bevinden zich op het numerieke toetsenblok.
+De Insert of 0 toets op het toetsenbord werkt als een Shift-toets. Ins 2 bijvoorbeeld betekent "houd de Insert-toets ingedrukt zoals een Shift-toets en druk op 2".
+Zorg er wel voor dat NumLock is uitgeschakeld als je Speakup wilt gebruiken.
+
+De sneltoetsen kunnen voor hardware synthesizers worden gebruikt met espeakup evenals met speechd-up. Het instellen van de toonhoogte of het
+spraakvolume met behulp van sneltoetsen werkt echter niet voor speechd-up.
+
+De eerste sneltoetsen om te onthouden:
+----
+PrintScreen Speakup aan- of uitzetten
+Ins F1 Speakup hulp (druk op de spatieblak om deze weer te verlaten)
+----
+
+Sneltoetsen gebruikt voor schermlezen:
+----
+1/2/3 Zeg Vorige/Huidig/Volgend teken
+Shift PageUp Zeg het eerste teken
+Shift PageDown Zeg het laatste teken
+4/5/6 Zeg Vorige/Huidig/Volgend woord
+Twee maal 5 Spel het huidige woord
+Ins 5 Spel het huidige woord fonetisch
+7/8/9 Zeg Vorige/Huidige/Volgende regel
+Ins 4 Zeg van regelbegin tot cursor
+Ins 6 Zeg van cursor tot regeleinde
+Ins 8 Zeg vanaf de bovenkant van het scherm tot de cursor.
+Ins plus Zeg vanaf de cursor tot het eind van het scherm.
+plus Zeg het hele scherm.
+Ins r Zeg het hele document
+punt Zeg positie
+Ins punt Zeg kenmerken
+Ins min Zeg hex en decimale waarde van karakter.
+Minus Parkeer de cursor (schakelt aan of uit)
+Ins 9 Verplaats cursor naar bovenkant scherm (Ins PgUp)
+Ins 3 Verplaats cursor naar onderkant scherm (Ins PgDn)
+Ins 7 Verplaats cursor naar linker schermrand (Ins Home)
+Ins 1 Verplaats cursor naar rechter schermrand (Ins End)
+Ctrl 1 Verplaats cursor naar het laatste teken op de huidige regel
+asterisk schakelt cursor aan of uit
+Ins asterisk n<x|y&lt ga naar regel (y) of kolom (x) waar 'n' een geldige waarde is voor een rij of een kolom op het huidige scherm.
+Ins f2 Set venster
+Ins f3 Wis venster
+Ins f4 Inschakelen venster
+----
+
+Andere sneltoetsen:
+----
+Ins f5 Bewerk iets
+Ins f6 Bewerk het meeste
+Ins f7 Bewerk scheidingsteken
+Ins f8 Bewerken herhalen
+Ins f9 Edit exnum
+
+Enter Zeg niets meer (tot een andere toets wordt gedrukt) en zet cursor op de juiste plaats.
+Ins Enter Zeg niets meer (tot weer ingeschakeld)
+
+slash Markeer en knip schermgebied.
+Ins slash plak schermgebied in elke console.
+----
+==== Speakup sneltoetsen voor de laptop
+
+Deze sneltoetsen (voor VS-toetsenbordindeling) hebben geen numeriek toetsenblok nodig.
+Als je er wel één hebt, gebruik dan de <<desktop_keys, speakup desktop sneltoetsen>> omdat die gemakkelijker te gebruiken zijn,
+vooral als je een andere dan de VS-toetsenbordindeling gebruikt.
+
+De CapsLock-toets gedraagt zich als een Shift-toets. +
+CapsLock 2 bijvoorbeeld betekent "Houd de CapsLock-toets ingedrukt zoals een Shift-toets en druk op 2". +
+Zorg ervoor dat Numlock is uitgeschakeld als je Speakup gebruikt.
+
+De sneltoetsen kunnen worden gebruikt met hardware synthesizers met espeakup evenals met speechd-up. Het instellen van de toonhoogte of het
+spraakvolume met behulp van sneltoetsen is echter niet beschikbaar bij het gebruik van speech-up.
+
+De eerste sneltoetsen om te onthouden:
+----
+PrintScreen Speakup aan- of uitzetten
+Ins F1 Speakup hulp (druk op de spatieblak om de hulp te verlaten)
+----
+
+Sneltoetsen gebruikt voor schermlezen:
+----
+CapsLock m/komma/punt Zeg vorig/huidig/volgend teken
+CapsLock PageUp Zeg het eerste teken
+CpasLock PageDown Zeg het laatste teken
+CapsLock j/k/l Zeg vorig/huidig/volgend woord
+Cpaslock 2x Zeg het huidige woord
+CapsLock u/i/i/o Zeg vorige/volgende regel
+Capsh Zeg vanaf regelbegin tot de cursor.
+CapsLock puntkomma Zeg vanaf de cursor tot regeleinde
+CapsLock y Zeg vanaf de bovenkant van het scherm tot de cursor
+CapsLock p Zeg vanaf de cursor tot de onderkant van het scherm.
+CapsLock apostrof Zeg het hele scherm
+Capslock r Zeg het hele document.
+CapsLock n Zeg positie
+CapsLock slash Zeg de kenmerken
+CapsLock minus Parkeer de cursor (schakel aan of uit)
+CapsLock f2 Set Venster
+CapsLock f3 Venster wissen
+CapsLock f4 Venster activeren
+----
+Andere sneltoetsen:
+----
+CapsLock f5 Bewerk iets
+CapsLock f6 Bewerk het meeste
+CapsLock f7 Bewerk scheidingsteken
+CapsLock f8 Herhaal bewerken
+shift CapsLock f9 Bewerk exnum
+----
+
+=== Emacs laten spreken
+
+U kunt emacspeak of speechd-el gebruiken. Om ze in of uit te schakelen type je als normale gebruiker één van deze commando's:
+
+switch-on emacspeak +
+switch-on speechd-el +
+switch-off emacspeak +
+switch-off speechd-el +
+
+Typ daarna gewoon +
+emacs
+
+Het inschakelen van het ene programma schakelt het andere uit.
+
+[[Manage_your_system]]
+== Manage your system
+
+[[software_management]]
+=== Softwarebeheer in Slint
+
+<<The_basics, De basis>> +
+<<Keep_your_system_up_to_date, Hou je systeem up to date>> +
+<<Kernel_upgrades, Kernel upgrades>> +
+<<Get_additional_applications, Extra toepassingen>> +
+ <<slapt_src, Gebruik van slapt-src>> +
+ <<sbopkg, Gebruik van sbopkg>> +
+
+[[The_basics]]
+==== De basis
+
+In Slint wordt software aangeboden in de vorm van pakketten. Een pakket is een bundel van bestanden die worden geleverd als een gecomprimeerd archiefbestand dat alles bevat wat nodig is om de software uit te voeren. Pakketten staan op de installatie ISO en zijn opgeslagen op externe servers waarvan ze kunnen worden gedownload en geïnstalleerd. Installeren van een pakket betekent dat de bestanden uit het archiefbestand worden uitgepakt en naar een map in het systeem worden gekopieerd.
+
+Installatie en verwijdering van software wordt opgeslagen in een database bestaande uit tekstbestanden in de mappen:
+----
+/var/log/packages
+/var/log/removed_packages
+/var/log/scripts
+/var/log/removed_scripts
+----
+De bestanden in deze directory bevatten informatie over de pakketten, voornamelijk de lijst met bestanden die het bevat en waar ze zijn geïnstalleerd.
+
+De belangrijkste commando's om pakketten te beheren worden hieronder weergegeven. Ze hebben allemaal man-pages.
+
+Deze opdrachten vereisen administratieve rechten, gekoppeld aan een specifieke account genaamd 'root', waarvoor je een wachtwoord hebt opgegeven tijdens de installatie van Slint.
+
+Om een opdracht als 'root' te geven, typ je eerst
+su -
+waarna je het wachtwoord voor root invoert en vervolgens de opdracht typt.
+
+Onderstaande commando's kunnen worden uitgevoerd in een grafische terminal of in een console, uitgezonderd gslapt dat alleen in een grafische omgeving werkt.
+----
+installpkg # om een lokaal opgeslagen pakket te installeren.
+removepkg # om een geinstalleerd pakket te verwijderen.
+upgradepkg # om een geïnstalleerd pakket te vervangen door een ander pakket (meestal met dezelfde naam maar met een andere versie).
+slapt-get # voor het installeren, verwijderen en upgraden van pakketten opgeslagen in repositories vermeld in /etc/slapt-get/slap-getrc
+----
+De pakketten in het installatie ISO-beeldbestand zijn afkomstig van de repositories vermeld in /etc/slapt-get/slapt-getrc
+
+Doe jezelf een plezier en lees de commentaren in /etc/slapt-get/slapt-getrc en /usr/doc/slapt-get-0.10.2t/README.slapgetrc.Slint in het geïnstalleerde systeem.
+
+Na installatie van Slint zul je op de hoogte worden gebracht van updates van geïnstalleerde pakketten uit de repositories die zijn vermeld in /etc/slapt-get/slapt-getrc
+
+Je kunt extra pakketten installeren met behulp van de opdracht slapt-get of de grafische applicatie gslapt indien deze aanwezig zijn in een repository vermeld in /etc/slapt-get/slapt-getrc
+
+slapt-get en gslapt hebben een zoekfunctie die je helpt bij het zoeken naar pakketten.
+
+WARNING: je kunt slap-get, gslapt en removepkg gebruiken om zelf geïnstalleerde pakketten te verwijderen, maar niet die zijn meegekomen in het Slint ISO-beeldbestand. Zelfs als je ze nooit gebruikt. Het verwijderen van zo'n pakket zal de prestaties niet verbeteren en kan andere toepassingen onmogelijk maken. Als je een pakket hebt toegevoegd dat niet in Slint is opgenomen, kun je het verwijderen maar let er wel op dat het verwijderde pakket geen afhankelijkheid is van andere pakketten die je ook hebt geïnstalleerd en van plan bent om te blijven gebruiken.
+
+[[Keep_your_system_up_to_date]]
+==== Je systeem up-to-date houden
+
+Hou je systeem veilig door de software-updates van Slint te installeren zodra ze beschikbaar zijn.
+
+Alle updates staan in de ChangeLog: http://slackware.uk/slint/x86_64/slint-14.2.1/ChangeLog.txt
+
+Na de installatie van Slint of na iedere wijziging in het bestand/etc/slapt-get/slapt-getr voer je eenmalig het volgende commando uit:
+----
+slapt-get --add-keys
+----
+
+Om de lokale lijst van beschikbare pakketten te synchroniseren met die van de repository wordt het volgende commando automatisch iedere twee uur uitgevoerd:
+----
+slapt-get -u
+----
+Je kunt dit ook handmatig uitvoeren
+
+Dit vereist natuurlijk wel dat de machine met het internet verbonden is.
+
+Om de bijgewerkte of opnieuw gecompileerde pakketten te downloaden en te installeren voer je als root het volgende commando uit:
+----
+slapt-get --upgrade
+----
+Als alternatief kun je ook gslapt, een grafische front-end voor slapt-get gebruiken.
+
+Om nieuwe pakketten te downloaden die in de ChangeLog zijn vermeld als "Added" typ je:
+----
+slapt-get -i <package name>
+----
+of om ervoor te zorgen dat je alle pakketten hebt geïnstalleerd die zijn meegekomen met Slint inclusief de pakketten die zijn toegevoegd aan de repository na de installatie van Slint:
+----
+slapt-get --install-set slint
+----
+
+Op de bureaubladen wordt in het notificatiegebied van een paneel (het bovenpaneel in MATE) een klein pictogram weergegeven dat aangeeft of er software-updates beschikbaar zijn. Klik er met de linkermuisknop op en volg de instructies.
+
+Wees je ervan bewust dat sommige pakketten op de blacklist staan in
+/etc/slapt-get/slapt-getrc, d.w.z. dat ze niet automatisch kunnen worden geüpgraded of
+geïnstalleerd.
+
+[[Kernel_upgrades]]
+==== Kernel upgrades
+
+Er komen steeds nieuwe kernels beschikbaar met veiligheids-updates of verbeterde functionaliteit.
+
+Meestal is er geen handmatige interventie van de gebruiker nodig wanneer dit gebeurt maar het kan nuttig zijn om te weten hoe een kernel-upgrade werkt en wat te doen als er iets onverwachts gebeurt.
+
+Er zijn een aantal pakketten met bestanden die op elke kernel betrekking hebben, namelijk: kernel-generic, kernel-modules, kernel-source, kernel-headers. kernel-source en kernel-headers bevatten bestanden die gebruikt worden om software te kunnen compileren, alleen kernel-generic en kernel-modules zijn nodig om een Slint-systeem te kunnen gebruiken.
+
+Het pakket kernel-modules bevat bestanden genaamd modules. Dat zijn stukjes code die in de kernel kunnen worden "ingeplugd" om een specifieke functie toe te voegen of specifieke hardware te ondersteunen.
+
+Zodra zowel een kernel-pakket als het bijbehorende kernel-modules pakket zijn geïnstalleerd maakt het script /sbin/wrapupgradepkg een met deze kernel geassocieerde <<initrd, initrd>> (met modules afkomstig uit het pakket kernel-modules) en installeert die naast de kernel in de /boot map.
+
+Vervolgens worden vorige kernels (die niet in gebruik zijn op het moment van de upgrade) verwijderd.
+
+Vervolgens werkt het script het GRUB configuratiebestand /boot/grub/grub.cfg dat door de OS-loader wordt gelezen bij om het opstartmenu-item te maken.
+
+Dit opstartmenu bevat dan ten minste twee boot-items voor een kernel en de bijbehorende initrd. Van bovenaf:
+
+* Een boot-item om Slint te starten met de net geïnstalleerde nieuwe kernel.
+* Een boot-item om Slint te starten met behulp van de kernel die in gebruik was op het moment van de kernel-upgrade.
+
+Dit zorgt voor een soort "vangnet" in het geval Slint niet met de nieuwe kernel zou kunnen opstarten:
+druk in dit geval wanneer het boot-menu wordt weergegeven pijl omlaag om Slint te starten met de vorige kernel
+
+Voordat je opnieuw opstart kun je een voorbeeld van het nieuwe opstartmenu bekijken door als root te typen:
+----
+grub-emu
+----
+Er wordt nu een emulated of "fake" opstartmenu weergegeven met dezelfde lay-out als
+bij het opstarten daadwerkelijk zal worden weergegeven.
+
+Je kunt erin navigeren met de pijltjestoetsen omlaag en omhoog om een opstart-item te markeren  waarvan je de details kunt weergeven door op 'e' te drukken. Je gaat terug naar het menu door op Esc te drukken.
+
+Om grub-emu af te sluiten druk je op c en typ je *exit* en druk op Enter.
+
+[[Get_additional_applications]]
+==== Extra toepassingen
+
+Als de applicatie die je wilt installeren niet beschikbaar is in een van de repositories die zijn ingesteld in /etc/slapt-get/slapt-getrc, kun je er een pakket voor maken met gebruik van bouwmateriaal van vrijwilligers op @ https://slackbuilds.org. Hoe dat werkt lees je op https://slackbuilds.org/howto/ en https://slackbuilds.org/faq/
+
+De op deze manier gemaakte pakketten zouden compatibel met Slint moeten zijn.
+
+Er zijn twee programma's voor het compileren en installeren van pakketten met het bouwmateriaal op https://slackbuilds.org: *slapt-src* and *sbopkg*. Tenzij je gewend bent aan sbopkg, adviseren we je om slapt-src - dat sneller te leren is - te gebruiken. Beide als root te gebruiken programma's zouden echter moeten werken en dezelfde resultaten opleveren.
+
+We zullen slapt-src in meer detail beschrijven.
+
+[[slapt_src]]
+===== slapt-src gebruiken
+
+Het standaard configuratie-script voor slapt-src is /etc/slapt-get/slap-getrc en heeft de inhoud:
+----
+BUILDDIR=/tmp/slapt-src
+PKGEXT=txz
+SOURCE=https://slackbuilds.org/slackbuilds/14.2/
+----
+Dus:
+
+* Alle bouwmaterialen en pakketten gaan in de map /tmp/slapt-src
+* De namen van pakketten eindigen op .txz
+* Het bouwmateriaal wordt gedownload uit de repository https://slackbuilds.org/slackbuilds/14.2/
+
+De uitvoer van de opdracht *slapt-src --help* is:
+----
+Gebruik: slapt-src [option(s)] [action] [slackbuild(s)]
+  -u, --update update de lokale cache van de remote slackbuilds
+  -U, --upgrade-all upgrade alle geïnstalleerde slackbuilds
+  -l, --list overzicht van beschikbare slackbuilds
+  -e, --clean schoon de compilatie-map op
+  -s, --search  zoek beschikbare slackbuilds
+  -w, --show toon de gespecificeerde slackbuilds
+  -i, --install download, compileer en installeer de gespecificeerde slackbuild(s)
+  -b, --build download en compileer de gespecificeerde slackbuild(s)
+  -f, --festch download de gespecificeerde slackbuild(s)
+  -v, --version
+  -h, --help
+ Opties:
+  -y, --yes toon geen prompt
+  -t --simulate toon wat gedaan zal worden
+  -c, --config=FILE gebruik het opgegeven configuratiebestand
+  -n, --no-dep zoek niet naar afhankelijkheden
+  -p, --postprocess=CMD voer het gespecificeerde commando uit op het gegenereerde pakket
+  -B, --build-only alleen van toepassing op --upgrade-all
+  -F, --fetch-only alleen van toepassing op --upgrade-all
+----
+
+Enige opmerkingen betreffende deze opties:
+
+* Gebruik steeds -u of --update om de lijst van pakketten die gecompileerd en geïnstalleerd kunnen worden bij te werken. Deze commando's overschrijven het bestand /tmp/slapt-src/slackbuilds_data.
+* Gebruik -e om ruimte op de schijf te besparen door de meeste bestanden in /usrc/src/slapt-src/ te verwijderen
+* Gebruik *geen* -U behalve voor een overzicht van mogelijke upgrades of downgrades zonder bevestiging: bevestiging zou leiden tot het vervangen van alle Slint-pakketten door de versie in de externe repository waardoor mogelijk software die niet compatibel is met deze versie beschadigd zou kunnen worden.
+* -i kan een pakket upgraden dat al is geïnstalleerd vanaf https://slackbuilds.org, als een onderhouder van het SlackBuild script het heeft geüpgraded en de variabele VERSION heeft gewijzigd.
+* Gebruik -f om alleen de broncode voor de desbetreffende software van https://slackbuilds.org te downloaden. Dit kan handig zijn als je het bouwmateriaal wilt controleren of het bouwmateriaal wilt aanpassen. Laten we bijvoorbeeld aannemen dat je het bouwmateriaal voor de software *mxml* wilt downloaden. Het onderstaande commando geeft informatie over de software en welke bestanden hiervoor beschikbaar zijn op https://slackbuilds.org:
++
+----
+slapt-src --show mxml
+SlackBuild Name: mxml
+SlackBuild Version: 3.
+SlackBuild Category: libraries/mxml/
+SlackBuild description: mxml (Lightweight xml parsing library)
+SlackBuild Files:
+ README
+ mxml.SlackBuild
+ mxml.info
+ slack-desc
+----
++
+Je kunt deze bestanden en het bronarchief uit de upstream-repository ophalen met de volgende opdracht:
++
+----
+slapt-get -f mxml
+----
++
+Met de kennis van de vorige opdracht dat de bestanden worden opgeslagen in de subdirectory libraries/mxml, kun je met deze opdracht controleren welke bestanden zijn gedownload:
++
+----
+ls -1 /tmp/slapt-src/libraries/mxml
+mxml-3.1.tar.gz
+mxml.SlackBuild
+mxml.info
+slack-desc
+----
+* Gebruik -b als je een pakket wilt maken maar het nog niet wilt installeren. In het bovenstaande voorbeeld zal het worden opgeslagen in /tmp/slapt-src/libraries/mxml, zodat je het later kunt installeren met:
++
+----
+upgradepkg --install-new /tmp/slapt-src/libraries/mxml/xml*txz
+----
++
+* Gebruik -c als je een aangepast configuratiebestand wilt gebruiken in plaats van de standaard /etc/slapt-get/slap-getrc
+
+[[sbopkg]]
+===== Sbopkg gebruiken
+
+WARNING: in sommige gevallen is de software geleverd bij Slint ook beschikbaar op https://slackbuilds.org maar onder een andere naam hetgeen tot problemen kan leiden. Deze verschillen worden opgelost door slapt-src, maar nog niet door sbopkg.
+
+Lees voor je sbopkg gebruikt het help-bestand en de man page door als root *sbopkg --help* of *man sbopkg* te typen
+
+In het kort: als je alleen als root de command line gebruikt:
+
+* synchroniseer de lokale repository met de externe om deze bij te werken:
++
+----
+sbopkg -r
+----
+* schrijf een "wachtrijbestand" met de afhankelijkheden in de juiste volgorde om ze te compileren en te installeren voor de gewenste software:
++
+----
+sqg -p <package name>
+----
+Er wordt nu een wachtrijbestand genaamd /var/lib/sbopkg/queue /<package name>.sqf geschreven
+
+Als er geen afhankelijkheden zijn, wordt er ook geen wachtrijbestand geschreven
+
+* compileer en installeer eerst de afhankelijkheden, daarna de gewenste software:
++
+----
+sbopkg -i <package name>
+----
+Als er al een wachtrijbestand voor dit pakket bestaat, kies er dan voor om dat te gebruiken als dit wordt gevraagd.
+
+Als een pakket dat vermeld is in het wachtrijbestand al is geïnstalleerd, zal het worden overgeslagen.
+
+Als gevolg hiervan zul je een pakket dat al is geïnstalleerd met behulp van sbopkg en dat je wilt upgraden eerst moeten verwijderen voordat je het nieuwe compileert en installeert.
+
+Wees je ervan bewust dat het op deze manier compileren en installeren van pakketten af en toe kan leiden tot problemen zoals ontbrekende afhankelijkheden of conflicten met al geïnstalleerde pakketten: de componenten die worden gebruikt om de pakketten te compileren worden geleverd door vrijwilligers, die de resultaten niet voor elke mogelijke configuratie kunnen controleren.
+
+WARNING: Als je geen pakket kunt vinden voor een gewenst programma of materiaal om het te compileren @ https://slackbuilds.org, kun je in de verleiding worden gebracht om deze software handmatig te compileren en te installeren door het uitvoeren van de commando' "./configure && make && make install". Vermijd dit echter omdat software die op deze manier wordt gecompileert en geinstalleerd niet beheert kan worden met het Slint pakkettenbeheersysteem en bijbehorende hulpmiddelen.
+
+Post in plaats daarvan een verzoek op de Slint mailing list en we zullen proberen je te helpen en dit pakket eventueel toevoegen aan de repository. Wanneer dat is gebeurt (wat in de mailinglist zal worden aangekondigd), typ je als root één van deze commando's om het te installeren:
+----
+slapt-get -i <package name>
+slapt-get --install-set Slint
+----
+
+=== Gebruikers en groepen beheren
+
+Er zijn twee commando's voor het beheer van gebruikers en groepen:
+
+* Het _usersetup_ commando (TUI)
+* De _gtkusersetup_ opdracht (GUI), met een pictogram in de categorie Systeem in het Slint Control Center
+
+Met deze opdrachten kun je gebruikers en groepen gebruikers toevoegen of verwijderen en gebruikers toevoegen aan groepen.
+
+Vergeet niet dat elk gebruikersaccount standaard is gekoppeld aan zijn eigen map in de /home directory. Als je bijvoorbeeld een gebruiker *leonie* toevoegt, zal er een /home/leonie map worden gemaakt, waar alleen leonie (en root) toegang toe heeft.
+
+=== Standaardtaal van het systeem wijzigen
+
+Daarvoor zijn twee commando's voorzien:
+
+* De _localesetup_ opdracht (TUI).
+* De _gtklocalesetup_ opdracht (GUI), met een pictogram in categorie Instellingen in het Slint Control Center.
+
+Onthoud dat deze instellingen de taal veranderen die gebruikt wordt door de interfaces van geinternationaliseerde applicaties, niet de toetsenbordindeling (zie hieronder).
+
+Tevens zijn gelokaliseerde pakketten (indien beschikbaar) die overeenkomen met de gekozen taal al geïnstalleerd aan het einde van de Slint installatie. Als je de standaardtaal nadien wijzigt, moet je de bijbehorende gelokaliseerde pakketten installeren.
+
+Gelokaliseerd betekent "verstrekt in een bepaalde locale", de locale is een taal plus bijzondere eigenschappen geassocieerd met een geografisch gebied. In Portugal en Brazilië wordt bijvoorbeeld verschillend Portugees gesproken. In de naam van de gelokaliseerde pakketten is l10n een afkorting van "lokalisatie" wat "letter l + 10 andere letters + letter n" betekent.
+
+Gelokaliseerde pakketten zijn er al voor veel talen. Ze hebben de naam van het basispakket, een koppelteken, en vervolgens de taalcode. Hieronder worden de basisnamen van de gelokaliseerde pakketten getoond:
+[options="autowidth"]
+|====
+| Basis pakketnaam | Beschrijving
+| aspell | woordenlijsten voor spellingscontrole
+| calligra-l10n | lokalisering van de Calligra kantoor suite
+| kde-l10n | lokalisering van KDE
+| libreoffice-l10n | gelokaliseerde LibreOffice kantoorsuite
+| libreoffice-help | gelokaliseerde hulp voor LibreOffice
+|====
+
+Om een gelokaliseerd pakket te vinden, typ je in een terminal als root (bijvoorbeeld voor kde-l10n): +
+`spi libreoffice`
+
+Dit zal een overzicht van alle gelokaliseerde LibreOffice pakketten tonen. Installeer het wanneer je het juiste hebt gevonden. Voor Perzisch bijvoorbeeld is de taalcode `fa` (kort voor Farsi), om het te installeren typ je: +
+`spi -i libreoffice-l10n-fa`
+
+Als je dat prefereert kun je `gslapt` gebruiken. Typ de pakketnaam in het zoekveld om alle gelokaliseerde libreoffice pakketten weer te geven.
+
+=== De toetsenbord-indeling wijzigen
+
+Je kunt de in grafische modus gebruikte standaard toetsenbordindeling wijzigen met:
+
+* Het _keyboardsetup_ commando (TUI)
+* De _gtkkeyboardsetup_ opdracht (GUI), met een pictogram in de categorie Hardware in het Slint Control Center.
+
+Met deze commando's kunt je ook kiezen of NumLock of SCIM (invoermethode) moet worden ingeschakeld bij het opstarten van het systeem.
+
+Als je een window manager gebruikt met een paneel, kun je dit ook instellen door te rechtsklikken op de toetsenbord-applet (standaard weergegeven als de twee letters van de taalcode van de huidige toetsenbordindeling). KDE en Xfce hebben daarvoor specifieke tools.
+
+Op de opdrachtregel - maar nog steeds voor de grafische modus - gebruik je in plaats daarvan het commando setxbmap
+
+Om bijvoorbeeld de toetsenbordindeling in grafische modus op Oekraïens in te stellen typ je als gewone gebruiker: +
+`setxkbmap -layout ua`
+
+Zie voor meer informatie de man page voor setxkbmap.
+
+=== Een printer installeren
+
+In Slint beheert de CUPS print server afdrukken en afdruktaken. Standaard mogen alleen gebruikers die tot de`sys`(afkorting voor _systeem_) groep behoren - wat is vastgelegd in het bestand /etc/cups/cupsd - administratieve taken uitvoeren zoals het toevoegen of verwijderen van een printer.
+
+Voor een eenvoudige opstelling (een printer gekoppeld aan een desktop pc of laptop en niet gedeeld met andere machines), hoef je slechts één gebruiker (die de printers zal beheren) aan de groep`sys`toe te voegen. Het toevoegen van de gebruiker _didier_ aan de groep`sys`kan op twee manieren worden gedaan:
+
+* In console modus of in een virtuele terminal word je root met `su` en typt dan:
++
+`gpasswd --add didier sys`
++
+* In grafische modus klik je in het Slint Control Center op Gebruikers en Groepen (categorie Systeem), selecteer je de gebruiker en klik je op 'Eigenschappen', vervolgens vink je`sys`aan op de tab Groepen. Of andersom: selecteer de groep en voeg er vervolgens de gebruiker aan toe.
+
+Er zijn verschillende manieren om een printer toe te voegen en te configureren (dit moet worden gedaan door een lid van de`sys`groep):
+
+* Vanuit het Slint Control Center klik je in de categorie Hardware op Printer Setup om een GUI weer te geven waarin je een eenvoudige opstelling kunt instellen...
+* ... of klik je op Cups Print Control hetgeen de webinterface van de CUPS print server opent. Je kunt de webinterface ook in een webbrowser weergeven door`localhost:631` in de adresbalk te typen.
+* Als je een Hewlett Packard printer hebt, klik dan met de rechtermuisknop op het *hp* logo in het notificatiegebied van het paneel.
+
+NOTE: Om afdrukinstellingen te wijzigen moet de CUPS-server worden uitgevoerd. Deze wordt gestart als Slint wordt opgestart als de service`cups`is aangevinkt bij de System Services (wat het standaard is in Slint).
+
+=== Geluid instellen
+
+
+In Slint sturen applicaties hun geluidsuitvoer naar ALSA of PulseAudio.
+
+In het laatste geval stuurt PulseAudio op zijn beurt de output stream naar een ALSA-mixer die het naar de geluidskaarten leidt.
+
+Als gevolg daarvan kan een instelling als geluidsvolume altijd worden gedaan door een ALSA mixer, maar ook door een PulseAudio mixer, maar alleen in het geval dat de applicatie de geluidsuitvoer naar PulseAudio stuurt.
+
+We zullen nu de applicatie voorstellen die kan worden gebruikt om de geluidsinstellingen te wijzigen
+
+==== pavucontrol (voor PulseAudio)
+
+`pavucontrol` staat voor PulseAudio Volume Control en is een grafische applicatie. Je kunt het starten vanuit een terminal of het programma menu, of door in het bovenpaneel van MATE met de rechtermuisknop op het pictogram van de geluidsmixer te klikken. Er zijn meer instellingen mogelijk dan alleen de volumeregeling, neem de tijd om alle functies te ontdekken.
+
+Je kunt ook de volume control applet gebruiken in het meldingengebied van het paneel: met de linkermuisknop kunt u het volume aanpassen en de rechtermuisknop geeft toegang tot andere instellingen en geeft de mogelijkheid om de pavucontrol mixer te starten.
+
+[[Sound_on_the_command_line]]
+
+==== alsamixer  (voor ALSA)
+
+alsamixer is een ncurse-applicatie met een semi-grafische gebruikersinterface.
+
+Je opent deze door in een console of in een grafische terminal te typen:
+----
+alsamixer
+----
+vervolgens:
+
+* Gebruik je de PgUp-toets om het volume met 5% te verhogen
+* Gebruik je de PgDn-toets om het volume met 5% te verlagen
+* Druk je op Esc om de applicatie te verlaten.
+
+==== amixer (voor ALSA)
+Het commando heeft de volgende schrijfwijze:
+----
+amixer <arguments>`
+----
+Om bijvoorbeeld het hoofdvolume in te stellen op 70% typ je:
+----
+amixer set Master 70%
+----
+Voor meer informatie typ je een van deze commando's:
+----
+man amixer
+amixer -h
+----
+==== sam (de Speech-Friendly Alsa Mixer)
+Met sam kun je een geluidskaart selecteren als je er meer dan één in je machine hebt zitten. +
+Als er maar één is, worden direct de verschillende mixers voor configuratie weergegeven.
+
+Alle items of het nu geluidskaarten of mixers zijn of een bepaalde functie of een specifieke mixer is worden geselecteerd door de lijst door te bladeren met de op en neer pijltjestoetsen en Enter te drukken op de gewenste optie: +
+`q` verlaat de lijst en/of sluit af. +
+`Shift-q` het programma afsluiten. +
+`F1` toont extra informatie indien beschikbaar.
+
+Als de naam van de gewenste optie bekend is, kun je ook op de
+eerste letter van de optie drukken. Eerste letter navigatie is hoofdlettergevoelig.
+Het toont je de eerste optie die begint met de ingedrukte
+letter.  Als je weer op dezelfde letter drukt, ga je naar de volgende optie
+beginnend met die letter als die aanwezig er is.
+Herhalen van het indrukken van deze toets laat je wisselen tussen alle opties die beginnen met die letter.
+
+De mogelijke instellingen van een mixer kunnen worden weergegeven door op f1 te drukken. +
+Ze worden weergegeven als een selectielijst, met een verkorte weergave van alle relevante informatie.
+"Verlaag het volume vanaf 84 procent" bijvoorbeeld, is de optie om het afspeelvolume te verlagen.  Zoals je kunt zien vertelt het je ook wat de huidige
+instelling is.
+
+NOTE: sam werkt niet goed in een grafische terminal. Gebruik het dus alleen in een console.
+
+==== pamixer en ponymix (voor PulseAudio)
+Deze tools lijken op elkaar met commando's op deze schrijfwijze:
+----
+pamixer <arguments>
+ponymix <arguments>
+----
+Typ om bijvoorbeeld het volume op 70% in te stellen voor de standaard sink één van deze commando's:
+----
+pamixer--set-volume 7
+ponymix set-volume 8O
+----
+Voor meer informatie typ je:
+----
+pamixer -h
+ponymix --help
+----
+
+==== pacmd en pactl (voor PulseAudio)
+
+Deze twee console-toepassingen besturen een draaiende PulseAudio daemon.
+
+WARNING: typ slechts pacmd en er verschijnt een interactieve dialoog. Druk op Ctrl+d om de toepassing te verlaten maar typ geen exit omdat dit PulseAudio in zijn geheel zou afsluiten!
+
+Voor meer informatie typ je:
+----
+man pactl
+man pacmd
+pactl --help
+pacmd --help
+----
+
+==== Het geluidsvolume bewaren en herstellen
+
+Maak het bestand /etc/rc.d/rc.alsa uitvoerbaar. Typ als root:
+----
+chmod +x /etc/rc.d/rc.alsa
+----
+Bij het opstarten zal dit script de eerder opgeslagen geluidsinstellingen herstellen of anders standaard volumes instellen en opslaan, zodat ze kunnen worden hersteld bij de volgende keer opstarten.
+
+Als je niet wilt dat dit script het standaard volume instelt typ je als root:
+----
+touch /var/lib/alsa/no.asound.state
+----
+
+Je kunt de standaard geluidsniveaus nu wijzigen met alsamixer of amixer
+en ze bewaren door als root te typen:
+----
+alsactl store
+----
+Het script zal ze bij de volgende keer opstarten weer op dat niveau herstellen.
+
+Voor meer informatie typ je:
+----
+man alsactl
+----
+=== Netwerkconfiguratie
+
+Als je het netwerk niet hebt ingesteld tijdens de installatie van Slint word je eerst
+root door het typen van `su-` in een console of een grafische terminal zoals mate-terminal, en het intypen van het root-wachtwoord.
+
+Het netwerk wordt ingesteld met behulp van het `netsetup` script.
+Dus typ je gewoon de opdracht `netsetup` in
+dezelfde terminal, waar je zojuist root geworden bent.
+Als eerste wordt je om de hostnaam van je machine gevraagd. je kunt er iedere naam voor kiezen als het maar één woord is.
+Dan wordt je gevraagd om de domeinnaam. Als de machine geen server is
+kunt je iedere naam kiezen.
+Daarna wordt je gevraagd hoe je machine verbinding maakt met het netwerk. Tenzij je een goede reden hebt om dat niet te doen (en je weet wat je doet), behoudt dan de standaard `NetworkManager` om het netwerk automatisch te configureren.
+
+Voor bekabelde verbindingen moet dat genoeg zijn om automatisch te worden verbonden bij de volgende keer opstarten.
+
+Om een draadloze verbinding te configureren zijn twee commando's beschikbaar via de opdrachtregel.
+
+Je kunt de commando's weer rechtstreeks in de console typen of in een grafische terminal zoals mate-terminal. Typ ze in dit geval als gewone gebruiker niet als
+root.
+Als je deze instructies opvolgde en al root bent
+typ je `exit` om de normale gebruikersstatus terug te krijgen.
+
+De twee genoemde commando's zijn `nmtui` (via dialoogvenster) of `nmcli` (alleen opdrachtregel).
+
+Als u liever via de opdrachtregel werkt, lees dan eerst de nmcli documentatie. Typ `nmcli --help` of `man nmcli`
+voor meer gedetailleerde informatie.
+Terwijl `nmcli` meer mogelijkheden biedt, in de meeste gevallen zal de functionaliteit
+van `nmtui` voldoende zijn voor het opzetten van uw draadloze netwerk, dus zullen we het hier
+beschrijven:
+
+Met `nmtui`kun je navigeren met de Tab en pijltjestoetsen.
+U zal drie opties voorstellen: +
+`Een verbinding bewerken` +
+`Een verbinding activeren` +
+`Hostnaam van het systeem instellen` +
+
+Als er nog geen draadloze verbinding is ingesteld kies dan voor `Een verbinding activeren`.
+Van boven naar beneden worden eerst de bekabelde verbindingen (indien aanwezig) getoond, daarna alle toegankelijke draadloze netwerken.
+Navigeer met de pijltjestoetsen omhoog en omlaag om het gewenste netwerk te selecteren en typ dan Enter: waarschijnlijk wordt u nu gevraagd naar het wachtwoord of de encryptiesleutel. Voer deze in, bevestig het met de Tab-toets, sluit dan af en je bent klaar.
+
+Alleen in grafische modus kun je in plaats van `nmcli` of `nmtui` de applicatie
+`nm-connection-editor` gebruiken.
+
+=== Services instellen
+
+Als je gebruik maakte van de handmatige installatiemodus werd je gevraagd welke systeemdiensten standaard geactiveerd worden bij het opstarten. +
+Als je de automatische modus gebruikte werden de standaard instellingen toegepast
+
+In beide gevallen kun je deze instellingen op verschillende manieren wijzigen:
+
+* Voer als root het `servicesetup` commando (TUI) uit
+* Alleen in grafische modus met `gtkervicesetup`, toegankelijk vanuit het Slint Control Center in categorie Systeem of typ Alt+F2 om het dialoogvenster "Uitvoeren..." te openen en vervolgens *gtksetrvicesetup* te typen.
+* Door als root het relevante script uitvoerbaar (chmod 755 <path to the script> of niet uitvoerbaar (chmod 644 <path to the script>) te maken. Om bijvoorbeeld rc.fail2ban uitvoerbaar te maken typ je: `chmod 755 /etc/rc.d/rc.fail2ban`
+
+[IMPORTANT]
+====
+Verander alleen de standaardinstellingen als je weet wat je doet.
+====
+
+Services worden beheerd door scripts waarvan de naam begint met `rc.` en die zich in de map /etc/rc.d/ bevinden. De service acpi bijvoorbeeld wordt beheerd door het shell script /etc/rc.d/rc.acpi. De meeste diensten worden bij het opstarten geactiveerd als het bijbehorende script uitvoerbaar is. In onderstaande tabel geven we in kolom A aan of de service bij het opstarten geactiveerd is (`aan`) of niet (`uit`). Als de kolom leeg is, is de activering van de service afhankelijk van een keuze die tijdens de installatie is gemaakt. Een `A` in de kolom geeft aan dat de service is geactiveerd in de automatische installatiemodus of anders als de gebruiker dit zelf heeft gekozen tijdens de installatie. De Pakket kolom geeft bij welk softwarepakket het script hoort
+
+[options="autowidth"]
+|====
+| *Service* | *A* | *Pakket* | *Doel en opmerkingen*
+| acpi | on | acpid | Advanced Configuration and Power Interface is voor energiebeheer en maakt het bijvoorbeeld mogelijk om met een druk op een knop opnieuw op te starten
+| alsa | on | alsa-utils | Zorgt voor standaard geluidsinstellingen of hersteld de eerder opgeslagen geluidsinstellingen
+| alsa-oss | uit | alsa-utils | ALSA OSS kernel modules. In de meeste gevallen niet nodig en standaard niet ingeschakeld in Slint.
+| atalk | uit | netatalk | Hiermee kunnen Unix-achtige besturingssystemen dienen als bestands-, print- en tijdserver voor Macintosh computers.
+| autofs | uit | autofs | Kernel-gebaseerd automatisch aankopelen voor Linux
+| bind | uit | bind | DNS-server. De meeste gebruikers vertrouwen op een externe. Schakel deze in als je een dns-server op dit systeem wilt uitvoeren.
+| bitlbee | on | bitlbee | BitlBee is een IRC daemon die kan praten met instant messaging netwerken en fungeert als een gateway. Gebruikers kunnen  met een normale IRC client met de server verbinding maken en zien hun 'buddy list' in &bitlbee.
+| bluetooth | on | bluez | Maakt het mogelijk om te communiceren met bluetooth apparaten
+| brltty|  | brltty | Maakt het mogelijk om met een Braille-terminal of schermlezer te communiceren. Is geactiveerd indien ingesteld tijdens de installatie
+| cgconfig | on | libcgroups | Voert de cgconfigparser uit die /etc/cgconfig.conf ontleedt om de control group hiërarchie in te stellen inclusief de permissies (UID en GID) van de groepen en mogelijkerwijs instelbare parameters van de controllers. Die doet dat - door bijvoorbeeld het uitvoeren van een apart shellscript - in plaats van dat wij dat elke keer bij het opstarten zelf moeten doen. This script is executable by default but anyway waan't do anything until /etc/cgconfig.conf be edited (all lines are commented out as shipped)
+| cgmanager | uit | cgmanager | Starts the cgmanager daemon that provides an alternate way to manage the caantrol group hierarchy through D-Bus requests possibly through the cgm front-end utility.
+| cgproxy | uit | cgmanager | Starts the cgproxy daemon, that allows programs and users in a caantainer to make cgroup administration requests using DBus calls, sending the user-ids or group-ids as SCM credentials to the cgmanager.
+| cgred | on | libcgroups | Starts the cgroups rules engine daemaan that automatically distributes to appropriate control groups the processes that changes their effective UID or GID, applying the rules found in /etc/cgrules.conf. This allows to caantinue apply resources control resources on such processes that could otherwise escape it. Dit script is standaard uitvoerbaar maar doet niets totdat /etc/cgrules.conf wordt aangepast (de inhoud wordt standaard als commentaar weergegeven)
+| consolekit | on | ConsoleKit2 | Deze daemon wordt gebruikt door polkit's console auth-agent om de machtigingen te controleren van een gebruiker die bijvoorbeeld het systeem wil herstarten of afsluiten.
+| cpufreq | on | sysvinit-scripts | Instellingen voor CPU-klokfrequentie en spanningsregeling in de kernel.
+| cups | on | cups | Opstart- en afsluitscript voor de CUPS printserver.
+| cups-browsed | uit | cups-filters | Maakt externe printers lokaal beschikbaar.
+| dnsmask | uit | dnsmask | Start, stopt en herstart dnsmasq (een kleine DNS/DHCP server)
+| espeakup | | espeakup | start, stopt en herstart de espeakup console-schermlezer. Aan als de gebruiker spraak heeft ingeschakeld tijdens de installatie of later speak-with espeakup heeft getypt
+| fail2ban | uit | fail2ban | start en stopt fail2ban dat logbestanden zoals /var/log/pwdfail scant en het IP-adres blokkeert als het wachtwoord te vaak foutief wordt ingevoerd en update ook de firewall-regels hiervoor.
+| font | uit | kbd | Sets the console faant (used in Console mode, not in Graphical mode)
+| fuse | on | fuse | Laadt de fuse-module en koppel het fuse-control bestandssysteem aan. FUSE is een eenvoudige interface voor userspace programma's om een virtueel bestandssysteem naar de Linux kernel te exporteren.  FUSE biedt ook een veilige methode voor niet-gemachtigde gebruikers om hun eigen bestandssysteemimplementaties te maken en aan te koppelen.
+| fenrir | uit | fenrir | start, stopt en herstart de fenrir schermlezer die na installatie kan worden gestart door het typen van speak-with fenrir.
+| font | uit | kbd | een aangepast console-lettertype instellen
+| gpm | aan | gpm | De General Purpose Mouse server laat je tekst in een Linux console knippen en plakken.
+| httpd | uit | https | Start of stopt de Apache webserver
+| inet1 | on | network-scripts | Deze scripts worden gebruikt om de verschillende netwerkinterfaces te activeren.
+| inet2 | aan | network-scripts | Dit shell script start het gehele netwerksysteem op.
+| inetd | aan | inetd | BSD "superserver" daemon. /etc/inetd.conf moet worden bewerkt om de diensten daadwerkelijk te kunnen gebruiken.
+| ip_forward | uit | network-scripts | Start of stopt IP-packet forwarding wat nodig is om je computer als router te kunnen laten functioneren.
+| keymap | on | installer | Laadt de toetsenbordindeling die in console-modus wordt gebruikt.
+| local | uit | sysvinit-scripts | start daemons die tijdens het opstarten niet door /etc/rc.d/rc.M worden gestart.
+| loop | on | sysvinit-scripts | Laadt de loop device kernel module.
+| lxc | uit | lxc | This scripts starts (if caanfigured to be auto-started) and stops lxc containers.
+| mcelog | uit | mcelog | Start de mcelog hardware error logging. Dit logt en behandelt CPU hardwarefouten op x86 systemen
+| messagebus | on | dbus | De D-BUS systeembrede berichtenbus. Dit is een daemon die meldingen van systeemgebeurtenissen en andere berichten uitzendt en zorgt voor communicatie tussen processen.
+| modules | on | sysvinit-scripts | Compute the kernel modules dependencies and start other scripts that load modules not automatically loaded by eudev, possibly for specific kernel versiaans
+| modules.local | on | sysvinit-scripts | Laadt modules die niet automatisch door eudev worden geladen
+| murmur | uit | murmur | Start en stopt de murmur chat server voor mumble
+| mysqld | uit | mariadb | Start en stopt de MariaDB server. MariaDB is een volledig uitwisselbare MySQL fork
+| networkmanager|  | NetworkManager | This is a daemon for automatically switching network caannectiaans to the best available caannection. Activated if NetworkManager is chosen to configure the network, during or after installatiaan
+| nfsd | uit | nfs-utils | Start en stopt een nfs (Netwerk Bestandsserver.qq
+| ntpd | on | ntp | Start en stopt een ntp ( Network Time Protocol) daemon.
+| numlock|  | salixtools | Activate numlock aan the console
+| pcmcia | uit | pcmciautils | Script om het PCMCIA subsysteem te initialiseren.
+| php-fpm | uit | php | Start de PHP FastCGI Proces Manager daemon.
+| pulseaudio | uit | pulseaudio | Start pulseaudio systeembreed. Dit wordt niet aanbevolen in Slint.
+| rpc | uit | rpcbind | Start/stop/restart RPC (remote process communications) daemaans needed to use NFS. Voor een NFS server is het starten hiervan verplicht.
+| samba | uit | samba | Start, stopt en herstart de Samba SMB CIFS bestands- en printserver voor CIFS clients.  Dit stelt je in staat opslagruimte of printers op een Samba-host beschikbaar te maken voor CIFS-clients (zoals pc's met Windows).
+| saslauthd | uit | cyrus-sasl | saslauthd is a daemon process that handles plaintext authentication requests aan behalf of the SASL library.  De CMU Cyrus SASL bibliotheek wordt meestal voor authenticatie op mailservers gebruikt.
+| sendmail | uit | sendmail | Start, stopt en herstart de Sendmail MTA (mail transfer agent of mail delivery system).
+| serial | uit | util-linux | Initialiseert en stelt de seriële poorten in op je systeem
+| setterm | aan |util-linux |  Laat je op de opdrachtregel terminal attributen instellen (voornamelijk gebruikt voor screen blanking en energiebeheer).
+| smartd | uit | smartmontools | Start, stopt en herstart de smartd daemon die de status controleert van S.M.A.R.T. compatibele hard drives en eventuele problemen meldt.
+| sshd | on | openssh | Start, stopt en herstart de secure shell server
+| snmpd | uit | net-snmp |Start en stopt de net-snmp SNMP (Simple Network Management Protocol) daemon
+| syslog | on | sysklogd | Start, stopt en herstart de system logging daemons die zowel kernel- als systeemmeldingen loggen.
+| sysstat | aan | systat | Reset de system activity logs die worden gebruikt om de prestatiestatistieken te berekenen
+| speechd-up |  | speechd-up | starten/stop/herstart de speech-up-schermlezer, die gestart kan worden na het typen van sprekers-met speech-up.
+| sysvinit | on | sysvinit-scripts | Dit bestand zorgt voor basiscompatibiliteit met opstartscripts in SystemV stijl die in veel binaire pakketten worden gevonden
+| swapinzram | on | swapinzram | Stelt een wisselbestand block device in RAM in met zram
+| syslog | on | syslogd | Start, stopt en herstart de systeem logging daemons.
+| sysstat | uit | sysstat | Reset de systeem-activiteit logbestanden.
+| timidity | uit | TiMidity++ | Start/stop/restart the TiMidity++ ALSA sequencer client. TiMidity++ is a software synthesizer.  Deze kan MIDI-bestanden afspelen door ze om te zetten in PCM-waveform-gegevens of andere audiobestanden.
+| udev | on | eudev | Dit script initialiseert udev dat de /dev map vult met device nodes, naar nieuwe apparaten scant en hiervoor de juiste kernel modules laadt en configureert.
+| ulogd | on | ulogd | start de userspace ulogd daemon voor netfilter/iptables gerelateerde logging.
+| vde2 | aan | vde2 | Start, stopt en herstart de VDE switch. VDE is een virtueel netwerk dat werkt met ethernet met hulpprogramma's als 'vde_switch' en 'vdeqemu'.
+| wireless | on | wireless-tools|Dit script stelt draadloze PCI, USB en 32-bit Cardbus apparaten in. Normaal gesproken wordt dit script aangeroepen vanuit rc.inet1 in plaats van het direct uitvoeren
+| yp | on | yptools | Start NIS (Network Information Dienstens). NIS provides network-wide distributiaan of hostname, username, and other information databases.
+|====
+
+Je kunt een service starten of stoppen door als root de opdracht `service` te gebruiken. Voor meer informatie type je `man service`.
+
+== Woordenlijst
+
+Several definitiaans in this glossary are taken or adapted from  https://en.wikipedia.org/wiki/Main_Page[Wikipedia] and https://pubs.opengroup.org/onlinepubs/9699919799/[POSIX]
+
+[[applicatiaan]]Applicatie:: An applicatiaan program (applicatiaan for short) is
+a computer program designed to carry out a specific task typically requested by
+end-users.
++
+Applications are not generally caansidered as part of the operating system, meaning that they can be added to the system after its installation. They
+perform non-system-related functiaans, such as word processing, architectural
+design, mechanical design, workstation publishing, or financial analysis.
+
+
+[[boot]]Opstarten of booten::
+Boot means switch-aan a computer to start an operating system. Op dezelfde computer kunnen meerdere besturingssystemen worden geïnstalleerd. Select which one to load into
+RAM and run can be daane either by the firmware or by a software named boot
+manager (GRUB in Slint's case). The firmware of a computer can support aane of following booting mode, or both:
++
+* In the Legacy or BIOS mode the OS is loaded executing the instructiaans written in a boot sector.
+* In EFI-modus wordt het besturingssysteem geladen door een OS-loader, opgeslagen in een uitvoerbaar bestand op een EFI-systeempartitie (ESP).
+
+[[CPU]]CPU::
+De CPU of Central Processing Unit voert de instructies van programma's uit.
+
+[[command]]Opdracht of commando:: Een commando of opdracht is gedefinieerd door https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_104[POSIX] als "een opdracht aan een <<shell, shell>> om een specifieke taak uit te voeren".
++
+Die uit te voeren taak kan een <<application, programma>> of een <<utility, hulpprogramma>> zijn.
++
+De basisstructuur van shell-commando's is gedefinieerd in het hoofdstuk https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09[2.9 Shell-commando's] van de POSIX-specificatie.
++
+De <<bash shell>> bevat voorbeelden van commando's.
+
+[[console]]Console:: Het woord "console" verwijst naar vroegere computersystemen waarbij op dit apparaat - bestaande uit een toetsenbord en een printer gekoppeld aan een computer - door de systeembeheerder commando's werden getypt en de uitvoer werd afgedrukt, zo een log producerend.
++
+In personal computers typt de gebruiker de commando's op het toetsenbord waarvan de uitvoer
+wordt afgedrukt op een scherm gescheiden van of geïntegreerd met de computer zoals in een laptop.
+
+[[device]]Apparaat::
+
+Een randapparaat of een object dat als zodanig aan de applicatie verschijnt.[POSIX]
+
+[[directory]]Directory::
+Een directory is een andere naam voor een map. Bestandssystemen gebruiken mappen om
+bestanden binnen partities te organiseren.
++
+Mappen kunnen bestanden en ook andere mappen bevatten. De resulterende
+structuur kan worden weergegeven als een omgekeerde boom. De map op het hoogste niveau van
+een station heet de hoofdmap.  In Linux scheidt het teken / de
+niveaus van de boom. / alleen representeert de root directory, /home bevat de bestanden
+van alle gebruikers dus /home/didier bevat de bestanden van didier.
+/root bevat de bestanden van de gebruiker root (de systeembeheerder).
+Opmerking: 'root' kan verwijzen naar de map op het hoogste niveau of naar de systeembeheerder.
+
+[[drive]]Schijf::
+Een schijf is een apparaat dat niet-vluchtige gegevens opslaat, wat betekent dat de gegevens niet
+verloren gaan wanneer het apparaat of de computer wordt uitgeschakeld. Voorbeelden: harde schijven, SSD's, USB-sticks, SD
+kaarten en eMMC's.
++
+Het medium waarop de gegevens zijn opgeslagen kan permanent met de machine verbonden zijn of verwijderbaar
+zoals SD-kaarten, USB-sticks en schijven die via USB zijn aangesloten.
++
+Een besturingssysteem dat is geïnstalleerd op een verwijderbaar medium of een externe schijf is
+draagbaar: het kan van de ene computer naar de andere worden verplaatst.
+
+[[display_manager]]Display manager::
+Een display-manager (of login-manager) is een programma dat een venster toont waarin wordt gevraagd naar de gebruikersnaam en het wachtwoord van de gebruiker en start vervolgens de door deze gebruiker gekozen grafische omgeving.
+
+[[encryption]]Versleuteling::
+Versleuteling is het proces van het converteren van gegevens naar een onherkenbare ("gecodeerde") vorm. Het wordt vaak gebruikt om gevoelige informatie te beschermen, zodat alleen
+geautoriseerde personen die kunnen bekijken. Een enkel bestand of directory, een partitie maar ook een hele schijf kan worden versleuteld die dan alleen toegankelijk is nadat
+een geheime kleine tekst genaamd een wachtwoordzin is ingetypt.
+
+[[file]]Bestand::
+Een computerbestand is een reeks digitale gegevens die zijn verzameld onder dezelfde naam en behandeld als een eenheid, opgenomen op een permanent opslagmedium, genaamd massa-opslag, zoals een harde schijf, een SSD, een DVD, een SD-kaart of een USB-stick.
++
+Bestanden kunnen gegevens zoals teksten, afbeeldingen, geluiden, video's of computerprogramma's bevatten.
+
+[[file_system]]Bestandssysteem::
+Een bestandssysteem is software die de bestanden en mappen in een partitie beheert. Het onthoudt de locatie van de gegevens in de bestanden op het fysieke medium waardoor het mogelijk is ze te lezen of te schrijven. Voorbeelden van veel
+gebruikte bestandssystemen zijn vfat, ntfs, ext4, f2fs. Deze opdracht geeft een overzicht van alle bestandssystemen die gegevens op een Linux-partitie bevatten:
++
+----
+cat /proc/filesystems|grep -v nodev
+----
+
+[[firmware]]Firmware::
+De firmware is de software die de hardware initialiseert en controleert en daarna het geselecteerde besturingssysteem in het RAM laadt of start een programma genaamd boot-manager die dat zal doen. De firmware is opgeslagen in niet-vluchtige geheugenapparaten zoals ROM, EPROM, of flashgeheugen. Het is het eerste stukje software dat wordt uitgevoerd wanneer
+een computer opstart. Het biedt een menu dat het mogelijk maakt om de hardware te configureren en de opstartmodus te selecteren (Legacy of EFI) en in welke volgorde te zoeken naar het
+besturingssysteem of een andere toepassing (zoals de GRUB boot manager).
+
+[[kernel]]Kernel::
+Een Linux kernel is de software die de kern van een Slint systeem vormt en dat alle interacties afhandelt tussen de applicaties en de hardware.
++
+Het is een enkel bestand dat is geïnstalleerd in de map /boot. Het bestand /boot/vmlinuz-generic-5.12.11 is bijvoorbeeld een kernel uit het kernel-generic pakket.
++
+Bij het opstarten wordt de kernel naar het RAM gekopieerd.
+
+[[initrd]]Initrd::
+Een initrd (iets preciezer een initramfs of eerste RAM bestandssysteem voor Slint) is
+een Linux systeem in de vorm van een gecomprimeerd archiefbestand. Bij het opstarten wordt vlak nadat de
+kernel in RAM geladen is ook de initrd in het RAM geladen. Het bestand /init
+wordt uitgevoerd: het laadt benodigde kernel modules in het RAM, registreert de apparaten, ontgrendelt mogelijk het root apparaat en de pseudo-bestandssystemen worden aangekoppeld waarna wordt overgeschakeld naar het root bestandssysteem om het systeem daadwerkelijk te starten.
++
+Een initrd is een enkel bestand dat in de map /boot is geïnstalleerd.
+Zo is het bestand initrd-generic-5.12.11 een initrd
+
+[[live_system]]Live systeem::
+Een live systeem is een besturingssysteem dat zich in plaats van geïnstalleerd te worden op een apparaat
+zoals een harde schijf of SSD geheel in het <<RAM>> bevindt.
++
+An initrd is also a live system, and so is a Slint installatieprogramma wich is basically an initrd.
+
+[[partition]]Partitie::
+Een partitie is een deel van een opslagmedium, zoals een harde schijf of SSD. Het wordt door het besturingssysteem gezien als een afzonderlijk logisch volume, waardoor het functioneert als een op zich zelf staand medium.
+
+[[partition_table]]Partitietabel::
+Een partitietabel is de permanente structuur waarin is vastgelegd hoe gegevens op het medium worden opgeslagen, voornamelijk het begin en het einde van elke partitie op dat medium.
++
+De meest voorkomende typen partitietabellen zijn de DOS-partitietabel, aanvankelijk
+gebruikt door het MS-DOS-besturingssysteem, en de GUID-partitietabel of GPT, die
+het mogelijk maakt om meer partities en grotere schijven te kunnen gebruiken.
+
+[[program]]Programma::
+Een voorbereide reeks instructies voor het systeem om een gedefinieerde taak uit te voeren. De term "programma" omvat toepassingen die zijn geschreven in de shell Command Language, complexe utility-invoertalen (bijvoorbeeld awk, Lex, sed, enzovoort), en zogenaamde high-level languages. [POSIX]
+
+[[RAM]]RAM::
+RAM staat voor Random Access Memory. Dit type apparaat slaat vluchtige gegevens op,
+wat betekent dat de gegevens worden gewist wanneer de stroom wordt uitgeschakeld.
+
+[[shell]]Shell:: Een programma dat opeenvolgende tekstinvoer als opdrachten interpreteert. Het kan werken op een invoerstroom of het kan interactief commando's lezen vanuit een terminal. The syntax of the commands
+that can be interpretd by the shell can vary along the shell in use but are mainly defined in the the chapter
+https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html[2.
+Shell Command Language] of the POSIX specification.
++
+Slint bevat verschillende shells weergegeven in het bestand /etc/shells. Standaard wordt de *bash* shell gebruikt.
+
+[[swap]]Wisselgeheugen of swap::
+Een swap-ruimte wordt gebruikt om gegevens uit het RAM op te slaan op een apparaat zoals een harde schijf of SSD ofwel omdat het RAM anders te vol zou worden of om
+RAM vrij te maken voor het opslaan van meest gebruikte data. De swap-ruimte kan een partitie van het type 'Linux swap' zijn op een schijf of een standaard wisselgeheugenbestand op een bestaande partitie. Er is ook de 'swap in zram': in dit geval worden de gegevens
+opgeslagen in RAM maar in gecomprimeerde vorm.
+
+[[terminal]]Terminal::
+Historisch was een terminal een fysiek apparaat bestaande uit een toetsenbord en een beeldscherm
+dat gebruikt werd om commando's te typen en uitvoer te lezen van een externe computer.
++
+Tegenwoordig kunnen de opdrachten zowel in console (of tekst) modus als in grafische modus worden getypt.
+
+[[utility]]Hulpprogramma of tool::
+Een hulpprogramma of tool is een programma dat met zijn naam kan worden aangeroepen vanuit een shell (dit geldt ook voor sommige <application,applications>>).
++
+Hulpprogramma's maken deel uit van het besturingssysteem (maar niet van de kernel).
+Ze voeren systeemgerelateerde functies uit, zoals het weergeven van directory-inhoud en bestandssystemen, het repareren van bestandssystemen of informatie over de systeemstatus.
++
+Een hulpprogramma kan worden opgeroepen als een afzonderlijk programma dat wordt uitgevoerd in een ander proces dan de command language interpreter, of het kan worden geïmplementeerd als een onderdeel van de command language interpreter.
++
+De echo opdracht (de instructie om een bepaalde taak uit te voeren) bijvoorbeeld kan zodanig worden geïmplementeerd dat de echo opdracht (de code waarmee de taak van het echo-en wordt uitgevoerd) in een apart programma staat en daarom wordt uitgevoerd in ander proces dan de command language interpreter. In de praktijk betekent dit dat in dit geval het hulpprogramma niet in de shell wordt uitgevoerd
++
+Omgekeerd kan de code waarmee het echo-programma
+wordt uitgevoerd, worden ingebouwd in de command language interpreter. Het wordt dan
+uitgevoerd in hetzelfde proces als de command language interpreter. Van een dergelijk hulpprogramma wordt gezegd dat het in de shell is ingebouwd ("built-in").
+
+[[virtual_terminal]]Virtuele terminal::
+Een virtuele terminal is software die een fysieke terminal die bestaat uit een toetsenbord en een beeldscherm simuleert om met een computer op afstand te communiceren.

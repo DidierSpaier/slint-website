@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE
+# Public domain
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# zhangmin <zm1990s@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: slintwebsite\n"
+"POT-Creation-Date: 2013-12-27 23:13+0100\n"
+"PO-Revision-Date: 2014-12-28 19:09+0000\n"
+"Last-Translator: Didier Spaier <didier@slint.fr>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/slintwebsite/language/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Copy/paste as is, do not translate
+#: slint.conf.en:1
+msgid "[header]"
+msgstr "[header]"
+
+#. Copy/paste as is, do not translate
+#: slint.conf.en:8
+msgid "{title}"
+msgstr "{title}"
+
+#. Copy/paste as is, do not translate
+#: slint.conf.en:9
+msgid "{title%}"
+msgstr "{title%}"
+
+#. Copy/paste as is, do not translate
+#: slint.conf.en:9
+msgid "{doctitle=}"
+msgstr "{doctitle=}"
+
+#. Copy/paste as is, then translate only: Home
+#: slint.conf.en:16
+msgid "<a href=\"slint.html\">Home</a>"
+msgstr "<a href=\"slint.html\">主页</a>"
+
+#. Copy/paste as is, then translate only: Slint installer
+#: slint.conf.en:17
+msgid "<a href=\"installer.html\">Slint installer</a>"
+msgstr "<a href=\"installer.html\">Slint 安装程序</a>"
+
+#. Copy/paste as is, then translate only: Slint package
+#: slint.conf.en:18
+msgid "<a href=\"package.html\">Slint package</a>"
+msgstr "<a href=\"package.html\">Slint 软件包</a>"
+
+#. Copy/paste as is, then translate only: Translators
+#: slint.conf.en:19
+msgid "<a href=\"translators.html\">Translators</a>"
+msgstr "<a href=\"translators.html\">翻译人员</a>"
+
+#. Copy/paste as is, then translate only: Contribute
+#: slint.conf.en:20
+msgid "<a href=\"contribute.html\">Contribute</a>"
+msgstr "<a href=\"contribute.html\">贡献</a>"
+
+#. Copy/paste as is, then translate only: Tools
+#: slint.conf.en:21
+msgid "<a href=\"tools.html\">Tools</a>"
+msgstr "<a href=\"tools.html\">工具</a>"
+
+#. Copy/paste as is, then translate only: Changelog
+#: slint.conf.en:22
+msgid "<a href=\"changelog.html\">ChangeLog</a>"
+msgstr "<a href=\"changelog.html\">更新日志</a>"
+
+#. Copy/paste as is, then translate only: Page Source
+#: slint.conf.en:23
+msgid "<a href=\"{eval:os.path.basename(r'{infile}')}\">Page Source</a>"
+msgstr "<a href=\"{eval:os.path.basename(r'{infile}')}\">网站源码</a>"
+
+#. Translate the main title
+#: slint.conf.en:28
+msgid "The Slackware Internationalization Project"
+msgstr "Slackware 国际化项目"
+
+#. Copy/paste as is, do not translate
+#: slint.conf.en:32
+msgid "{include:wip/languages}"
+msgstr "{include:wip/languages}"
+
+#. Copy/paste as is, do not translate
+#: slint.conf.en:33
+msgid "{doctitle}"
+msgstr "{doctitle}"
+
+#. Copy/paste as is, do not translate
+#: slint.conf.en:35
+msgid "[footer]"
+msgstr "[footer]"
+
+#. Copy/paste as is, then translate only: Last updated
+#: slint.conf.en:39
+msgid "Last updated {localdate} {localtime}"
+msgstr "最后更新 {localdate} {localtime}"

@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Slint&#8217;e katkı verenler için kullanışlı araçlar</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Anasayfa</a></div>
+      <div><a href="installer.html">Slint yükleyici</a></div>
+      <div><a href="package.html">Slint paketi</a></div>
+      <div><a href="translators.html">Çevirmenler</a></div>
+      <div><a href="contribute.html">Katkıda bulun</a></div>
+      <div><a href="tools.html">Araçlar</a></div>
+      <div><a href="changelog.html">Değişiklik Listesi</a></div>
+      <div id="page-source"><a href="../tools.tr.txt">Sayfa Kaynağı</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Slackware Yerelleştirme Projesi</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/tools.html">de</a> | <a href="../en/tools.html">en</a> | <a href="../es/tools.html">es</a> | <a href="../fr/tools.html">fr</a> | <a href="../it/tools.html">it</a> | <a href="../nl/tools.html">nl</a> | <a href="../pl/tools.html">pl</a> | <a href="../pt_PT/tools.html">pt_PT</a> | <a href="../ru/tools.html">ru</a> | <a href="../tr/tools.html">tr</a> | <a href="../uk/tools.html">uk</a> |</div>
+        <h1>Slint&#8217;e katkı verenler için kullanışlı araçlar</h1>
+      </div>
+<div class="sect1">
+<h2 id="_transifex">Transifex</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Transifex platformu çevirmenler arası işbirliğini kolaylaştırır, her bir
+çeviri takımının kendi PO dosyalarını bir merkezde topladığı ve bilgi
+paylaştığı bir yerdir. Ayrıca çevirilerin gözden geçirilmesini de sağlayan
+çevrimiçi bir düzenleyici sağlar.</p></div>
+<div class="paragraph"><p>Nasıl kullanıldığını öğrenmek için <a href="http://support.transifex.com/">Transifex
+Help Desk</a> sayfasını ziyaret edin.</p></div>
+<div class="paragraph"><p>Kullanışlı olduğu için Transifex&#8217;in çevrimiçi düzenleyicisini
+kullanabilisiniz, fakat:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+sık sık yerel yedekler almayı unutmayın, ne olur ne olmaz
+</p>
+</li>
+<li>
+<p>
+çevirilerin metin biçimlendirilmesini, <strong>Lokalize</strong> veya <strong>Poedit</strong> gibi PO
+  düzenleyicileri kullanarak yerel olarak yapmak ve denetlemek daha kolaydır
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>asciidoc biçimindeki web sayfalarını çevirmek için Transifex kullanmak
+zorunlu (aşağıya bakınız).</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">Eğer yerel olarak çevirmeyi tercih ederseniz, <em>Çevirmek üzere indirin</em> ile
+indirdiğinizden (<em>Kullanmak üzere indirin</em> ile değil) ve dosya üzerinde
+çalıştığınızı diğerleri görmesi için kilitlediğinizde emin olun. Bu çakışma
+hatlarının önüne geçer&#8230; Fakat iki takım üyesi büyük bir PO dosyasını,
+kimin neyi çevireceği konusunda anlaştıkları sürece paylaşabilir.</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Transifex çevirilen metin satırlarını sarmalamaz. Bu <strong>çok</strong> uzun satırlara,
+bir metin düzenleyici içinde okumanın zor olmasına hatta bu yüzden tüm
+CPU&#8217;yu tüketerek iflas etmesine yol açabilir. Bundan kaçınmak için, PO
+dosyalarını indirdikten sonra şunu yazın:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  msgcat file_downloaded_from_Transifex &gt; file_renamed</code></pre>
+</div></div>
+<div class="paragraph"><p>sonra <strong>file_renamed</strong> i çevirmek için <em>Lokalize</em> ya da <em>Poedit</em> kullanın. Bu
+dosyanın sarmalanmış satırları olacak fakat diğer durumda indirilenden
+farksız olacak, yani önemli değil.</p></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Eğer yerel olarak çeviri yapıyorsanız düzenlenen dosyayı boş olduğunuz zaman
+yüklemeyi unutmayın, gereksiz olarak kilitli kalmasına izin vermeyin.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lokalize">Lokalize</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>Lokalize</em> Slackware içinde bulunur. Lokalize El Kitabını
+<a href="http://docs.kde.org/development/en/kdesdk/lokalize/index.html">on line</a>
+okuyabilir ya da F1 e basarak Yardım menüsünden ulaşabilirsiniz. Tavsiye
+edilen ayarlar:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Settings &#8658; Configure Lokalize &#8658; Identity: Dilinizi seçin (hedef dile
+  ayarlayın).
+</p>
+</li>
+<li>
+<p>
+Settings &#8658; Configure Lokalize &#8658; Appearance: Courier gibi serif sabit
+  genişlikli (tek boşluklu) bir font seçin. Bu sizin 0 (rakam) ile O (harf) yu
+  ya da | (boru) ile I (harf) yı ayırt etmenizi, biçimlendirmeyi denetlemenizi
+  -örneğin ardışık satırlarda ilk kelime hizalaması gibi- sağlar.
+</p>
+</li>
+<li>
+<p>
+Settings &#8658; Configure Lokalize &#8658; Appearance: <em>LEDS to indicate Fuzzy and
+  Untranslated status</em> ile <em>cursor column number</em> kontrol edin, satır
+  uzunluğunu önemli olduğunda çok pratiktir.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_poedit">Poedit</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>Poedit</em> Slackware içinde gelmez fakat @
+<a href="http://slackbuilds.org">SlackBuilds.org</a> dan ulaşılabilir.</p></div>
+<div class="paragraph"><p>Satır uzunluğunu pratik şekilde denetleme eksikliği vardır fakat bunun
+dışındaki özellikleri Lokalizeninkilerle benzerdir, kısacası birini ya da
+diğerini seçmek kişisel bir tercihtir.</p></div>
+<div class="paragraph"><p>Edit &#8658; Preferences &#8658; Editor içinde, <em>Automatic spell checking</em> i
+işaretleyin ve, Lokalize ile olduğu gibi, serif sabit genişlikli font
+seçiniz.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_slint_tarball_içindeki_kullanışlı_betikler">Slint tarball içindeki kullanışlı betikler</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Bu sıkıştırılmış arşiv slint ürünleri inşasında gerekli olan herşeyin
+yanında slint katkı vericileri için araçlar da bulunur. slint-[date].tar.xz
+ismindedir ve <a href="https://slint.fr/pub">pub/</a> dizini içinde bulunur.</p></div>
+<div class="paragraph"><p>Paketi açmak için yazınız:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  tar xf slint-[date].tar.xz</code></pre>
+</div></div>
+<div class="paragraph"><p>slint-[tarih] dizini çıkaracaktır. Detaylar için CONTENT.TXT dosyasına
+bakınız, aşağıdaki tablo sadece slint ürünleri inşasında kullanılan
+betikleri ve çevirmenlerin kullanımı için araçları listeler.</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Betik adı ve yeri</th>
+<th align="left" valign="top">Amaç</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">build/slint.sh</p></td>
+<td align="left" valign="top"><p class="table">Melez (CD/DVD veya USB) slackware kurucu kalıbı ya da Slackware dağıtımı yapar</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">build/make_slint_packages</p></td>
+<td align="left" valign="top"><p class="table">Bazı Slackware paketlerini yerelleştirir ve SlintLocales paketini inşa eder.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">build/slintLocales</p></td>
+<td align="left" valign="top"><p class="table">Slint kurucular (tüm sürümler) içindeki Slackware betiklerinin ya da Slackware için olan araçların içindeki tüm güncel çevirilerini yapar.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tools_for_translators/toolbox.sh</p></td>
+<td align="left" valign="top"><p class="table">Bu araç kutusu slackware.pot içinden elde edilen mesajların çevirilmesini yönetir.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tools_for_translators/toolbox_slint_sh</p></td>
+<td align="left" valign="top"><p class="table">Bu araç kutusu script slint.sh çıktısı olan mesajların çevirilmesini yönetir.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tools_for_translators/generate_man_pages</p></td>
+<td align="left" valign="top"><p class="table">Slackware de bazı araçlar için yerelleştirilmiş kılavuz sayları üretir. Bu PO dosyalarını denetlemenizi sağlar. Bu betiğin kullanımı için <a href="https://slint.fr/packages/extra">extra/</a> dizini içinde bulunan po4a paketi kurulu olmalıdır.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_slackware_8217_in_kurucusu_ve_yönetim_betikleri_nasıl_denetlenir">Slackware&#8217;in kurucusu ve yönetim betikleri nasıl denetlenir</h3>
+<div class="paragraph"><p>Kaynak <a href="https://www.transifex.com/projects/p/slint/resource/slint/">slint</a>,
+dosya slackware.pot</p></div>
+<div class="paragraph"><p>Çeviri ile işiniz bittiğinde, dosyayı wip/ dizini içine koyun,
+örn. pt_BR.slackware.po olarak (yeniden)adlandırın, sonra
+/path/to/tools_for_translators/toolbox.sh ı çalıştırın ve menüden check_PO
+yu seçin. Hepsi doğru giderse:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+pt_BR.slackware.po yu po/ dizinine kopyalayın (bu örnekte çeviri Brezilya
+  Portekizcesi)
+</p>
+</li>
+<li>
+<p>
+SlintLocales içine güncelleştirilmiş çevirilerinizi dahil etmek için
+  /path/to/build/SlintLocales.SlackBuild i çalıştırın
+</p>
+</li>
+<li>
+<p>
+kurucunun melez CD ya da USB kalıbını yapmak için /path/to/build/slint.sh ı
+  çalıştırın
+</p>
+</li>
+<li>
+<p>
+kalıbı CD ya da USB bellek üzerine yazın
+</p>
+</li>
+<li>
+<p>
+kurucuyu (bu durumda Portekizce, tabii ki) sanal ya da gerçek bir makinada
+  deneyin
+</p>
+</li>
+</ol></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">Kurucuyu sanal makinede çalıştırmak için doğrudan .iso ile biten dosyayı
+sanal ortam olarak kullanabilirsiniz, bu durumda bunu fiziksel bir ortama
+kaydetmek gerekli değildir.</td>
+</tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_slint_sh_dosyası_çevirileri_nasıl_denetlenir">slint.sh dosyası çevirileri nasıl denetlenir</h3>
+<div class="paragraph"><p>Kaynak
+<a href="https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/">POT
+dosyası slint.sh için</a></p></div>
+<div class="paragraph"><p>Çeviri ile işiniz bittiğinde, dosyayı wip/ dizinine koyun, Almanca için
+örneğin de_DE.slint.po olarak (yeniden)adlandırın, sonra run
+/path/to/tools_for_translators/toolbox_slint_sh ı çalıştırıp menüden
+check_PO yu seçin.</p></div>
+<div class="paragraph"><p>Hepsi doğru giderse, tekrar /path/to/tools_for_translators/toolbox_slint_sh
+ı çalıştırın fakat menüden format_PO yu seçin. Hepsi doğru giderse bu
+slint.mo dosyasını üretir ve slint-[tarih] ağacı içindeki yerine koyar ( bu
+örnekte slint_locales/de/LC_MESSAGES dizini içine).</p></div>
+<div class="paragraph"><p>Sonra İngilizce ve Almanca sürümlerini karşılaştırmayı şu şekilde deneyin:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  /path/to/build/slint.sh
+  LANG=de_DE.utf8 /path/to/build/slint.sh</code></pre>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_pkgtools_ve_slackpkg_paketleri_içine_dahil_edilen_kılavuz_sayfalarının_çevirisi_nasıl_denetlenir">pkgtools ve slackpkg paketleri içine dahil edilen kılavuz sayfalarının çevirisi nasıl denetlenir</h3>
+<div class="paragraph"><p>Kaynak:
+<a href="https://www.transifex.com/projects/p/slint/resource/pkgtools/">pkgtools</a> ve
+<a href="https://www.transifex.com/projects/p/slint/resource/slackpkg/">slackpkg</a></p></div>
+<div class="paragraph"><p>Yine, PO dosyasını wip/ dizini içine koyun, örneğin es.pkgtools.po olarak
+(yeniden)adlandırın (İspanyolya pkgtools içindeki kılavuz sayfaları). Sonra
+bu komutu çalıştırın:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>   /path/to/tools_for_translators/generate_man_pages es.pkgtools</code></pre>
+</div></div>
+<div class="paragraph"><p>Hepsi doğru giderse içerilen tüm kılavuz sayfalarını çıktı olarak verir (bu
+durumda: es.explodepkg, es.installpkg, es.makepkg, es.pkgtool, es.removepkg,
+es.upgradepkg). Değilse hata mesajını okuyun, gerekli düzeltmeleri yapın ve
+tekrarlayın. Pek çok hatayı <a href="contribute.html#warning_man_pages">Warning</a>
+i takip ederek giderebilirsiniz.</p></div>
+<div class="paragraph"><p>Yerelleştirilmiş kılavuz sayfaları ile asıl olanları karşılaştırmak için,
+şunu yapın örneğin (Ukraynaca çeviri için örnek):</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  cd /path/to/wip/
+  LANG=uk_UA.utf8 GROFF_ENCODING=utf8 man ./installpkg # yerelleştirilmiş kılavuz sayfası
+  GROFF_ENCODING=utf8 man installpkg # asıl kılavuz sayfası</code></pre>
+</div></div>
+<div class="paragraph"><p>Her seferinde "GROFF_ENCODING=utf8" yazmaktan kurtulmak için ~/.bashrc içine
+bu satırı koyun:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  export GROFF_ENCODING=utf8</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="asciidoc"><em>AsciiDoc</em> tarafından web sayfaları üretmek için işlenecek metin dosyalarının çevirilmesi</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><a href="contribute.html#new_web_pages">Web sayfalarının çevirisi</a>nde
+belirtildiği gibi, takip eden sayfalar <em>asciidoc</em> tarafından kaynak metin
+dosyalarından üretilir: <a href="slint.html">slint.html</a>,
+<a href="installer.html">installer.html</a>, <a href="package.html">package.html</a>,
+<a href="contribute.html">Katkı verin</a>, <a href="translators.html">Çevirmenler</a>,
+<a href="tools.html">Araçlar</a> and <a href="changelog.html">Değişiklik Listesi</a> ile
+birlikte
+<a href="https://www.transifex.com/projects/p/slint/resource/templatepo/">template.po</a>.</p></div>
+<div class="paragraph"><p>Bu kaybak metin dosyaları Transifex çevrimiçi düzenleyici ile
+çevirilmelidir: Transifex&#8217;e çevirilmiş bir metin dosyası yüklemek bilinmeyen
+yazar sebebiyle bir hata mesajıyla başarısız olur, dosyaları yerelde
+düzenleyip Transifex&#8217;e yüklemek bir seçenek değildir.</p></div>
+<div class="paragraph"><p>Fakat Transifex çevrimiçi düzenleyici çeviri dosyaları içinde orjinal
+İngilizce dosyasının bir dizisine bağlı kalacak sağlar cümleler veya
+paragraflar eklemenize izin verir.</p></div>
+<div class="paragraph"><p>Bu, çevirmenlerein kendi yerellerine özgü bilgileri çevirilerine ekleyerek
+özelleştirmesine izin verir, örneğin kullanıcı kendine özgü dilinde ya da
+ülkesinde nasıl yardım alabilir, yerelleştirilmiş belgeler için işaretçiler,
+vb.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Orjinal İngilizce bir metin dosyasındaki güncellemenin ardından, çeviri
+dosyası içinde İngilizce dosyasında değiştirilen dizlerle eşleşenler
+Transifex düzenleyicide ortadan kalkar.</p></div>
+<div class="paragraph"><p>Çevirinin yerel bir kopyasını tutarsanız yazımdan tasarruf edebilirsiniz
+(Transifex&#8217;den indirerek): Eski çeviriyi yerel dosyadan kopyalayın ve
+Transifex düzenleyicie yapıştırın, sonra gerekli şekilde düzenleyin.</p></div>
+<div class="paragraph"><p>Daha da kolayı, eğer çeviriniz web sayfasına yüklenmiş durumda ise: o
+sayfanın menüsünün alt taraftaki "Sayfa Kaynağı"na tıklama ilgili kaynak
+metin dosyasını gösterecektir.</p></div>
+<div class="paragraph"><p>Ayrıca, Transifex düzenleyici dizenin geçmiş benzer çevirilerini
+"hatırlayan" "Öneriler" özelliğine sahiptir (Lokalize&#8217;deki "Translation
+Memory" e benzer). Bu özellik bir web sayfası güncellendiğinde oldukça
+kullanışlıdır. Transifex dizenin son çevirisini hatırlayacak ve önerinin
+yanında "Bunu kullan" bağlantısı sağlayacaktır, böylece bunu kullanabilecek,
+küçük bir değişiklikle yeniden yazma ve çevirmeden kurtularak sonrakine
+geçebileceksiniz.</p></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><div class="title">AsciiDoc işaretleme sözdizimine alışın</div><p>Referans belge <a href="http://asciidoc.org/userguide.html">AsciiDoc User Guide</a> dır
+fakat yeni başlayan biri için, <a href="http://powerman.name/doc/asciidoc">AsciiDoc
+cheatsheet</a> belgesini okuyabilirsiniz. Daha da hızlısı, <em>AsciiDoc</em> un kurulu
+olduğunu farzederek şu komut:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>asciidoc --help syntax &gt; asciidoc.txt</code></pre>
+</div></div>
+<div class="paragraph"><p>AsciiDoc İşaretleme Sözdizimi Özeti ni asciidoc.txt dosyası içine yazar, ki
+böylece görüntüleyebilir ya da çıktı alabilrsiniz.</p></div>
+<div class="paragraph"><div class="title">işaretleyiciyi koruyun</div><p>İşaretleyiciyi olduğu gibi bırakmaya dikkat edin. Örneğin bir boşluğu ya da
+"satırbaşı" nı silmek beklenmeyen etkiler yaratabilir. Birkaç örnek:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Bir paragrafa boşlukla başlamak özel bir fontla gösterilen bir <em>baskı
+  paragrafı</em> üretecektir.
+</p>
+</li>
+<li>
+<p>
+"= bir metin" 0 seviyesinde bir başlık (belge başlığı) üretecektir, fakat
+  sadece "=" satırın ilk karakteri ise, sonrasında bir boşluk varsa ve
+  öncesinde boş bir satır varsa.
+</p>
+</li>
+<li>
+<p>
+sonuna "+" eklenen bir satır <em>satır sonu</em> üretir, eğer "+" dan önce bir
+  boşluk varsa, bu satırın son karakteri olmalı
+</p>
+</li>
+</ul></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">Biçimlendirme yönergelerinin içinde kaybolmamak için, önce kaynak diziyi
+(İngilizce) çeviriye kopyalamanızı (kaynak dizi alanının sağ üstündeki
+simgee tıklayarak) sonra düzenlemenizi tavsiye ediyoruz.</td>
+</tr></table>
+</div>
+<div class="paragraph"><div class="title">Çevirinizin birleşimini denetleyin</div><p>Bir metin dosyası kaynağı çevirinizden üretilen web sayfalarının birleşimi
+kolayca denetlenebilir. Sadece şunu yapun:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>lftp -c "mirror https://slint.fr/website/"
+# Çevirinizi Transifex'den (buna &lt;translation.txt&gt; diyeceğiz) oluşturduğunuz website/ dizinine indirin
+cd website
+CONFIG_FILE=slint.conf.en
+# Seçimlik olarak, üst başlık ve dilinize çevirilmiş menü web sayfasına yüklendiyse:
+wget https://slint.fr/slint.conf.ll; CONFIG_FILE=slint.conf.ll # "ll" yerine dil kodunuzu (iki harf) kullanın
+# sonra web sayfasını üretin
+asciidoc -b xhtml11 -a icons -f $CONFIG_FILE &lt;translation.txt&gt; # bu komut &lt;translation.html&gt; dosyasını üretir
+firefox &lt;translation.html&gt; &amp;</code></pre>
+</div></div>
+<div class="paragraph"><div class="title">Çevir ya da çevirme, mesele bu</div><p>Takip eden kelimeler AsciiDoc için özel bir anlama sahiptir ve uyarı
+paragrafıyla başladıklarında çevirilmemelidirler (ve çoğunlukla yerine bir
+simge konur): TIP, NOTE, IMPORTANT, WARNING ve CAUTION.</p></div>
+<div class="paragraph"><p>Genel olarak söylenecek olursa, bağlantılar ve URLler çevirilmemelidirler,
+fakat eşleştirilen başlık yazısı, bağlama bağlı olarak
+değiştirilebilir. Takip eden örnekte (<em>asciidoc --help syntax</em> ın
+çıktısından alınmıştır) sadece <em>caption</em> değeri çevirilebilir:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Belge bağlantıları:
+[[id]]                      (bağlantı hedefi tanımı)
+&lt;&lt;id,başlık&gt;&gt;              (hedef id'ye bağlantı)
+link:dosyaadı#id[başlık]   (harici HTML dosyasına bağlantı)
+
+URLler:
+http:adres[başlık]       (web sayfasına bağlantı)
+mailto:adres[başlık]     (e-posta alıcıya bağlantı)
+
+Resimler:
+image:dosyaadı[başlık]     (satıriçi resim)
+image::dosyaadı[başlık]    (blok resim)</code></pre>
+</div></div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Son güncelleme 2016-04-23 16:20:51 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

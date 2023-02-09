@@ -1,0 +1,84 @@
+= Vertalers en andere bijdragers aan Slint
+
+Deze pagina toont alle Slint vertalers die geregistreerd zijn op het
+Transifex platform, alsmede de reviewers.
+
+Iedereen hartelijk bedankt!
+
+Didier Spaier
+
+[cols="50,50", format="csv", width="80%", options="header"]
+|========
+Vertaler,Taal
+dlee99 (Dik Leenheer),Nederlands
+alien_bob (Eric Hameleers),Nederlands
+Kaj Huisman,Nederlands
+ponce,Italiaans
+celyr,Italiaans
+giogio,Italiaans
+giuseppep (Giuseppe Pignataro),Italiaans
+ihaveadrin,Italiaans
+kooru,Italiaans
+Sébastien Boillod,Frans
+Didier Spaier,Frans
+Nicolas Kovacs, Frans
+Marcin Herda,Pools
+Piotr Maksymiec,Pools
+elesmod,Pools
+lukkon,Pools
+Christian Ruesch,Duits
+franzen,Duits
+Johannes Georgi,Duits
+Maik Wagner,Duits
+Marcel Saegebarth,Duits
+spongetron,Duits
+Sammyboy (Marek Srejma),Duits
+titopoquito,Duits
+Adriano Balani,Braziliaans Portugees
+Enrico Nicoletto,Braziliaans Portugees
+Fela,Braziliaans Portugees
+Gabriel Magno,Braziliaans Portugees
+Icavalheiro,Braziliaans Portugees
+Retalhador,Braziliaans Portugees
+br_Orion,Braziliaans Portugees
+igaldino,Braziliaans Portugees
+Malkon Rodrigo,Braziliaans Portugees
+marcelo.castro,Braziliaans Portugees
+Xerxes Lins,Braziliaans Portugees
+hugok (Hugo Carvalho), Portugees (Portugal)
+Dimitris Tzemos,Grieks
+dreamwalking,Grieks
+George Vlahavas,Grieks
+Efstathios Iosifidis,Grieks
+Constantine Mousafiris,Grieks
+Diantre,Spaans (Latijns Amerikaans)
+AlvaroG,Spaans (Latijns Amerikaans)
+ecoslacker,Spaans (Latijns Amerikaans)
+sombragris,Spaans (Latijns Amerikaans)
+Serg Bormant,Russisch
+Sergey Ignatev,Russisch
+Yaroslav Shmelev,Russisch
+Graf,Russisch
+adioe3,Bosnisch (Bosnië Herzegovina)
+Malsasa,Indonesisch
+willysr,Indonesisch
+tuapembual,Indonesisch
+kisil,Oekraïens
+uatech,Oekraïens
+xuser13,Oekraïens
+Koljan1970 (Микола Ткач),Oekraïens
+AaLeSsHhKka (Oleh Tsyupka),Oekraïens
+StreamThreader,Oekraïens
+Ekin Akoğlu,Turks
+kaanureyen07, Turks
+Kemal Ökmen,Turks
+Orhan Orhan, Turks
+Onur Özdemir,Turks
+Samet Yilmaz,Turks
+Vilender,Turks
+zm1990s (Zhang Min),Chinees (China)
+guanx,Chinees (China)
+Smokey,Roemeens
+tuxbg (Krustio),Bulgaars
+giogio, Interlingua
+|========

@@ -1,0 +1,84 @@
+= Çevirmenler ve Slint'e diğer katkı verenler
+
+Bu sayfa Transifex platformuna kayıtlı tüm çevirmenleri ve gözden
+geçiricileri listeler.
+
+Hepsine büyük teşekkürler!
+
+Didier Spaier
+
+[cols="50,50", format="csv", width="80%", options="header"]
+|========
+Çeviren,Dil
+dlee99 (Dik Leenheer),Flemenkçe
+Eric Hameleers,Flemenkçe
+Kaj Huisman,Flemenkçe
+ponce,İtalyanca
+celyr,İtalyanca
+giogio, İtalyanca
+giuseppep (Giuseppe Pignataro),İtalyanca
+ihaveadrin,İtalyanca
+kooru,İtalyanca
+Sébastien Boillod,Fransızca
+Didier Spaier,Fransızca
+Nicolas Kovacs, Fransızca
+Marcin Herda,Lehçe
+Piotr Maksymiec,Lehçe
+elesmod,Lehçe
+lukkon,Polonyaca
+Christian Ruesch,Almanca
+franzen,Almanca
+Johannes Georgi,Almanca
+Maik Wagner,Almanca
+Marcel Saegebarth,Almanca
+spongetron,Almanca
+Sammyboy (Marek Srejma),Almanca
+titopoquito,Almanca
+Adriano Balani,Brezilya Portekizcesi
+Enrico Nicoletto,Brezilya Portekizcesi
+Fela,Brezilya Portekizcesi
+Gabriel Magno,Brezilya Portekizcesi
+Icavalheiro,Brezilya Portekizcesi
+Retalhador,Brezilya Portekizcesi
+br_Orion,Brezilya Portekizcesi
+igaldino,Brezilya Portekizcesi
+Malkon Rodrigo,Brezilya Portekizcesi
+marcelo.castro,Brezilya Portekizcesi
+Xerxes Lins,Brezilya Portekizcesi
+hugok (Hugo Carvalho), Portekizce (Portekiz)
+Dimitris Tzemos,Yunanca
+dreamwalking,Yunanca
+George Vlahavas,Yunanca
+Efstathios Iosifidis,Yunanca
+Constantine Mousafiris,Yunanca
+Diantre,İspanyolca (Latin Amerika)
+AlvaroG,İspanyolca (Latin Amerika)
+ecoslacker,İspanyolca (Latin Amerika)
+sombragris,İspanyolca (Latin Amerika)
+Serg Bormant,Rusça
+Sergey Ignatev,Rusça
+Yaroslav Shmelev,Rusça
+Graf,Rusça
+adioe3,Boşnakça (Bosna Hersek)
+Malsasa,Endonezce
+willysr,Endonezce
+tuapembual,Endonezce
+kisil,Ukraynaca
+uatech,Ukraynaca
+xuser13,Ukraynaca
+Koljan1970 (Микола Ткач),Ukraynaca
+AaLeSsHhKka (Oleh Tsyupka),Ukraynaca
+StreamThreader,Ukraynaca
+Ekin Akoğlu,Türkçe
+kaanureyen07, Türkçe
+Kemal Ökmen,Türkçe
+Orhan Orhan, Türkçe
+Onur Özdemir,Türkçe
+Samet Yilmaz,Türkçe
+Vilender,Türkçe
+zm1990s (Zhang Min),Çince (Çin)
+guanx,Çince (Çin)
+Smokey,Romanyaca
+tuxbg (Krustio),Bulgarca
+giogio, İnterlingua
+|========

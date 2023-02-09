@@ -1,0 +1,84 @@
+= Tradutores e outros contribuintes Slint
+
+Esta página lista todos os tradutores e revisores do Slint registrados na
+plataforma Transifex.
+
+Um grande obrigado a todos!
+
+Didier Spaier
+
+[cols="50,50", format="csv", width="80%", options="header"]
+|========
+Tradutor, Idioma
+dlee99 (Dik Leenheer),Holandês
+Eric Hameleers,Holandês
+Kaj Huisman,Holandês
+ponce,Italiano
+celyr,Italiano
+giogio, Italiano
+giuseppep (Giuseppe Pignataro),Italiano
+ihaveadrin,Italiano
+kooru,Italiano
+Sébastien Boillod,Francês
+Didier Spaier,Francês
+Nicolas Kovacs, Francês
+Marcin Herda,Polonês
+Piotr Maksymiec,Polonês
+elesmod,Polonês
+lukkon,Polonês
+Christian Ruesch,Alemão
+franzen,Alemão
+Johannes Georgi,Alemão
+Maik Wagner,Alemão
+Marcel Saegebarth,Alemão
+spongetron,Alemão
+Sammyboy (Marek Srejma),Alemão
+titopoquito,Alemão
+Adriano Balani,Português Brasileiro
+Enrico Nicoletto,Português Brasileiro
+Fela,Português Brasileiro
+Gabriel Magno,Português Brasileiro
+Icavalheiro,Português Brasileiro
+Retalhador,Português Brasileiro
+br_Orion,Português Brasileiro
+igaldino,Português Brasileiro
+Malkon Rodrigo,Português Brasileiro
+marcelo.castro,Português Brasileiro
+Xerxes Lins,Português Brasileiro
+hugok (Hugo Carvalho), Português de Portugal
+Dimitris Tzemos,Grego
+dreamwalking,Grego
+George Vlahavas,Grego
+Efstathios Iosifidis,Grego
+Constantine Mousafiris,Grego
+Diantre,Espanhol (Latino Americano)
+AlvaroG,Espanhol (Latino Americano)
+ecoslacker,Espanhol (Latino Americano)
+sombragris,Espanhol (Latino Americano)
+Serg Bormant,Russo
+Sergey Ignatev,Russo
+Yaroslav Shmelev,Russo
+Graf,Russo
+adioe3,Bósnia (Bósnia e Herzegovina)
+Malsasa,Indonésio
+willysr,indonésio
+tuapembual,Indonésio
+kisil,Ucraniano
+uatech,Ucraniano
+xuser13,Ucraniano
+Koljan1970 (Микола Ткач),Ucraniano
+AaLeSsHhKka (Oleh Tsyupka),Ucraniano
+StreamThreader,Ucraniano
+Ekin Akoğlu,Turco
+kaanureyen07, Turco
+Kemal Ökmen,Turco
+Orhan Orhan, Turco
+Onur Özdemir,Turco
+Samet Yilmaz,Turco
+Vilender,Turco
+zm1990s (Zhang Min),Chinês (China)
+guanx,Chinês (China)
+Smokey,Romeno
+tuxbg (Krustio),Búlgaro
+giogio, Interlíngua
+|========

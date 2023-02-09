@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Slint paketi</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Anasayfa</a></div>
+      <div><a href="installer.html">Slint yükleyici</a></div>
+      <div><a href="package.html">Slint paketi</a></div>
+      <div><a href="translators.html">Çevirmenler</a></div>
+      <div><a href="contribute.html">Katkıda bulun</a></div>
+      <div><a href="tools.html">Araçlar</a></div>
+      <div><a href="changelog.html">Değişiklik Listesi</a></div>
+      <div id="page-source"><a href="../package.tr.txt">Sayfa Kaynağı</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Slackware Yerelleştirme Projesi</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/package.html">de</a> | <a href="../en/package.html">en</a> | <a href="../es/package.html">es</a> | <a href="../fr/package.html">fr</a> | <a href="../ia/package.html">ia</a> | <a href="../id/package.html">id</a> | <a href="../it/package.html">it</a> | <a href="../nl/package.html">nl</a> | <a href="../pl/package.html">pl</a> | <a href="../pt_BR/package.html">pt_BR</a> | <a href="../pt_PT/package.html">pt_PT</a> | <a href="../ru/package.html">ru</a> | <a href="../sv/package.html">sv</a> | <a href="../tr/package.html">tr</a> | <a href="../uk/package.html">uk</a> |</div>
+        <h1>Slint paketi</h1>
+      </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Slint paketi çok dilli yönetim araçları ve kılavuz sayfaları içerdiği gibi
+Slint projesi tarafından sağlanan çeviri dosyaları da içerir.</p></div>
+<div class="paragraph"><p>Bu dosya bunun nasıl elde edileceğini ve kurulacağını açıklar, böylecekendi
+içeriğini tanımlar ve neyin hangi dile çevirileceğini bilirsiniz.</p></div>
+<div class="paragraph"><p>Slint paketlerinin kapsamı yavaş yavaş artacak, bu yüzden güncelleme sizin
+güncellenmiş ve yeni çevirilmiş araçları ve mümkün olur olmaz daha fazla
+dilde çevirileri elde etmenizi sağlayacak.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bir_slint_paketini_indirip_kurun_ya_da_yükseltin">Bir Slint paketini indirip kurun ya da yükseltin</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>NOT: Slint kurucu kullandıysanız Slint paketi kurmanıza gerek yoktur: bu
+kurucu tarafından zaten yapılmıştır.</p></div>
+<div class="paragraph"><p>Bir Slin paketi desteklenmiş her Slackware yayımı için (Slackware 13.37,
+Slackware 14.0 and Slackware 14.1) <a href="https://slint.fr/packages">packages/</a>
+dizininde bulunur. aynı paket 32 bit ve 64 bit sürümünde kurulabilir. <em>Slint
+paketi</em> (bu örnekte Slackware 14.1 için) edinmek, denetlemek ve kurmak (ya
+da güncellemek) için şunu yapın:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # en son Slint paketi ve ilişkili md5 dosasını elde edeceksiniz
+md5sum -c slint-14.1*md5 # yanıt "OK" olmalı, değilse indirilen paket bozulmuştur
+su # root izinleri alır
+upgradepkg --install-new --reinstall slint-14.1*txz # bu komut paketi kurar ya da günceller</code></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content"><em>slackpkg</em> nin <em>Slint paketi</em> kaldırmasının önüne geçmek için,
+/etc/slackpkg/blacklist e sadece bu kelimeyle bir satır ekleyin: + slint</td>
+</tr></table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="what_is_translated">Ne, hangi dile çevirildi?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Bir slint paketi çok dilli araçlar ve çeviri dosyaları içerir.</p></div>
+<div class="paragraph"><p>Yazım sırasında şu diller dahil edildi: Fransızca, Almanca, Polonyaca,
+Portekizce (Brezilya), Rusça (Latin America) ve Ukraynaca.</p></div>
+<div class="paragraph"><p>Bazı kılavuz sayfaları ayrıca diğer dillere çevirilmiştir,
+<a href="https://slint.fr/packages/MAN_PAGES.TXT">MAN_PAGES.TXT</a> de belirtildiği gibi.</p></div>
+<div class="paragraph"><p>Aşağıdaki tablo çok dilli yönetim araçlarını ve bunların amaçlarını
+listeler.</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Çok dilli araç</th>
+<th align="left" valign="top">Amaç</th>
+<th align="left" valign="top">Çevirilmiş kılavuz sayfası</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><div class="verse">adduser</div></td>
+<td align="left" valign="top"><div class="verse">Sisteme bir kullanıcı ekler</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">explodepkg</div></td>
+<td align="left" valign="top"><div class="verse">Aktif dizin içine bir Slackware paketini açar</div></td>
+<td align="left" valign="top"><div class="verse">man explodepkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">installpkg</div></td>
+<td align="left" valign="top"><div class="verse">Slackware paketleri kurar</div></td>
+<td align="left" valign="top"><div class="verse">man installpkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">makebootdisk</div></td>
+<td align="left" valign="top"><div class="verse">Önyüklenebilir Linux floppy diski oluşturur
+(yalnızca Slackware 13.37 ve 14.0&#8217;da)</div></td>
+<td align="left" valign="top"><div class="verse">makepkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">Slackware paketleri yapar</div></td>
+<td align="left" valign="top"><div class="verse">man makepkg</div></td>
+<td align="left" valign="top"><div class="verse">pkgtool</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">Yazılım paketleri bakımı ve yapılandırma görevleri gerçekleştirilmesi:
+&#8658; servisleri açılışta başlaması için ayarlar
+&#8658; bir USB başlangıç disketi hazırlayın
+&#8658; fare tipini belirleyin</div></td>
+<td align="left" valign="top"><div class="verse">man pkgtool</div></td>
+<td align="left" valign="top"><div class="verse">removepkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">Slackware paketlerini kaldırır</div></td>
+<td align="left" valign="top"><div class="verse">man removepkg</div></td>
+<td align="left" valign="top"><div class="verse">upgradepkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">Slackware paketlerini günceller</div></td>
+<td align="left" valign="top"><div class="verse">man upgradepkg</div></td>
+<td align="left" valign="top"><div class="verse">eliloconfig</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse"><em>elilo</em> önyükleyicisini yapılandırın
+(yalnızca Slackware 14.1&#8217;de)</div></td>
+<td align="left" valign="top"><div class="verse">liloconfig</div></td>
+<td align="left" valign="top"><div class="verse"> <em>lilo</em> önyükleyicisini yapılandırın</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">netconfig</div></td>
+<td align="left" valign="top"><div class="verse"> Ağ'ı yapılandırın</div></td>
+<td align="left" valign="top"><div class="verse">timeconfig</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">Zaman dilimini belirler</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+<td align="left" valign="top"><div class="verse">setconsolefont</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">Ekran fontu ayarlar</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+<td align="left" valign="top"><div class="verse">setup.mouse</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">Fare tipini belirler</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+<td align="left" valign="top"><div class="verse">xorgsetup</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">X sunucusunu yapılandır</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+<td align="left" valign="top"><div class="verse">xwmconfig</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">Varsayılan pencere yöneticisini veya masaüstünü belirler</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+<td align="left" valign="top"><div class="verse">slackpkg</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/note.png" alt="Note" />
+</td>
+<td class="content">Çok dilli araçların mesajlarını ve kılavuz sayfalarını kendi dilinizde
+görmek için, Slint ev sayfasında belitildiği gibi,
+<a href="slint.html#anchor-1">set up your prefered locale</a> yapmalısınız</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Ek olarak, Slint paketi bir Slint-HOWTO.txt dosyasını ve
+reinstall-slackware-packages.sh betiğini de içeren dökümanları
+/usr/docs/slint-&lt;sürüm&gt;-&lt;tarih&gt; dizinine yükler,</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">Slint paketinin yüklediklerini görmek için terminal ekranına şunu yazın:</td>
+</tr></table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre><code>less /var/log/packages/slint*</code></pre>
+</div></div>
+<div class="paragraph"><p>Liste içinde gezinmek için aşağı ve yukarı ok tuşlarını kullanın, çıkmak
+için <em>q</em> tuşuna basın.</p></div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Son güncelleme 2016-04-23 16:20:37 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

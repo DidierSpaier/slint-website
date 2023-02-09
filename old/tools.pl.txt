@@ -1,0 +1,308 @@
+= Przydatne narzędzia projektu Slint
+
+== Transifex
+
+Platforma Transifex ułatwia współpracę pomiędzy tłumaczami zapewniając
+każdemu zespołowi tłumaczy miejsce do przechowywania plików PO oraz
+dzielenia się informacjami. Posiada ona również edytor online, który może
+także być używany do sprawdzania tłumaczeń.
+
+Aby dowiedzieć się jak jej używać proszę odwiedzić
+http://support.transifex.com/[Transifex Help Desk].
+
+Możesz używać edytora online platformy Transifex, ale:
+
+* nie zapomnij często robić lokalnych kopii zapasowych
+* formatowanie tekstu tłumaczeń jest łatwiejsze używając lokalnego,
+  specjalistycznego edytora PO, np. **Lokalize** lub *Poedit**
+
+Aby przetłumaczyć strony w formacie asciidoc, obowiązkowe jest użycie
+platformy Transifex (zobacz poniżej).
+
+WARNING: Jeśli wolisz tłumaczyć lokalnie na swoim komputerze, upewnij się, że
+zaznaczone są 'Download for translation' (a nie 'Download for use') oraz
+'Lock this translation to notify others you\'re working on it'. Pomoże to
+uniknąć niepotrzebnego powielania wysiłków... Natomiast dwoje członków
+zespołu może dzielić ten sam plik PO tak długo jak najpierw ustalą kto co
+będzie tłumzczył.
+
+[TIP]
+=========
+Platforma Transifex nie zawija wierszy w przetłumaczonym tekście. Może to
+prowadzić do *bardzo* długich linii, które trudno przeczytać w edytorze,
+które również mogą spowodować zawieszenie komputera przez zużycie zasobów
+systemowych. Aby temu zapobiec, po pobraniu pliku PO, wpisz:
+
+----
+  msgcat plik_pobrany_z_Transifex > plik_ze_zmienioną_nazwą
+----
+
+Następnie użyj programów 'Lokalize' bądź 'Poedit' by przetłumaczyć
+*plik_ze_zmienioną_nazwą*. Plik ten będzie zawierał zawinięte wiersze
+(ang. wrapped lines) ale poza tym będzie identyczny z tym, który został
+pobrany.
+=========
+Jeśli lokalnie pracujesz nad tłumaczeniem, nie zapomnij załadować później
+zmieniony plik na platformę Transifex tak aby go odblokować.
+
+
+== Lokalize
+
+Program 'Lokalize' jest częścią systemu Slackware. Podręcznik Lokalize
+dostępny jest
+http://docs.kde.org/development/en/kdesdk/lokalize/index.html[on line] lub z
+menu Help programu (klawisz F11). Zalecane ustawienia:
+
+* Settings => Configure Lokalize => Identify: Choose your language (wybierz
+  język docelowy).
+* Settings => Configure Lokalize => Appearance: Choose a serif fixed width
+  (mono spaced) font like Courier. Pomoże to rozróżnić 0 (cyfra) od O (litera)
+  lub | (znak potoku) od I (litera) oraz sprawdzi formatowanie, na przykład
+  wyrównanie pierwszych wyrazów w sąsiędnich wierszach.
+* Settings => Configure Lokalize => Appearance: Zaznacz 'LEDS to indicate
+  Fuzzy and Untranslated status' oraz 'cursor column number', bardzo pomocne
+  przy sprawdzaniu długości wiersza (tam, gdzie ma to znaczenie).
+
+== Poedit
+
+Program 'Poedit' nie jest częścią systemu Slackware ale jest dostępny na
+http://slackbuilds.org[SlackBuilds.org].
+
+Nie posiada użytecznej funkcji sprawdzenia długości wiersza, ale oprócz tego
+jego funkcjonalność zbliżona jest do tej programu Lokalize. Z tego powodu
+wybór programu jest kwestią preferencji.
+
+W Edit => Preferences => Editor, zaznacz 'Automatic spell checking' i tak
+jak w Lokalize, wybierz seryfową czcionkę o stałej szerokości.
+
+== Użycie skryptów załączonych w paczce Slint.
+
+To skompresowane archiwum zawiera wszystko, co jest potrzebne do budowy
+produktów slint, jak również narzędzi dla kontrybutorów slint. Nosi ono
+nazwę slint-[data].tar.xz i znajduje się w katalogu
+https://slint.fr/pub[pub/].
+
+Aby go rozpakować, wpisz:
+
+----
+  tar xf slint-[data].tar.xz
+----
+  
+Wygeneruje to katalog slint-[data]. Wszystkie szczegóły znajdują się w pliku
+CONTENT.TXT. Poniższa tabela wyłącznie wymienia skrypty używane do budowania
+produktów slint oraz narzędzi dla tłumaczy. Wszystkie wspomniane ścieżki
+dostępu są ścieżkami względnymi.
+
+[format="psv", options="header,autowidth"]
+|========
+|Nazwa i lokalizacja skryptu|Cel
+| build/slint.sh |Utwórz hybrydowy obraz (CD/DVD lub USB) instalatora systemu Slackware lub dystrybucji Slackware zawierającej ten instalator.
+|build/make_slint_packages |Zinternacjonalizuj niektóre pakiety systemu Slackware i zbuduj pakiet SlintLocales.
+|build/slintLocales |Utwórz pakiet zawierający wszystkie aktualne tłumaczenia skryptów zawierających sie w instalatorach systemu Slackware (wszystkie wersje) lub w narzędziach systemu Slackware. 
+|tools_for_translators/toolbox.sh |Ten zbiór narzędzi odpowiedzialny jest za tłumaczenia wiadomości znajdujących się w pliku slackware.pot.
+|tools_for_translators/toolbox_slint_sh |Ten zbiór narzędzi odpowiedzialny jest za wiadomości generowane przez skrypt slint.sh.
+|tools_for_translators/generate_man_pages |Generuj umiędzynarodowione strony man dla niektórych narzędzi systemu Slackware. Pozwala to na sprawdzenie plików PO. W celu użycia tego skryptu wymagane jest zainstalowanie pakietu po4a znajdującego się w katalogu  https://slint.fr/packages/extra[extra/].
+|========
+ 
+=== Jak sprawdzić tłumaczenie instalatora systemu Slackware i skryptów administracyjnych
+
+Źródło https://www.transifex.com/projects/p/slint/resource/slint/[slint],
+plik slackware.pot
+
+Kiedy ukończyłeś tłumaczenie, umieść plik, ze zmienioną nazwą,
+np. pt_BR.slackware.po, w katalogu wip/, a następnie uruchom
+/ścieżka/do/narzędzi_dla_tłumaczy/toolbox.sh i wybierz z menu
+check_PO. Jeśli wszystko pójdzie dobrze:
+
+. skopiuj pt_BR.slackware.po do katalogu po/ (w tym przykładzie tłumaczenie na
+  portugalski brazylijski).
+. uruchom /ścieżka/do/SlintLocales.SlackBuild by załączyć twoje zaktualizowane
+  tłumaczenie w pakiecie SlintLocales
+. uruchom /ścieżka/do/slint/sh by utworzyć hybrydowy (CD lub USB) obraz
+  instalatora
+. wypoal obraz na płycie CD lub nośniku USB
+. wypróbuj instalator (w tym przypadku portugalski) albo w prawdziwej, bądź
+  też wirtualnej maszynie
+
+TIP: Aby wystartować instalator w wirtualnej maszynie możesz bezpośrednio użyć
+pliku z rozszerzeniem .iso jak writualnego nośnika bez potrzeby wypalania go
+na nośnik fizyczny.
+
+=== Jak sprawdzać tłumaczenia pliku slint.sh
+
+Plik źródłowy
+https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/[pliku
+POT dla slint.sh]
+
+Kiedy ukończyłeś tłumaczenie, umieść plik, ze zmienioną nazwą, np. dla
+niemieckiego de_DE.slackware.po, w katalogu wip/, a następnie uruchom
+/ścieżka/do/narzędzi_dla_tłumaczy/toolbox.sh i wybierz z menu check_PO.
+
+Jeśli wszysko się powiodło, uruchom ponownie
+/ścieżka/do/tools_for_translators//toolbox_slint_sh oraz wybierz z menu
+format_PO. Jeśli dobrze poszło, wygenerowany zostanie plik
+slint.mo. Zostanie on umieszczony w odpowiedni miejscu drzewa slint-[date]
+(w tym przykładzie w katalogu slint_locales/de/LC_MESSAGES).
+
+Następnie sprawdź swoje tłumaczenie porównując wersję angielską z niemiecką
+przy użyciu następujących poleceń:
+
+----
+  /ścieżka/do/build/slint.sh
+  LANG=de_DE.utf8 /ścieżka/do/slint.sh
+----
+ 
+=== Jak sprawdzać tłumaczenia stron man zawartych w pakietach pkgtools i slackpkg
+
+Pliki źródłowe:
+https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools] oraz
+https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]
+
+Tak jak poprzednio, umieść plik PO w katalogu wip/ nazwanym na przykład
+es.pkgtools.po (strony man zawarte śa w hiszpańskiej wersji pakietu
+pkgtools). Następnie uruchom polecenie:
+
+----
+   /ścieżka/do//tools_for_translators/generate_man_pages es.pkgtools
+----
+   
+Jeśli wszystko pójdzie zgodnie z planem, wyświetlone zostaną wszystkie
+strony man (w tym przypadku: es.explodepkg, es.installpkg, es.makepkg,
+es.pkgtool, es.removepkg, es.upgradepkg). Jeśli nie, przeczytaj komunikat
+błędu, napraw błędy i spróbuj ponownie. Możesz uniknąć większości błędów
+przestrzegając następujących ink:contribute.html#warning_man_pages[uwag].
+
+Aby porównać umiędzynarodowione strony man z oryginalnymi, możesz wykonać
+(przykładowo dla ukraińskiego tłumaczenia):
+
+----
+  cd /ścieżka/do/wip/
+  LANG=uk_UA.utf8 GROFF_ENCODING=utf8 man ./installpkg # umiędzynarodowiona strona man
+  GROFF_ENCODING=utf8 man installpkg # oryginalna strona man
+----
+  
+By uniknąć każdorazowego wpisywania "GROFF_ENCODING=utf8", umieść
+następujący wiersz w ~/.bashrc:
+
+----
+  export GROFF_ENCODING=utf8
+----
+
+[[asciidoc]]
+== Tłumaczenie plików tekstowych do przetworzenia przez 'AsciiDoc' w celu wygenerowania stron
+
+Jak opisane w link:contribute.html#new_web_pages[Tłumaczenie stron],
+następujące strony generowane są przez 'asciidoc' z tektowych plików
+źródłowych: link:slint.html[slint.html],
+link:installer.html[installer.html], ink:package.html[package.html],
+link:contribute.html[Contribute], ink:translators.html[Translators],
+link:tools.html[Tools] oraz ink:changelog.html[ChangeLog] jak również
+https://www.transifex.com
+/projects/p/slint/resource/templatepo/[template.po].
+
+Pliki te powinny być tłumaczone przy użyciu edytora Transifex online:
+załadowanie tłumaczonego tekstu na platformę Transifex generuje komunikat
+błędu, którego przyczyna nie jest znana autorowi tego tekstu. Dlatego też
+opcja tłumaczenia pliku lokalnie na komputerze a następnie jego załadowania
+na Transifex nie wchodzi w grę.
+
+Z drugiej strony edytor online platformy Transifex pozwala na dodanie do
+plików tłumaczeń zdań bądź akapitów, które pozostaną powiązane z ciągami z
+oryginalnego pliku angielskiego.
+
+Pozwala to tłumaczom dostosować ich tłumaczenia poprzez dodanie informacji
+właściwych do ich locale takich jak: jak uzyskać pomoc w danym języku, kraj,
+wskazówki dotyczące umiędzynarodowionej dokumentacji, itd.
+
+[TIP]
+====
+Po aktualizacji oryginalnego pliku angielskiego, ciągi tekstowe w plikach
+tłumaczenia, które odpowiadają zmodyfikowanych ciągom w pliku angielskim
+znikną z edytora Transifex.
+
+Możesz zaoszczędzić na wpisywaniu poprzez zachowanie lokalnej kopii
+tłumaczenia (pobierając ją ze strony Transifex): kopiuj stare tłumaczenie z
+lokalnej kopii i wklej je w edytor Transifex w celu dalszej edycji.
+
+Albo jeszcze prościej: jeśli twoje tłumaczenie zostało już załadowane na
+stronę: naciskając na "Page Source" na dole menu strony wyświetli odpowiedni
+tekstowy plik źródłowy.
+
+Dodatkowo, edytor Transifex posiada opcję "Suggestions" (podobna do
+"Translation Memory" w Lokalize), gdzie "zapamiętane" zostają podobne
+tłumaczenia danego ciągu znaków. Funkcja ta może być bardzo przydatna po
+każdej aktualizacji strony. Transifex zapamięta twoje ostatnie tłumaczenie
+danego ciągu i zaoferuje jego użycie wyświetlając obok niego link "Use
+this".
+====
+
+.Zapoznaj się ze składnią AsciiDoc
+Dokument z opisem znajduje się w
+http://asciidoc.org/userguide.html[Podręczniku AsciiDoc], ale na początek
+możesz poprostu przeczytać http://powerman.name/doc/asciidoc[Ściągę
+AsciiDoc] lub, zakładając, że 'AsciiDoc' jest zainstalowane, użyć polecenia:
+----
+asciidoc --help syntax > asciidoc.txt
+----
+Zrzuci to Podsumowanie Składni AsciiDoc do pliku asciidoc.txt, który możesz
+wyświetlić na ekranie lub wydrukować.
+
+.Zachowaj znaczniki
+Upewnij się, że wiernie zachowujesz znaczniki. Przykładowo, dodanie lub
+usunięcie spacji lub znaków nowego wiersza może mieć nieprzewidywalne
+efekty. Oto kilka przykładów:
+
+* Rozpoczęcie akapitu spacją wygeneruje 'dosłowny akapit' wyświetlony
+  konkretną czcionką.
+* "= jakiś tekst" wygeneruje nagłówek poziomu 0 (tytuł dokumentu), ale tylko,
+  gdy "=" stanowi pierwszy znak w danym wierszu, następnym znakiem jest znak
+  spacji oraz poprzedni wiersz jest pusty.
+* " \+" dodane do wiersza stworzy "podział wiersza" gdy poprzedzone jest to
+  spacją oraz jest on ostatnim znakiem wiersza.
+
+WARNING: By uniknąć uszkodzenia formatowania, zalecamy najpierw skopiować ciąg
+źródłowy (w j.angielskim) to tłumaczenia (kliknij na ikonę dwóch stron
+znajdującą sie w prawym górnym rogu okienka ciągu źródłowego) a następnie
+zacznij go edytować.
+
+.Sprawdź wygląd swojego tłumaczenia
+Możesz prosto sprawdzić jak wyświetla się strona wygenerowana z twojego
+tłumaczenia źródłowego pliku tekstowego poprzez:
+----
+lftp -c "mirror https://slint.fr/website/"
+# Pobierz swoje tłumaczenie ze strony Transifex (nazwijmy je <translation.txt>) i zapisz je w utworzonym katalogu website/
+cd website
+CONFIG_FILE=slint.conf.en
+# Opcjonalnie, jeśli główny tytuł oraz przetłumaczone na twój język menu zostały już załadowane na strone:
+wget https://slint.fr/slint.conf.ll; CONFIG_FILE=slint.conf.ll # zastąp "ll" kodem twojego języka (dwie litery)
+# wygeneruj stronę
+asciidoc -b xhtml11 -a icons -f $CONFIG_FILE <translation.txt> # polecenie to generuje <translation.html>
+firefox <translation.html> &
+----
+
+.Tłumaczyć albo nie tłumaczyć, oto jest pytanie
+Następujące słowa mają specjalne znaczenie w AsciiDoc i dlatego też nie
+powinny być tłumaczone, gdy rozpoczynają paragraf ostrzegawczy (są one
+często zastępowane ikonami): TIP, NOTE, IMPORTANT, WARNING oraz CAUTION.
+
+Ogólnie, linki oraz adresy stron nie powinny być tłumaczone. Zamiast tego, w
+zależności od kontekstu, tłumaczone mogą być powiązane z nimi nagłówki. W
+następujących przykładach (wziętych z 'asciidoc --help syntax') wyłącznie
+wartość 'nagłówka' może być przetłumaczona:
+----
+Linki dokumentu:
+[[id]]                      (zdefiniuj cel linku)
+<<id,caption>>              (link do docelowego id)
+link:filename#id[caption]   (link do zewnętrznego pliku HTML)
+
+Adresy stron:
+http:adres[nagłówek]       (link do strony)
+mailto:adres[nagłówek]     (link do odbiorcy wiadomości)
+
+Obrazki:
+image:plik[nagłówek]     (obrazek wyświetlany w linii)
+image::plik[nagłówek]    (obrazek wyświetlany w bloku)
+----
+
+
+

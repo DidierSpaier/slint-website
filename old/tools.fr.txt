@@ -1,0 +1,317 @@
+= Outils utiles aux contributeurs de Slint
+
+== Transifex
+
+la plate-forme Transifex facilite la coopération entre traducteurs. C'est un
+lieu où chaque équipe de traduction centralise ses fichiers PO et partage
+l'information. Elle procure un éditeur en ligne, qui peut aussi être utilisé
+pour réviser les traductions.
+
+Pour apprendre à l'utiliser visitez le
+http://support.transifex.com/[Transifex Help Desk] (en Anglais).
+
+Vous pouvez aussi utiliser l'éditeur en ligne de Transifex, mais :
+
+* n'oubliez pas d'effectuer de fréquentes sauvegardes, au cas où
+* la mise en forme des traductions est plus facile à effectuer et vérifier
+  localement, en utilisant un éditeur spécialisé tel que **Lokalize** ou
+  **Poedit**
+
+Pour traduire les pages du site Internet au format asciidoc, l'usage de
+Transifex est obligatoire (voir plus loin).
+
+WARNING: Si vous préférez traduire localement, assurez vous de cocher 'Télécharger
+pour traduire' (pas 'Télécharger pour l'utiliser') et 'Verrouiller cette
+traduction pour informer les autres que vous travaillez dessus'. Ceci
+pourrait éviter un travail en double ... Mais deux équipiers peuvent
+partager le même gros fichier PO, du moment qu'ils s'accordent sur qui
+traduit quoi.
+
+[TIP]
+=========
+Transifex ne revient pas à la ligne dans le texte traduit. Ceci peut
+conduire à de *très* longues lignes, difficiles à lire dans un éditeur de
+textes et qui peuvent même le faire "planter" en consommant tous la capacité
+de traitement. Pour éviter cela, après avoir téléchargé le fichier PO tapez
+simplement :
+
+----
+  msgcat fichier_téléchargé_depuis_Transifex > fichier_renommé
+----
+
+ensuite utilisez 'Lokalize' ou 'Poedit' pour traduire *fichier_renommé*. Ce
+fichier comportera des retours à la ligne mais sera autrement identique à
+celui téléchargé, donc cela ne fera aucun mal.
+=========
+Si vous traduisez localement n'oubliez pas de téléverser le fichier édité
+sur Transifex quand vous êtes inactif, pour ne pas le laisser verrouillé
+inutilement.
+
+
+== Lokalize
+
+'Lokalize' est inclus dans Slackware. Vous pouvez soit lire le manuel de
+Lokalize http://docs.kde.org/stable/fr/kdesdk/lokalize/index.html[en ligne]
+ou y accéder par le menu Aide ou en pressant la touche [F1]. Réglages
+recommandés :
+
+* Configuration => Configurer Lokalize => Identité => Langue par défaut
+  (choisir la langue cible).
+* Configuration => Configurer Lokalize => Apparence : Choisir une "police de
+  l'éditeur" à chasse fixe et empattement ("serif")  comme Courier. Ceci vous
+  aidera à distinguer 0 (le chiffre) de O (la lettre) ou | (la barre verticale
+  de I (la lettre) et à vérifier la mise en forme, par exemple l'alignement du
+  premier mot de lignes consécutives.
+* Configuration => Configurer Lokalize => Apparence : cocher "Diode indiquant
+  les états « à mettre à jour », « non traduit », ainsi que le numéro de
+  colonne du curseur", très pratique pour vérifier la longueur de ligne quand
+  cela importe.
+
+== Poedit
+
+'Poedit' n'est pas inclus dans Slackware mais est disponible sur le site
+http://slackbuilds.org[SlackBuilds.org].
+
+Il lui manque un moyen pratique de vérifier la longueur de ligne, mais ceci
+mis à part ses possibilités sont similaires à celles de Lokalize : choisir
+l'un ou l'autre est affaire de préférence personnelle.
+
+Dans Edition => Préférences => Éditeur, cocher "Vérification orthographique
+automatique" et, comme pour Lokalize, choisir une police à chasse fixe et à
+empattement.
+
+== Emploi de scripts inclus dans l'archive Slint
+
+Cette archive comprimée inclut tout ce qui est nécessaire pour constituer
+les produits Slint ainsi que des outils destinés aux contributeurs. Il est
+nommé slint-[date].tar.xz et fourni dans le répertoire
+https://slint.fr/pub[pub/].
+
+Pour la déballer, taper :
+
+----
+  tar xf slint-[date].tar.xz
+----
+  
+Cela créera un répertoire slint-[date]. Voir dans celui-ci le fichier
+CONTENT.TXT pour les détails, le tableau ci-dessous liste seulement les
+scripts utilisés pour constituer les produits Slint ainsi que les outils
+destinés aux traducteurs.
+
+[format="psv", options="header,autowidth"]
+|========
+|Chemin et nom du script|Fonction
+|build/slint.sh |Produire une image hybride (CD/DVD ou USB) d'un installateur Slint ou d'une distribution Slackware l'incluant
+|build/make_slint_packages |Internationaliser quelques scripts Slackware et construire le paquet SlintLocales.
+|build/slintLocales |Construire un paquet contenant toutes les traductions à jour des scripts contenus dans les installateurs Slint (toutes versions) ou dans des outils destinés à Slackware.
+|tools_for_translators/toolbox.sh |Cette boite à outils gère les traductions des messages rassemblés dans slackware.pot.
+|tools_for_translators/toolbox_slint_sh |Cette boite à outils gère les traductions des messages émis par le script slint.sh.
+|tools_for_translators/generate_man_pages |Génère des pages de manuels traduites pour quelques-uns des outils destinés à Slackware. Ceci permet de vérifier les fichiers PO correspondants. L'emploi de ce script nécessite d'avoir installé le paquet po4a, disponible dans le répertoire https://slint.fr/packages/extra[extra/].
+|========
+ 
+=== Comment vérifier les traductions de l'installateur de Slackware et des scripts d'administration
+
+Ressource https://www.transifex.com/projects/p/slint/resource/slint/[slint],
+fichier slackware.pot
+
+Quand vous avez terminé la traduction, mettez simplement le fichier dans le
+répertoire wip/,renommé par exemple fr_FR.slackware.po, puis exécutez
+/chemin/vers/tools_for_translators/toolbox.sh et choisissez check_PO dans le
+menu. Si tout va bien :
+
+. copiez fr_FR.slackware.po dans le répertoire po/ (traduction en Français
+  dans cet exemple)
+. exécutez le script /chemin/vers/build/SlintLocales.SlackBuild pour inclure
+  votre traduction à jour dans le paquet SlintLocales
+. exécutez le script /chemin/vers/build/slint.sh pour construire une image ISO
+  hybride CD ou USB de l'installateur
+. gravez l'image sur un CD ou une clef USB
+. essayez l'installateur (en Français dans cet exemple, bien sûr), dans une
+  machine réelle ou virtuelle
+
+TIP: pour exécuter l'installateur dans une machine virtuelle vous pouvez utiliser
+directement le fichier dont le nom se termine en .iso, il n'est pas
+nécessaire de le graver sur un support physique dans ce cas.
+
+=== Comment vérifier les traductions du fichier slint.sh
+
+Ressource
+https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/[POT
+file for slint.sh]
+
+Quand vous avez terminé la traduction, mettez simplement le fichier, renommé
+par exemple fr_FR.slint.po, dans le répertoire /wip, puis exécutez le script
+/chemin/vers/tools_for_translators/toolbox_slint_sh et choisissez check_PO
+dans le menu.
+
+Si tout va bien, exécutez de nouveau
+/chemin/vers/tools_for_translators/toolbox_slint_sh mais choisissez
+format_PO dans le menu. Si tout va bien cela générera un fichier slint.mo et
+le rangera à sa place dans l'arborescence de slint-[date] (dans le
+répertoire slint_locales/fr/LC_MESSAGES dans cet exemple).
+
+Puis essayez votre traduction en comparant les versions anglaise et
+française avec des commandes comme celles-ci :
+
+----
+  /chemin/vers/build/slint.sh
+  LANG=fr_FR.utf8 /chemin/vers/build/slint.sh
+----
+ 
+=== Comment vérifier les traductions des  pages de manuel inclues dans les paquets pkgtools et slackpkg
+
+Ressources:
+https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools] et
+https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]
+
+De nouveau, mettez le fichier PO dans le répertoire wip/, renommé par
+exemple fr.pkgtools.po (pages de manuel inclues dans le paquet pkgtools en
+Français). puis, exécutez cette commande :
+
+----
+   /chemin/vers/tools_for_translators/generate_man_pages fr.pkgtools
+----
+   
+Si tout se passe bien ceci générera toutes les pages de manuel (dans le cas
+présent : fr.explodepkg, fr.installpkg, fr.makepkg, fr.pkgtool, fr.removepkg
+et fr.upgradepkg). Sinon lisez les messages d'erreur, faites les corrections
+nécessaires et recommencez. Vous pouvez éviter la plupart des erreurs en
+suivant cet link:contribute.html#warning_man_pages[Avertissement].
+
+Pour comparer la page traduite avec celle d'origine, faites par exemple ceci
+(exemple pour une traduction en Français) :
+
+----
+  cd /chemin/vers/wip
+  LANG=fr_FR.utf8 GROFF_ENCODING=utf8 man ./installpkg # page de manuel traduite
+  GROFF_ENCODING=utf8 man installpkg # page de manuel originelle
+----
+  
+Pour éviter de taper "GROFF_ENCODING=utf8" à chaque fois, mettez cette ligne
+dans votre ~/.bashrc :
+
+----
+  export GROFF_ENCODING=utf8
+----
+
+[[asciidoc]]
+== Traduction des fichiers texte à traiter par  'AsciiDoc' pour générer des pages Internet
+
+Comme indiqué dans link:contribute.html#new_web_pages[Traduction de pages du
+site Internet], les pages suivantes sont générées par 'asciidoc' à partir de
+fichiers textes sources : link:slint.html[slint],
+link:installer.html[installer.html], link:package.html[package.html],
+link:contribute.html[contribute.html],
+link:translators.html[transators.html], link:tools.html[tools.html] et
+link:changelog.html[changelog.html] ainsi que
+https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po].
+
+Ces fichiers textes sources doivent être traduits avec l'éditeur en ligne de
+Transifex : téléverser un fichier texte sur Transifex échoue avec un message
+d'erreur pour une raison inconnue du rédacteur, aussi traduire le fichier
+localement puis le téléverser vers Transifex n'est pas envisageable.
+
+Mais l'éditeur en ligne de Transifex présente l'avantage de permettre
+d'ajouter aux fichiers de traduction des phrases ou paragraphes qui
+resteront attachés à une chaîne de caractère du fichier originel en Anglais.
+
+Ceci permet aux traducteurs de particulariser leurs traductions en y
+ajoutant des informations spécifiques à leur locale, par exemple comment
+obtenir de l'aide dans leur langue ou pays, des liens vers une documentation
+localisée, etc.
+
+[TIP]
+====
+Suite à une mise à jour d'un fichier texte originel en Anglais, les chaînes
+de caractères des fichiers de traduction correspondant aux chaînes modifiées
+dans le fichier en Anglais disparaîtront de l'éditeur de Transifex.
+
+Vous pouvez économiser de la frappe en conservant une copie locale de la
+traduction, téléchargée depuis Transifex : copiez l'ancienne traduction et
+collez-là dans l'éditeur de Transifex, puis modifiez-la.
+
+Encore plus facile, si votre traduction était déjà téléversée sur le site
+Internet : cliquer sur "Texte source" en bas du menu latéral de cette page
+affichera le texte source correspondant.
+
+En outre, l'éditeur de Transifex a une fonction "Suggestions" (similaire au
+"mémoire de traduction" de Lokalize) qui mémorise les traductions
+précédentes d'une chaîne de caractères. Cette fonction peut être réellement
+utile quand une page du site est mise à jour. Transifex se souviendra de
+votre dernière traduction de cette chaîne et vous présentera un lien
+"Utiliser ceci" près de la traduction. Vous pouvez ainsi récupérer
+l'ancienne traduction, la modifier, puis passer à la chaîne de caractères
+suivante.
+====
+
+.Familiarisez-vous avec la syntaxe des balises d'Asciidoc
+Le document de référence est le http://asciidoc.org/userguide.html[guide
+utilisateur AsciiDoc] (en Anglais), mais vous pouvez commencer par lire
+http://powerman.name/doc/asciidoc[l'antisèche AsciiDoc] (en Anglais
+également). Encore plus facile, si 'AsciiDoc' est installé cette commande :
+----
+asciidoc --help syntax > asciidoc.txt
+----
+écrira un "AsciiDoc Markup Syntax Summary" dans le fichier asciidoc.txt, que
+vous pourrez ensuite parcourir ou imprimer.
+
+.Préserver le balisage
+Prenez soin de préserver le balisage tel quel. Par exemple, ajouter ou
+enlever des espaces ou des caractères "saut de ligne" peut avoir des effets
+inattendus. Voici quelques exemples :
+
+* Commencer un paragraphe par une espace engendrera un 'paragraphe littéral'
+  affiché avec une police de caractères spécifique
+* "= du texte" engendrera un en-tête de niveau 0 (titre du document), mais
+  seulement si "=" est le premier caractère de la ligne et est suivi d'une
+  espace et précédé d'une ligne vide
+* " \+" en fin de ligne générera un saut de ligne mais seulement si le "+" est
+  précédé d'une espace et est le dernier caractère de la ligne
+
+WARNING: Pour éviter de mettre la pagaille dans le balisage, nous vous recommandons
+de copier d'abord la chaîne source (en Anglais) dans la traduction : cliquez
+simplement sur l'icône figurant deux pages côte à côte en haut à droite de
+la zone de la chaîne source, puis éditez la traduction.
+
+.Vérifier le rendu de votre traduction 
+Vous pouvez vérifier facilement le rendu de la page Internet générée à
+partir de votre traduction d'un fichier texte source. Faites simplement
+ceci :
+----
+lftp -c "mirror https://slint.fr/website/"
+# Téléchargez à partir de Transifex votre traduction (nous l'appellerons <traduction.txt>) dans le répertoire website/ qui vient d'être créé
+cd website
+CONFIG_FILE=slint.conf.en
+# Facultativement, si le titre en haut de page et le menu latéral traduits dans votre langue sont déjà téléversés sur le site Internet :
+wget https://slint.fr/slint.conf.ll; CONFIG_FILE=slint.conf.ll # remplacer "ll" par votre code langue (deux lettres)
+# ensuite générez la page XHTML
+asciidoc -b xhtml11 -a icons -f $CONFIG_FILE <traduction.txt> # cette commande génère <traduction.html>
+firefox <traduction.html> &
+----
+
+.Traduire ou ne pas traduire, telle est la question
+Les mots suivants ont une signification particulière pour AsciiDoc et ne
+doivent pas être traduits quand ils commencent un paragraphe devant attirer
+l'attention du lecteur : TIP, NOTE, IMPORTANT, WARNING et CAUTION.
+
+D'une manière générale, les liens et les URLs ne doivent pas être traduits
+mais la légende peut l'être, selon le contexte. Dans les exemples qui
+suivent (traduits à partir du résultat de la commande 'asciidoc --help
+syntax') seule la valeur de "légende" peut être traduite :
+----
+Liens dans le document :
+[[id]]  (définit la cible de lien "id")
+<<id,légende>> (lien vers la cible "id")
+link:nomdefichier#id[légende] (lien vers un fichier HTML externe)
+
+URLs :
+http:adresse[légende] (lien vers une page Internet)
+mailto:adresse[légende] (lien vers une adresse courriel)
+
+Images :
+image:nomdefichier[légende] (image en ligne)
+image::nomdefichier[légende] (image dans un contexte de bloc)
+----
+
+
+

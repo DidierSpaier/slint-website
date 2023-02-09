@@ -1,0 +1,2555 @@
+
+=  Slint Handbook (14.2.1)
+:toc: left
+:toclevels: 2
+:toc-title: Contenido
+:pdf-themesdir: themes
+:pdf-theme: default
+:sectnums:
+
+==  Introducción a Slint
+
+=== Acerca de Slint
+
+Slint es una distribución https://en.wikipedia.org/wiki/Linux_distribution[Linux]basada en http://www.slackware.com/[Slackware], polyglot, fácil de instalar, versátil, amigable para principiantes y accesible a los discapacitados visuales.
+
+Un sistema Slint es funcional fuera de la caja y puede adaptarse a la mayoría de los requisitos de computación.
+
+==== Características
+
+Se proponen dos modos de instalación: Auto (no hay comandos de Linux para tipo) y Manual para quién quiere más personalización. El instalador incluye una documentación.
+
+Slint es accesible para usuarios con discapacidad visual, con voz y braille, desde la instalación hasta el uso en una consola como en entornos gráficos.
+
+En todos los sistemas Slint se instala una amplia gama de software para servidores, escritorios y ordenadores portátiles que incluyen varios entornos gráficos de escritorio: KDE (opcional), LXDE, MATE, XFCE y gestores de ventanas ligeros. Todos los entornos gráficos proporcionan fácil acceso a todas las aplicaciones y operaciones del sistema, con montaje automático de dispositivos extraíbles, además de notificaciones de actualizaciones disponibles del software instalado, acceso inmediato a Internet, parar, reiniciar e hibernar el sistema. Cada entorno de escritorio proporciona un diseño similar de los paneles y el menú de la aplicación para proporcionar un entorno consistente.
+
+El idioma elegido se utilizará para aplicaciones internacionalizadas.
+
+El Slint Dashboard centraliza el acceso a los ajustes de hardware y sistema, paquetes, herramientas de sistema, documentación y utilidades.
+
+Slint viene con muchas aplicaciones fuera de la caja para escribir y leer y convertir documentos en varios formatos, comunicarse por correo electrónico, chat de texto y de audio, reproducir audio y vídeo, enviar y recibir documentos entre pares, editar audio, vídeo y documentos gráficos, desarrollar aplicaciones. Es totalmente utilizable como servidor en una consola y usando uno de los varios escritorios incluidos.
+
+Muchas aplicaciones son accesibles para usuarios con discapacidad visual, se incluye una amplia selección de TTS y voces asociadas, si todavía necesita otros son fácilmente instalables, utilizables tanto en un entorno textual (consola) como en el escritorio.
+
+Varias herramientas internas facilitan la administración y configuración de su sistema Slint.
+
+Muchas más aplicaciones se instalan fácilmente como paquetes de software a través de un simple comando o unos pocos clics. Miles de paquetes de software están a su alcance.
+
+Los usuarios de Slint son notificados sobre actualizaciones de los paquetes instalados tan pronto como estén disponibles, fácilmente instalados bajo petición. Esto mantiene su sistema a salvo.
+
+Los ajustes por defecto de las aplicaciones se proporcionan y se pueden personalizar fácilmente.
+
+==== Contenido, versiones y modelo de lanzamiento.
+
+El instalador de Slint sólo proporciona una instalación completa. Sólo el escritorio de KDE es opcional.
+
+Slint se basa en Slackware, tendemos a proporcionar una nueva versión de Slint poco después del lanzamiento de una versión de Slackware.
+
+Sin embargo, Slint sigue los modelos de lanzamiento "semi-rolling", lo que significa que durante el ciclo de vida de una versión dada, además de actualizaciones como correcciones de seguridad y correcciones de errores principales, algunos programas se actualizan selectivamente para traer mejoras, y se añaden para traer nuevas características. Este es el caso de que el software contribuya a hacer que Slint sea accesible a la ciega, como los lectores de pantalla.
+
+Recomendamos que los usuarios cambien a una nueva versión tan pronto como sea posible después de su lanzamiento. Hasta ahora hemos sido capaces de proporcionar instrucciones y scripts de ayuda que permiten actualizar en lugar de cero una nueva versión. Haremos todo lo que esté en nuestras manos para que sea posible con versiones futuras, aunque una copia de seguridad completa de los archivos de los usuarios seguido de una instalación, una restauración de los archivos de los usuarios puede ser más fácil, especialmente para un uso de escritorio o portátil.
+
+=== Acerca de este libro, otras fuentes de información
+
+Este libro está destinado al recién llegado de Slint a quien guía a través de su proceso de instalación y uso. Los conceptos y convenciones específicos de Slint y comunes en las distribuciones de Linux se presentan y se anexa un glosario.
+
+Intentamos acomodar a la gente que viene de Windows o MacOS como usuarios de otra distribución como Ubuntu.
+
+La documentación sobre el software instalado está generalmente disponible en un sistema Slint. En este libro explicaremos cómo acceder a él.
+
+Otras fuentes de información están disponibles:
+
+* La información facilitada a menudo en su sitio web por los autores de software incluido en Slint.
+* http://docs.slackware.com/[El proyecto de documentación de Slackware] y en particular sus http://docs.slackware.com/howtos:start[artículos HOWTO] Muchos son aplicables directamente a Slint, pueden ser necesarias algunas adaptaciones y actualizaciones.
+* Más allá de la distribución Arch, el ArchWiki ofrece a menudo artículos útiles sobre software también enviado en Slint. Por ejemplo, buscar "arch wiki mate" lleva a https://wiki.archlinux.org/index.php/MATE[esta página sobre MATE]. Aviso: la información facilitada puede ser adaptada ya que el Slint y el Arco difieren en algunos saludos. Por ejemplo, Arch usa systemd como sistema init y un software determinado puede configurarse de forma diferente por defecto en Slint y Arch.
+* Y, por supuesto, un motor de búsqueda de Internet puede ayudar a encontrar respuestas a preguntas y soluciones a los problemas.
+
+=== Soporte
+
+Puedes obtener ayuda a través de estos canales:
+
+* La lista de correo Slint es el canal de soporte principal. Para registrarte, envía un correo electrónico a slint-request@freelists.org con el siguiente tema: 'subscribe' luego responde al correo electrónico de confirmación que recibirás. Luego, para saber más correo electrónico slint-request@freelists.org con el asunto 'comandos' o 'ayuda'. Después del registro, envía un correo electrónico a slint@freelists.org.
+* Los archivos de la lista de correo están disponibles https://www.freelists.org/archive/slint[aquí].
+* En IRC: chat en el canal #slint, servidor irc.libera.chat, no es necesario registrarse.
+* Mumble: servidor slint.fr (en caso de cita a través de otro canal).
+* El https://forum.salixos.org/viewforum.php?f=44[foro de Slint] amablemente alojado por nuestros amigos en Salix (otra derivada de Slackware). Se necesita registrarse.
+
+
+Para obtener más información, consulte los enlaces en Información en el Tablero de Slint, visita nuestra https://slint.fr/wiki/doku.php?id=en/start[wiki] o simplemente escribe: slint-doc en un terminal después de la instalación.
+
+=== Traducción y otras contribuciones al proyecto Slint
+
+¡Slint necesita traductores! Si quieres participar en el esfuerzo de traducción, lee las instrucciones en https://slint.fr/doc/translate_slint.html[Traducir Slint].
+
+Los archivos de traducción están alojados en https://crowdin.com/project/slint[Crowdin].
+
+Si desea contribuir a Slint para otras tareas, simplemente publique en la lista de correo o coloque una línea a: didieratslintdotfr. Por supuesto que los traductores también son bienvenidos en la lista de correo!
+
+===  Reconocimientos
+
+El proyecto Slint existe principalmente a través del duro trabajo de los traductores de Slint y otros colaboradores, gracias a todos!
+
+Gracias a George Vlahavas por sus consejos y herramientas, a los colaboradores del proyecto SlackBuilds.org, que ayudan a construir tantos programas adicionales.
+
+Slint se basa en Slackware, traído por Patrick J. Volkerding y sus colaboradores. ¡Gracias! Invito a todos los usuarios de Slint a contribuir a la financiación de Slackware, y también a donar al proyecto Salix.
+
+Los repositorios Slint son alojados gratis por Darren 'Tadgy' Austin. Insto a todos los usuarios de Slint a contribuir a financiar el host https://slackware.uk/
+
+Links for financial contributions: +
+https://www.patreon.com/slackwarelinux[Become a Slackware patron] or https://paypal.me/volkerdi[Soporte Slackware] +
+Follow the links on top of http://slackware.uk/slint/x86_64/slint-14.2.1/[this page] to support Slackware UK +
+https://salixos.org/donations.html[Donations to Salix]
+
+==  Instalar Slint
+
+Esta parte del manual recorre el proceso de descarga de Slint, verificando la imagen ISO con una suma de comprobación, escribir la ISO en un medio de instalación, particionando su disco duro, y describiendo brevemente el proceso de instalación.
+
+=== Requisitos
+
+La versión actual de Slint se puede instalar en ordenadores que cumplan estos requisitos:
+
+* Archivo: x86_64 (CPU de 64 bits), también conocido como AMD64
+* Espacio libre o libre en el disco (discos duros, SSD, NVME, eMMC): al menos 28G en modo automático. Una instalación completa de Slint necesita alrededor de 20G, sin archivos de usuario ni complementos.
+* RAM: al menos 2G
+* una unidad de DVD o una ranura USB disponible, con la capacidad del firmware para arrancar una memoria DVD o USB. Un DVD en blanco o un dispositivo 4G o más USB puede utilizarse como medio de instalación
+
+NOTE: El arranque seguro debe estar desactivado para instalar Slint.
+
+=== Características del instalador
+
+* El instalador es un "sistema en vivo" que se ejecuta en la memoria: no modificará un sistema instalado, a menos y hasta que se lo diga.
+* Para los usuarios invidentes el instalador es totalmente utilizable con Braille, y voz usando el lector de pantalla de altavoces.
+* Para usuarios expertos incluye todas las utilidades necesarias para preparar la unidad <<drive, >> en la que Slint será instalado.
+* El modo automático de instalación, en cambio, sólo necesita que el usuario responda preguntas y proporcione una ayuda contextual sobre ellas.
+* El instalador puede liberar espacio para Slint en una unidad donde quiera instalarla junto a otra Linux bajo ciertas condiciones.
+* Si se instala solo en un dispositivo removible conectado a través de USB, Slint se puede hacer portátil, i. , utilizable en cualquier ordenador capaz de arrancar desde una unidad USB.
+* El instalador puede cifrar la unidad donde Slint se instala solo. Esto evita el robo de datos que contiene en caso de pérdida o robo de la máquina, o de una unidad extraíble.
+* Slint puede instalarse en su propio disco, o junto a otro sistema.
+
+=== Preparación
+
+<<download_and_verify, Descargue y verifique una imagen ISO de Slint>> +
+<<write_the_iso, Escriba la imagen ISO en un medio de instalación>> +
+<<make_room_for_Slint, Haga sitio para Slint>> +
+<<create_partitions_for_Slint, Crear particiones para Slint>>
+
+[[download_and_verify]]
+====  Descargar y verificar una imagen ISO de Slint
+
+La última versión de la distribución Slint es 14.2.1
+
+La última imagen ISO de instalación está siempre disponible en https://slackware.uk/slint/x86_64/slint-14.2.1/iso[este directorio]
+
+[TIP]
+====
+Mientras esté ejecutando la versión 14.2 de Slint. no hay necesidad de reinstalar cuando se proporciona un nuevo ISO, ya que solo trae nuevas características del instalador y paquetes nuevos o actualizados'que también puede mantener su sistema actualizado.
+====
+
+El nombre de archivo de la ISO indicada a continuación es sólo un ejemplo, que se adaptará al nombre actual al descargar.
+
+Si está ejecutando Windows, una Internet con como argumento "check sha256sum windows" le dirá las maneras de continuar.
+
+Si está ejecutando Linux puede descargar la imagen ISO y su checksum sha256:
+----
+wget https://slackware.uk/slint/x86_64/slint-14.2.1/iso/slint64-14.2.1.4.
+wget https://slackware.uk/slint/x86_64/slint-14.2.1/iso/slint64-14.2.1.4.iso.sha256
+----
+
+Para comprobar la integridad de los archivos descargados, escriba este comando:
+sha256sum -c slint64-14.2.1.4.iso.sha256
+el resultado debe ser:
+OK
+
+----
+sha256sum -c slint64-14.2.1.4.iso.sha256
+----
+El resultado debe ser : OK +
+Si no, rehacer las descargas.
+
+[[write_the_iso]]
+====  Escriba la imagen ISO en un medio de instalación
+
+Puede usar un DVD o una memoria USB como medio de instalación.
+
+[[make_a_bootable_usb_stick]]
+===== Crear un dispositivo USB de arranque
+
+On a ++Linux++ system, plug in the USB stick, and check it's name with the following command:
+
+----
+lsblk -o,nombre,tamaño,fstype,punto de montaje
+----
+
+[WARNING]
+====
+Revise cuidadosamente la salida del comando para asegurarse de que no va a escribir el nombre de una partición del disco duro en lugar del nombre de la memoria USB.  Todo el contenido anterior del dispositivo USB o una partición de disco duro errónea será *PÉRDIDA* y *IRRECOVERABLE*.
+====
+
+Dejar's asumir que el nombre de la memoria USB es /dev/sdb. Podría nombrarse de otra manera, así que no't copiar ciegamente el siguiente comando.  La sintaxis del comando para escribir el Slint ISO en un USB stick que reside en /dev/sdb es la siguiente:
+
+----
+dd if=slint64-14.2.1.4.is) of=/dev/sdb bs=1M status=progress && sync
+----
+
+[NOTE]
+====
+El comando anterior asume *if=* apunta a la ruta del Slint ISO y *of=* apunta al nombre de la memoria USB.  Estos valores pueden diferir en su sistema.
+====
+
+On ++Windows++ use an application like http://rufus.akeo.ie/[Rufus].  Es libre y de código abierto.
+
+1. Abre el programa Rufus desde donde lo has descargado para ejecutarlo.
+2. Seleccione Crear un disco arrancable usando la imagen ISO del menú desplegable.
+   Haga clic en el icono del disco y busque el archivo Slint .ISO y selecciónelo.
+3. Para asegurarse de que la unidad flash es compatible con UEFI, seleccione FAT32 para <<file_system, sistema de archivos>>.
+4. Para crear la unidad de flash con la opción "Presione cualquier tecla para arrancar desde USB", seleccione la opción Crear etiquetas extendidas y archivos de iconos.
+5. Cuando haya terminado de seleccionar las opciones, haga clic en Inicio cuando se le pregunte, confirme que desea borrar el disco flash.
+6. Los archivos .ISO comenzarán a copiarse en la unidad de flash (el proceso puede tardar varios minutos). Cuando Rufus haya terminado, cierre el programa, expulse y retire la unidad de flash.
+
+[[make_a_bootable_DVD_disc]]
+=====  Make a Bootable DVD Disc
+
+On a ++Linux++ system insert the DVD and type the following command:
+
+----
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.2.1.4.is)
+----
+
+Asegúrese de introducir la ruta completa al Slint ISO en su sistema de archivos.
+
+On ++Microsoft Windows 2000/XP/Vista/7++ you can write to a DVD using the application http://infrarecorder.org/[InfraRecorder].  Es libre y de código abierto.
+
+On ++Microsoft Windows 7/8/10++ you can use the http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file[Windows Disk Image Burner] utility that is shipped with Microsoft Windows.
+
+[[make_room_for_Slint]]
+====  Hacer espacio para Slint
+
+Dedicar un ordenador o al menos una unidad a Slint, facilita la instalación y por lo tanto se recomienda. Luego, omite este paso y proceda directamente a ejecutar el instalador.
+
+Pero también puede compartir una unidad con un sistema operativo ya instalado como Windows, Mac OS, *BSD, u otra distribución Linux,
+
+Luego necesitará un espacio libre para Slint al final de la tabla de particiones de esta unidad (después de la última partición). Se necesita al menos 20G para el propio sistema, pero también necesitará algo de espacio para los archivos de usuario e instalar otro software. Reducir la última partición de la unidad se puede hacer después de haber iniciado el instalador escribiendo comandos linux si usted es usuario de energía de Linux. Esto también lo puede hacer el instalador en modo Auto si se cumplen las siguientes condiciones:
+
+* La unidad está equipada con una Tabla de Partición GUID (GPT)
+* Su última partición tiene un ext <<file_system, sistema de archivos>>.
+* Al menos 28G se puede liberar en ella.
+* La máquina ha arrancado en modo EFI (no antiguo)
+
+De lo contrario, necesitará hacer espacio para Slint antes de instalar usando `gparted` o desde Windows (recomendado si Windows está instalado). Sin embargo, bajo algunas condiciones, Slint puede hacerlo por usted como se indica en
+<<Automatic_installation, Instalación automática>>
+
+===== Cómo liberar espacio en un volumen de Windows
+
+Los pasos indicados en
+https://docs.microsoft.com/en-us/windows-server/storage/disk-management/shrink-a-basic-volume[este documento]
+se resumen a continuación.
+
+1. Desde Windows, abre un símbolo de comandos y tipo:
++
+`diskpart`
+
+2. En la petición de diskpart, tipo:
++
+`listar volumen`
++
+Tenga en cuenta el número del volumen simple que desea reducir.
+
+3. Seleccione el volumen que desea reducir, que debe tener un sistema de archivos ntfs, escribiendo
++
+`seleccione volumen <number>`
+
+4. para conocer el tamaño máximo del cual el volumen puede ser reducido tipo:
++
+`reducir querymax`
+
+5. Define el <size> en megabytes del espacio libre que quieres crear. No debe ser mayor que el tamaño máximo encontrado con el comando anterior. Puede que desee dejar algo de espacio disponible en el volumen de Windows para poder almacenar más datos en él.
+
+6. Escriba este comando:
++
+`reducir=<size>`
++
+el tamaño es un número en MB, por ejemplo por 30 GB, sabiendo que el tipo G=1024M:
++
+`reducir deseado=30720`
++
+Mantenga suficiente espacio sin usar en el volumen del sistema para permitir la instalación de una actualización de Windows.
+
+También puede utilizar el Administrador de discos: seleccione el volumen que desea reducir, haga clic derecho en él, seleccione "reducir el volumen", esperar hasta que se muestre el espacio máximo del cual se puede reducir el volumen, adaptar el valor para dejar
+algo de espacio para permitir almacenar más datos allí como lo considere oportuno, y luego hacer clic en el botón reducir.
+
+===== Cómo liberar espacio en Linux.
+
+Puede utilizar http://gparted.org/index.php[gparted]o una herramienta gráfica para el manejo de particiones proporcionada por su distribución.
+
+TIP: Si se puede liberar 28G en la última partición de una unidad con un GPT equipado con un sistema de archivos ext4, el instalador puede reducirla para usted.
+
+[[create_partitions_for_Slint]]
+====  Crear particiones para Slint
+
+Si elige el modo de instalación automática y dedica un dispositivo para Slint, el instalador lo particionará para usted. Cuando esté hecho todavía puede afinar la disposición de las particiones usando uno de los comandos más citados abajo si yiu desea.
+
+Si desea utilizar el modo de instalación manual, puede crear particiones para Slint antes o durante la instalación.
+
+Si no está acostumbrado a Linux, probablemente le resultará más fácil hacerlo antes de la instalación. Te sugerimos usar http://gparted.org/index.php[gparted] para hacer eso. Gparted puede reducir las particiones existentes para hacer espacio, así como crear nuevas particiones en el espacio libre.  Si no tiene un sistema compatible con Gparted (Microsoft Windows) puede utilizar http://gparted.org/livecd.php[Gparted Live].
+Los comandos cfdisk, fdisk, gdisk, cgfdisk y parted están disponibles desde el instalador. Puede utilizar el tema para particionar todo el dispositivo o hacer las particiones para Slint en su espacio libre.
+
+La instalación de Slint necesita:
+
+* Una partición de tipo Linux, tamaño al menos 20G, más es mejor (se recomienda al menos 30 G).
+* Si va a arrancar en modo EFI, de tipo "EFI System" (código ef00) tamaño al menos 100M. Incluso si inicias en el modo Legado, ganó'no te molesta tener uno.
+* En caso de una GPT (GUID Partition Table), una partición de tipo BIOS Boot (ef02), tamaño 4M, para arrancar en modo Legacy. Incluso si inicias en modo EFI, ganó'no te molesta tener uno.
+* Opcionalmente, una partición de tipo "swap". Esto se recomienda especialmente si quiere hibernar su máquina y si tiene menos de 8G de RAM. Sin embargo, puede configurar un archivo de intercambio después de la instalación.
+
+También puede dedicar una partición para /home (pero esto no es obligatorio, I don't) y otras particiones para casos de uso específicos.
+
+[NOTE]
+====
+Slint necesita alrededor de 20 Gigabytes de espacio, pero se recomienda una partición raíz de 50 Gigabytes. Puede que desee instalar software adicional o necesite más espacio para almacenar sus archivos.  Cuanto más espacio mejor es si planea almacenar fotos, vídeos, música, etc.
+====
+
+=== Instalación de Slint
+
+<<Start_of_the_installation, Start of the installation>> +
+<<Accessibility_of_the_installer, Accesibilidad of the installer>> +
+<<Usage_of_the_installer, Usage of the installer>> +
+<<Automatic_installation, Automatic installation>> +
+<<Manual_installation, Manual installation>> +
+<<Slint_in_an_encrypted_drive, Slint in an encrypted drive>> +
+<<first_steps_after_installation, First steps after installation>>
+
+[[Start_of_the_installation]]
+==== Inicio de la instalación
+
+Si es necesario, configure el firmware de la máquina para arrancar desde el dispositivo DVD o USB que ha preparado
+
+Inserte el medio de instalación (DVD o USB stick) y reinicie su máquina. Los usuarios ciegos escucharán un 'pitido' cuando se muestre el menú de arranque.
+
+Inicie el instalador sólo presionando Enter.
+
+El instalador sonará primero las tarjetas de sonido.
+
+Esto puede ayudar a establecer un funcionamiento predeterminado y también se utiliza para hablar durante la instalación utilizada por algunos usuarios invidentes.
+
+Si el instalador encuentra más de una tarjeta de sonido, dirá para cada una: +
+presione Enter para elegir este tablero de sonido <sound card id> +
+Presione Enter tan pronto como escuche eso, para confirmar que la tarjeta de sonido propuesta está funcionando. Esta configuración se guardará en el nuevo sistema en Copy/asound.conf.
+
+En el siguiente paso, cuando se le pregunte confirmará (tecleando) o negará (sólo presionando Entrar) que desea hablar durante la instalación. Braille está siempre disponible durante la instalación.
+
+A continuación, elegirá, confirmará o cambiará el idioma utilizado durante la instalación. Entonces todas las pantallas estarán en el idioma elegido si la traducción a este idioma está completa.
+
+Si necesita añadir parámetros adicionales del núcleo a la línea de comandos de arranque, antes de presionar Enter hacer lo que sigue :
+[NOTE]
+====
+Tenga en cuenta que el mapa de teclado de EE.UU. estará en uso al teclear. +
+Ctrl+x significa "Presiona y mantén pulsada la tecla Ctrl o Control, como si fuera una tecla Shift y luego presiona la tecla X"
+====
+----
+Pulse la tecla e
+Presione la flecha hacia abajo tres veces
+Presione la tecla End
+Presione la barra espaciadora
+Escriba los parámetros del núcleo (ejemplos abajo)
+Presione Ctrl+X para iniciar (no presione Entrar!)
+Presione Enter para arrancar.
+----
+
+Por ejemplo, para configurar el controlador de altavoz para el sintetizador de hardware, puede escribir un parámetro del kernel como:
+----
+speakup.synth=apollo
+----
+También puede incluir en la línea de comandos de arranque la configuración de su dispositivo Braille, en este formulario:
+-----
+brltty=<driver code>,<device>,<text table>
+-----
+Por ejemplo para instalar con un dispositivo Papenmeier conectado a través de USB con un tipo de tabla de texto en francés:
+-----
+brltty=pm,usb:,fr_FR
+-----
+NOTE: un dispositivo braille está conectado a través de USB que siempre debe ser reconocido, tal vez solo la tabla de texto ganada'no sea la buena si lo hiciste'no introduzcas la configuración al principio.
+
+En cualquier caso, dado que no hay tiempo de espera, el arranque solo comenzará cuando presione [Enter].
+
+La voz y el Braille estarán disponibles al principio de la instalación.
+
+[[Usage_of_the_installer]]
+==== Uso del instalador
+
+Si se adquiere con la línea de comandos, se puede omitir este tema.
+
+El menú de instalación principal se muestra a continuación:
+....
+¡Bienvenido al instalador de Slint! (versión 14.2.1)
+
+Comandos disponibles (no escriba las comillas):
+
+'doc' para conocer las características y el uso del instalador.
+'auto' para iniciar una instalación semiautomática y guiada.
+'setup' para iniciar una instalación manual.
+
+Le recomendamos que escriba 'doc' primero para preparar una instalación manual, o si
+desea cifrar la unidad donde Slint será instalado, o si necesita
+reducir el tamaño de una partición para dar espacio a Slint junto a otro sistema.
+Cuando termine de leer este menú se mostrará de nuevo.
+....
+
+Tan pronto como se muestre este menú, tendrá la mano en el proceso de instalación.
+
+Has leído la pantalla y escribes comandos en un <<virtual_terminal, terminal virtual>>. El instalador
+incluye varios terminales virtuales que comparten el mismo teclado físico y la pantalla
+, que pueden utilizarse en paralelo.
+
+El instalador comienza en el terminal virtual 1 llamado *tty1* pero puedes cambiar
+a otro. Por ejemplo, puedes cambiar a *tty2* pulsando
+*Alt-F2* luego Enter para activarlo y después volver a *tty1* pulsando
+*Alt-F1*, sin borrar la información mostrada en ambos terminales.
+*Alt-F1* significa: presione y mantenga presionada la tecla *Alt* y presione la tecla *F1*.
+
+Esto puede ser útil para continuar leyendo la documentación durante la instalación:
+por ejemplo puede cambiar a *tty2* para comenzar la instalación, cambiar a *tty1* a
+continuar leyendo la documentación, luego cambie a *tty1* otra vez para proceder a
+el siguiente paso de instalación.
+
+Esto también se puede utilizar para consultar el glosario mientras se leen otros documentos.
+
+El cuarto terminal virtual o *tty4* muestra mensajes que proporcionan información
+útil para depuración, de lo contrario no se utiliza.
+
+El instalador tiene varios modos de interacción contigo, el usuario:
+
+. Escribe comandos en el prompt y lee su salida.
+. El instalador hace una pregunta, escribe la respuesta y confirma presionando Enter.
+. El instalador muestra un menú de opciones o opciones: selecciona una de ellas usando las teclas de flecha arriba y abajo, a continuación, confirma tu elección pulsando Intro, o cancelando pulsando Escape.
+. El instalador muestra información en un paginador. A continuación, utilice las teclas de flecha para leer la línea siguiente o anterior, presione el espacio para mostrar la página siguiente, Q para dejar de leer el documento.
+
+[[Automatic_installation]]
+==== Instalación automática
+
+En modo automático, el instalador proporciona ajustes por defecto, incluyendo el entorno gráfico (Mate). Después de haber iniciado
+su nuevo sistema, puede revisar y cambiar todos los ajustes.
+
+Los pasos de instalación se detallan a continuación.
+
+. La instalación de Slint necesita al menos 28G de espacio en unidad. El instalador sondea primero las unidades, sus tamaños y el espacio libre en ellas. Dependiendo de los resultados, le permite instalar en una unidad dedicada o en el espacio libre en una unidad.
+.. Instalación en una unidad dedicada.
++
+En este modo de instalación se borrará todo el contenido anterior de la unidad. Si contiene archivos que desea guardar, ¡guárdelos en otro lugar primero!
++
+Si la unidad es extraíble y conectada a través de USB, el instalador puede hacer portable Slint permitiéndole usarlo en cualquier computadora capaz de arrancar desde una unidad USB externa.
++
+La unidad puede ser cifrada opcionalmente, para proteger sus datos de robo si la unidad o computadora se pierde o roba. Debido a que hay importantes advertencias asociadas, lea cuidadosamente el cifrado del documento primero.
+
+.. Instalación en una unidad compartida por otro sistema. Esto hace posible instalar Slint manteniendo el otro sistema usando sólo una unidad.
++
+Esto se permite si la unidad tiene al menos 28 G de espacio libre o que puede liberarse al final tiene una GPT (tabla de particiones GUID), y el instalador arranca en modo EFI: en esta configuración ambos sistemas arrancarán sin interferir entre sí.
+
+. Elija el tamaño de la partición principal de Slint, y opcionalmente el tamaño de una partición adicional, opcionalmente dejando espacio libre en la unidad para uso futuro.
++
+La partición principal generalmente tendrá un sistema de ficheros ext4. Sin embargo, si está instalado en una tarjeta SD o en una unidad eMMC, tendrá un sistema de archivos f2fs.
++
+Tendrá la oportunidad de revisar y modificar sus opciones antes de que comience la instalación.
++
+Después de la confirmación se instalan los paquetes base, que tardan unos segundos.
+
+. Si optó por un disco cifrado, escriba la contraseña que se utilizará para desbloquear la unidad en cada arranque.
+. Usted elige una contraseña para el usuario "raíz". Este es el administrador del sistema, que tiene todos los privilegios. También crea una cuenta de usuario regular, indica si necesitarás una salida Braille accesible, y si desea iniciar sesión en Slint en modo texto o gráfico.
++
+[NOTE]
+====
+Si utilizó el idioma Inglés (USA) durante la instalación, elija qué idioma utilizar para el sistema instalado, de otra manera, el instalador establece lo mismo que durante la instalación.
+====
+. El instalador intenta establecer una conexión a Internet permitiendo proponer una zona horaria correspondiente a su ubicación geográfica y posteriormente instalar paquetes de forma remota según sea necesario. Usted lo establece o confirma el propuesto.
+. A continuación, el instalador crea un archivo de intercambio en la partición del sistema, el cual podrá redimensionar fácilmente después de la instalación. Por defecto, un espacio de intercambio adicional 1. veces el tamaño de la RAM física se configurará en zram cada vez que Slint arranque.
+. Los paquetes están instalados en la unidad (la serie de paquetes de KDE es opcional). El instalador intentará establecer una conexión a Internet para que pueda descargar e instalar la versión más reciente de cada paquete. incluyendo las proporcionadas desde el lanzamiento de la imagen ISO. Así que has ganado'no tienes que descargar e instalar estos paquetes nuevos o actualizados después de la instalación.
++
+La instalación de todos los paquetes toma entre 10 y 40 minutos dependiendo del hardware.
+
+. A continuación, el sistema está configurado y el gestor de arranque GRUB está instalado. Si Slint ha sido instalado en una unidad dedicada, puede arrancar tanto en los modos Legacy como EFI. De lo contrario, sólo se iniciará en modo EFI. En cualquier caso, el menú de arranque tendrá una entrada adicional de arranque "rescate" para detectar y arrancar el sistema operativo instalado.
+. Se le pedirá que cree una memoria de arranque de rescate en una unidad flash USB. Puede usar esto para arrancar Slint si no puede arrancar desde su menú de arranque.
+
+Por último, elimine el medio de instalación y reinicie para iniciar su nuevo sistema Slint.
+Puede mostrar una vista previa del menú de arranque antes de reiniciar.
+
+[[Manual_installation]]
+==== Instalación manual
+
+Una instalación manual consiste en dos pasos principales.
+
+. Prepara la(s) unidad(es) para la instalación. Esto incluye: diseño de la disposición de las particiones, crear las particiones y opcionalmente formatearlas, es decir, crear sistemas de ficheros en ellas. El instalador puede formatear las particiones de Linux si lo prefiere.
+. Escriba *configuración* para realizar más preparación, instalación y configuración.
+
+===== Prepara la(s) unidad(es) para la instalación.
+
+Si es posible, instale Slint en su propio disco.
+
+También puede instalarlo en una unidad compartida por otro sistema, pero entonces preferiblemente
+si arranca en modo EFI, para que cada sistema, con su propio cargador de SOS, sea
+independiente de otros y sus actualizaciones. Entonces necesita liberar algo de espacio en
+la unidad para instalar Slint. Puede utilizar el comando 'freespace' del instalador de Slint
+para hacerlo si la última partición de la unidad tiene un ext2, ext3 o
+ext4 sistema de archivos, si no lo hace desde el sistema ya instalado.
+
+Si es posible, permitir que la máquina arranque en modo EFI y configurar una tabla de particiones GPT (GUID
+) para la unidad de destino, para máxima flexibilidad.
+
+El instalador utiliza el software GRUB para arrancar tanto EFI como Legacy.
+
+Para instalar Slint en su propia unidad necesitará:
+
+* Para iniciar en modo Legado con un GPT, una partición de tipo BIOS Arranque necesario por
+GRUB en este contexto. Un tamaño de 1M para esta partición es suficiente. Está
+reservado para GRUB y no debe ser formateado.
+* Para iniciar en modo EFI una partición de tipo ESP (Partición del Sistema EFI) de tamaño
+100M para almacenar el cargador EFI OS. Esta partición se puede crear en un GPT como en
+una tabla de particiones DOS.
+* una partición de tamaño al menos 28G para el sistema, de tipo Linux.
+
+En caso de un GPT, recomendamos establecer una partición de Arranque BIOS y un ESP para
+más flexibilidad, permitiendo arrancar Slint en EFI así como en el modo Legacy.
+
+Crear otras particiones es opcional. Si desea una partición de intercambio,
+debería tener el tipo de intercambio de Linux. Alternativamente, o además, puede configurar un archivo de intercambio.
+'setup' propondrá configurarlo después de haber creado el sistema de archivos de
+la partición raíz.
+
+El instalador incluye varias aplicaciones de particionamiento: cfdisk, fdisk, sfdisk,
+cgdisk, gdisk, sgdisk, parted. Las aplicaciones con "g" en su nombre pueden
+manejar sólo gpt, parted puede manejar tablas de particiones DOS, así como GPT. fdisk,
+cfdisk y sfdisk pueden manejar tablas de particiones DOS. Además, wipefs
+(para borrar las firmas previas de la tabla de particiones y del sistema de archivos) y partprobe
+(para informar al núcleo de los cambios en una tabla de particiones) están disponibles.
+La aplicación lsblk muestra información sobre dispositivos de bloques y particiones.
+
+Puede formatear las particiones usted mismo, o dejar que el instalador lo haga por usted. Aquí
+'formato' significa: crear un sistema de archivos para gestionar archivos en la partición. Tenga en cuenta
+que el ESP debe tener un sistema de archivos vfat, una partición de Arranque Bios no
+sistema de archivos en absoluto. Para particiones Linux, el instalador de Slint puede manejar estos tipos de sistema
+de archivos: btrfs, ext2, ext4, f2fs, jfs, reiserfs, xfs.
+
+El instalador puede configurar puntos de montaje para particiones compartidas o usadas por
+Windows para permitir el acceso a ellas desde Slint. Deberían tener un sistema de archivos de tipo
+vfat, msdos o ntfs, ya sea configurado por Windows o creado antes de ejecutar la configuración.
+
+===== Acciones gestionadas por el programa de instalación.
+
+El programa de configuración muestra un menú con estas entradas o pasos:
+....
+KEYMAP para volver a mapear su teclado (opcional)
+ADDSWAP para subir su(s) partición(opcionales)
+TARGER para configurar sus particiones de destino
+SOURCE para seleccionar el medio fuente que contiene los paquetes de software
+INSTALAR para instalar los paquetes de software
+CONFIGURAR para configurar su sistema Slint.
+....
+
+Estas entradas se comentan a continuación. Los pasos TARGET, SOURCE, INSTALL y CONFIGURE
+son obligatorios y deben ser realizados en este orden.
+
+* KEYMAP puede ser utilizado para cambiar el mapa del teclado inicialmente elegido.
+* ADDSWAP se puede utilizar para configurar partición(es) de intercambio. En su lugar, puede configurar un archivo de intercambio después de la instalación y/o configurar un espacio de intercambio en zram.
+* En el paso TARGET el instalador pregunta primero qué partición Linux alojará el directorio raíz (/), pregunta si desea instalar un sistema de ficheros en él. Usted SHOULD está de acuerdo si aún no está hecho, LA INSTALACIÓN DE ELSE FALLACIÓN en el paso INSTALL debido a la falta de espacio para instalar los paquetes. A continuación, elija un sistema de archivos entre los propuestos.
++
+El instalador muestra otras particiones de Linux, y establece para cada uno si desea que
+lo utilice en Slint un punto de montaje y un sistema de archivos.
+* En el paso SOURCE selecciona el medio que contiene los paquetes de software a instalar. Es muy probable que este contenga el instalador.
+* En el paso INSTALL se instalan todos los paquetes incluidos en el medio de instalación, excepto los paquetes de KDE establecidos si no'no lo desea.
+* En el paso CONFIGURE el instalador configura el nuevo sistema a su gusto. Esto incluye los siguientes ajustes o opciones:
++
+** Crea una memoria de arranque USB de rescate.
+** Instalar y configurar el gestor de arranque GRUB y el cargador asociado del sistema operativo.
+** Elige si quieres o no usar el ratón en la consola.
+** Configurar la red.
+** Decide qué servicio debe iniciarse en el arranque.
+** Seleccione si el reloj de hardware utiliza UTC o hora local, establezca la zona horaria.
+** Elija el gestor de inicio de sesión: modo de consola o gráfico.
+** Elija la sesión gráfica por defecto.
+** Establezca el idioma por defecto y la variante regional en el sistema instalado. Algunos paquetes específicos del idioma elegido están instalados.
+
+Todo hecho, elimine el medio de instalación y reinicie para iniciar Slint.
+
+[[Slint_in_an_encrypted_drive]]
+==== Encender en una unidad cifrada.
+
+En modo automático, el instalador propone cifrar la unidad donde instala
+Slint, si la dedica a Slint. Si está de acuerdo, en cada arranque el cargador de arranque GRUB le preguntará la contraseña
+que habrá escrito durante la instalación para desbloquear la unidad, antes de
+mostrar el menú de arranque. Ten en cuenta que desbloquear la unidad tomará unos
+segundos (unos diez segundos).
+
+Tener una unidad cifrada evita la robo de datos que contiene en caso de
+pérdida o robo de la máquina, o de una unidad extraíble. Pero esto ganó'no te protegerá si la computadora permanece funcionando y desatendida, sólo
+si la máquina ha sido apagada completamente!
+
+Durante la instalación, la partición del sistema Slint será cifrada, y también la
+partición adicional que puede solicitar.
+
+Una partición Slint (o root) será nombrada: /dev/mapper/cryproot una vez
+abierta, si ha sido cifrada.
+
+Esto es mostrado por este comando:
+
+----
+lsblk -lpo nombre,fstype,mountpoint | grep /$
+----
+
+Lo que da un ouptut como:
+----
+/dev/mapper/cryptroot ext4 /
+----
+
+Este comando en su lugar:
+
+----
+lsblk -lpo name,fstype,mountpoint | grep /dev/sda3
+----
+
+da:
+
+----
+/dev/sda3             cryptoLUKS
+----
+
+/dev/sda3 es ahora una partición "cruda" que incluye el llamado "encabezado LUKS"
+que nunca necesitará ni debe acceder directamente.  Alberga todo lo que es
+necesario para cifrar o descifrar la partición /dev/mapper/cryptroot, que
+realmente aloja sus datos (en este ejemplo el sistema Slint).
+
+[WARNING]
+====
+Si olvida la contraseña todos los datos de la unidad se perderán irrecuperablemente!
+Así que escribe o registra esta contraseña y pon el registro en un lugar seguro tan pronto como
+termine.
+
+Mueren. Si esto sucede y se cifran sus datos se perderán.
+Por lo tanto, realizar regularmente una copia de seguridad de sus datos importantes no es opcional.
+
+Además, haga una copia de seguridad de la cabecera de luks que podrá restaurar
+la partición luks se dañaría por cualquier razón. El comando podría estar en nuestro ejemplo
+:
+----
+luksHeaderBackup /dev/sda3 --header-backup-file <file>
+----
+donde <file> es el nombre del archivo de copia de seguridad, que guardará en un lugar seguro.
+
+Entonces necesitaría restaurar la copia de seguridad, tipo:
+----
+luksHeaderRestore /dev/sda3 --header-backup-file <file>
+----
+
+Don't redimensionar una partición de una unidad cifrada ya que después estaría
+definitivamente bloqueado y todos los datos que contiene se perderán! Si realmente necesitas más espacio, necesitarás hacer una copia de seguridad de todos los archivos que
+quieres guardar, entonces instale lo suficiente y restaure los archivos de respaldo.
+
+Elige una frase de paso fuerte, para que un ladrón pueda tardar demasiado tiempo en descubrir
+para que tenga valor.
+
+Nunca te molestes con la llamada "cabecera LUKS" ubicada en la partición raw
+(la tercera, como e. . /dev/sda3 para la partición raw encima de la partición del sistema Slint.
+Prácticamente: don't crear un sistema de archivos en esta partición,
+don't lo hacen parte de un arreglo RAID y generalmente don't escritura a él: todos los datos
+se perderían irrecuperablemente!
+====
+
+Para evitar frases débiles el instalador requiere que la contraseña incluya:
+
+. Al menos 8 caracteres.
+. Sólo letras minúsculas no acentuadas y mayúsculas, dígitos de 0 a 9, espacio y siguientes caracteres de puntuación:
++
+----
+ ' ! " # $ %  & ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~
+----
++
+Esto garantiza que incluso un nuevo teclado tendrá todos los caracteres necesarios para
+escribir la frase de acceso.
+
+. Al menos un dígito, una letra minúscula, una letra mayúscula y un carácter de puntuación.
+
+GRUB asume que el teclado "nosotros" está en uso cuando escribe la frase de acceso.
+For this reason, if during installation you use an other keyboard map, before
+asking the passphrase the installer will set the keyboard map to "us", and
+after having recorded it restore the previously used one. En este caso, el instalador de
+también deletreará cada carácter escrito de la frase de paso, ya que puede
+diferir de la que se escribe en la clave.
+
+
+La configuración de cifrado de la aplicación se utiliza para cifrar la unidad. Para saber más escribe
+después de la instalación: +
+-----
+man cryptsetup
+-----
+y para saber aún más leído: https://gitlab.com/cryptsetup/cryptsetup/-/wikis/FrequentlyAskedQuestions[este FAQ].
+
+[[first_steps_after_installation]]
+==== Primeros pasos después de la instalación
+
+Aquí están las primeras tareas que realizar después de la instalación
+
+En este documento, todo el texto después de un carácter # son comentarios de los comandos
+sugeridos, no para escribir.
+
+===== Actualización inicial de software
+
+Después de la instalación, el sistema debe ser actualizado para obtener la versión más recientemente
+suministrada de cada software, así como el nuevo software proporcionado desde la
+publicación de la ISO. Esto es especialmente necesario si no hay conexión de red
+disponible durante la instalación, como entonces sólo los paquetes incluidos en el medio de distribución
+fueron instalados, y podrían estar desactualizados.
+
+La mayoría de los comandos escritos a continuación solicitan el derecho administrativo asociado a una cuenta
+específica llamada 'root', para el cual ha grabado una contraseña
+durante la instalación.
+
+Para ejecutar un comando como 'root', primero tipo
+----
+su -
+----
+entonces emite la contraseña para root y presione Enter antes de escribir el comando.
+
+Esto sustituye a "sudo" usado en otras distribuciones.
+
+Cuando termine de emitir comandos como 'root', presione Ctrl+d o escriba 'exit' para obtener
+su estado "usuario normal".
+
+Para actualizar, escriba como root en una consola o un terminal gráfico:
+----
+slapt-get --add-keys # recuperar las claves para autenticar los paquetes
+slapt-get -u # actualizar la lista de paquetes en las réplicas
+slapt-get --install-set slint # obtener los nuevos paquetes
+slapt-get --upgrade # Obtener las nuevas versiones de los paquetes instalados
+dotnew # lista los cambios en los archivos de configuración
+----
+Cuando ejecute dotnew, acepte reemplazar todos los archivos de configuración antiguos por otros nuevos.
+Esto es seguro como lo hiciste'no hacer ninguna personalización todavía.
+
+Alternativamente, puede utilizar estas interfaces gráficas: gslapt en lugar de
+slapt-get, y dotnew-gtk en lugar de dotnew.
+
+Para aprender más acerca de slapt-get, tipo:
+----
+man slapt-get
+----
+o como raíz:
+----
+slapt-get --help
+----
+y leer /usr/doc/slapt-get*/README.slaptgetrc.Slint
+
+===== Configuración
+
+Estas son las utilidades que puede utilizar para (re)configurar su sistema Slint después de
+instalación. They are presented in further details in chapter <<Manage_your_system, Administrar su sistema>>.
+
+A menos que se indique lo contrario, estas utilidades deberían utilizarse como raíz. Para convertirse en root,
+es decir, obtener el estado 'admin' y privilegios escribe "su -" y luego root's contraseña.
+Para recuperar el estado de usuario normal pres Ctrl+d o escriba exit.
+
+La mayoría de las utilidades tienen una línea de comandos y una versión gráfica. La versión de línea de comandos
+se enumera primero a continuación. A menos que se indique lo contrario, todos los comandos deben ser
+tipos como root.
+
+*Ajustes generales*
+
+* Para administrar usuarios: configuración de usuario o gtkusersetup
+* Para cambiar el idioma y la región: localesetup o gtklocalesetup
+* Para cambiar la configuración del teclado y el método de entrada: configuración del teclado o gtkkeyboardsetup
+* Para configurar la fecha, la hora o la zona horaria: reloj configuración y gtkclocksetup.
+* Para elegir qué servicios empiezan al arranque: servicesetup y gtkservicesetup.
+* Para (re)configurar la red: configuración de red.
+* Para elegir iniciar en modo texto o gráfico y en el caso posterior el gestor gráfico de login: login-chooser
+* Para elegir un escritorio o una sesión gráfica: selector de sesión (como usuario habitual)
+* Si KDE está instalado para mostrar u ocultar sus aplicaciones en los menús de otro escritorio's : show-kde-apps o ocultar-kde-apps.
+
+*Ajustes de accesibilidad*
+
+Para elegir y habilitar un lector de pantalla de consola o desactivar todos ellos escriba como root:
+----
+hablar con
+----
+
+De Slint versión 14.2. en adelante el primer usuario normal creado durante la instalación tendrá la voz y braille ya habilitados en el sistema instalado, si se usó la voz y se solicitó braille durante la instalación. Otros usuarios tendrán que comprobar o hacer ajustes adicionales, como se indica a continuación.
+
+Para activar braille:
+
+. Hacer ejecutable de escritura como root: /rc.d/rc.brltty
++
+----
+chmod 755 /rc.d/rc.brltty
+----
+. Hazte miembro del grupo braille, escribiendo como root:
++
+----
+usermod -G braille -un nombre de usuario
+----
++
+En el comando anterior, reemplace el nombre de usuario con su nombre de usuario.
+. Luego edite como root el archivo /brltty.conf para incluir la configuración.
+
+Para habilitar el discurso a nivel del sistema escriba como root:
+----
+selector de acceso
+----
+y elija uno de los modos de inicio de sesión que hablan: texto, ligero o gdm
+
+Para habilitar la voz en entornos gráficos tan regulares como el tipo de usuario de este usuario:
+----
+orca-on
+----
+Entonces el lector de pantalla de Orca comenzará a hablar la próxima vez que inicie un entorno gráfico
+
+
+Para desactivar la voz en entornos gráficos, escriba en su lugar:
+----
+orca-off
+----
+
+==  Uso ciego
+
+Este capítulo presenta las formas en que puede interactuar con su sistema Slint para que
+haga lo que desee.
+
+=== ¿Qué es un sistema Slint?
+
+Slint es un conjunto de software que corresponden aproximadamente a estas categorías:
+
+* El sistema operativo, hecho con el núcleo <<kernel, de Linux>> y <<utilities, utilidades>>. Actúa como una interfaz entre el usuario, las aplicaciones y el hardware
+* Las <<Applications, aplicaciones>> que realizan las tareas que los usuarios quieren realizar.
+
+Slint puede utilizarse en dos modos distinguidos por la apariencia de la pantalla
+y la forma de interactuar con el sistema:
+
+* En modo texto escribe comandos interpretados por un intérprete de comandos <<shell, >>. Estos comandos pueden iniciar una utilidad o una aplicación. El modo de texto también se llama <<console, modo de consola>>. En este modo, la pantalla sólo muestra los comandos y su salida en un fondo (generalmente negro).
+* En modo gráfico elementos gráficos como ventanas, paneles o iconos se muestran en la pantalla, generalmente asociados a aplicaciones o utilidades. El usuario interactúa con estos elementos utilizando un ratón o un teclado.
+
+Los comandos también pueden escribirse en modo gráfico dentro de una ventana asociada con
+un terminal <<terminal, >> en la que ejecuta una shell.
+
+=== Cómo comienza Slint
+
+Tras la instalación, el software enviado en la ISO de la instalación o descargado
+desde los repositorios remotos se instala en una unidad <<drive, >>.
+
+Al arrancar Slint, el <<firmware, firmware>> primero comprueba el hardware y luego
+busca un programa llamado cargador de SO (comúnmente llamado un cargador de arranque) que
+inicia.
+
+Puede haber varios cargadores de SO en la máquina. En este caso, el firmware
+permite al usuario elegir cuál iniciar en un menú.
+
+En Slint el software
+que crea e instala un cargador de arranque es GRUB. ctualmente el cargador de arranque
+construido por GRUB es también un gestor de arranque, ya que permite elegir qué sistema operativo iniciar si
+varios están instalados.
+
+El cargador de SO construido por GRUB puede instalarse en un sector de arranque
+(en caso de arranque antiguo) o en una Partición del Sistema EFI o ESP (en
+caso de arranque EFI).
+
+El objetivo del cargador de Slint es iniciar el sistema Slint. Para hacer esto primero cargará en
+RAM el núcleo <<kernel, >>, entonces el <<initrd, initrd>>, que a su vez
+inicializa el sistema Slint.
+
+En el último paso de esta inicialización se invita al usuario a "iniciar sesión", en
+otras palabras para conectar uneself al sistema y tomarle la mano. Para hacer
+que el usuario primero escriba uno's nombre de usuario (o de inicio de sesión) y luego contraseña, de la cual
+se marca la validez. Slint como otras distribuciones de Linux siendo multi-usuarios esto
+permite a este usuario acceder a uno's archivos pero no a los de otros usuarios.
+
+En el momento de la instalación, ha elegido iniciar Slint en modo texto o gráfico.
+
+* Si eligió C para <<console, consola>> después de la inicialización del sistema escriba su nombre de usuario (o login) entonces su contraseña, cada entrada que se confirma presionando la tecla Intro, entonces puede escribir comandos.
+* Si eligiste G (gráfico) escribes la misma información en un gestor de pantalla <<display_manager, >> o administrador de inicio de sesión, que luego inicia el <<graphical_environment, entorno gráfico>>.
+
+Después de la instalación, si puede cambiar el modo escribiendo como root `login-chooser`,
+en modo consola, así como en modo gráfico (en un <<terminal, terminal>>). Este comando
+le permite elegir `texto` (sinónimo del modo consola), o, para
+modo gráfico, entre varios gestores de pantalla. Su elección será efectiva
+en el próximo arranque de la computadora.
+
+Ahora presentaremos los entornos gráficos, luego cómo usar un shell.
+
+=== Los entornos gráficos
+
+<<the_windows, The windows>> +
+<<the_work_spaces, The work spaces>> +
+<<the_desktop, The desktop>> +
+<<the_top_panel, The top panel>> +
+<<the_bottom_panel, The bottom panel>> +
+<<the_slint_control_center, The Slint Control Center>> +
+<<graphical_terminals, Graphical terminals>> +
+<<key_bindings, Key bindings>>
+
+Un entorno gráfico completo incluye varios componentes, entre los cuales un gestor de ventanas que dibuja ventanas en la pantalla asociada con las aplicaciones, se mueve, redimensiona y cierra estas ventanas.
+
+Slint permite incluir varios entornos gráficos: BlackBox, Fluxbox, KDE, LXDE y MATE, TWM, XFCE y WindowMaker. Se trata de una cuestión de preferencia que usted elija.
+
+KDE, LXDE MATE y XFCE están repletos de escritorios, los otros principalmente gestores de ventanas
+pero incluyen un panel con un menú de la aplicación. Todos le permiten
+acceder a sus documentos y aplicaciones, generalmente abiertos en una ventana, incluyen un panel y un menú.
+
+El entorno gráfico predeterminado se puede cambiar escribiendo como `selector de sesión` de usuario normal. En modo gráfico también puede elegir al iniciar sesión.
+
+Ahora describiremos brevemente los componentes del escritorio Mate, que es el predeterminado y también el más accesible con voz y braille. Otros escritorios completos tienen características similares.
+
+Utilizando el ratón puede descubrir las características de cada componente haciendo o simulando un clic derecho, medio o izquierdo. Mover o eliminar la mayoría de los componentes, modificarlos y añadir otros nuevos se pueden hacer de la misma manera.
+
+Estos componentes pueden llegar a mover el ratón y también a través de atajos de teclado. Indicamos a continuación dentro de paréntesis los atajos de teclado que permiten alcanzar, en otras palabras, poner el foco en cada elemento. También resumiremos los <<key_bindings, enlaces de teclas>> para el escritorio Mate (usando el administrador de ventanas Marco predeterminado) y los del administrador de ventanas Compiz.
+
+[TIP]
+====
+Puede descubrir la mayoría de las características de las aplicaciones y otros componentes de Slint con un botón derecho, medio o clic izquierdo del ratón.  Por ejemplo, haciendo clic en el panel, la barra de título, los botones izquierdo y derecho de cualquier ventana, un icono en el panel, o en un espacio vacío de la pantalla.
+====
+[[the_windows]]
+==== Las ventanas
+
+Una ventana es un área rectangular asociada a una aplicación. Windows puede ser movido, redimensionado, maximizado, restaurado reducido, cerrado (terminando la aplicación que maneja) usando los atajos de ratón o teclado.
+
+[[the_work_spaces]]
+==== Los espacios de trabajo
+
+Para permitir tener muchas ventanas abiertas de forma ordenada, el entorno gráfico proporciona varios espacios de trabajo y permite cambiar entre ellas. Cada espacio de trabajo mostrará el mismo escritorio y paneles, pero las ventanas se pueden colocar en un espacio de trabajo específico o en todos ellos. Esta opción está disponible con un clic derecho en el borde superior de la ventana. Cambiando a otro área de trabajo se puede hacer clic en su posición en el panel inferior de la pantalla, en el cambiador de espacio de trabajo, como se indica a continuación.
+
+[[the_desktop]]
+==== El escritorio
+
+El escritorio engloba toda la pantalla, en la que se pueden poner otros componentes, en caso de Mate y como se envía en Slint un panel superior e inferior, y cuatro iconos que de arriba a abajo permiten abrir en ventanas:
+
+* el directorio raíz en el gestor de archivos
+* tu directorio de inicio en el gestor de archivos
+* el Slint Control Center
+* la papelera puede, donde se colocan los archivos que pretende eliminar pero no'todavía.
+
+Windows de la aplicación que se inicia como también se puso en el escritorio.
+
+Mate incluye dos paneles, que se presentan como zonas horizontales rectangulares delgadas, uno en la parte superior y otro en la parte inferior de la pantalla.
+
+Presionando Ctrl+Alt+Tabla permite alternar entre el escritorio, los paneles superior e inferior
+
+Presionando Alt+Tab permite alternar entre las ventanas del escritorio.
+
+[[the_top_panel]]
+==== El panel superior
+
+Representa de izquierda a derecha
+
+* Tres menúes:
+** Un menú de Aplicaciones que puede abrirse presionando Alt+F1. Desde allí se pueden abrir los otros menús usando la tecla de la flecha derecha. Puede utilizar las teclas de flecha para llegar al menú de los demás.
+** Menú Un Lugar.
+** Un menú del sistema que da acceso a un submenú de preferencias, el Mate Control Center y botones para obtener ayuda sobre el escritorio, bloquear la pantalla, cerrar la sesión y apagar la computadora.
+* Lanzadores de aplicaciones para mate-terminal, el gestor de archivos caja, el cliente de correo electrónico thunderbird, el navegador web firefox, el editor de texto Geany.
+* Una notificación que puede reunir applets como un gestor de Bluetooth, un mezclador de sonido, un gestor de red y un aviso de "actualización disponible".
+* Un reloj y un calendario.
+* Un bloqueador de pantalla.
+* Un diálogo de sesión cerrado.
+* Un diálogo de apagado.
+
+[TIP]
+====
+* Para personalizar el panel a su gusto: haga clic derecho en un espacio vacío en el panel.
+* Si desea mover un elemento en el panel: Haga clic en el elemento, arrastre el ratón, y seguirá el ratón hasta que el botón central sea liberado.
+* Para una ayuda contextual pulse F1
+====
+
+[[the_bottom_panel]]
+==== El panel inferior
+
+Representa de izquierda a derecha:
+
+* Una lista de ventanas que se puede configurar con un clic derecho sobre la línea de tres puntos verticales al principio y elegir preferencias. Esto también permite iniciar el monitor del sistema en una ventana.
+* Un botón *para mostrar escritorio*. Una izquierda minimizará u ocultará todas las ventanas, haciendo clic una vez más restaurará las ventanas en su estado anterior.
+* Un interruptor de espacio de trabajo, o paginador. Permite cambiar de un espacio de trabajo a otro y también mover ventanas de un espacio de trabajo a otro por arrastrar y soltar.
+
+Los gestores de ventanas están configurados en Slint para que sean usables sin cambios. Sin embargo, puede reconfigurarlos a su gusto. La forma de hacerlo varía de un gestor de ventanas a otro. Para más información, vea: http://docs.slackware.com/en:user_settings[Configuración de usuario].
+
+[[the_slint_control_center]]
+====  El Slint Control Center
+
+Finalizaremos esta introducción al uso de Slint's presentando el Slint Control Center. Puede mostrarlo desde el menú de la aplicación en el panel superior o haciendo clic en su icono en el escritorio o escribiendo qcontrolcenter en un diálogo "Ejecutar..." planteado con Alt+F2
+
+El objetivo del panel de control es reunir aplicaciones que sean útiles para la administración del sistema, documentación, y ajustes de manera consistente en todos los gestores de ventanas.  Al hacer clic en una categoría en el menú de la izquierda, puede mostrar las aplicaciones correspondientes en el panel derecho.  Las presentaremos en formato de tabla.  Esto nos dará la oportunidad de presentar las herramientas de administración que tienen también una interfaz gráfica de usuario.
+
+La mayoría de las herramientas administrativas deberían utilizarse con privilegios administrativos.  Se le pedirá la contraseña de la cuenta root para iniciar una herramienta.
+
+[options="autowidth"]
+|====
+<|**Categoría** <|**Herramienta** <|**Propósito y comentarios**
+<|Aplicaciones <|Dotnew <|Esta herramienta te permite administrar el nuevo (llamado _algo. y_ de ahí el nombre de la herramienta) vs archivos de configuración antiguos después de haber actualizado algunos paquetes.  Es'un buen hábito correr si después de una actualización.  Le dirá si hay algo de lo que cuidar y luego presentarle una selección de acciones.
+<|Aplicaciones <|Gestor de paquetes Gslapt <|Gslapt es un front-end gráfico para slapt-get.  Es una herramienta útil para realizar la administración de <<software_management, software en Slint>>.  Le permite buscar, instalar, eliminar, actualizar y configurar paquetes de software.
+<|Aplicaciones <|Gestor de SlackBuild de Fuentes <|Sourcery es una interfaz gráfica para slapt-src.  Le permite buscar scripts de SlackBuilds que pueda utilizar para automatizar el proceso de compilación e instalación de paquetes de software.  También puede eliminar y reinstalar paquetes en su sistema.
+<|Aplicaciones <|Buscador de aplicaciones <|Encuentre y ejecute las aplicaciones instaladas en su sistema.  El campo de búsqueda es muy práctico para encontrar aplicaciones en comparación con la búsqueda manual en el menú de la aplicación.
+<|Hardware <|Configuración de impresora <|Utilizado para configurar cualquier impresora conectada.  Es un front-end del servidor de impresión CUPS, que se está ejecutando por defecto en Slint.
+<|Hardware <|Control de impresión de cupones <|Esta aplicación le permite configurar el servicio CUPS, administrar impresoras y controlar trabajos de impresión a través de un navegador web.
+<|Hardware <|Keyboard <|Estas herramientas le permiten configurar el tipo de teclado, el mapa de teclas, y habilitar el servicio SCIM.  SCIM te ayuda al permitirte escribir caracteres para los que no hay ninguna tecla en el teclado (como en muchos idiomas asiáticos).
+<|Información <|Sitio web de SlackDocs <|Los documentos de este wiki están destinados principalmente a un usuario de Slackware, pero muchos de ellos son útiles para un usuario de Slint.  *Precaución:*  Algunas de las herramientas listadas, como slackpkg, no deben ** ser utilizadas en Slint.
+<|Información <|Documentación de Slackware <|Esta documentación también puede ser útil para los usuarios de Slint.  Slint se basa en Slackware.
+<|Información <|Documentación de Slint <|Esto da acceso local a los documentos también disponibles en el sitio web de Slint's.
+<|Información <|Foro de Slint <|Las personas cuyo idioma nativo no es el inglés también pueden publicar en los foros localizados de Salix.
+<|Información <|Slint sitio web <|El sitio web de Slint proporciona documentación, enlaces y una forma de encontrar los ISOs y paquetes.
+<|Información <|Información del sistema <|Esta herramienta recopila información sobre su ordenador, tales como sus dispositivos conectados (internos y externos), y lo muestra todo en un solo lugar.  También puede hacer marcación de banco del sistema.
+<|Ajustes <|Reloj del sistema <|Esta herramienta le permite configurar el reloj del sistema.
+<|Ajustes <|Nombres de host <|Esta herramienta le permite asociar direcciones IP con nombres de dominio y nombres de host
+<|Ajustes <|Idioma del sistema <|Esta herramienta le permite establecer la localización del sistema (idioma y peculiariedades geográficas), para que las aplicaciones que utilice muestren información en este local (si está disponible).
+<|Sistema <|Reloj del sistema <|Esta herramienta le permite establecer la zona horaria, elija si el reloj debe sincronizarse con los servidores de Internet (esto es recomendado, pero por supuesto necesita una conexión a Internet), y, si no, establezca la fecha y la hora.
+<|Sistema <|Nombres de host <|Esta herramienta le permite configurar el nombre de host del sistema. Es útil si utiliza la instalación de Slint como servidor, en una red de área local o en Internet.  El nombre de host ayuda a que los equipos conectados en red se identifiquen entre sí por un nombre común si un servicio del sistema de nombres de dominio no está en uso.
+<|Sistema <|Reconstruir caché de iconos <|Esta utilidad reconstruye la caché de iconos, que es un archivo que registra todos los iconos en el sistema, permitiéndoles un acceso más rápido. Ejecutarlo cuando se instalen nuevos iconos en su sistema.
+<|Sistema <|Servicios del sistema <|Esta herramienta le permite elegir qué servicios serán habilitados al inicio.  Por ejemplo, Bluetooth, el servidor de impresión CUPS, o un servidor web.  Úsalo para cambiar la configuración por defecto si sabes lo que estás haciendo.
+<|Sistema <|Usuarios y grupos <|Esta herramienta le permite añadir, eliminar y configurar cuentas de usuario y grupos. Es principalmente útil en sistemas multiusuario.
+<|Sistema <|GUEFI Arranque Manager <|Esta herramienta es una interfaz gráfica del comando efibootmanager.  Permite editar el firmware EFI's menú de arranque.  Acciones como añadir, eliminar o cambiar el orden de los elementos del menú.
+<|Sistema <|Monitor de sistema MATE<|Esta herramienta muestra información sobre el sistema, como el proceso, uso de recursos (RAM, CPU, tráfico de red) y uso de sistemas de archivos.
+|====
+
+[[graphical_terminals]]
+==== Terminales
+
+Puede escribir comandos en modo gráfico como en modo de consola, si abre una ventana
+con un terminal en ella. En Mate solo puedes presionar Ctrl+Alt+t, o hacer clic en
+en el icono de la terminal en el panel superior, o abra un diálogo "Ejecutar... " presionando
+Alt+F2 y luego escribiendo `mate-terminal` en la ventana pequeña que se abre.
+
+La mayor parte de la información de abajo sobre la línea de comandos y el intérprete de comandos en modo Consola
+también se aplican a la escritura de comandos en un terminal. Puede cerrar mate-terminal
+presionando Alt+F4 como cualquier otra ventana.
+
+[[key_bindings]]
+==== Enlaces de teclas
+
+Aquí presentamos los enlaces de teclas por defecto para el gestor de ventanas Compiz y el escritorio Mate, y cómo personalizarlos.
+
+[NOTE]
+====
+Cuando un enlace de clave incluye uno o más *+* de signo, pulsa entonces mantén pulsadas de izquierda a derecha las teclas antes de la última como una tecla `Shift` , luego pulse la última tecla.
+====
+===== Enlaces de teclas para el escritorio Mate
+
+Al usar Mate in Slint, algunos enlaces de teclas son los mismos usando
+los administradores de ventanas Marco o Compiz. Están listados a continuación:
+----
+Alt+Tab Ciclo entre ventanas
+Mayús+Alt+Tab Ciclo hacia atrás entre ventanas
+Control+Alt+Tab Ciclo entre paneles y escritorio
+Mayús+Control+Alt+Tab Ciclo hacia atrás entre paneles y escritorio
+----
+Una vez en un entorno gráfico, puede alternar entre él y una consola.
+Deja que's diga que quieres usar tty2 (tty1 ocupado):
+Presiona `Ctrl+Alt+F2`y luego inicia sesión. +
+Presione `Ctrl+Alt+F7` para volver al entorno gráfico.
+
+Los mismos enlaces generales de claves se utilizan en todos los entornos gráficos,
+con algunas excepciones, siendo Mod1 generalmente la tecla Alt izquierda: +
+----
+Mod1+F1 levanta el menú de aplicación del panel.
+Mod1+F2 levanta un diálogo 'ejecutar...', pero en Fluxbox (inicia lxterminal en su lugar).
+----
+También en Fluxbox:
+----
+Mod1+F3 restarts Fluxbox.
+Mod1+F4 cierra la ventana enfocada.
+----
+El menú de aplicación del panel's tiene el mismo diseño en todos los
+entornos gráficos accesibles enviados pero MATE. De arriba hacia abajo:
+
+Emulador de terminal: `mate-terminal` en MATE, En otro lugar `lxterminal` por defecto +
+Administrador de archivos: `Caja` en MATE en otro lugar `PCManfm` por defecto +
+Navegador web: `Firefox` por defecto +
+Cliente de correo: Thunderbird por defecto +
+Preferencias +
+Panel de control no accesible pero's una aplicación Qt4) +
+Aplicaciones ordenadas por categoría +
+Diálogo de ejecución +
+Diálogo de cierre de sesión (también permite apagar y reiniciar)
+
+Puede usar las teclas de flecha para navegar en el menú.
+
+En MATE, el panel superior incluye a su izquierda de izquierda a derecha:
+
+los menús (Auplicaciones), luego Coloca (Sistema) +
+lanzadores para mate-terminal, caja (gestor de archivos), Firefox, Thunderbird y el editor de texto
+de la geanía. +
+En su derecha todavía de izquierda a derecha:
+un área de notificación +
+un botón de bloqueo de pantalla +
+un botón de cierre de sesión +
+un botón de detención o reinicio.
+
+El panel inferior tiene de izquierda a derecha:
+
+una lista de ventanas +
+un plugin "mostrar destktop" +
+un conmutador de espacio de trabajo.
+
+Aún en Mate, los usuarios parcialmente videntes pueden usar la ventana de compiz en su lugar o
+marco que es el valor por defecto.
+
+Como usuario habitual, escribe:
+----
+gsettings establece org.mate.session.required-components windowmanager compiz
+----
+Volver al marco:
+----
+gsettings establecer marco org.mate.session.required-components windowmanager
+----
+Este ajuste tendrá efecto en el próximo comienzo de una sesión de Mate.
+
+O para hacer el cambio sólo para el tipo de sesión actual:
+----
+compiz --replace &
+----
+y volver al marco:
+----
+marco --replace &
+----
+El reemplazo será efectivo inmediatamente
+
+Esta configuración también está disponible gráficamente desde el ajuste mate-tweak, en la categoría
+de Windows.
+
+Puede acceder a la configuración específica de Compiz escribiendo:
+----
+ccsm &
+----
+===== Enlaces de teclas para el gestor de ventanas Compiz
+
+In the default settings indicated below the key or mouse buttons are
+named like this:
+
+Super: Windows key on most keyboards +
+Button1: Left Mouse Button (if used with the right hand) +
+Button2: Centre Mouse Button, or click with the scroll wheel) +
+Button3: Right Mouse Button (if used with the right hand) +
+Button4: Scroll Wheel Up +
+Button5: Scroll Wheel Down
+Button6: (I don't know, I thought that was on mouses for gamers) +
+
+The default settings listed below by category can be changed from the
+CCSM. We indicate the short name of the plugin between square brackets.
+
+. Category General
++
+[core] General options, tab "key bindings": +
+close_window_key = Alt+F4 +
+raise_window_button = Control+Button6 +
+lower_window_button = Alt+Button6 +
+minimize_window_key = Alt+F9 +
+maximize_window_key = Alt+F10 +
+unmaximize_window_key = Alt+F5 +
+window_menu_key = Alt+space +
+window_menu_button = Alt+Button3 +
+show_desktop_key = Control+Alt+d +
+toggle_window_shaded_key = Control+Alt+s +
++
+[matecompat] Mate Compatibility +
+main_menu_key = Alt+F1 +
+run_key = Alt+F2 +
+
+. Category Accessibility
++
+[addhelper] Dim inactive (less light on non focused windows) +
+toggle_key = Super+p +
++
+[colorfilter] (Filter color for accessibility purposes) +
+toggle_window_key = Super+Alt+f +
+toggle_screen_key = Super+Alt+d +
+switch_filter_key = Super+Alt+s +
++
+[ezoom] Enhanced Zoom Desktop +
+zoom_in_button = Super+Button4 +
+zoom_out_button = Super+Button5 +
+zoom_box_button = Super+Button2 (zoom out to go back to normal) +
++
+[neg] Negative (toggle inverse colors of the window or screen) +
+window_toggle_key = Super+n +
+screen_toggle_key = Super+m +
++
+[obs] Opacity, Brightness and Saturation adjustments +
+opacity_increase_button = Alt+Button4 +
+opacity_decrease_button = Alt+Button5 +
++
+[showmouse] (Increase visibility of the mouse pointer) +
+initiate = Super+k +
+
+. Category Window Management
++
+[move] Move window +
+initiate_button = Alt+Button1 (hold Button1 while moving the mouse) +
+initiate_key = Alt+F7 (Esc to stop moving) +
++
+[resize] Resize window +
+initiate_button = Alt+Button 2 (hold Button2 while moving the mouse) +
+initiate_key = Alt+F8 (Esc to stop moving) +
++
+[switcher] Application switcher (switch between windows or panels and
+                                 the desktop) +
+next_window_key = Alt+Tab (cycle between windows) +
+prev_window_key = Shift+Alt+Tab +
+next_panel_key = Control+Alt+Tab (cycle between panels and desktop) +
+prev_panel_key = Shift+Control+Alt+Tab +
+
+
+===== Cómo agregar una combinación de teclas personalizada para Mate.
+
+Let's take an example: we want that Alt+F3 starts firefox.
+escribe en un terminal o en el comando Ejecutar (aparece presionando Alt+F2):
+----
+propiedades del enlace de teclas
+----
+En la nueva ventana puede usar las teclas de flecha hacia abajo y hacia arriba para
+navegar en la lista de enlaces de teclas existentes.
+
+Para establecer un nuevo enlace de teclas, presione Tab dos veces para colocar el cursor en Añadir, luego
+presione Enter. In the small dialog box brought up  type the name of the
+custom key binding, like firefox, press Tab, type the name to the
+associated command, in this case firefox, then press Tab twice to
+put the cursor on Apply and press Enter.
+
+Para activar el nuevo enlace de teclas, navegue hasta que lo encuentre en la parte inferior de la lista
+, presione Alt+F3.
+
+La próxima vez que pres Alt+F3 que debería iniciar firefox
+
+=== El caparazón
+
+NOTE: Este capítulo es una breve introducción. Se proporciona más información en profundidad en el documento https://slint.fr/doc/shell_and_bash_scripts.html[Shell y bash scripts], la mayoría tomados de SUSE.
+
+Cuando la computadora comienza en modo consola, después de haber iniciado sesión escribiendo su nombre de usuario y contraseña, el shell <<shell, >> muestra una "indicación" como la que se muestra a continuación: +
+`didier@darkstar:~$` +
+En este ejemplo:
+
+* `didier` es el nombre de usuario
+* `darkstar` nombre de la máquina
+* el tilde `~` representa el directorio principal del usuario, en este ejemplo `/home/didier`
+* el signo de dólar `$` indica que el usuario es un "regular" y no un "superusuario" (ver abajo).
+
+El cursor se posiciona después de la indicación.
+
+El usuario ahora puede escribir un comando en la línea (de ahí el nombre "línea de comandos") y confirmarlo presionando Enter. El caparazón then analyzes the command and execute it if valid, else output a message like for instance "command not found". Puede editar el comando antes de pulsar Enter usando las flechas izquierda y derecha y las teclas de Retroceso, Inicio, Final y Del.
+
+Durante su ejecución los comandos pueden mostrar una salida en la pantalla o no. En todos los casos después de su ejecución, el prompt se mostrará de nuevo en una nueva línea, lo que significa que el intérprete de comandos está esperando a que se escriba el siguiente comando.
+
+Para que esto funcione, el usuario necesita saber qué comandos están disponibles y su sintaxis. Algunos comandos son ejecutados por el propio shell, otros inician programas externos. Dará a continuación varios ejemplos de comandos, más están listados en https://slint.fr/doc/shell_and_bash_scripts.html[Shell y bash scripts]
+
+Hay varios shells disponibles para que Linux escoja; en Slint el shell utilizado por defecto se llama *bash*.
+
+Para permitir ejecutar varios programas al mismo tiempo, Linux proporciona varias "consolas virtuales" compartiendo luego el mismo teclado y la misma pantalla, numerados desde una. Inicialmente, el sistema comienza en la consola (o terminal virtual) número uno también llamado *tty1* (el nombre tty es una abreviatura de "teletype"). Desde ahí, el usuario puede cambiar a otra consola o tty; por ejemplo cambiar al número de ajuste dos presionando Alt+F2, donde otra shell volverá a preguntar al usuario's nombre de usuario y contraseña. Para volver a tty1, pulse Alt+F1. Por defecto en Slint hay seis tty disponibles, pero esto puede cambiarse editando el archivo → /inittab.
+
+Cuando el intérprete de comandos se utiliza en un entorno gráfico (en un terminal gráfico), se comporta de la misma manera pero el intérprete es ligeramente diferente, como se ilustra a continuación: +
+`didier[~]$` +
+
+Puede cambiar entre la consola y un entorno gráfico:
+
+* Desde el entorno gráfico presionando por ejemplo Ctrl+Alt+F3 para ir a tty3. La primera vez que vaya a un montón tendrá que escribir su nombre de usuario y contraseña.
+* Desde una consola o tty presionando Alt+F7 si el entorno gráfico ya está en ejecución, de lo contrario escribiendo `startx` para iniciarlo.
+
+==== Escribiendo comandos como root
+
+*root* es el nombre convencional del "superusuario" que tiene todos los derechos para realizar tareas administrativas, incluyendo aquellos que podrían dañar o incluso destruir el sistema.
+
+Puede (pero esto no se recomienda para principiantes) iniciar sesión directamente como root. Para hacer este tipo *root* como usuario, entonces root's contraseña.
+Para informarle (y advertirle sobre los riesgos y responsabilidades asociados) el prompt se verá así: +
+*root@darkstar:s~#* +
+el carácter # (signo de número, también comúnmente llamado hash) indica que los comandos serán escritos como root (no como usuario normal), con los derechos asociados, pero también riesgos y responsabilidades.
+
+Si ya has iniciado sesión como usuario regular, puedes "convertirte en root" escribiendo: +
+*su -* +
+y luego pulsa Enter. En este comando, `su` (que se encuentra en "Super User") es el nombre del comando, y el carácter *-* (guión-menos, también llamado menus) dice que está abriendo un "login shell": primero se le preguntará root's contraseña, entonces sea dirigido a su directorio principal /home/root como si hubiera iniciado sesión como root al inicio. Esto evitará que escribas archivos inadvertidamente en tu directorio principal como usuario normal (/home/didier en el ejemplo) que causen problemas más tarde.
+
+=== Cómo resolver problemas de bloqueo
+
+Al "bloquear el problema" nos referimos a "un problema que impide el uso de Slint" como:
+
+* El sistema no se inicia.
+* El sistema arranca pero la secuencia de arranque se interrumpe antes de finalizar. Esto puede suceder, por ejemplo, si la partición raíz del sistema puede'no ser montada debido a un error en mañ/fstab, un sistema de archivos raíz corrupto o un módulo del kernel faltante para montar la partición raíz, o el sistema arranca con éxito pero no recuerdas'la contraseña para la raíz.
+
+Si el sistema no se arranca completamente, pruebe cada una de las soluciones siguientes en secuencia, hasta que uno funcione.
+
+. Si esto ocurre después de una actualización del núcleo, intente la segunda entrada de arranque en lugar de la primera.
+. Utilice la última entrada de arranque del menú GRUB. Podría encontrar Slint y permitirle iniciarlo.
+. Intente arrancar desde el dispositivo de arranque de rescate que ha solicitado al final de la instalación.
+. Salta a Slint para repararlo, como se explica a continuación.
+. Pide ayuda para enviar un correo electrónico a slint@freelists.org proporcionando toda la información que podría ayudar a investigar el problema. Si aún no está hecho, primero suscríbase a la lista enviando un correo electrónico a slint-request@freelists.org con el asunto 'subscribe', luego responda al correo electrónico que recibirá. Sólo si tienes un problema usando el correo electrónico, solicita ayuda en el canal #slint, servidor irc.libera.chat y permanece en el canal hasta que alguien responda.
+
+Si la secuencia de inicio es interrumpida, salta a Slint desde su instalador para intentar resolver el problema. Inserte o conecte el soporte de instalación (memoria USB o DVD donde haya escrito la instalación IS) luego siga las instrucciones que aparecen a continuación.
+
+. Iniciar el instalador.
+. Tan pronto como inicie sesión como root, para listar las unidades y particiones, escriba:
++
+----
+lsblk -lpo name,size,fstype
+----
+. Encuentre en la salida el nombre de la partición raíz de Slint, compruebe su tamaño y tipo de sistema de archivos, etiquetado FSTYPE.
+. Montar esta partición y comprobar que sea la buena. Por ejemplo, si es /dev/sda3, tipo:
++
+----
+montar /dev/sda3 /mnt
+cat /mnt.U/slint-version
+----
++
+[NOTE]
+====
+Si el sistema de archivos de la partición raíz de Slint parece estar dañado, no'lo monte aún pero trate de repararlo ejecutando este comando:
+----
+fsck <name of the root partition>
+----
+Y si esto tiene éxito, simplemente reinicie.
+====
++
+Suponiendo que ha instalado Slint64-14.21, la salida debería ser:
++
+*Slint 14.2.1*
++
+Si la salida es "archivo no encontrado", la partición no es la que buscaba. Solo en este caso, tipo:
++
+----
+umount /mnt
+----
++
+luego intente con otra, volviendo a la lista de discos y particiones.
++
+De lo contrario, monte los sistemas de archivos pseudo /dev, /proc y /sys en el sistema Slint, escribiendo:
++
+----
+montar -B /dev /mnt/dev
+mount -B /proc /mnt/proc
+mount -B /dev /mnt/sys
+----
++
+Emite el siguiente comando para "saltar" tu Slint:
++
+----
+chroot /mnt
+----
++
+chroot significa "cambiar root (del sistema)": ya no estamos en el instalador, pero ahora en Slint mismo. Desde allí puede modificar el sistema para resolver el problema. Estos son algunos ejemplos:
+
+* Ejecutar "update-grub".
+
+* Ejecutar "grub-emu".
+
+* Reinstalar GRUB usando el comando "grub-install drivename", el nombre de la unidad donde instalar Slint. Antes de hacerlo, si arrancará en modo EFI escriba primero "mount /boot/efi".
+
+* Escriba "passwd" para cambiar la contraseña de root.
+
+* Eliminar, instalar o actualizar paquetes.
+
+. Cuando termine, elimine el medio de instalación y luego escribe:
++
+----
+salir del reinicio de
+
+----
+
+[[Accessibility]]
+== Accessibility
+
+Si eligió mantener la voz cuando se le preguntó al principio de la instalación, estará
+habilitado desde el inicio en una consola como en entornos gráficos.
+
+=== Usar Slint con braille
+
+Slint incluye el software brltty para manejar pantallas braille.
+
+Sus configuraciones, realizadas antes de iniciar en la línea de comandos o después, se registran en el sistema instalado en
+mañ/brltty.conf.
+
+Un manual completo para brltty está disponible en inglés, Francés y
+Portugués en varios formatos, incluyendo texto plano (txt) en esta URL:
+https://mielke.cc/brltty/doc/Manual-BRLTTY/
+
+Si braille no está habilitado durante la instalación o ha sido deshabilitado, para habilitarlo hacer esto:
+
+. Hacer ejecutable de escritura como root: /rc.d/rc.brltty
++
+----
+chmod 755 /rc.d/rc.brltty
+----
+. Hazte miembro del grupo braille, escribiendo como root:
++
+----
+usermod -G braille -un nombre de usuario
+----
++
+En el comando anterior, reemplace el nombre de usuario con su nombre de usuario.
+
+Para desactivar braille escriba como root:
+----
+chmod 64, /rc.d/rc.brltty
+----
+
+=== Voz en entornos gráficos
+
+Como recordatorio de voz en entornos gráficos usando el lector de pantalla Orca está habilitado para escribir:
+----
+orca-on
+----
+
+Para saber cómo utilizar Orca, incluyendo sus enlaces de teclas específicas, tipo:
+----
+hombre
+----
+
+En resumen, una vez en un entorno gráfico, en modo gráfico:
+----
+Insert+Espacio: Inicie el diálogo de Preferencias.
+Insert+S: activa o desactiva la síntesis vocal.
+Insert+H: activa el modo de aprendizaje. En este modo:
+   Presione una tecla para escuchar su función
+   F1: para escuchar la documentación del lector de pantalla
+   F2: listar los atajos de teclado para Orca
+   F3: listar el teclado para la aplicación actual
+   Esc: fin del modo de aprendizaje
+----
+
+=== Votos y TTS en Slint.
+
+Después de TTS (Sintetizadores de texto a voz) se envían en
+Slint64-14.2.1. , cada uno con un conjunto de voces, namely: +
+espeak-ng +
+flite +
+pico +
+mbrola +
+RHVoice +
+
+La mayoría de las veces estos TTS y las voces e idiomas asociados son
+administrados por el despachador de voz a través de sus llamados "módulos" (rugosamente,
+un módulo está asociado a un TTS).
+
+La herramienta personalizada spd-list puede responder varias preguntas sobre los sintetistas de
+, voces e idiomas. Escribiendo la lista de spd muestra esto:
+----
+Este script muestra idiomas y sintetizadores disponibles para aplicaciones
+que dependen de Dispatcher de voz, como Orca o Speech-up. Cada comando a continuación responde a la pregunta que sigue.
+No escriba las comillas que rodean el comando.
+¿Uso de "/usr/bin/spd-list"?
+"/usr/bin/spd-list -s" disponibles sintetizadores?
+¿Códigos de idiomas disponibles "/usr/bin/spd-list -l"?
+"/usr/bin/spd-list -ls <synthesizer>" idiomas disponibles para este sintetizador?
+¿Sintetizadores "/usr/bin/spd-list -sl <language code>" que proporcionan voces en este idioma?
+El código de idioma tiene más a menudo dos caracteres, como 'en' 'es' o 'fr'
+----
+Todas las voces listadas están disponibles en Orca y en Orca, y también en fenrir si se configura para usar dispatcher de discurso.
+
+You can get additional voices for flite and mbrola, associated with the
+modules flite-generic and espeak-ng-mbrola-generic.
+
+Siempre puedes saber cuáles están instalados o no tecleando como root uno de estos comandos:
+----
+slapt-get --search mbrola-voice
+slapt-get --search flite-voice
+----
+entonces instale uno de los no instalados todavía, como p. ej.
+----
+slapt-get -i mbrola-voz-it2
+----
+Además de las voces libres (como en la cerveza libre) enviadas en Slint,
+puedes comprar voces para: +
+voxin, https://oralux.org/voice.php +
+voxygen, enviando un correo electrónico a contact@hypra.fr
+
+Más voces y sintetizadores podrían estar disponibles más tarde, esto se anunciará en la lista de correo
+Slint y este http://slackware.uk/slint/x86_64/slint-14.2.1/ChangeLog.txt[ChangeLog]
+
+Los atajos de teclado para entornos gráficos se muestran en <<key_bindings, enlaces de teclas>>.
+
+=== Usar los administradores de inicio de sesión con voz
+
+Dos gestores gráficos de inicio de sesión son accesibles con voz usando Orca: lightdm o gdm, este último se recomienda como totalmente accesible.
+
+En gdm, el enfoque está inicialmente en el campo Usuario. Escriba su usuario. o
+nombre de inicio de sesión y escriba su contraseña.
+
+Puede acceder a otras características de gdm a través de atajos de teclado. En
+Inglés: +
+Alt+A: Acciones (apagado o reinicio) +
+Alt+E: menú de sesión +
+Alt+L: cambiar el idioma, para la próxima sesión y posiblemente para la siguiente
+sesión, posiblemente también para el propio gdm. +
+Alt+T: Tema. +
+Puede utilizar la tecla Tab para navegar entre los campos de entrada, y las teclas arriba y
+hacia abajo para los menús.
+
+En luces, pulsando F4 encender o apagar el sonido. Inicialmente, el cursor
+está en el campo contraseña. Presiona Tab dirige al "botón de inicio de sesión",
+luego a la lista de usuario's o "cuadro de combo". En esta lista, presionando espacio
+muestra el usuario seleccionado actualmente. Utilice las teclas de flecha para elegir otra
+y luego escriba la contraseña correspondiente. En su lugar, al elegir "Otro..."
+añade un campo donde puede escribir el nombre de usuario de un usuario no listado.
+Aún en lightdm, F10 muestra un menú que permite reiniciar o apagar,
+y Alt+F4 muestra directamente una interfaz de usuario con botones de apagado o cancelación.
+
+=== Elegir un lector de pantalla de consola
+
+Slint proporciona estos lectores de pantalla de consola: +
+espeakup +
+speehchd-up +
+fenrir
+
+Adicionalmente, varios sintetizadores de voz de hardware pueden ser usados en modo de consola
+, usando el habla.
+
+Para elegir un lector de pantalla, ejecute como root este comando:
+----
+hablar con
+----
+Aquí está su salida sin argumento:
+----
+root[~]# speak-with
+Usage: /usr/sbin/speak-with <screen reader> or <hard synthesizer> or none
+Elegir un lector de pantalla de consola to talk with among:
+  espeakup (Console screen reader connecting espeak-ng and speakup)
+  fenrir (Modular, flexible and fast console screen reader)
+  speechd-up (Console screen reader connecting Speech Dispatcher and speakup)
+or use one of the supported hard synthesizers:
+  acntsa apollo audptr bns dectlk decext ltlk soft spkout txprt
+or type  "/usr/sbin/speak-with none" to mute all screen readers.
+root[~]#
+----
+Los sintetizadores de voz de hardware listados son los disponibles en el
+núcleo en ejecución o enviados como módulos.
+
+Ejemplo de comandos y salida asociada:
+
+----
+root[~]# speak-with Sped-up
+Starting Sped-up
+Should Sped-up also start at next boot? [Y/n]
+Ok
+root[~]# Hecho.
+----
+Tan pronto como escribas el comando, los lectores de pantalla previamente utilizados se detendrán
+y la voz comenzará a hablar.
+
+Si respondes Y (el valor por defecto) a la pregunta: +
+¿Debería iniciarse también en el siguiente arranque? +
+Sechd-up continuará siendo utilizado en el siguiente arranque. +
+Si en su lugar contestas n el lector de pantalla usado antes de escribir el altavoz con
+se utilizará después del siguiente arranque.
+
+Otros ejemplos:
+
+----
+root[~]# hablar con apollo
+Deteniendo la expresión...
+¿Debe utilizarse apollo también en el próximo arranque? [Y/n]
+Ok
+root[~]# Hecho.
+
+root[~]# hablar con ninguno
+¿Quieres también una consola silenciada en el próximo arranque? [Y/n]
+OK
+root[~]#
+----
+
+=== Configurar un lector de pantalla de consola.
+
+Slint maneja los sintetizadores de hardware de voz usando altavoces y proporciona los lectores de pantalla de desbloqueo
+y de pantalla de descarga.
+
+Puede guardar la configuración que realiza, por ejemplo para aumentar o
+reducir la tasa de seech o el volumen de sonido. Simplemente escribe como raíz:
+guardar vocabulario. Esto guarda todos los ajustes actuales, incluyendo los específicos del
+sintetizador de hardware en uso, caso ocurrido.
+
+Todos estos ajustes se restaurarán en el siguiente arranque: los scripts de inicio
+rc.espeakup y rc.speech ejecutan el comando speakup-restore por usted.
+
+Si lo haces't para querer restaurar la configuración guardada, escribe como root: +
+chmod -x /usr/sbin/speakup-restore
+
+Si los tiene restaurados de nuevo, escriba como root: +
+chmod +x /usr/sbin/speakup-restore
+
+Aquí están algunos enlaces de teclas para la configuración del altavoz, así como para el altavoz:
+----
+spk key_f9 punctuation_level_decrease
+spk key_f10 punctuation_level_increase
+spk key_f11 reading_punctuation_decrease
+spk key_f12 reading_punctuation_increase
+spk key_1 volume_decrease (no funciona con disolverd-up)
+spk key_2 volume_increase (no funciona con dispersión)
+spk key_3 pitch_decrease (no funciona con voz)
+spk key_4 pitch_increase (no funciona con Sped-up)
+spk key_5 rate_decrease
+spk key_6 rate_increase
+----
+En la tabla anterior spk está el botón CapLock, o Ins/0 en un teclado numérico.
+Por ejemplo, para aumentar la tasa puede presionar y mantener presionada la tecla CapsLock
+y luego presionar la tecla 6.
+
+Algunos ajustes disponibles solo en determinados sintetizadores de hardware no
+tienen enlaces de teclas asociados. Luego para establecer un nuevo valor que lo haga en
+/sys/accessibility/speakup/<synth>/<parameter>
+
+Por ejemplo para cambiar la voz en uso por un apollo 2 puedes escribir: +
+echo 2 > /sys/accessibility/speakup/apollo/voice
+
+guardar el altavoz también guardará esta configuración.
+
+Caveat: I never used a hardware speech synthesizer, so the explanation below is
+only an assumption based in the speakup_apollo driver, consistent with
+is manual, found in: +
+https://archive.org/stream/DolphinApollo2Manual/Dolphin_Apollo_2_Manual_djvu.txt
+
+[[desktop_keys]]
+==== Acelerar teclas de escritorio
+
+Casi todas las claves listadas a continuación se encuentran en el teclado numérico.
+La tecla Insertar o 0 en el teclado actúa como una tecla Mayúscula. Por ejemplo,
+Ins 2 significa "mantén pulsada la tecla Insertar como una tecla Mayús y presiona 2".
+Mantén numlock apagado para usar Speakup.
+
+Alcance: estos enlaces de teclas se pueden utilizar con los sintetizadores duros y con el espejo
+, y también con la expresión. Sin embargo, el ajuste del pitch o del volumen de voz
+usando enlaces de teclas no está disponible cuando se utiliza la disparación.
+
+Primeras claves que recordar:
+----
+Encender y apagar la pantalla de impresión
+Ayuda de aceleración Ins F1 (presione Espacio para salir de la ayuda)
+----
+
+Claves utilizadas para la revisión de la pantalla:
+----
+1/2/3 Di Anterior/Corriente/Próximo carácter
+Shift PageUp Say first character
+Shift PageDown Say last character
+4/5/6 Say Previous/Current/Next word
+5 veces Palabra ortográfica actual
+Ins 5 Spell Current Word phonetically
+7/8/9 Say Previous/Current/Next line
+Ins 4 Say from left edge of line to reading cursor.
+Ins 6 Say from reading cursor to right edge of line.
+Ins 8 Say desde la parte superior de la pantalla hasta el cursor de lectura.
+Ins más Say desde la lectura de la línea del cursor hasta la parte inferior de la pantalla.
+más decir toda la pantalla.
+Ins r Say all doument
+punto Say position
+Ins punto Say attributes
+Ins Say menos hexadecimal y valor decimal.
+menos Park el cursor de lectura (activar)
+Ins 9 Mover el cursor de lectura a la parte superior de la pantalla (insertar pgup)
+Ins 3 Mover el cursor de lectura a la parte inferior de la pantalla (insertar pgdn)
+Ins 7 Mover el cursor de lectura al borde izquierdo de la pantalla (insertar casa)
+Ins 1 Mover el cursor de lectura al borde derecho de la pantalla (insertar final)
+Controlar 1 Mover el cursor de lectura al último carácter de la línea actual.
+asterisk Alternar cursoring
+Ins asterisk n<x|y ir a la línea (y) o columna (x). Donde 'n' es cualquier
+               valor permitido para la fila o columna para la pantalla actual.
+Ins f2 Set window
+Ins f3 Clear window
+Ins f4 Enable window
+----
+
+Otras claves:
+----
+Ins f5 Edit some
+Ins f6 Edit most
+Ins f7 Edit delim
+Ins f8 Edit repeat
+Ins f9 Edit exnum
+
+Enter Scut up (until another key is hit) and sync reading cursor.
+Ins Entra en apagado (hasta que se encienda de nuevo)
+
+marca de barra y cortar la región de pantalla.
+Ins slash Pega la región de la pantalla en cualquier consola.
+----
+==== Teclas portátil de sonido
+
+These key bindings (for US keyboard layout) don't need a numeric keypad.
+Si tiene uno, utilice las teclas de escritorio <<desktop_keys, de altavoz>> más fáciles de usar,
+especialmente si utiliza otro diseño de teclado que Estados Unidos.
+
+La tecla CapsLock actúa como una tecla Shift. +
+Por ejemplo, CapsLock 2 significa "mantenga presionada la tecla CapsLock como una tecla shift y presione 2". +
+Mantén el numlock apagado para usar el Speakup.
+
+Alcance: estos enlaces de teclas se pueden utilizar con los sintetizadores duros y con el espejo
+, y también con la expresión. Sin embargo, el ajuste del pitch o del volumen de voz
+usando enlaces de teclas no está disponible cuando se utiliza la disparación.
+
+Primeras claves que recordar:
+----
+PrintScreen Alternar voz encendida/apagado
+CapsLock F1 Speakup Help (presione Espacio para salir)
+----
+
+Clave utilizada para la revisión de la pantalla:
+----
+CapsLock m/coma/punto Say Previous/Current/Next character
+CapsLock PageUp Say First character
+CpasLock PageDown Say Last character
+CapsLock j/k/l Say Previous/Current/Next word
+CpasLock k dos veces Palabra actual
+CapsLock u/i/o Say Previous/Current/Next line
+CapsLock h Say from left edge of line to reading cursor.
+CapsLock Say de punto y coma desde la lectura del cursor hasta el borde derecho de la línea
+CapsLock y Say desde la parte superior de la pantalla hasta el cursor de lectura.
+CapsLock p Say desde la lectura de la línea del cursor hasta la parte inferior de la pantalla.
+CapsLock apóstrofe Say pantalla completa.
+Capslock r leer todo el documento.
+Posición del CapsLock n Say
+CapsLock slash Say attributes
+CapsLock menos el cursor de lectura (togle)
+CapsLock f2 Set window
+CapsLock f3 Clear window
+CapsLock f4 Habilitar ventana
+----
+Otras claves:
+----
+CapsLock f5 Editar algunos
+CapsLock f6 Editar más
+CapsLock f7 Editar delimitador
+CapsLock f8 Repetir editar
+shift CapsLock f9 Edit exnum
+----
+
+=== Haz que emacs hable
+
+Puedes usar emacspeak o expresión. Para activar o desactivar uno de los
+teclean como regular, ya sea uno de estos comandos:
+
+interruptor emacspeak +
+enciende la disensión-encendida- +
+apaga emacspeak +
+apagar la voz +
+
+Luego solo escribe: +
+emacs
+
+Al activar uno de estos programas se desactiva el otro.
+
+[[Manage_your_system]]
+== Manage your system
+
+[[software_management]]
+=== Gestión de software en Slint.
+
+<<The_basics, Lo básico>> +
+<<Keep_your_system_up_to_date, Mantén tu sistema actualizado>> +
+<<Kernel_upgrades, Actualizaciones de Kernel>> +
+<<Get_additional_applications, Obtén aplicaciones adicionales>> +
+<<slapt_src, Uso de slapt-src>> +
+<<sbopkg, Uso de sbopkg>> +
+
+[[The_basics]]
+==== Lo básico
+
+En Slint software se proporciona en forma de paquetes. Un paquete es un paquete de archivos proporcionado en un archivo comprimido, conjunto para proporcionar todo lo necesario para ejecutar el software. Los paquetes se incluyen en la ISO de instalación y se almacenan en servidores remotos desde los que se pueden descargar e instalar. Instalar un paquete significa extraer los archivos del archivo y copiarlos en algún directorio del sistema.
+
+La instalación y eliminación de software se registran en una base de datos de archivos de texto en estos directorios:
+----
+/var/log/packages
+/var/log/removed_packages
+/var/log/scripts
+/var/log/removed_scripts
+----
+Los archivos del directorio registran información sobre los paquetes, principalmente su contenido: la lista de archivos que incluye y donde están instalados.
+
+Los comandos principales para administrar los paquetes están listados a continuación. Todos ellos tienen páginas de manual asociadas.
+
+Estos comandos requieren derechos administrativos, asociados a una cuenta específica llamada 'root', para la cual ha especificado una contraseña durante la instalación de Slint.
+
+Para ejecutar un comando como 'root', primero escribe
+su -
+luego introduce la contraseña para la raíz y escribe el comando.
+
+Los comandos a continuación se pueden ejecutar desde un terminal gráfico o en una consola, pero gslapt que sólo funciona en un entorno gráfico.
+----
+installpkg # para instalar un paquete almacenado localmente.
+removepkg # para eliminar un paquete instalado.
+upgradepkg # para reemplazar un paquete instalado por otro (generalmente con el mismo nombre pero en otra versión).
+slapt-get # para instalar, eliminar, actualizar los paquetes almacenados en los repositorios listados en /slapt-get/slap-getrc
+----
+Los paquetes que se envían en la instalación ISO vienen de los repositorios listados en "named@@0"/slapt-get/slapt-getrc
+
+Hazte un favor: lee los comentarios que aparecen en el sistema instalado, y en el archivo /usr/doc/slapt-get-0.10.2t/README.slapgetrc.Slint.
+
+Después de haber instalado Slint,'se le notificará de las actualizaciones de los paquetes instalados procedentes de los repositorios listados en Ninguno/slapt-get/slapt-getrc
+
+Puede instalar paquetes adicionales usando el comando slapt-get o la aplicación gráfica gslapt, si se almacena en un repositorio que se muestra en la lista "/slapt-get/slapt-getrc
+
+slapt-get y gslapt proporcionan una función de búsqueda que le ayuda a encontrar paquetes.
+
+WARNING: puede usar slapt-get, gslapt y removepkg para eliminar los paquetes instalados pero no eliminar los paquetes enviados en el Slint ISO, incluso si usted no los usa en absoluto. Eliminar un paquete incluido no aumentará el rendimiento y podría prevenir que otras aplicaciones se ejecuten. Además, si ha añadido un paquete no incluido en Slint, puede eliminarlo pero tenga cuidado de que el paquete eliminado no sea una dependencia de otros que también haya instalado y tenga la intención de seguir usando.
+
+[[Keep_your_system_up_to_date]]
+==== Mantenga su sistema actualizado
+
+Mantenga su sistema seguro instalando las actualizaciones de software proporcionadas por Slint tan pronto como'vuelvan a estar disponibles.
+
+Todas las actualizaciones están listadas en el Registro de cambios: http://slackware.uk/slint/x86_64/slint-14.2.1/ChangeLog.txt
+
+Después de la instalación de Slint o de cualquier cambio en el archivo: /slapt-get/slapt-getr
+----
+slapt-get --add-keys
+----
+
+Para sincronizar la lista local del paquete disponible con la del repositorio, este comando se ejecuta automáticamente cada dos horas:
+----
+slapt-get -u
+----
+También puede ejecutarlo manualmente
+
+Por supuesto, esto requiere que la máquina esté conectada a Internet.
+
+Para descargar e instalar los paquetes actualizados o reconstruidos, ejecute como root
+el siguiente comando:
+----
+slapt-get --upgrade
+----
+También puede usar gslapt, un interfaz gráfico para slapt-get.
+
+Para obtener nuevos paquetes listados en el Registro de Cambios como "Añadidos", escribe:
+----
+slapt-get -i <package name>
+----
+o para asegurarse de que ha instalado todos los paquetes enviados en Slint, incluyendo los añadidos al repositorio después de instalar Slint, tipo:
+----
+slapt-get --install-set slint
+----
+
+En el escritorio, se muestra un pequeño icono en el área de notificación de un panel (el panel superior en MATE) para notificar las actualizaciones de software disponibles. Simplemente haga clic con el botón izquierdo en él y siga las instrucciones mencionadas allí.
+
+Tenga en cuenta que algunos paquetes están en la lista negra de ./slapt-get/slapt-getrc,
+es decir, no pueden actualizarse automáticamente o
+instalarse.
+
+[[Kernel_upgrades]]
+==== Actualizaciones de Kerel
+
+Los nuevos núcleos se proporcionan siempre que sea necesario, ya sea para aportar correcciones de seguridad o mejoras.
+
+Normalmente no es necesaria ninguna intervención manual del usuario cuando esto sucede, pero puede ser útil saber cómo se hace la actualización del núcleo y qué hacer si algo inesperado ocurre.
+
+Varios paquetes incluyen archivos asociados con cada núcleo, a saber: kernel-generic, kernel-modules, kernel-source, cabeceras del núcleo. kernel-source y kernel-headers incluyen archivos usados para construir software, sólo se necesitan módulos kernel-genéricos y kernel para ejecutar un sistema Slint.
+
+El paquete kernel-modules viene archivos llamados módulos, que son piezas de código que están "conectadas" al núcleo para proporcionar una característica específica o manejar un hardware específico.
+
+Tan pronto como un paquete del núcleo y el paquete asociado de kernel-modules sean instalados, el script
+/sbin/wrapupgradepkg construye un <<initrd, initrd>> asociado con este núcleo (con módulos tomados de
+los módulos del núcleo del paquete) e instala junto al núcleo en el directorio /boot.
+
+Luego se eliminan los núcleos anteriores (no en uso en el momento de la actualización).
+
+Luego, el script actualiza el archivo de configuración GRUB /boot/grub/grub.cfg, leído por el cargador del sistema operativo para construir el arranque al arrancar.
+
+Este menú de arranque incluirá al menos dos entradas de arranque cada indicación, para indicar un núcleo y su uso initrd asociado. Desde arriba:
+
+* Una entrada de arranque para iniciar Slint usando el nuevo núcleo que acaba de ser instalado.
+* Una entrada de arranque para iniciar Slint usando el núcleo en uso en el momento de la actualización.
+
+Esto proporciona una especie de "red de seguridad" en caso de que Slint arranque't con el nuevo núcleo:
+en este caso, solo flecha hacia abajo una vez que se muestre el menú de arranque para iniciar Slint con el núcleo anterior
+
+Puede previsualizar el nuevo menú de arranque antes de reiniciar, escribiendo como root:
+----
+grub-emu
+----
+Entonces se muestra un menú de arranque emulado o "falso", con el mismo diseño que el real que se mostrará
+al inicio.
+
+Puede navegar en él con las teclas de flecha hacia abajo y hacia arriba para resaltar (poner el enfoque) una entrada de arranque en la que puede mostrar los detalles presionando 'e'. Puede volver al menú presionando Escape.
+
+Para salir de grub-emu presione c y luego escriba *exit* y presione Enter.
+
+[[Get_additional_applications]]
+==== Obtener aplicaciones adicionales
+
+Si la aplicación que desea no está instalada y tampoco está disponible en uno de los repositorios habilitados en /slapt-get/slapt-getrc podría hacer un paquete para ella, usando material de construcción proporcionado por los voluntarios @ https://slackbuilds.org. Para saber cómo continuar, lee https://slackbuilds.org/howto/ y https://slackbuilds.org/faq/
+
+Los paquetes compilados de esta manera deberían ser compatibles con Slint.
+
+Dos aplicaciones le permiten construir e instalar paquetes utilizando el material de construcción proporcionado en https://slackbuilds.org: *slapt-src* y *sbopkg*. A menos que estés acostumbrado a sbopkg, te recomendamos que utilices slapt-src, más rápido para ser adquirido. Sin embargo, ambos deben funcionar y proporcionar los mismos resultados y deben utilizarse como raíz.
+
+Describiremos slapt-src en más detalles.
+
+[[slapt_src]]
+===== Uso de slapt-srcrc
+
+El guión de configuración por defecto para slapt-src es ./slapt-get/slap-getrc y tiene este contenido:
+----
+BUILDDIR=/tmp/slapt-src
+PKGEXT=txz
+SURCE=https://slackbuilds.org/slackbuilds/14.2/
+----
+Sí:
+
+* Todo el material de construcción y los paquetes irán en /tmp/slapt-src
+* Los nombres de los paquetes compilados terminan en .txz
+* El material de construcción se obtiene del repositorio https://slackbuilds.org/slackbuilds/14.2/
+
+Aquí está la salida del comando *slapt-src --help*:
+----
+Uso: slapt-src [option(s)] [action] [slackbuild(s)]
+  -u, --update update update local cache of remote slackbuilds
+  -U, --upgrade-all actualizar todos los slackbuilds instalados
+  -l, --list list available slackbuilds
+  -e, --clean clean build directory
+  -s, --búsqueda de slackbuilds disponibles
+  -w, --show show slackbuilds especificados
+  -i, --instalar obtención, compilar e instalar la(s) slackbuild(s) especificada(s)
+  -b, --build sólo busca y construye el slackbuild(s) especificado(s)
+  -f, --fetch sólo obtiene el slackbuild(s) especificado(s)
+  -v, --version
+  -h, --help
+ Opciones:
+  -y, --yes no preguntar
+  -t, --simulate show what will be done
+  -c, --config=ARCHIVO usar el archivo de configuración especificado
+  -n, --no-dep no busca dependencias
+  -p, --postprocess=CMD ejecutar el comando especificado en el paquete generado
+  -B, --build-only aplicable sólo a --upgrade-all
+  -F, --fetch-only aplicable sólo a --upgrade-all
+----
+
+Deja's comentar algunas de estas opciones:
+
+* Utilice -u o --update cada vez para actualizar la lista de paquetes que pueden ser construidos e instalados. Este comando escribe el archivo /tmp/slapt-src/slackbuilds_data, reemplazando el caso anterior.
+* Usa -e para ahorrar espacio en el disco, eliminando la mayoría de archivos en /usr/src/slapt-src/
+* *no* use -U sino para listar las posibles actualizaciones o downgrades, sin confirmar: la confirmación llevaría a reemplazar todos los paquetes de Slint por uno en otra versión si están disponibles en el repositorio remoto, posiblemente rompiendo software no compatible con esta otra versión.
+* -i también puede actualizar un paquete ya instalado desde https://slackbuilds.org, si un mantenedor del script SlackBuild lo ha actualizado, cambiando la variable VERSION.
+* Usa -f para descargar solo los archivos en https://slackbuilds.org para el software de destino. Esto puede ser útil si desea comprobar el material de construcción, o personalizar la construcción. Por ejemplo, deje que's asuma que desea obtener el material de construcción para el software *mxml*. El siguiente comando da información sobre el software y qué archivos se almacenan en https://slackbuilds.org para el:
++
+----
+slapt-src --show mxml
+Nombre de SlackBuild : mxml
+SlackBuild Version: 3.
+SlackBuild Category: libraries/mxml/
+SlackBuild Description: mxml (Lightweight xml parsing library)
+SlackBuild Files:
+ README
+ mxml. lackBuild
+ mxml.info
+ slack-desc
+----
++
+Ahora recupera estos archivos y también el archivo fuente del repositorio de fuentes con el siguiente comando:
++
+----
+slapt-get -f mxml
+----
++
+Conociendo desde la salida del comando anterior que los archivos se almacenan en las librerías de subdirectorios/mxml, puedes comprobar qué archivos se han descargado con este comando:
++
+----
+ls -1 /tmp/slapt-src/libraries/mxml
+mxml-3.1.tar.gz
+mxml.SlackBuild
+mxml.info
+slack-desc
+----
+* Utilice -b si desea construir un paquete pero no instalarlo todavía. En el ejemplo anterior se almacenará en /tmp/slapt-src/libraries/mxml, así que podrás instalarlo después escribiendo:
++
+----
+upgradepkg --install-new /tmp/slapt-src/libraries/mxml/xml*txz
+----
++
+* Utilice -c si desea utilizar un archivo de configuración personalizado en lugar del predeterminado "named@@0"/slapt-get/slap-getrc
+
+[[sbopkg]]
+===== Uso de sbopkg
+
+WARNING: en algunos casos un software se envía en Slint y también está disponible en https://slackbuilds.org pero con un nombre diferente que puede causar problemas. Estas discrepancias se resuelven cuando se usa slapt-src, pero aún no cuando se usa sbopkg.
+
+Antes de usar sbopkg, lea su archivo de ayuda y su página de manual escribiendo como raíz: *sbopkg --help* y *man sbopkg*
+
+En resumen, si se usa sólo la línea de comandos, como root:
+
+* sincronizar el repositorio local con el remoto para actualizarlo:
++
+----
+sbopkg -r
+----
+* escribir un "archivo de cola" listando las dependencias en el orden correcto para construirlas e instalarlas antes del software que quieras:
++
+----
+sqg -p <package name>
+----
+Un archivo de cola llamado /var/lib/sbopkg/queues/<package name>.sqf será escrito
+
+Si no hay dependencias no se escribirá ningún archivo de cola
+
+* construir e instalar las dependencias entonces,el software deseado:
++
+----
+sbopkg -i <package name>
+----
+Si existe un archivo de cola para este paquete, elija usarlo cuando se le pregunte.
+
+Si un paquete mencionado en el archivo de cola ya está instalado, se omitirá.
+
+Como consecuencia, si desea actualizar un paquete ya instalado usando sbopkg, tendrás que removerlo
+antes de construir e instalar el nuevo.
+
+Tenga en cuenta que compilar e instalar paquetes de esta manera ocasionalmente puede conducir a problemas como dependencias perdidas o conflictos con paquetes instalados: los componentes utilizados para compilar los paquetes son proporcionados por voluntarios que no pueden comprobar los resultados en cada configuración posible.
+
+WARNING: Si no encuentras un paquete para un software que quieras ni cosas para construir uno @ https://slackbuilds.org, podría ser tentado para construir e instalar este software manualmente emitiendo los comandos ". configure && make && make install". Evite hacer eso, ya que el sistema de gestión de paquetes Slint y las herramientas asociadas no podrán manejarlo ya que el software construido e instalado de esta manera no serán manejables por el sistema de gestión de paquetes Slint.
+
+Más bien, simplemente publique una pregunta o petición en la lista de correo de Slint y trataremos de ayudar, posiblemente añadiendo este paquete al repositorio. Cuando termine (esto se anunciará en la lista de correo), para instalarlo escriba como root uno de estos comandos:
+----
+slapt-get -i <package name>
+slapt-get --install-set Slint
+----
+
+=== Administrar usuarios y grupos.
+
+Se proporcionan dos comandos para administrar usuarios y grupos:
+
+* El comando _usersetup_ (TUI)
+* El comando _gtkusersetup_ (GUI), con un icono en la categoría Slint Control Center, Sistema)
+
+Estos comandos le permiten añadir o eliminar usuarios y grupos de usuarios, y añadir usuarios a grupos.
+
+Tenga en cuenta que cada cuenta de usuario está asociada por defecto a su espacio en el directorio /home. Por ejemplo, si agregas un usuario *leonie*, se creará una carpeta /home/leonie al que sólo se permitirá acceder a este usuario (y root).
+
+=== Cambiar el idioma por defecto del sistema
+
+Se proporcionan dos comandos para eso:
+
+* El comando _localesetup_ (TUI).
+* El comando _gtklocalesetup_ (GUI), con un icono en la categoría Slint Control Center, Configuración.
+
+Tenga en cuenta que esta configuración cambia el idioma utilizado por las interfaces de las aplicaciones si están internacionalizadas, no el mapa del teclado (ver abajo).
+
+Además, los paquetes localizados (si están disponibles) que coinciden con el idioma elegido ya han sido instalados al final de la instalación de Slint. Si cambia el idioma predeterminado después, necesitará instalar los correspondientes paquetes localizados si lo desea.
+
+Localizado significa "proporcionado en un local determinado", siendo la localización un idioma más las peculiedades asociadas a un área geográfica. Por ejemplo, el portugués hablado en Portugal y Brasil difieren. En los nombres de los paquetes localizados, l10n es una abreviatura de "localización" que significa "letra l, 10 letras más, letra n".
+
+Los paquetes localizados están incluidos en muchos idiomas. Su nombre incluye el nombre del paquete base, un guión, luego el código de idioma. A continuación listamos los nombres base de los paquetes localizados:
+[options="autowidth"]
+|====
+| Nombre del paquete base | Descripción
+| aspell | listas de palabras para corrección ortográfica
+| calligra-l0n | localizado en la suite de oficinas de Calligra
+| kde-l10n | escritorio KDE localizado
+| libreoffice-l0n | suite de oficina localizada en LibreOffice
+| libreoffice-ayuda | ayuda localizada para LibreOffice
+|====
+
+Para encontrar un paquete localizado, escriba un emulador de terminal como root (ejemplo para kde-l10n): +
+`spi libreoffice`
+
+Esto mostrará la lista de todo el paquete LibreOffice localizado. Encuentra el que quieras e instálalo. Por ejemplo para persa el código de idioma es `fa` (abreviatura de Farsi), así que para instalarlo escribe: +
+`spi -i libreoffice-l0n-fa`
+
+Si lo prefiere, puede usar `gslapt`. Luego, escriba el nombre del paquete en el campo de búsqueda para mostrar todos los paquetes de libreoffice localizados.
+
+=== Cambiar el mapa del teclado
+
+Puede cambiar el mapa de teclado predeterminado utilizado en modo gráfico utilizando:
+
+* El comando _keyboardsetup_ (TUI)
+* El comando _gtkkeyboardsetup_ (GUI), con un icono en la categoría Slint Control Center, Hardware.
+
+Estos comandos también le permiten elegir si el bloqueo numérico debería estar habilitado cuando el sistema se inicia, y si el método SCIM (input method) debería estar activado al iniciar el sistema.
+
+Si utiliza un gestor de ventanas con un panel, también puede hacer esta configuración a través de un clic derecho sobre el applet de teclado (mostrado por defecto como el código de idioma de dos letras del mapa de teclado en uso). KDE y Xfce tienen herramientas específicas para ello.
+
+En la línea de comandos, pero todavía para el modo gráfico use en su lugar el setxbmap
+
+Por ejemplo, para establecer el diseño del teclado en modo gráfico ucraniano, simplemente escriba como usuario normal: +
+`setxkbmap -layout ua`
+
+Para saber más, lea la página man de setxkbmap.
+
+=== Instalar una impresora
+
+En Slint el servidor de impresión CUPS administra impresoras y tareas de impresión. En su configuración por defecto, grabado en el archivo /cups/cupsd. onf, solo los usuarios pertenecientes al grupo `sys` (abreviatura _sistema_) pueden realizar tareas administrativas, le gusta añadir o quitar una impresora.
+
+Para una configuración simple (impresora conectada a un ordenador portátil o portátil y no compartida entre máquinas), solo tienes que añadir un usuario (que gestionará las impresoras) al grupo `sys`. Por ejemplo, agregar al usuario _didier_ al grupo `sys` se puede hacer de dos maneras:
+
+* En modo consola o usando un emulador de terminal, conviértete en root con `su` y luego escribe:
++
+`gpasswd --add didier sys`
++
+* En modo gráfico desde el Slint Control Center haga clic en Usuarios y Grupos (categoría del Sistema), seleccione el usuario y haga clic en Propiedades, y en la pestaña Grupos revise `sys`. O al revés (seleccione el grupo y añada el usuario a él).
+
+Hay varias maneras de añadir y configurar una impresora (esto lo tiene que hacer un miembro del grupo `sys`):
+
+* Desde el Slint Control Center, categoría Hardware, haga clic en la configuración de la impresora para mostrar un GUI que permite una configuración simple...
+* ... O haga clic en Cups Imprimir Controlar la visualización de una interfaz web en el servidor CUPS. También puede mostrar la interfaz web en el servidor CUPS escribiendo `localhost:631` en el campo de dirección de un navegador web.
+* Si tiene un dispositivo Hewlett Packard, haga clic con el botón derecho en el logotipo de *hp* en el área de notificación del panel.
+
+NOTE: Para hacer cualquier configuración de impresión, el servidor CUPS debe estar en ejecución. Se inicia cuando inicia Slint si el servicio `cups` comprobado entre los Servicios del Sistema (se marca por defecto en Slint).
+
+=== Sonido configurado
+
+
+En aplicaciones Slint mandan su salida de sonido ya sea a ALSA o a PulseAudio.
+
+En este último caso PulseAudio a su vez envía el flujo de salida a un mezclador ALSA que lo dirige a las tarjetas de sonido.
+
+Como resultado, un ajuste como un volumen de sonido de salida siempre puede ser hecho por un mezclador ALSA, y también por un mezclador de PulseAudio, pero sólo en caso de que la aplicación envíe su salida de sonido a PulseAudio.
+
+Presentaremos ahora la aplicación que se puede utilizar para modificar los ajustes de sonido
+
+==== pavucontrol (para PulseAudio)
+
+`pavucontrol` significa Control de Volumen PulseAudio y es una aplicación gráfica. Puede iniciarlo desde un terminal o menú de aplicaciones, o haciendo un clic derecho sobre el icono de mezclador de sonido en el panel superior de Mate. En realidad permite más ajustes que el simple control de volumen, tómese el tiempo para explorar todas sus características.
+
+También puede utilizar el applet de control de volumen en el área de notificación del panel: un clic izquierdo permite ajustar el volumen, un clic derecho da acceso a otros ajustes y permite iniciar el mezclador de pavucontrol.
+
+[[Sound_on_the_command_line]]
+
+==== alsamixer  (for ALSA)
+
+alsamixer es una aplicación ncurses que proporciona una interfaz de usuario semi-gráfica.
+
+Para usarlo, tipo: en una consola o en un terminal gráfico:
+----
+alsamixer
+----
+entonces:
+
+* Utilice la tecla de página arriba para aumentar el volumen en un 5%
+* Utilice la tecla Abajo de la página para reducir el volumen en un 5%
+* presiona Esc para salir de la aplicación.
+
+==== amixer (para ALSA)
+El comando es del formulario:
+----
+amixer <arguments>`
+----
+Por ejemplo para establecer el volumen principal al tipo 70%:
+----
+amixer Master 70%
+----
+Para saber más, escribe uno de estos comandos:
+----
+amixer man
+amixer -h
+----
+==== sam (el mezclador de Alsa amigable con el voz)
+sam permite que la selección de la tarjeta de sonido funcione cuando hay más de un
+dispositivo de este tipo en su máquina. +
+Cuando solo hay uno, presenta directamente los diferentes mezcladores
+para la configuración.
+
+Todas las selecciones, ya sean tarjetas de sonido, los mezclas o una característica determinada de un mezclador específico
+ se seleccionan desplazando a través de las opciones disponibles usando las flechas arriba y abajo, luego ingresando en el deseado: +
+`q` deje la lista de selección y/o sale. +
+`Shift-q` sale del programa desde cualquier lugar. +
+`F1` Muestra cualquier información extra si está disponible.
+
+Cuando se conoce el nombre de la opción deseada, se puede pulsar su
+primera letra. La navegación de primera letra es insensible a mayúsculas y minúsculas.
+Eso te llevará a la primera selección comenzando con la letra
+pulsada.  Pulsando la misma letra de nuevo, te moverá a la siguiente opción
+que comienza con esa letra si más de una opción como esa existe.
+Repetir la letra ciclará entre todas las opciones que empiezan con esa
+letra.
+
+Las características configurables de un mezclador pueden ser listadas pulsando f1. +
+Se presentan como una lista de selección, mostrando brevemente toda la información relevante. .
+"volumen de reproducción de 84 por ciento" es la opción de bajar el volumen de reproducción
+del volumen de reproducción.  Como puedes ver, también te dice cuál es la configuración actual
+.
+
+NOTE: sam no funciona correctamente en un terminal gráfico. Utilízalo en una consola.
+
+==== pamixer y ponymix (para PulseAudio)
+Estas ligaduras son similares, con comandos en esta forma:
+----
+pamixer <arguments>
+ponymix <arguments>
+----
+Por ejemplo para establecer el volumen a 70% para el tipo sink predeterminado uno de estos comandos:
+----
+pamixer --set-volume 7
+ponymix set-volume 8O
+----
+Para saber más, tipo:
+----
+pamixer -h
+ponymix --help
+----
+
+==== pacmd y pactl (para PulseAudio)
+
+Ambas aplicaciones de línea de comandos controlan un daemon PulseAdio en ejecución.
+
+WARNING: pacmd escrito solo muestra un diálogo interactivo. ¡Presione Ctrl+d para salir de él pero no escriba salir, ya que eso mataría PulseAudio!
+
+Para saber más:
+----
+man pactl
+man pacmd
+pactl --help
+pacmd --help
+----
+
+==== Guardar y restaurar el nivel de sonido
+
+Sólo tiene que hacer el archivo /rc.d/rc.alsa ejecutable. Como raíz:
+----
+chmod/rc.d/rc.alsa
+----
+Al inicio, este script restaurará la configuración de sonido anterior si
+se almacenaron previamente. de lo contrario establecerá los volúmenes por defecto y almacenará
+para que sean restaurados en el próximo reinicio.
+
+Si lo haces't quiere que este script establezca el tipo de volumen predeterminado como root:
+----
+tacto /var/lib/alsa/no.asound.state
+----
+
+Puedes cambiar estos niveles de sonido por defecto con alsamixer o amixer
+y luego escribir como root:
+----
+alsactl tienda
+----
+Luego, en el siguiente inicio el script los restaurará.
+
+Para saber más:
+----
+man alsactl
+----
+=== Configuración de red
+
+Si lo hizo'no configuró su configuración de red durante la instalación de Slint, primero
+hacerse root escribiendo `su -` ya sea en una consola o en un terminal gráfico
+como mate-terminal, luego escriba la contraseña de root.
+
+La configuración de la red se realiza por el script `netsetup`.
+Así que simplemente escribiría el comando `netsetup` en ese
+mismo terminal, donde'acaba de solicitar privilegios de root.
+Se le pedirá primero el nombre de host de su máquina. puedes elegir cualquier
+nombre, pero ten en cuenta que tiene que ser una sola palabra.
+Entonces se le preguntará el nombre de dominio. Si la máquina no es un servidor
+puede elegir a alguien.
+Después se le preguntará cómo se conecta su máquina a la red. A menos que
+tengas una buena razón para no (y sabes lo que estás haciendo), mantén
+el gestor de red `predeterminado` para configurar automáticamente la red.
+
+Para conexiones con cables, eso debería ser suficiente para conectarse al siguiente arranque
+automáticamente.
+
+Para configurar una conexión inalámbrica, hay dos comandos disponibles usando
+la línea de comandos.
+
+De nuevo, puede escribir los comandos directamente en la consola o en un
+terminal gráfico como mate-terminal. Escríbelos como usuario normal no como raíz de
+.
+Si sigues estas instrucciones y te convertes en raíz ya, solo
+escribirías `exit` para recuperar el estado normal del usuario.
+
+Los dos comandos mencionados son `nmtui` (cuadros de diálogo) o `nmcli` (línea de comandos pura),
+ambos son accesibles.
+
+Si prefiere trabajar en la línea de comandos, asegúrese de leer la documentación de nmcli
+primero. Simplemente escribe `nmcli --help` y `man nmcli`
+para encontrar todos los detalles.
+Mientras que `nmcli` ofrece más posibilidades, en la mayoría de los casos de uso, la funcionalidad
+de `nmtui` será suficiente para configurar su red inalámbrica, así que lo describiremos
+aquí:
+
+Usando `nmtui`, puede navegar con la pestaña y las teclas de flechas.
+Se le propondrán tres opciones: +
+`Editar una conexión` +
+`Activar una conexión` +
+`Establecer nombre de host del sistema` +
+
+Si aún no se ha establecido ninguna conexión inalámbrica, elija `Activar una conexión`.
+A partir de arriba hacia abajo, primero se propondrán las conexiones con cable (si lo hay)
+, después de lo cual se mostrarán todas las redes inalámbricas accesibles.
+Navega con las teclas de flecha hacia abajo y hacia arriba para seleccionar la red que quieras,
+entonces simplemente escriba Enter: probablemente se le pedirá la clave
+para la contraseña o el cifrado. Escríbelo, utilice la tecla Tab para confirmar, luego salga y ya ha terminado.
+
+Solo en modo gráfico, en lugar de `nmcli` o `nmtui` puede usar la aplicación
+`nm-connection-editor`.
+
+=== Configuración de servicios
+
+Si usó el modo Manual se le preguntó qué servicios del sistema activan por defecto al inicio. +
+Si usaste la configuración predeterminada del modo automático se aplicaron
+
+En ambos casos puede cambiar estos ajustes de varias maneras:
+
+* Ejecutando como root el comando `servicesetup` (TUI)
+* Solo en modo gráfico, usando `gtkervicesetup`, accesible desde el Centro de Control de Slint, sistema de categorías o tecleando Alt+F2 para levantar un diálogo "Ejecutar..." y luego escribir *gtksetrvicesetup*.
+* Como root haciendo el script ejecutable relevante (chmod 755 <path to the script> o no ejecutable (chmod 644 <path to the script>). Por ejemplo para hacer ejecutable fail2ban escribirías: `chmod 755 /etc/rc.d/rc.fail2ban`
+
+[IMPORTANT]
+====
+Sólo cambie la configuración por defecto si sabe lo que está haciendo.
+====
+
+Los servicios son gestionados por scripts cuyo nombre comienza con `rc.` en el directorio /rc.d/. Por ejemplo, el servicio acpi es administrado por el script de shell → /rc.d/rc.acpi. La mayoría de los servicios se activan al iniciar si el script correspondiente es ejecutable. En la siguiente tabla indicamos si está activada al inicio (`en` en la columna A) o no (`apagado` en la columna A). Si la columna está en blanco, la activación de los servicios depende de una elección hecha durante la instalación. Un `A` en la columna indica que el servicio está activado en modo de instalación automática, se activa si el usuario lo elige durante la instalación. La columna del paquete indica qué paquete de software proporciona el script correspondiente al servicio, caso
+
+[options="autowidth"]
+|====
+| *Service* | *A* | *Paquete* | *Propósito y comentarios*
+| acpi | on | acpid | Configuración avanzada e Interfaz de Energía, permite, por ejemplo, administrar el encendido o reiniciar presionando un botón
+| alsa | on | alsa-utils | Proporcionar ajustes de sonido por defecto o restaurar los guardados
+| alsa-oss | apagado | alsa-utils | Módulos del núcleo ALSA OSS. No es útil en casos de mot, no está habilitado por defecto en Slint.
+| atala | apagado | netatalk | Permite a los sistemas operativos tipo Unix servir como servidores de archivo, impresión y tiempo para ordenadores Macintosh.
+| autof | apagado | autof | Montaje automático basado en kernel para Linux
+| bind | apagado | bind | Servidor de nombre. La mayoría de los usuarios confían en uno remoto. Habilítelo si desea ejecutar un servidor de nombres en este sistema.
+| bitlbee | on | bitlbee | BitlBee es un demonio del IRC que puede hablar con redes de mensajería instantánea
+       y actuar como una puerta de enlace. Los usuarios pueden conectarse al servidor con cualquier cliente
+       IRC normal y ver su 'lista de amigos' en &bitlbee.
+| bluetooth | on | azúl | Permite comunicarse con dispositivos bluetooth
+| brillo|  | brillo | Permite comunicarse con el terminal Braille o con el lector de pantalla. Activado si se solicita durante la instalación
+| cgconfig | on | libcgroups | Ejecuta la utilidad cgconfigparser que analiza .cgconfig. después de configurar la jerarquía del grupo de control, incluyendo el establecimiento de los permisos (UID y GID) de los grupos y posiblemente los parámetros ajustables de los controladores. Esto quiere hacerlo nosotros mismos en cada arranque, por ejemplo ejecutando un script de shell separado. This script is executable by default but anyway wen't do anything until /etc/cgconfig.conf be edited (all lines are commented out as shipped)
+| cgmanager | apagado | cgmanager | Starts the cgmanager daemon that provides an alternate way to manage the centrol group hierarchy through D-Bus requests possibly through the cgm front-end utility.
+| cgproxy | apagado | cgmanager | Starts the cgproxy daemon, that allows programs and users in a centainer to make cgroup administration requests using DBus calls, sending the user-ids or group-ids as SCM credentials to the cgmanager.
+| cgred | on | libcgroups | Starts the cgroups rules engine daemen that automatically distributes to appropriate control groups the processes that changes their effective UID or GID, applying the rules found in /etc/cgrules.conf. This allows to centinue apply resources control resources on such processes that could otherwise escape it. Este script ejecutable por defecto, pero de todos modos ganados't hacer cualquier cosa hasta la edición/cgrules.conf sea editado (todas las líneas son comentadas como enviadas)
+| consolekit | on | ConsoleKit2 | Este daemon es utilizado por el agente de autenticación de consola de polkit's, para comprobar los privilegios del usuario que desea reiniciar o apagar el sistema, por ejemplo.
+| cpufreq | on | scripts sysvinit | Configuración para la frecuencia de la CPU y la escala de voltaje en el núcleo.
+| tazas | on | tazas | Script de inicio/apagado para el servidor de impresión CUPS.
+| cups-browsed | apagado | filtros cups | Hace que las impresoras remotas estén disponibles localmente.
+| dnsmask | apagado | dnsmask | Iniciar/detener/reiniciar dnsmasq (un servidor DNS/DHCP pequeño)
+| espejo | | espejo | starts/stop/restart the espeakup console screen reader. Encender si el usuario solicitó la voz durante la instalación o después escribió el altavoz con espeakup
+| falla2ban | apagado | falla2ban | iniciar/detener fail2ban que escanea archivos de registro como /var/log/pwdfail y prohíbe la IP que causa demasiados fallos de contraseña, y también actualiza los cortafuegos para que rechacen la dirección IP.
+| font | apagado | kbd | Sets the console fent (used in Console mode, not in Graphical mode)
+| fusionar | on | fusionar | Carga el módulo fuse y monta el sistema de control de fuse. FUSE es una interfaz simple para que los programas de espacio de usuario exporten un sistema de ficheros virtual al núcleo Linux.  FUSE también tiene como objetivo proporcionar un método seguro para que los usuarios no privilegiados puedan crear y montar sus propias implementaciones de sistemas de archivos.
+| hinchador | apagado | hinchador | starts/stop/restart the fenrir screen reader, which can be started after installation typing speak-with fenrir.
+| font | apagado | kbd | configurar una fuente de consola personalizada
+| gpm | en | gpm | El servidor del ratón de uso general permite cortar y pegar texto desde la pantalla en una consola Linux.
+| httpd | apagado | https | Inicia o detiene el servidor web Apache
+| enet1 | on | guiones de red | Este script se utiliza para abrir las diferentes interfaces de red.
+| entrada2 | en | guiones de red | Este script de shell arranca todo el sistema de red.
+| inetd | en | inetd | Daemon BSD "super-server". El usuario necesita editar la versión en inglés/inetd.conf para que los servicios sean realmente utilizados.
+| ip_adelante | apagado | guiones de red | Iniciar/detener el reenvío de paquetes IP, necesario para que su computadora actúe como un router.
+| mapa de teclado | on | installer | Carga el mapa del teclado usado en modo Consola.
+| local | apagado | scripts sysvinit | arranca daemons no iniciados por /rc.d/rc.M al tiempo de arranque.
+| bucle | on | scripts sysvinit | Carga el módulo del núcleo del dispositivo de bucle.
+| lxc | apagado | lxc | This scripts starts (if cenfigured to be auto-started) and stops lxc containers.
+| mcelog | apagado | mcelog | Inicia el registro de errores de hardware de mcelog. Este registro y maneja errores de hardware de CPU en sistemas x86
+| mensaje-bus | on | dbus | El bus de mensaje D-BUS para todo el sistema. Este es un demonio que transmite notificaciones de eventos del sistema y otros mensajes, proporcionando comunicación entre procesos.
+| módulos | on | scripts sysvinit | Compute the kernel modules dependencies and start other scripts that load modules not automatically loaded by eudev, possibly for specific kernel versiens
+| modules.local | on | scripts sysvinit | Cargar módulos no cargados automáticamente por eudev
+| murmur | apagado | murmur | Empezar/detener el servidor de chat de voz murmur para mumble
+| mysqld | apagado | mariadb | Empezando parando el servidor MariaDB. MariaDB es un fork de MySQL totalmente compatible con él
+| gestor de red|  | Gestor de red | This is a daemon for automatically switching network cennectiens to the best available cennection. Activated if NetworkManager is chosen to configure the network, during or after installatien
+| nfsd | apagado | nfs-utils | Starts/stop un nfs (Network File Server.qq
+| ntpd | on | ntp | Empieza a detener un daemon (neto'tiempo de trabajo) (Protocolo de tiempo de trabajo).
+| entrelazado|  | salixtools | Activate numlock en the console
+| pcmcia | apagado | pcmciautils | Script para inicializar el subsistema PCMCIA.
+| php-fpm | apagado | php | Inicia el gestor de procesos FastCGI de PHP.
+| pulseaudio | apagado | pulseaudio | Inicia pulseaudio-sistema Esto no se recomienda en Slint.
+| rpc | apagado | rpcbind | Start/stop/restart RPC (remote process communications) daemens needed to use NFS. Para ejecutar un servidor NFS, iniciar estos es obligatorio.
+| samba | apagado | samba | Iniciar/detener/reiniciar el archivo CIFS SMB de Samba e imprimir servidor para clientes CIFS.  Le permite hacer espacio de archivo o impresoras en un host Samba disponible para clientes CIFS (como PCs ejecutando Windows).
+| saslauthd | apagado | sasl cirio | saslauthd is a daemon process that handles plaintext authentication requests en behalf of the SASL library.  La biblioteca CMU Cyrus SASL se utiliza principalmente para autenticar a los servidores de correo.
+| enviar correo | apagado | enviar correo | Iniciar/detener/reiniciar Sendmail MTA (agente de transferencia de correo o sistema de entrega de correo).
+| serial | apagado | util-linux | Inicializa y establece los puertos seriales en tu sistema
+| setterm | en |util-linux |  Proporciona la línea de comandos de la utilidad setterm para establecer los atributos de la terminal (principalmente utilizados para el bloqueo de pantalla y la gestión de energía).
+| inteligente | apagado | smartmontools | Iniciar/detener/reiniciar el daemon inteligente, que supervisa el estado de S.M.A.R.T. disco duro compatible e informa de cualquier problema.
+| sshd | on | openssh | Iniciar/detener/reiniciar el servidor de shell seguro
+| snmpd | apagado | net-snmp |Iniciar/detener el snmp SNMP (Simple Network Management Protocol) daemon
+| syslog | on | sysklogd | Iniciar/detener/reiniciar los daemones de registro del sistema, que registran mensajes tanto del núcleo como del sistema's.
+| sysstat | en | En | Restablecer los registros de actividad del sistema, usados para calcular estadísticas de rendimiento
+| voz |  | voz | starts/stop/restart the speechd-up screen reader, which can be started after installation typing speak-up.
+| sysvinit | on | scripts sysvinit | Este archivo proporciona compatibilidad básica con scripts de inicio de estilo SystemV encontrados en muchos paquetes binarios
+| swapinzram | on | swapinzram | Configurar un dispositivo de bloque de intercambio en la RAM usando zram
+| syslog | on | syslogd | Iniciar/detener/reiniciar los demonios de registro del sistema.
+| sysstat | apagado | sysstat | Restablecer los registros de actividad del sistema.
+| timidez | apagado | TiMididad++ | Start/stop/restart the TiMidity++ ALSA sequencer client. TiMidity++ is a software synthesizer.  Puede reproducir archivos MIDI convirtiéndolos en datos Waveform PCM u otros formatos de archivos de audio.
+| udev | on | eudev | Este script inicializa udev, que llena el directorio /dev con nodos de dispositivo, escanea para dispositivos,
+carga los módulos del núcleo apropiados y configura los dispositivos.
+| ulogd | on | ulogd | inicia el daemon ulogd del espacio de usuario para el registro relacionado con netfilter/iptables.
+| vde2 | en | vde2 | Iniciar/detener/reiniciar el interruptor de VDE. VDE es una red virtual compatible con ethernet que incluye herramientas como 'vde_switch' y 'vdeqemu'.
+| inalámbrico | on | herramientas inalámbricas|Este script configura dispositivos inalámbricos PCI, USB, y Cardbus de 32 bits. Normalmente, este script se llama desde rc.inet1 en lugar de ejecutarse directamente
+| yp | on | yptools | Start NIS (Network Information Servicios). NIS provides network-wide distributien of hostname, username, and other information databases.
+|====
+
+Puede iniciar o detener un servicio utilizando como root el comando `service`. Para saber más escribe `man service`.
+
+== Glossary
+
+Several definitiens in this glossary are taken or adapted from  https://en.wikipedia.org/wiki/Main_Page[Wikipedia] and https://pubs.opengroup.org/onlinepubs/9699919799/[POSIX]
+
+[[applicatien]]Aplicación:: An applicatien program (applicatien for short) is
+a computer program designed to carry out a specific task typically requested by
+end-users.
++
+Applications are not generally censidered as part of the operating system, meaning that they can be added to the system after its installation. They
+perform non-system-related functiens, such as word processing, architectural
+design, mechanical design, workstation publishing, or financial analysis.
+
+
+[[boot]]Arrancar::
+Boot means switch-en a computer to start an operating system. Varios sistemas operativos
+pueden instalarse en la misma computadora. Select which one to load into
+RAM and run can be dene either by the firmware or by a software named boot
+manager (GRUB in Slint's case). The firmware of a computer can support ene of following booting mode, or both:
++
+* In the Legacy or BIOS mode the OS is loaded executing the instructiens written in a boot sector.
+* En el modo EFI el cargador del sistema operativo es un programa almacenado en un archivo ejecutable, ubicado en un directorio de una partición del sistema EFI (partición de EFI System).
+
+[[CPU]]CPU::
+La Unidad de Procesamiento Central o de CPU ejecuta las instrucciones de los programas.
+
+[[command]]Comando:: El comando es definido por https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_104[POSIX] como "una directiva a un shell <<shell, >> para realizar una tarea específica".
++
+La tarea a realizar puede ser una <<application, aplicación>> o una <<utility, utilidad>>.
++
+La estructura básica de los comandos de shell se define en el capítulo https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09[2.9 Shell Commands] de la especificación POSIX.
++
+Ejemplos de comandos son proporcionados en <<bash shell>>.
+
+[[console]]Consola:: La palabra "consola" se refiere al principio de sistemas
+del ordenador, cuando el administrador del sistema escribió comandos en un dispositivo incluyendo un teclado
+y una impresora, enlazado a la computadora, los comandos escritos y la salida
+de la computadora que se imprime en la consola, proporcionando un registro de ambos.
++
+En ordenadores personales el usuario escribe los comandos en el teclado y su salida
+se imprime en una pantalla, que puede separarse o integrarse en el ordenador
+como en un portátil.
+
+[[device]]Dispositivo::
+
+Un periférico de computadora o un objeto que aparece en la aplicación como tal.[POSIX]
+
+[[directory]]Directorio::
+Un directorio es otro nombre para una carpeta. Los sistemas de archivos utilizan directorios para
+organizar archivos dentro de particiones.
++
+Los directorios pueden contener archivos y también otros directorios. La estructura
+resultante puede representarse como un árbol hacia arriba hacia abajo. El directorio de nivel superior de
+una unidad se llama el directorio raíz.  En Linux el carácter / separa los niveles
+del árbol. / solo representa el directorio raíz, /home aloja los archivos
+pertenecientes a usuarios, /home/didier aloja los archivos pertenecientes al usuario didier.
+/root aloja los archivos del usuario llamado root (el sistema's administrador).
+Nota: 'root' puede referirse al directorio de nivel superior o al administrador del sistema's.
+
+[[drive]]Unidad::
+Una unidad es un dispositivo que almacena datos no volátiles, lo que significa que los datos no se
+borrados cuando se apaga la energía. Examples: hard disks, SSD, USB sticks, SD
+cards readers, eMMC.
++
+Los medios que almacenan los datos pueden ser conectados permanentemente a la unidad o extraíbles
+como tarjetas SD, tarjetas USB y unidades conectadas a través de USB.
++
+Un sistema operativo instalado en un medio extraíble o una unidad externa se dice
+portable: se puede mover de una computadora a otra.
+
+[[display_manager]]Mostrar gestor::
+Un gestor de pantalla (o administrador de inicio de sesión) es un software que muestra una ventana en la pantalla
+en la que se le pregunta el nombre de usuario y la contraseña del usuario, entonces inicia
+el entorno gráfico elegido por dicho usuario.
+
+[[encryption]]Encriptación::
+El cifrado es el proceso de convertir los datos a un formulario
+no reconocible ("encriptado"). Se utiliza comúnmente para proteger la información confidencial, para que solo
+personas autorizadas puedan verla. Un solo archivo o directorio, una partición también
+como una unidad completa puede ser cifrada, que lo hacen accesible sólo después de haber
+escrito un pequeño texto llamado una frase de paso, mantenido en secreto.
+
+[[file]]Fichero::
+Un archivo de computadora es un conjunto de datos digitales recopilados bajo el mismo nombre, grabados en un medio de almacenamiento permanente, llamado almacenamiento masivo, como un disco duro, una SSD, un DVD, una tarjeta SD o un USN stick y manejado como unidad.
++
+Los archivos pueden contener datos como textos, imágenes, sonidos, vídeos o programas de ordenador.
+
+[[file_system]]Sistema de archivos::
+Un sistema de archivos es un software que administra los archivos y directorios en una partición. memoriza la ubicación en el medio físico de los datos
+contenidos en los archivos, permitiendo leerlos o escribirlos. Ejemplos de sistemas de archivos comúnmente
+usados son vfat, ntfs, ext4, f2fs. Este comando lista todos los sistemas de archivo
+que permiten leer los datos contenidos en una partición de Linux:
++
+----
+cat /proc/filesystems|nodev grep -v
+----
+
+[[firmware]]Firmware::
+Un firmware es un software que inicializa y comprueba el hardware, luego
+selecciona y carga en RAM el sistema operativo, o inicia un software llamado
+gestor de arranque que hará eso. El firmware se mantiene en dispositivos
+de memoria no volátiles, como ROM, EPROM, o memoria flash. Es el primer software que se ejecuta cuando
+arranca un ordenador. Proporciona un menú que permite configurar el hardware y
+seleccionar en qué modo (Legacy o EFI) arrancar, y en qué orden busque el sistema operativo
+u otra aplicación (como el GRUB gestor de arranque) a ejecutar.
+
+[[kernel]]Kernel::
+Un núcleo Linux es el software en el núcleo de un sistema Slint que gestiona las interacciones
+entre las aplicaciones y el hardware.
++
+Se presenta como un único archivo, instalado en el directorio /boot. Por ejemplo, el archivo /boot/vmlinuz-generic-5.12.11 es un núcleo que viene del paquete kernel-genérico.
++
+Al arrancar el núcleo se copia en RAM.
+
+[[initrd]]Initrd::
+Una initrd (más precisamente, un initramfs o un sistema de archivos de RAM inicial para Slint) es
+un sistema Linux proporcionado como un archivo comprimido. Al arrancar, justo después de que se haya cargado el núcleo
+en RAM el inird también se carga en RAM. Su archivo /init
+ejecuta: carga los módulos necesarios del núcleo en RAM, registra los dispositivos, posiblemente
+desbloquea el dispositivo raíz, montar los sistemas de archivos pseudo y luego cambiar al sistema de archivos raíz
+para iniciar el sistema.
++
+Un initrd se presenta como un único archivo, instalado en el arranque del directorio.
+Por ejemplo, el archivo initrd-generic-5.12.11 es un initrd
+
+[[live_system]]Sistema vivo::
+Un sistema vivo es un sistema operativo que, en lugar de instalarse en un dispositivo
+como un disco duro o SD, yace completamente en <<RAM>>.
++
+An initrd is also a live system, and so is a Slint instalador wich is basically an initrd.
+
+[[partition]]Particin::
+Una partición es una sección de un medio de almacenamiento, como un disco duro o SSD. Es
+tratado por el sistema operativo como un volumen lógico independiente, lo que hace que
+la función sea similar a un medio separado.
+
+[[partition_table]]Tabla de particiones::
+A partition table is the permanent structure recording how information is laid
+out on a media, mainly recording the beginning and end of each partition on
+the media.
++
+The most common types of partition tables are the DOS partition table, initially
+used by the MS-DOS operating system, and the GUID Partition Table or GPT, which
+allows to handle more partitions and larger drives.
+
+[[program]]Programa::
+A prepared sequence of instructions to the system to accomplish a defined task. The term "program" encompasses applications written in the Shell Command Language, complex utility input languages (for example, awk, lex, sed, and so on), and high-level languages. [POSIX]
+
+[[RAM]]RAM::
+RAM significa Memoria de Acceso Aleatorio. Este tipo de dispositivo almacena datos volátiles,
+lo que significa que los datos se borran cuando se apaga la energía.
+
+[[shell]]Concha:: Un programa que interpreta secuencias de entrada de texto como comandos. Puede operar en un flujo de entrada o puede interactivamente pedir y leer comandos desde un terminal. The syntax of the commands
+that can be interpretd by the shell can vary along the shell in use but are mainly defined in the the chapter
+https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html[2.
+Shell Command Language] of the POSIX specification.
++
+Slint ships several programs acting as shell, listed in the file /etc/shells. The *bash* shell is used by default.
+
+[[swap]]Intercambiar::
+Un espacio de intercambio se utiliza para almacenar tentativamente datos previamente en la RAM en un dispositivo
+como un disco duro o SSD, ya sea porque de lo contrario la RAM estaría llena, o a
+espacio libre en la RAM para almacenar allí los datos utilizados con más frecuencia. El espacio de intercambio puede
+ser una partición en un disco de tipo 'Linux swap' o un archivo normal almacenado en una
+partición existente. También hay el 'swap en zram': en este caso los datos
+se almacenan en RAM pero en forma comprimida, a su tamaño utilizable de la RAM.
+
+[[terminal]]Terminal::
+Historically a terminal was a physical device composed of a keyboard and a screen
+used to type commands and receives responses from a remote computer.
++
+Nowadays the commands can be typed in console (or text) mode or in graphical
+mode.
+
+[[utility]]Utilidad::
+Una utilidad es un programa que puede ser llamado por su nombre desde una shell (este también es el caso de algunos <application,applications>>).
++
+Utilities are a part of the operating system (but not of the kernel).
+They perform system-related functions, such as listing directory contents,
+checking file systems, repairing file systems, or
+extracting system status information.
++
+An utility may be invoked as a separate program that executes in a different
+process than the command language interpreter, or it may be implemented as a
+part of the command language interpreter.
++
+For example, the echo command (the
+directive to perform a specific task) may be implemented such that the echo
+utility (the logic that performs the task of echoing) is in a separate program;
+therefore, it is executed in a process that is different from the command
+language interpreter. Practically this means this means that in this case the utility is a program distinct from the shell
++
+Conversely, the logic that performs the echo utility
+could be built into the command language interpreter; therefore, it could
+execute in the same process as the command language interpreter. Such an utility is said "built-in" the shell.
+
+[[virtual_terminal]]Terminal virtual::
+Un terminal virtual es un software que simula un terminal físico, dispositivo
+compuesto por un teclado y una pantalla que permite comunicarse de forma remota con un ordenador
+.

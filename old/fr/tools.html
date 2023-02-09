@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Outils utiles aux contributeurs de Slint</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Accueil</a></div>
+      <div><a href="installer.html">Installateur Slint</a></div>
+      <div><a href="package.html">Paquet Slint</a></div>
+      <div><a href="translators.html">Traducteurs</a></div>
+      <div><a href="contribute.html">Contribuer</a></div>
+      <div><a href="tools.html">Outils</a></div>
+      <div><a href="changelog.html">Journal de bord</a></div>
+      <div id="page-source"><a href="../tools.fr.txt">Texte source</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Le projet d'internationalisation de Slackware</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/tools.html">de</a> | <a href="../en/tools.html">en</a> | <a href="../es/tools.html">es</a> | <a href="../fr/tools.html">fr</a> | <a href="../it/tools.html">it</a> | <a href="../nl/tools.html">nl</a> | <a href="../pl/tools.html">pl</a> | <a href="../pt_PT/tools.html">pt_PT</a> | <a href="../ru/tools.html">ru</a> | <a href="../tr/tools.html">tr</a> | <a href="../uk/tools.html">uk</a> |</div>
+        <h1>Outils utiles aux contributeurs de Slint</h1>
+      </div>
+<div class="sect1">
+<h2 id="_transifex">Transifex</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>la plate-forme Transifex facilite la coopération entre traducteurs. C&#8217;est un
+lieu où chaque équipe de traduction centralise ses fichiers PO et partage
+l&#8217;information. Elle procure un éditeur en ligne, qui peut aussi être utilisé
+pour réviser les traductions.</p></div>
+<div class="paragraph"><p>Pour apprendre à l&#8217;utiliser visitez le
+<a href="http://support.transifex.com/">Transifex Help Desk</a> (en Anglais).</p></div>
+<div class="paragraph"><p>Vous pouvez aussi utiliser l'éditeur en ligne de Transifex, mais :</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+n&#8217;oubliez pas d&#8217;effectuer de fréquentes sauvegardes, au cas où
+</p>
+</li>
+<li>
+<p>
+la mise en forme des traductions est plus facile à effectuer et vérifier
+  localement, en utilisant un éditeur spécialisé tel que <strong>Lokalize</strong> ou
+  <strong>Poedit</strong>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Pour traduire les pages du site Internet au format asciidoc, l&#8217;usage de
+Transifex est obligatoire (voir plus loin).</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">Si vous préférez traduire localement, assurez vous de cocher <em>Télécharger
+pour traduire</em> (pas <em>Télécharger pour l&#8217;utiliser</em>) et <em>Verrouiller cette
+traduction pour informer les autres que vous travaillez dessus</em>. Ceci
+pourrait éviter un travail en double &#8230; Mais deux équipiers peuvent
+partager le même gros fichier PO, du moment qu&#8217;ils s&#8217;accordent sur qui
+traduit quoi.</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Transifex ne revient pas à la ligne dans le texte traduit. Ceci peut
+conduire à de <strong>très</strong> longues lignes, difficiles à lire dans un éditeur de
+textes et qui peuvent même le faire "planter" en consommant tous la capacité
+de traitement. Pour éviter cela, après avoir téléchargé le fichier PO tapez
+simplement :</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  msgcat fichier_téléchargé_depuis_Transifex &gt; fichier_renommé</code></pre>
+</div></div>
+<div class="paragraph"><p>ensuite utilisez <em>Lokalize</em> ou <em>Poedit</em> pour traduire <strong>fichier_renommé</strong>. Ce
+fichier comportera des retours à la ligne mais sera autrement identique à
+celui téléchargé, donc cela ne fera aucun mal.</p></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Si vous traduisez localement n&#8217;oubliez pas de téléverser le fichier édité
+sur Transifex quand vous êtes inactif, pour ne pas le laisser verrouillé
+inutilement.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lokalize">Lokalize</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>Lokalize</em> est inclus dans Slackware. Vous pouvez soit lire le manuel de
+Lokalize <a href="http://docs.kde.org/stable/fr/kdesdk/lokalize/index.html">en ligne</a>
+ou y accéder par le menu Aide ou en pressant la touche [F1]. Réglages
+recommandés :</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Configuration &#8658; Configurer Lokalize &#8658; Identité &#8658; Langue par défaut
+  (choisir la langue cible).
+</p>
+</li>
+<li>
+<p>
+Configuration &#8658; Configurer Lokalize &#8658; Apparence : Choisir une "police de
+  l'éditeur" à chasse fixe et empattement ("serif")  comme Courier. Ceci vous
+  aidera à distinguer 0 (le chiffre) de O (la lettre) ou | (la barre verticale
+  de I (la lettre) et à vérifier la mise en forme, par exemple l&#8217;alignement du
+  premier mot de lignes consécutives.
+</p>
+</li>
+<li>
+<p>
+Configuration &#8658; Configurer Lokalize &#8658; Apparence : cocher "Diode indiquant
+  les états « à mettre à jour », « non traduit », ainsi que le numéro de
+  colonne du curseur", très pratique pour vérifier la longueur de ligne quand
+  cela importe.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_poedit">Poedit</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>Poedit</em> n&#8217;est pas inclus dans Slackware mais est disponible sur le site
+<a href="http://slackbuilds.org">SlackBuilds.org</a>.</p></div>
+<div class="paragraph"><p>Il lui manque un moyen pratique de vérifier la longueur de ligne, mais ceci
+mis à part ses possibilités sont similaires à celles de Lokalize : choisir
+l&#8217;un ou l&#8217;autre est affaire de préférence personnelle.</p></div>
+<div class="paragraph"><p>Dans Edition &#8658; Préférences &#8658; Éditeur, cocher "Vérification orthographique
+automatique" et, comme pour Lokalize, choisir une police à chasse fixe et à
+empattement.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_emploi_de_scripts_inclus_dans_l_8217_archive_slint">Emploi de scripts inclus dans l&#8217;archive Slint</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Cette archive comprimée inclut tout ce qui est nécessaire pour constituer
+les produits Slint ainsi que des outils destinés aux contributeurs. Il est
+nommé slint-[date].tar.xz et fourni dans le répertoire
+<a href="https://slint.fr/pub">pub/</a>.</p></div>
+<div class="paragraph"><p>Pour la déballer, taper :</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  tar xf slint-[date].tar.xz</code></pre>
+</div></div>
+<div class="paragraph"><p>Cela créera un répertoire slint-[date]. Voir dans celui-ci le fichier
+CONTENT.TXT pour les détails, le tableau ci-dessous liste seulement les
+scripts utilisés pour constituer les produits Slint ainsi que les outils
+destinés aux traducteurs.</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Chemin et nom du script</th>
+<th align="left" valign="top">Fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">build/slint.sh</p></td>
+<td align="left" valign="top"><p class="table">Produire une image hybride (CD/DVD ou USB) d&#8217;un installateur Slint ou d&#8217;une distribution Slackware l&#8217;incluant</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">build/make_slint_packages</p></td>
+<td align="left" valign="top"><p class="table">Internationaliser quelques scripts Slackware et construire le paquet SlintLocales.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">build/slintLocales</p></td>
+<td align="left" valign="top"><p class="table">Construire un paquet contenant toutes les traductions à jour des scripts contenus dans les installateurs Slint (toutes versions) ou dans des outils destinés à Slackware.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tools_for_translators/toolbox.sh</p></td>
+<td align="left" valign="top"><p class="table">Cette boite à outils gère les traductions des messages rassemblés dans slackware.pot.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tools_for_translators/toolbox_slint_sh</p></td>
+<td align="left" valign="top"><p class="table">Cette boite à outils gère les traductions des messages émis par le script slint.sh.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tools_for_translators/generate_man_pages</p></td>
+<td align="left" valign="top"><p class="table">Génère des pages de manuels traduites pour quelques-uns des outils destinés à Slackware. Ceci permet de vérifier les fichiers PO correspondants. L&#8217;emploi de ce script nécessite d&#8217;avoir installé le paquet po4a, disponible dans le répertoire <a href="https://slint.fr/packages/extra">extra/</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_comment_vérifier_les_traductions_de_l_8217_installateur_de_slackware_et_des_scripts_d_8217_administration">Comment vérifier les traductions de l&#8217;installateur de Slackware et des scripts d&#8217;administration</h3>
+<div class="paragraph"><p>Ressource <a href="https://www.transifex.com/projects/p/slint/resource/slint/">slint</a>,
+fichier slackware.pot</p></div>
+<div class="paragraph"><p>Quand vous avez terminé la traduction, mettez simplement le fichier dans le
+répertoire wip/,renommé par exemple fr_FR.slackware.po, puis exécutez
+/chemin/vers/tools_for_translators/toolbox.sh et choisissez check_PO dans le
+menu. Si tout va bien :</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+copiez fr_FR.slackware.po dans le répertoire po/ (traduction en Français
+  dans cet exemple)
+</p>
+</li>
+<li>
+<p>
+exécutez le script /chemin/vers/build/SlintLocales.SlackBuild pour inclure
+  votre traduction à jour dans le paquet SlintLocales
+</p>
+</li>
+<li>
+<p>
+exécutez le script /chemin/vers/build/slint.sh pour construire une image ISO
+  hybride CD ou USB de l&#8217;installateur
+</p>
+</li>
+<li>
+<p>
+gravez l&#8217;image sur un CD ou une clef USB
+</p>
+</li>
+<li>
+<p>
+essayez l&#8217;installateur (en Français dans cet exemple, bien sûr), dans une
+  machine réelle ou virtuelle
+</p>
+</li>
+</ol></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">pour exécuter l&#8217;installateur dans une machine virtuelle vous pouvez utiliser
+directement le fichier dont le nom se termine en .iso, il n&#8217;est pas
+nécessaire de le graver sur un support physique dans ce cas.</td>
+</tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_comment_vérifier_les_traductions_du_fichier_slint_sh">Comment vérifier les traductions du fichier slint.sh</h3>
+<div class="paragraph"><p>Ressource
+<a href="https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/">POT
+file for slint.sh</a></p></div>
+<div class="paragraph"><p>Quand vous avez terminé la traduction, mettez simplement le fichier, renommé
+par exemple fr_FR.slint.po, dans le répertoire /wip, puis exécutez le script
+/chemin/vers/tools_for_translators/toolbox_slint_sh et choisissez check_PO
+dans le menu.</p></div>
+<div class="paragraph"><p>Si tout va bien, exécutez de nouveau
+/chemin/vers/tools_for_translators/toolbox_slint_sh mais choisissez
+format_PO dans le menu. Si tout va bien cela générera un fichier slint.mo et
+le rangera à sa place dans l&#8217;arborescence de slint-[date] (dans le
+répertoire slint_locales/fr/LC_MESSAGES dans cet exemple).</p></div>
+<div class="paragraph"><p>Puis essayez votre traduction en comparant les versions anglaise et
+française avec des commandes comme celles-ci :</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  /chemin/vers/build/slint.sh
+  LANG=fr_FR.utf8 /chemin/vers/build/slint.sh</code></pre>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_comment_vérifier_les_traductions_des_pages_de_manuel_inclues_dans_les_paquets_pkgtools_et_slackpkg">Comment vérifier les traductions des  pages de manuel inclues dans les paquets pkgtools et slackpkg</h3>
+<div class="paragraph"><p>Ressources:
+<a href="https://www.transifex.com/projects/p/slint/resource/pkgtools/">pkgtools</a> et
+<a href="https://www.transifex.com/projects/p/slint/resource/slackpkg/">slackpkg</a></p></div>
+<div class="paragraph"><p>De nouveau, mettez le fichier PO dans le répertoire wip/, renommé par
+exemple fr.pkgtools.po (pages de manuel inclues dans le paquet pkgtools en
+Français). puis, exécutez cette commande :</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>   /chemin/vers/tools_for_translators/generate_man_pages fr.pkgtools</code></pre>
+</div></div>
+<div class="paragraph"><p>Si tout se passe bien ceci générera toutes les pages de manuel (dans le cas
+présent : fr.explodepkg, fr.installpkg, fr.makepkg, fr.pkgtool, fr.removepkg
+et fr.upgradepkg). Sinon lisez les messages d&#8217;erreur, faites les corrections
+nécessaires et recommencez. Vous pouvez éviter la plupart des erreurs en
+suivant cet <a href="contribute.html#warning_man_pages">Avertissement</a>.</p></div>
+<div class="paragraph"><p>Pour comparer la page traduite avec celle d&#8217;origine, faites par exemple ceci
+(exemple pour une traduction en Français) :</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  cd /chemin/vers/wip
+  LANG=fr_FR.utf8 GROFF_ENCODING=utf8 man ./installpkg # page de manuel traduite
+  GROFF_ENCODING=utf8 man installpkg # page de manuel originelle</code></pre>
+</div></div>
+<div class="paragraph"><p>Pour éviter de taper "GROFF_ENCODING=utf8" à chaque fois, mettez cette ligne
+dans votre ~/.bashrc :</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  export GROFF_ENCODING=utf8</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="asciidoc">Traduction des fichiers texte à traiter par  <em>AsciiDoc</em> pour générer des pages Internet</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Comme indiqué dans <a href="contribute.html#new_web_pages">Traduction de pages du
+site Internet</a>, les pages suivantes sont générées par <em>asciidoc</em> à partir de
+fichiers textes sources : <a href="slint.html">slint</a>,
+<a href="installer.html">installer.html</a>, <a href="package.html">package.html</a>,
+<a href="contribute.html">contribute.html</a>,
+<a href="translators.html">transators.html</a>, <a href="tools.html">tools.html</a> et
+<a href="changelog.html">changelog.html</a> ainsi que
+<a href="https://www.transifex.com/projects/p/slint/resource/templatepo/">template.po</a>.</p></div>
+<div class="paragraph"><p>Ces fichiers textes sources doivent être traduits avec l'éditeur en ligne de
+Transifex : téléverser un fichier texte sur Transifex échoue avec un message
+d&#8217;erreur pour une raison inconnue du rédacteur, aussi traduire le fichier
+localement puis le téléverser vers Transifex n&#8217;est pas envisageable.</p></div>
+<div class="paragraph"><p>Mais l'éditeur en ligne de Transifex présente l&#8217;avantage de permettre
+d&#8217;ajouter aux fichiers de traduction des phrases ou paragraphes qui
+resteront attachés à une chaîne de caractère du fichier originel en Anglais.</p></div>
+<div class="paragraph"><p>Ceci permet aux traducteurs de particulariser leurs traductions en y
+ajoutant des informations spécifiques à leur locale, par exemple comment
+obtenir de l&#8217;aide dans leur langue ou pays, des liens vers une documentation
+localisée, etc.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Suite à une mise à jour d&#8217;un fichier texte originel en Anglais, les chaînes
+de caractères des fichiers de traduction correspondant aux chaînes modifiées
+dans le fichier en Anglais disparaîtront de l'éditeur de Transifex.</p></div>
+<div class="paragraph"><p>Vous pouvez économiser de la frappe en conservant une copie locale de la
+traduction, téléchargée depuis Transifex : copiez l&#8217;ancienne traduction et
+collez-là dans l'éditeur de Transifex, puis modifiez-la.</p></div>
+<div class="paragraph"><p>Encore plus facile, si votre traduction était déjà téléversée sur le site
+Internet : cliquer sur "Texte source" en bas du menu latéral de cette page
+affichera le texte source correspondant.</p></div>
+<div class="paragraph"><p>En outre, l'éditeur de Transifex a une fonction "Suggestions" (similaire au
+"mémoire de traduction" de Lokalize) qui mémorise les traductions
+précédentes d&#8217;une chaîne de caractères. Cette fonction peut être réellement
+utile quand une page du site est mise à jour. Transifex se souviendra de
+votre dernière traduction de cette chaîne et vous présentera un lien
+"Utiliser ceci" près de la traduction. Vous pouvez ainsi récupérer
+l&#8217;ancienne traduction, la modifier, puis passer à la chaîne de caractères
+suivante.</p></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><div class="title">Familiarisez-vous avec la syntaxe des balises d&#8217;Asciidoc</div><p>Le document de référence est le <a href="http://asciidoc.org/userguide.html">guide
+utilisateur AsciiDoc</a> (en Anglais), mais vous pouvez commencer par lire
+<a href="http://powerman.name/doc/asciidoc">l&#8217;antisèche AsciiDoc</a> (en Anglais
+également). Encore plus facile, si <em>AsciiDoc</em> est installé cette commande :</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>asciidoc --help syntax &gt; asciidoc.txt</code></pre>
+</div></div>
+<div class="paragraph"><p>écrira un "AsciiDoc Markup Syntax Summary" dans le fichier asciidoc.txt, que
+vous pourrez ensuite parcourir ou imprimer.</p></div>
+<div class="paragraph"><div class="title">Préserver le balisage</div><p>Prenez soin de préserver le balisage tel quel. Par exemple, ajouter ou
+enlever des espaces ou des caractères "saut de ligne" peut avoir des effets
+inattendus. Voici quelques exemples :</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Commencer un paragraphe par une espace engendrera un <em>paragraphe littéral</em>
+  affiché avec une police de caractères spécifique
+</p>
+</li>
+<li>
+<p>
+"= du texte" engendrera un en-tête de niveau 0 (titre du document), mais
+  seulement si "=" est le premier caractère de la ligne et est suivi d&#8217;une
+  espace et précédé d&#8217;une ligne vide
+</p>
+</li>
+<li>
+<p>
+" +" en fin de ligne générera un saut de ligne mais seulement si le "+" est
+  précédé d&#8217;une espace et est le dernier caractère de la ligne
+</p>
+</li>
+</ul></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">Pour éviter de mettre la pagaille dans le balisage, nous vous recommandons
+de copier d&#8217;abord la chaîne source (en Anglais) dans la traduction : cliquez
+simplement sur l&#8217;icône figurant deux pages côte à côte en haut à droite de
+la zone de la chaîne source, puis éditez la traduction.</td>
+</tr></table>
+</div>
+<div class="paragraph"><div class="title">Vérifier le rendu de votre traduction</div><p>Vous pouvez vérifier facilement le rendu de la page Internet générée à
+partir de votre traduction d&#8217;un fichier texte source. Faites simplement
+ceci :</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>lftp -c "mirror https://slint.fr/website/"
+# Téléchargez à partir de Transifex votre traduction (nous l'appellerons &lt;traduction.txt&gt;) dans le répertoire website/ qui vient d'être créé
+cd website
+CONFIG_FILE=slint.conf.en
+# Facultativement, si le titre en haut de page et le menu latéral traduits dans votre langue sont déjà téléversés sur le site Internet :
+wget https://slint.fr/slint.conf.ll; CONFIG_FILE=slint.conf.ll # remplacer "ll" par votre code langue (deux lettres)
+# ensuite générez la page XHTML
+asciidoc -b xhtml11 -a icons -f $CONFIG_FILE &lt;traduction.txt&gt; # cette commande génère &lt;traduction.html&gt;
+firefox &lt;traduction.html&gt; &amp;</code></pre>
+</div></div>
+<div class="paragraph"><div class="title">Traduire ou ne pas traduire, telle est la question</div><p>Les mots suivants ont une signification particulière pour AsciiDoc et ne
+doivent pas être traduits quand ils commencent un paragraphe devant attirer
+l&#8217;attention du lecteur : TIP, NOTE, IMPORTANT, WARNING et CAUTION.</p></div>
+<div class="paragraph"><p>D&#8217;une manière générale, les liens et les URLs ne doivent pas être traduits
+mais la légende peut l'être, selon le contexte. Dans les exemples qui
+suivent (traduits à partir du résultat de la commande <em>asciidoc --help
+syntax</em>) seule la valeur de "légende" peut être traduite :</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Liens dans le document :
+[[id]]  (définit la cible de lien "id")
+&lt;&lt;id,légende&gt;&gt; (lien vers la cible "id")
+link:nomdefichier#id[légende] (lien vers un fichier HTML externe)
+
+URLs :
+http:adresse[légende] (lien vers une page Internet)
+mailto:adresse[légende] (lien vers une adresse courriel)
+
+Images :
+image:nomdefichier[légende] (image en ligne)
+image::nomdefichier[légende] (image dans un contexte de bloc)</code></pre>
+</div></div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Dernière mise à jour 2016-04-23 16:20:47 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

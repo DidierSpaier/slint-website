@@ -1,0 +1,7 @@
+Options +Indexes
+IndexIgnore cgi*
+FallbackResource disabled
+IndexOptions +FancyIndexing +NameWidth=*
+AddIcon (ISO,/icons/index.gif) .iso .img
+AddIcon (TXT,/icons/text.gif) .txt .TXT README_BRLTTY
+HeaderName README.TXT

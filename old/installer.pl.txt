@@ -1,0 +1,118 @@
+
+= Instalator Slint
+
+Instalator Slint pozwala na instalację w twoim wybranym języku oraz dodanie
+so systemu Slackware przetłumaczonych narzędzi administracyjnych i stron
+man.
+
+A 'Braille terminal' can also be used to install then pilot the
+system. Instructions for use are available in
+https://slint.fr/docs/README_BRLTTY.
+
+== Pobierz i sprawdź obraz ISO instalatora
+Obrazy ISO dostępne są w dwóch wielkościach:
+
+* http://sourceforge.net/projects/slint/files/[Pełne obrazy ISO DVD + USB]
+  zawierają wszystko, co jest niezbędne do instalacji systemu Slackware.
+* https://slint.fr/installers[Małe obrazy ISO CD + USB] potrzebują nośniki
+  zawierające pakiety systemu Slackware, na przykład płyta DVD Slackware.
+
+Aby pobrać pełny obraz ISO, naciśnij na właściwą wersję, na przykład 14.1.
+
+Możesz sprawdzić poprawność obrazu ISO przy użyciu sumy kontrolnej md5.
+
+* Dla małych obrazów ISO, pobierz i użyj pliku md5 (plik z końcówką .md5).
+* Dla pełnych obrazów ISO, możesz wyświetlić sumę kontrolną klikając na literę
+  i w czarnym kole na prawo od linku do płyty ISO.
+  Na przykład aby utworzyć wielojęzyczny instalator umiędzynarodowionego
+systemu Slackware64-14.1, pobierz obraz ISO (oraz odpowiedni plik md5
+przypadku małego instalatora), następnie w tym samym katalogu wpisz
+następujące polecenie:
+----
+md5sum -c slint64-14.1.iso.md5 # powinno zwrócić: OK
+md5sum slint64-14.1-full.iso # wyświetlony ciąg powinien odpowiadać temu na stronie.
+----
+== Wypal obraz ISO na nośnikach DVD,  CD lub USB
+
+=== Stwórz bootowalny nośnik USB
+
+[WARNING]
+====
+* Cała poprzednia zawartość nośnika USB zostanie UTRACONA
+* Dokładnie sprawdź, czy przypadkowo w twoim poleceniu nie podałeś nazwy
+  partycji twardego dysku zamiast nośnika USB, gdyż zawartość wymienionej
+  partycji zostanie BEZPOWROTNIE UTRACONA.
+====
+
+Pod systemem 'Linux' włóż nośnik USB i sprawdź jego oznaczenie przy użyciu
+następujących poleceń:
+
+----
+cat /proc/partitions
+dmesg | tail
+----
+
+Jeśli jego nazwa to przykładowo /dev/sdc wpisz:
+
+----
+dd if=<filename.iso> of=/dev/sdc bs=1M
+----
+
+Pod systemem 'Windows' użyj darmowej i wolnej aplikacji
+http://rufus.akeo.ie/[Rufus]
+
+=== Utwórz bootowalną płytę CD (mały instalator) lub DVD (duży instalator)
+
+W systemie Linux wpisz jedno z poniższych poleceń (pierwsze dla płyty CD,
+drugie dla DVD):
+
+----
+cat slint64-14.1.iso | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso
+----
+
+
+Na systemach 'Windows 2000/XP/Vista/7' użyj darmowej i wolnej aplikacji
+http://infrarecorder.org/[InfraRecorder].
+
+
+Na systemach 'Windows 7/8' użyj aplikacji
+http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file[Windows
+Disk Image Burner], która jest częścią tych systemów.
+
+== Użyj wielojęzycznego instalatora
+
+Włóż nośnik instalacyjny (CD, DVD lub USB) oraz zrestartuj komputer.
+
+Na ekranie powitalnym, wybierzesz język dla instalacji wpisując dwucyfrowy
+kod:
+
+Oprócz bycia wielojęzycznym, instalatory Slint oferują następujące funkcje
+ponad te istniejące w oryginalnym instalatorze Slackware.
+
+* Domyślna czcionka i mapa klawiatury dopasowana jest do języka używanego przy
+  instalacji.
+* Gdzie tylko możliwe, czcionka True Type jest używana w czasie instalacji w
+  celu automatycznego dopasowania wielkości czcionki do rozdzielczości ekranu
+  (wyłącznie dla wersji 14.0 oraz 14.1)
+* Istnieje opcja utworzenia konta zwykłego użytkownika pod koniec instalacji
+  (przed ponownym uruchomieniem komputera).
+* Podczas instalacji dostępne są opcje ustawienia domyślnego języka i mapy
+  klawiatury oraz zapisania ich dla X (jeśli X jest zainstalowany)
+* Pakiet Slint zapewnia tłumaczenia głównych narzędzi systemu Slackware oraz
+  stron man wyszczególnionych w link:package.html[Pakiet Slint] oraz
+  dokumentów umieszczonych w folderze /usr/docs/slint-<version>-<date>,
+  włączając Slint-HOWTO.txt oraz skrypt reinstall-slackware-packages.sh.
+
+Jeśli używasz mayłej wersji instalatora, podczas instalacji będziesz
+potrzebował 'nośnika źródłowego', czyli nośnika zawierającego pakiety
+Slackware. Pakiety mogą być zainstalowane z płyty CD/DVD systemu Slackware,
+zasobu Samba, NFS, lub serwera FTP/HTTP. W zależności od wyboru ŹRÓDŁA w
+menu, instalator podejmie odpowiednie kroki.
+
+Aby pobrać nośnik źródłowy, odwiedź http://www.slackware.com/getslack/[Get
+Slack]
+
+TIP: Jeśli zajdzie potrzeba, możesz zastąpić nośnik instalacyjny innym nośnikiem
+zawierającym pakiety (w trakie instalacji pakietów, installator będzie już
+załadowany do pamięci).

@@ -1,0 +1,1086 @@
+# Copyright (C) 2015 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# hosein sadeqzade <travis_bickle82@outlook.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: slint\n"
+"POT-Creation-Date: 2013-09-04 11:49+0200\n"
+"PO-Revision-Date: 2015-09-28 09:45+0330\n"
+"Last-Translator: \n"
+"Language-Team: Farsi (Persian) <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fa_IR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.1\n"
+
+#. type: TH
+#: explodepkg:10
+#, no-wrap
+msgid "EXPLODEPKG"
+msgstr "EXPLODEPKG"
+
+#. type: TH
+#: explodepkg:10 makepkg:10
+#, no-wrap
+msgid "21 May 1994"
+msgstr "۲۱ می ۱۹۹۴"
+
+#. type: TH
+#: explodepkg:10 makepkg:10
+#, no-wrap
+msgid "Slackware Version 2.0.0"
+msgstr "اسلکور نسخه ۲.۰.۰"
+
+#. type: SH
+#: explodepkg:11 installpkg:11 makepkg:11 pkgtool:11 removepkg:11 upgradepkg:11
+#, no-wrap
+msgid "NAME"
+msgstr "نام"
+
+#. type: Plain text
+#: explodepkg:14
+msgid ""
+"explodepkg - Extract the contents of a tar+compression package (such as a Slackware software "
+"package) in the current directory."
+msgstr ""
+"؛ explodepkg: استخراج کننده محتویات یک پکیج مبتنی بر tar (نظیر یک پکیج نرم افزاری اسلکور) در "
+"دایرکتوری فعلی ؛"
+
+#. type: SH
+#: explodepkg:14 installpkg:13 makepkg:13 pkgtool:13 removepkg:13 upgradepkg:13
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "اختصار"
+
+#. type: Plain text
+#: explodepkg:22
+msgid "B<explodepkg> B<package> B<[> B<package2,> B<package3,> B<...> B<]>"
+msgstr "B<explodepkg> B<package> B<[> B<package2,> B<package3,> B<...> B<]>"
+
+#. type: SH
+#: explodepkg:22 installpkg:46 makepkg:22 pkgtool:38 removepkg:34 upgradepkg:45
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "توصیف"
+
+#. type: Plain text
+#: explodepkg:33
+msgid ""
+"B<explodepkg> uncompresses and untars Slackware *.tgz (or .tbz, .tlz, .txz) packages (or any "
+"archive that was created by compressing a tarfile with one of the supported compression "
+"utilities) in the current directory. It is not usually used to install packages, since it "
+"doesn't execute the installation scripts in ./install or ./var/log/setup. The primary use "
+"for B<explodepkg> is in package maintenance - exploding a package in a subdirectory, making "
+"fixes to it or upgrading the software, and then building the updated package with B<makepkg.>"
+msgstr ""
+"ابزار explodepkg پکیج های اسلکور با فرمتهای tgz ،tbz ،tlz و txz یا هر پکیج دیگری که از فشرده "
+"سازی یک فایل tar با ابزارهای استاندارد بدست آمده باشد، در دایرکتوری فعلی استخراج می کند. این "
+"فرمان معمولا برای نصب پکیج استفاده نمی شود چون قادر به اجرای اسکریپت های نصب موجود در "
+"install/. یا در var/log/setup/. نیست. استفاده اصلی این ابزار در مدیریت پکیج ها به معنی "
+"استخراج بک پکیج در یک زیردایرکتوری، تعمیر یا ارتقاء آن و سپس  ساخت پکیج ارتقاء یافته با "
+"استفاده از ابزار makepkg می باشد."
+
+#. type: SH
+#: explodepkg:33 installpkg:104 makepkg:128 pkgtool:88 upgradepkg:91
+#, no-wrap
+msgid "AUTHOR"
+msgstr "نویسنده"
+
+#. type: Plain text
+#: explodepkg:35 installpkg:106 makepkg:130 pkgtool:90 upgradepkg:93
+msgid "Patrick J. Volkerding E<lt>volkerdi@slackware.comE<gt>"
+msgstr "Patrick J. Volkerding E<lt>volkerdi@slackware.comE<gt>"
+
+#. type: SH
+#: explodepkg:35 installpkg:106 makepkg:130 pkgtool:90 removepkg:104 upgradepkg:93
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "نگاه کنید به"
+
+#. empty
+#. type: Plain text
+#: installpkg:2
+msgid "B<tar(1),> B<gzip(1),> B<installpkg(8),> B<makepkg(8),> B<pkgtool(8),> B<upgradepkg(8)>"
+msgstr ""
+"B<tar(1),> B<gzip(1),> B<installpkg(8),> B<makepkg(8),> B<pkgtool(8),> B<upgradepkg(8)>"
+
+#. type: TH
+#: installpkg:10
+#, no-wrap
+msgid "INSTALLPKG"
+msgstr "INSTALLPKG"
+
+#. type: TH
+#: installpkg:10
+#, no-wrap
+msgid "22 Nov 2001"
+msgstr "۲۲ نوامبر ۲۰۰۱"
+
+#. type: TH
+#: installpkg:10 removepkg:10 upgradepkg:10
+#, no-wrap
+msgid "Slackware Version 8.1.0"
+msgstr "اسلکور نسخه 8.1.0"
+
+#. type: Plain text
+#: installpkg:13
+msgid "installpkg - install Slackware packages."
+msgstr "؛ installpkg: نصاب پکیج های اسلکور ؛"
+
+#. type: Plain text
+#: installpkg:46
+msgid ""
+"B<installpkg> [ B<--warn> ] [ B<--md5sum> ] [ B<--root /otherroot> ] [ B<--infobox> ] [ B<--"
+"menu> ] [ B<--terse> ] [ B<--ask> ] [ B<--priority ADD|REC|OPT|SKP> ] [ B<--tagfile /somedir/"
+"tagfile> ] B<packagename> [ B<packagename2 ...> ]"
+msgstr ""
+"B<installpkg> [ B<--warn> ] [ B<--md5sum> ] [ B<--root /otherroot> ] [ B<--infobox> ] [ B<--"
+"menu> ] [ B<--terse> ] [ B<--ask> ] [ B<--priority ADD|REC|OPT|SKP> ] [ B<--tagfile /somedir/"
+"tagfile> ] B<packagename> [ B<packagename2 ...> ]"
+
+#. type: Plain text
+#: installpkg:50
+msgid ""
+"B<installpkg> installs single or multiple *.tgz (or .tbz, .tlz, .txz) binary packages "
+"designed for use with the Slackware Linux distribution onto your system."
+msgstr ""
+"ابزار installpkg یک یا چند پکیج باینری اسلکور با فرمت های tgz ،tbz ،tlz و txz که برای "
+"استفاده در توزیع اسلکور لینوکس طراحی شده اند، روی سیستم شما نصب می کند."
+
+#. type: SH
+#: installpkg:50 makepkg:36 pkgtool:46 removepkg:73 upgradepkg:64
+#, no-wrap
+msgid "OPTIONS"
+msgstr "گزینه ها"
+
+#. type: TP
+#: installpkg:51
+#, no-wrap
+msgid "B<--warn packagename>"
+msgstr "B<--warn پکیج>"
+
+#. type: Plain text
+#: installpkg:56
+msgid ""
+"Generate a list of files that would be overwritten to the standard output, but do not "
+"actually install the package.  The list is formatted in a suitable fashion to use as a list "
+"of files to backup."
+msgstr ""
+"لیستی از فایلهایی که جایگزین خروجی استاندارد (stdout) می شوند تهیه می کند اما پکیج را نصب "
+"نمی کند. این لیست در یک فرمت مناسب تهیه شده و به عنوان لیست فایلهای لازم برای پشتیبان گیری "
+"مورد استفاده قرار می گیرد."
+
+#. type: TP
+#: installpkg:56
+#, no-wrap
+msgid "B<--md5sum packagename>"
+msgstr "B<--md5sum پکیج>"
+
+#. type: Plain text
+#: installpkg:59
+msgid "Record the package md5sum in the metadata written in /var/log/packages."
+msgstr "اطلاعات md5sum یک پکیج را در مسیر var/log/packages/ ثبت می کند."
+
+#. type: TP
+#: installpkg:59
+#, no-wrap
+msgid "B<--root /otherroot>"
+msgstr "B<--root /otherroot>"
+
+#. type: Plain text
+#: installpkg:64
+msgid ""
+"Install using a location other than / (the default) as the root of the filesystem to install "
+"on.  In the example given, use /otherroot instead.  Setting the ROOT environment variable "
+"does the same thing."
+msgstr ""
+"پکیج را در محلی غیر از محل پیش فرض (/) به عنوان ریشه فایل سیستم نصب می کند. در مثال ارائه "
+"شده از otherroot/ استفاده می شود. تنظیم متغیر محیطی ROOT عمل مشابهی انجام می دهد."
+
+#. type: TP
+#: installpkg:64
+#, no-wrap
+msgid "B<--infobox>"
+msgstr "B<--infobox>"
+
+#. type: Plain text
+#: installpkg:68
+msgid ""
+"Use /bin/dialog to display an informational dialog as the package is installed.  Primarily "
+"used when installpkg is called from other scripts."
+msgstr ""
+"برای نمایش اطلاعات از bin/dialog/ به هنگام نصب پکیج استفاده شده و به ویژه به هنگام فراخوانی "
+"installpkg از اسکریپت های دیگر مورد استفاده قرار می گیرد."
+
+#. type: TP
+#: installpkg:68
+#, no-wrap
+msgid "B<--menu>"
+msgstr "B<--menu>\n"
+
+#. type: Plain text
+#: installpkg:72
+msgid ""
+"Use /bin/dialog to display a menu asking the user if they would like to install the "
+"package(s) or not.  Generally used when installpkg is called from other scripts."
+msgstr ""
+"از bin/dialog/ برای نمایش پرسش از کاربر به منظور نصب پکیج استفاده می کند. این گزینه نیز "
+"معمولا به هنگام فراخوانی این ابزار از اسکریپت های دیگر استفاده می شود."
+
+#. type: TP
+#: installpkg:72
+#, no-wrap
+msgid "B<--terse>"
+msgstr "B<--terse>"
+
+#. type: Plain text
+#: installpkg:75
+msgid "Install the package displaying only a single description line to stdout."
+msgstr "پکیج را صرفا با نمایش یک توصیف یک خطی در خروجی استاندارد، نصب می کند."
+
+#. type: TP
+#: installpkg:75
+#, no-wrap
+msgid "B<--ask>"
+msgstr "B<--ask>\n"
+
+#. type: Plain text
+#: installpkg:79
+msgid ""
+"Used with -menu mode.  When selected, always ask if a package should be installed regardless "
+"of what the package's priority is."
+msgstr ""
+"به همراه حالت منو (menu-) استفاده شده و به هنگام انتخاب، بدون توجه به اولویت پکیج نصب آن را "
+"از کاربر سئوال می کند."
+
+#. type: TP
+#: installpkg:79
+#, no-wrap
+msgid "B<--priority ADD|REC|OPT|SKP>"
+msgstr "B<--priority ADD|REC|OPT|SKP>"
+
+#. type: Plain text
+#: installpkg:86
+msgid ""
+"When installing with the -menu option, package priority levels (found in the file \"tagfile"
+"\" in the package directory) are used to automatically install (ADD) or skip (SKP) a "
+"package, or to suggest recommended (REC) or optional (OPT) to the user if a menu is "
+"displayed.  If a priority is set on the command line, it will override the values set in the "
+"tagfile for the entire package list."
+msgstr ""
+"به هنگام نصب با استفاده از گزینه منو (menu-)، این گزینه از سطوح اهمیت پکیج ها (ارائه شده در "
+"فایل tagfile موجود در دایرکتوری پکیج) برای نصب (ADD)، عدم نصب اتوماتیک (SKP) یا پیشنهاد پکیج "
+"های توصیه شده (REC) یا انتخابی (OPT) (در صورت نمایش منو) استفاده می کند. اگر یک اولویت در خط "
+"فرمان تعیین شود جایگزین مقادیر مندرج در فایل tagfile برای لیست تمام پکیج ها خواهد شد."
+
+#. type: TP
+#: installpkg:86
+#, no-wrap
+msgid "B<--tagfile /somedir/tagfile>"
+msgstr "B<--tagfile /somedir/tagfile>"
+
+#. type: Plain text
+#: installpkg:90
+msgid ""
+"Specify a different file to use for package priorities (in this example, /somedir/tagfile "
+"will be used).  The default is \"tagfile\" in the package's directory."
+msgstr ""
+"فایل جایگزینی برای استفاده در اولویت بندی پکیج ها مشخص می کند (در این مثال از somedir/"
+"tagfile/ استفاده می شود). حالت پیش فرض، فایل tagfile موجود در دایرکتوری پکیج می باشد."
+
+#. type: SH
+#: installpkg:90
+#, no-wrap
+msgid "EXAMPLES"
+msgstr "مثالها"
+
+#. type: TP
+#: installpkg:91
+#, no-wrap
+msgid "B<Install a font package for X:>"
+msgstr "B<نصب یک پکیج فونت برای X:>"
+
+#. type: Plain text
+#: installpkg:95
+msgid "installpkg font-bh-ttf-1.0.3-noarch-1.txz"
+msgstr "installpkg font-bh-ttf-1.0.3-noarch-1.txz"
+
+#. type: Plain text
+#: installpkg:97
+msgid "Note that if a package is already installed, upgradepkg(8) should be used instead."
+msgstr "به خاطر داشته باشید که اگر یک پکیج قبلا نصب شده بود باید از upgradepkg استفاده شود."
+
+#. type: TP
+#: installpkg:97
+#, no-wrap
+msgid "B<Create a backup of the files that would be overwritten if the package is installed:>"
+msgstr "B<ساخت پشتیبان از فایلهایی که در صورت نصب یک پکیج جایگزین خواهند شد:>"
+
+#. type: Plain text
+#: installpkg:103
+#, no-wrap
+msgid ""
+"tar czvf /tmp/backup.tar.gz \\e\n"
+"  $(installpkg --warn font-bh-ttf-1.0.3-noarch-1.txz)\n"
+msgstr ""
+"tar czvf /tmp/backup.tar.gz \\e\n"
+"  $(installpkg --warn font-bh-ttf-1.0.3-noarch-1.txz)\n"
+
+#. empty
+#. type: Plain text
+#: makepkg:2
+msgid "B<makepkg(8),> B<removepkg(8),> B<explodepkg(8),> B<pkgtool(8),> B<upgradepkg(8)>"
+msgstr "B<makepkg(8),> B<removepkg(8),> B<explodepkg(8),> B<pkgtool(8),> B<upgradepkg(8)>"
+
+#. type: TH
+#: makepkg:10
+#, no-wrap
+msgid "MAKEPKG"
+msgstr "MAKEPKG"
+
+#. type: Plain text
+#: makepkg:13
+msgid "makepkg - make Slackware packages."
+msgstr "؛ makepkg: سازنده پکیج های اسلکور ؛"
+
+#. type: Plain text
+#: makepkg:22
+msgid "B<makepkg> [ B<-l, --linkadd y|n> ] [ B<-c, --chown y|n> ] B<packagename>"
+msgstr "B<makepkg> [ B<-l, --linkadd y|n> ] [ B<-c, --chown y|n> ] B<پکیج>"
+
+#. type: Plain text
+#: makepkg:36
+msgid ""
+"B<makepkg> creates a new Slackware compatible package.  The package is constructed using the "
+"contents of the current directory and all subdirectories. If symbolic links exist, they will "
+"be converted to script code to recreate them when the package is installed. This code will "
+"be appended to the primary installation script B<( install/doinst.sh )> , or, if that script "
+"does not exist it will be created with those contents.  The package will be written out to "
+"the file B<packagename> which should be the full name, including the extension.  This is "
+"usually .tgz, but .tbz, .tlz, and .txz are also accepted.  The proper compression utility "
+"(gzip, bzip2, lzma, or xz) needs to be installed on the machine."
+msgstr ""
+"ابزار makepkg یک پکیج سازگار با اسلکور ایجاد می کند. پکیج با استفاده از محتویات دایرکتوری "
+"فعلی و تمام زیرشاخه های آن ایجاد می شود. اگر لینک های نمادین (symbolic link) وجود داشته "
+"باشند، به منظور تولید دوباره در هنگام نصب به اسکریپت تبدیل می شوند. این کد به انتهای اسکریپت "
+"اصلی نصب واقع در مسیر install/doinst.sh اضافه شده یا اگر آن اسکریپت وجود نداشت با استفاده از "
+"آن محتویات تولید خواهد شد. پکیج به صورت یک فایل ساخته می شود که باید حاوی نام کامل فایل به "
+"همراه پسوند آن باشد. این پسوند معمولا tgz است اما پسوندهای tbz ،tlz و txz نیز قابل قبول "
+"هستند. لازم است که ابزار فشرده سازی مناسب (مانند gzip ،bzip2 ،lzma یا xz) روی سیستم نصب "
+"باشند."
+
+#. type: TP
+#: makepkg:37
+#, no-wrap
+msgid "B<-l, --linkadd y|n>"
+msgstr "B<-l, --linkadd y|n>"
+
+#. type: Plain text
+#: makepkg:42
+msgid ""
+"If y, add any symbolic links found to the install script (doinst.sh) and delete them.  This "
+"is the recommended action.  If this option is not used, makepkg will prompt if symbolic "
+"links are found."
+msgstr ""
+"در صورت انتخاب y برای این گزینه، هر لینک نمادینی که پیدا شود به اسکریپت نصب (doinst.sh) "
+"اضافه شده و حذف می شود. این روش مورد توصیه است. اگر از این گزینه استفاده نشود، makepkg در "
+"صورت پیدا کردن لینک های نمادین اطلاع رسانی خواهد کرد."
+
+#. type: TP
+#: makepkg:42
+#, no-wrap
+msgid "B<-p, --prepend>"
+msgstr "B<-p, --prepend>"
+
+#. type: Plain text
+#: makepkg:48
+msgid ""
+"If this option is given, then any symbolic links added to doinst.sh will be prepended to the "
+"existing script.  This is useful for packages that contain shared libraries that need to be "
+"linked first because programs will use them later in the doinst.sh script."
+msgstr ""
+"اگر این گزینه مورد استفاه قرار گیرد، تمام لینک های نمادین اضافه شده به doinst.sh به ابتدای "
+"اسکریپت موجود اضافه خواهند شد. این شیوه برای پکیج هایی که حاوی کتابخانه های مشترکی هستند که "
+"باید لینک شوند مفید است. چون برنامه ها بعدا در اسکریپت doinst.sh از آنها استفاده خواهند کرد."
+
+#. type: TP
+#: makepkg:48
+#, no-wrap
+msgid "B<-c, --chown y|n>"
+msgstr "B<-c, --chown y|n>"
+
+#. type: Plain text
+#: makepkg:54
+msgid ""
+"If y, makepkg will reset all directory permissions to 755 and ownership to root:root.  In "
+"general, you should have the permissions and ownerships worked out yourself, so relying on "
+"setting this option to y is somewhat sloppy.  It is not the default.  If an option is not "
+"provided, makepkg will prompt."
+msgstr ""
+"در صورت وارد کردن y برای این گزینه، makepkg تمام دسترسی های دایرکتوری را به ۷۵۵ تغییر داده و "
+"مالکیت آنها را به root:root تغییر می دهد. بطور معمول شما باید دسترسی و مالکیت را خودتان "
+"تعیین کنید. بنابراین انتخاب y برای این گزینه چندان مناسب نبوده و گزینه پیش فرض نمی باشد. اگر "
+"گزینه ای انتخاب نشود، makepkg از شما سئوال خواهد کرد."
+
+#. type: SH
+#: makepkg:54
+#, no-wrap
+msgid "INSTALLATION SCRIPTS"
+msgstr "اسکریپت های نصب"
+
+#. type: Plain text
+#: makepkg:57
+msgid "There are 3 types of installation scripts supported in the Slackware package system."
+msgstr "سه نوع اسکریپت نصب در سیستم پکیج اسلکور پشتیبانی می شوند."
+
+#. type: TP
+#: makepkg:57
+#, no-wrap
+msgid "The first is the "
+msgstr "اولین آنها"
+
+#. type: Plain text
+#: makepkg:80
+msgid ""
+"B<primary> installation script. This is found in the subdirectory B<./install> and must have "
+"the name B<doinst.sh> in order to be recognized. This ( and other install scripts ) should "
+"be written using the basic Bourne shell syntax recognized by the B<ash> shell, since this is "
+"the shell that will be used to execute the script when installing from a Slackware install "
+"floppy. This is a common trap - beware of using B<bash> syntax extensions, because the "
+"script will work fine when installed from the hard drive, but will bomb out when installed "
+"from floppy. If the package is for personal use, this isn't a problem. Be careful, though, "
+"if you plan to share your package with other users. The B<primary installation script> is "
+"executed immediately after the package is installed with B<installpkg, pkgtool,> or B<setup.>"
+msgstr ""
+"اسکریپت نصب B<اصلی> می باشد. این اسکریپت در زیردایرکتوری install/. یافت شده و باید دارای نام "
+"doinst.sh باشد تا شناخته شود. این اسکریپت و دیگر اسکریپت های نصب باید با استفاده از Bourne "
+"shell نوشته شوند تا بوسیله Bash شناخته شوند. چون bash تنها مفسری است که به هنگام نصب از "
+"فلاپی اسلکور مورد استفاده قرار می گیرد. زمان استفاده از اسکریپت های bash مراقب باشید چون "
+"اسکریپت به هنگام نصب از هارددیسک عالی کار می کند اما هنگام نصب از روی فلاپی خوب عمل نمی کند. "
+"اگر پکیج برای استفاده شخصی باشد، این مسئله مشکلی به وجود نخواهد آورد. به هر صورت اگر تصمیم "
+"دارید پکیج را با دیگر کاربران به اشتراک بگذارید, احتیاط کنید. B<اسکریپت اصلی نصب> بلافاصله "
+"پس از نصب پکیج بوسیله installpkg ،pkgtool یا setup. اجرا می شود."
+
+#. type: TP
+#: makepkg:80
+#, no-wrap
+msgid "The second type of script is the"
+msgstr "دومین نوع اسکریپت"
+
+#. type: Plain text
+#: makepkg:103
+msgid ""
+"B<configuration> script. This is found in the subdirectory B<./var/log/setup> and must have "
+"a name that starts with B<setup.> in order to be recongnized. An example is the timezone "
+"script: B</var/log/setup/setup.timeconfig.> These scripts are executed during the "
+"B<CONFIGURE> phase of B<setup,> and are re-executed each time the user runs the B<CONFIGURE> "
+"option from B<setup> from then on.  Typically, the user will go through this phase of setup "
+"following the installation of all the packages. Anything that needs to be interactive should "
+"go in one of these scripts to avoid halting the package installation process during B<setup.>"
+msgstr ""
+"اسکریپت B<پیکربندی> می باشد. این اسکریپت در مسیر var/log/setup/. یافت شده و نام آن باید با "
+"setup آغاز شود تا شناسایی گردد. اسکریپت منطقه زمانی یا همان .var/log/setup.timeconfig/ مثالی "
+"از این نوع می باشد. این اسکریپت در مرحله پیکربندی (CONFIGURE) به هنگام نصب سیستم (setup) "
+"اجرا شده و هر زمان گزینه CONFIGURE انتخاب شود، مجددا اجرا می گردد. معمولا کاربر پس از نصب "
+"تمام پکیج ها وارد این مرحله از نصب سیستم می شود. هر چیزی که نیاز به گزینه های تعاملی دارد "
+"باید وارد این اسکریپت ها شود تا مانع نصب پکیج ها هنگام نصب سیستم نشود."
+
+#. type: TP
+#: makepkg:103
+#, no-wrap
+msgid "The third type of script is the"
+msgstr "نوع سوم اسکریپت"
+
+#. type: Plain text
+#: makepkg:117
+msgid ""
+"B<onlyonce> script. Like the name suggests, these are executed only once after the package "
+"is installed, in contrast to the standard B<configuration> script. These scripts are also "
+"found in the B<./var/log/setup> directory and must have a name that starts with B<setup.,> "
+"but in addition the name must contain the string B<onlyonce.> An example might be a script "
+"with the name B</var/log/setup/setup.onlyonce.testscript>"
+msgstr ""
+"اسکریپت های B<یکبارمصرف> می باشند که همانطور که از اسمشان پیداست تنها یکبار پس از نصب پکیج "
+"اجرا می شوند. برخلاف اسکریپت استاندارد B<پیکربندی> این اسکریپت ها در زیردایرکتوری var/log/"
+"setup/. نیز یافت شده و نام آنها علاوه بر عبارت setup باید دارای onlyonce نیز باشد. مانند: "
+"var/log/setup/setup.onlyonce.testscript/"
+
+#. type: SH
+#: makepkg:117
+#, no-wrap
+msgid "PACKAGE FORMAT"
+msgstr "فرمت پکیج"
+
+#. type: Plain text
+#: makepkg:122
+msgid ""
+"B<makepkg> uses GNU tar plus GNU gzip to create its packages. A simple way to extract the "
+"contents of a package (without executing the installation scripts, of course) is to use a "
+"command like this:"
+msgstr ""
+"فرمان makepkg علاوه بر GNU tar از ابزار GNU gzip برای تولید پکیج ها استفاده می کند. روش ساده "
+"برای استخراج یک پکیج (بدون اجرای اسکریپت نصب) استفاده از فرمانی شبیه این می باشد:"
+
+#. type: TP
+#: makepkg:122
+#, no-wrap
+msgid "explodepkg package.tgz"
+msgstr "explodepkg پکیج.tgz"
+
+#. type: TP
+#: makepkg:124
+#, no-wrap
+msgid "Or, something like this:"
+msgstr "یا چیزی شبیه این:"
+
+#. type: TP
+#: makepkg:126
+#, no-wrap
+msgid "gzip -dc package.tgz | tar xvvf -"
+msgstr "gzip -dc پکیج.tgz | tar xvvf -"
+
+#. empty
+#. type: Plain text
+#: pkgtool:2
+msgid "B<installpkg(8),> B<explodepkg(8),> B<removepkg(8),> B<pkgtool(8),> B<upgradepkg(8)>"
+msgstr "B<installpkg(8),> B<explodepkg(8),> B<removepkg(8),> B<pkgtool(8),> B<upgradepkg(8)>"
+
+#. type: TH
+#: pkgtool:10
+#, no-wrap
+msgid "PKGTOOL"
+msgstr "PKGTOOL"
+
+#. type: TH
+#: pkgtool:10
+#, no-wrap
+msgid "24 Nov 1995"
+msgstr "۲۲ نوامبر ۱۹۹۵"
+
+#. type: TH
+#: pkgtool:10
+#, no-wrap
+msgid "Slackware Version 3.1.0"
+msgstr "اسلکور نسخه ۳.۱.۰"
+
+#. type: Plain text
+#: pkgtool:13
+msgid "pkgtool - software package maintenance tool."
+msgstr "؛ pkgtool: ابزار مدیریت پکیج های اسکلور ؛"
+
+#. type: Plain text
+#: pkgtool:15
+msgid "B<pkgtool>"
+msgstr "B<pkgtool>"
+
+#. type: Plain text
+#: pkgtool:38
+msgid ""
+"B<pkgtool> [ B<--sets #a#b#c#> ] [ B<--source_mounted> ] [ B<--ignore_tagfiles> ] [ B<--"
+"tagfile tagfile> ] [ B<--source_dir directory> ] [ B<--target_dir directory> ] [ B<--"
+"source_device device> ]"
+msgstr ""
+"B<pkgtool> [ B<--sets #a#b#c#> ] [ B<--source_mounted> ] [ B<--ignore_tagfiles> ] [ B<--"
+"tagfile tagfile> ] [ B<--source_dir directory> ] [ B<--target_dir directory> ] [ B<--"
+"source_device device> ]"
+
+#. type: Plain text
+#: pkgtool:46
+msgid ""
+"B<pkgtool> is a menu-driven package maintenance tool provided with the Slackware Linux "
+"distribution.  It allows the user to install, remove, or view software packages through an "
+"interactive system.  Pkgtool can also be used to re-run the menu-driven scripts normally "
+"executed at the end of a Slackware installation.  This is useful for doing basic "
+"reconfiguration (like changing the mouse type)."
+msgstr ""
+"فرمان pkgtool یک ابزار مدیریت پکیج دارای منو در توزیع اسلکور لینوکس می باشد. این ابزار به "
+"کاربر اجازه نصب، حذف یا مشاهده پکیج های اسلکور از طریق یک سیستم تعاملی را می دهد. همچنین "
+"pkgtool می تواند برای اجرای مجدد اسکریپت های دارای منو که در حالت معمول در انتهای نصب اسلکور "
+"اجرا می شوند، مورد استفاده قرار گیرد. این عمل برای بازنگری در برخی پیکربندیهای ابتدایی نظیر "
+"تغییر نوع موس مورد استفاده مفید است."
+
+#. type: Plain text
+#: pkgtool:53
+msgid ""
+"Most users will not want to use any options when running B<pkgtool.> These are generally "
+"used only when B<pkgtool> is run during the initial system installation.  Feel free to try "
+"them, but be careful."
+msgstr ""
+"اغلب کاربران به هنگام استفاده از pkgtool از هیچ گزینه ای استفاده نمی کنند. این گزینه ها "
+"معمولا تنها هنگام نصب سیستم مورد استفاده قرار می گیرند. در استفاده از آنها آزاد هستید اما "
+"مراقب باشید."
+
+#. type: TP
+#: pkgtool:53
+#, no-wrap
+msgid "B<--sets #A#B#C#>"
+msgstr "B<--sets #A#B#C#>"
+
+#. type: Plain text
+#: pkgtool:56
+msgid "Install the disk sets A, B, C. Seperate the disk set names by '#' symbols."
+msgstr ""
+"سری دیسک های B ،A و C را نصب می کند. نام سری دیسک ها را با علامت # از یکدیگر تفکیک کنید."
+
+#. type: TP
+#: pkgtool:56
+#, no-wrap
+msgid "B<--source_mounted>"
+msgstr "B<--source_mounted>"
+
+#. type: Plain text
+#: pkgtool:61
+msgid ""
+"When this flag is present, B<pkgtool> will not attempt to unmount and remount the source "
+"device with each disk."
+msgstr ""
+"زمانی که این گزینه ارائه شود pkgtool تلاشی برای لغو اتصال سخت افزار منبع (unmount) و اتصال "
+"مجدد (remount) برای هر دیسک نخواهد کرد."
+
+#. type: TP
+#: pkgtool:61
+#, no-wrap
+msgid "B<--ignore_tagfiles>"
+msgstr "B<--ignore_tagfiles>"
+
+#. type: Plain text
+#: pkgtool:66
+msgid ""
+"When this flag is present, B<pkgtool> will install every package encountered no matter what "
+"the tagfiles say."
+msgstr ""
+"زمانی که این گزینه استفاه شود B<pkgtool> هر پکیجی را که با آن مواجه شود، بدون توجه به "
+"محتویات فایل tagfile نصب خواهد کرد."
+
+#. type: TP
+#: pkgtool:66
+#, no-wrap
+msgid "B<--tagfile tagfile>"
+msgstr "B<--tagfile tagfile>"
+
+#. type: Plain text
+#: pkgtool:70
+msgid ""
+"This flag is used to specify from the command line which tagfile should be used for the "
+"installation."
+msgstr "این گزینه برای مشخص کردن فایل tagfile مورد استفاده برای نصب پکیج ها، استفاده می شود."
+
+#. type: TP
+#: pkgtool:70
+#, no-wrap
+msgid "B<--source_dir directory>"
+msgstr "B<--source_dir دایرکتوری>"
+
+#. type: Plain text
+#: pkgtool:75
+msgid ""
+"Used when installing multiple packages from disk sets. This is the directory in which the "
+"subdirectories for each disk are found. This isn't used when installing from floppy."
+msgstr ""
+"این گزینه برای نصب چندین پکیج از سری دیسک ها مورد استفاده قرار می گیرد. این یک دایرکتوری است "
+"که تمام زیرشاخه ها برای هر دیسک در آن قرار دارند. این گزینه برای نصب از طریق فلاپی استفاده "
+"نمی شود."
+
+#. type: TP
+#: pkgtool:75
+#, no-wrap
+msgid "B<--target_dir directory>"
+msgstr "B<--target_dir دایرکتوری>"
+
+#. type: Plain text
+#: pkgtool:80
+msgid ""
+"The directory where the target root directory is located. This is '/' when installing on the "
+"hard drive, or typically '/mnt' when installing from an install disk."
+msgstr ""
+"مسیری که دایرکتوری ریشه فایل سیستم مقصد در آن قرار دارد. به هنگام نصب روی هارددیسک این "
+"دایرکتوری همان '/' و هنگام نصب از روی دیسک نصب، 'mnt/' می باشد. "
+
+#. type: TP
+#: pkgtool:80
+#, no-wrap
+msgid "B<--source_device device>"
+msgstr "B<--source_device سخت افزار>"
+
+#. type: Plain text
+#: pkgtool:88
+#, no-wrap
+msgid ""
+"The source device to install from. This is not used if you've provided the\n"
+"B<--source_mounted>\n"
+"flag. It's usually used when installing from floppy, as in:\n"
+" --source_device /dev/fd0u1440\n"
+"or\n"
+" --source_device /dev/fd1h1200.\n"
+msgstr ""
+"سخت افزار منبعی که برای نصب استفاه می شود. این گزینه برای زمانی که گزینه source_mounted-- استفاده می شود، مورد استفاده قرار نمی گیرد. بلکه معمولا به هنگام نصب از طریق فلاپی به کار می رود. نظیر مثالهای زیر: \n"
+"  --source_device /dev/fd0u1440\n"
+"  --source_device /dev/fd1h1200\n"
+
+#. empty
+#. type: Plain text
+#: removepkg:2
+msgid "B<makepkg(8),> B<explodepkg(8),> B<installpkg(8),> B<removepkg(8),> B<upgradepkg(8)>"
+msgstr "B<makepkg(8),> B<explodepkg(8),> B<installpkg(8),> B<removepkg(8),> B<upgradepkg(8)>"
+
+#. type: TH
+#: removepkg:10
+#, no-wrap
+msgid "REMOVEPKG"
+msgstr "REMOVEPKG"
+
+#. type: TH
+#: removepkg:10
+#, no-wrap
+msgid "23 Nov 2001"
+msgstr "۲۳ نوامبر ۲۰۰۱"
+
+#. type: Plain text
+#: removepkg:13
+msgid "removepkg - remove Slackware packages."
+msgstr "؛ removepkg: حذف کننده پکیج های اسلکور ؛"
+
+#. type: Plain text
+#: removepkg:16
+msgid "B<removepkg> B<packagename>"
+msgstr "B<removepkg> B<پکیج>"
+
+#. type: Plain text
+#: removepkg:34
+msgid ""
+"[ B<ROOT=/mnt> ] B<removepkg> [ B<-copy> ] [ B<-keep> ] [ B<-preserve> ] [ B<-warn> ] "
+"B<packagename>"
+msgstr ""
+"[ B<ROOT=/mnt> ] B<removepkg> [ B<-copy> ] [ B<-keep> ] [ B<-preserve> ] [ B<-warn> ] B<پکیج>"
+
+#. type: Plain text
+#: removepkg:41
+msgid ""
+"B<removepkg> removes a previously installed Slackware package, while writing a progress "
+"report to the standard output.  A package may be specified either by the full package name "
+"(as you'd see listed in /var/log/packages/), or by the base package name.  For example, the "
+"package foo-1.0-i486-1.tgz may be removed with any of the following commands:"
+msgstr ""
+"ابزار removepkg یک پکیج نصب شده اسکلور را در حالیکه گزارش پیشرفت را در خروجی استاندارد نمایش "
+"می دهد، حذف می کند. پکیج می تواند بوسیله نام کامل (به صورتی که در var/log/packages/ لیست "
+"شده) و یا نام مخفف مشخص شود. به عنوان مثال پکیج foo-1.0-i486-1.tgz می تواند با هر کدام از "
+"فرمانهای زیر حذف شود:"
+
+#. type: Plain text
+#: removepkg:43
+msgid "removepkg foo-1.0-i486-1.tgz (also recognized: .tbz, .tlz, .txz)"
+msgstr "removepkg foo-1.0-i486-1.tgz (tbz و tlz ،txz یا فرمتهای)"
+
+#. type: Plain text
+#: removepkg:45
+msgid "removepkg foo-1.0-i486-1"
+msgstr "removepkg foo-1.0-i486-1"
+
+#. type: Plain text
+#: removepkg:47
+msgid "removepkg foo.tgz"
+msgstr "removepkg foo.tgz"
+
+#. type: Plain text
+#: removepkg:49
+msgid "removepkg foo"
+msgstr "removepkg foo"
+
+#. type: Plain text
+#: removepkg:57
+msgid ""
+"When deleting files, B<removepkg> will analyze the contents of the other packages installed "
+"on your system, and will only delete the files that are unique to the package being "
+"removed.  Similarly, the installation scripts for all the other packages will be considered "
+"when deciding whether or not to delete symbolic links from the package."
+msgstr ""
+"هنگام حذف فایلها removepkg محتویات تمام پکیج های نصب شده روی سیستم را آنالیز کرده و تنها "
+"فایلهایی را حذف می کند که منحصر به پکیج در حال حذف هستند. به صورت مشابه اسکریپت های نصب تمام "
+"پکیج های دیگر هنگام تصمیم گیری در خصوص حذف یا عدم حذف لینک های سمبولیک از پکیج، مورد ملاحظه "
+"قرار می گیرند."
+
+#. type: Plain text
+#: removepkg:69
+msgid ""
+"Removing a package (as well as installing one) can be a dangerous undertaking.  For this "
+"reason, there is the B<-warn> option available. When you use this, B<removepkg> will not "
+"actually remove any files or links, but will output a detailed report of what it would do if "
+"you actually did remove the package. It's suggested that you do this (and maybe pipe the "
+"output to B<less> ) before removing packages to make sure you've backed up anything that "
+"might be important."
+msgstr ""
+"حذف یک پکیج (مانند نصب پکیج) ممکن است خطرانی در پی داشته باشد. به همین دلیل گزینه warn- وجود "
+"دارد. هنگام استفاده از این گزینه removepkg واقعا فایل یا لینکی را حذف نخواهد کرد بلکه یک "
+"گزارش تفضیلی از اتفاقاتی که زمان حذف پکیج رخ می دهد ارائه می کند. پیشنهاد می شود که قبل از "
+"حذف پکیج از این گزینه استفاده کرده (و در صورت تمابل نسبت به pipe کردن خروجی به ابزار less "
+"اقدام کنید) تا از پشتیبان گیری از موارد مهم اطمینان حاصل نمائید. "
+
+#. type: Plain text
+#: removepkg:73
+msgid ""
+"When removing a package, it's original file index will be moved from /var/log/packages to /"
+"var/log/removed_packages. Likewise, it's installation script will be moved from /var/log/"
+"scripts to /var/log/removed_scripts."
+msgstr ""
+"به هنگام حذف یک پکیج، فایل ایندکس آن از مسیر var/log/packages/ به دایرکتوری var/log/"
+"removed_packages/ منتقل خواهد شد. همچنین، اسکریپت نصب آن از var/log/scripts/ به var/log/"
+"removed_scripts/ منتقل می شود."
+
+#. type: TP
+#: removepkg:74
+#, no-wrap
+msgid "B<-warn packagename>"
+msgstr "B<-warn پکیج>"
+
+#. type: Plain text
+#: removepkg:78
+msgid ""
+"Generate a report to the standard output about which files and directories would be removed, "
+"but does not actually remove the package."
+msgstr ""
+"گزارشی در خروجی استاندارد درباره فایلها و دایرکتوریهایی که در صورت حذف بکیج حذف خواهند شد "
+"تولید می کند، اما پکیج را حذف نمی کند."
+
+#. type: TP
+#: removepkg:78
+#, no-wrap
+msgid "B<-preserve packagename>"
+msgstr "B<-preserve پکیج>"
+
+#. type: Plain text
+#: removepkg:82
+msgid ""
+"If specified, the complete package subtree is reconstructed in /var/log/setup/tmp/"
+"preserved_packages/packagename."
+msgstr ""
+"با انتخاب این گزینه زیرشاخه کامل پکیج در این مسیر ساخته می شود: \"پکیج/var/log/setup/tmp/"
+"preserved_packages/\""
+
+#. type: TP
+#: removepkg:82
+#, no-wrap
+msgid "B<-copy packagename>"
+msgstr "B<-copy پکیج>"
+
+#. type: Plain text
+#: removepkg:86
+msgid ""
+"Construct a copy of the package under /var/log/setup/tmp/preserved_packages/packagename, but "
+"don't remove it.  (same effect as -warn -preserve)"
+msgstr ""
+"در دایرکتوری \"نام پکیج/var/log/setup/tmp/preserved_packages/\" یک پکیج ایجاد می کند اما "
+"پکیج را حذف نمی کند (نظیر استفاده از گزینه ترکیبی warn -preserve-) "
+
+#. type: TP
+#: removepkg:86
+#, no-wrap
+msgid "B<-keep>"
+msgstr "B<-keep>\n"
+
+#. type: Plain text
+#: removepkg:91
+msgid ""
+"Save the intermediate files created by removepkg (delete_list, required_files, uniq_list, "
+"del_link_list, required_links, required_list).  Mostly useful for debugging purposes."
+msgstr ""
+"فایلهای بینابینی زیر که بوسیله removepkg ساخته می شوند، ذخیره می کند (این عمل به ویژه برای "
+"فرایندهای عیب یابی مفید است): delete_list, required_files, uniq_list, del_link_list, "
+"required_links, required_list"
+
+#. type: Plain text
+#: removepkg:98
+msgid ""
+"It's possible to remove a package from a filesystem other than / by supplying B<removepkg> "
+"with a B<ROOT> environment variable:"
+msgstr ""
+"حذف یک پکیج از فایل سیستمی غیر از / بوسیله تنظیم متغیر محیطی ROOT برای ابزار removepkg امکان "
+"پذیر است:"
+
+#. type: TP
+#: removepkg:98
+#, no-wrap
+msgid "B<ROOT=/mnt removepkg package>"
+msgstr "B<ROOT=/mnt removepkg پکیج>"
+
+#. type: SH
+#: removepkg:101
+#, no-wrap
+msgid "AUTHORS"
+msgstr "نویسندگان"
+
+#. type: Plain text
+#: removepkg:104
+msgid ""
+"Patrick J. Volkerding E<lt>volkerdi@slackware.comE<gt>, with enhancements by Christian "
+"Franke E<lt>c.franke@acm.orgE<gt>"
+msgstr ""
+"Patrick J. Volkerding E<lt>volkerdi@slackware.comE<gt>, با همکاری Christian Franke E<lt>c."
+"franke@acm.orgE<gt>"
+
+#. empty
+#. type: Plain text
+#: upgradepkg:2
+msgid "B<installpkg(8),> B<makepkg(8),> B<pkgtool(8),> B<upgradepkg(8)>"
+msgstr "B<installpkg(8),> B<makepkg(8),> B<pkgtool(8),> B<upgradepkg(8)>"
+
+#. type: TH
+#: upgradepkg:10
+#, no-wrap
+msgid "UPGRADEPKG"
+msgstr "UPGRADEPKG"
+
+#. type: TH
+#: upgradepkg:10
+#, no-wrap
+msgid "31 May 2002"
+msgstr "۳۱ می ۲۰۰۲"
+
+#. type: Plain text
+#: upgradepkg:13
+msgid "upgradepkg - upgrade Slackware packages."
+msgstr "؛ upgradepkg ؛ ارتقاء دهنده پکیج های اسلکور "
+
+#. type: Plain text
+#: upgradepkg:29
+msgid ""
+"B<upgradepkg> [ B<--dry-run> ] [ B<--install-new> ] [ B<--reinstall> ] [ B<--verbose> ] "
+"B<newpackagename> B<[>I<newpackagename2>B<]>"
+msgstr ""
+"B<upgradepkg> [ B<--dry-run> ] [ B<--install-new> ] [ B<--reinstall> ] [ B<--verbose> ] "
+"B<newpackagename> B<[>I<newpackagename2>B<]>"
+
+#. type: Plain text
+#: upgradepkg:45
+msgid ""
+"B<upgradepkg> [ B<--dry-run> ] [ B<--install-new> ] [ B<--reinstall> ] [ B<--verbose> ] "
+"B<oldpackagename%newpackagename> B<[>I<old2%new2>B<]>"
+msgstr ""
+"B<upgradepkg> [ B<--dry-run> ] [ B<--install-new> ] [ B<--reinstall> ] [ B<--verbose> ] "
+"B<oldpackagename%newpackagename> B<[>I<old2%new2>B<]>"
+
+#. type: Plain text
+#: upgradepkg:57
+msgid ""
+"B<upgradepkg> upgrades a Slackware package from an older version to a newer one.  It does "
+"this by B<INSTALLING> the new package onto the system, and then B<REMOVING> any files from "
+"the old package that aren't in the new package.  If the old and new packages have the same "
+"name, a single argument is all that is required.  If the packages have different names, "
+"supply the name of the old package followed by a percent symbol (%), then the name of the "
+"new package.  Do not add any extra whitespace between pairs of old/new package names."
+msgstr ""
+"ابزار B<upgradepkg> یک پکیج اسلکور را از نسخه قدیمی تر به نسخه جدیدتر بروزرسانی می کند. این "
+"ابزار این کار را بوسیله B<نصب> پکیج جدید و B<حذف> فایلهای پکیج قدیمی که در پکیج جدید وجود "
+"ندارند انجام می دهد. اگر پکیج های جدید و قدیمی نام مشابهی داشته باشند، یک شناسه تنها چیزی "
+"است که مورد نیاز است. اگر پکیج ها دارای نام متفاوت باشند, ابتدا نام پکیج قدیمی سپس علامت "
+"درصد (%) و سپس نام پکیج جدید را وارد کنید. هیچ فاصله ای میان نام پکیج های جدید و قدیمی نباید "
+"وجود داشته باشد."
+
+#. type: Plain text
+#: upgradepkg:60
+msgid ""
+"If upgradepkg finds more than one installed package matching the old package's name, it will "
+"remove them all."
+msgstr ""
+"اگر upgradepkg بیش از یک پکیج با نام پکیج قدیمی روی سیستم پیدا کند، تمام آنها را حذف خواهد "
+"کرد."
+
+#. type: TP
+#: upgradepkg:60
+#, no-wrap
+msgid "To upgrade in a directory other than / (such as /mnt):"
+msgstr "برای بروزرسانی پکیج ها در یک دایرکتوری به جز / (نظیر mnt/) از فرمان زیر استفاده کنید:"
+
+#. type: TP
+#: upgradepkg:62
+#, no-wrap
+msgid "ROOT=/mnt upgradepkg package.tgz (or .tbz, .tlz, .txz)"
+msgstr "ROOT=/mnt upgradepkg پکیج.tgz (.tbz و .tlz ،.txz یا)"
+
+#. type: TP
+#: upgradepkg:65
+#, no-wrap
+msgid "B<--dry-run>"
+msgstr "B<--dry-run>"
+
+#. type: Plain text
+#: upgradepkg:69
+msgid ""
+"Output a report about which packages would be installed or upgraded but don't actually "
+"perform the upgrades."
+msgstr ""
+"گزارشی از پکیج هایی که نصب و یا بروزرسانی می شوند ارائه می کند اما واقعا فرایند بروزرسانی را "
+"اجرا نمی کند."
+
+#. type: TP
+#: upgradepkg:69
+#, no-wrap
+msgid "B<--install-new>"
+msgstr "B<--install-new>"
+
+#. type: Plain text
+#: upgradepkg:77
+msgid ""
+"Normally upgradepkg only upgrades packages that are already installed on the system, and "
+"will skip any packages that do not already have a version installed.  If B<--install-new> is "
+"specified, the behavior is modified to install new packages in addition to upgrading "
+"existing ones."
+msgstr ""
+"به صورت معمول upgradepkg تنها پکیج هایی را که روی سیستم نصب هستند بروزرسانی می کند و از نصب "
+"پکیج هایی که روی سیستم وجود ندارند خودداری می کند. اگر از این گزینه استفاده شود علاوه بر "
+"بروزرسانی پکیج های موجود، پکیج های جدید نیز نصب خواهند شد."
+
+#. type: TP
+#: upgradepkg:77
+#, no-wrap
+msgid "B<--reinstall>"
+msgstr "B<--reinstall>"
+
+#. type: Plain text
+#: upgradepkg:83
+msgid ""
+"Upgradepkg usually skips packages if the exact same package (matching name, version, arch, "
+"and build number) is already installed on the system.  Use the --reinstall option if you "
+"want to upgrade all packages even if the same version is already installed."
+msgstr ""
+"فرمان upgradepkg معمولا از بروزرسانی پکیج هایی که مشخصات (نام، نسخه، معماری و شماره ساخت) "
+"مشابهی دارند خودداری می کند. استفاده از این گزینه تمام پکیج ها را بدون توجه به نسخه آنها "
+"بروزرسانی می کند."
+
+#. type: TP
+#: upgradepkg:83
+#, no-wrap
+msgid "B<--verbose>"
+msgstr "B<--verbose>"
+
+#. type: Plain text
+#: upgradepkg:86
+msgid "Show all the gory details of the upgrade."
+msgstr "تمام جزئیات بروزرسانی را نمایش می دهد."
+
+#. type: SH
+#: upgradepkg:86
+#, no-wrap
+msgid "BUGS"
+msgstr "باگها"
+
+#. type: Plain text
+#: upgradepkg:91
+msgid ""
+"Before upgrading a package, save any configuration files (such as in /etc)  that you wish to "
+"keep.  Sometimes these will be preserved, but it depends on the package structure.  If you "
+"want to force new versions of the config files to be installed, remove the old ones manually "
+"prior to running upgradepkg."
+msgstr ""
+"قبل از بروزرسانی پکیج، تمام فابلهای پیکربندی (نظیر فایلهای موجود در دایرکتوری etc/) که تمایل "
+"به نگهداری آنها دارید ذخیره نمائید. گاهی اوقات این فایلها حفظ می شوند اما این بستگی به "
+"ساختار پکیج دارد. اگر می خواهید نسخه های جدید فایلهای پیکربندی نصب شوند، به صورت دستی نسخه "
+"های قدیمی را قبل از اجرای upgradepkg حذف کنید."
+
+#. type: Plain text
+#: upgradepkg:98
+msgid "B<makepkg(8),> B<installpkg(8),> B<removepkg(8),> B<explodepkg(8),> B<pkgtool(8)>"
+msgstr "B<makepkg(8),> B<installpkg(8),> B<removepkg(8),> B<explodepkg(8),> B<pkgtool(8)>"

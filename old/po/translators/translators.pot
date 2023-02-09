@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-12-04 00:25+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title =
+#: translators.en.txt:1
+#, no-wrap
+msgid "Translators and other Slint contributors"
+msgstr ""
+
+#. type: Plain text
+#: translators.en.txt:4
+msgid ""
+"This page lists all Slint translators registered on the Transifex platform, "
+"and reviewers."
+msgstr ""
+
+#. type: Plain text
+#: translators.en.txt:6
+msgid "Huge thanks to all!"
+msgstr ""
+
+#. type: Plain text
+#: translators.en.txt:8
+msgid "Didier Spaier"
+msgstr ""
+
+#. type: delimited block |
+#: translators.en.txt:88
+#, no-wrap
+msgid ""
+"Translator,Language\n"
+"dlee99 (Dik Leenheer),Dutch\n"
+"Eric Hameleers,Dutch\n"
+"Kaj Huisman,Dutch\n"
+"ponce,Italian\n"
+"celyr,Italian\n"
+"giogio, Italian\n"
+"giuseppep (Giuseppe Pignataro),Italian\n"
+"ihaveadrin,Italian\n"
+"kooru,Italian\n"
+"Sébastien Boillod,French\n"
+"Didier Spaier,French\n"
+"Nicolas Kovacs, French\n"
+"Marcin Herda,Polish\n"
+"Piotr Maksymiec,Polish\n"
+"elesmod,Polish\n"
+"lukkon,Polish\n"
+"Christian Ruesch,German\n"
+"franzen,German\n"
+"Johannes Georgi,German\n"
+"Maik Wagner,German\n"
+"Marcel Saegebarth,German\n"
+"spongetron,German\n"
+"Sammyboy (Marek Srejma),German\n"
+"titopoquito,German\n"
+"Adriano Balani,Brazilian Portuguese\n"
+"Enrico Nicoletto,Brazilian Portuguese\n"
+"Fela,Brazilian Portuguese\n"
+"Gabriel Magno,Brazilian Portuguese\n"
+"Icavalheiro,Brazilian Portuguese\n"
+"Retalhador,Brazilian Portuguese\n"
+"br_Orion,Brazilian Portuguese\n"
+"igaldino,Brazilian Portuguese\n"
+"Malkon Rodrigo,Brazilian Portuguese\n"
+"marcelo.castro,Brazilian Portuguese\n"
+"Xerxes Lins,Brazilian Portuguese\n"
+"hugok (Hugo Carvalho), Portuguese (Portugal)\n"
+"Dimitris Tzemos,Greek\n"
+"dreamwalking,Greek\n"
+"George Vlahavas,Greek\n"
+"Efstathios Iosifidis,Greek\n"
+"Constantine Mousafiris,Greek\n"
+"Diantre,Spanish (Latin America)\n"
+"AlvaroG,Spanish (Latin America)\n"
+"ecoslacker,Spanish (Latin America)\n"
+"sombragris,Spanish (Latin America)\n"
+"Serg Bormant,Russian\n"
+"Sergey Ignatev,Russian\n"
+"Yaroslav Shmelev,Russian\n"
+"Graf,Russian\n"
+"adioe3,Bosnian (Bosnia and Herzegovina)\n"
+"Malsasa,Indonesian\n"
+"willysr,Indonesian\n"
+"tuapembual,Indonesian\n"
+"kisil,Ukrainian\n"
+"uatech,Ukrainian\n"
+"xuser13,Ukrainian\n"
+"Koljan1970 (Микола Ткач),Ukrainian\n"
+"AaLeSsHhKka (Oleh Tsyupka),Ukrainian\n"
+"StreamThreader,Ukrainian\n"
+"Ekin Akoğlu,Turkish\n"
+"kaanureyen07, Turkish\n"
+"Kemal Ökmen,Turkish\n"
+"Kudret Emre, Turkish\n"
+"Orhan Orhan, Turkish\n"
+"Onur Özdemir,Turkish\n"
+"Samet Yilmaz,Turkish\n"
+"Vilender,Turkish\n"
+"Bojan Popovic, Serbian\n"
+"Rade, Serbia\n"
+"Rapha, Serbia\n"
+"Ingemar Karlsson, Swedish\n"
+"zm1990s (Zhang Min),Chinese (China)\n"
+"guanx,Chinese (China)\n"
+"Smokey,Romanian\n"
+"tuxbg (Krustio),Bulgarian\n"
+"giogio, Interlingua\n"
+msgstr ""

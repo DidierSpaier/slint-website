@@ -1,0 +1,15 @@
+= Find your way on Slint's website
+
+Welcome on the website of the Slackware Internationalization Project.
+
+We are sorry, but the requested resource have not been found at the address indicated.
+
+Maybe that resource has been moved, renamed or deleted.
+
+To find you way, simply visit our https://slint.fr/index.html[home page].
+
+Beyond web pages, the Slint project provides the following resources:
+
+https://slint.fr/installers/[installers/] contains polyglot installers for the Slackware Linux distribution. +
+https://slint.fr/packages/[packages/] contains packages intended for Slackware, including polyglot tools or other localized material. +
+https://slint.fr/testing/[testing/] contains products provided for testing purposes.

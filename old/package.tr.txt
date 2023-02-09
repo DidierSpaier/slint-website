@@ -1,0 +1,91 @@
+
+= Slint paketi
+
+Slint paketi çok dilli yönetim araçları ve kılavuz sayfaları içerdiği gibi
+Slint projesi tarafından sağlanan çeviri dosyaları da içerir.
+
+Bu dosya bunun nasıl elde edileceğini ve kurulacağını açıklar, böylecekendi
+içeriğini tanımlar ve neyin hangi dile çevirileceğini bilirsiniz.
+
+Slint paketlerinin kapsamı yavaş yavaş artacak, bu yüzden güncelleme sizin
+güncellenmiş ve yeni çevirilmiş araçları ve mümkün olur olmaz daha fazla
+dilde çevirileri elde etmenizi sağlayacak.
+
+== Bir Slint paketini indirip kurun ya da yükseltin
+
+NOT: Slint kurucu kullandıysanız Slint paketi kurmanıza gerek yoktur: bu
+kurucu tarafından zaten yapılmıştır.
+
+Bir Slin paketi desteklenmiş her Slackware yayımı için (Slackware 13.37,
+Slackware 14.0 and Slackware 14.1) https://slint.fr/packages[packages/]
+dizininde bulunur. aynı paket 32 bit ve 64 bit sürümünde kurulabilir. 'Slint
+paketi' (bu örnekte Slackware 14.1 için) edinmek, denetlemek ve kurmak (ya
+da güncellemek) için şunu yapın:
+
+----
+wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # en son Slint paketi ve ilişkili md5 dosasını elde edeceksiniz
+md5sum -c slint-14.1*md5 # yanıt "OK" olmalı, değilse indirilen paket bozulmuştur
+su # root izinleri alır
+upgradepkg --install-new --reinstall slint-14.1*txz # bu komut paketi kurar ya da günceller
+----
+
+TIP: 'slackpkg' nin 'Slint paketi' kaldırmasının önüne geçmek için,
+/etc/slackpkg/blacklist e sadece bu kelimeyle bir satır ekleyin: + slint
+
+[[what_is_translated]]
+== Ne, hangi dile çevirildi?
+
+Bir slint paketi çok dilli araçlar ve çeviri dosyaları içerir.
+
+Yazım sırasında şu diller dahil edildi: Fransızca, Almanca, Polonyaca,
+Portekizce (Brezilya), Rusça (Latin America) ve Ukraynaca.
+
+Bazı kılavuz sayfaları ayrıca diğer dillere çevirilmiştir,
+https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT] de belirtildiği gibi.
+
+Aşağıdaki tablo çok dilli yönetim araçlarını ve bunların amaçlarını
+listeler.
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|Çok dilli araç|Amaç|Çevirilmiş kılavuz sayfası
+|adduser|Sisteme bir kullanıcı ekler|
+|explodepkg|Aktif dizin içine bir Slackware paketini açar|man explodepkg
+|installpkg|Slackware paketleri kurar|man installpkg
+|makebootdisk|Önyüklenebilir Linux floppy diski oluşturur
+(yalnızca Slackware 13.37 ve 14.0'da)
+|makepkg|Slackware paketleri yapar|man makepkg
+|pkgtool|Yazılım paketleri bakımı ve yapılandırma görevleri gerçekleştirilmesi:
+=> servisleri açılışta başlaması için ayarlar
+=> bir USB başlangıç disketi hazırlayın
+=> fare tipini belirleyin|man pkgtool
+|removepkg|Slackware paketlerini kaldırır|man removepkg
+|upgradepkg|Slackware paketlerini günceller|man upgradepkg
+|eliloconfig|'elilo' önyükleyicisini yapılandırın
+(yalnızca Slackware 14.1'de)
+|liloconfig| 'lilo' önyükleyicisini yapılandırın
+|netconfig| Ağ'ı yapılandırın
+|timeconfig|Zaman dilimini belirler|
+|setconsolefont|Ekran fontu ayarlar|
+|setup.mouse|Fare tipini belirler|
+|xorgsetup|X sunucusunu yapılandır|
+|xwmconfig|Varsayılan pencere yöneticisini veya masaüstünü belirler|
+|slackpkg|Slackware otomatik paket yönetim araçları
+(sadece kılavuz sayfaları çevirilmiştir)|man slackpkg
+man slackpkg.conf
+|========
+ 
+NOTE: Çok dilli araçların mesajlarını ve kılavuz sayfalarını kendi dilinizde
+görmek için, Slint ev sayfasında belitildiği gibi,
+link:slint.html#anchor-1[set up your prefered locale] yapmalısınız
+
+Ek olarak, Slint paketi bir Slint-HOWTO.txt dosyasını ve
+reinstall-slackware-packages.sh betiğini de içeren dökümanları
+/usr/docs/slint-<sürüm>-<tarih> dizinine yükler,
+
+TIP: Slint paketinin yüklediklerini görmek için terminal ekranına şunu yazın:
+----
+less /var/log/packages/slint*
+----
+Liste içinde gezinmek için aşağı ve yukarı ok tuşlarını kullanın, çıkmak
+için 'q' tuşuna basın.

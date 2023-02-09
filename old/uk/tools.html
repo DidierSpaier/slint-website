@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Корисні інструменти для учасників Slint</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Домашня сторінка</a></div>
+      <div><a href="installer.html">Встановник Slint</a></div>
+      <div><a href="package.html">Пакунок Slint</a></div>
+      <div><a href="translators.html">Перекладачі</a></div>
+      <div><a href="contribute.html">Сприяння</a></div>
+      <div><a href="tools.html">Інструменти</a></div>
+      <div><a href="changelog.html">Журнал змін</a></div>
+      <div id="page-source"><a href="../tools.uk.txt">Код сторінки</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Проєкт інтернаціоналізації Slackware</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/tools.html">de</a> | <a href="../en/tools.html">en</a> | <a href="../es/tools.html">es</a> | <a href="../fr/tools.html">fr</a> | <a href="../it/tools.html">it</a> | <a href="../nl/tools.html">nl</a> | <a href="../pl/tools.html">pl</a> | <a href="../pt_PT/tools.html">pt_PT</a> | <a href="../ru/tools.html">ru</a> | <a href="../tr/tools.html">tr</a> | <a href="../uk/tools.html">uk</a> |</div>
+        <h1>Корисні інструменти для учасників Slint</h1>
+      </div>
+<div class="sect1">
+<h2 id="_transifex">Transifex</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Платформа Transifex спрощує взаємодію перекладачів, будучи місцем, де
+команда перекладачів може централізовано зберігати свої PO-файли та
+розповсюджувати інформацію. Доступний онлайн-редактор, який також підходить
+і для ревізії перекладів.</p></div>
+<div class="paragraph"><p>Інструкції з використання дивіться у <a href="http://support.transifex.com/">Центрі
+допомоги Transifex</a>.</p></div>
+<div class="paragraph"><p>Ви можете використовувати онлайн-редактор Transifex за потреби, але:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+на всяк випадок не забувайте частіше робити локальні резервні копії
+</p>
+</li>
+<li>
+<p>
+форматування тексту перекладів легше виконувати та перевіряти локально, за
+  допомогою спеціялізованих PO-редакторів, як-от <strong>Lokalize</strong> або <strong>Poedit</strong>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Для перекладу веб-сторінок у форматі asciidoc використання Transifex
+обов’язкове (дивіться нижче).</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">Якщо Ви надаєте перевагу локальному перекладу, обирайте на Transifex
+<em>Завантажити для перекладу</em> (а не <em>Завантажити для використання</em>) і
+<em>Заблокувати цей переклад, аби попередити інших, що ви працюєте над ним</em>. Це
+завадить дублюванню зусиль… Декілька членів команди можуть одночасно
+працювати над одним великим PO-файлом, якщо домовляться, хто яку частину
+перекладатиме.</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Transifex не переносить рядки перекладеного тексту. Це призводить до появи
+<strong>дуже</strong> довгих рядків, ускладненню читання у текстовому редакторі, ба навіть
+до завеликого завантаження процесора. Щоб уникнути цього, після завантаження
+PO-файлу наберіть:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  msgcat файл_завантажений_з_Transifex &gt; перейменований_файл</code></pre>
+</div></div>
+<div class="paragraph"><p>і використовуйте <em>Lokalize</em> або <em>Poedit</em> для перекладу
+<strong>перейменованого_файлу</strong>. Цей файл буде з перенесеннями рядків, але в іншому
+буде ідентичний завантаженому файлу, тому це не зашкодить.</p></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Якщо перекладаєте локально, не забувайте відвантажувати відкоригований файл
+на Transifex, призупиняючи роботу з ним, не тримайте блокування без потреби.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lokalize">Lokalize</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>Lokalize</em> входить до складу Slackware. Ви можете або прочитати Lokalize
+Handbook <a href="http://docs.kde.org/development/en/kdesdk/lokalize/index.html">у
+мережі</a>, або з меню Допомога, натиснувши [F1]. Рекомендовані налаштування:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Налаштування &#8658; Налаштувати Lokalize &#8658; Ідентифікація: Обрати мову
+  (встановити до цільової мови).
+</p>
+</li>
+<li>
+<p>
+Налаштування &#8658; Налаштувати Lokalize &#8658; Зовнішній вигляд: Обрати шрифт
+  фіксованої ширини із зарубками (моноширинний), наприклад Courier. Це
+  дозволить розрізняти 0 (цифра) та O (літера) або | (пайп) і I (літера) й
+  перевіряти форматування, наприклад вирівнювання перших слів на послідовних
+  рядках.
+</p>
+</li>
+<li>
+<p>
+Налаштування &#8658; Налаштувати Lokalize &#8658; Зовнішній вигляд: Обрати <em>Індикатори
+  стану для виділення неперекладених і неточних рядків</em>, також, як <em>позиція
+  курсора у стовпчику</em>, дуже зручно для перевірки довжини рядків, коли це має
+  значення.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_poedit">Poedit</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>Poedit</em> не постачається зі Slackware, але доступний на
+<a href="http://slackbuilds.org">SlackBuilds.org</a>.</p></div>
+<div class="paragraph"><p>У нього не вистачає зручних функцій для перевірки довжини рядка, але в
+іншому його функціонал аналоґічний Lokalize, тож можна обирати один або
+інший редактор за власним смаком.</p></div>
+<div class="paragraph"><p>У Редагування &#8658; Налаштування &#8658; Редактор позначте <em>Автоматично перевіряти
+орфоґрафію</em> та, як і в Lokalize, оберіть шрифт фіксованої ширини із
+зарубками.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_використання_сценаріїв_що_містяться_у_тарболі_slint">Використання сценаріїв, що містяться у тарболі Slint</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Цей стиснений архів містить усе необхідне для створення продуктів slint, як
+й інструменти для учасників slint. Він зветься slint-[дата].tar.xz і
+знаходиться в каталозі <a href="https://slint.fr/pub">pub/</a>.</p></div>
+<div class="paragraph"><p>Аби розпакувати його, наберіть:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  tar xf slint-[дата].tar.xz</code></pre>
+</div></div>
+<div class="paragraph"><p>З’явиться каталоґ slint-[дата]. Дивіться файл CONTENT.TXT у ньому для
+детальнішої інформації, таблиця нижче показує лише сценарії, що
+використовуються для створення продуктів slint та інструменти для
+перекладачів. Усі шляхи вказано відносно цього каталоґу.</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Ім'я сценарію та розташування</th>
+<th align="left" valign="top">Призначення</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">build/slint.sh</p></td>
+<td align="left" valign="top"><p class="table">Створює гібридний (CD/DVD або USB) образ встановника Slint або дистрибутив Slackware зі встановником Slint.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">build/make_slint_packages</p></td>
+<td align="left" valign="top"><p class="table">Інтернаціоналізує різні пакети Slackware і створить пакет SlintLocales.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">build/slintLocales</p></td>
+<td align="left" valign="top"><p class="table">Створює пакунок, що містить усі оновлені переклади сценаріїв Slackware, що входять до інсталяторів Slint (усіх версій) або інструментів для Slackware.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tools_for_translators/toolbox.sh</p></td>
+<td align="left" valign="top"><p class="table">Цей сценарій керує перекладами повідомлень, зібраних у slackware.pot.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tools_for_translators/toolbox_slint_sh</p></td>
+<td align="left" valign="top"><p class="table">Цей сценарій керує перекладами повідомлень, що виводяться сценарієм slint.sh .</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tools_for_translators/generate_man_pages</p></td>
+<td align="left" valign="top"><p class="table">Створює перекладені сторінки керівництв для різних інструментів Slackware. Дозволяє перевіряти PO-файли. Використання цього сценарію потребує встановленого пакунку po4a, доступного у каталозі <a href="https://slint.fr/packages/extra">extra/</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_як_перевіряти_переклади_встановника_slackware_та_сценаріїв_адміністратора">Як перевіряти переклади встановника Slackware та сценаріїв адміністратора</h3>
+<div class="paragraph"><p>Ресурс <a href="https://www.transifex.com/projects/p/slint/resource/slint/">slint</a>,
+файл slackware.pot</p></div>
+<div class="paragraph"><p>Коли ви закінчите переклад, перемістіть файл до каталоґу wip/,
+(пере)йменуйте, наприклад, у uk_UK.slackware.po, потім запустіть на
+виконання /path/to/tools_for_translators/toolbox.sh й оберіть у меню
+перевірити_PO. Якщо все йде добре:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Скопіюйте uk_UK.slackware.po до каталоґу po/ (переклад українською у цьому
+  прикладі)
+</p>
+</li>
+<li>
+<p>
+Запустіть /path/to/build/SlintLocales.SlackBuild, аби додати оновлений
+  переклад до пакунку SlintLocales
+</p>
+</li>
+<li>
+<p>
+Запустіть /path/to/build/slint.sh для створення гібридного CD або USB образу
+  інсталятора
+</p>
+</li>
+<li>
+<p>
+Розгорніть образ на CD або USB-флешку
+</p>
+</li>
+<li>
+<p>
+Спробуйте встановити (очевидно, українською мовою в цьому випадку), на
+  віртуальну або справжню машину
+</p>
+</li>
+</ol></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">Аби запустити встановника у віртуальній машині, ви можете використовувати
+файл .iso як віртуальний носій, у цьому випадку, записувати його на фізичний
+носій не потрібно.</td>
+</tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_як_перевіряти_переклади_файлу_slint_sh">Як перевіряти переклади файлу slint.sh</h3>
+<div class="paragraph"><p>Ресурс:
+<a href="https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/">POT
+file for slint.sh</a></p></div>
+<div class="paragraph"><p>Коли ви закінчите переклад, перемістіть файл до каталоґу wip/, перейменуйте,
+наприклад, у uk_UK.slint.po для української, потім запустіть
+/path/to/tools_for_translators/toolbox_slint_sh й оберіть у меню
+перевірити_PO.</p></div>
+<div class="paragraph"><p>Якщо все йде добре, знову запустіть
+/path/to/tools_for_translators/toolbox_slint_sh, але оберіть формат_PO у
+меню. Якщо все йде добре, буде згенеровано й поміщено до відповідного
+каталоґу у дереві slint-[дата] файл slint.mo (у цьому прикладі
+slint_locales/uk/LC_MESSAGES).</p></div>
+<div class="paragraph"><p>Потім спробуйте Ваш переклад, порівнюючи з англійською та німецькою версіями
+командами на зразок:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  /path/to/build/slint.sh
+  LANG=de_DE.utf8 /path/to/build/slint.sh</code></pre>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_як_перевіряти_переклади_сторінок_керівництв_що_входять_до_пакунків_pkgtools_і_slackpkg">Як перевіряти переклади сторінок керівництв, що входять до пакунків pkgtools і slackpkg</h3>
+<div class="paragraph"><p>Ресурси:
+<a href="https://www.transifex.com/projects/p/slint/resource/pkgtools/">pkgtools</a> and
+<a href="https://www.transifex.com/projects/p/slint/resource/slackpkg/">slackpkg</a></p></div>
+<div class="paragraph"><p>Знову ж таки, перемістіть PO-файл до каталоґу wip/, (пере)йменуйте,
+наприклад, у uk.pkgtools.po (сторінки керівництв, що входять до пакунка
+pkgtools українською). Потім виконайте команду:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>   /path/to/tools_for_translators/generate_man_pages es.pkgtools</code></pre>
+</div></div>
+<div class="paragraph"><p>Якщо все йде добре, сценарій створить усі сторінки керівництв (у цьому
+випадку: uk.explodepkg, uk.installpkg, uk.makepkg, uk.pkgtool, uk.removepkg,
+uk.upgradepkg). В іншому випадку, читайте повідомлення про помилки, уносьте
+потрібні зміни та спробуйте ще раз. Ви можете уникнути багатьох помилок,
+прочитавши <a href="contribute.html#warning_man_pages">Попередження</a>.</p></div>
+<div class="paragraph"><p>Аби порівняти перекладені сторінки керівництв з оригінальними, виконайте,
+наприклад, це (приклад для перекладу українською):</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  cd /path/to/wip/
+  LANG=uk_UA.utf8 GROFF_ENCODING=utf8 man ./installpkg # перекладене керівництво
+  GROFF_ENCODING=utf8 man installpkg # оригінальне керівництво</code></pre>
+</div></div>
+<div class="paragraph"><p>Аби не набирати "GROFF_ENCODING=utf8" щоразу, додайте цей рядок до
+~/.bashrc:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  export GROFF_ENCODING=utf8</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="asciidoc">Переклад текстових файлів, що обробляються <em>AsciiDoc</em> при створені веб-сторінок</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Як показано у <a href="contribute.html#new_web_pages">Переклад веб-сторінок</a>,
+такі сторінки створено <em>asciidoc</em> із джерельних текстових файлів:
+<a href="slint.html">slint.html</a>, <a href="installer.html">installer.html</a>,
+<a href="package.html">package.html</a>, <a href="contribute.html">Contribute</a>,
+<a href="translators.html">Translators</a>, <a href="tools.html">Tools</a> та
+<a href="changelog.html">ChangeLog</a>, так само, як
+<a href="https://www.transifex.com/projects/p/slint/resource/templatepo/">template.po</a>.</p></div>
+<div class="paragraph"><p>Ці файли потрібно перекладати за допомогою онлайн-редактора Transifex:
+спроба вивантажити перекладений текстовий файл на Transifex закінчується
+невдачею з повідомленням про невідому помилку редактора, тому переклад цих
+файлів локально й вивантаження їх на Transifex - не варіянт.</p></div>
+<div class="paragraph"><p>Але онлайн-редактор Transifex має перевагу в тому, що дозволяє додавати до
+файлів перекладів рядки та цілі параґрафи, зберігаючи при цьому прив'язку до
+рядків оригінального англійського файлу.</p></div>
+<div class="paragraph"><p>Це дозволяє перекладачам змінювати їхні переклади, додаючи інформацію,
+специфічну до їх локалі, до прикладу, про те, як користувач може отримати
+допомогу цією мовою або у цій країні, або ж про посилку на локалізовану
+документацію та інше.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Під час оновлення оригінального англомовного файлу, ті рядки тексту в
+перекладі, які збігаються з рядками, що змінилися з англомовного файлу, буде
+відкинуто.</p></div>
+<div class="paragraph"><p>Наразі, ви можете зберегти те, що набирали, якщо зробите копію перекладу
+(завантаживши його з Transifex), згодом ви можете скопіювати старий переклад
+із цієї локальної копії та вставити його у редакторі Transifex, за потреби
+відредагувавши.</p></div>
+<div class="paragraph"><p>Навіть простіше, якщо клацнути "Код сторінки" внизу меню нової веб-сторінки,
+буде показано відповідний джерельний текстовий файл.</p></div>
+<div class="paragraph"><p>Окрім того, редактор Transifex має можливість «Пропозиції» (аналоґічну
+«Пам'яті перекладів» у Lokalize), яка «запам'ятовує» схожі нещодавні
+переклади рядків. Ця можливість може бути дуже корисною, коли б сторінку
+сайту не було оновлено. Transifex пам'ятає Ваш останній переклад і надає
+посилання «Використовуйте це», Ви можете просто скористатися нею, уникнувши
+набору та перекладу вдруге.</p></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><div class="title">Ознайомтеся із синтаксисом розмітки AsciiDoc</div><p>Основний документ - це <a href="http://asciidoc.org/userguide.html">Керівництво
+користувача AsciiDoc</a>, але спершу, прочитайте
+<a href="http://powerman.name/doc/asciidoc">шпаргалки з AsciiDoc</a>. Ще швидше, зі
+встановленим <em>AsciiDoc</em>, така команда:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>asciidoc --help syntax &gt; asciidoc.txt</code></pre>
+</div></div>
+<div class="paragraph"><p>Вона запише до файлу asciidoc.txt загальні відомості про синтаксис розмітки
+AsciiDoc, які Ви можете прочитати або роздрукувати.</p></div>
+<div class="paragraph"><div class="title">Зберігайте розмітку</div><p>Ретельно зберігайте розмітку, як є. Наприклад, додавання або вилучення
+пробілів, або символів «нового рядка» може привести до несподіваного
+результату. Нижче наведено кілька прикладів:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Початок параґрафу з пробілу призведе до створення <em>буквального параґрафу</em>,
+  що показується спеціяльним шрифтом
+</p>
+</li>
+<li>
+<p>
+«= текст» призведе до створення заголовку рівня 0 (заголовка документу), але
+  тільки, якщо «=» — першим символом у рядку, є пробіл після нього та порожній
+  рядок перед ним.
+</p>
+</li>
+<li>
+<p>
+додано у кінець рядка «\+» призведе до створення <em>розривання рядка</em> тільки,
+  якщо перед «+» стоїть пробіл.
+</p>
+</li>
+</ul></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">Для уникнення плутанини з кодами форматування, рекомендуємо спершу копіювати
+початковий (англійський) рядок до перекладу (просто клацнувши на піктоґраму
+з двома аркушами праворуч над початковим рядком), і вже опісля відредагувати
+його.</td>
+</tr></table>
+</div>
+<div class="paragraph"><div class="title">Перевірка зовнішнього вигляду Вашого перекладу</div><p>Ви легко можете перевірити, як виглядає сторінка, створена з Вашого
+перекладу. Просто виконайте це:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>lftp -c "mirror https://slint.fr/website/"
+Завантажте Ваш переклад із Transifex (дамо йому ім’я &lt;translation.txt&gt;) до каталоґу website, створений попередньою командою
+cd website
+CONFIG_FILE=slint.conf.en
+# Необов'язково, якщо заголовок та меню, перекладені Вашою мовою, завантажено на веб-сайт:
+wget https://slint.fr/slint.conf.ll; CONFIG_FILE=slint.conf.ll # заміна «ll» на код Вашої мови (дві літери)
+# потім створіть веб-сторінку
+asciidoc -b xhtml11 -a icons -f $CONFIG_FILE &lt;translation.txt&gt; # ця команда створить &lt;translation.html&gt;
+firefox &lt;translation.html&gt; &amp;</code></pre>
+</div></div>
+<div class="paragraph"><div class="title">Перекладати чи ні, ось питаннячко</div><p>Ці слова мають спеціяльне значення в AsciiDoc, і не мають перекладатися,
+коли вони розпочинають абзац із попередженням (вони замінюються значками):
+TIP, NOTE, IMPORTANT, WARNING та CAUTION.</p></div>
+<div class="paragraph"><p>Власне кажучи, посилання та URL не мають перекладатися, проте їх заголовки -
+можна, у залежності від контексту. У таких прикладах (отриманих із висновку
+<em>asciidoc --help syntax</em>) тільки значення <em>caption</em> можна перекладати:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Посилання на документ:
+[[id]] (визначає мету посилання)
+&lt;&lt;id,заголовок&gt;&gt; (посилання на призначений id)
+link:filename#id[заголовок] (посилання на зовнішній HTML-файл)
+
+Адреси URL:
+http:address[заголовок] (посилання на веб-сторінку)
+mailto:address[заголовок] (посилання на одержувача електронної пошти)
+
+Зображення:
+image:filename[заголовок] (вбудоване зображення)
+image::filename[заголовок] (блок із зображенням)</code></pre>
+</div></div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Останнє оновлення 2016-04-23 16:20:52 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

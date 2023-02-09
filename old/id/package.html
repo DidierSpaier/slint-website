@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Paket Slint</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Beranda</a></div>
+      <div><a href="installer.html">Installer Slint</a></div>
+      <div><a href="package.html">Paket Slint</a></div>
+      <div><a href="translators.html">Penterjemah</a></div>
+      <div><a href="contribute.html">Berkontribusi</a></div>
+      <div><a href="tools.html">Perangkat</a></div>
+      <div><a href="changelog.html">Catatan Perubahan</a></div>
+      <div id="page-source"><a href="../package.id.txt">Halaman Sumber</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Proyek Internasionalisasi Slackware</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/package.html">de</a> | <a href="../en/package.html">en</a> | <a href="../es/package.html">es</a> | <a href="../fr/package.html">fr</a> | <a href="../ia/package.html">ia</a> | <a href="../id/package.html">id</a> | <a href="../it/package.html">it</a> | <a href="../nl/package.html">nl</a> | <a href="../pl/package.html">pl</a> | <a href="../pt_BR/package.html">pt_BR</a> | <a href="../pt_PT/package.html">pt_PT</a> | <a href="../ru/package.html">ru</a> | <a href="../sv/package.html">sv</a> | <a href="../tr/package.html">tr</a> | <a href="../uk/package.html">uk</a> |</div>
+        <h1>Paket Slint</h1>
+      </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Paket Slint berisi tool administrasi polyglot dan halaman manual serta
+berkas terjemahan, yang disediakan oleh proyek Slint.</p></div>
+<div class="paragraph"><p>Halaman ini menjelaskan bagaimana mendapatkan dan menginstallnya, lalu
+menjelaskan kontennya sehingga Anda tahu apa yang diterjemahkan dan dalam
+bahasa apa.</p></div>
+<div class="paragraph"><p>Batas paket Slint akan bertambah secara bertahap, sehingga cukup dengan
+upgrade, Anda akan mendapatkan versi dan tool yang terbaru serta terjemahan
+dalam lebih banyak bahasa ketika mereka tersedia.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_download_dan_install_atau_upgrade_paket_slint">Download dan install atau upgrade paket Slint</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Jika Anda baru saja menggunakan installer Slint, tidak perlu menginstall
+paket Slint: hal ini sudah dilakukan oleh installer.</p></div>
+<div class="paragraph"><p>Paket Slint disediakan untuk setiap edisi Slackware yang didukung (Slackware
+13.37, Slackware 14.0 dan Slackware 14.1) pada direktori
+<a href="https://slint.fr/packages">packages/</a>. Paket yang sama bisa diinstall pada
+versi 32 dan 64 bit. Untuk mendapatkan, memeriksa, dan menginstall (atau
+upgrade) <em>paket Slint</em> (untuk Slackware 14.1 pada contoh ini), lakukan:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # Anda akan mendapatkan paket Slint terbaru dan juga berkas md5 yang relevan
+md5sum -c slint-14.1*md5 # jawaban harus bernilai "OK", jika tidak paket yang didownload rusak
+su # mendapatkan hak akses root
+upgradepkg --install-new --reinstall slint-14.1*txz # perintah ini menginstall atau mengupgrade paket</code></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">Untuk mencegah <em>slackpkg</em> menghapus <em>paket Slint</em>, tambahkan baris pada
+/etc/slackpkg/blacklist dengan hanya kata ini: + slint</td>
+</tr></table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="what_is_translated">Apa yang diterjemahkan, dalam bahasa apa?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Paket Slint berisi tools polyglot dan berkas terjemahan.</p></div>
+<div class="paragraph"><p>Saat ini ditulis, bahasa berikut sudah tersedia: Perancis, Jerman, Polandia,
+Portugis (Brazil), Rusia, Spanyol (Amerika Latin) dan Ukraina.</p></div>
+<div class="paragraph"><p>Beberapa halaman manual juga diterjemahkan pada bahasa lain, seperti yang
+tertulis pada <a href="https://slint.fr/packages/MAN_PAGES.TXT">MAN_PAGES.TXT</a>.</p></div>
+<div class="paragraph"><p>Tabel dibawah berisi tool administrasi polyglot dan tujuannya.</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Tool Polyglot</th>
+<th align="left" valign="top">Tujuan</th>
+<th align="left" valign="top">Halaman manual yang diterjemahkan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><div class="verse">adduser</div></td>
+<td align="left" valign="top"><div class="verse">Menambahkan pengguna pada sistem</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">explodepkg</div></td>
+<td align="left" valign="top"><div class="verse">Mengekstrasi konten paket Slackware pada direktori aktual</div></td>
+<td align="left" valign="top"><div class="verse">man explodepkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">installpkg</div></td>
+<td align="left" valign="top"><div class="verse">Menginstall paket Slackware</div></td>
+<td align="left" valign="top"><div class="verse">man installpkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">makebootdisk</div></td>
+<td align="left" valign="top"><div class="verse">Membuat disket boot Linux
+(hanya pada Slackware 13.37 dan 14.0)</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">makepkg</div></td>
+<td align="left" valign="top"><div class="verse">Membuat paket Slackware</div></td>
+<td align="left" valign="top"><div class="verse">man makepkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">pkgtool</div></td>
+<td align="left" valign="top"><div class="verse">Mengelola paket perangkat lunak dan melakukan tugas konfigurasi:
+&#8658; menentukan layanan yang aktif saat awal
+&#8658; membuat USB boot
+&#8658; menentukan jenis mouse</div></td>
+<td align="left" valign="top"><div class="verse">man pkgtool</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">removepkg</div></td>
+<td align="left" valign="top"><div class="verse">Menghapus paket Slackware</div></td>
+<td align="left" valign="top"><div class="verse">man removepkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">upgradepkg</div></td>
+<td align="left" valign="top"><div class="verse">Upgrade paket Slackware</div></td>
+<td align="left" valign="top"><div class="verse">man upgradepkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">eliloconfig</div></td>
+<td align="left" valign="top"><div class="verse">Konfigurasi boot loader <em>elilo</em>
+(hanya pada Slackware 14.1)</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">liloconfig</div></td>
+<td align="left" valign="top"><div class="verse">Konfigurasi boot loader <em>lilo</em></div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">netconfig</div></td>
+<td align="left" valign="top"><div class="verse">Konfigurasi jaringan</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">timeconfig</div></td>
+<td align="left" valign="top"><div class="verse">Menentukan zona waktu</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">setconsolefont</div></td>
+<td align="left" valign="top"><div class="verse">Menentukan font layar</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">setup.mouse</div></td>
+<td align="left" valign="top"><div class="verse">Menentukan jenis mouse</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">xorgsetup</div></td>
+<td align="left" valign="top"><div class="verse">Konfigurasi server X</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">xwmconfig</div></td>
+<td align="left" valign="top"><div class="verse">Menentukan window manager default atau desktop</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">slackpkg</div></td>
+<td align="left" valign="top"><div class="verse">Tool otomatis untuk mengelola paket Slackware
+(hanya halaman manual yang diterjemahkan)</div></td>
+<td align="left" valign="top"><div class="verse">man slackpkg
+man slackpkg.conf</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/note.png" alt="Note" />
+</td>
+<td class="content">Untuk melihat pesan tool dan halaman manual pada bahasa Anda, Anda harus,
+seperti tertulis pada home page Slint, <a href="slint.html#anchor-1">tentukan
+lokal Anda</a></td>
+</tr></table>
+</div>
+<div class="paragraph"><p>In addition, the Slint package also installs documents in the folder
+/usr/docs/slint-&lt;version&gt;-&lt;date&gt;, including a Slint-HOWTO.txt and a script
+reinstall-slackware-packages.sh.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">to list what a Slint package has installed, just type in a terminal:</td>
+</tr></table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre><code>less /var/log/packages/slint*</code></pre>
+</div></div>
+<div class="paragraph"><p>Use the up and down arrows to navigate in the list, press the letter <em>q</em> to
+quit.</p></div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Terakhir diperbarui 2016-04-23 16:20:34 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

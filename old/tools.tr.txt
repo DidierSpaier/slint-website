@@ -1,0 +1,304 @@
+= Slint'e katkı verenler için kullanışlı araçlar
+
+== Transifex
+
+Transifex platformu çevirmenler arası işbirliğini kolaylaştırır, her bir
+çeviri takımının kendi PO dosyalarını bir merkezde topladığı ve bilgi
+paylaştığı bir yerdir. Ayrıca çevirilerin gözden geçirilmesini de sağlayan
+çevrimiçi bir düzenleyici sağlar.
+
+Nasıl kullanıldığını öğrenmek için http://support.transifex.com/[Transifex
+Help Desk] sayfasını ziyaret edin.
+
+Kullanışlı olduğu için Transifex'in çevrimiçi düzenleyicisini
+kullanabilisiniz, fakat:
+
+* sık sık yerel yedekler almayı unutmayın, ne olur ne olmaz
+* çevirilerin metin biçimlendirilmesini, **Lokalize** veya **Poedit** gibi PO
+  düzenleyicileri kullanarak yerel olarak yapmak ve denetlemek daha kolaydır
+
+asciidoc biçimindeki web sayfalarını çevirmek için Transifex kullanmak
+zorunlu (aşağıya bakınız).
+
+WARNING: Eğer yerel olarak çevirmeyi tercih ederseniz, 'Çevirmek üzere indirin' ile
+indirdiğinizden ('Kullanmak üzere indirin' ile değil) ve dosya üzerinde
+çalıştığınızı diğerleri görmesi için kilitlediğinizde emin olun. Bu çakışma
+hatlarının önüne geçer... Fakat iki takım üyesi büyük bir PO dosyasını,
+kimin neyi çevireceği konusunda anlaştıkları sürece paylaşabilir.
+
+[TIP]
+=========
+Transifex çevirilen metin satırlarını sarmalamaz. Bu *çok* uzun satırlara,
+bir metin düzenleyici içinde okumanın zor olmasına hatta bu yüzden tüm
+CPU'yu tüketerek iflas etmesine yol açabilir. Bundan kaçınmak için, PO
+dosyalarını indirdikten sonra şunu yazın:
+
+----
+  msgcat file_downloaded_from_Transifex > file_renamed
+----
+
+sonra *file_renamed* i çevirmek için 'Lokalize' ya da 'Poedit' kullanın. Bu
+dosyanın sarmalanmış satırları olacak fakat diğer durumda indirilenden
+farksız olacak, yani önemli değil.
+=========
+Eğer yerel olarak çeviri yapıyorsanız düzenlenen dosyayı boş olduğunuz zaman
+yüklemeyi unutmayın, gereksiz olarak kilitli kalmasına izin vermeyin.
+
+
+== Lokalize
+
+'Lokalize' Slackware içinde bulunur. Lokalize El Kitabını
+http://docs.kde.org/development/en/kdesdk/lokalize/index.html[on line]
+okuyabilir ya da F1 e basarak Yardım menüsünden ulaşabilirsiniz. Tavsiye
+edilen ayarlar:
+
+* Settings => Configure Lokalize => Identity: Dilinizi seçin (hedef dile
+  ayarlayın).
+* Settings => Configure Lokalize => Appearance: Courier gibi serif sabit
+  genişlikli (tek boşluklu) bir font seçin. Bu sizin 0 (rakam) ile O (harf) yu
+  ya da | (boru) ile I (harf) yı ayırt etmenizi, biçimlendirmeyi denetlemenizi
+  -örneğin ardışık satırlarda ilk kelime hizalaması gibi- sağlar.
+* Settings => Configure Lokalize => Appearance: 'LEDS to indicate Fuzzy and
+  Untranslated status' ile 'cursor column number' kontrol edin, satır
+  uzunluğunu önemli olduğunda çok pratiktir.
+
+== Poedit
+
+'Poedit' Slackware içinde gelmez fakat @
+http://slackbuilds.org[SlackBuilds.org] dan ulaşılabilir.
+
+Satır uzunluğunu pratik şekilde denetleme eksikliği vardır fakat bunun
+dışındaki özellikleri Lokalizeninkilerle benzerdir, kısacası birini ya da
+diğerini seçmek kişisel bir tercihtir.
+
+Edit => Preferences => Editor içinde, 'Automatic spell checking' i
+işaretleyin ve, Lokalize ile olduğu gibi, serif sabit genişlikli font
+seçiniz.
+
+== Slint tarball içindeki kullanışlı betikler
+
+Bu sıkıştırılmış arşiv slint ürünleri inşasında gerekli olan herşeyin
+yanında slint katkı vericileri için araçlar da bulunur. slint-[date].tar.xz
+ismindedir ve https://slint.fr/pub[pub/] dizini içinde bulunur.
+
+Paketi açmak için yazınız:
+
+----
+  tar xf slint-[date].tar.xz
+----
+  
+slint-[tarih] dizini çıkaracaktır. Detaylar için CONTENT.TXT dosyasına
+bakınız, aşağıdaki tablo sadece slint ürünleri inşasında kullanılan
+betikleri ve çevirmenlerin kullanımı için araçları listeler.
+
+[format="psv", options="header,autowidth"]
+|========
+|Betik adı ve yeri|Amaç
+|build/slint.sh |Melez (CD/DVD veya USB) slackware kurucu kalıbı ya da Slackware dağıtımı yapar
+|build/make_slint_packages |Bazı Slackware paketlerini yerelleştirir ve SlintLocales paketini inşa eder.
+|build/slintLocales |Slint kurucular (tüm sürümler) içindeki Slackware betiklerinin ya da Slackware için olan araçların içindeki tüm güncel çevirilerini yapar. 
+|tools_for_translators/toolbox.sh |Bu araç kutusu slackware.pot içinden elde edilen mesajların çevirilmesini yönetir.
+|tools_for_translators/toolbox_slint_sh |Bu araç kutusu script slint.sh çıktısı olan mesajların çevirilmesini yönetir.
+|tools_for_translators/generate_man_pages |Slackware de bazı araçlar için yerelleştirilmiş kılavuz sayları üretir. Bu PO dosyalarını denetlemenizi sağlar. Bu betiğin kullanımı için https://slint.fr/packages/extra[extra/] dizini içinde bulunan po4a paketi kurulu olmalıdır. 
+|========
+ 
+=== Slackware'in kurucusu ve yönetim betikleri nasıl denetlenir
+
+Kaynak https://www.transifex.com/projects/p/slint/resource/slint/[slint],
+dosya slackware.pot
+
+Çeviri ile işiniz bittiğinde, dosyayı wip/ dizini içine koyun,
+örn. pt_BR.slackware.po olarak (yeniden)adlandırın, sonra
+/path/to/tools_for_translators/toolbox.sh ı çalıştırın ve menüden check_PO
+yu seçin. Hepsi doğru giderse:
+
+. pt_BR.slackware.po yu po/ dizinine kopyalayın (bu örnekte çeviri Brezilya
+  Portekizcesi)
+. SlintLocales içine güncelleştirilmiş çevirilerinizi dahil etmek için
+  /path/to/build/SlintLocales.SlackBuild i çalıştırın
+. kurucunun melez CD ya da USB kalıbını yapmak için /path/to/build/slint.sh ı
+  çalıştırın
+. kalıbı CD ya da USB bellek üzerine yazın
+. kurucuyu (bu durumda Portekizce, tabii ki) sanal ya da gerçek bir makinada
+  deneyin
+
+TIP: Kurucuyu sanal makinede çalıştırmak için doğrudan .iso ile biten dosyayı
+sanal ortam olarak kullanabilirsiniz, bu durumda bunu fiziksel bir ortama
+kaydetmek gerekli değildir.
+
+=== slint.sh dosyası çevirileri nasıl denetlenir
+
+Kaynak
+https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/[POT
+dosyası slint.sh için]
+
+Çeviri ile işiniz bittiğinde, dosyayı wip/ dizinine koyun, Almanca için
+örneğin de_DE.slint.po olarak (yeniden)adlandırın, sonra run
+/path/to/tools_for_translators/toolbox_slint_sh ı çalıştırıp menüden
+check_PO yu seçin.
+
+Hepsi doğru giderse, tekrar /path/to/tools_for_translators/toolbox_slint_sh
+ı çalıştırın fakat menüden format_PO yu seçin. Hepsi doğru giderse bu
+slint.mo dosyasını üretir ve slint-[tarih] ağacı içindeki yerine koyar ( bu
+örnekte slint_locales/de/LC_MESSAGES dizini içine).
+
+Sonra İngilizce ve Almanca sürümlerini karşılaştırmayı şu şekilde deneyin:
+
+----
+  /path/to/build/slint.sh
+  LANG=de_DE.utf8 /path/to/build/slint.sh
+----
+ 
+=== pkgtools ve slackpkg paketleri içine dahil edilen kılavuz sayfalarının çevirisi nasıl denetlenir
+
+Kaynak:
+https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools] ve
+https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]
+
+Yine, PO dosyasını wip/ dizini içine koyun, örneğin es.pkgtools.po olarak
+(yeniden)adlandırın (İspanyolya pkgtools içindeki kılavuz sayfaları). Sonra
+bu komutu çalıştırın:
+
+----
+   /path/to/tools_for_translators/generate_man_pages es.pkgtools
+----
+   
+Hepsi doğru giderse içerilen tüm kılavuz sayfalarını çıktı olarak verir (bu
+durumda: es.explodepkg, es.installpkg, es.makepkg, es.pkgtool, es.removepkg,
+es.upgradepkg). Değilse hata mesajını okuyun, gerekli düzeltmeleri yapın ve
+tekrarlayın. Pek çok hatayı link:contribute.html#warning_man_pages[Warning]
+i takip ederek giderebilirsiniz.
+
+Yerelleştirilmiş kılavuz sayfaları ile asıl olanları karşılaştırmak için,
+şunu yapın örneğin (Ukraynaca çeviri için örnek):
+
+----
+  cd /path/to/wip/
+  LANG=uk_UA.utf8 GROFF_ENCODING=utf8 man ./installpkg # yerelleştirilmiş kılavuz sayfası
+  GROFF_ENCODING=utf8 man installpkg # asıl kılavuz sayfası
+----
+  
+Her seferinde "GROFF_ENCODING=utf8" yazmaktan kurtulmak için ~/.bashrc içine
+bu satırı koyun:
+
+----
+  export GROFF_ENCODING=utf8
+----
+
+[[asciidoc]]
+== 'AsciiDoc' tarafından web sayfaları üretmek için işlenecek metin dosyalarının çevirilmesi
+
+link:contribute.html#new_web_pages[Web sayfalarının çevirisi]nde
+belirtildiği gibi, takip eden sayfalar 'asciidoc' tarafından kaynak metin
+dosyalarından üretilir: link:slint.html[slint.html],
+link:installer.html[installer.html], link:package.html[package.html],
+link:contribute.html[Katkı verin], link:translators.html[Çevirmenler],
+link:tools.html[Araçlar] and link:changelog.html[Değişiklik Listesi] ile
+birlikte
+https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po].
+
+Bu kaybak metin dosyaları Transifex çevrimiçi düzenleyici ile
+çevirilmelidir: Transifex'e çevirilmiş bir metin dosyası yüklemek bilinmeyen
+yazar sebebiyle bir hata mesajıyla başarısız olur, dosyaları yerelde
+düzenleyip Transifex'e yüklemek bir seçenek değildir.
+
+Fakat Transifex çevrimiçi düzenleyici çeviri dosyaları içinde orjinal
+İngilizce dosyasının bir dizisine bağlı kalacak sağlar cümleler veya
+paragraflar eklemenize izin verir.
+
+Bu, çevirmenlerein kendi yerellerine özgü bilgileri çevirilerine ekleyerek
+özelleştirmesine izin verir, örneğin kullanıcı kendine özgü dilinde ya da
+ülkesinde nasıl yardım alabilir, yerelleştirilmiş belgeler için işaretçiler,
+vb.
+
+[TIP]
+====
+Orjinal İngilizce bir metin dosyasındaki güncellemenin ardından, çeviri
+dosyası içinde İngilizce dosyasında değiştirilen dizlerle eşleşenler
+Transifex düzenleyicide ortadan kalkar.
+
+Çevirinin yerel bir kopyasını tutarsanız yazımdan tasarruf edebilirsiniz
+(Transifex'den indirerek): Eski çeviriyi yerel dosyadan kopyalayın ve
+Transifex düzenleyicie yapıştırın, sonra gerekli şekilde düzenleyin.
+
+Daha da kolayı, eğer çeviriniz web sayfasına yüklenmiş durumda ise: o
+sayfanın menüsünün alt taraftaki "Sayfa Kaynağı"na tıklama ilgili kaynak
+metin dosyasını gösterecektir.
+
+Ayrıca, Transifex düzenleyici dizenin geçmiş benzer çevirilerini
+"hatırlayan" "Öneriler" özelliğine sahiptir (Lokalize'deki "Translation
+Memory" e benzer). Bu özellik bir web sayfası güncellendiğinde oldukça
+kullanışlıdır. Transifex dizenin son çevirisini hatırlayacak ve önerinin
+yanında "Bunu kullan" bağlantısı sağlayacaktır, böylece bunu kullanabilecek,
+küçük bir değişiklikle yeniden yazma ve çevirmeden kurtularak sonrakine
+geçebileceksiniz.
+====
+
+.AsciiDoc işaretleme sözdizimine alışın
+Referans belge http://asciidoc.org/userguide.html[AsciiDoc User Guide] dır
+fakat yeni başlayan biri için, http://powerman.name/doc/asciidoc[AsciiDoc
+cheatsheet] belgesini okuyabilirsiniz. Daha da hızlısı, 'AsciiDoc' un kurulu
+olduğunu farzederek şu komut:
+----
+asciidoc --help syntax > asciidoc.txt
+----
+AsciiDoc İşaretleme Sözdizimi Özeti ni asciidoc.txt dosyası içine yazar, ki
+böylece görüntüleyebilir ya da çıktı alabilrsiniz.
+
+.işaretleyiciyi koruyun
+İşaretleyiciyi olduğu gibi bırakmaya dikkat edin. Örneğin bir boşluğu ya da
+"satırbaşı" nı silmek beklenmeyen etkiler yaratabilir. Birkaç örnek:
+
+* Bir paragrafa boşlukla başlamak özel bir fontla gösterilen bir 'baskı
+  paragrafı' üretecektir.
+* "= bir metin" 0 seviyesinde bir başlık (belge başlığı) üretecektir, fakat
+  sadece "=" satırın ilk karakteri ise, sonrasında bir boşluk varsa ve
+  öncesinde boş bir satır varsa.
+* sonuna "\+" eklenen bir satır 'satır sonu' üretir, eğer "+" dan önce bir
+  boşluk varsa, bu satırın son karakteri olmalı
+
+WARNING: Biçimlendirme yönergelerinin içinde kaybolmamak için, önce kaynak diziyi
+(İngilizce) çeviriye kopyalamanızı (kaynak dizi alanının sağ üstündeki
+simgee tıklayarak) sonra düzenlemenizi tavsiye ediyoruz.
+
+.Çevirinizin birleşimini denetleyin
+Bir metin dosyası kaynağı çevirinizden üretilen web sayfalarının birleşimi
+kolayca denetlenebilir. Sadece şunu yapun:
+----
+lftp -c "mirror https://slint.fr/website/"
+# Çevirinizi Transifex'den (buna <translation.txt> diyeceğiz) oluşturduğunuz website/ dizinine indirin
+cd website
+CONFIG_FILE=slint.conf.en
+# Seçimlik olarak, üst başlık ve dilinize çevirilmiş menü web sayfasına yüklendiyse:
+wget https://slint.fr/slint.conf.ll; CONFIG_FILE=slint.conf.ll # "ll" yerine dil kodunuzu (iki harf) kullanın
+# sonra web sayfasını üretin
+asciidoc -b xhtml11 -a icons -f $CONFIG_FILE <translation.txt> # bu komut <translation.html> dosyasını üretir
+firefox <translation.html> &
+----
+
+.Çevir ya da çevirme, mesele bu
+Takip eden kelimeler AsciiDoc için özel bir anlama sahiptir ve uyarı
+paragrafıyla başladıklarında çevirilmemelidirler (ve çoğunlukla yerine bir
+simge konur): TIP, NOTE, IMPORTANT, WARNING ve CAUTION.
+
+Genel olarak söylenecek olursa, bağlantılar ve URLler çevirilmemelidirler,
+fakat eşleştirilen başlık yazısı, bağlama bağlı olarak
+değiştirilebilir. Takip eden örnekte ('asciidoc --help syntax' ın
+çıktısından alınmıştır) sadece 'caption' değeri çevirilebilir:
+----
+Belge bağlantıları:
+[[id]]                      (bağlantı hedefi tanımı)
+<<id,başlık>>              (hedef id'ye bağlantı)
+link:dosyaadı#id[başlık]   (harici HTML dosyasına bağlantı)
+
+URLler:
+http:adres[başlık]       (web sayfasına bağlantı)
+mailto:adres[başlık]     (e-posta alıcıya bağlantı)
+
+Resimler:
+image:dosyaadı[başlık]     (satıriçi resim)
+image::dosyaadı[başlık]    (blok resim)
+----
+
+
+

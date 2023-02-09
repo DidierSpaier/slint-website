@@ -1,0 +1,22 @@
+== Changelog
+
+NOTE: Die Changelog (Protokoll der Änderungen) für Änderungen vor dem 27.09.2014
+ist https://slint.fr/pub/slint-history/Changelog.txt[hier].
+
+[format="psv", options="header,autowidth"]
+|========
+|Datum|Änderungen
+|27.09.2014|
+Dem Benutzer wird vorgeschlagen, am Ende der Installation einen regulären Benutzer zu erstellen. +
+"Volle" ISO-Abbilder (enthalten alle Pakete des Slackware DVD ISO-Abbilds und zusätzlich den Slint-Installer) sind http://sourceforge.net/projects/slint/files/[hier] erhältlich +
+Niederländisch ist jetzt verfügbar, dank Dik Leenheer und Eric Hameleers. +
+Die Installer und Pakete installieren jetzt einige Dokumente in /usr/doc/slint-<version>-<datum>, inkl. einer Slint-HOWTO.txt und dem Skript reinstall-slackware-packages.sh. +
+Hinweise zur Auswahl der Sprache für die Installation werden jetzt direkt auf dem Begrüßungsbildschirm des Installers angezeigt. +
+
+|19/12/2014|
+Dank Ingemar Karlsson ist Schwedisch jetzt verfügbar.
+Blinde können mit Hilfe eines Braille Terminals den Slint Installer (Version 14.1) verwenden. Vielen Dank an Philippe Delavalade für das Testen und die Verbesserungsvorschläge. +
+Die Software britty, die den Gebrauch eines Braille Terminals während der Installation erlaubt, wird im installierten System vorkonfiguriert ausgeliefert und kann daher vollständig von einem Braille Terminal ausgeführt und verwaltet werden. +
+Die Konfigurationsdatei und Befehle von dialog, die ein Menü oder eine Check-Liste anzeigen, wurden für eine vereinfachte Verwendung eines Braille Terminals modifiziert. Ebenfalls wurde das Aussehen der Dialogfenster angepasst. +
+Etliche Übersetzungen von Dateien im Installer, den man pages und administrativen Tools wurden hinzugefügt, geprüft und korrigiert. Das Slint Packet wurde dementsprechend neu geneneriert.
+|========

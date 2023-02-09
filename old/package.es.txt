@@ -1,0 +1,95 @@
+
+= Paquete Slint
+
+El paquete Slint contiene herramientas de administración políglotas, páginas
+de manual y archivos de traducción, preparados por el proyecto Slint.
+
+Esta página explica cómo obtenerlo e instalarlo, y describe su contenido
+para que ud. sepa qué está traducido y en cuales lenguajes.
+
+El alcance del paquete Slint se expandirá gradualmente, de forma que
+solamente actualizarlo le permitirá obtener herramientas recientemente
+actualizadas y traducidas, así como traducciones en más lenguajes tan pronto
+estén disponibles.
+
+== Descargar e instalar o actualizar un paquete Slint
+
+Si acaba de utilizar el instalador Slint, no hay necesidad de instalar el
+paquete Slint adicionalmente: eso ya fue hecho por el instalador.
+
+Se provee un paquete Slint para cada edición soportada (Slackware 13.37,
+Slackware 14.0 y Slackware 14.1) en el directorio
+https://slint.fr/packages[packages/]. El mismo paquete puede ser instalado en
+las versiones de 32 y 64 bits. Para obtener, revisar e instalar (o
+actualizar) el 'paquete Slint' (para Slackware 14.1 en este ejemplo), haga
+lo siguiente:
+
+----
+wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # obtendrá el paquete Slint más reciente y su archivo md5 asociado
+md5sum -c slint-14.1*md5 # la respuesta debe ser "OK", de otra forma el paquete descargado está dañado
+su # obtener privilegios de root
+upgradepkg --install-new --reinstall slint-14.1*txz # este comando instala o actualiza el paquete
+----
+
+TIP: Para prevenir que 'slackpkg' elimine el 'paquete Slint', agregue una línea a
+/etc/slackpkg/blacklist con solo esta palabra: + slint
+
+[[what_is_translated]]
+== ¿Qué está traducido y en cuáles lenguajes?
+
+Un paquete Slint contiene herramientas políglotas y archivos de traducción.
+
+Al momento de escribir esto, los siguientes lenguajes están incluidos:
+Francés, Alemán, Polaco, Portugués (Brasil), Ruso, Español (América Latina)
+y Ucraniano.
+
+Algunas páginas de manual son también traducidas a otros lenguajes, como se
+indica en https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT].
+
+La tabla abajo lista las herramientas de administración políglotas y sus
+propósitos.
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|Herramienta políglota|Propósito|Página de manual traducida
+|adduser|Agregar un usuario al sistema|
+|explodepkg|Extraer el contenido de un paquete Slackware en el directorio actual|man explodepkg
+|installpkg|Instalar paquetes Slackware|man installpkg
+|makebootdisk|Crear un disquete de arranque Linux
+(solo en Slackware 13.37 y 14.0)|
+|makepkg|Crear paquetes Slackware|man makepkg
+|pkgtool|Administrar paquetes de software y realizar tareas de configuración:
+=> establecer cuáles servicios se ejecutan al inicio
+=> crear un dispositivo USB de arranque
+=> establecer el tipo de ratón|man pkgtool
+|removepkg|Eliminar paquetes Slackware|man removepkg
+|upgradepkg|Actualizar paquetes Slackware|man upgradepkg
+|eliloconfig|Configurar el gestor de arranque 'elilo'
+(solo en Slackware 14.1)|
+|liloconfig|Configurar el gestor de arranque 'lilo'|
+|netconfig|Configurar la red|
+|timeconfig|Establecer la zona horaria|
+|setconsolefont|Establecer una fuente para la pantalla|
+|setup.mouse|Establecer el tipo de ratón|
+|xorgsetup|Configurar el servidor X|
+|xwmconfig|Establecer el manejador de ventanas o escritorio predeterminado|
+|slackpkg|Herramientas automatizadas para manejar paquetes Slackware
+(solo páginas de manual están traducidas)|man slackpkg
+man slackpkg.conf
+|========
+ 
+NOTE: Para ver los mensajes de las herramientas políglotas y las páginas de manual
+en su lenguaje, es necesario link:slint.html.es#anchor-1[establecer su
+localización preferida], como se indica en la página principal de Slint.
+
+Además, el paquete Slint también instala documentos en el directorio
+/usr/docs/slint-<versión>-<fecha>, incluyendo Slint-HOWTO.txt y un script
+llamado reinstall-slackware-packages.sh.
+
+TIP: para listar lo que un paquete Slint ha instalado, solo escriba en una
+terminal:
+----
+less /var/log/packages/slint*
+----
+Use las flechas arriba y abajo para navegar en la lista, presione la letra
+'q' para salir.

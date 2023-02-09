@@ -1,0 +1,84 @@
+= Traducteurs et autres contributeurs Slint
+
+Cette page liste tous les traducteurs enregistrés sur la plate-forme
+Transifex et les réviseurs.
+
+Un grand merci à tous !
+
+Didier Spaier
+
+[cols="50,50", format="csv", width="80%", options="header"]
+|========
+Traducteur,Langue
+dlee99 (Dik Leenheer),Néerlandais
+Eric Hameleers,Néerlandais
+Kaj Huisman,Néerlandais
+ponce,Italien
+celyr,Italien
+giogio, Italien
+giuseppep (Giuseppe Pignataro),Italien
+ihaveadrin,Italien
+kooru,Italien
+Sébastien Boillod,Français
+Didier Spaier,Français
+Nicolas Kovacs, Français
+Marcin Herda,Polonais
+Piotr Maksymiec,Polonais
+elesmod,Polonais
+lukkon,Polonais
+Christian Ruesch,Allemand
+franzen,Allemand
+Johannes Georgi,Allemand
+Maik Wagner,Allemand
+Marcel Saegebarth,Allemand
+spongetron,Allemand
+Sammyboy (Marek Srejma),Allemand
+titopoquito,Allemand
+Adriano Balani,Portugais du Brésil
+Enrico Nicoletto,Portugais du Brésil
+Fela,Portugais du Brésil
+Gabriel Magno,Portugais du Brésil
+Icavalheiro,Portugais du Brésil
+Retalhador,Portugais du Brésil
+br_Orion,Portugais du Brésil
+igaldino,Portugais du Brésil
+Malkon Rodrigo,Portugais du Brésil
+marcelo.castro,Portugais du Brésil
+Xerxes Lins,Portugais du Brésil
+hugok (Hugo Carvalho), Portugais (Portugal)
+Dimitris Tzemos,Grec
+dreamwalking,Grec
+George Vlahavas,Grec
+Efstathios Iosifidis,Grec
+Constantine Mousafiris,Grec
+Diantre,Espagnol (Amérique latine)
+AlvaroG,Espagnol (Amérique latine)
+ecoslacker,Espagnol (Amérique latine)
+sombragris,Espagnol (Amérique latine)
+Serg Bormant,Russe
+Sergey Ignatev,Russe
+Yaroslav Shmelev,Russe
+Graf,Russe
+adioe3,Bosniaque (Bosnie-Herzégovine)
+Malsasa,Indonésien
+willysr,Indonesien
+tuapembual,Indonesien
+kisil,Ukrainien
+uatech,Ukrainien
+xuser13,Ukrainien
+Koljan1970  (Микола Ткач),Ukrainien
+AaLeSsHhKka (Oleh Tsyupka),Ukrainien
+StreamThreader,Ukrainien
+Ekin Akoğlu,Turc
+kaanureyen07, Turc
+Kemal Ökmen,Turc
+Orhan Orhan, Turc
+Onur Özdemir,Turc
+Samet Yilmaz,Turc
+Vilender,Turc
+zm1990s (Zhang Min),Chinois (Chine)
+guanx,Chinois (Chine)
+Smokey,Roumain
+tuxbg (Krustio),Bulgare
+giogio, Interlingua
+|========

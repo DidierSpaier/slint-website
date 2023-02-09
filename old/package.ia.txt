@@ -1,0 +1,96 @@
+
+= Pacchetto de Slint
+
+Pacchetto de Slint contine instrumentos de administration e paginas de
+manual polyglotte assi como files de traduction, fornite per le projecto
+Slint.
+
+Iste pagina explica como obtener lo e installar lo, postea describe su
+contentos assi que tu sape lo que es traducite in qual linguages.
+
+Le campo d application del pacchetto de Slint expandera gradualmente, assi
+que solmente actualisar lo te permittera mantener instrumentos actualisate e
+traducite recentemente in plure linguages quando illos es disponibile.
+
+== Discarga e installa o actualisa un pacchetto de Slint
+
+Si tu usava solmente le installator de Slint, il non ha necessitate
+installar le pacchettos de Slint in addition: ja isto ha essite facite per
+le installator.
+
+Un pacchetto de Slint es fornite per cata edition supportate de Slackware
+(Slackware 13.37, Slackware 14.0 e Slackware 14.1) in directorio
+https://slint.fr/packages[packages/]. Le mesme pacchetto pote esser
+installate sur versiones de  32 e 64 bit. Pro obtener, verificar e installar
+(o actualisar) 'Pacchetto de Slint' (pro Slackware 14.1 in iste exemplo),
+face isto:
+
+----
+wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # tu obtenera le plus recente pacchetto de Slint e su associate file md5
+md5sum -c slint-14.1*md5 # responsa deberea esser "OK", alteremente le pacchetto discargate es corrumpite
+su # obtene privilegios de radice o root
+upgradepkg --install-new --reinstall slint-14.1*txz # iste commando installa o actualisa le pacchetto
+----
+
+TIP: Pro evitar que  'slackpkg' remove 'pacchettos de Slint', adde un rango a
+/etc/slackpkg/blacklist con solmente iste parola: + slint
+
+[[what_is_translated]]
+== Que es traducite, in qual linguage?
+
+Un pacchetto de Slint contine instrumentos polyglotte e files de traduction.
+
+Al momento que on scribe, le sequente linguages es includite: Francese,
+Germano, Polonese, Portugese (Brasil), Russo, Espaniol (America Latin) e
+Ukrainiano.
+
+Alcun paginas de manual es anque traducite in altere linguages, como
+indicate in https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT].
+
+Tabella a basso lista instrumentos de administration polyglotte e lor
+intentiones.
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|Instrumento polyglotte|Intention|Pagina de man traducite
+|adduser|Adde un usator al systema|
+|explodepkg|Extrahe le contento de un pacchetto de Slackware in le directorio currente|man explodepkg
+|installpkg|Installa pacchettos de Slackware|man installpkg
+|makebootdisk|Crea un floppy disk que face le boot de Linux
+(solmente in Slackware 13.37 e 14.0)|
+|makepkg|Crea pacchettos de Slackware|man makepkg
+|pkgtool|Mantene pacchettos software e exeque cargas de configuration:
+=> fixa servicios pro executar servicios al initio
+=> crea un clave USB de boot
+=> fixa le typo de mus|man pkgtool
+|removepkg|Remove pacchettos de Slackware|man removepkg
+|upgradepkg|Actualisa pacchettos de Slackware|man upgradepkg
+|eliloconfig|Configura le cargator de boot 'elilo'
+(solmente in Slackware 14.1)|
+|liloconfig|Configura le cargator de boot 'lilo'|
+|netconfig|Configura le rete|
+|timeconfig|Fixa le fuso horari|
+|setconsolefont|Fixa un font de schermo|
+|setup.mouse|Fixa le typo de mus|
+|xorgsetup|Configura le servitor X |
+|xwmconfig|Fixa le gerente de fenestra o scriptorio predefinite|
+|slackpkg|Instrumentos automatic pro gerer pacchettos de Slackware
+(solmente paginas manual es traducite)|man slackpkg
+man slackpkg.conf
+|========
+ 
+NOTE: Pro vider messages de instrumentos polyglotte e paginas manual in tu
+linguage , tu deberea, como indicate in le pagina principal de Slint,
+link:slint.html#anchor-1[fixa tu localisation preferite]
+
+In addition, le pacchetto Slint anque installa documentos in le dossier
+/usr/docs/slint-<version>-<date>, includente un Slint-HOWTO.txt e un script
+reinstall-slackware-packages.sh.
+
+TIP: pro listar qual pacchetto de Slint ha installate, solmente typa in un
+terminal:
+----
+less /var/log/packages/slint*
+----
+Usa le flechas su e basso pro navigar in le lista, pressa le littera 'q' pro
+quitar.

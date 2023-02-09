@@ -1,0 +1,93 @@
+
+= Pacote Slint
+
+O pacote Slint contém ferramentas de administração poliglotas e páginas de
+manual, bem como ficheiros traduzidos, fornecidos pelo projeto Slint.
+
+Esta página explica como obter e instalá-lo, em seguida, descreve o seu
+conteúdo, de modo a que você saiba o que é traduzido e em que idiomas.
+
+O âmbito do pacote Slint irá expandir gradualmente, de modo a que apenas
+atualizando lhe permitirá obter ferramentas e traduções atualizadas e
+recentemente traduzidas em mais idiomas assim que eles estiverem
+disponíveis.
+
+== Transfira e instale ou atualize o pacote Slint
+
+Se você acabou de usar o instalador do Slint, não há necessidade de instalar
+o pacote Slint: visto já ter sido efetuado pelo instalador.
+
+Um pacote Slint é fornecido para cada edição suportada do Slackware
+(Slackware 13.37, Slackware 14.0 e Slackware 14.1) no diretório
+https://slint.fr/packages[pacotes/]. O mesmo pacote pode ser instalado em
+versões 32 e 64 bits. Para obter, verificar e instalar (ou atualizar)
+'pacote Slint' (para Slackware 14.1 neste exemplo), faça o seguinte:
+
+----
+wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # você terá o mais recente pacote de Slint e seu ficheiro md5 associado
+md5sum -c slint-14.1*md5 # a resposta deve ser "OK", caso contrário o pacote transferido está corrompido
+su # obter privilégios de administrador
+upgradepkg --install-new --reinstall slint-14.1*txz # este comando instala ou atualiza o pacote
+----
+
+TIP: Para evitar que o 'slackpkg' remova o 'pacote Slint', adicione uma linha ao
+/etc/slackpkg/blacklist apenas com esta palavra: + slint
+
+[[what_is_translated]]
+== O que está traduzido, em que idiomas?
+
+Um pacote Slint contém ferramentas poliglotas e ficheiros traduzidos.
+
+No momento da escrita, os seguintes idiomas estão incluídos: Francês,
+Alemão, Polaco, Português (Brasil), Russo, Espanhol (América Latina) e
+Ucraniano.
+
+Algumas páginas do manual foram também traduzidas para outros idiomas,
+conforme indicado em https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT].
+
+A tabela abaixo lista as ferramentas de administração poliglotas e seus
+propósitos.
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|Ferramenta poliglota|Propósito|Página de manual traduzida
+|adduser|Adicionar um utilizador ao sistema|
+|explodepkg|Extrair o conteúdo de um pacote Slackware no diretório atual|man explodepkg
+|installpkg|Instalar pacotes Slackware|man installpkg
+|makebootdisk|Cria uma disquete de inicialização Linux
+(apenas no Slackware 13.37 e 14.0)|
+|makepkg|Cria pacotes Slackware|man makepkg
+|pkgtool| Mantém pacotes de software e executa tarefas de configuração:
+=> definir serviços para serem executados durante a inicialização
+=> criar um dispositivo USB inicializável
+=> definir o modelo do rato|man pkgtool
+|removepkg|Remover pacotes Slackware|man removepkg
+|upgradepkg|Atualizar pacotes Slackware|man upgradepkg
+|eliloconfig|Configurar o gestor de arranque 'elilo'
+(apenas no Slackware 14.1)|
+|liloconfig|Configurar o gestor de arranque 'lilo'|
+|netconfig|Configurar a rede|
+|timeconfig|Define o fuso horário|
+|setconsolefont|Define uma fonte para o ecrã|
+|setup.mouse|Define o tipo de rato|
+|xorgsetup|Configurar o servidor X|
+|xwmconfig|Define o gestor de janelas ou ambiente de trabalho padrão|
+|slackpkg|Ferramentas automatizadas para gerir os pacotes do Slackware
+(apenas páginas de manual são traduzidas)|man slackpkg
+man slackpkg.conf
+|========
+ 
+NOTE: Para ver as mensagens das ferramentas poliglotas e páginas de manual no seu
+idioma, é necessário, conforme indicado na página inicial Slint,
+link:slint.html#anchor-1[configurar a localização preferida]
+
+Além disso, o pacote Slint também instala documentos na pasta
+/usr/docs/slint-<versão>-<data>, incluindo um Slint-HOWTO.txt e um script
+reinstalar-slackware-packages.sh.
+
+TIP: para mostrar o que o pacote Slint instalou, basta digitar num terminal:
+----
+less /var/log/packages/slint*
+----
+Use as setas para cima e para baixo para navegar na lista, pressione a letra
+'q' para sair.

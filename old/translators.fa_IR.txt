@@ -1,0 +1,85 @@
+= مترجمان و دیگر همکاران Slint
+
+این صفحه حاوی لیست مترجمان ثبت شده در Transifex و ویراستاران می‌باشد.
+
+تشکر از زحمات تمامی شما
+
+Didier Spaier
+
+[cols="50,50", format="csv", width="80%", options="header"]
+|========
+Translator,Language
+dlee99 (Dik Leenheer),Dutch
+Eric Hameleers,Dutch
+Kaj Huisman,Dutch
+ponce,Italian
+celyr,Italian
+giogio, Italian
+giuseppep (Giuseppe Pignataro),Italian
+ihaveadrin,Italian
+kooru,Italian
+Sébastien Boillod,French
+Didier Spaier,French
+Nicolas Kovacs, French
+Marcin Herda,Polish
+Piotr Maksymiec,Polish
+elesmod,Polish
+lukkon,Polish
+Christian Ruesch,German
+franzen,German
+Johannes Georgi,German
+Maik Wagner,German
+Marcel Saegebarth,German
+spongetron,German
+Sammyboy (Marek Srejma),German
+titopoquito,German
+Adriano Balani,Brazilian Portuguese
+Enrico Nicoletto,Brazilian Portuguese
+Fela,Brazilian Portuguese
+Gabriel Magno,Brazilian Portuguese
+Icavalheiro,Brazilian Portuguese
+Retalhador,Brazilian Portuguese
+br_Orion,Brazilian Portuguese
+igaldino,Brazilian Portuguese
+Malkon Rodrigo,Brazilian Portuguese
+marcelo.castro,Brazilian Portuguese
+Xerxes Lins,Brazilian Portuguese
+hugok (Hugo Carvalho), Portuguese (Portugal)
+Dimitris Tzemos,Greek
+dreamwalking,Greek
+George Vlahavas,Greek
+Efstathios Iosifidis,Greek
+Constantine Mousafiris,Greek
+Diantre,Spanish (Latin America)
+AlvaroG,Spanish (Latin America)
+ecoslacker,Spanish (Latin America)
+sombragris,Spanish (Latin America)
+Serg Bormant,Russian
+Sergey Ignatev,Russian
+Yaroslav Shmelev,Russian
+Graf,Russian
+adioe3,Bosnian (Bosnia and Herzegovina)
+Malsasa,Indonesian
+willysr,Indonesian
+tuapembual,Indonesian
+kisil,Ukrainian
+uatech,Ukrainian
+xuser13,Ukrainian
+Koljan1970 (Микола Ткач),Ukrainian
+AaLeSsHhKka (Oleh Tsyupka),Ukrainian
+StreamThreader,Ukrainian
+Ekin Akoğlu,Turkish
+kaanureyen07, Turkish
+Kemal Ökmen,Turkish
+Orhan Orhan, Turkish
+Onur Özdemir,Turkish
+Samet Yilmaz,Turkish
+Vilender,Turkish
+zm1990s (Zhang Min),Chinese (China)
+guanx,Chinese (China)
+Smokey,Romanian
+tuxbg (Krustio),Bulgarian
+giogio, Interlingua
+Ingemar Karlsson,Swedish
+Dan-Simon Myrland,Norwegian
+|========

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="id">
+<head>
+	<title>Slint: Proyek Internasionalisasi Slackware </title>
+    <meta name="google-site-verification" content="LmAtE9by4Mg59SwZ0LyQq730fGtMZ0r0fqgkVurfPhc" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Slackware internationalization Project" />
+    <link rel="stylesheet" href="css/fp.css" type="text/css" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <div class="entete"> 
+	Pilih bahasa Anda => | <a href="index.html.bs">bs</a> | <a
+href="index.html.de">de</a> | <a href="index.html.el">el</a> | <a
+href="index.html.en">en</a> | <a href="index.html.es">es</a> | <a
+href="index.html.fr">fr</a> | <a href="index.html.id">id</a> | <a
+href="index.html.it">it</a> | <a href="index.html.nl">nl</a> | <a
+href="index.html.pl_PL">pl</a> | <a href="index.html.pt">pt</a> | <a
+href="index.html.ru">ru</a> | <a href="index.html.tr_TR">tr</a> | <a
+href="index.html.uk">uk</a> | 
+  </div>
+	<div id="hautdepage"></div>
+	<h1>Proyek Internasionalisasi Slackware</h1>
+	<div class="cadre w100">
+		<h2 class="premierh2 center">Tentang slint</h2>
+		<p>Tujuan akhir dari proyek ini adalah semua pengguna bisa menginstall dan
+menggunakan Slackware Linux dalam bahasa lokal mereka.</p>
+		<p>Hal ini memperluas basis pengguna Slackware, seperti halnya proyek
+Dokumentasi Slackware yang menyediakan dokumentasi pada banyak bahasa.</p>
+		<p>Proyek ini belum masuk kedalam batasan Slackware dan hanya sang pembuat
+Slackware yang bisa memutuskan untuk memperluas batasan tersebut.</p>
+		<p>Meski demikian, proyek slint, yang tidak berafiliasi ataupun didukung oleh
+Slackware, adalah langkah menuju ke arah tersebut</p>
+	</div>
+	<div class="cadre w50">
+		<h2 class="premierh2">Menggunakan slint</h2>
+		<p>Proyek ini menyediakan:</p>
+		<ul>
+			<li>Paket software yang menyertakan installer versi internasional pada DVD
+Slackware serta menterjemahkannya kedalam banyak bahasa.</li>
+			<li>installer internasional untuk setiap edisi Slackware yang didukung dalam dua
+bentuk: image ISO untuk dibakar pada CD atau DVD dan image untuk perangkat
+USB.</li>
+		</ul>
+		<p>Saat ini installer internasional meliputi:</p>
+		<ul>
+			<li>varian untuk Slackware-13.37, Slackware-14.0 dan Slackware-14.1 (32 dan 64
+bit),</li>
+			<li>Lokalisasi dalam bahasa Perancis, Jerman, Polandia, Portugis (Brazil),
+Rusia, Spanyol (Amerika Latin) dan Ukraina.</li>
+		</ul>
+        <h3><span>Menggunakan image ISO USB dari installer internasional</span></h3>
+        <p>Masuk sub direktori dari <a
+href="https://slint.fr/pub">https://slint.fr/pub</a> sesuai dengan edisi yang
+hendak Anda pakai, misalnya <a
+href="https://slint.fr/pub/64-14.1">https://slint.fr/pub/64-14.1</a> untuk
+Slackware64-14.1 dan ikuti petunjuknya.
+        </p>
+        <p>Untuk membakar CD atau DVD installer internasional untuk Slackware64-14.1:</p>
+        <ul>
+            <li>growisofs -speed=2 -dvd-compat -Z /dev/dvd=[nama file berakhiran .iso]</li>
+        </ul>
+        <p>Untuk menulis installer internasional Slackware64-14.1 pada perangkat USB
+bernama /dev/sdc (contoh, harap diganti dengan nama yang didapat dengan
+menuliskan 'cat /proc/partitions' atau 'dmesg | tail'):</p>
+        <ul>
+           <li>dd if=[nama file berakhiran .img] of=/dev/sdc bs=512</li>
+        </ul>
+        <p>PERINGATAN:</p>
+        <ul>
+          <li>Pastikan /dev/sdc (atau lainnya) bukan nama dari hard disk, karena seluruh
+isinya AKAN DIHAPUS TANPA BISA DIKEMBALIKAN! </li>
+          <li>Isi dari perangkat USB akan dihapus, pastikan untuk menyimpannya di tempat
+lain sebelum memulainya.</li>
+        </ul>
+        <p>CATATAN. Untuk melakukan installasi, Anda memerlukan media  paket software
+untuk versi yang sama, misalnya DVD Slackware atau mirror lokal, karena
+paket ini tidak disertakan pada image ISO dan USB. 
+        </p>
+		<h3><span>Penggunaan paket software <a
+href="https://slint.fr/pub/slint-20140206.tar.xz">slint-[tanggal].tar.xz</a></span></h3>
+		<p>Anda akan memerlukan, selain paket software itu sendiri:</p>
+		<ol>
+			<li>Mirror penuh dari edisi Slackware yang dibuat versi internasional: DVD,
+image ISO Slackware atau mirror lokal.
+			</li>
+			<li>distribusi Linux yang menyertakan paket 'gettext' yang diperlukan untuk
+proses internasionalisasi. Slackware lebih diutamakan, tetapi Anda bisa
+mendownload slint dan menggunakannya pada sistem Linux lain,
+			</li>
+		</ol>
+		<p>Download <a href="https://slint.fr/pub/slint-20140206.tar.xz">paket
+software</a>, dan <a
+href="https://slint.fr/pub/slint-20140206.tar.xz.md5">file md5</a> juga, lalu
+ketik perintah berikut:</p>
+		<ul>
+			<li>md5sum -c slint-[tanggal].tar.xz.md5 # output seharusnya "OK"</li>
+		</ul>
+		<p>Lalu bongkar paket tersebut:</p>
+		<ul>
+		   <li>tar xf slint-[tanggal].tar.xz # akan mengasilkan sub direktori
+slint-[tanggal]</li>
+		</ul>
+		<p>Akhirnya, sebagai root:</p>
+		<ul>
+			<li>slint-[tanggal]/slint.sh</li>
+		</ul>
+		<p>Ikuti instruksi script. Anda akan melihat edisi Slackware yang akan Anda
+pakai untuk internasionalisasi. Script akan menanyakan kepada Anda:</p>
+		<ul>
+			<li>path untuk mirror lokal dari edisi Slackware yang hendak Anda gunakan,
+			</li>
+			<li>bahasa yang hendak Anda sertakan pada installer internasional (jika Anda
+bertanya kenapa US English tidak disertakan, bahasa itu selalu disertakan
+:-)
+			</li>
+		</ul>
+    </div>
+	<div class="w50 cadresuivant">
+		<h2 class="premierh2">Kontribusi ke slint</h2>
+		<h3><span>Bantuan diperlukan</span></h3>
+		<p>Kami membutuhkan penterjemah untuk memperkuat tim yang ada dan
+menterjemahkannya ke banyak bahasa.</p>
+		<p>Anda bisa meminta untuk bergabung atau membuat tim penterjemah pada proyek
+<a href="https://www.transifex.com/projects/p/slint/">Transifex</a>, lihat
+file <a href="https://slint.fr/pub/TRANSLATORS">TRANSLATORS</a> untuk
+informasi lebih detail.</p>
+		<p>Tetapi pertama-tama lihat <a href="https://slint.fr/slint">file slint</a>
+untuk melihat apa dan jumlah pekerjaan yang dikerjakan.</p>
+		<h3><span>Penterjemah dan reviewer yang terdaftar di Transifex</span></h3>
+		<table border="1">
+			<tr><th>Penterjemah</th><th>Bahasa</th><th>Lokal</th></tr>
+			<tr><td>dlee99</td><td>Belanda</td><td>nl_NL</td></tr>
+			<tr><td>Eric Hameleers</td><td>Belanda</td><td>nl_NL</td></tr>
+			<tr><td>ponce</td><td>Italia</td><td>it_IT</td></tr>
+			<tr><td>celyr</td><td>Italia</td><td>it_IT</td></tr>
+			<tr><td>Sébastien Boillod</td><td>Perancis</td><td>fr_FR</td></tr>
+			<tr><td>Didier Spaier</td><td>Perancis</td><td>fr_FR</td></tr>
+			<tr><td>Marcin Herda</td><td>Polandia</td><td>pl_PL</td></tr>
+			<tr><td>Piotr Maksymiec</td><td>Polandia</td><td>pl_PL</td></tr>
+			<tr><td>elesmod</td><td>Polandia</td><td>pl_PL</td></tr>
+			<tr><td>Christian Ruesch</td><td>Jerman</td><td>de_DE</td></tr>
+			<tr><td>franzen</td><td>Jerman</td><td>de_DE</td></tr>
+			<tr><td>Johannes Georgi</td><td>Jerman</td><td>de_DE</td></tr>
+			<tr><td>Maik Wagner</td><td>Jerman</td><td>de_DE</td></tr>
+			<tr><td>Marcel Saegebarth</td><td>Jerman</td><td>de_DE</td></tr>
+			<tr><td>spongetron</td><td>Jerman</td><td>de_DE</td></tr>
+			<tr><td>titopoquito</td><td>Jerman</td><td>de_DE</td></tr>
+			<tr><td>Adriano Balani</td><td>Brazil Portugis</td><td>pt_BR</td></tr>
+			<tr><td>Enrico Nicoletto</td><td>Brazil Portugis</td><td>pt_BR</td></tr>
+			<tr><td>Fela</td><td>Brazil Portugis</td><td>pt_BR</td></tr>
+			<tr><td>Gabriel Magno</td><td>Brazil Portugis</td><td>pt_BR</td></tr>
+			<tr><td>Icavalheiro</td><td>Brazil Portugis</td><td>pt_BR</td></tr>
+			<tr><td>Retalhador</td><td>Brazil Portugis</td><td>pt_BR</td></tr>
+			<tr><td>br_Orion</td><td>Brazil Portugis</td><td>pt_BR</td></tr>
+			<tr><td>igaldino</td><td>Brazil Portugis</td><td>pt_BR</td></tr>
+			<tr><td>Malkon Rodrigo</td><td>Brazil Portugis</td><td>pt_BR</td></tr>
+			<tr><td>marcelo.castro</td><td>Brazil Portugis</td><td>pt_BR</td></tr>
+			<tr><td>Xerxes Lins</td><td>Brazil Portugis</td><td>pt_BR</td></tr>
+			<tr><td>Dimitris Tzemos</td><td>Yunani</td><td>el_GR</td></tr>
+			<tr><td>dreamwalking</td><td>Yunani</td><td>el_GR</td></tr>
+			<tr><td>George Vlahavas</td><td>Yunani</td><td>el_GR</td></tr>
+			<tr><td>Diantre</td><td>Spanyol (Amerika Latin)</td><td>es_419</td></tr>
+			<tr><td>AlvaroG</td><td>Spanyol (Amerika Latin)</td><td>es_419</td></tr>
+			<tr><td>ecoslacker</td><td>Spanyol (Amerika Latin)</td><td>es_419</td></tr>
+			<tr><td>sombragris</td><td>Spanyol (Amerika Latin)</td><td>es_419</td></tr>
+			<tr><td>Serg Bormant</td><td>Rusia</td><td>ru_RU</td></tr>
+			<tr><td>Sergey Ignatev</td><td>Rusia</td><td>ru_RU</td></tr>
+			<tr><td>Yaroslav Shmelev</td><td>Rusia</td><td>ru_RU</td></tr>
+			<tr><td>Graf</td><td>Rusia</td><td>ru_RU</td></tr>
+			<tr><td>adioe3</td><td>Bosnia (Bosnia dan Herzegovina)</td><td>bs_BA</td></tr>
+			<tr><td>willysr</td><td>Indonesia</td><td>id_ID</td></tr>
+			<tr><td>kisil</td><td>Ukraina</td><td>uk_UA</td></tr>
+			<tr><td>uatech</td><td>Ukraina</td><td>uk_UA</td></tr>
+			<tr><td>xuser13</td><td>Ukraina</td><td>uk_UA</td></tr>
+			<tr><td>Koljan1970</td><td>Ukraina</td><td>uk_UA</td></tr>
+			<tr><td>Kemal Ökmen</td><td>Turki</td><td>tr_TR</td></tr>
+		</table>
+		<p>Setiap kali ada bahasa baru, akan ditambahkan pada installer dan versi baru
+akan tersedia pada <a href="https://slint.fr/pub">direktori ini.</a></p>
+		<h3><span>Mari bergabung</span></h3>
+		<p>Setiap jenis kontribusi kami sambut.</p>
+		<p>Installer internasional juga bisa berguna untuk distribusi berbasiskan
+Slackware.</p>
+		<p> Pengguna dan kontributor distribusi ini juga kami undang untuk
+menggunakannya dan berkontribusi pada proyek slint.</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,636 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The Slint project
+# This file is distributed under the same license as the tools package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: slintwebsite\n"
+"POT-Creation-Date: 2014-12-28 11:04+0100\n"
+"PO-Revision-Date: 2014-12-28 17:07+0000\n"
+"Last-Translator: Didier Spaier <didier@slint.fr>\n"
+"Language-Team: Ukrainian (Ukraine) (http://www.transifex.com/projects/p/slintwebsite/language/uk_UA/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. type: Title =
+#: /home/didier/slint.fr/tools.en.txt:1
+#, no-wrap
+msgid "Useful tools for Slint contributors"
+msgstr "Корисні інструменти для учасників Slint"
+
+#. type: Title ==
+#: /home/didier/slint.fr/tools.en.txt:3
+#, no-wrap
+msgid "Transifex"
+msgstr "Transifex"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:6
+msgid ""
+"The Transifex platform eases cooperation between translators, being a place "
+"where each translation team can centralize its PO files and share "
+"information. It provides an on line editor, that can also be used to review "
+"translations."
+msgstr "Платформа Transifex спрощує взаємодію перекладачів, будучи місцем, де команда перекладачів може централізовано зберігати свої PO-файли та розповсюджувати інформацію. Доступний онлайн-редактор, який також підходить і для ревізії перекладів."
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:8
+msgid ""
+"To learn how to to use it visit the http://support.transifex.com/[Transifex "
+"Help Desk]."
+msgstr "Інструкції з використання дивіться у http://support.transifex.com/[Центрі допомоги Transifex]."
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:10
+msgid "You may use Transifex' on line editor as it comes handy, but:"
+msgstr "Ви можете використовувати онлайн-редактор Transifex за потреби, але:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:12
+msgid "don't forget to make frequent local backups, just in case"
+msgstr "на всяк випадок не забувайте частіше робити локальні резервні копії"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:13
+msgid ""
+"text formatting of translations is easier to do and check locally, using a "
+"specialized PO editor like **Lokalize** or **Poedit**"
+msgstr "форматування тексту перекладів легше виконувати та перевіряти локально, за допомогою спеціялізованих PO-редакторів, як-от **Lokalize** або **Poedit**"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:15
+msgid ""
+"To translate webpages in asciidoc format, usage of Transifex is mandatory "
+"(see below)."
+msgstr "Для перекладу веб-сторінок у форматі asciidoc використання Transifex обов’язкове (дивіться нижче)."
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:17
+msgid ""
+"If you prefer to translate locally, be sure to check in Transifex 'Download "
+"for translation' (not 'Download for use') and 'Lock this translation to "
+"notify others you\\'re working on it'. This could avoid duplicating "
+"efforts... But two team members can share the same big PO file, as long as "
+"they first agree on who translates what."
+msgstr "Якщо Ви надаєте перевагу локальному перекладу, обирайте на Transifex 'Завантажити для перекладу' (а не 'Завантажити для використання') і 'Заблокувати цей переклад, аби попередити інших, що ви працюєте над ним'. Це завадить дублюванню зусиль… Декілька членів команди можуть одночасно працювати над одним великим PO-файлом, якщо домовляться, хто яку частину перекладатиме."
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:21
+msgid ""
+"Transifex doesn't wrap lines of translated text. This can lead to *very* "
+"long lines, hard to read in a text editor and that can even make it crash "
+"eating all the CPU. To avoid that, after having downloaded the PO file, just"
+" type:"
+msgstr "Transifex не переносить рядки перекладеного тексту. Це призводить до появи *дуже* довгих рядків, ускладненню читання у текстовому редакторі, ба навіть до завеликого завантаження процесора. Щоб уникнути цього, після завантаження PO-файлу наберіть:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/tools.en.txt:24
+#, no-wrap
+msgid "  msgcat file_downloaded_from_Transifex > file_renamed\n"
+msgstr "  msgcat файл_завантажений_з_Transifex > перейменований_файл\n"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:27
+msgid ""
+"then use 'Lokalize' or 'Poedit' to translate *file_renamed*. This file will "
+"have wrapped lines but will be otherwise identical to downloaded one, so "
+"that won't hurt."
+msgstr "і використовуйте 'Lokalize' або 'Poedit' для перекладу *перейменованого_файлу*. Цей файл буде з перенесеннями рядків, але в іншому буде ідентичний завантаженому файлу, тому це не зашкодить."
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:29
+msgid ""
+"If you translate locally don't forget to upload edited file on Transifex "
+"when you're idle, not to let it locked uselessly."
+msgstr "Якщо перекладаєте локально, не забувайте відвантажувати відкоригований файл на Transifex, призупиняючи роботу з ним, не тримайте блокування без потреби."
+
+#. type: Title ==
+#: /home/didier/slint.fr/tools.en.txt:31
+#, no-wrap
+msgid "Lokalize"
+msgstr "Lokalize"
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:34
+msgid ""
+"'Lokalize' is included in Slackware. You can either read the Lokalize "
+"Handbook http://docs.kde.org/development/en/kdesdk/lokalize/index.html[on "
+"line] or access it from the Help menu of pressing [F1]. Recommended "
+"settings:"
+msgstr "'Lokalize' входить до складу Slackware. Ви можете або прочитати Lokalize Handbook http://docs.kde.org/development/en/kdesdk/lokalize/index.html[у мережі], або з меню Допомога, натиснувши [F1]. Рекомендовані налаштування:"
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:36
+msgid ""
+"Settings => Configure Lokalize => Identity: Choose your language (set to "
+"target language)."
+msgstr "Налаштування => Налаштувати Lokalize => Ідентифікація: Обрати мову (встановити до цільової мови)."
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:37
+msgid ""
+"Settings => Configure Lokalize => Appearance: Choose a serif fixed width "
+"(mono spaced) font like Courier. This will help you distinguish 0 (the "
+"digit) and O (the letter) or | (the pipe) from I (the letter) and check "
+"formatting, for instance first word's alignment on consecutive lines."
+msgstr "Налаштування => Налаштувати Lokalize => Зовнішній вигляд: Обрати шрифт фіксованої ширини із зарубками (моноширинний), наприклад Courier. Це дозволить розрізняти 0 (цифра) та O (літера) або | (пайп) і I (літера) й перевіряти форматування, наприклад вирівнювання перших слів на послідовних рядках."
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:38
+msgid ""
+"Settings => Configure Lokalize => Appearance: Check 'LEDS to indicate Fuzzy "
+"and Untranslated status' as well as 'cursor column number', very handy to "
+"check line's length when that matters."
+msgstr "Налаштування => Налаштувати Lokalize => Зовнішній вигляд: Обрати 'Індикатори стану для виділення неперекладених і неточних рядків', також, як 'позиція курсора у стовпчику', дуже зручно для перевірки довжини рядків, коли це має значення."
+
+#. type: Title ==
+#: /home/didier/slint.fr/tools.en.txt:39
+#, no-wrap
+msgid "Poedit"
+msgstr "Poedit"
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:42
+msgid ""
+"'Poedit' is not shipped in Slackware but is available @ "
+"http://slackbuilds.org[SlackBuilds.org]."
+msgstr "'Poedit' не постачається зі Slackware, але доступний на http://slackbuilds.org[SlackBuilds.org]."
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:44
+msgid ""
+"It lacks a handy way to check line's length, but this put aside its features"
+" are similar to those of Lokalize, so choosing one or the other is a matter "
+"of personal preference."
+msgstr "У нього не вистачає зручних функцій для перевірки довжини рядка, але в іншому його функціонал аналоґічний Lokalize, тож можна обирати один або інший редактор за власним смаком."
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:46
+msgid ""
+"In Edit => Preferences => Editor, check 'Automatic spell checking' and, as "
+"with Lokalize, choose a serif fixed width font."
+msgstr "У Редагування => Налаштування => Редактор позначте 'Автоматично перевіряти орфоґрафію' та, як і в Lokalize, оберіть шрифт фіксованої ширини із зарубками."
+
+#. type: Title ==
+#: /home/didier/slint.fr/tools.en.txt:47
+#, no-wrap
+msgid "Usage of scripts included in Slint's tarball"
+msgstr "Використання сценаріїв, що містяться у тарболі Slint"
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:50
+msgid ""
+"This compressed archive includes all that is needed to build slint products "
+"as well as tools intended for slint contributors. It is named "
+"slint-[date].tar.xz and provided in directory https://slint.fr/pub[pub/]."
+msgstr "Цей стиснений архів містить усе необхідне для створення продуктів slint, як й інструменти для учасників slint. Він зветься slint-[дата].tar.xz і знаходиться в каталозі https://slint.fr/pub[pub/]."
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:52
+msgid "To unpack it, type:"
+msgstr "Аби розпакувати його, наберіть:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/tools.en.txt:55
+#, no-wrap
+msgid "  tar xf slint-[date].tar.xz\n"
+msgstr "  tar xf slint-[дата].tar.xz\n"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:58
+msgid ""
+"This will output a directory slint-[date]. See file CONTENT.TXT in it for "
+"details, table below only lists scripts used to build slint products, and "
+"tools intended for translators. All paths indicated are relative to that "
+"directory."
+msgstr "З’явиться каталоґ slint-[дата]. Дивіться файл CONTENT.TXT у ньому для детальнішої інформації, таблиця нижче показує лише сценарії, що використовуються для створення продуктів slint та інструменти для перекладачів. Усі шляхи вказано відносно цього каталоґу."
+
+#. type: delimited block |
+#: /home/didier/slint.fr/tools.en.txt:68
+#, no-wrap
+msgid ""
+"|Script name and location|Purpose\n"
+"|build/slint.sh |Make hybrid (CD/DVD or USB) image of slackware installer or of a Slackware distribution including it\n"
+"|build/make_slint_packages |Internationalize some Slackware packages and build package SlintLocales.\n"
+"|build/slintLocales |Make a package including all up to date translations of Slackware scripts included in Slint installers (all versions) or in tools intended for Slackware.\n"
+"|tools_for_translators/toolbox.sh |This toolbox manage translations of messages gathered in slackware.pot.\n"
+"|tools_for_translators/toolbox_slint_sh |This toolbox manage translations of messages output of script slint.sh .\n"
+"|tools_for_translators/generate_man_pages |Generate localized man pages for some tools intended for Slackware. This allows to check PO files. Usage of this script requires to have installed package po4a, available in directory https://slint.fr/packages/extra[extra/].\n"
+msgstr "|Ім'я сценарію та розташування|Призначення\n|build/slint.sh |Створює гібридний (CD/DVD або USB) образ встановника Slint або дистрибутив Slackware зі встановником Slint.\n|build/make_slint_packages |Інтернаціоналізує різні пакети Slackware і створить пакет SlintLocales.\n|build/slintLocales |Створює пакунок, що містить усі оновлені переклади сценаріїв Slackware, що входять до інсталяторів Slint (усіх версій) або інструментів для Slackware.\n|tools_for_translators/toolbox.sh |Цей сценарій керує перекладами повідомлень, зібраних у slackware.pot.\n|tools_for_translators/toolbox_slint_sh |Цей сценарій керує перекладами повідомлень, що виводяться сценарієм slint.sh .\n|tools_for_translators/generate_man_pages |Створює перекладені сторінки керівництв для різних інструментів Slackware. Дозволяє перевіряти PO-файли. Використання цього сценарію потребує встановленого пакунку po4a, доступного у каталозі https://slint.fr/packages/extra[extra/].\n"
+
+#. type: Title ===
+#: /home/didier/slint.fr/tools.en.txt:70
+#, no-wrap
+msgid ""
+"How-to check translations of Slackware's installer and administration "
+"scripts"
+msgstr "Як перевіряти переклади встановника Slackware та сценаріїв адміністратора"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:73
+msgid ""
+"Resource https://www.transifex.com/projects/p/slint/resource/slint/[slint], "
+"file slackware.pot"
+msgstr "Ресурс https://www.transifex.com/projects/p/slint/resource/slint/[slint], файл slackware.pot"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:75
+msgid ""
+"When you are done with the translation, just put the file in directory wip/,"
+" (re)named e.g. as pt_BR.slackware.po, then run "
+"/path/to/tools_for_translators/toolbox.sh and choose check_PO in the menu. "
+"If all goes well:"
+msgstr "Коли ви закінчите переклад, перемістіть файл до каталоґу wip/, (пере)йменуйте, наприклад, у uk_UK.slackware.po, потім запустіть на виконання /path/to/tools_for_translators/toolbox.sh й оберіть у меню перевірити_PO. Якщо все йде добре:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:77
+msgid ""
+"copy pt_BR.slackware.po in directory po/ (translation in Brazilian "
+"Portuguese in this example)"
+msgstr "Скопіюйте uk_UK.slackware.po до каталоґу po/ (переклад українською у цьому прикладі)"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:78
+msgid ""
+"run /path/to/build/SlintLocales.SlackBuild to include your updated "
+"translation in package SlintLocales"
+msgstr "Запустіть /path/to/build/SlintLocales.SlackBuild, аби додати оновлений переклад до пакунку SlintLocales"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:79
+msgid ""
+"run /path/to/build/slint.sh to make an hybrid CD or USB image of installer"
+msgstr "Запустіть /path/to/build/slint.sh для створення гібридного CD або USB образу інсталятора"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:80
+msgid "burn the image on a CD or USB key"
+msgstr "Розгорніть образ на CD або USB-флешку"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:81
+msgid ""
+"try the installer (in Portuguese in this case, of course), either in a "
+"virtual or a real machine"
+msgstr "Спробуйте встановити (очевидно, українською мовою в цьому випадку), на віртуальну або справжню машину"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:83
+msgid ""
+"To run the installer in a virtual machine you can use directly the file "
+"ending in .iso as virtual media, no need to burn it on a physical media in "
+"that case."
+msgstr "Аби запустити встановника у віртуальній машині, ви можете використовувати файл .iso як віртуальний носій, у цьому випадку, записувати його на фізичний носій не потрібно."
+
+#. type: Title ===
+#: /home/didier/slint.fr/tools.en.txt:84
+#, no-wrap
+msgid "How-to check translations of file slint.sh"
+msgstr "Як перевіряти переклади файлу slint.sh"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:87
+msgid ""
+"Resource https://www.transifex.com/projects/p/slint/resource/pot-file-for-"
+"slintsh/[POT file for slint.sh]"
+msgstr "Ресурс: https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/[POT file for slint.sh]"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:89
+msgid ""
+"When you are done with the translation, just put the file in directory wip/,"
+" (re)named for instance as de_DE.slint.po for German, then run "
+"/path/to/tools_for_translators/toolbox_slint_sh and choose check_PO in the "
+"menu."
+msgstr "Коли ви закінчите переклад, перемістіть файл до каталоґу wip/, перейменуйте, наприклад, у uk_UK.slint.po для української, потім запустіть /path/to/tools_for_translators/toolbox_slint_sh й оберіть у меню перевірити_PO."
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:91
+msgid ""
+"If all goes well, run again /path/to/tools_for_translators/toolbox_slint_sh "
+"but choose format_PO in the menu. If all goes well this will generate file "
+"slint.mo and put it in its place in the slint-[date] tree (in directory "
+"slint_locales/de/LC_MESSAGES in this example)."
+msgstr "Якщо все йде добре, знову запустіть /path/to/tools_for_translators/toolbox_slint_sh, але оберіть формат_PO у меню. Якщо все йде добре, буде згенеровано й поміщено до відповідного каталоґу у дереві slint-[дата] файл slint.mo (у цьому прикладі slint_locales/uk/LC_MESSAGES)."
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:93
+msgid ""
+"Then try your translation comparing English and German versions with "
+"commands like this:"
+msgstr "Потім спробуйте Ваш переклад, порівнюючи з англійською та німецькою версіями командами на зразок:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/tools.en.txt:97
+#, no-wrap
+msgid ""
+"  /path/to/build/slint.sh\n"
+"  LANG=de_DE.utf8 /path/to/build/slint.sh\n"
+msgstr "  /path/to/build/slint.sh\n  LANG=de_DE.utf8 /path/to/build/slint.sh\n"
+
+#. type: Title ===
+#: /home/didier/slint.fr/tools.en.txt:99
+#, no-wrap
+msgid ""
+"How-to check translations of man pages included in packages pkgtools and "
+"slackpkg"
+msgstr "Як перевіряти переклади сторінок керівництв, що входять до пакунків pkgtools і slackpkg"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:102
+msgid ""
+"Resources: "
+"https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools] and "
+"https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]"
+msgstr "Ресурси: https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools] and https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:104
+msgid ""
+"Again, put PO file in directory wip/, (re)named for instance as "
+"es.pkgtools.po (man pages included in package pkgtools in Spanish). Then run"
+" this command:"
+msgstr "Знову ж таки, перемістіть PO-файл до каталоґу wip/, (пере)йменуйте, наприклад, у uk.pkgtools.po (сторінки керівництв, що входять до пакунка pkgtools українською). Потім виконайте команду:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/tools.en.txt:107
+#, no-wrap
+msgid "   /path/to/tools_for_translators/generate_man_pages es.pkgtools\n"
+msgstr "   /path/to/tools_for_translators/generate_man_pages es.pkgtools\n"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:110
+msgid ""
+"If all goes this will output all included man pages (in this case: "
+"es.explodepkg, es.installpkg, es.makepkg, es.pkgtool, es.removepkg, "
+"es.upgradepkg). Else read the error messages, make needed fixes then do it "
+"again. You can avoid most errors following this "
+"link:contribute.html#warning_man_pages[Warning]."
+msgstr "Якщо все йде добре, сценарій створить усі сторінки керівництв (у цьому випадку: uk.explodepkg, uk.installpkg, uk.makepkg, uk.pkgtool, uk.removepkg, uk.upgradepkg). В іншому випадку, читайте повідомлення про помилки, уносьте потрібні зміни та спробуйте ще раз. Ви можете уникнути багатьох помилок, прочитавши link:contribute.html#warning_man_pages[Попередження]."
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:112
+msgid ""
+"To compare localized vs genuine man pages, do this for instance (example for"
+" translation in Ukrainian) :"
+msgstr "Аби порівняти перекладені сторінки керівництв з оригінальними, виконайте, наприклад, це (приклад для перекладу українською):"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/tools.en.txt:117
+#, no-wrap
+msgid ""
+"  cd /path/to/wip/\n"
+"  LANG=uk_UA.utf8 GROFF_ENCODING=utf8 man ./installpkg # localized man page\n"
+"  GROFF_ENCODING=utf8 man installpkg # genuine man page\n"
+msgstr "  cd /path/to/wip/\n  LANG=uk_UA.utf8 GROFF_ENCODING=utf8 man ./installpkg # перекладене керівництво\n  GROFF_ENCODING=utf8 man installpkg # оригінальне керівництво\n"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:120
+msgid ""
+"To save typing \"GROFF_ENCODING=utf8\" every time, put this line in "
+"~/.bashrc:"
+msgstr "Аби не набирати \"GROFF_ENCODING=utf8\" щоразу, додайте цей рядок до ~/.bashrc:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/tools.en.txt:123
+#, no-wrap
+msgid "  export GROFF_ENCODING=utf8\n"
+msgstr "  export GROFF_ENCODING=utf8\n"
+
+#. type: Title ==
+#: /home/didier/slint.fr/tools.en.txt:126
+#, no-wrap
+msgid ""
+"Translation of text files to be processed by 'AsciiDoc' to generate web "
+"pages"
+msgstr "Переклад текстових файлів, що обробляються 'AsciiDoc' при створені веб-сторінок"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:129
+msgid ""
+"As indicated in link:contribute.html#new_web_pages[Translation of web "
+"pages], following pages are generated by 'asciidoc' from source text files: "
+"link:slint.html[slint.html], link:installer.html[installer.html], "
+"link:package.html[package.html], link:contribute.html[Contribute], "
+"link:translators.html[Translators], link:tools.html[Tools] and "
+"link:changelog.html[ChangeLog] as well as "
+"https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]."
+msgstr "Як показано у link:contribute.html#new_web_pages[Переклад веб-сторінок], такі сторінки створено 'asciidoc' із джерельних текстових файлів: link:slint.html[slint.html], link:installer.html[installer.html], link:package.html[package.html], link:contribute.html[Contribute], link:translators.html[Translators], link:tools.html[Tools] та link:changelog.html[ChangeLog], так само, як https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]."
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:131
+msgid ""
+"These source text files should be translated using Transifex on line editor:"
+" uploading a translated text file on Transifex fails with an error message "
+"for a reason unknown of the writer, so translating files locally then "
+"uploading them on Transifex is not an option."
+msgstr "Ці файли потрібно перекладати за допомогою онлайн-редактора Transifex: спроба вивантажити перекладений текстовий файл на Transifex закінчується невдачею з повідомленням про невідому помилку редактора, тому переклад цих файлів локально й вивантаження їх на Transifex - не варіянт."
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:133
+msgid ""
+"But Transifex on line editor has the advantage of allowing to add in "
+"translation files sentences or paragraphs that will stay linked to a string "
+"of the original English file."
+msgstr "Але онлайн-редактор Transifex має перевагу в тому, що дозволяє додавати до файлів перекладів рядки та цілі параґрафи, зберігаючи при цьому прив'язку до рядків оригінального англійського файлу."
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:135
+msgid ""
+"This allows translators to customize their translations in adding "
+"information specific to their locale, as for instance how user can get help "
+"in their specific language or country, pointers to localized documentation, "
+"etc."
+msgstr "Це дозволяє перекладачам змінювати їхні переклади, додаючи інформацію, специфічну до їх локалі, до прикладу, про те, як користувач може отримати допомогу цією мовою або у цій країні, або ж про посилку на локалізовану документацію та інше."
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:139
+msgid ""
+"Following an update of an original English text file, text strings in "
+"translation files that matched strings modified in the English file will "
+"disappear from Transifex editor."
+msgstr "Під час оновлення оригінального англомовного файлу, ті рядки тексту в перекладі, які збігаються з рядками, що змінилися з англомовного файлу, буде відкинуто."
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:141
+msgid ""
+"You can save some typing if you kept a local copy of the translation "
+"(dowloading it from Transifex): copy the old translation from that local "
+"copy and paste it into Transifex editor, then edit it as need be."
+msgstr "Наразі, ви можете зберегти те, що набирали, якщо зробите копію перекладу (завантаживши його з Transifex), згодом ви можете скопіювати старий переклад із цієї локальної копії та вставити його у редакторі Transifex, за потреби відредагувавши."
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:143
+msgid ""
+"Even easier, if your translation was already uploaded on the website: "
+"clicking on \"Page Source\" at the bottom of that page's menu will display "
+"the corresponding source text file."
+msgstr "Навіть простіше, якщо клацнути \"Код сторінки\" внизу меню нової веб-сторінки, буде показано відповідний джерельний текстовий файл."
+
+#. type: delimited block =
+#: /home/didier/slint.fr/tools.en.txt:145
+msgid ""
+"Also, Transifex editor has a \"Suggestions\" feature (similar to the "
+"\"Translation Memory\" in Lokalize) where it \"remembers\" similar past "
+"translations of a string. This feature can been really useful whenever a "
+"website page gets updated. Transifex will remember your last translation of "
+"the string and present a \"Use this\" link next to the suggestion, so you "
+"can just use it, avoid re-typing and re-translating, then modify it "
+"slightly, and on to the next one."
+msgstr "Окрім того, редактор Transifex має можливість «Пропозиції» (аналоґічну «Пам'яті перекладів» у Lokalize), яка «запам'ятовує» схожі нещодавні переклади рядків. Ця можливість може бути дуже корисною, коли б сторінку сайту не було оновлено. Transifex пам'ятає Ваш останній переклад і надає посилання «Використовуйте це», Ви можете просто скористатися нею, уникнувши набору та перекладу вдруге."
+
+#. type: Block title
+#: /home/didier/slint.fr/tools.en.txt:147
+#, no-wrap
+msgid "Get acquainted with AsciiDoc markup syntax"
+msgstr "Ознайомтеся із синтаксисом розмітки AsciiDoc"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:149
+msgid ""
+"The reference document is the http://asciidoc.org/userguide.html[AsciiDoc "
+"User Guide] but for a starter, you could just read this "
+"http://powerman.name/doc/asciidoc[AsciiDoc cheatsheet]. Even faster, "
+"assuming that 'AsciiDoc' is installed this command:"
+msgstr "Основний документ - це http://asciidoc.org/userguide.html[Керівництво користувача AsciiDoc], але спершу, прочитайте http://powerman.name/doc/asciidoc[шпаргалки з AsciiDoc]. Ще швидше, зі встановленим 'AsciiDoc', така команда:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/tools.en.txt:151
+#, no-wrap
+msgid "asciidoc --help syntax > asciidoc.txt\n"
+msgstr "asciidoc --help syntax > asciidoc.txt\n"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:153
+msgid ""
+"writes the AsciiDoc Markup Syntax Summary in file asciidoc.txt, that you can"
+" then display with a pager or print."
+msgstr "Вона запише до файлу asciidoc.txt загальні відомості про синтаксис розмітки AsciiDoc, які Ви можете прочитати або роздрукувати."
+
+#. type: Block title
+#: /home/didier/slint.fr/tools.en.txt:154
+#, no-wrap
+msgid "Preserve the markup"
+msgstr "Зберігайте розмітку"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:156
+msgid ""
+"Be careful to preserve the markup as is. For instance, adding or removing "
+"spaces or \"newline\" characters can have unexpected effects. Here are a few"
+" examples :"
+msgstr "Ретельно зберігайте розмітку, як є. Наприклад, додавання або вилучення пробілів, або символів «нового рядка» може привести до несподіваного результату. Нижче наведено кілька прикладів:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:158
+msgid ""
+"Beginning a paragraph with a space will generate a 'literal paragraph' "
+"displayed with a specific font"
+msgstr "Початок параґрафу з пробілу призведе до створення 'буквального параґрафу', що показується спеціяльним шрифтом"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:159
+msgid ""
+"\"= some text\" will generate a level 0 header (document title), but only if"
+" \"=\" is the first character of the line, there is a space after it and "
+"there is a blank line before."
+msgstr "«= текст» призведе до створення заголовку рівня 0 (заголовка документу), але тільки, якщо «=» — першим символом у рядку, є пробіл після нього та порожній рядок перед ним."
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:160
+msgid ""
+"\" \\+\" appended to a line will generate a 'line break' only if there is "
+"space before the \"+\", that should be the last character of the line"
+msgstr "додано у кінець рядка «\\+» призведе до створення 'розривання рядка' тільки, якщо перед «+» стоїть пробіл."
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:162
+msgid ""
+"To avoid messing with formatting instructions, we recommend that you first "
+"copy the source string (in English) to the translation (just click on the "
+"icon showing two pages on the upper right of the source string area) then "
+"edit it."
+msgstr "Для уникнення плутанини з кодами форматування, рекомендуємо спершу копіювати початковий (англійський) рядок до перекладу (просто клацнувши на піктоґраму з двома аркушами праворуч над початковим рядком), і вже опісля відредагувати його."
+
+#. type: Block title
+#: /home/didier/slint.fr/tools.en.txt:163
+#, no-wrap
+msgid "Check the rendering of your translation"
+msgstr "Перевірка зовнішнього вигляду Вашого перекладу"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:165
+msgid ""
+"You can easily check the rendering of the web page generated from your "
+"translation of a source text file. Just do this:"
+msgstr "Ви легко можете перевірити, як виглядає сторінка, створена з Вашого перекладу. Просто виконайте це:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/tools.en.txt:175
+#, no-wrap
+msgid ""
+"lftp -c \"mirror https://slint.fr/website/\"\n"
+"# Download your translation from Transifex (we'll call it <translation.txt>) to directory website/ just created\n"
+"cd website\n"
+"CONFIG_FILE=slint.conf.en\n"
+"# Optionally, if the top title and the menu translated in your language are already uploaded on the website:\n"
+"wget https://slint.fr/slint.conf.ll; CONFIG_FILE=slint.conf.ll # replace \"ll\" with your language code (two letters)\n"
+"# then generate the web page\n"
+"asciidoc -b xhtml11 -a icons -f $CONFIG_FILE <translation.txt> # this command generates <translation.html>\n"
+"firefox <translation.html> &\n"
+msgstr "lftp -c \"mirror https://slint.fr/website/\"\nЗавантажте Ваш переклад із Transifex (дамо йому ім’я <translation.txt>) до каталоґу website, створений попередньою командою\ncd website\nCONFIG_FILE=slint.conf.en\n# Необов'язково, якщо заголовок та меню, перекладені Вашою мовою, завантажено на веб-сайт:\nwget https://slint.fr/slint.conf.ll; CONFIG_FILE=slint.conf.ll # заміна «ll» на код Вашої мови (дві літери)\n# потім створіть веб-сторінку\nasciidoc -b xhtml11 -a icons -f $CONFIG_FILE <translation.txt> # ця команда створить <translation.html>\nfirefox <translation.html> &\n"
+
+#. type: Block title
+#: /home/didier/slint.fr/tools.en.txt:177
+#, no-wrap
+msgid "Translate or not translate, that is the question"
+msgstr "Перекладати чи ні, ось питаннячко"
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:179
+msgid ""
+"Following words have a special meaning for AsciiDoc and should not be "
+"translated when they begin an admonition paragraph (and are often replaced "
+"by icons): TIP, NOTE, IMPORTANT, WARNING and CAUTION."
+msgstr "Ці слова мають спеціяльне значення в AsciiDoc, і не мають перекладатися, коли вони розпочинають абзац із попередженням (вони замінюються значками): TIP, NOTE, IMPORTANT, WARNING та CAUTION."
+
+#. type: Plain text
+#: /home/didier/slint.fr/tools.en.txt:181
+msgid ""
+"Generally speaking, links and URLs should not be translated, but associated "
+"caption may, depending on the context. In following examples (taken from "
+"output of 'asciidoc --help syntax') only the value of 'caption' may be "
+"translated:"
+msgstr "Власне кажучи, посилання та URL не мають перекладатися, проте їх заголовки - можна, у залежності від контексту. У таких прикладах (отриманих із висновку 'asciidoc --help syntax') тільки значення 'caption' можна перекладати:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/tools.en.txt:186
+#, no-wrap
+msgid ""
+"Document links:\n"
+"[[id]]                      (define link target)\n"
+"<<id,caption>>              (link to target id)\n"
+"link:filename#id[caption]   (link to external HTML file)\n"
+msgstr "Посилання на документ:\n[[id]] (визначає мету посилання)\n<<id,заголовок>> (посилання на призначений id)\nlink:filename#id[заголовок] (посилання на зовнішній HTML-файл)\n"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/tools.en.txt:190
+#, no-wrap
+msgid ""
+"URLs:\n"
+"http:address[caption]       (link to web page)\n"
+"mailto:address[caption]     (link to mail recipient)\n"
+msgstr "Адреси URL:\nhttp:address[заголовок] (посилання на веб-сторінку)\nmailto:address[заголовок] (посилання на одержувача електронної пошти)\n"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/tools.en.txt:194
+#, no-wrap
+msgid ""
+"Images:\n"
+"image:filename[caption]     (inline image)\n"
+"image::filename[caption]    (block image)\n"
+msgstr "Зображення:\nimage:filename[заголовок] (вбудоване зображення)\nimage::filename[заголовок] (блок із зображенням)\n"

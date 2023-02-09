@@ -1,0 +1,136 @@
+
+= Página de início do Slint
+
+Agora você pode instalar e utilizar o http://slackware.com[Slackware] no seu
+idioma!
+
+No momento da escrita, os seguintes idiomas estão disponíveis:
+
+[format="psv", grid="none", frame="none"]
+|========
+|'Holandês'           |'Polaco'                  |'Sueco'
+|'Inglês (EUA)'   |'Português (Brasil)'     |'Turco'
+|'Francês'          |'Português (Portugal)'   |'Ucraniano'
+|'Alemão'          |'Russo'                 |
+|'Grego'           |'Espanhol (América Latina)' |
+|========
+
+Agradecimento às dezenas de link:translators[tradutores benevolentes] que
+tornaram o sonho do Slint uma realidade.
+
+O projeto Slint não é nem filiado nem aprovado pelo Slackware
+[blue]^<<note-1,[1]>>^ mas precisa dele, por isso recomendamos a todos os
+utilizadores Slint para https://store.slackware.com/cgi-bin/store[apoiar
+financeiramente] o Slackware.
+
+.O Projeto Slint disponibiliza:
+* 'Instaladores Slint' poliglotas, disponíveis para o Slackware 13.37, 14.0 e
+  14.1
+* 'Pacotes slint', que substituem as ferramentas de administração do Slackware
+  com as poliglotas e instalam ficheiros de tradução e alguns documentos.
+
+Todos os 'instaladores Slint' instalam um 'pacote Slint' para a mesma versão
+do Slakcware, que também pode ser instalado num Slackware genuíno e
+atualizado conforme necessário.
+
+== Instala o Slackware no seu idioma ou internacionaliza-o depois
+
+.Instala o Slackware no seu idioma usando o 'instalador Slint'
+Dois tamanhos de imagens ISO estão disponíveis, ambos permitindo fazer
+instaladores de arranque:
+
+* O http://sourceforge.net/projects/slint/files/[DVD + USB imagens ISO
+  completas] contêm tudo o que você precisa para instalar o Slackware.
+* O https://slint.fr/installers[CD + USB imagens ISO pequenas] precisam de ser
+  completadas por uma media que contém os pacotes do Slackware, por exemplo,
+  um DVD do Slackware.
+
+Veja a ligação da página link:installer.html[Instalador Slint] para saber
+como fazer a transferência da imagem, colocá-la num DVD ou dispositivo USB e
+usá-la.
+
+Um terminal de Braille também pode ser utilizado para instalar e depois
+pilotar o sistema. As instruções de utilização estão disponíveis em
+https://slint.fr/docs/README_BRLTTY.
+
+.Internacionalize o seu Slackware genuíno ou atualize as ferramentas de tradução (re)instalando um 'pacote Slint'
+Os pacotes Slint estão localizados no diretório
+https://slint.fr/packages[pacotes/]. Veja a página link:package.html[pacote
+slint] para saber como instalar um pacote Slint para a sua versão do
+Slackware e o que você ganha pelo seu dinheiro :-)
+
+Instala ou reinstala um 'Pacote Slint' se você quiser:
+
+* internacionalizar um Slackware 13.37, 14.0 ou 14.1 já instalado (se você não
+  utilizou um instalador Slint)
+* ter novas ferramentas traduzidas, correções e traduções em novos idiomas.
+
+== Utilize o seu Slackware poliglota
+[horizontal]
+NOTE: A localização é a definição do subconjunto de ambiente do utilizador que
+depende do idioma e de convenções culturais.
+[[anchor-1]]
+.Defina a escolha da sua localização
+O instalador Slint define as configurações de localização padrão no sistema
+instalado de acordo com o idioma usado durante a instalação, mas se você
+instalou o pacote Slint para internacionalizar o Slackware genuíno você terá
+que fazer essas configurações por si mesmo.
+
+Para ver mensagens no seu idioma escolhido, defina o parâmetro LANG
+adequadamente no ficheiro /etc/profile.d/lang.sh[blue]^<<note-2,[2]>>^ Por
+exemplo, para exibir mensagens em Português de Portugal, você terá que
+trocar a configuração padrão `en_US` assim:
+
+----
+export LANG=pt_PT.utf8 # o nome da localização deve terminar em .utf8 para combinar com a codificação das mensagens traduzidas UTF-8 
+----
+E também, para exibir corretamente as páginas do manual traduzidas que são
+codificadas em UTF-8, insira 'um' dos seguintes comandos no seu ~/.bashrc:
+
+----
+export GROFF_ENCODING=utf8 # Se todas as páginas de manual que você lê são em Inglês ou codificados em UTF-8
+alias uman="GROFF_ENCODING=utf8 man" # Se você também lê páginas man noutras codificações
+----
+Se você usar o último, você irá escrever "uman" em vez de "man" num terminal
+para exibir páginas de manual codificadas em UTF-8.
+
+.Administrar o Slackware no seu idioma
+Os 'Instaladores Slint' bem como os 'Pacotes Slint' substituem as principais
+ferramentas do Slackware pelos poliglotas e adicionam páginas dos manuais
+traduzidas.
+
+Todas as ferramentas poliglotas atualmente disponíveis estão exibidas na
+página link:package#what_is_translated[pacote slint]. Elas permitem-lhe:
+[options="compact"]
+* Gerir pacotes de software
+* Adicionar utilizadores
+* (re)configurar o seu sistema: defina quais os daemons (serviços) que iniciam
+  no momento do arranque, crie novos utilizadores, reconfigure o seu gestor de
+  arranque, escolha o gestor de janelas ou área de trabalho padrão, configure
+  a sua rede, crie uma unidade USB Linux de arranque
+
+== Contribua, obtenha ajuda, acompanhe
+
+Se quiser contribuir para o Projeto Slint, seja como tradutor ou de outra
+forma, veja a página link:contribute[Contribuir]
+
+Se você precisar de ajuda, pode consultar o
+http://www.linuxquestions.org/questions/slackware-14/[fórum Slackware] do
+Linux Questions (em inglês).
+
+Para perguntas em geral ou sugestões, como adicionar novas ferramentas
+traduzidas para o 'Pacote Slint', registe-se na nossa
+https://lists.sourceforge.net/lists/listinfo/slint-translators[mailing-list].
+
+Para manter-se sintonizado e beneficiar de novas ferramentas traduzidas e
+traduções em novos idiomas, consulte o link:changelog[ChangeLog].
+
+'''
+
+[[note-1]]^1. Slackware (R) é uma
+http://slackware.com/trademark/trademark.php[marca registrada] do Slackware
+Linux inc.^
+
+[[note-2]]^2. Devido a um bug mas apenas no Slackware 13.37, depois do 'su'
+você precisa de definir a LANG antes de cada comando. Por exemplo:
+'LANG=fr_FR.utf8 pkgtool'^

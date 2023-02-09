@@ -1,0 +1,534 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The Slint project
+# This file is distributed under the same license as the contribute package.
+# 
+# Translators:
+# Didier Spaier <didier@slint.fr>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: slintwebsite\n"
+"POT-Creation-Date: 2014-12-28 14:19+0100\n"
+"PO-Revision-Date: 2015-07-22 23:34+0000\n"
+"Last-Translator: Didier Spaier <didier@slint.fr>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/slintwebsite/language/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#. type: Title =
+#: /home/didier/slint.fr/contribute.en.txt:1
+#, no-wrap
+msgid "Contribute to the Slint project"
+msgstr "Содействие проекту Slint"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:4
+msgid ""
+"So, you want to help and contribute to the Slint project? Welcome on board!"
+msgstr "Итак, вы хотите помочь и содействовать проекту Slint? Добро пожаловать на борт!"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:6
+msgid ""
+"Needed work to provide Slint's products is mostly translating and reviewing "
+"shell scripts, that make up Slackware's installers and administration tools,"
+" and documentation intended for Slackware users taking the form of text "
+"files or manual pages."
+msgstr "Необходимая работа над продуктом Slint - в большинстве перевод и вычитка сценариев оболочки, которые создают установщики Slackware и административных инструментов, документации для конечных пользователей Slackware, принимающей форму текстовых файлов или страниц руководств."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:8
+msgid "Ideally, we would like that translators:"
+msgstr "В идеале, мы хотели бы, чтобы переводчики:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:10
+msgid ""
+"be able to communicate in English and very fluent in the target language, "
+"preferably their native language"
+msgstr "были способны общаться на английском языке и очень хорошо знали целевой язык, предпочтительно свой родной."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:11
+msgid ""
+"understand technical vocabulary associated to installation and "
+"administration of a Linux system"
+msgstr "понимали техническую терминологию, связанную с установкой и администрированием систем Linux"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:12
+msgid "be Slackware users"
+msgstr "являлись пользователями Slackware"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:13
+msgid "be able to read and understand simple shell scripts"
+msgstr "способны читать и понимть простые сценарии оболочки"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:15
+msgid ""
+"But even if you don't meet all of these expectations, don't hesitate to "
+"volunteer: there still are many tasks that can benefit of your skills."
+msgstr "Но даже если вы не удовлетворяете всем этим ожиданиям, не бойтесь присоединиться: еще много других задач, в которых ваши навыки пригодятся."
+
+#. type: Title ==
+#: /home/didier/slint.fr/contribute.en.txt:16
+#, no-wrap
+msgid "Volunteer and define your contributions"
+msgstr "Добровольцы и ваше содействие"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:19
+msgid ""
+"To volunteer as a translator, preferably use the Transifex platform: first "
+"https://www.transifex.com/signup/contributor/[register on Transifex] (it's "
+"free), then go to Transifex' "
+"https://www.transifex.com/projects/p/slint/[Slint project page]:"
+msgstr "Добровольные переводчики, предпочтительно использование платформы Transifex: сначала https://www.transifex.com/signup/contributor/[зарегистрируйтесь на Transifex] (это бесплатно), затем перейдите на https://www.transifex.com/projects/p/slint/[страницу проекта Slint] на Transifex:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:21
+msgid ""
+"If your language is listed, click on it, then in that language's page click "
+"\"Join the team\"."
+msgstr "Если ваш язык присутствует в списке, кликните на нем, затем на странице этого языка кликните \"Присоединиться к команде\"."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:22
+msgid ""
+"Else, click \"Request a language\" (in the light blue stripe just above "
+"languages' list)"
+msgstr "Или кликните «Запросить язык» (на ярко-синей полосе над списком языков)"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:24
+msgid ""
+"But if you'd like to ask questions before, or propose your help for other "
+"tasks than translation, send an email to Slint's maintainer: didier at slint"
+" dot fr."
+msgstr "Но если вы сначала хотели бы задать вопрос, или предложить свою помощь в других задачах, а не в переводе, отправьте электронное письмо обслуживающему Slint: didier собака slint точка fr."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:26
+msgid ""
+"Then you will consult with your team's coordinator or Slint maintainer to "
+"define the \"why\", \"what\", \"how\" and \"when\" of your contributions to "
+"Slint."
+msgstr "Затем вы проконсультируетесь с координатором вашей команды или обслуживающим Slint, чтобы определить «почему», «что», «как» и «когда» в вашем содействии Slint."
+
+#. type: Title ==
+#: /home/didier/slint.fr/contribute.en.txt:27
+#, no-wrap
+msgid "Know our methods & tools and be ready to communicate inside Slint team"
+msgstr "Узнайте наши методы и инструменты и будьте готовы к сообщению внутри команды Slint"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:30
+msgid ""
+"Please read <<recommendations,Practical recommendations for translators>> "
+"below."
+msgstr "Пожалуйста, прочтите <<recommendations,Практические рекомендации переводчикам>> ниже."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:32
+msgid ""
+"Then, get acquainted with the link:tools.html[Tools] we use. To better use "
+"them you'll need to have installed a Linux distribution, preferably a full "
+"Slackware system, including following packages:"
+msgstr "Затем, ознакомьтесь с используемыми нами link:tools.html[инструментами]. Чтобы использовать их наилучшим образом, вам нужнен установленный дистрибутив Linux, предпочтительно полная система Slackware, включая следующие пакеты:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:34
+msgid ""
+"../extra/aspell-words-lists/<packages for your language> for spelling checks"
+msgstr "../extra/aspell-words-lists/aspell-ru для проверки орфографии"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:35
+msgid ""
+"../kdei/<package kde-l10n for your language> to localize UI of Lokalize if "
+"you use it"
+msgstr "../kdei/kde-l10n-ru для локализации пользовательского интерфейса Lokalize, если вы используете эту программу"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:37
+msgid "Last but not least, we need to work together as a team, so:"
+msgstr "Наконец, что немаловажно, мы должны работать вместе, как команда, поэтому:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:39
+msgid ""
+"Please register on Transifex, even if you don't use its on line editor, then"
+" check all https://www.transifex.com/settings/notices/[notification "
+"settings], as it makes easier to keep all contributors informed at once of "
+"anything of general interest. Please indicate you full name, even if you use"
+" a nickname."
+msgstr "Пожалуйста, зарегистрируйтесь на Transifex, даже если вы не используете их онлайн-редактор, затем проверьте все https://www.transifex.com/settings/notices/[настройки уведомлений], это упростит информирование всех участников сразу обо всем интересном всем. Пожалуйста указывайте свое настоящее имя, даже если вы используете псевдоним."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:40
+msgid ""
+"We strongly suggest that you subscribe to "
+"https://lists.sourceforge.net/lists/listinfo/slint-translators[slint-"
+"translators mailing-list]. This will allow you to ask and answer questions, "
+"participate in discussions, make suggestions and proposals."
+msgstr "Мы настоятельно рекомендуем вам подписаться на https://lists.sourceforge.net/lists/listinfo/slint-translators[список рассылки slint-translators]. Это позволит вам задавать вопросы и отвечать на них, участвовать в дискуссиях, вносить предложения."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:41
+msgid ""
+"Be ready to provide an email address allowing your team's coordinator and "
+"Slint's maintainer to reach you."
+msgstr "Будьте готовы предоставить свой адрес электронной почты, чтобы координатор вашей команды и сопровождающий Slint могли связаться с вами."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:42
+msgid ""
+"You can also use the Discussion feature available on Transifex in your "
+"language's page of the Slint project."
+msgstr "Вы можете воспользоваться функцией Дискуссия, доступной на Transifex на странице вашего языка в проекте Slint."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:43
+msgid ""
+"You can also follow http://www.linuxquestions.org/questions/slackware-14"
+"/internationalized-slackware-14-installer-what-languages-to-"
+"start-4175455701/[this thread] in Slackware forum of LinuxQuestions.org. For"
+" that, register to LQ and either post a message in the thread, or display it"
+" then click Thread Tools => Subscribe to this Thread (in the dark blue "
+"stripe just above the first message displayed)."
+msgstr "Вы можете отслеживать http://www.linuxquestions.org/questions/slackware-14/internationalized-slackware-14-installer-what-languages-to-start-4175455701/[эту тему] в форуме Slackware на LinuxQuestions.org. для этого зарегистрируйтесь на LQ и напишите сообщение в тему или отобразите ее и кликните Инструменты => Подписаться на эту тему (на темно-синей полосе над первым сообщением)."
+
+#. type: Title ==
+#: /home/didier/slint.fr/contribute.en.txt:44
+#, no-wrap
+msgid "Translation scope"
+msgstr "Перевод"
+
+#. type: Title ===
+#: /home/didier/slint.fr/contribute.en.txt:46
+#, no-wrap
+msgid "Target languages"
+msgstr "Целевые языки"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:49
+msgid ""
+"At time of writing slint installer and main Slackware administration tools "
+"are fully translated in French, German, Polish, Portuguese, Russian, Spanish"
+" and Ukrainian. Other translations are in progress, their current status can"
+" be checked on "
+"https://www.transifex.com/projects/p/slint/resource/slint/[this page]."
+msgstr "На момент написания установщик Slint и главные инструменты администратора Slackware полностью переведены на французский, немецкий, польский, португальский, русский, испанский и украиский языки. Остальные переводы пока не готовы, их текущее состояние можно проверить на https://www.transifex.com/projects/p/slint/resource/slint/[этой странице]."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:51
+msgid ""
+"Manual pages are translated in more languages, complete translations are "
+"listed in file https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT]"
+msgstr "Страницы руководств переведены на многие языки, перечень завершенных переводов приведен в файле https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT]"
+
+#. type: Title ===
+#: /home/didier/slint.fr/contribute.en.txt:52
+#, no-wrap
+msgid "Translated content"
+msgstr "Переводы"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:55
+msgid ""
+"Translated content takes the form of files including original English "
+"messages alongside their translations, called PO files, produced and "
+"processed through GNU 'gettext'. Each given set of messages (in English in "
+"Slint's case) to be translated is recorded in a so called POT file, from "
+"which is generated one corresponding PO file for each target language, see "
+"http://docs.slackware.com/howtos:misc:internationalization_and_localization_of_shell_scripts[Internationalization"
+" and localization of shell scripts] on "
+"http://docs.slackware.com/start[SlackDocs] to know more."
+msgstr "Переводы имеют форму файлов, включая оригинальные английские сообщения вместе со своими переводами, называемых PO-файлами, получаемых и обрабатываемых при помощи GNU 'gettext'. Каждый данный набор сообщений (на английском в случае Slint) для перевода записан в так наываемый POT-файл, из которого генерируются один соответствующий PO-файл для данного языка, подробнее смотрите в http://docs.slackware.com/howtos:misc:internationalization_and_localization_of_shell_scripts[интернационализация и локализация сценариев оболочки] на http://docs.slackware.com/start[SlackDocs]."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:57
+msgid ""
+"Messages included in a given POT file are gathered from one or several shell"
+" scripts or manual pages. Here is the current list of Slint's POT files and "
+"their scopes (see page link:tools.html[Tools] to know how to use associated "
+"tools)."
+msgstr "Сообщения, включенные в данный POT-файл, собраны из одного или нескольких сценариев оболочки или страниц руководства. Ниже список POT-файлов Slint и их охват (смотрите страницу link:tools.html[Инструменты], чтобы узнать как использовать соответствующие инструменты)."
+
+#. type: delimited block |
+#: /home/didier/slint.fr/contribute.en.txt:75
+#, no-wrap
+msgid ""
+"|POT File name|Resource name (Transifex)|Scope|Associated tool\n"
+"|slackware.pot|https://www.transifex.com/projects/p/slint/resource/slint/[slint]|Slint installer\n"
+"Slint package (without man pages)|toolbox.sh\n"
+"|pkgtools.pot|https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools]|man pages contained in package 'pkgtools'|gen_man_pages\n"
+"|slackpkg.pot|https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]|man pages contained in package 'slackpkg'|gen_man_pages\n"
+"|slint.pot|https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/[POT file for slint.sh]|script slint.sh, see page link:tools.html[Tools]|toolbox_slint_sh\n"
+"|index.html.pot|https://www.transifex.com/projects/p/slint/resource/indexhtml/[index.html]|link:index.html[Old Slint's home page]|(none)\n"
+"|template.pot|https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]|Sidebar and top title of Slint web pages|(none)\n"
+"|(none)|https://www.transifex.com/projects/p/slint/resource/slinttxt/[slint.txt]|link:slint.html[Slint's home page]|(none)\n"
+"|(none)|https://www.transifex.com/projects/p/slint/resource/installertxt/[installer.txt]|link:installer.html[Slint installer]|(none)\n"
+"|(none)|https://www.transifex.com/projects/p/slint/resource/packagetxt/[package.txt]|link:package.html[Slint package]|(none)\n"
+"|(none)|https://www.transifex.com/projects/p/slint/resource/translatorstxt/[translators.txt]|link:translators.html[Translators]|(none)\n"
+"|(none)|https://www.transifex.com/projects/p/slint/resource/contributetxt/[contribute.txt]|link:contribute.html[Contribute]|(none)\n"
+"|(none)|https://www.transifex.com/projects/p/slint/resource/toolstxt/[tools.txt]|link:tools.html[Tools]|(none)\n"
+"|(none)|https://www.transifex.com/projects/p/slint/resource/changelogtxt/[changelog.txt]|link:changelog.html[ChangeLog]|(none)\n"
+msgstr "|Имя POT-файла|Название ресурса (Transifex)|Охват|Инструмент\n|slackware.pot|https://www.transifex.com/projects/p/slint/resource/slint/[slint]|Установщик Slint\nПакет Slint (без страниц руководств)|toolbox.sh\n|pkgtools.pot|https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools]|Страницы руководств из пакета 'pkgtools'|gen_man_pages\n|slackpkg.pot|https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]|Страницы руководств из пакета 'slackpkg'|gen_man_pages\n|slint.pot|https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/[POT file for slint.sh]|Сценарий slint.sh, смотрите страницу link:tools.html[Инструменты]|toolbox_slint_sh\n|index.html.pot|https://www.transifex.com/projects/p/slint/resource/indexhtml/[index.html]|link:index.html[Старая домашняя страница Slint]|(нет)\n|template.pot|https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]|Боковая панель и заголовок web-страниц Slint|(нет)\n|(нет)|https://www.transifex.com/projects/p/slint/resource/slinttxt/[slint.txt]|link:slint.html[Домашняя страница Slint]|(нет)\n|(нет)|https://www.transifex.com/projects/p/slint/resource/installertxt/[installer.txt]|link:installer.html[Установщик Slint]|(нет)\n|(нет)|https://www.transifex.com/projects/p/slint/resource/packagetxt/[package.txt]|link:package.html[Пакет Slint]|(нет)\n|(нет)|https://www.transifex.com/projects/p/slint/resource/translatorstxt/[translators.txt]|link:translators.html[Переводчикам]|(нет)\n|(нет)|https://www.transifex.com/projects/p/slint/resource/contributetxt/[contribute.txt]|link:contribute.html[Содействие]|(нет)\n|(нет)|https://www.transifex.com/projects/p/slint/resource/toolstxt/[tools.txt]|link:tools.html[Инструменты]|(нет)\n|(нет)|https://www.transifex.com/projects/p/slint/resource/changelogtxt/[changelog.txt]|link:changelog.html[Журнал изменений]|(нет)\n"
+
+#. type: Title ===
+#: /home/didier/slint.fr/contribute.en.txt:77
+#, no-wrap
+msgid "Transition from old to new web pages"
+msgstr "Переход от старых к новым web-страницам"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:80
+msgid ""
+"Our link:index.html[old home page] has been written directly in xhtml. This "
+"page has been translated in 13 languages, and will be progressively replaced"
+" by the current one, tentatively named link:slint.html[slint.html]."
+msgstr "Наша link:index.html[старая домашняя страница] была написана на XHTML. Она была переведена на 13 языков и постепенно будет заменена новой, с предварительным названием link:slint.html[slint.html]."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:82
+msgid ""
+"Web pages are listed in the menu on the sidebar. The link:slint.html[home "
+"page] will progressively replace the old one, that will be neither "
+"translated to more languages nor updated any more."
+msgstr "Web-страницы приведены в меню на боковой панели. link:slint.html[Домашняя страница] постепенно заменит старую, которая не будет переводиться на новые языки и обновляться."
+
+#. type: Title ===
+#: /home/didier/slint.fr/contribute.en.txt:84
+#, no-wrap
+msgid "Translation of web pages"
+msgstr "Перевод web-страниц"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:86
+msgid ""
+"Some of the web pages are intended for end-user: "
+"link:slint.html[slint.html], link:installer.html[installer.html] and "
+"link:package.html[package.html]. Translation of these pages and of "
+"https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]"
+" (used to generate translated top title and left sidebar of web pages) "
+"should be given priority."
+msgstr "Некоторые web-страницы предназначены для конечных пользователей: link:slint.html[slint.html], link:installer.html[installer.html] and link:package.html[package.html]. Перевод этих страниц и https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po] (используется для генерации перевода заголовка и левой боковой панели web-страниц) должен быть осуществлен в первую очередь."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:88
+msgid ""
+"Other web pages: link:contribute.html[Contribute], "
+"link:translators.html[Translators], link:tools.html[Tools] and "
+"link:changelog.html[ChangeLog] may also be translated (that's up to each "
+"translation team) but 'after' pages listed in above paragraph have been "
+"translated."
+msgstr "Прочие web-страницы: link:contribute.html[contribute.html], link:translators.html[translators.html], link:tools.html[tools.html] and link:changelog.html[changelog.html] могут также быть переведены (на усмотрение каждой команды переводчиков), но 'после' страниц, приведенных параграфом выше."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:90
+msgid ""
+"For a given language, when translating template.po it's better to leave in "
+"English names of (yet) untranslated web pages, so that visitors will "
+"understand that clicking on corresponding links in the menu will display "
+"these pages in English."
+msgstr "При переводе template.po лучше сохранять английские названия еще не переведенных страниц, это подскажет посетителям, что по щелчку на соответствующей ссылке в меню они увидят страницу на английском языке."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:92
+msgid ""
+"All new pages are generated using application "
+"http://asciidoc.org['AsciiDoc'], included in Slackware (shipped in package "
+"linuxdoc-tools). The source files are text files, including formatting "
+"instructions for AsciiDoc, e.g. a line begining with two equal signs will be"
+" considered as a header of level two, that will be written as a <h2> tag in "
+"XHTML file generated by asciidoc."
+msgstr "Все новые страницы сгенерированы приложением http://asciidoc.org['AsciiDoc'], входящим в Slackware (поставляется в пакете linuxdoc-tools). Исходные файлы являются обычными текстовыми файлами, включают инструкции форматирования для AsciiDoc, например, строка, начинающаяся с двух одиноковых символов будет считаться заголовком второго уровня, это будет записано как тег <h2> в результирующем файле XHTML, сгенерированного asciidoc."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:94
+msgid ""
+"Specific instructions and tips to translate text files to be processed by "
+"'AsciiDoc' are provided in link:tools.html#asciidoc[Translation of text "
+"files to be processed by 'AsciiDoc' to generate web pages]."
+msgstr "Специальные инструкции и советы по переводу текстовых для последующей обработки 'AsciiDoc' представлены в link:tools.html#asciidoc[Перевод текстовых файлов для последующе й обработки 'AsciiDoc' для генерации web-страниц]."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:96
+msgid ""
+"For each language, when translation of template.po, "
+"link:slint.html[slint.html], link:installer.html[installer.html] and "
+"link:package.html[package.html] will be completed, the old home page will be"
+" replaced by the new one so that end users benefit of new pages in that "
+"language."
+msgstr "Для каждого языка, когда перевод template.po, link:slint.html[slint.html], link:installer.html[installer.html] и link:package.html[package.html] будет завершен, старая домашняя страница будет заменена новой, так как это принесет пользу конечным пользователям новых страниц на этом языке."
+
+#. type: Title ==
+#: /home/didier/slint.fr/contribute.en.txt:98
+#, no-wrap
+msgid "Practical recommendations for translators"
+msgstr "Практические рекомендации переводчикам."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:101
+msgid ""
+"Depending on amount of work needed and available resources, there can be one"
+" translator or a team of translators per target language. In all cases, I "
+"recommend that at least one person be responsible for organizing the team's "
+"work, checking the translations and transmitting the checked PO file to the "
+"maintainer(s). Let's call this person the team coordinator."
+msgstr "В зависимости от объема работы и доступных ресурсов, может быть один переводчик или одна команда переводчиков на каждый целевой язык. Во всех случаях, я рекомендую чтобы хотя бы один человек отвечал за организацию работы команды, проверял переводы и передавал проверенный PO-файл сопровождающему(-им). Назовем этого человека координатором команды."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:102
+msgid ""
+"Don't feel obliged to translate verbatim. Not only is this rarely the best "
+"way to convey the meaning, but in addition this often leads to sentences too"
+" long to fit in allowed space."
+msgstr "Не чувствуйте себя обязанными перевести дословно. Не всегда это лучший способ передать смысл, но часто это приводит к предложениям, которые не умещаются на доступном пространстве."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:103
+msgid ""
+"Use a specialized PO editor, 'not' a general text editor. This will not only"
+" prevent inadvertently editing 'msgid' strings but also facilitate their "
+"work and automatize additional checks, as the presence of a variable in the "
+"translation with the same spelling as in the original."
+msgstr "Пользуйтесь специализированным PO-редактором, а 'не' обычным текстовым редактором. Это не только предупреждает нечаянное редактирование строк 'msgid', но и облегчает работу и автоматизирует дополнительные проверки, такие как наличие переменной в переводе с таким же написанием как в оригинале."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:104
+msgid ""
+"While translating, choose a serif fixed width (or \"monospaced\") font, like"
+" Courier. That allow to visually distinguish characters that otherwise would"
+" look the same, and check line's length when that matters."
+msgstr "При переводе выбирайте шрифт фиксированной ширины (или «моноширинный»), например, Courier. Это позволит визуально отличать символы, которые в противном случае будут выглядеть одинаково и проверять длину строки, когда это имеет значение."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:106
+msgid ""
+"If possible, check the layout of the messages. You could do that looking at "
+"the context in the relevant source file. Even better, simply run the "
+"translated script.  This is especially important if you are translating "
+"dialog boxes. In particular, take care not to write too long sentences on "
+"one single line if it appears that the text can't flow on next one."
+msgstr "Если возможно, проверяйте расположение сообщений. Вы можете сделать это, глядя на контекст в соответствующем исходном файле. Даже лучше просто запустить переведенный сценарий.  Особенно важно, если вы переводите диалоговые окна. В частности, не пишите очень длинные предложения в одной строке, если кажется, что текст может не поместиться на следующей."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:107
+msgid ""
+"Bear in mind that in VGA mode (used in text installers, in particular), "
+"line's width is limited theoretically to 80 characters, but practically "
+"often to 74."
+msgstr "Имейте в виду, что в режиме VGA (в частности, используемом в текстовых установщиках) длина строки теоретически ограничена до 80 символов, но на практике - до 74."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:108
+msgid ""
+"Do not add question marks that are not present in the original message."
+msgstr "Не добавляейте знаки вопроса, которые не присутствуют в оригинальном сообщении."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:109
+msgid ""
+"If the message refers to tags (text on the buttons) of dialog boxes, like "
+"\"OK\", \"Yes\", \"NO\", \"Continue\", \"Cancel\", check how theses tags are"
+" translated in your language in dialog's interface and use the same words."
+msgstr "Если сообщение ссылается на теги (текст на кнопках) диалоговых окон, например \"OK\", \"Да\", \"Нет\", \"Продолжить\", \"Отмена\", проверьте как эти теги переводятся на ваш язык в диалоговых окнах интерфейса и используйте те же самые слова."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:110
+msgid "Avoid colloquialisms and technical slang."
+msgstr "Избегайте разговорных выражений и технического жаргона."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:111
+msgid ""
+"To \"cut\" (or end) a line inside a \"dialog\" box you should type \\n: "
+"pressing [Enter] will 'not' insert a \"new line\" character in the text "
+"viewed by user."
+msgstr "Для «обрыва» (или завершения) строки внутри окна \"dialog\" необходимо набирать \\n: нажатием [Ввод], а 'не' вставлять символ «новая строка» в текст, видимый пользователю."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:113
+msgid ""
+"In addition, you will have to comply to gettext's requirements for it to "
+"work:"
+msgstr "В дополнение, вы должны соблюдать требования gettext:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:115
+msgid ""
+"If a word beginning with a dollar sign is included in the original text it "
+"should be present in the translation with exactly the same spelling (case "
+"matters)."
+msgstr "Если слово начинается с знака доллара, входящего в оригинальный текст, оно должно быть в переводе с тем же написанием (формой падежа)."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:116
+msgid ""
+"The translation text should include a \"new line\" character (or line feed, "
+"represented by \"\\n\") at the beginning or at the end, exactly as the "
+"original text does. Conversely, if the original text doesn't have the "
+"character, then the translation shouldn't have it."
+msgstr "Текст перевода должен содержать символ \"новой строки\" (или перевод каретки, представляемый как \"\\n\") в начале или в конце, в точности как в оригинальном тексте. И наоборот, если в оригинальном тексте нет такого символа, то и в переводе его не должно быть."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:117
+msgid "A single backslash character \"\\\" is not allowed in the translation."
+msgstr "Одиночный символ обратной косой черты \"\\\" не разрешается использовать в переводе."
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:119
+msgid ""
+"To check your translation against gettext's requirements you could run "
+"following command:"
+msgstr "Чтобы проверить ваш перевод на соответствие требованиям gettext выполните следующую команду:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/contribute.en.txt:122
+#, no-wrap
+msgid "  msgfmt -c <name of the PO file>\n"
+msgstr "  msgfmt -c <имя PO-файла>\n"
+
+#. type: Title ===
+#: /home/didier/slint.fr/contribute.en.txt:125
+#, no-wrap
+msgid "Warning  about translation of man pages"
+msgstr "Предупреждение о переводе страниц руководств"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:128
+msgid ""
+"Preserve carefully syntax of man pages found in English markup. For instance"
+" don't replace:"
+msgstr "Тщательно сохраняйте синтаксис страниц руководств в английской разметке. Например, не заменяйте:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:130
+msgid "'B<' with 'B <' (don't insert a space)"
+msgstr "'B<' на 'B <' (не вставляйте пробел)"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:131
+msgid ""
+"'B<' with 'b<' (keep the B as a capital letter - and don't replace it by the"
+" Greek capital letter BETA that looks the same on the screen)"
+msgstr "'B<' на 'b<' (сохраните B строчной буквой - и не заменяйте ее греческой строчной буквой BETA, которая выглядит на экране точно так же)"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:132
+msgid "\"I\" with '|' (don't replace the capital letter I with a pipe symbol)"
+msgstr "\"I\" на '|' (не заменяйте строчную букву I на символ пайпа)"
+
+#. type: Plain text
+#: /home/didier/slint.fr/contribute.en.txt:133
+msgid ""
+"When translating shell commands, preserve English names of paths when "
+"needed. But you may and should translate arguments to be replaced by a value"
+" like 'packagename'"
+msgstr "При переводе команд оболочки при необходимости сохраняйте английские имена путей. Но вы можете и должны переводить аргументы, заменяя значения вроде 'packagename'"

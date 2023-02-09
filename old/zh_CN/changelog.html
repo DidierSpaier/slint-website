@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title></title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">主页</a></div>
+      <div><a href="installer.html">Slint 安装程序</a></div>
+      <div><a href="package.html">Slint 软件包</a></div>
+      <div><a href="translators.html">翻译人员</a></div>
+      <div><a href="contribute.html">贡献</a></div>
+      <div><a href="tools.html">工具</a></div>
+      <div><a href="changelog.html">更新日志</a></div>
+      <div id="page-source"><a href="../changelog.zh_CN.txt">网站源码</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Slackware 国际化项目</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/changelog.html">de</a> | <a href="../en/changelog.html">en</a> | <a href="../es/changelog.html">es</a> | <a href="../fr/changelog.html">fr</a> | <a href="../ia/changelog.html">ia</a> | <a href="../id/changelog.html">id</a> | <a href="../it/changelog.html">it</a> | <a href="../nl/changelog.html">nl</a> | <a href="../pl/changelog.html">pl</a> | <a href="../pt_BR/changelog.html">pt_BR</a> | <a href="../pt_PT/changelog.html">pt_PT</a> | <a href="../ru/changelog.html">ru</a> | <a href="../sr/changelog.html">sr</a> | <a href="../sv/changelog.html">sv</a> | <a href="../tr/changelog.html">tr</a> | <a href="../uk/changelog.html">uk</a> | <a href="../zh_CN/changelog.html">zh_CN</a> |</div>
+      </div>
+<div class="sect1">
+<h2 id="_更新日志">更新日志</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>注意：2013年12月19日之前的更新记录在 <a href="https://slint.fr/pub/slint-history/Changelog.txt">这里</a></p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">日期</th>
+<th align="left" valign="top">变更</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">20/12/2013</p></td>
+<td align="left" valign="top"><p class="table">./data/locales/SeTLocales 中添加土耳其语 (tr_TR.utf8) 相关设置<br />
+添加 slackpkg{,.conf} 的希腊语手册<br />
+添加 slint.sh 的希腊语翻译<br />
+修复几处翻译问题<br />
+新脚本 ./build/make_packages 能构建出只包含全部国际化文件和翻译的包，替代了原来的完整包<br />
+重建 Slint 网站</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">05/02/2014</p></td>
+<td align="left" valign="top"><p class="table">纠正 ./data/locales/SeTLocales 中的错误(感谢Zhang Min)<br />
+移除 slint 软件包中的无用文件夹<br />
+添加安装程序和管理脚本的希腊语翻译(感谢George Vlahavas)<br />
+添加 slint.sh 翻译 (意大利语，土耳其语，乌克兰语)
+添加 pkgtools 的土耳其语和乌克兰语手册
+添加 slackpkg 的乌克兰语手册
+添加/更新旧主页的翻译(德语，波兰语，土耳其语，乌克兰语)
+为新网站添加更多翻译</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">06/02/2014</p></td>
+<td align="left" valign="top"><p class="table">添加 slackpkg 的土耳其语手册</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">06/04/2014</p></td>
+<td align="left" valign="top"><p class="table">Slint 安装程序已被翻译成土耳其语和葡萄牙语（葡萄牙），感谢Kemal Okmen 和 Hugo Carvalho.<br />
+pkgtools 中新增已本地化的 man 页面 ：pt_PT<br />
+slackpkg 中新增已本地化的 man 页面 ：pt_PT<br />
+slint.sh 脚本新增翻译：id, it, pt_PT<br />
+为了区分 pt_PT，将原来的 pt 重命名成为 pt_BR ，并更新相关文件。<br />
+更新已翻译的 man 页面：installpkg (tr), makepkg (de)<br />
+下列文件还未被本地化，因此用户不会看到安装时显示的信息：/etc/rc.dropbear /etc/rc.udev /etc/rc.usb /sbin/probe<br />
+修改了 slint/data/locales/SeTlocales ：纠正排印错误，添加Bulgarian, Chinese, Portuguese (Portugal) 的设置，为表意文字对应的语言添加 true type 字体<br />
+修复 /etc/rc.S 文件，使其在安装程序的欢迎信息中能正常显示 Slackeware 的版本号( 感谢Miguel De Anda 提交bug )<br />
+修复安装程序的配置文件，可以在所有命令行中正确设置 SLACK_KERNEL 变量。
+为新网站添加更多翻译</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        最后更新 2016-04-23 16:20:17 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+= Slint-pakket
+
+Slint-pakket bevat anderstalige beheertools, man pages en vertaalbestanden,
+ter beschikking gesteld door het Slint-project.
+
+Op deze pagina wordt uitgelegd hoe je het kunt verkrijgen en installeren en
+wordt de inhoud ervan beschreven zodat je weet wat in welke taal vertaald
+is.
+
+De inhoud van Slint-pakket zal voortdurend toenemen dus door het regelmatig
+te upgraden beschik je altijd over de nieuwste en toegevoegde vertalingen
+zodra deze beschikbaar komen.
+
+== Download en installeer of upgrade een Slint-pakket
+
+Als je net de Slint-installer hebt gebruikt hoef je het Slint-pakket niet
+meer te installeren: dat is dan al gedaan door de installer.
+
+Er is een Slint-pakket voor elke ondersteunde Slackware-editie (Slackware
+13.37, Slackware 14.0 en Slackware 14.1) in directory
+https://slint.fr/packages[packages/]. Dit pakket kan worden geïnstalleerd op
+zowel 32 als 64-bit versies. Om 'Slintpakket' te verkrijgen, controleren en
+installeren of upgraden (voor Slackware 14.1 bijvoorbeeld) doe je:
+
+----
+wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # je krijgt dan het meest recente Slint-pakket met bijbehorend md5-bestand
+md5sum -c slint-14.1*md5 # resultaat moet "OK" zijn, anders is het gedownloade bestand beschadigd
+su - # verkrijg root privileges
+upgradepkg --install-new --reinstall slint-14.1*txz # dit commando installeert of upgrade het pakket
+----
+
+TIP: Om te voorkomen dat 'slackpkg' 'Slint-pakket' verwijdert, voeg je een regel
+toe aan /etc/slackpkg/blacklist met slechts dit woord: + slint
+
+[[what_is_translated]]
+== Wat is vertaald en in welke taal?
+
+Een Slint-pakket bevat anderstalige tools en vertaalbestanden.
+
+Momenteel zijn de volgende talen beschikbaar: Frans, Duits, Pools, Portugees
+(Braziliaans), Russisch, Spaans (Latijns-Amerikaans) en Oekraïens.
+
+Sommige man pages zijn ook vertaald, zoals aangegeven in
+https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT].
+
+Zie de tabel hieronder voor de anderstalige beheertools en hun functie.
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|Anderstalige tool|Functie|Vertaalde man page
+|adduser|Voegt een gebruiker toe aan het systeem|
+|explodepkg|Pakt een Slackware-pakket uit in de huidige directory|man explodepkg
+|installpkg|Installeert Slackware-pakketten|man installpkg
+|makebootdisk|Maakt een Linux opstartdiskette
+(alleen in Slackware 13.37 en 14.0)|
+|makepkg|Maakt Slackware-pakketten|man makepkg
+|pkgtool|Onderhoudt softwarepakketten en voert configuratietaken uit:
+=> instellen van het starten van services tijdens systeemstart
+=> een USB opstartstick maken
+=> instellen van het type muis|man pkgtool
+|removepkg|Verwijdert Slackware-pakketten|man removepkg
+|upgradepkg|Upgrade Slackware-pakketten|man upgradepkg
+|eliloconfig|Configureert de 'elilo' boot loader
+(alleen in Slackware 14.1)|
+|liloconfig|Configureert de 'lilo' boot loader|
+|netconfig|Configureert het netwerk|
+|timeconfig|Stelt de tijdzone in|
+|setconsolefont|Stelt het lettertype van de console in|
+|setup.mouse|Stelt het type muis in|
+|xorgsetup|Configureert de X-server|
+|xwmconfig|Stelt de standaard vensterbeheerder of desktopomgeving in|
+|slackpkg|Tools voor het beheer van Slackware-pakketten
+(alleen de man pages zijn vertaald)|man slackpkg
+man slackpkg.conf
+|========
+ 
+NOTE: Om de meldingen en man pages van de anderstalige tools in je eigen taal te
+kunnen zien, moet je, zoals aangegeven op de Slint homepage,
+link:slint.html#anchor-1[je gewenste locale instellen]
+
+Verder installeert het Slint-pakket ook documentatie in directory
+/usr/doc/slint-<version>-<date> waaronder de Slint-HOWTO.txt en het script
+reinstall-slackware-packages.sh.
+
+TIP: om weer te geven wat Slint-pakket heeft geïnstalleerd typ je in een
+terminal:
+----
+less /var/log/packages/slint*
+----
+Met pijltje-OP en -NEER navigeer je in de lijst, druk 'q' om af te sluiten.

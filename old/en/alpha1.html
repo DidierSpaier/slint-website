@@ -1,0 +1,1144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; vertical-align: text-bottom; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_packages_included_in_the_slint_14_2_α1_iso">Packages included in the Slint 14.2 α1 ISO</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>All Slackware packages are installed, some replaced (see below), but those in in /testing and most of those in /extra.</p></div>
+<div class="paragraph"><p>The packages listed below complement or replace Slackware packages. They are also always installed.</p></div>
+<div class="paragraph"><p>Globally the packages listed in this page (plus the genuine Slackware ones) are considered the minimum needed to have a working Slint 14.2 system, altough with rough edges.</p></div>
+<div class="paragraph"><p>Polishing and debugging should be brought in next development ISOs.</p></div>
+<div class="paragraph"><p>Slint 14.2 will speak Dutch, US English, French, Greek, Italian, Norwegian, Polish, Portuguese (Portugal, Brazil), Russian, Spanish, Swedish, Turkish, and Ukrainian during installation.</p></div>
+<div class="paragraph"><p>The locale chosen for installation, if not US English, will be used to set a matching language in most applications. This includes Calligra, Firefox, KDE and its applications, LibreOffice, Thunderbird, XFCE, the Aspell words lists and more generally all software that honor the LANG setting and for which this language is available.</p></div>
+<div class="paragraph"><p>If US English is used during installation, the user will be proposed to set the locale for the installed system and also get the applications in a matching language if available.</p></div>
+<div class="paragraph"><p>Comments through any channel are welcome.</p></div>
+<div class="paragraph"><p>— Didier Spaier 😻</p></div>
+<div class="sect2">
+<h3 id="_packages_replacing_slackware_ones_and_localization_add_ons">Packages replacing Slackware ones and localization add‑ons</h3>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Package</th>
+<th align="left" valign="top">Modified scripts, localized man pages and other changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">aaa_base</p></td>
+<td align="left" valign="top"><p class="table">replaced slackware-version with slint-version, new os-release and modified the mail to root</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">dialog</p></td>
+<td align="left" valign="top"><p class="table">specific dialogrc for Slint</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">elilo</p></td>
+<td align="left" valign="top"><p class="table">eliloconfig</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">fontconfig</p></td>
+<td align="left" valign="top"><p class="table">setup.05.fontconfig</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">glibc‑zoneinfo</p></td>
+<td align="left" valign="top"><p class="table">timeconfig</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">gpm</p></td>
+<td align="left" valign="top"><p class="table">setup.mouse</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">lilo</p></td>
+<td align="left" valign="top"><p class="table">liloconfig</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">mkfontdir</p></td>
+<td align="left" valign="top"><p class="table">setup.04.mkfontdir</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">network‑scripts</p></td>
+<td align="left" valign="top"><p class="table">netconfig,setup.netconfig</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">pcmciautils</p></td>
+<td align="left" valign="top"><p class="table">rc.pcmcia,rc.ip_forward</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">pkgtools</p></td>
+<td align="left" valign="top"><p class="table">explodepkg,installpkg,pkgtool,removepkg,setup.80.make_bootdisk, setup.services,upgradepkg</p>
+<p class="table">localized man pages: explodepkg,installpkg,makepkg,pkgtool,removepkg,upgradepkg</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">shadow</p></td>
+<td align="left" valign="top"><p class="table">adduser</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">slackpkg</p></td>
+<td align="left" valign="top"><p class="table">localized man pages: slackpkg,slackpkg.conf</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">sysvinit-scripts</p></td>
+<td align="left" valign="top"><p class="table">Start a brltty daemon ASAP in rc.S for Braille devices connected through Bluetooth or a serial line.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tmux</p></td>
+<td align="left" valign="top"><p class="table">Version 2.2 that supports UTF-8 encoding only</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">x11‑skel</p></td>
+<td align="left" valign="top"><p class="table">xwmconfig,xorgsetup</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">mozilla‑firefox</p></td>
+<td align="left" valign="top"><p class="table">Rebuild of mozilla binaries with menus in 45 languages included</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">mozilla‑thunderbird</p></td>
+<td align="left" valign="top"><p class="table">Rebuild of mozilla binaries with menus in 37 languages included</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">kde‑l10n</p></td>
+<td align="left" valign="top"><p class="table">The language pack that corresponds to the locale set during installation is installed</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">calligra‑l10n</p></td>
+<td align="left" valign="top"><p class="table">The language pack that corresponds to the locale set during installation is installed</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">libreoffice‑l10n</p></td>
+<td align="left" valign="top"><p class="table">The language pack that corresponds to the locale set during installation is installed</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">libreoffice‑help</p></td>
+<td align="left" valign="top"><p class="table">The localized help pack that corresponds to the locale set during installation is installed</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">aspell-&lt;lang&gt;</p></td>
+<td align="left" valign="top"><p class="table">Localized words list for aspell. The list that corresponds to the locale set during installation is installed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_packages_management_tools_and_their_dependencies">Packages management tools and their dependencies</h3>
+<div class="paragraph"><p>Most of these packages are <span class="line-through">stolen</span> borrowed to Salix, with customization as need be.
+All have been rebuilt in Slint&#8217;s environment.</p></div>
+<div class="paragraph"><p>These packages allow to easily build, install and update all packages shipped in Slackware derivatives and compatible third party repositories, and / or for which a SlackBuild or a SLKBUILD is available in a local or remote repository.</p></div>
+<div class="paragraph"><p>That is not an excuse to blindly install a nasty package or one that does not fit in your system, consistency of which you remain solely responsible. Sorry, none of the shipped  tools can think for you. You have been warned! As the saying goes, <em>Nemo auditur propriam turpitudinem allegans.</em></p></div>
+<div class="paragraph"><p>The base Slackware packages tools (shipped in the pkgtools package) are 100% usable in Slint and do not conflict with any other shipped tool.</p></div>
+<div class="paragraph"><p>We do not recommend usage of slackpkg in Slint because its scope is limited to genuine Slackware repositories.</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Package</th>
+<th align="left" valign="top">Features</th>
+<th align="left" valign="top">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">slkbuild</p></td>
+<td align="left" valign="top"><p class="table">arch‑like wrapper script for easy packaging in Slackware format: make and run install scripts build from data and instructions found in SLKBUILDs (format of package specification used by Salix). Needs txt2tags to build man pages</p></td>
+<td align="left" valign="top"><p class="table">See <a href="https://github.com/gapan/slkbuild">https://github.com/gapan/slkbuild</a></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">slapt‑get</p></td>
+<td align="left" valign="top"><p class="table">Package manager that can fetch packages on a network.</p>
+<p class="table">It can resolve dependencies registered in PACKAGES.TXT</p></td>
+<td align="left" valign="top"><p class="table">Salix version, uses spkg as backend. See <a href="http://software.jaos.org/git/slapt‑get/plain/FAQ.html#slgFAQ10">http://software.jaos.org/git/slapt‑get/plain/FAQ.html#slgFAQ10</a></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">gslapt</p></td>
+<td align="left" valign="top"><p class="table">Graphical front‑end to slapt‑get</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">fakeroot</p></td>
+<td align="left" valign="top"><p class="table">Allows to to run commands without being root, like packages building</p></td>
+<td align="left" valign="top"><p class="table">Usable to run SlackBuilds and slkbuild</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">depfinder</p></td>
+<td align="left" valign="top"><p class="table">Find dependencies of programs included in packages in Slackware format and stores that informatiosn either in the package itself or in a separate (.dep) file</p></td>
+<td align="left" valign="top"><p class="table">Can be used to feed dependency information usable by slapt‑get, see <a href="https://github.com/gapan/depfinder">https://github.com/gapan/depfinder</a></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">depcheck</p></td>
+<td align="left" valign="top"><p class="table">Helps users check a dependency file (.dep) against their system.</p></td>
+<td align="left" valign="top"><p class="table">.dep files can be produced by depfinder</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">dotnew</p></td>
+<td align="left" valign="top"><p class="table">Utility to manage .new system configuration files in Slackware and derivatives</p></td>
+<td align="left" valign="top"><p class="table">Similar to slackpkg new‑config, with a GUI.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">slapt‑src</p></td>
+<td align="left" valign="top"><p class="table">SlackBuild utility, functionally similar to sbopkg, with dependency checking, uses slapt‑get to install packages</p></td>
+<td align="left" valign="top"><p class="table">Will be usable when 14.2 repos will be available.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">sourcery</p></td>
+<td align="left" valign="top"><p class="table">Graphical front‑end to the slapt‑src utility. Can be used to build install packages from SlackBuild and or SLKBUILD repositories</p></td>
+<td align="left" valign="top"><p class="table">Needs pysimpleconfig</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">pysimpleconfig</p></td>
+<td align="left" valign="top"><p class="table">Simple configuration file management in python</p></td>
+<td align="left" valign="top"><p class="table">Needed by sourcery</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">salix‑update‑notifier</p></td>
+<td align="left" valign="top"><p class="table">Tray notification for package updates. Inform the user of available updated packages that can be installed with gslapt</p></td>
+<td align="left" valign="top"><p class="table">Needs stalonetray for windows managers shipped without a tray</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">stalonetray</p></td>
+<td align="left" valign="top"><p class="table">Standalone system tray usable on  virtually any EWMH‑compliant window manager.</p></td>
+<td align="left" valign="top"><p class="table">Can provide a tray to blackbox, WindowMaker, fvwm2, that allows usage of  salix‑update‑notifier</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">spi</p></td>
+<td align="left" valign="top"><p class="table">spi (Salix package installer) is a command line tool that acts as a wrapper around slapt‑get and slapt‑src. It uses both tools to search for, build if necessary and install software.</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">spkg</p></td>
+<td align="left" valign="top"><p class="table">Package manager for Slackware and derivatives implemented in C and optimized for speed. Should give results identical to those of the base Slackware packages tools in terms of system&#8217;s modification.</p></td>
+<td align="left" valign="top"><p class="table">To build it first rebuild glib2 with ‑‑enable‑static and judy without ‑‑disable‑static</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_other_additional_packages_including_dependencies">Other additional packages, including dependencies</h3>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Package</th>
+<th align="left" valign="top">Purpose, why included</th>
+<th align="left" valign="top">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">LucenePlusPlus</p></td>
+<td align="left" valign="top"><p class="table">C++ port of the popular Java Lucene library, a high-performance and full-featured text search engine.</p></td>
+<td align="left" valign="top"><p class="table">Dependency of poedit.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">avfs</p></td>
+<td align="left" valign="top"><p class="table">Enables programs to look inside archived or compressed files. This includes worker, also shipped</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">worker</p></td>
+<td align="left" valign="top"><p class="table">Graphical two panes file manager. I use it all the time</p></td>
+<td align="left" valign="top"><p class="table">Can look into archives or compressed files</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">bicon</p></td>
+<td align="left" valign="top"><p class="table">Bidirectional Console: supports a mix of Arabic or Persian and Latin scripts in a console or X terminal</p></td>
+<td align="left" valign="top"><p class="table"><a href="https://github.com/behdad/bicon/issues/13">Lacks a proper right line alignment</a>, so under X prefer mlterm</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">mlterm</p></td>
+<td align="left" valign="top"><p class="table">Multi‑lingual graphical terminal emulator, supports various character sets and encodings. Implement the Unicode Bidirectional Algorithm that allows to properly display a mix of right to left and left to right languages</p></td>
+<td align="left" valign="top"><p class="table">Provides a proper contextual line alignment (left or right)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">fbterm</p></td>
+<td align="left" valign="top"><p class="table">Framebuffer Terminal: allows to use a True Type font like DejaVu, scaled at will to fit user&#8217;s sighting ability, in console mode.</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">geany</p></td>
+<td align="left" valign="top"><p class="table">Graphical text editor and basic integrated develpment environment. I use it all the time</p></td>
+<td align="left" valign="top"><p class="table">Easily expandable and customizable</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">geany‑plugins</p></td>
+<td align="left" valign="top"><p class="table">Extends features of geany.</p></td>
+<td align="left" valign="top"><p class="table">Plugins coming from the <a href="http://plugins.geany.org/">Geany Plugins project</a>.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">libburn</p></td>
+<td align="left" valign="top"><p class="table">Library for reading, mastering and writing optical discs, part of the libburnia project</p></td>
+<td align="left" valign="top"><p class="table">Dependency of libisoburn</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">libisofs</p></td>
+<td align="left" valign="top"><p class="table">Library to create an ISO-9660 filesystem, part of the libburnia project</p></td>
+<td align="left" valign="top"><p class="table">Dependency of libisoburn</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">libisoburn</p></td>
+<td align="left" valign="top"><p class="table">Enables creation and expansion of ISO-9660 filesystems on all CD/DVD media supported by libburn, part of the libburnia project</p></td>
+<td align="left" valign="top"><p class="table">Ships xorriso, used to write the Slint ISOs</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">libreoffice</p></td>
+<td align="left" valign="top"><p class="table">Full featured Office suite. Version 5.1.3</p></td>
+<td align="left" valign="top"><p class="table">Repackaging of official package in Debian format</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">webkitGTK</p></td>
+<td align="left" valign="top"><p class="table">GTK+ port of the webkit, open source web content engine that powers web browsers, email clients, feed readers, web and text editors</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">wxGTK</p></td>
+<td align="left" valign="top"><p class="table">wxWidgets toolkit for GTK (version 3 for GTK version 2)</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">cld2</p></td>
+<td align="left" valign="top"><p class="table">The Compact Language Detection library can detect the language of UTF8-encoded text. CLD2 supports over 160 languages and can parse both plain text and HTML. The script also builds a commandline tool, cld2, which is compiled against the libcld2_full library.</p></td>
+<td align="left" valign="top"><p class="table">Brings to poedit a better language detection and non-English source language</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">poedit</p></td>
+<td align="left" valign="top"><p class="table">Editor of gettext messages catalogs or PO editor, used by some Slint translators</p></td>
+<td align="left" valign="top"><p class="table">Lacks the ability of displaying the current column number (position of the cursor in the line). For that reason one can prefer lokalize.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">perl‑inc‑latest</p></td>
+<td align="left" valign="top"><p class="table">inc-latest allows to use Perl modules bundled in inc/ if they are newer than installed ones.</p></td>
+<td align="left" valign="top"><p class="table">Dependency of perl‑Module‑Build</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">perl‑Module‑Build</p></td>
+<td align="left" valign="top"><p class="table">Module::Build::Compat can automatically generate a Makefile.PL and also provides some code that helps out the Makefile.PL at runtime.</p></td>
+<td align="left" valign="top"><p class="table">Dependency of po4a</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">perl‑Unicode‑LineBreak</p></td>
+<td align="left" valign="top"><p class="table">UAX #14 Unicode Line Breaking Algorithm. This perl package includes three modules:<br />
+Text::LineFold - Line Folding for Plain Text<br />
+Unicode::GCString - String as Sequence of UAX #29 Grapheme Clusters<br />
+Unicode::LineBreak - UAX #14 Unicode Line Breaking Algorithm</p></td>
+<td align="left" valign="top"><p class="table">Dependency of po4a</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">perl‑Mime‑Charset</p></td>
+<td align="left" valign="top"><p class="table">This package ships mainly the perl module MIME::Charset, that provides informations about character sets used for MIME messages on Internet.</p></td>
+<td align="left" valign="top"><p class="table">Dependency of po4a</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">po4a</p></td>
+<td align="left" valign="top"><p class="table">Versatile PO to/from other documentation format converter. Each documentation format is handled by a perl module, that converts this format to/from PO. Formats included in po4a-0.47 are: Asciidoc, BibTex, Dia, Halibut, Kernelhelp, LaTeX, Man, POD, SGML, TeX, Texinfo, Text, WML, XHTML, XML.</p></td>
+<td align="left" valign="top"><p class="table">Used by Slint to convert asciidoc files and man pages to PO files.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">salixtools</p></td>
+<td align="left" valign="top"><p class="table">Collection of command line (ncurses) system tools for Salix, usable on Slint, some adapted for Sint.</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">txt2tags</p></td>
+<td align="left" valign="top"><p class="table">Document generator. It reads a text file with minimal markup as **bold** and //italic// and converts it to the following formats: HTML, XHTML, SGML, LaTeX, Lout, Man page, MoinMoin MagicPoint, PageMaker, ...</p></td>
+<td align="left" valign="top"><p class="table">Used e.g. to build slkbuild&#8217;s man pages, dependency of slkbuild and xdgmenumaker.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">pandoc</p></td>
+<td align="left" valign="top"><p class="table">Command-line tool for converting from one markup format to another. It can read markdown and (subsets of) reStructuredText, HTML, and LaTeX, and it can write plain text, markdown, reStructuredText, HTML, LaTeX, ConTeXt, PDF, RTF, DocBook XML, OpenDocument XML, ODT, GNU Texinfo, MediaWiki markup, groff man pages, EPUB ebooks, and S5 and Slidy HTML slide shows.</p></td>
+<td align="left" valign="top"><p class="table">This package includes both pandoc and pandoc-citeproc.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">transifex‑client</p></td>
+<td align="left" valign="top"><p class="table">Allows to transfer translation files to and from the Transifex platform</p></td>
+<td align="left" valign="top"><p class="table">Used by the Salix and Slint projects</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">yad</p></td>
+<td align="left" valign="top"><p class="table">yad (Yet Another Dialog) displays graphical dialogs from shell scripts or command line. It is a fork of Zenity with many improvements, including custom buttons, additional dialogs and a pop-up menu in the notification area. Used by Slint for salix-update-notifier.</p></td>
+<td align="left" valign="top"><p class="table">The installed optional dependency webkitgtk enables the html widget.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">xdgmenumaker</p></td>
+<td align="left" valign="top"><p class="table">Command line tool, written in python, that generates application menus using xdg information, by scanning *.desktop files in /usr/share/applications and ~/.local/share/applications. All applications are sorted according to the main categories as specified by freedesktop.org. It can currently generate menus for fluxbox, icewm, jwm, pekwm and windowmaker.</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">pyxdg</p></td>
+<td align="left" valign="top"><p class="table">Py XDG is a Python library to access various freedesktop.org standards.</p></td>
+<td align="left" valign="top"><p class="table">Dependency of xdgmenumaker</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">slint-docs</p></td>
+<td align="left" valign="top"><p class="table">Miscellaneous documents about Slint and the "bidiman" script, wrapper around man to ease reading man pages encoded in UTF-8.</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">slint-translations</p></td>
+<td align="left" valign="top"><p class="table">Gathers all translations of setup and admin scripts provided the Slint project.</p></td>
+<td align="left" valign="top"><p class="table"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2016-05-16 22:35:29 CEST
+</div>
+</div>
+</body>
+</html>

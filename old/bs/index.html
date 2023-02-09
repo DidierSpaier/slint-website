@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="bs">
+<head>
+	<title>Slint: Projekt internacionalizacije Slackwarea </title>
+    <meta name="google-site-verification" content="LmAtE9by4Mg59SwZ0LyQq730fGtMZ0r0fqgkVurfPhc" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Slackware internationalization Project" />
+    <link rel="stylesheet" href="../css/fp.css" type="text/css" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <div class="entete"> 
+	Odaberite vaš jezik => | <a href="../bs/index.html">bs</a> | <a href="../de/index.html">de</a> | <a href="../el/index.html">el</a> | <a href="../en/index.html">en</a> | <a href="../es/index.html">es</a> | <a href="../fr/index.html">fr</a> | <a href="../id/index.html">id</a> | <a href="../it/index.html">it</a> | <a href="../nl/index.html">nl</a> | <a href="../pl/index.html">pl</a> | <a href="../pt_BR/index.html">pt_BR</a> | <a href="../pt_PT/index.html">pt_PT</a> | <a href="../ru/index.html">ru</a> | <a href="../tr/index.html">tr</a> | <a href="../uk/index.html">uk</a> |
+  </div>
+	<div id="hautdepage"></div>
+	<h1>Projekt internacionalizacije Slackwarea</h1>
+	<div class="cadre w100">
+		<h2 class="premierh2 center">O slintu</h2>
+		<p>Glavni cilj projekta je omogućiti korisnicima Slackware Linuxa instalaciju i
+upotrebu na vlastitom maternjem jeziku.</p>
+		<p>Time pomažemo da se proširi Slackwareova korisnička baza, slično kao Projekt
+dokumentacije Slackwarea koji već nudi dokumentaciju u više jezika.</p>
+		<p>Ovo nije cilj Slackwareu i jedino odgovorne osobe mogu postaviti taj cilj.</p>
+		<p>Bez obzira, slint projekt, koji nije povezan sa niti plaćen od Slackwarea,
+je korak u tom smjeru.</p>
+	</div>
+	<div class="cadre w50">
+		<h2 class="premierh2">Upotreba slinta</h2>
+		<p>Projekt pruža:</p>
+		<ul>
+			<li>Softverski paket koji prvobitno omogućava da se doda internacionalizovani
+installer u Slackware DVD, zatim prevode istog u više jezika.</li>
+			<li>internacionalizovane installere za svaki podržano izdanje Slackwarea u dva
+oblika: ISO slika za snimanje na CD ili DVD i slika za snimanje na USB disk.</li>
+		</ul>
+		<p>U vrijeme pisanja internacionalizovani installer sadrži:</p>
+		<ul>
+			<li>varijante za Slackware-13.37, Slackware-14.0 i Slackware-14.1 (32 i 64
+bitni),</li>
+			<li>prevode na Francuski, Njemački, Poljski, Portugalski (Brazil), Ruski,
+Španski (latinska Amerika) i Ukrajinski.</li>
+		</ul>
+        <h3><span>Koristeći USB ISO slike internacionalizovanih installera</span></h3>
+        <p>Idite u poddirektorij  <a href="https://slint.fr/pub">https://slint.fr/pub</a>
+koji odgovara izdanju za koje želite installer, naprimjer <a
+href="https://slint.fr/pub/64-14.1">https://slint.fr/pub/64-14.1</a> za
+Slackware64-14.1 i pratite uputstva.
+        </p>
+        <p>Da snimite CD ili DVD internacionalizovanog installera za Slackware64-14.1:</p>
+        <ul>
+            <li>growisofs -speed=2 -dvd-compat -Z /dev/dvd=[datoteka završavajući sa .iso]</li>
+        </ul>
+        <p>Da snimite internacionalizovani installer za Slackware64-14.1 na USB disk sa
+imenom /dev/sdc (primer, zamijenite sa imenom iz 'cat /proc/partitions' or
+'dmesg|tail'):</p>
+        <ul>
+           <li>dd if=[datoteka završavajući sa .img] of=/dev/sdc bs=512</li>
+        </ul>
+        <p>UPOZORENJE:</p>
+        <ul>
+          <li>provjerite dvaput da /dev/sdc (ili drugi) nije naziv hard diska, inače će
+sav sadržaj BITI NEPOVRATNO OBRISAN! </li>
+          <li>Prethodni sadržaj USB diska će biti obrisan, prekopirajte sadržaj negdje
+drugo prije nego počnete.</li>
+        </ul>
+        <p>NAPOMENA. Da završite instalaciju trebati će vam, pored installera, medij sa
+softverskim paketima za istu verziju, naprimjer Slackware DVD ili lokalni
+mirror jer ovi paketi nisu uključeni u ISO i USB slike. 
+        </p>
+		<h3><span>Upotreba softverskog paketa <a
+href="https://slint.fr/pub/slint-20140423.tar.xz">slint-[datum].tar.xz</a></span></h3>
+		<p>Trebati ćete, pored samog softverskog paketa:</p>
+		<ol>
+			<li>Cijeli mirror Slackware izdanja koje želite internacionalizovati: Slackware
+DVD, ISO sliku ili lokalno mirror.
+			</li>
+			<li>Linux distribuciju koja sadrži 'gettext' alate i datoteke potrebne za
+internacionalizaciju. Naravno, puni Slackware je preporučen, ali možete
+skinuti slint i iskoristiti ga u drugom Linux sistemu,
+			</li>
+		</ol>
+		<p>Skinite <a href="https://slint.fr/pub/slint-20140423.tar.xz">softverski
+paket</a> i <a href="https://slint.fr/pub/slint-20140423.tar.xz.md5">md5
+kontrolnu datoteku</a>, te unesite sljedeću komandu:</p>
+		<ul>
+			<li>md5sum -c slint-[datum].tar.xz.md5 # izlaz bi trebao biti "OK"</li>
+		</ul>
+		<p>Zatim raspakujte paket:</p>
+		<ul>
+		   <li>tar xf slint-[datum].tar.xz # ovo će napraviti poddirektorij slint-[datum]</li>
+		</ul>
+		<p>Konačno upišite, kao root:</p>
+		<ul>
+			<li>slint-[datum]/slint.sh</li>
+		</ul>
+		<p>Pratite uputstva od skripte. Odabrati ćete na komandnoj liniji koje
+Slackware izdanje želite internacionalitovati. Skripta će od vas tražiti:</p>
+		<ul>
+			<li>putanju do lokalnog mirrora Slackware izdanja za internacionalizaciju,
+			</li>
+			<li>koje jezike želite uključiti u internacionalizovani installer (ako se pitate
+zašto US English nije na listi, zato što je uvijek uključen :-)
+			</li>
+		</ul>
+    </div>
+	<div class="w50 cadresuivant">
+		<h2 class="premierh2">Doprinesite slint projektu</h2>
+		<h3><span>Trebamo pomoć</span></h3>
+		<p>Još uvijek trebamo prevodioce da ojačamo postojeće timove i prevode u više
+jezika.</p>
+		<p>Možete tražiti da se priključite ili pokrenete novi prevodilački tim u
+projektnom prostoru na <a
+href="https://www.transifex.com/projects/p/slint/">Transifexu</a>,
+pročitajte datoteku <a
+href="https://slint.fr/pub/TRANSLATORS">TRANSLATORS</a> za detalje.</p>
+		<p>Ali prvo pogledajte <a href="https://slint.fr/slint">slintove datoteke</a> da
+procijenite vrstu i količinu rada potrebnog.</p>
+		<h3><span>Prevodioci i recenzenti registrovani na Transifexu</span></h3>
+		<table border="1">
+			<tr><th>Prevodilac</th><th>Jezik</th><th>Lokalitet</th></tr>
+			<tr><td>dlee99</td><td>Holandski</td><td>nl_NL</td></tr>
+			<tr><td>Eric Hameleers</td><td>Holandski</td><td>nl_NL</td></tr>
+			<tr><td>ponce</td><td>Italijanski</td><td>it_IT</td></tr>
+			<tr><td>celyr</td><td>Italijanski</td><td>it_IT</td></tr>
+			<tr><td>Sébastien Boillod</td><td>Francuski</td><td>fr_FR</td></tr>
+			<tr><td>Didier Spaier</td><td>Francuski</td><td>fr_FR</td></tr>
+			<tr><td>Marcin Herda</td><td>Poljski</td><td>pl_PL</td></tr>
+			<tr><td>Piotr Maksymiec</td><td>Poljski</td><td>pl_PL</td></tr>
+			<tr><td>elesmod</td><td>Poljski</td><td>pl_PL</td></tr>
+			<tr><td>Christian Ruesch</td><td>Njemački</td><td>de_DE</td></tr>
+			<tr><td>franzen</td><td>Njemački</td><td>de_DE</td></tr>
+			<tr><td>Johannes Georgi</td><td>Njemački</td><td>de_DE</td></tr>
+			<tr><td>Maik Wagner</td><td>Njemački</td><td>de_DE</td></tr>
+			<tr><td>Marcel Saegebarth</td><td>Njemački</td><td>de_DE</td></tr>
+			<tr><td>spongetron</td><td>Njemački</td><td>de_DE</td></tr>
+			<tr><td>titopoquito</td><td>Njemački</td><td>de_DE</td></tr>
+			<tr><td>Adriano Balani</td><td>Brazilski Portugalski</td><td>pt_BR</td></tr>
+			<tr><td>Enrico Nicoletto</td><td>Brazilski Portugalski</td><td>pt_BR</td></tr>
+			<tr><td>Fela</td><td>Brazilski Portugalski</td><td>pt_BR</td></tr>
+			<tr><td>Gabriel Magno</td><td>Brazilski Portugalski</td><td>pt_BR</td></tr>
+			<tr><td>Icavalheiro</td><td>Brazilski Portugalski</td><td>pt_BR</td></tr>
+			<tr><td>Retalhador</td><td>Brazilski Portugalski</td><td>pt_BR</td></tr>
+			<tr><td>br_Orion</td><td>Brazilski Portugalski</td><td>pt_BR</td></tr>
+			<tr><td>igaldino</td><td>Brazilski Portugalski</td><td>pt_BR</td></tr>
+			<tr><td>Malkon Rodrigo</td><td>Brazilski Portugalski</td><td>pt_BR</td></tr>
+			<tr><td>marcelo.castro</td><td>Brazilski Portugalski</td><td>pt_BR</td></tr>
+			<tr><td>Xerxes Lins</td><td>Brazilski Portugalski</td><td>pt_BR</td></tr>
+			<tr><td>Dimitris Tzemos</td><td>Grčki</td><td>el_GR</td></tr>
+			<tr><td>dreamwalking</td><td>Grčki</td><td>el_GR</td></tr>
+			<tr><td>George Vlahavas</td><td>Grčki</td><td>el_GR</td></tr>
+			<tr><td>Diantre</td><td>Španski (Latinska Amerika)</td><td>es_419</td></tr>
+			<tr><td>AlvaroG</td><td>Španski (Latinska Amerika)</td><td>es_419</td></tr>
+			<tr><td>ecoslacker</td><td>Španski (Latinska Amerika)</td><td>es_419</td></tr>
+			<tr><td>sombragris</td><td>Španski (Latinska Amerika)</td><td>es_419</td></tr>
+			<tr><td>Serg Bormant</td><td>Ruski</td><td>ru_RU</td></tr>
+			<tr><td>Sergey Ignatev</td><td>Ruski</td><td>ru_RU</td></tr>
+			<tr><td>Yaroslav Shmelev</td><td>Ruski</td><td>ru_RU</td></tr>
+			<tr><td>Graf</td><td>Ruski</td><td>ru_RU</td></tr>
+			<tr><td>adioe3</td><td>Bosanski (Bosna i Hercegovina)</td><td>bs_BA</td></tr>
+			<tr><td>willysr</td><td>Indonezijski</td><td>id_ID</td></tr>
+			<tr><td>kisil</td><td>Ukrajinski</td><td>uk_UA</td></tr>
+			<tr><td>uatech</td><td>Ukrajinski</td><td>uk_UA</td></tr>
+			<tr><td>xuser13</td><td>Ukrajinski</td><td>uk_UA</td></tr>
+			<tr><td>Koljan1970</td><td>Ukrajinski</td><td>uk_UA</td></tr>
+			<tr><td>Kemal Ökmen</td><td>Turčin</td><td>tr_TR</td></tr>
+		</table>
+		<p>Kad god je novi jezik dostupan, biće dodan u installer i nova verzija će
+biti dostupa u <a href="https://slint.fr/pub">ovom direktoriju.</a></p>
+		<h3><span>Pokrenimo ekipu</span></h3>
+		<p>Svaka vrsta doprinosa ili saradnje je dobrodošla.</p>
+		<p>Također, internacionalizovani installer može biti koristan distribucijama
+baziranim na Slackwareu.</p>
+		<p> Korisnici i doprinosioci ovim distribucijama su dobrodošli da koriste i
+doprinesu slint projektu.</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="tr">
+<head>
+	<title>Slint: Slackware Yerelleştirme Projesi </title>
+    <meta name="google-site-verification" content="LmAtE9by4Mg59SwZ0LyQq730fGtMZ0r0fqgkVurfPhc" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Slackware internationalization Project" />
+    <link rel="stylesheet" href="css/fp.css" type="text/css" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <div class="entete"> 
+	Dilinizi seçiniz => | <a href="index.html.bs">bs</a> | <a
+href="index.html.de">de</a> | <a href="index.html.el">el</a> | <a
+href="index.html.en">en</a> | <a href="index.html.es">es</a> | <a
+href="index.html.fr">fr</a> | <a href="index.html.id">id</a> | <a
+href="index.html.it">it</a> | <a href="index.html.nl">nl</a> | <a
+href="index.html.pl_PL">pl</a> | <a href="index.html.pt">pt</a> | <a
+href="index.html.ru">ru</a> | <a href="index.html.tr_TR">tr</a> | <a
+href="index.html.uk">uk</a> | 
+  </div>
+	<div id="hautdepage"></div>
+	<h1>Slackware Yerelleştirme Projesi</h1>
+	<div class="cadre w100">
+		<h2 class="premierh2 center">Slint Hakkında</h2>
+		<p>Projenin nihai hedefi kullanıcıların kendi doğal dillerinde Slackware Linux
+kurabilmeleri ve kullanabilmeleridir.</p>
+		<p>Bu şekilde, pek çok dile halihazırda destek sağlayan Slackware Belgelendirme
+Projesi'nde olduğu gibi, Slackware kullanıcı tabanı genişletilebilir. </p>
+		<p>Bu henüz Slackware'in kapsamında değil ve sadece Slackware sürdürücüleri bu
+kapsamı genişletmeye karar verebilir.</p>
+		<p>Buna rağmen slint projesi, Slackware tarafından kabul edilmiş ya da
+onaylanmış olmasa da, bu yönde bir adımdır. </p>
+	</div>
+	<div class="cadre w50">
+		<h2 class="premierh2">Slint Kullanın</h2>
+		<p>Projenin sağladıkları:</p>
+		<ul>
+			<li>İlk olarak, bir slackware DVD'sine yerelleştirilmiş kurulum dosyasının dahil
+edilmesi, ikinci olarak daha fazla dile çevirilmesi.</li>
+			<li>her desteklenmiş Slackware yayımı için kurulum dosyaları iki biçimdedir:  CD
+ya da DVD'ye yazılacak ISO kalıbı ve USB'ye yazılacak kalıp.</li>
+		</ul>
+		<p>Yerelleştirilmiş kurulum dosyası yazılırken şunları içerir:</p>
+		<ul>
+			<li>Slackware-13.37, Slackware-14.0 ve Slackware-14.1 (32 and 64 bit)
+çeşitlemeleri</li>
+			<li>Fransızca, Almanca, Lehçe, Brezilya Portekizcesi, Rusça, İspanyolca (Latin
+Amerika) ve Ukraynaca yerelleştirme.</li>
+		</ul>
+        <h3><span>Yerelleştirilmiş USB ISO kalıbı kurulum dosyaları kullanımı</span></h3>
+        <p><a href="https://slint.fr/pub">https://slint.fr/pub</a> adresinde kurulum
+dosyasını istediğiniz sürümün ilgili bir altdizinine girin, örneğin
+Slackware64-14.1 için <a
+href="https://slint.fr/pub/64-14.1">https://slint.fr/pub/64-14.1</a>, ve
+yönergeleri takip edin.
+        </p>
+        <p>Slackware64-14.1 için yerelleştirilmiş CD veya DVD oluşturma:</p>
+        <ul>
+            <li>growisofs -speed=2 -dvd-compat -Z /dev/dvd=[.iso ile biten dosya adı]</li>
+        </ul>
+        <p>Slackware64-14.1 için /dev/sdc isminde (örnek, 'cat /proc/partitions' veya
+'dmesg|tail' çıktısından elde edilen isimle değiştirilmeli) bir USB üzerine
+yerelleştirilmiş kurulum dosyası yazmak için :</p>
+        <ul>
+           <li>dd if=[.img ile biten dosya adı] of=/dev/sdc bs=512</li>
+        </ul>
+        <p>UYARI:</p>
+        <ul>
+          <li>/dev/sdc'nin (veya diğerinin) sabit disk olmadığını iki kez kontrol edin,
+çünkü içeriği GERİ ALINAMAZ ŞEKİLDE SİLİNEBİLİR! </li>
+          <li>USB içeriği silinecek, bu yüzden saklamak istiyorsanız başlamadan önce başka
+bir yere kaydedin.</li>
+        </ul>
+        <p>NOT. Kurulumu gerçekleştirmek için, kurulum dosyalarına ek olarak, paketler
+ISO ve USB kalıplarında olmadığı için, aynı sürüm yazılım paketlerinin
+ortamına, örneğin bir Slackware DVD'si veya yerel bir yansına, ihtiyacınız
+olacak. 
+        </p>
+		<h3><span><a
+href="https://slint.fr/pub/slint-20140206.tar.xz">slint-[gün].tar.xz</a>
+paketinin kullanımı</span></h3>
+		<p>Yazılım paketinin kendisinin dışında ihtiyacınız olanlar:</p>
+		<ol>
+			<li>Yerelleştirmek istediğiniz Slackware yayımının tam yansısı: bir Slacware
+DVD'si, ISO kalıbı veya yerel bir yansı.
+			</li>
+			<li>'gettext' araçlarını ve yerelleştirilecek dosyaları içeren bir Linux
+dağıtımı. Tabii ki tam yüklü bir Slackware tercih edilir, fakat slint'i
+indirebilir ve başka bir Linux sistemde kullanabilirsiniz,
+			</li>
+		</ol>
+		<p><a href="https://slint.fr/pub/slint-20140206.tar.xz">Yazılım paketi</a>ni, ve
+<a href="https://slint.fr/pub/slint-20140206.tar.xz.md5">md5 kontrol
+dosyası</a>nı indirin, sonra şu komutu girin:</p>
+		<ul>
+			<li>md5sum -c slint-[tarih].tar.xz.md5 # çıktı "OK" olmalı</li>
+		</ul>
+		<p>Sonra paketi açın:</p>
+		<ul>
+		   <li>tar xf slint-[tarih].tar.xz # bu slint-[tarih] alt dizinini oluşturacak</li>
+		</ul>
+		<p>Son olarak root olarak yazın:</p>
+		<ul>
+			<li>slint-[tarih]/slint.sh</li>
+		</ul>
+		<p>Betiklerin yönergelerini takip edin. Komut satırında yerelleştirmek
+istediğiniz Slackware yayımını işaret edeceksiniz. Sonra betik size şunları
+soracak:</p>
+		<ul>
+			<li>Yerelleştirmek istediğiniz Slackware yayımı yerel yansısının yolu,
+			</li>
+			<li>yerelleştirilmiş kurulum dosyasına dahi etmek istediğiniz dil (US English'in
+neden listelenmediğini merak ediyorsanız, bunu daima içerir :-)
+			</li>
+		</ul>
+    </div>
+	<div class="w50 cadresuivant">
+		<h2 class="premierh2">Slint'e katkıda bulunun</h2>
+		<h3><span>Yardım aranıyor</span></h3>
+		<p>Varolan takımları güçlendirmek ve daha fazla dile çevirmek için hala
+çevirmenlere ihtiyacımız var.</p>
+		<p>Projenini <a
+href="https://www.transifex.com/projects/p/slint/">Transifex</a> alanındaki
+takıma katılabilirsiniz ya da bir çeviri takımı kurmak isteyebilirsiniz,
+detaylar için <a href="https://slint.fr/pub/TRANSLATORS">TRANSLATORS</a>
+dosyasına bakınız.</p>
+		<p>Ama önce iş yükü miktarı ve çeşidini anlamak için <a
+href="https://slint.fr/slint">slint dosyaları</a>na bakınız.</p>
+		<h3><span>Transifex'e kayıtlı çevirmenler ve gözden geçirenler</span></h3>
+		<table border="1">
+			<tr><th>Çevirmen</th><th>Dil</th><th>Yerel</th></tr>
+			<tr><td>dlee99</td><td>Felemenkçe</td><td>nl_NL</td></tr>
+			<tr><td>Eric Hameleers</td><td>Felemenkçe</td><td>nl_NL</td></tr>
+			<tr><td>ponce</td><td>İtalyanca</td><td>it_IT</td></tr>
+			<tr><td>celyr</td><td>İtalyanca</td><td>it_IT</td></tr>
+			<tr><td>Sébastien Boillod</td><td>Fransızca</td><td>fr_FR</td></tr>
+			<tr><td>Didier Spaier</td><td>Fransızca</td><td>fr_FR</td></tr>
+			<tr><td>Marcin Herda</td><td>Lehçe</td><td>pl_PL</td></tr>
+			<tr><td>Piotr Maksymiec</td><td>Lehçe</td><td>pl_PL</td></tr>
+			<tr><td>elesmod</td><td>Lehçe</td><td>pl_PL</td></tr>
+			<tr><td>Christian Ruesch</td><td>Almanca</td><td>de_DE</td></tr>
+			<tr><td>franzen</td><td>Almanca</td><td>de_DE</td></tr>
+			<tr><td>Johannes Georgi</td><td>Almanca</td><td>de_DE</td></tr>
+			<tr><td>Maik Wagner</td><td>Almanca</td><td>de_DE</td></tr>
+			<tr><td>Marcel Saegebarth</td><td>Almanca</td><td>de_DE</td></tr>
+			<tr><td>spongetron</td><td>Almanca</td><td>de_DE</td></tr>
+			<tr><td>titopoquito</td><td>Almanca</td><td>de_DE</td></tr>
+			<tr><td>Adriano Balani</td><td>Brezilya Portekizcesi</td><td>pt_BR</td></tr>
+			<tr><td>Enrico Nicoletto</td><td>Brezilya Portekizcesi</td><td>pt_BR</td></tr>
+			<tr><td>Fela</td><td>Brezilya Portekizcesi</td><td>pt_BR</td></tr>
+			<tr><td>Gabriel Magno</td><td>Brezilya Portekizcesi</td><td>pt_BR</td></tr>
+			<tr><td>Icavalheiro</td><td>Brezilya Portekizcesi</td><td>pt_BR</td></tr>
+			<tr><td>Retalhador</td><td>Brezilya Portekizcesi</td><td>pt_BR</td></tr>
+			<tr><td>br_Orion</td><td>Brezilya Portekizcesi</td><td>pt_BR</td></tr>
+			<tr><td>igaldino</td><td>Brezilya Portekizcesi</td><td>pt_BR</td></tr>
+			<tr><td>Malkon Rodrigo</td><td>Brezilya Portekizcesi</td><td>pt_BR</td></tr>
+			<tr><td>marcelo.castro</td><td>Brezilya Portekizcesi</td><td>pt_BR</td></tr>
+			<tr><td>Xerxes Lins</td><td>Brezilya Portekizcesi</td><td>pt_BR</td></tr>
+			<tr><td>Dimitris Tzemos</td><td>Yunanca</td><td>el_GR</td></tr>
+			<tr><td>dreamwalking</td><td>Yunanca</td><td>el_GR</td></tr>
+			<tr><td>George Vlahavas</td><td>Yunanca</td><td>el_GR</td></tr>
+			<tr><td>Diantre</td><td>İspanyolca (Latin Amerika)</td><td>es_419</td></tr>
+			<tr><td>AlvaroG</td><td>İspanyolca (Latin Amerika)</td><td>es_419</td></tr>
+			<tr><td>ecoslacker</td><td>İspanyolca (Latin Amerika)</td><td>es_419</td></tr>
+			<tr><td>sombragris</td><td>İspanyolca (Latin Amerika)</td><td>es_419</td></tr>
+			<tr><td>Serg Bormant</td><td>Rusça</td><td>ru_RU</td></tr>
+			<tr><td>Sergey Ignatev</td><td>Rusça</td><td>ru_RU</td></tr>
+			<tr><td>Yaroslav Shmelev</td><td>Rusça</td><td>ru_RU</td></tr>
+			<tr><td>Graf</td><td>Rusça</td><td>ru_RU</td></tr>
+			<tr><td>adioe3</td><td>Boşnakça (Bosna Hersek)</td><td>bs_BA</td></tr>
+			<tr><td>willysr</td><td>Endonezce</td><td>id_ID</td></tr>
+			<tr><td>kisil</td><td>Ukraynaca</td><td>uk_UA</td></tr>
+			<tr><td>uatech</td><td>Ukraynaca</td><td>uk_UA</td></tr>
+			<tr><td>xuser13</td><td>Ukraynaca</td><td>uk_UA</td></tr>
+			<tr><td>Koljan1970</td><td>Ukraynaca</td><td>uk_UA</td></tr>
+			<tr><td>Kemal Ökmen</td><td>Türkçe</td><td>tr_TR</td></tr>
+		</table>
+		<p>Yeni bir dil uygun olduğunda  <a href="https://slint.fr/pub">buraya</a>
+kurulum dosyası ve yeni sürüm eklenecektir.</p>
+		<h3><span>Haydi takım kurun</span></h3>
+		<p>Herhangi bir katkı ya da ilgi memnuniyetle karşılanır.</p>
+		<p>Ayrıca, yerelleştirilmiş kurulum dosyası Slackware tabanlı dağıtımlar için
+de faydalı olabilir.</p>
+		<p> Bu dağıtımın kullanıcıları ve katılımcılarının slint'i kullanmalarını ve
+katkı vermelerini teşvik ediyoruz.</p>
+	</div>
+</body>
+</html>

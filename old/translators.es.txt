@@ -1,0 +1,84 @@
+= Traductores y otros colaboradores de Slint
+
+Esta página lista todos los traductores de Slint registrados en la
+plataforma Transifex, así como los correctores.
+
+¡Muchas gracias a todos!
+
+Didier Spaier
+
+[cols="50,50", format="csv", width="80%", options="header"]
+|========
+Traductor,Lenguaje
+dlee99 (Dik Leenheer),Holandés
+Eric Hameleers,Holandés
+Kaj Huisman,Holandés
+ponce,Italiano
+celyr,Italiano
+giogio, Italiano
+giuseppep (Giuseppe Pignataro),Italiano
+ihaveadrin,Italiano
+kooru,Italiano
+Sébastien Boillod,Francés
+Didier Spaier,Francés
+Nicolas Kovacs, Francés
+Marcin Herda,Polaco
+Piotr Maksymiec,Polaco
+elesmod,Polaco
+lukkon,Polaco
+Christian Ruesch,Alemán
+franzen,Alemán
+Johannes Georgi,Alemán
+Maik Wagner,Alemán
+Marcel Saegebarth,Alemán
+spongetron,Alemán
+Sammyboy (Marek Srejma),Alemán
+titopoquito,Alemán
+Adriano Balani,Portugués Brasileño
+Enrico Nicoletto,Portugués Brasileño
+Fela,Portugués Brasileño
+Gabriel Magno,Portugués Brasileño
+Icavalheiro,Portugués Brasileño
+Retalhador,Portugués Brasileño
+br_Orion,Portugués Brasileño
+igaldino,Portugués Brasileño
+Malkon Rodrigo,Portugués Brasileño
+marcelo.castro,Portugués Brasileño
+Xerxes Lins,Portugués Brasileño
+hugok (Hugo Carvalho), Portugués (Portugal)
+Dimitris Tzemos,Griego
+dreamwalking,Griego
+George Vlahavas,Griego
+Efstathios Iosifidis,Griego
+Constantine Mousafiris,Griego
+Diantre,Español (América Latina)
+AlvaroG,Español (América Latina)
+ecoslacker,Español (América Latina)
+sombragris,Español (América Latina)
+Serg Bormant,Ruso
+Sergey Ignatev,Ruso
+Yaroslav Shmelev,Ruso
+Graf,Ruso
+adioe3,Bosnio (Bosnia y Herzegovina)
+Malsasa,Indonesio
+willysr,Indonesio
+tuapembual,Indonesio
+kisil,Ucraniano
+uatech,Ucraniano
+xuser13,Ucraniano
+Koljan1970 (Микола Ткач),Ucraniano
+AaLeSsHhKka (Oleh Tsyupka),Ucraniano
+StreamThreader,Ucraniano
+Ekin Akoğlu,Turco
+kaanureyen07, Turco
+Kemal Ökmen,Turco
+Orhan Orhan,Turco
+Onur Özdemir,Turco
+Samet Yilmaz,Turco
+Vilender,Turco
+zm1990s (Zhang Min),Chino (China)
+guanx,Chino (China)
+Smokey,Rumano
+tuxbg (Krustio),Búlgaro
+giogio, Interlingua
+|========

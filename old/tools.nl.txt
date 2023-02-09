@@ -1,0 +1,307 @@
+= Handige tools voor Slint-medevertalers
+
+== Transifex
+
+Het Transifex-platform vergemakkelijkt de samenwerking tussen vertalers als
+een plaats waar ieder vertaal-team zijn PO-bestanden kan centraliseren en
+informatie kan delen. Het biedt een online editor die eveneens gebruikt kan
+worden om vertalingen te controleren.
+
+Bezoek http://support.transifex.com/[Transifex Help Desk] om te leren hoe je
+het gebruikt.
+
+Je kunt de online-editor van Transifex gebruiken als je dat makkelijk vindt,
+maar:
+
+* vergeet niet regelmatig lokaal een backup te maken, voor het geval dat
+* de tekstindeling van vertalingen is lokaal eenvoudiger te doen en te
+  controleren met een gespecialiseerde PO-editor als **Lokalize** of
+  **Poedit**
+
+Voor vertaling van webpagina's in asciidoc-formaat is gebruik van Transifex
+verplicht (zie hieronder).
+
+WARNING: Als je lokaal wilt vertalen gebruik dan 'Download for translation' (niet
+'Download for use') en 'Lock this translation to notify others you\'re
+working on it'. Dit voorkomt dubbel werk... Twee teamleden kunnen wel
+eenzelfde groot PO-bestand delen zolang ze maar eerst afspreken wie wat
+vertaalt.
+
+[TIP]
+=========
+Transifex heeft geen automatische terugloop. Dit kan leiden tot zeer lange
+zinnen die lastig te lezen zijn in een tekstverwerker en die hem zelfs kan
+laten crashen. Om dit te voorkomen typ je na het downloaden van het
+PO-bestand:
+
+----
+  msgcat van_Transifex_gedownload_bestand > hernoemd_bestand
+----
+
+gebruik dan 'Lokalize' of 'Poedit' om 'hernoemd_bestand' te vertalen. Dit
+bestand heeft automatisch teruglopende regels maar is verder gelijk aan het
+eerder gedownloade.
+=========
+Als je lokaal vertaalt vergeet dan niet het bewerkte bestand weer naar
+Transifex te uploaden om het niet onnodig als 'locked' te laten staan.
+
+
+== Lokalize
+
+'Lokalize' komt mee met Slackware. Je kunt
+http://docs.kde.org/development/en/kdesdk/lokalize/index.html[online] of via
+het Help-menu of door het drukken van [F1] het Lokalize Handboek
+lezen. Aanbevolen instellingen:
+
+* Instellingen => Instellen => Identiteit: Standaardtaal.
+* Instellingen => Instellen => Uiterlijk: Kies een serif font met vaste
+  breedte zoals Courier. Dit laat je duidelijker het verschil zien tussen 0
+  (het getal) en O (de letter) of tussen | (pipe) en I (de letter) en beter de
+  tekstindeling controleren zoals bijvoorbeeld de uitlijning van de eerste
+  woorden van opeenvolgende regels.
+* Instellingen => Instellen => Uiterlijk: Vink aan 'LED's voor het aangeven
+  van de status voor niet gereed en onvertaald en ook een kolomteller'. Handig
+  voor het controleren van de regellengte als dat nodig is.
+
+== Poedit
+
+'Poedit' zit niet standaard bij Slackware maar is beschikbaar @
+http://slackbuilds.org[SlackBuilds.org].
+
+Het heeft geen handige manier om regellengten te controleren maar verder
+heeft het dezelfde mogelijkheden als Lokalize. Het kiezen voor de één of de
+ander is een kwestie van persoonlijke voorkeur.
+
+In Bewerken => Voorkeuren => Editor: Vink aan 'Automatische
+spellingcontrole' en kies net als Lokalize een serif lettertype met vaste
+breedte.
+
+== Gebruik van scripts meegeleverd in Slint's tarball
+
+Dit gecomprimeerd archief bevat alles wat nodig is om slint producten te
+compileren net als tools voor slint-bijdragers. Het heet slint-[date].tar.xz
+en is beschikbaar in directory https://slint.fr/pub[pub/].
+
+Om het uit te pakken, typ je:
+
+----
+  tar xf slint-[date].tar.xz
+----
+  
+Dit maakt een directory slint-[date]. Zie het bestand CONTENT.TXT hierin
+voor details. In de tabel hieronder zie je alleen scripts om slint producten
+mee te compileren en tools voor vertalers. Alle aangegeven paden zijn
+relatief aan deze directory.
+
+[format="psv", options="header,autowidth"]
+|========
+|Scriptnaam en locatie|Doel
+|build/slint.sh |Maakt een hybride (CD/DVD or USB)-image van de Slackware-installer of van een Slackware distributie waar het bij zit
+|build/make_slint_packages |Internationaliseert een aantal Slackware pakketten en maakt het pakket SlintLocales.
+|build/slintLocales |Maakt een pakket met alle up to date vertalingen van Slackware scripts meegeleverd in Slint installers (alle versies) of in tools voor Slackware.
+|tools_for_translators/toolbox.sh |Deze toolbox beheert vertalingen van meldingen verzameld in slackware.pot.
+|tools_for_translators/toolbox_slint_sh |Deze toolbox beheert vertalingen van meldingen gegenereerd door het script slint.sh .
+|tools_for_translators/generate_man_pages |Genereert gelocaliseerde man pages voor enkele tools voor Slackware. Laat je PO-bestanden controleren. Voor gebruik van dit script moet je het pakket po4a geïnstalleerd hebben, beschikbaar in directory https://slint.fr/packages/extra[extra/].
+|========
+ 
+=== De vertaling van Slackware's installer en beheerscripts controleren
+
+Bron https://www.transifex.com/projects/p/slint/resource/slint/[slint],
+bestand slackware.pot
+
+Zet het bestand als je klaar bent met vertalen in directoty wip/, en
+(her)noem het bijvoorbeeld nl_NL.slackware.po. Voer vervolgens
+/pad/naar/tools_for_translators/toolbox.sh uit en kies check_PO in het
+menu. Als alles goed gaat:
+
+. kopieer je nl_NL.slackware.po naar directory po/ (vertaling in Nederlands in
+  dit voorbeeld).
+. voer je uit: /pad/naar/build/SlintLocales.SlackBuild om je bijgewerkte
+  vertaling in het pakket SlintLocales op te nemen.
+. voer je uit: /pad/naar/build/slint.sh om een hybride CD of USB-image van de
+  installer te maken.
+. brand je het image op een CD of USB-stick.
+. probeer je de installer uit (in het Nederlands in dit geval uiteraard) op
+  een virtuele of echte machine.
+
+TIP: Om de installer in een virtuele machine uit te voeren kun je direct het
+ISO-image als virtueel medium gebruiken en hoef je het niet op een fysiek
+medium te branden.
+
+=== De vertaling van het bestand slint.sh controleren
+
+Bron
+https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/[POT
+bestand voor slint.sh]
+
+Wanneer je klaar bent met vertalen zet je het bestand in directoty wip/,
+(her)noem het bijvoorbeeld de_DE.slint.po voor Duits. Voer vervolgens uit:
+/pad/naar/tools_for_translators/toolbox.sh en kies in het menu check_PO.
+
+Als alles goed gaat voer dan uit:
+/pad/naar/tools_for_translators/toolbox_slint_sh maar kies format_PO in het
+menu. Als alles goed gaat genereert dit het bestand slint.mo en zet dit op
+zijn plaats in de slint-[date] boom (in directory
+slint_locales/de/LC_MESSAGES in dit voorbeeld)
+
+Probeer vervolgens je vertaling door Engelse en Duitse versies te
+vergelijken met de volgende commando's:
+
+----
+  /pad/naar/build/slint.sh
+  LANG=de_DE.utf8 /pad/naar/build/slint.sh
+----
+ 
+=== De vertaling van man pagina's meegeleverd in pakketten pkgtools en slackpkg controleren
+
+Bronnen:
+https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools] en
+https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]
+
+Zet het PO-bestand weer in directory wip/, en (her)noem het bijvoorbeeld
+es.pkgtools.po (man pagina's meegeleverd met het pakket pkgtools in het
+Spaans). Voer dan dit commando uit:
+
+----
+   /pad/naar/tools_for_translators/generate_man_pages es.pkgtools
+----
+   
+Als alles goed gaat genereert dit alle inbegrepen man pages (in dit geval:
+es.explodepkg, es.installpkg, es.makepkg, es.pkgtool, es.removepkg,
+es.upgradepkg). Lees anders de foutmeldingen, corrigeer waar nodig en
+probeer het nog eens. De meeste fouten zijn te voorkomen door het volgen van
+deze link:contribute.html#warning_man_pages[Waarschuwing].
+
+Om gelocaliseerde met originele man pageina's te vergelijken doe je dit
+(voor bijvoobeeld de Oekraïense vertaling):
+
+----
+  cd /pad/naar/wip/
+  LANG=uk_UA.utf8 GROFF_ENCODING=utf8 man ./installpkg # gelocaliseerde man page
+  GROFF_ENCODING=utf8 man installpkg # originele man page
+----
+  
+Om het steeds moeten typen van "GROFF_ENCODING=utf8" te voorkomen plaats je
+de volgende regel in ~/.bashrc:
+
+----
+  export GROFF_ENCODING=utf8
+----
+
+[[asciidoc]]
+== Vertaling van tekstbestanden die door 'AsciiDoc' worden omgezet naar webpagina's
+
+Zoals aangegeven in link:contribute.html#new_web_pages[Vertaling van
+webpagina's] worden de volgende webpagina's middels 'asciidoc'  vanuit
+tekstbestanden gegenereerd: link:slint.html[slint.html],
+link:installer.html[installer.html], link:package.html[package.html],
+link:contribute.html[Draag Bij], link:translators.html[Vertalers],
+link:tools.html[Tools], link:changelog.html[ChangeLog] en
+https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po].
+
+Deze bron-tekstbestanden moeten worden vertaald met de Transifex
+online-editor: het uploaden van een vertaald tekstbestand naar Transifex
+mislukt met onbekende reden dus het lokaal vertalen van bestanden en ze dan
+naar Transifex uploaden is geen optie.
+
+Maar de Transifex online-editor heeft het voordeel regels of paragrafen te
+kunnen toevoegen die gelinkt blijven aan een string in het originele engelse
+bestand.
+
+Dit geeft vertalers de mogelijkheid hun vertalingen door het toevoegen van
+informatie specifiek voor hun locale aan te passen; bijvoorbeeld hoe
+gebruikers hulp in hun eigen taal of land kunnen krijgen of verwijzingen
+naar gelocaliseerde documentatie, enz.
+
+[TIP]
+====
+Na een update van een origineel engels tekstbestand zullen de vertalingen
+van de tekstregels overeenkomend met de aangepaste regels in het engelse
+bestand verdwijnen uit de Transifex editor.
+
+Je kunt je wat typwerk besparen als je van een lokale kopie (gedownload van
+Transifex) de oude vertaling kopieert en plakt in de Transifex editor en
+deze waar nodig aanpast.
+
+Nog gemakkelijker: wanneer je vertaling al naar de website is geüpload klik
+je op "Bronpagina" onderaan het menu op deze pagina en de desbetreffende
+brontekst wordt weergegeven.
+
+De Transifex-editor heeft een "Suggesties" feature (vergelijkbaar met het
+"Vertaal-geheugen" in Lokalize) die vergelijkbare oude vertalingen van een
+regel "onthoudt". Deze feature is echt handig wanneer een webpagina wordt
+bijgewerkt. Transifex onthoudt je laatste vertaling van de regel en
+presenteert een "Use This" link naast de suggestie. Je kunt die overnemen en
+daarna aanpassen zodat je weer door kunt naar de volgende vertaling.                  
+====
+
+.Neem kennis van de AsciiDoc opmaak-syntax
+Het referentiedocument is http://asciidoc.org/userguide.html[AsciiDoc
+Gebruikershandleiding] maar een beginner leest beter
+http://powerman.name/doc/asciidoc[AsciiDoc cheatsheet]. Of nog sneller,
+ervan uitgaand dat 'AsciiDoc' is geïnstalleerd, schrijft het commando:
+----
+asciidoc --help syntax > asciidoc.txt
+----
+de AsciiDoc Markup Syntax Samenvatting naar bestand asciidoc.txt, dat je
+vervolgens kunt weergeven met een pager of afdrukken.
+
+.Hou de originele opmaak
+Hou de opmaak zoals die is. Toevoegen of verwijderen van spaties of
+"newline"-karakters bijvoorbeeld kunnen onverwachte effecten
+teweegbrengen. Hier zijn een paar voorbeelden :
+
+* Een paragraaf beginnen met een spatie genereert een 'literal paragraph'
+  weergegeven met een specifiek lettertype
+* "= een tekst" genereert een niveau 0 kop (documenttitel), maar alleen
+  wanneer "=" het eerste karakter van een regel is, er een spatie achter staat
+  en een lege regel vóór.
+* " \+" aan een regel toegevoegd genereert een "regelafbreuk" maar alleen met
+  een spatie vóór de "+" en als laatste karakter van een regel
+
+WARNING: Om gedoe met opmaakinstructies te voorkomen adviseren we je eerst de
+bronregel (in het engels) in de vertaling te kopiëren (klik op het
+twee-pagina's icoon rechtsboven de bronregel) en deze vervolgens te
+bewerken.
+
+.Controleer de weergave van uw vertaling
+Je kunt de weergave van de webpagina gegenereerd vanuit jouw vertaling van
+het brontekstbestand gemakkelijk als volgt controleren:
+----
+lftp -c "mirror https://slint.fr/website/"
+# Download je vertaling van Transifex (die we <translation.txt> noemen> naar de zojuist gecreëerde directory website/ 
+cd website
+CONFIG_FILE=slint.conf.en
+# Optioneel, als de bovenste titel en het menu vertaald in jouw taal al zijn geüpload naar de website:
+wget https://slint.fr/slint.conf.tt; CONFIG_FILE=slint.conf.tt # vervang "tt" met jouw taalcode (twee letters)
+# genereer dan de webpagina
+asciidoc -b xhtml11 -a icons -f $CONFIG_FILE <translation.txt> # dit commando genereert <translation.html>
+firefox <translation.html> &
+----
+
+.Vertalen of niet vertalen, dat is de vraag
+De volgende woorden hebben een speciale betekenis voor AsciiDoc en mogen
+niet worden vertaald als ze een waarschuwings-paragraaf beginnen (en vaak
+worden vervangen door iconen): TIP, NOTE, IMPORTANT, WARNING en CAUTION.
+
+In het algemeen mogen links en URL's niet worden vertaald, behalve het
+geassocieerde bijschrift, afhankelijk van de context. In de volgende
+voorbeelden (uit 'asciidoc --help syntax') mag alleen 'bijschrift' vertaald
+worden:
+----
+Documentlinks:
+[[id]]                      (definieer link target)
+<<id,bijschrift>>              (link naar target id)
+link:filename#id[bijschrift]   (link naar extern HTML-bestand)
+
+URL's:
+http:address[bijschrift]       (link naar webpagina)
+mailto:address[bijschrift]     (link naar mailontvanger)
+
+Afbeeldingen:
+image:filename[bijschrift]     (inline afbeelding)
+image::filename[bijschrift]    (blokafbeelding)
+----
+
+
+

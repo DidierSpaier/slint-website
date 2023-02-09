@@ -1,0 +1,63 @@
+How-to install Slint version 14.1 with a Braille terminal using brltty.
+
+The 32 and 64 bit editions of the Slint installers for Slackware version 14.1
+contain the brltty software, allowing blind users to use them, then use the
+installed system, through a Braille terminal.
+
+The "small" hybrid (USB or CD) images of the Slint installers
+(version 14.1) are available in http://slint.fr/installers alongside their
+respective md5 checksum files. They don't include the Slackware packages.
+Reminder: only the version 14.1 (32 and 64 bit) ships brltty.
+
+The  "full" hybrid (USB or DVD) ISO images (including all Slackware packages)
+are available here: http://sourceforge.net/projects/slint/files/14.1/
+
+General instructions for use of all the installer images are in:
+http://slint.fr/installer.html
+
+You can check the integrity of theses "full" ISO images  with their md5
+or sha1 checksums:
+md5  for slint64-14.1.3-full.iso ee839aa09ecc2fa924ebb1dae1d09663
+sha1 for slint64-14.1.3-full.iso 130f32eac7112e723fb2a6b377aa7bbf8eb5a7ba
+md5  for slint-14.1.3-full.iso c1c399efa41416fa72a38dbca7bf0775
+sha1 for slint-14.1.3-full.iso 14312f82f3e2cb7f1cff80a1c04c5f0b4d1ef856
+
+Just download the ISO image, use it to make a bootable DVD or USB stick,
+boot off that media and when you hear a 'beep' type the command line in the
+form <language code> brltty=<driver code>,<device>,<text table>. For
+instance to install with a Papenmeier device connected through USB with a
+French text table, type:
+06 brltty=pm,usb:,fr_FR
+then press [Enter]
+
+Here is the list of language codes, all UTF8 encoded:
+04 Dutch * 05 English (USA) * 06 French * 07 German * 08 Greek * 11 Polish
+12 Portuguese (Brazil) * 13 Portuguese (Portugal) * 15 Russian
+17 Spanish (Latin America) * 19 Swedish * 20 Turkish * 21 Ukrainian
+
+A few seconds after pressing [Enter] the startup messages should be
+displayed on the Braille terminal.
+
+Limitation: the 64 bit installer, if used on an UEFI firmware (not in legacy
+mode) uses a GRUB bootloader that needs the help of a sighted person to edit
+(instead of just typing) an existing command line to include "brltty=...".
+
+Your settings will be recorded in the installed system in /etc/brltty.conf,
+and brltty will be launched at startup by default, unless you make the file
+/etc/rc.d/rc.brltty non executable, typing:
+chmod 0644 /etc/rc.d/rc.brltty
+
+Also, if you plug in a Braille terminal connected through USB when the
+system is running, it should become operational as relevant udev rules
+should launch a brltty daemon with the proper driver.
+
+You can consult the Slint website @ http://slint.fr to know more.
+
+A comprehensive manual for brltty is available in English, French and
+Portuguese in several formats including plain text (txt) at this URL:
+http://mielke.cc/brltty/doc/Manual-BRLTTY/
+
+Also, feel free to contact me (Didier Spaier) directly at this address:
+<my first name> (at) slint (dot) fr
+I will be more than happy to help if I can (English and French spoken).
+Didier

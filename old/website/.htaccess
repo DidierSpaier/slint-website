@@ -1,0 +1,9 @@
+Options +Indexes
+IndexIgnore cgi*
+IndexOptions +FancyIndexing +NameWidth=*
+AddIcon (DIR,/icons/folder.gif) ^^DIRECTORY^^
+AddIcon (ISO,/icons/index.gif) .iso .img
+AddIcon (TXT,/icons/text.gif) .txt .TXT .info .SlackBuild slack-desc .Changelog
+AddIcon (TXT,/icons/transfer.gif) .md5
+AddIcon (TXT,/icons/tar.gif) .txz .tgz .gz .xz
+HeaderName README.TXT

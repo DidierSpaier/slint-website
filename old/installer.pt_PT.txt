@@ -1,0 +1,127 @@
+
+= Instalador Slint
+
+O Instalador Slint permite que você use o seu idioma preferido durante a
+instalação, adicione ferramentas de administração traduzidas e páginas de
+manual para Slackware.
+
+Um 'terminal de Braille' também pode ser utilizado para instalar e depois
+pilotar o sistema. As instruções de utilização estão disponíveis em
+https://slint.fr/docs/README_BRLTTY.
+
+== Transfira e verifique o instalador da imagem ISO
+Dois tamanhos de imagens ISO estão disponíveis:
+
+* O http://sourceforge.net/projects/slint/files/[DVD + USB imagens ISO
+  completas] contêm tudo o que você precisa para instalar o Slackware.
+* O https://slint.fr/installers[CD + USB imagens ISO pequenas] precisam de ser
+  completadas por uma media que contém os pacotes do Slackware, por exemplo,
+  um DVD do Slackware.
+
+Para transferir uma imagem ISO completa, clique primeiro no seu número de
+versão, por exemplo 14.1.
+
+Você pode verificar a integridade da imagem ISO com a sua soma de
+verificação md5.
+
+* Para as pequenas imagens ISO, transferindo e usando o seu ficheiro md5
+  associado (cujo nome termina em .md5).
+* Para a imagem ISO completa, você pode exibir a soma de verificação clicando
+  sobre a letra i num círculo preto à direita do link para a imagem ISO.
+Por exemplo, para criar um programa de instalação de um poliglota
+Slackware64-14.1 internacionalizado, transfira a imagem ISO (e o ficheiro
+md5, no caso de um pequeno instalador), depois no mesmo tipo de diretório,
+por exemplo, um dos seguintes comandos
+----
+md5sum -c slint64-14.1.iso.md5 # a resposta deve ser: OK
+md5sum slint64-14.1-full.iso # o resultado deve ser o mesmo que o apresentado no site da internet
+----
+== Grave a imagem ISO num DVD, um CD ou numa pen USB
+
+=== Crie uma unidade USB de arranque
+
+[WARNING]
+====
+* Todos os ficheiros contidos no dispositivo USB serão PERDIDOS
+* Releia atentamente o seu comando para se certificar de que você não escreveu
+  o nome de uma partição do disco rígido em vez de a do dispositivo USB uma
+  vez que os conteúdos desta partição seriam IRREMEDIAVELMENTE PERDIDOS
+====
+
+No 'Linux' conecte o dispositivo USB, de seguida verifique o seu nome com os
+seguintes comandos:
+
+----
+cat /proc/partitions
+dmesg | tail
+----
+
+Se por exemplo o seu nome é /dev/sdc, digite:
+
+----
+dd if=<nome_do_ficheiro.iso> of=/dev/sdc bs=1M
+----
+
+No 'Windows' utilize a aplicação http://rufus.akeo.ie/[Rufus] que é livre e
+de código aberto.
+
+=== Crie um CD de arranque (pequeno instalador) ou DVD (grande instalador)
+
+No 'Linux' digite um comando como o primeiro a seguir para um CD, ou o
+segundo para um DVD.
+
+----
+cat slint64-14.1.iso | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso
+----
+
+
+No 'Windows 2000/XP/Vista/7' utilize a aplicação
+http://infrarecorder.org/[InfraRecorder] que é livre e de código aberto.
+
+
+No 'Windows 7/8' utilize o Windows
+http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file[Windows
+Disk Image Burner], fornecido com o Windows 7 e 8
+
+== Utilize o seu instalador poliglota
+
+Apenas insira a media de instalação (CD, DVD ou pen USB) e reinicie o
+computador.
+
+No ecrã de saudação, você vai escolher o seu idioma preferido para a
+instalação digitando o código de dois dígitos correspondente.
+
+Além de ser poliglota, os instaladores Slint oferecem as seguintes
+características para além das dos instaladores Slackware genuínos:
+
+* Fonte padrão e mapa de teclado são adaptados para a linguagem usada na
+  instalação.
+* Sempre que possível, uma fonte True Type é usada durante a instalação, para
+  adaptar automaticamente o tamanho da fonte para a resolução do ecrã (para
+  versões do Slackware 14.0 e 14.1 apenas).
+* Opção para criar contas de utilizadores regulares no final da instalação
+  (antes de reiniciar) é fornecida.
+* As opções são fornecidas para definir como padrão no sistema instalado o
+  idioma e mapa de teclado usado durante a instalação, e fazer ajustes
+  correspondentes do teclado sob o X se o servidor X está instalado.
+* Um pacote Slint está instalado, que oferece traduções das principais
+  ferramentas do Slackware e seus manuais de referência, em lista no
+  link:package.html[pacote Slint], bem como os documentos colocados em
+  /usr/doc/slint-<versão>-<data>, incluindo um Slint-HOWTO.txt e um script
+  reinstalar-slackware-packages.sh.
+
+Se você usar a versão pequena do instalador, durante a instalação, você
+também vai precisar de uma 'media de origem', noutras palavras, uma media
+contendo pacotes do Slackware. Os pacotes podem ser instalados a partir de
+um DVD/CDs Slackware, uma pen USB Slackware, um diretório pré-montado, uma
+partição do disco rígido, um compartilhamento Samba, NFS (Sistema de
+ficheiros de rede), um servidor FTP/HTTP. Quando escolher a FONTE no menu, o
+instalador diz-lhe o que fazer de acordo com o tipo de media selecionada.
+
+Para ter uma média de fonte, siga este link:
+http://www.slackware.com/getslack/[Get Slack]
+
+TIP: Se for necessário, você pode substituir a media de instalação por uma outra
+contendo os pacotes, pois no momento da instalação dos pacotes do instalador
+eles já foram carregados na memória.

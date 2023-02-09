@@ -1,0 +1,122 @@
+
+= Slint kurucu
+
+Slint kurucu kurulum sırasında tercih ettiğiniz dili kullanmanıza izin
+verir, ve Slackware'e tercüme edilmiş yönetim araçlarını ve kılavuz
+sayfalarını ekler.
+
+Sistemi yüklemek için 'Braille terminali' kullanılabilir. Kullanım
+talimatlarına https://slint.fr/docs/README_BRLTTY adresinden ulaşabilirsiniz.
+
+== İndirin ve kurucu ISO kalıbını kontrol edin
+İki farklı boyutta kullanılabilir ISO kalıbı var:
+
+* http://sourceforge.net/projects/slint/files/[DVD + USB tam ISO kalıpları]
+  Slackware'i yüklemek için ihtiyacınız olan her şeyi içerir.
+* https://slint.fr/installers[CD + USB küçük ISO kalıpları] Slackware
+  paketlerini içeren bir medyayla tamamlanmalıdır, örneğin bir Slackware
+  DVD'si.
+
+Bir tam ISO kalıbını indirmek için önce sürüm numarasına tıklayın, örneğin
+14.1.
+
+ISO kalıbının bütünlüğünü doğrumalak için md5 checksum kullanabilirsiniz.
+
+* Küçük ISO kalıpları için ilgili md5 dosyasını (ismi .md5 ile biten) indirip
+  kullanabilirsiniz
+* Tam ISO kalıpları için ISO kalıbı bağlantısının sağında siyah çember içine
+  alınmış i harfine tıklayarak checksum bilgisini görüntüleyebilirsiniz.
+  Örneğin, yerelleştirilmiş Slackware64-14.1 çokdilli kurucusunu yapmak için
+ISO kalıbını (eğer küçük kurucuyu kullanıyorsanız md5 dosyasını da) indirin
+ve aynı klasördeyken şu komutlardan birini uygulayın
+----
+md5sum -c slint64-14.1.iso.md5 # yanıt OK olmalı
+md5sum slint64-14.1-full.iso # çıktısı web sayfasında gösterilenle aynı olmalıdır
+----
+== ISO kalıbı CD, DVD veya USB bellek üzerine yazın
+
+=== Önyüklenebilir USB bellek oluşturun
+
+[WARNING]
+====
+* USB belleğin önceki tüm içeriği SİLİNECEK
+* Bu bölüm içeriğininde KURTARILAMAZ KAYIP olabileceğinden USB Belleğin ismi
+  yerine Disk bölümünün ismini yazmadığınızdan emin olmak için komutunuzu
+  dikkatlice tekrar okuyunuz.
+====
+
+'Linux''da USB belleği takın, sonra şu komutlarla ismini kontrol edin:
+
+----
+cat /proc/partitions
+dmesg | tail
+----
+
+Eğer ismi /dev/sdc ise örneğin, şunu yazın:
+
+----
+dd if=<dosyaadı.iso> of=/dev/sdc bs=1M
+----
+
+'Windows' üzerinde özgür ve açık kaynak kodlu olan
+http://rufus.akeo.ie/[Rufus] yazılımını kullanın.
+
+=== Önyüklenebilir bir CD (küçük kurucu) veya DVD (büyük kurucu) oluşturun
+
+'Linux' üzerinde aşağıdaki komutlardan CD için birinciyi, DVD için ikinciyi
+girin:
+
+----
+cat slint64-14.1.iso | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso
+----
+
+
+'Windows 2000/XP/Vista/7' üzerinde özgür ve açık kaynak kodlu olan
+http://infrarecorder.org/[InfraRecorder] yazılımını kullanın.
+
+
+'Windows 7/8' üzerinde Windows 7 ve 8 ile gelen
+http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file[Windows
+Disk Image Burner] kullanın
+
+== Çokdilli kurucunuzu kullanın
+
+Kurulum ortamını (CD, DVD veya USB bellek) takın ve makinenizi yeniden
+başlatın.
+
+Karşılama ekranında yükleme için tercih ettiğiniz dili ilgili iki harflik
+kodu yazarak seçeceksiniz.
+
+Sliny kurucular çokdilli olmalarının yanında Slackware kurucularına ek
+olarak aşağıdaki özellikleri de sunar:
+
+* Varsayılan yazı tipi ve tuş haritası kurulum için kullanılan dile
+  uyarlanmıştır.
+* Kurulum esnasında yazı tipinin ekran çözünürlüğüne otomatik olarak
+  uyarlanması için mümkün olduğu taktirde True Type yazı tipleri kullanılır
+  (sadece Slackware 14.0 ve 14.1 sürümleri için)
+* Yükleme sonunda (yeniden başlatmadan önce) düzenli kullanıcı hesaplarının
+  oluşturulması seçeneği sunulmaktadır.
+* Kurulum sırasında kullandığınız dil ve karakter haritasını, kurulan sistemde
+  varsayılan olarak ayarlama seçenekleri sunulur ve eğer X sunucusu
+  yüklenmişse X altında gerekli ayarlarlamalar da yapılır.
+* Bir Slink paketi yüklendi, bu paket link:package.html[Slint paketi]
+  listesinde de gösterilen ana Slackware araçları bunların kullanım
+  kılavuzları için çevirileri sağlıyor. Ayrıca /usr/doc/slint-<version>-<date>
+  altına bir Slint-HOWTO.txt ve reinstall-slackware-packages.sh betiği de
+  içeren dökümanlar yüklendi.
+
+Eğer kurucunun küçük sürümünü kullanıyorsanız, kurulum sırasında ayrıca bir
+'kaynak ortam' a, diğer bir deyişle Slackware peketleri içeren bir ortama,
+onlar Slint kurucusu içinde olmadığından, ihtiyacınız olacak. Paketler
+Slackware CDsinden veya DVDsinden, Slackware USB belleğinden, bağlanmış bir
+dizinden, bir sabit disk bölümünden, Samba paylaşımından, NFS (Ağ Dosya
+Sistemi)inden, FTP/HTTP sunucudan kurulabilir. Menüde KANAK ı seçtiğinizde,
+kurucu size seçilen ortamın türüne göre ne yapılacağını söyler.
+
+Bir kaynak ortam almak için şu bağlantıyı takip edin:
+http://www.slackware.com/getslack/[Get Slack]
+
+TIP: Gerekliyse, bu aşamada kurucu halihazırda belleğe yüklendiği için, kurulum
+CDnizi, paketleri içeren bir DVD ile değiştirebilirsiniz.

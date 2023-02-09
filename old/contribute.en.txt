@@ -1,0 +1,122 @@
+= Contribute to the Slint project
+
+So, you want to help and contribute to the Slint project? Welcome on board!
+
+The work needed to provide Slint's products mainly consists in translating and reviewing shell scripts, that make up Slackware's installers and administration tools, and documentation intended for Slackware users taking the form of text files or manual pages.
+
+Ideally, we would like that translators:
+[options="compact"]
+* be able to communicate in English and very fluent in the target language, preferably their native language
+* understand technical vocabulary associated to installation and administration of a Linux system
+* be Slackware users
+* be able to read and understand simple shell scripts
+
+But even if you don't meet all of these expectations, don't hesitate to volunteer: there still are many tasks that can benefit of your skills. 
+
+== Volunteer and define your contributions
+
+To volunteer as a translator, preferably use the Transifex platform: first https://www.transifex.com/signup/[register on Transifex] (it's free), then go to Transifex' https://www.transifex.com/projects/p/slint/[Slint project page] and click on HELP TRANSLATE "SLINT"
+[options="compact"]
+* If your language is listed, click on it, then in that language's page click "Join the team".
+* Else, click "Request a language" (in the light blue stripe just above languages' list)
+
+But if you'd like to ask questions before, or propose your help for other tasks than translation, send an email to Slint's maintainer: didier (at) slint (dot) fr.
+
+Then you will consult with your team's coordinator or Slint maintainer to define the "why", "what", "how" and "when" of your contributions to Slint. 
+
+== Know our methods & tools and be ready to communicate inside Slint team ==
+
+Please read <<recommendations,Practical recommendations for translators>> below.
+
+Then, get acquainted with the link:tools.html[Tools] we use. To better use them you'll need to have installed a Linux distribution, preferably a full Slackware system, including following packages:
+
+* ../extra/aspell-words-lists/<packages for your language> for spelling checks
+* ../kdei/<package kde-l10n for your language> to localize UI of Lokalize if you use it
+
+Last but not least, we need to work together as a team, so:
+
+* Please register on Transifex, even if you don't use its on line editor, then check all https://www.transifex.com/settings/notices/[notification settings], as it makes easier to keep all contributors informed at once of anything of general interest. Please indicate you full name, even if you use a nickname.
+* We strongly suggest that you subscribe to https://lists.sourceforge.net/lists/listinfo/slint-translators[slint-translators mailing-list]. This will allow you to ask and answer questions, participate in discussions, make suggestions and proposals.
+* Be ready to provide an email address allowing your team's coordinator and Slint's maintainer to reach you.
+* You can also use the Discussion feature available on Transifex in your language's page of the Slint project.
+* You can also follow http://www.linuxquestions.org/questions/slackware-14/slint-the-slackware-internationalization-project-4175455701/[this thread] in Slackware forum of LinuxQuestions.org. For that, register to LQ and either post a message in the thread, or display it then click Thread Tools => Subscribe to this Thread (in the dark blue stripe just above the first message displayed).
+
+== Translation scope
+
+=== Target languages
+
+At time of writing the Slint installers and main Slackware administration tools are fully translated in Langues listed in our https://slint.fr/slint.html[home page]. Other translations are in progress, their current status can be checked on https://www.transifex.com/projects/p/slint/resource/slint/[this page].
+
+Manual pages are translated in more languages, complete translations are listed in file https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT]
+
+=== Translated content
+
+Translated content takes the form of files including original English messages alongside their translations, called PO files, produced and processed through GNU 'gettext'. Each given set of messages (in English in Slint's case) to be translated is recorded in a so called POT file, from which is generated one corresponding PO file for each target language, see http://docs.slackware.com/howtos:misc:internationalization_and_localization_of_shell_scripts[Internationalization and localization of shell scripts] on http://docs.slackware.com/start[SlackDocs] to know more.
+
+On Transifex you will find two sets of files to translate, that Transifex calls "projects", that share their language teams:
+
+* The https://www.transifex.com/projects/p/slint/['slint'] space host POT files gathering messages from one or several shell scripts or manual pages, that allow localization of the installers and administration tools. Please take care of these files priority.
+* The https://www.transifex.com/projects/p/slintwebsite/['slintwebsite'] spaces hosts one POT file for each of our web pages plus one for the template used to uniformize the look and layout of all pages.
+
+Here is the current list of the POT files in the 'slint' space and their scopes (see page link:tools.html[Tools] to know how to use associated tools).
+
+[format="psv",options="header,autowidth",style="verse"]
+|========
+|POT File name|Resource name (Transifex)|Scope|Associated tool
+|slackware.pot|https://www.transifex.com/projects/p/slint/resource/slint/[slint]|Slint installer
+Slint package (without man pages)|toolbox.sh
+|pkgtools.pot|https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools]|man pages contained in package 'pkgtools'|gen_man_pages
+|slackpkg.pot|https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]|man pages contained in package 'slackpkg'|gen_man_pages
+|========
+
+In the 'slintwebsite' pages, the first part of each page name (before .pot) refers to the corresponding web page.
+
+[[new_web_pages]]
+=== Translation of web pages
+The web pages: link:slint.html[slint.html], link:installer.html[installer.html] and link:package.html[package.html] are intended to end users who do not speak English, so please translate them priority as well as https://www.transifex.com/projects/p/slint/resource/templatepo/[template.pot] after the files in the https://www.transifex.com/projects/p/slint/['slint'] space.
+
+The other web pages: link:contribute.html[Contribute], link:translators.html[Translators], link:tools.html[Tools] and link:changelog.html[ChangeLog] 'may' also be translated, that's up to each translation team.
+
+NOTE: For a given language, when translating template.po it's better to leave in English names of (yet) untranslated web pages, so that visitors will understand that clicking on corresponding links in the menu will display these pages in English.
+
+For your information, the web pages are generated from text files using the 'asciidoc' software, and the PO and POT files converted back and forth using the 'po4a' software.
+
+[[recommendations]]
+== Practical recommendations for translators
+
+* Depending on the amount of work needed and available resources, there can be one translator or a team of translators per target language. In all cases, I recommend that at least one person be responsible for organizing the team's work, checking the translations and transmitting the checked PO file to the maintainer(s). Let's call this person the team coordinator.
+* Don't feel obliged to translate verbatim. Not only is this rarely the best way to convey the meaning, but in addition this often leads to sentences too long to fit in allowed space.
+* Use a specialized PO editor, 'not' a general text editor. This will not only prevent inadvertently editing 'msgid' strings but also facilitate their work and automatize additional checks, as the presence of a variable in the translation with the same spelling as in the original.
+* While translating, choose a serif fixed width (or "monospaced") font, like Courier. That allow to visually distinguish characters that otherwise would look the same, and check line's length when that matters.
+* If possible, check the layout of the messages. You could do that looking at the context in the relevant source file. Even better, simply run the translated script. 
+This is especially important if you are translating dialog boxes. In particular, take care not to write too long sentences on one single line if it appears that the text can't flow on next one.
+* Bear in mind that in VGA mode (used in text installers, in particular), line's width is limited theoretically to 80 characters, but practically often to 74.
+* Do not add question marks that are not present in the original message.
+* If the message refers to tags (text on the buttons) of dialog boxes, like "OK", "Yes", "NO", "Continue", "Cancel", check how theses tags are translated in your language in dialog's interface and use the same words.
+* Avoid colloquialisms and technical slang.
+* To "cut" (or end) a line inside a "dialog" box you should type \n: pressing [Enter] will 'not' insert a "new line" character in the text viewed by user. 
+
+In addition, you will have to comply to gettext's requirements for it to work:
+
+* If a word beginning with a dollar sign is included in the original text it should be present in the translation with exactly the same spelling (case matters).
+* The translation text should include a "new line" character (or line feed, represented by "\n") at the beginning or at the end, exactly as the original text does. Conversely, if the original text doesn't have the character, then the translation shouldn't have it.
+* A single backslash character "\" is not allowed in the translation.
+
+To check your translation against gettext's requirements you could run following command:
+
+----
+  msgfmt -c <name of the PO file>
+----
+
+[[warning_man_pages]]
+=== Warning  about translation of man pages
+
+Preserve carefully syntax of man pages found in English markup. For instance don't replace:
+
+* 'B<' with 'B <' (don't insert a space)
+* 'B<' with 'b<' (keep the B as a capital letter - and don't replace it by the Greek capital letter BETA that looks the same on the screen)
+* "I" with '|' (don't replace the capital letter I with a pipe symbol)
+
+TIP: Using a monospace serif font helps in that matter, whatever be the tool you use: Transifex' UI or a specialzed PO editor.
+
+When translating shell commands, preserve English names of paths when needed. But you may and should translate arguments to be replaced by a value like 'packagename'

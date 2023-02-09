@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title></title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="./slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Domo o Initio</a></div>
+      <div><a href="installer.html">Installator de Slint</a></div>
+      <div><a href="package.html">Pacchetto de Slint </a></div>
+      <div><a href="translators.html">Traductores</a></div>
+      <div><a href="contribute.html">Contribution</a></div>
+      <div><a href="tools.html">Instrumentos</a></div>
+      <div><a href="changelog.html">ChangeLog - Lista de modificationes</a></div>
+      <div id="page-source"><a href="changelog.ia.txt">Fonte de pagina</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">Le Projecto de internationalisation de Slackware</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+      </div>
+<div class="sect1">
+<h2 id="_changelog_registro_de_cambios">Changelog (Registro de cambios)</h2>
+<div class="sectionbody">
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/note.png" alt="Note" />
+</td>
+<td class="content">le Changelog que retracia modificationes que occurreva ante le 27/09/2014 es
+<a href="https://slint.fr/pub/slint-history/Changelog.txt">ci</a>.</td>
+</tr></table>
+</div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Data</th>
+<th align="left" valign="top">Modificationes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">27/09/2014</p></td>
+<td align="left" valign="top"><p class="table">On propone al usator crear usatores regular al fin de le installation.<br />
+Imagines "Full" ISO (continente omne pacchettos expedite con le imagines DVD ISO de  Slackware  in addition al installator Slint ) es disponibile <a href="http://sourceforge.net/projects/slint/files/">ci</a><br />
+Nederlandese nunc es disponibile, gratias a Dik Leenheer e Eric Hameleers.<br />
+Le installatores e le pacchettos nunc installa un pauc de documentation in /usr/doc/slint-&lt;version&gt;-&lt;date&gt;, includente un Slint-HOWTO.txt e un script reinstall-slackware-packages.sh.<br />
+Instructiones pro seliger le linguage de le installation nunc es fornite directemente in le schermo de benvenite de le installatores.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">19/12/2014</p></td>
+<td align="left" valign="top"><p class="table">Svedese nunc es disponibile, gratias a Ingemar Karlsson.
+Gente cec nunc pote usar installatores de Slint installers (version 14.1) sin adjuta per usar un terminal Braille, gratias a Philippe Delavalade pro essayar e proponer como meliorar.<br />
+Le software brltty que permitte usar un terminal Braille durante le installation es anque expedite e configurate in le systema installate, que assi pote esser executate completemente e gerite ex un terminal Braille.<br />
+Le file de configuration de programma de dialogo e le commandos de dialogo que monstra un menu o un lista de selection ha essite modificate, principalmente pro facilitar le uso de un terminal Braille e anque pro personalisar le aspecto del quadratos de dialogo.<br />
+Multe traductiones de files in le installatores, paginas de man e instrumentos administrative  ha essite addite, examinate e corrigite, e le pacchettos de Slint ha essite reconstruite in consequentia.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Ultime actualisation 2016-02-04 22:23:40 CET
+      </div>
+    </div>
+  </div>
+</body>
+</html>

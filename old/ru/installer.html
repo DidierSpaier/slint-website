@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Установщик Slint</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Домашняя страница</a></div>
+      <div><a href="installer.html">Установщик Slint</a></div>
+      <div><a href="package.html">Пакет Slint</a></div>
+      <div><a href="translators.html">Переводчики</a></div>
+      <div><a href="contribute.html">Содействие</a></div>
+      <div><a href="tools.html">Инструменты</a></div>
+      <div><a href="changelog.html">Журнал изменений</a></div>
+      <div id="page-source"><a href="../installer.ru.txt">Код страницы</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Проект интернационализации Slackware</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/installer.html">de</a> | <a href="../en/installer.html">en</a> | <a href="../es/installer.html">es</a> | <a href="../fr/installer.html">fr</a> | <a href="../ia/installer.html">ia</a> | <a href="../id/installer.html">id</a> | <a href="../it/installer.html">it</a> | <a href="../nl/installer.html">nl</a> | <a href="../pl/installer.html">pl</a> | <a href="../pt_BR/installer.html">pt_BR</a> | <a href="../pt_PT/installer.html">pt_PT</a> | <a href="../ru/installer.html">ru</a> | <a href="../sv/installer.html">sv</a> | <a href="../tr/installer.html">tr</a> | <a href="../uk/installer.html">uk</a> |</div>
+        <h1>Установщик Slint</h1>
+      </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Установщик Slint позволяет использовать при установке предпочитаемый язык и
+добавляет в Slackware переведённые инструменты администратора и страницы
+руководств.</p></div>
+<div class="paragraph"><p><em>Терминал Брайля</em> может быть использован для установки и управления
+системой. Инструкции по использованию доступны в
+<a href="https://slint.fr/docs/README_BRLTTY">https://slint.fr/docs/README_BRLTTY</a>.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_загрузка_и_проверка_образа_iso_установщика">Загрузка и проверка образа ISO установщика</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Доступны образы ISO двух размеров</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://sourceforge.net/projects/slint/files/">Полные DVD + USB образы ISO</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://slint.fr/installers">Компактные CD + USB образы ISO</a>, требующие
+  носитель с пакетами Slackware, например, DVD Slackware.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Для загрузки полного образа ISO сперва щёлкните по номеру версии, например,
+14.1.</p></div>
+<div class="paragraph"><p>Проверить целостность образа ISO возможно по его контрольной сумме md5.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Для компактных образов ISO используйте соответствующий файл md5 (его имя
+  оканчивается на .md5).
+</p>
+</li>
+<li>
+<p>
+Для полных образов ISO можно отобразить контрольную сумму щелчком по букве i
+  в чёрном круге справа от ссылки на образ ISO.
+  Например, чтобы сделать многоязычный установщик интернационализированной
+Slackware64-14.1, загрузите образ ISO (для компактного установщика ещё и
+файл md5), затем в том же каталоге выполните одну из следующих команд:
+</p>
+</li>
+</ul></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>md5sum -c slint64-14.1.iso.md5 # результат должен быть положительным
+md5sum slint64-14.1-full.iso # результат должен быть как на веб-сайте</code></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_запись_iso_образа_на_dvd_cd_или_usb_носитель">Запись ISO-образа на DVD, CD или USB-носитель</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_создание_загрузочного_usb_носителя">Создание загрузочного USB-носителя</h3>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">
+<div class="ulist"><ul>
+<li>
+<p>
+Все предыдущее содержимое USB-носителя будет УДАЛЕНО
+</p>
+</li>
+<li>
+<p>
+Перепроверьте вашу команду, чтобы быть уверенным, что не вписали вместо
+  USB-носителя имя раздела жесткого диска, поскольку содержимое этого раздела
+  будет УДАЛЕНО БЕЗВОЗВРАТНО
+</p>
+</li>
+</ul></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>В <em>Linux</em> подключите USB-носитель, затем узнайте его имя следующей командой:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cat /proc/partitions
+dmesg | tail</code></pre>
+</div></div>
+<div class="paragraph"><p>Например, если его имя /dev/sdc, наберите:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>dd if=&lt;filename.iso&gt; of=/dev/sdc bs=1M</code></pre>
+</div></div>
+<div class="paragraph"><p>В <em>Windows</em> воспользуйтесь приложением <a href="http://rufus.akeo.ie/">Rufus</a>, оно
+бесплатно и его исходный код открыт.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_создание_загрузочного_cd_компактного_установщика_или_dvd_полного_установщика">Создание загрузочного CD (компактного установщика) или DVD (полного установщика)</h3>
+<div class="paragraph"><p>В Linux выполните одну из следующих команд, для CD первую, для DVD - вторую.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cat slint64-14.1.iso | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso</code></pre>
+</div></div>
+<div class="paragraph"><p>В <em>Windows 2000/XP/Vista/7</em> воспользуйтесь приложением
+<a href="http://infrarecorder.org/">InfraRecorder</a>, оно бесплатно и его исходный код
+открыт.</p></div>
+<div class="paragraph"><p>В <em>Windows 7/8</em> воспользуйтесь
+<a href="http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file">Windows
+Disk Image Burner</a>, поставляемым вместе с Windows 7 и 8</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_использование_многоязычного_установщика">Использование многоязычного установщика</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Просто вставьте установочный носитель (CD, DVD или USB) и перезагрузите
+машину.</p></div>
+<div class="paragraph"><p>На экране приветствия выберите язык установки, введя соответствующий
+двухсимвольный код.</p></div>
+<div class="paragraph"><p>Многоязычные установщики Slint помимо возможностей оригинального установщика
+Slackware предлагают следующее:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Шрифт и раскладка клавиатуры адаптированы к языку установки.
+</p>
+</li>
+<li>
+<p>
+Когда возможно, для адаптации к разрешению экрана при установке используется
+  шрифт True Type (только Slackware версий 14.0 и 14.1).
+</p>
+</li>
+<li>
+<p>
+Возможно создать обычного пользователя по завершении установки (до
+  перезагрузки).
+</p>
+</li>
+<li>
+<p>
+Возможно задать для установленной системы язык и раскладку клавиатуры,
+  использовавшиеся при установке, и соответственно настроить клавиатуру в X,
+  если был установлен сервер X.
+</p>
+</li>
+<li>
+<p>
+Устанавливает пакет Sint с переводами перечисленных по ссылке
+  :package.html[Пакет Slint] основных утилит Slackware и их страниц
+  руководств, а также документацией в каталоге /usr/doc/slint-&lt;версия&gt;-&lt;дата&gt;,
+  включая Slint-HOWTO.txt и сценарий reinstall-slackware-packages.sh.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Если для установки используете компактную версию установщика, потребуется и
+<em>исходный носитель</em>, то есть, носитель, содержащий пакеты Slackware. Пакеты
+могут быть установлены с CD или DVD Slackware, USB-носителя Slackware, из
+предварительно смонтированного каталога, с раздела жесткого диска, из
+сетевого каталога Samba, с NFS (Network File System, Сетевая Файловая
+Система), с сервера FTP/HTTP. После выбора в меню пункта ИСТОЧНИК,
+установщик подскажет, что делать дальше для выбранного типа носителя .</p></div>
+<div class="paragraph"><p>Чтобы получить носитель-источник, перейдите по ссылке:
+<a href="http://www.slackware.com/getslack/">Получить Slack</a></p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">При необходимости можно заменить установочный носитель тем, что содержит
+пакеты; к тому моменту установщик уже будет полностью загружен в оперативную
+память.</td>
+</tr></table>
+</div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Последнее обновление 2016-04-23 16:20:30 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

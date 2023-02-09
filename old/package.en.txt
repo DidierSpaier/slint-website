@@ -1,0 +1,75 @@
+// Before translating this file, please read instructions about it in https://slint.fr/contribute.html and https://slint.fr/tools.html. Copy this comment verbatim in your translation or just the leading // to tell it's a comment that won't be included in generated html file.
+
+= Slint package
+
+Slint package contains polyglot administration tools and manual pages as well as translation files, provided by the Slint project.
+
+This page explains how to get and install it, then describes its content so you know what is translated in which languages.
+
+Slint package's scope will expand gradually, so just ugrading it will allow you to get updated and newly translated tools and translations in more languages as soon as they become available.
+
+== Download and install or upgrade a Slint package
+
+If you just used Slint installer, there is no need to install the Slint package in addition: that's already done by the installer.
+
+A Slint package is provided for each supported Slackware edition (Slackware 13.37, Slackware 14.0 and Slackware 14.1) in directory https://slint.fr/packages[packages/]. The same package can be installed on 32 bit and 64 versions. To get, check and install (or upgrade) 'Slint package' (for Slackware 14.1 in this example), do this:
+
+----
+wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # you will get the most recent Slint package and its associated md5 file
+md5sum -c slint-14.1*md5 # answer should be "OK", else downloaded package is corrupt
+su # get root's privileges
+upgradepkg --install-new --reinstall slint-14.1*txz # this command installs or upgrade the package
+----
+
+TIP: To prevent 'slackpkg' from removing 'Slint package', add a line to /etc/slackpkg/blacklist with only this word: +
+slint 
+
+[[what_is_translated]]
+== What is translated, in what languages?
+
+A Slint package contains polyglot tools and translation files.
+
+At the time of writing, the following languages are included: French, German, Polish, Portuguese (Brazil), Russian, Spanish (Latin America) and Ukrainian.
+
+Some manual pages are also translated to other languages, as indicated in https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT].
+
+Table below list polyglot administration tools and their purposes.
+
+[format="psv",options="header,autowidth",style="verse"]
+|========
+|Polyglot tool|Purpose|Translated man page
+|adduser|Add an user to the system|
+|explodepkg|Extract the content of a Slackware package in the current directory|man explodepkg
+|installpkg|Install Slackware packages|man installpkg
+|makebootdisk|Make a bootable Linux floppy disk
+(only in Slackware 13.37 and 14.0)|
+|makepkg|Make Slackware packages|man makepkg
+|pkgtool|Maintain software packages and perform configuration tasks:
+=> set services to run at startup
+=> make an USB boot stick
+=> set the mouse type|man pkgtool
+|removepkg|Remove Slackware packages|man removepkg
+|upgradepkg|Upgrade Slackware packages|man upgradepkg
+|eliloconfig|Configure 'elilo' boot loader
+(only in Slackware 14.1)|
+|liloconfig|Configure 'lilo' boot loader|
+|netconfig|Configure the network|
+|timeconfig|Sets the timezone|
+|setconsolefont|Sets a screen font|
+|setup.mouse|Sets the mouse type|
+|xorgsetup|Configure the X server|
+|xwmconfig|Sets the default windows manager or desktop|
+|slackpkg|Automated tools for managing Slackware packages
+(only manual pages are translated)|man slackpkg
+man slackpkg.conf
+|========
+ 
+NOTE: To see polyglot tools' messages and manual pages in your language, you should, as indicated in Slint home page, link:slint.html#anchor-1[set up your prefered locale]
+
+In addition, the Slint package also installs documents in the folder /usr/docs/slint-<version>-<date>, including a Slint-HOWTO.txt and a script reinstall-slackware-packages.sh.
+
+TIP: to list what a Slint package has installed, just type in a terminal:
+----
+less /var/log/packages/slint*
+----
+Use the up and down arrows to navigate in the list, press the letter 'q' to quit.

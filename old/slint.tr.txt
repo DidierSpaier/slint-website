@@ -1,0 +1,134 @@
+
+= Slint ana sayfa
+
+Şimdi http://slackware.com[Slackware] i kendi dilinizde kurabilir ve
+kullanabilirsiniz!
+
+Bu metnin yazıldığı sırada şu dilleri kullanılabilir:
+
+[format="psv", grid="none", frame="none"]
+|========
+|'Flemenkçe'          |'Lehçe'                      |'İsveçli'
+|'İngilizce (ABD)'    |'Portekizce (Brezilya)'      |'Türkçe'  
+|'Fransızca'          |'Portekizce (Portekiz)'      |'Ukraynaca' 
+|'Almanca'            |'Rusça'|                     |
+|'Yunanca'            |'İspanyolca (Latin Amerika)' |
+|========
+
+Onlarca Slint link:translators[yardımsever çevirmenler]imize bu rüyayı
+gerçeğe dönüştürdükleri için teşekkürler.
+
+Slint projesi Slackware[blue]^<<note-1,[1]>>^ tarafından desteklenmez ve ona
+bağlı değildir fakat ona ihtiyaç duyar, bu nedenle Slint kullanıcılarının
+Slackware'i https://store.slackware.com/cgi-bin/store[finansal olarak
+desteklemesini] öneririz.
+
+.Slint Projesi şunları sağlar:
+* Slackware 13.37, 14.0 ve 14.1 için çokdilli 'Slint kurucu'
+* Slackware yönetim araçlarını çok dilli olanlarla değiştiren ve çevirileri
+  kuran 'Slint paketleri'.
+
+Tüm 'Slint kurucuları' aynı Slackware sürümü için 'slint paketi' kurar, ki
+asli Slackware içinden de kurulabilir ve gerekliyse güncellenebilir.
+
+== Slackware'i kendi dilinizde kurun veya sonrasında yerelleştirin
+
+.'Slint kurucu' kullanarak Slackware'i kendi dilinizde kurun
+İki farklı boyutta kullanılabilir ISO kalıbı var: ikisiyle de önyüklenebilir
+kurucular oluşturulabilir
+
+* http://sourceforge.net/projects/slint/files/[DVD + USB tam ISO kalıpları]
+  Slackware'i yüklemek için ihtiyacınız olan her şeyi içerir.
+* https://slint.fr/installers[CD + USB küçük ISO kalıpları] Slackware
+  paketlerini içeren bir medyayla tamamlanmalıdır, örneğin bir Slackware
+  DVD'si.
+
+See page link:installer.html[Slint installer] to know how to download the
+image, put it on a DVD or USB stick and use it.
+
+A Braille terminal can also be used to install then pilot the
+system. Instructions for use are available in
+https://slint.fr/docs/README_BRLTTY.
+
+.Asli Slackware'i yerelleştirin veya bir 'Slint paketi' (yeniden)kurarak çevirileri güncelleyin
+Slint paketleri https://slint.fr/packages[packages/] dizini içine
+yerleştirilmiştir. Slackware yayımınız için bir Slint paketinin nasıl
+kurulduğunu ve paranız karşılığında ne aldığınızı :) öğrenmek için
+link:package.html[Slint package] sayfasına bakınız.
+
+Bir 'Slint paketi'ni kurun ya da yeniden kurun, eğer şunları istiyorsanız:
+
+* Halihazırda kurulmuş Slackware 13.37, 14.0 ya da 14.1 i yerelleştirmek için
+  (Slint kurucu kullanmadıysanız)
+* yeni çevirilmiş araçlar, düzeltmeler ve yei dillerde çeviriler edin.
+
+== Çokdilli Slackware'inizi kullanın
+[horizontal]
+NOTE: Bir locale kullanıcı ortamının diline ve kültürel geleneklere bağlı olarak
+bir alt küme tanımlamasıdır.
+[[anchor-1]]
+.Tercih edilen locale nizi seçin
+Slint kurucu kurulum sırasında kullanılan dile bağlı olarak kurulu sistemde
+varsayılan locale ayarını yapar, fakat eğer asıl Slackware i yerelleştirmek
+için bir Slint paketi kurduysanız bu ayarı kendiniz yapmalısınız.
+
+Tercih ettiğiniz dilde mesajı görmek için
+/etc/profile.d/lang.sh[blue]^<<note-2,[2]>>^ bağlı olarak LANG parametresini
+ayarlayın Örneğin, mesajı Brezilya Portekizcesinde görmek için varsayılan
+`en_US` değerini şöyle değiştirirdiniz:
+
+----
+export LANG=pt_BR.utf8 # locale ismi çevirilen mesajlardaki UTF-8 kodlamasıyla eşleşmesi için .utf8 ile bitmeli 
+----
+Ayrıca, UTF-8 ile kodlanmış çevirilen kılavuz sayfalarını doğru bir şekilde
+görüntülemek için, ~/.bashrc dosyanızın içine şu komutlardan 'birini'
+ekleyin:
+
+----
+export GROFF_ENCODING=utf8 # eğer okuduğunuz tüm kılavuz dosyaları İngilizce ya da UTF-8 kodlanmış ise
+alias uman="GROFF_ENCODING=utf8 man" # eğer kılavuz sayfalarını diğer kodlamalarda da okuyorsanız
+----
+Eğer ikincisini kullanırsanız, UTF-8 kodlanmış kılavuz sayfalarını uç
+birimde görüntülemek için "man" yerine "uman" yazacaksınız.
+
+.Slacware i kendi dilinizde yönetin
+'Slint kurucuları' 'Slint paketleri' gibi ana Slackware araçlarını çok dilli
+olanlarla değiştirir ve çevirilmiş kılavuz sayfalarını ekler.
+
+Şu an müsait tüm çok dilli araçlar link:package#what_is_translated[Slint
+package] sayfasında listelenmiştir. Bunlar şunları sağlar:
+[options="compact"]
+* Yazılım paketlerini yönetin
+* Kullanıcı ekle
+* sisteminizi (yeniden)yapılandırın: önyükleme sırasında hangi sitem
+  düreçlerinin (hizmetler) başlayacağına karar verin, yeni kullanıcılar
+  oluşturun, önyükleyicinizi yeniden yapılandırın, varsayılan masaüstü
+  yöneticisini ya da masaüstünü seçin, ağınızı yapılandırın, USB önyükleme
+  belleği oluşturun
+
+== Katkı ver, yardım al, bağlı kal
+
+Slint projesine katkı vermek istiyorsanız, çevirmen olarak ya da başka
+şekilde, link:contribute[Contribute] sayfasına bakınız
+
+Eğer yardıma ihtiyacınız varsa Linux Questions'a
+http://www.linuxquestions.org/questions/slackware-14/[Slackware forum]
+(İngilizce) yazabilirsiniz.
+
+Genel soru ya da öneriler için, 'Slint paketi'ne yeni çevirilmiş araçlar
+eklemek gibi,
+https://lists.sourceforge.net/lists/listinfo/slint-translators[mailing-list]
+e kayıt olun.
+
+Bağlı kalmak için ve yeni çevirilmiş araçlardan ve çevirilerden faydalanmak
+için link:changelog[ChangeLog] sayfasına başvurun.
+
+'''
+
+[[note-1]]^1. Slackware (R) is a
+http://slackware.com/trademark/trademark.php[registered trademark] of
+Slackware Linux inc.^
+
+[[note-2]]^2. Sadece Slackware 13.37'de bulunan bir hatadan dolayı, 'su' dan
+sonra her komuttan önce LANG i ayarlamalısınız. Örneğin: 'LANG=fr_FR.utf8
+pkgtool'^

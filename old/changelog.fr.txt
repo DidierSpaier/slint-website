@@ -1,0 +1,22 @@
+== Journal de bord
+
+NOTE: Le journal de bord retraçant les modifications antérieures au 27/09/2014 se
+trouve https://slint.fr/pub/slint-history/Changelog.txt[ici].
+
+[format="psv", options="header,autowidth"]
+|========
+|Date|Modifications
+|27/09/2014|
+Il est proposé à l'utilisateur de créer des utilisateurs ordinaires à la fin de l'installation. +
+Des images ISO "complètes" (contenant tous les paquets inclus dans l'image ISO DVD de Slackware en plus de l'installateur Slint) sont disponibles  http://sourceforge.net/projects/slint/files/[ici] +
+Le Néerlandais est maintenant disponible, merci à Dik Leenheer et Eric Hameleers. +
+Les installateurs et paquets installent maintenant  quelques documents dans /usr/doc/slint-<version>-<date>, y compris un Slint-HOWTO.txt et un script reinstall-slackware-packages.sh. +
+Des instructions pour choisir la langue d'installation sont maintenent fournies directement dans l'écran d'accueil de l'installateur.
+
+|19/12/2014|
+La traduction en Suédois est disponible, merci à Ingemar Karlsson.
+Les aveugles peuvent maintenant utiliser les installateurs Slint (version 14.1) sans aide avec un terminal Braille, merci à  Philippe Delavalade pour les tests et les suggestions d'amélioration. +
+Le logiciel brltty qui permet d'utiliser un terminal Braille est aussi livé et configuré dans le système installé, qui peut ainsi être utilisé et piloté avec un terminal Braille. +
+le fichier de configuration du programme dialog et les commandes dialog qui affichent un menu ou une liste à cocher ont été modifiés, principalement pour faciliter l'utilsation d'un terminal Braille et aussi pour personnaliser l'apparence des boites de dialogue. +
+Plusieurs traductions de fichiers des installateurs, pages de manuels et outils d'administration ont été ajoutés, revus et corrigés et les paquets Slint ont été reconstruits en conséquence.
+|========

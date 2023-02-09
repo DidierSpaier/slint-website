@@ -1,0 +1,84 @@
+= Penterjemah dan kontributor Slint
+
+Halaman ini berisi daftar semua penterjemah dan reviewer Slint yang
+terdaftar pada Transifex.
+
+Banyak terima kasih kepada semua!
+
+Didier Spaier
+
+[cols="50,50", format="csv", width="80%", options="header"]
+|========
+Penterjemah, Bahasa
+dlee99,Belanda
+Eric Hameleers,Belanda
+Kaj Huisman,Belanda
+ponce,Italia
+celyr,Italia
+giogio, Italia
+kooru,Italia
+giuseppep ,Italia
+giogio, Italia
+Sébastien Boillod,Perancis
+Didier Spaier,Perancis
+Nicolas Kovacs, Perancis
+Marcin Herda,Polandia
+Piotr Maksymiec,Polandia
+elesmod,Polandia
+lukkon,Polandia
+Christian Ruesch,Jerman
+franzen,Jerman
+Johannes Georgi,Jerman
+Maik Wagner,Jerman
+Marcel Saegebarth,Jerman
+spongetron,Jerman
+Sammyboy (Marek Srejma),Jerman
+titopoquito,Jerman
+Adriano Balani,Portugis Brazil
+Enrico Nicoletto,Portugis Brazil
+Fela,Portugis Brazil
+Gabriel Magno,Portugis Brazil
+Icavalheiro,Portugis Brazil
+Retalhador,Portugis Brazil
+br_Orion,Portugis Brazil
+igaldino,Portugis Brazil
+Malkom Rodrigo,Portugis Brazil
+marcelo.castro,Portugis Brazil
+Xerxes Lins,Portugis Brazil
+hugok (Hugo Carvalho), Portugis (Portugal)
+Dimitris Tzemos, Yunani
+dreamwalking,Yunani
+George Vlahavas,Yunani
+Efstathios Iosifidis,Yunani
+Constantine Mousafiris,Yunani
+Diantre, Spanyol (Amerika Latin)
+AlvaroG,Spanyol (Amerika Latin)
+ecoslacker,Spanyol (Amerika Latin)
+sombragris,Spanyol (Amerika Latin)
+Serg Bormant,Rusia
+Sergev Ignatev,Rusia
+Yaroslav Shmelev,Rusia
+Graf,Rusia
+adioe3,Bosnia (Bosnia dan Herzegovina)
+Malsasa,Indonesia
+willysr,Indonesia
+tuapembual,Indonesia
+kisil,Ukraina
+uatech,Ukraina
+xuser13,Ukraina
+Koljan1970 (Микола Ткач),Ukrania
+AaLeSsHhKka (Oleh Tsyupka),Ukraina
+StreamThreader,Ukrainian
+Ekin Akoğlu,Turki
+kaanureyen07, Turki
+Kemal Ökmen,Turki
+Orhan Orhan, Turki
+Onur Özdemir,Turki
+Samet Yilmaz,Turki
+Vilender,Turki
+zm1990s (Zhang Min), (China)
+guanx, (China)
+Smokey, Romania
+tuxbg (Krustio),Bulgaria
+giogio, Interlingua
+|========

@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Pemasang Slint</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Beranda</a></div>
+      <div><a href="installer.html">Installer Slint</a></div>
+      <div><a href="package.html">Paket Slint</a></div>
+      <div><a href="translators.html">Penterjemah</a></div>
+      <div><a href="contribute.html">Berkontribusi</a></div>
+      <div><a href="tools.html">Perangkat</a></div>
+      <div><a href="changelog.html">Catatan Perubahan</a></div>
+      <div id="page-source"><a href="../installer.id.txt">Halaman Sumber</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Proyek Internasionalisasi Slackware</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/installer.html">de</a> | <a href="../en/installer.html">en</a> | <a href="../es/installer.html">es</a> | <a href="../fr/installer.html">fr</a> | <a href="../ia/installer.html">ia</a> | <a href="../id/installer.html">id</a> | <a href="../it/installer.html">it</a> | <a href="../nl/installer.html">nl</a> | <a href="../pl/installer.html">pl</a> | <a href="../pt_BR/installer.html">pt_BR</a> | <a href="../pt_PT/installer.html">pt_PT</a> | <a href="../ru/installer.html">ru</a> | <a href="../sv/installer.html">sv</a> | <a href="../tr/installer.html">tr</a> | <a href="../uk/installer.html">uk</a> |</div>
+        <h1>Pemasang Slint</h1>
+      </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Pemasang Slint memungkinkan Anda untuk menggunakan bahasa pilihan Anda
+selama instalasi, dan menambahkan alat administrasi yang telah diterjemahkan
+dan halaman manual untuk Slackware.</p></div>
+<div class="paragraph"><p>A <em>Braille terminal</em> can also be used to install then pilot the
+system. Instructions for use are available in
+<a href="https://slint.fr/docs/README_BRLTTY">https://slint.fr/docs/README_BRLTTY</a>.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unduh_dan_perikasan_iso_image_pemasang">Unduh dan perikasan ISO image pemasang</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Two sizes of ISO images are available:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The <a href="http://sourceforge.net/projects/slint/files/">DVD + USB full ISO images</a>
+  contain all you need to install Slackware.
+</p>
+</li>
+<li>
+<p>
+The <a href="https://slint.fr/installers">CD + USB small ISO images</a> need to be
+  completed by a media containing the Slackware packages, for instance a
+  Slackware DVD.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>To download a full ISO image, first click on its version number, for
+instance 14.1.</p></div>
+<div class="paragraph"><p>You can check the integrity of the ISO image with its md5 check sum.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+For the small ISO images, downloading and using its associated md5 file
+  (whose name ends in .md5).
+</p>
+</li>
+<li>
+<p>
+For the full ISO image, you can display the check sum clicking on the letter
+  i in a black circle on the right of the link to the ISO image.
+  For instance to make a polyglot installer of an internationalized
+Slackware64-14.1, download the ISO image (and the md5 file, in case of a
+small installer) then in the same directory type for instance one of
+following commands
+</p>
+</li>
+</ul></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>md5sum -c slint64-14.1.iso.md5 # jawaban seharusnya adalah: OK
+md5sum slint64-14.1-full.iso # the result should be the same as displayed on the website</code></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_burn_the_iso_image_on_a_dvd_a_cd_or_an_usb_stick">Burn the ISO image on a DVD, a CD or an USB stick</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_membuat_bootable_stik_usb">Membuat bootable stik USB</h3>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">
+<div class="ulist"><ul>
+<li>
+<p>
+Semua konten sebelumnya dari stik USB akan HILANG
+</p>
+</li>
+<li>
+<p>
+Baca ulang dengan seksama perintah Anda untuk memastikan bahwa Anda tidak
+  menulis nama partisi hard disk dan tertikan dengan stik USB atau konten
+  partisi tersebut akan hilang tanda bisa dikembalikan.
+</p>
+</li>
+</ul></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Pada <em>Linux</em> masukkan USB stick, kemudian periksa namanya dengan perintah
+berikut:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cat /proc/partitions
+dmesg | tail</code></pre>
+</div></div>
+<div class="paragraph"><p>Jika namanya adalah misal /dev/sdc, ketik:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>dd if=&lt;namaberkas.iso&gt; of=/dev/sdc bs=1M</code></pre>
+</div></div>
+<div class="paragraph"><p>Pada <em>Windows</em> gunakan aplikasi <a href="http://rufus.akeo.ie/">Rufus</a> ini bebas dan
+berkode sumber terbuka.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_make_a_bootable_cd_small_installer_or_dvd_big_installer">Make a bootable CD (small installer) or DVD (big installer)</h3>
+<div class="paragraph"><p>On <em>Linux</em> type a command like the first one below for a CD, or the second
+one for a DVD.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cat &lt;namafile.iso&gt; | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso</code></pre>
+</div></div>
+<div class="paragraph"><p>Pada <em>Windows 2000/XP/Vista/7</em> gunakan aplikasi
+<a href="http://infrarecorder.org/">InfraRecorder</a> ini bebas dan berkode sumber
+terbuka.</p></div>
+<div class="paragraph"><p>Pada <em>Windows 7/8</em> gunakan
+<a href="http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file">Windows
+Disk Image Burner</a>, dikirimkan dengan Windows 7 dan 8</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_your_polyglot_installer">Use your polyglot installer</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Just insert the installation media (CD, DVD or USB stick) and reboot your
+machine.</p></div>
+<div class="paragraph"><p>On the greeting screen, you will choose your prefered language for
+installation typing the corresponding two digits code.</p></div>
+<div class="paragraph"><p>Beyond being polyglot, the Slint installers offer following features in
+addition to those of the genuine Slackware installers:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Default font and keymap are adapted to the language used for installation.
+</p>
+</li>
+<li>
+<p>
+Whenever possible, a True Type font is used during installation, to
+  automatically adapt the font size to the screen&#8217;s resolution (for Slackware
+  versions 14.0 and 14.1 only).
+</p>
+</li>
+<li>
+<p>
+Option to create regular user accounts at end of installation (before
+  rebooting) is provided.
+</p>
+</li>
+<li>
+<p>
+Options are provided to set as defaults in the installed system the language
+  and keymap used during installation, and make corresponding settings of
+  keyboard under X if the X server is installed.
+</p>
+</li>
+<li>
+<p>
+A Slint package is installed, that provides translations of the main
+  Slackware tools and their manual pages, listed in <a href="package.html">Slint
+  package</a>, as well as documents put in /usr/doc/slint-&lt;version&gt;-&lt;date&gt;,
+  including a Slint-HOWTO.txt and a script reinstall-slackware-packages.sh.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>If you use the small version of the installer, during installation you will
+also need a <em>source media</em>, in other words a media containing Slackware
+packages. Packages can be installed from a Slackware DVD/CDs, a Slackware
+USB stick, a pre-mounted directory, a hard drive partition, a Samba share,
+NFS (Network File System), a FTP/HTTP server. When choosing the SOURCE in
+the menu, the installer tells you what to do according to the kind of
+selected media.</p></div>
+<div class="paragraph"><p>To get a source media, follow this link:
+<a href="http://www.slackware.com/getslack/">Get Slack</a></p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">Jika perlu Anda dapat menghapus CD instalasi untuk memasukkan DVD yang
+berisi paket sebaliknya, pada saat tersebut pemasang sudah dimuat di dalam
+memori.</td>
+</tr></table>
+</div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Terakhir diperbarui 2016-04-23 16:20:27 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

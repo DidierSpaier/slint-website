@@ -1,0 +1,256 @@
+= Contribuir al Proyecto Slint
+
+¿Así que quiere ayudar y contribuir al proyecto Slint? !Bienvenido a bordo!
+
+El trabajo necesario para proveer los productos de Slint es en su mayoría
+traducción y revisión de scripts de shell, los cuales forman los
+instaladores y herramientas de administración de Slackware, así como
+documentación orientada a los usuarios de Slackware en forma de archivos de
+texto o páginas de manual.
+
+Idealmente, nos gustaría que los traductores:
+[options="compact"]
+* sean capaces de comunicarse en Inglés y que tengan bastante fluidez en el
+  lenguaje destino, preferiblemente su lenguaje nativo
+* entiendan vocabulario técnico relacionado con la instalación y
+  administración de un sistema Linux
+* sean usuarios de Slackware
+* sean capaces de leer y entender scripts de shell simples
+
+Pero aunque no cumpla estas expectativas, no dude en ofrecerse como
+voluntario: hay muchas tareas en las que su talento puede ser útil.
+
+== Hágase voluntario y defina sus contribuciones
+
+Para ofrecerse como traductor voluntario, preferiblemente utilice la
+plataforma Transifex: primero
+https://www.transifex.com/signup/contributor/[regístrese en Transifex] (es
+gratis), luego vaya a https://www.transifex.com/projects/p/slint/[la página
+del proyecto Slint] en Transifex:
+[options="compact"]
+* Si su lenguaje está listado, haga click en él, luego en la página del
+  lenguaje haga click en "Unirse al equipo".
+* De otra forma, haga click en "Solicitar un lenguaje" (en la barra celeste
+  justo arriba de la lista de lenguajes)
+
+Pero si desea hacer preguntas primero, o proponer su ayuda para otras tareas
+diferentes de la traducción, envíe un correo electrónico al encargado de
+Slint: didier punto spaier arroba epsm punto fr.
+
+Entonces podrá consultar con el coordinador de su equipo o el administrador
+de Slint para definir el "por qué", "qué", "cómo" y el "cuándo" de sus
+contribuciones a Slint.
+
+== Conozca nuestros métodos y herramientas y esté listo a comunicarse dentro del equipo Slint ==
+
+Por favor lea <<recommendations,Recomendaciones prácticas para traductores>>
+abajo.
+
+Entonces, familiarícese con con las link:tools.html[Herramientas] que
+usamos. Para utilizarlas mejor necesitará tener instalada una distribución
+de Linux, preferiblemente un sistema Slackware completo, incluyendo los
+siguientes paquetes:
+
+* ../extra/aspell-words-lists/<paquetes para su lenguaje> para revisión
+  ortográfica
+* ../kdei/<paquete kde-l10n para su lenguaje> para localizar la interfaz de
+  usuario de Lokalize si lo utiliza
+
+Por último, si bien no menos importante, necesitamos trabajar juntos como un
+equipo, así que:
+
+* Por favor regístrese en Transifex, aunque no utilice su editor en línea, y
+  luego revise toda la
+  https://www.transifex.com/settings/notices/[configuración de
+  notificaciones]. De esta forma es más fácil mantener a todos los
+  colaboradores informados de inmediato sobre cualquier cosa de interés
+  general. Por favor indique su nombre completo, aún si usa un apodo.
+* Le sugerimos enfáticamente que se suscriba a la
+  https://lists.sourceforge.net/lists/listinfo/slint-translators[lista de
+  correo slint-translators]. Esto le permitirá hacer y contestar preguntas,
+  participar en discusiones, hacer sugerencias y propuestas.
+* Esté preparado para proveer una dirección de correo electrónico, para que el
+  coordinador de su equipo y el encargado de Slint puedan comunicarse.
+* Puede también utilizar la función de Discusiones en Transifex en la página
+  de su lenguaje del proyecto Slint.
+* Puede también seguir
+  http://www.linuxquestions.org/questions/slackware-14/internationalized-slackware-14-installer-what-languages-to-start-4175455701/[este
+  hilo] en el foro de Slackware de LinuxQuestions.org. Para hacer esto,
+  regístrese en LQ y ponga un mensaje en el hilo, o despliéguelo y haga click
+  en "Thread Tools => Subscribe to this Thread" (en la barra azul justo arriba
+  del primer mensaje).
+
+== Alcance de la traducción
+
+=== Lenguajes destino
+
+Al momento de escribir esto, el instalador slint y las principales
+herramientas de administración de Slackware están completamente traducidas
+en Francés, Alemán, Polaco, Portugués, Ruso, Español y Ucraniano. Otras
+traducciones están en progreso, su estado actual puede ser revisado en
+https://www.transifex.com/projects/p/slint/resource/slint/[esta página].
+
+Las páginas de manual están traducidas en más lenguajes, las traducciones
+completas están listadas en el archivo
+https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT]
+
+=== Contenido traducido
+
+El contenido traducido se conforma de archivos que incluyen los mensajes
+originales en Inglés junto a su traducción, llamados archivos PO. Estos
+archivos son producidos y procesados por la aplicación GNU 'gettext'. Cada
+grupo de mensajes (en Inglés en el caso de Slint) para la traducción se
+almacenan en un archivo POT, a partir del cual se genera un archivo PO
+correspondiente para cada lenguaje destino. Vea la página
+http://docs.slackware.com/howtos:misc:internationalization_and_localization_of_shell_scripts[Internationalización
+y localización de scripts de shell] en
+http://docs.slackware.com/start[SlackDocs] para saber más sobre esto.
+
+Los mensajes incluidos en un archivo POT son obtenidos de uno o varios
+scripts de shell o páginas de manual. A continuación está la lista de los
+archivos POT actuales en Slint y sus alcances (vea la página
+link:tools.html[Herramientas] para saber cómo usar las herramientas
+relacionadas).
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|Archivo POT|Nombre del Recurso (Transifex)|Alcance|Herramienta asociada
+|slackware.pot|https://www.transifex.com/projects/p/slint/resource/slint/[slint]|Instalador Slint
+Paquete Slint (sin páginas de manual)|toolbox.sh
+|pkgtools.pot|https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools]|páginas de manual contenidas en el paquete 'pkgtools'|gen_man_pages
+|slackpkg.pot|https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]|páginas de manual contenidas en el paquete 'slackpkg'|gen_man_pages
+|slint.pot|https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/[POT file for slint.sh]|script slint.sh, vea la página link:tools.html[Herramientas]|toolbox_slint_sh
+|index.html.pot|https://www.transifex.com/projects/p/slint/resource/indexhtml/[index.html]|link:index.html[Página de inicio antigua de Slint]|(ninguno)
+|template.pot|https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]|Barra lateral y título superior de las páginas de Slint|(ninguno)
+|(ninguno)|https://www.transifex.com/projects/p/slint/resource/slinttxt/[slint.txt]|link:slint.html[Página de Inicio de Slint]|(ninguno)
+|(ninguno)|https://www.transifex.com/projects/p/slint/resource/installertxt/[installer.txt]|link:installer.html[Instalador Slint]|(ninguno)
+|(ninguno)|https://www.transifex.com/projects/p/slint/resource/packagetxt/[package.txt]|link:package.html[Paquete Slint]|(ninguno)
+|(ninguno)|https://www.transifex.com/projects/p/slint/resource/translatorstxt/[translators.txt]|link:translators.html[Traductores]|(ninguno)
+|(ninguno)|https://www.transifex.com/projects/p/slint/resource/contributetxt/[contribute.txt]|link:contribute.html[Contribuir]|(ninguno)
+|(ninguno)|https://www.transifex.com/projects/p/slint/resource/toolstxt/[tools.txt]|link:tools.html[Herramientas]|(ninguno)
+|(ninguno)|https://www.transifex.com/projects/p/slint/resource/changelogtxt/[changelog.txt]|link:changelog.html[ChangeLog]|(ninguno)
+|========
+
+=== Transición de las páginas web antiguas a las nuevas
+
+Nuestra link:index.html[página de inicio antigua] había sido escrita
+directamente en xhtml. Esta página ha sido traducida a 13 lenguajes, y será
+reemplazada progresivamente por la página actual, llamada tentativamente
+link:slint.html[slint.html].
+
+Las páginas web están listadas en el menú en la barra lateral. El enlace
+link:slint.html[página de inicio] reemplazará progresivamente el antiguo, el
+cual ya no será traducido a más lenguajes ni será actualizado.
+
+[[new_web_pages]]
+=== Traducción de páginas web
+Algunas de las páginas web están orientadas al usuario final:
+link:slint.html[slint.html], link:installer.html[installer.html] and
+link:package.html[package.html]. Estas páginas, así como
+https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]
+(usado para generar el título superior traducido y la barra lateral
+izquierda de las páginas web) deben ser traducidas con prioridad.
+
+Otras páginas web: link:contribute.html[Contribuir],
+link:translators.html[Traductores], link:tools.html[Herramientas] y
+link:changelog.html[ChangeLog] también pueden ser traducidas (eso depende de
+cada equipo de traducción) pero 'después' de que las páginas listadas en el
+párrafo anterior han sido traducidas.
+
+NOTE: Para un lenguaje dado, al traducir template.po, es mejor dejar los nombres
+en Inglés de las páginas web sin traducir (por ahora), de forma que los
+visitantes entiendan que al hacer click en los enlaces correspondientes en
+el menú se desplegarán estas páginas en Inglés.
+
+Todas las páginas nuevas se generan utilizando la aplicación
+http://asciidoc.org['AsciiDoc'], incluída en Slackware (se encuentra en el
+paquete linuxdoc-tools). Los archivos fuente son archivos de texto,
+incluyendo las instrucciones de formato para asciidoc, por ejemplo, dos
+símbolos de igual al principio de una línea son considerados como un
+encabezado de segundo nivel, el cual será convertido a una etiqueta <h2> en
+el archivo XHTML generado por asciidoc.
+
+Instrucciones específicas y consejos para traducir archivos de texto
+procesados por 'AsciiDoc' se proveen en la página
+link:tools.html#asciidoc[Traducción de archivos de texto para ser procesados
+con 'AsciiDoc' para generar páginas web].
+
+Para cada lenguaje, cuando la traducción de template.po,
+link:slint.html[slint.html], link:installer.html[installer.html] y
+link:package.html[package.html] esté completa, la página de inicio antigua
+será reemplazada con la nueva, de forma que los usuarios se beneficien con
+las nuevas páginas en cada lenguaje.
+
+[[recommendations]]
+== Recomendaciones prácticas para traductores
+
+* Dependiendo de la cantidad de trabajo necesario y de los recursos
+  disponibles, puede haber un traductor o un grupo de traductores por cada
+  lenguaje destino. En todos los casos, recomiendo que por lo menos una
+  persona sea responsable de organizar el trabajo de equipo, revisando las
+  traducciones y transmitiendo el archivo PO revisado al
+  administrador. Llamemos a esta persona el coordinador del equipo.
+* No se sienta obligado de hacer una traducción literal. Rara vez esta es la
+  mejor manera de expresar el significado, y adicionalmente genera oraciones
+  muy largas que no caben en el espacio permitido.
+* Utilice un editor PO especializado, 'no' un editor de texto general. Esto le
+  ayuda a prevenir editar involuntariamente textos 'msgid', también facilita
+  el trabajo y automatiza revisiones adicionales, tales como la presencia de
+  una variable en la traducción con la misma ortografía que en el original.
+* Al traducir, seleccione una fuente serif con ancho fijo (o "monoespacio"),
+  como Courier. Esto le permite distinguir visualmente caracteres que de otra
+  forma se verían igual, además de permitirle revisar el largo de las líneas
+  cuando es importante.
+Si es posible, revise la disposición de los mensajes. Puede hacer esto
+observando el contexto en el archivo origen correspondiente. Aún mejor,
+simplemente ejecute el script traducido.  Esto es especialmente importante
+si está traduciendo cajas de diálogo. En particular, tenga cuidado de no
+escribir oraciones muy largas en una sola línea si es aparente que el texto
+no continuará en la siguiente línea.
+* Tenga presente que en el modo VGA (utilizado por instaladores en
+  particular), el largo de las líneas es en teoría 80 caracteres, pero en la
+  práctica frecuentemente es 74.
+* No agregue signos de pregunta que no están presentes en el mensaje original.
+* Si el mensaje se refiere a etiquetas (texto en los botones) en cajas de
+  diálogo, tales como "OK", "Yes", "NO", "Continue" y "Cancel", revise como
+  estas etiquetas están traducidas en la interfaz de los diálogos en su
+  lenguaje, y use las mismas palabras.
+* Evite coloquialismos y argot técnico.
+* Para "cortar" (o terminar) una línea dentro de una caja de "diálogo", debe
+  escribir \n: presionar [Enter] 'no' insertará un caracter de "nueva línea"
+  en el texto que ve el usuario.
+
+Adicionalmente, es necesario cumplir con los requerimientos de gettext para
+que funcione:
+
+* Si una palabra que empieza con un símbolo de dólar se incluye en el texto
+  original, ésta debe estar presente en la traducción con exactamente la misma
+  ortografía (la distinción entre mayúsculas y minúsculas es importante).
+* El texto de la traducción debe incluir un caracter de "nueva línea" (o
+  cambio de línea, representado por "\n") al principio o al final, exactamente
+  como lo tenga el texto original. Del mismo modo, si el texto original no
+  tiene el caracter, entonces la traducción no debe tenerlo.
+* Un caracter de barra invertida "\" por sí mismo no está permitido en la
+  traducción.
+
+Para revisar que su traducción pase los requerimientos de gettext, puede
+ejecutar el siguiente comando:
+
+----
+  msgfmt -c <nombre del archivo PO>
+----
+
+[[warning_man_pages]]
+=== Advertencia sobre la traducción de páginas de manual
+
+Preserve cuidadosamente la sintaxis de las páginas de manual con el marcado
+en Inglés. Por ejemplo, no reemplace:
+
+* 'B<' con 'B <' (no inserte un espacio)
+* 'B<' con 'b<' (mantenga la B mayúscula - no la reemplace por la letra griega
+  mayúscula BETA, que se ve similar en la pantalla)
+* "I" con '|' (no reemplace la I mayúscula con un símbolo de barra vertical)
+
+Al traducir comandos de shell, preserve los nombres en inglés de las rutas
+de directorios cuando sea necesario. Pero puede y debe traducir los
+argumentos que se reemplazan con un valor como 'packagename'.

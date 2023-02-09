@@ -1,0 +1,84 @@
+= Перекладачі та інші учасники Slint
+
+На цій сторінці наведено перелік усіх перекладачів та рецензентів Slint,
+зареєстрованих на платформі Transifex.
+
+Величезне всім дякую!
+
+Didier Spaier
+
+[cols="50,50", format="csv", width="80%", options="header"]
+|========
+Перекладач, Мова
+dlee99 (Dik Leenheer),Голландська
+Eric Hameleers, нідерландська
+Kaj Huisman,Голландська
+ponce, італійська
+celyr, італійська
+giogio, Італійська
+giuseppep (Giuseppe Pignataro),Італійська
+ihaveadrin,Італійська
+kooru, італійська
+Sébastien Boillod, французька
+Didier Spaier, французька
+Nicolas Kovacs,  французька
+Marcin Herda, польська
+Piotr Maksymiec, польська
+elesmod, польська
+lukkon, польська
+Christian Ruesch, німецька
+franzen, німецька
+Johannes Georgi, німецька
+Maik Wagner, німецька
+Marcel Saegebarth, німецька
+spongetron, німецька
+Sammyboy (Marek Srejma),Німецька
+titopoquito, німецька
+Adriano Balani, портуґальська (Бразилія)
+Enrico Nicoletto, портуґальська (Бразилія)
+Fela, портуґальська (Бразилія)
+Gabriel Magno, портуґальська (Бразилія)
+Icavalheiro, портуґальська (Бразилія)
+Retalhador, портуґальська (Бразилія)
+br_Orion, портуґальська (Бразилія)
+igaldino, портуґальська (Бразилія)
+Malkon Rodrigo, портуґальська (Бразилія)
+marcelo.castro, портуґальська (Бразилія)
+Xerxes Lins, портуґальська (Бразилія)
+hugok (Hugo Carvalho), портуґальська (Портуґалія)
+Dimitris Tzemos, грецька
+dreamwalking, грецька
+George Vlahavas, грецька
+Efstathios Iosifidis, грецька
+Constantine Mousafiris, грецька
+Diantre, іспанська (Латинська Америка)
+AlvaroG, іспанська (Латинська Америка)
+ecoslacker, іспанська (Латинська Америка)
+sombragris, іспанська (Латинська Америка)
+Serg Bormant, російська
+Sergey Ignatev, російська
+Yaroslav Shmelev, російська
+Graf, російська
+adioe3, боснійська (Боснія та Герцеґовина)
+Malsasa,Індонезійська
+willysr, індонезійська
+tuapembual,Індонезійська
+kisil, українська
+uatech, українська
+xuser13, українська
+Koljan1970 (Микола Ткач), українська
+AaLeSsHhKka(Oleh Tsyupka), українська
+StreamThreader,Українська
+Ekin Akoğlu, турецька
+kaanureyen07, Турецька
+Kemal Ökmen, турецька
+Orhan Orhan, турецька
+Onur Özdemir, турецька
+Samet Yilmaz, турецька
+Vilender, турецька
+zm1990s (Zhang Min), китайська (Китай)
+guanx, китайська (Китай)
+Smokey, румунська
+tuxbg (Krustio), болґарська
+giogio, Інтерлінгва
+|========

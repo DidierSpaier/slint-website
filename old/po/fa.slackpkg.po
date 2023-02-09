@@ -1,0 +1,1578 @@
+# Copyright (C) 2015 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# , 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: slint\n"
+"POT-Creation-Date: 2013-10-15 17:21+0200\n"
+"PO-Revision-Date: 2015-10-08 23:47+0330\n"
+"Last-Translator: \n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fa_IR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.1\n"
+
+#. type: TH
+#: slackpkg:1
+#, no-wrap
+msgid "SLACKPKG"
+msgstr "SLACKPKG"
+
+#. type: TH
+#: slackpkg:1 slackpkg.conf:1
+#, no-wrap
+msgid "May 2010"
+msgstr "می ۲۰۱۰"
+
+#. type: TH
+#: slackpkg:1 slackpkg.conf:1
+#, no-wrap
+msgid "slackpkg-2.81.1"
+msgstr "slackpkg-2.81.1"
+
+#. type: SH
+#: slackpkg:2 slackpkg.conf:2
+#, no-wrap
+msgid "NAME"
+msgstr "نام"
+
+#. type: Plain text
+#: slackpkg:5
+msgid "B<slackpkg> - Automated tool for managing Slackware Linux packages"
+msgstr "؛ B<slackpkg> - ابزار اتوماتیک برای مدیریت پکیج های اسلکور لینوکس ؛"
+
+#. type: SH
+#: slackpkg:6
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "اختصار"
+
+#. type: Plain text
+#: slackpkg:11
+msgid ""
+"B<slackpkg> B<[OPTIONS]> B<{install|remove|search|upgrade|reinstall|blacklist}"
+"> B<{>I<PATTERN>B<|>I<FILE>B<}>"
+msgstr ""
+"B<slackpkg> B<[گزینه ها]> B<{install|remove|search|upgrade|reinstall|"
+"blacklist}> B<{>I<فایل>B<|>I<الگو>B<}>"
+
+#. type: Plain text
+#: slackpkg:13
+msgid "B<slackpkg [OPTIONS] {clean-system|upgrade-all|install-new}>"
+msgstr "B<slackpkg [گزینه ها] {clean-system|upgrade-all|install-new}>"
+
+#. type: Plain text
+#: slackpkg:18
+msgid ""
+"B<slackpkg> B<[OPTIONS]> B<{search|file-search}> B<{>I<PATTERN>B<|>I<FILE>B<}>"
+msgstr ""
+"B<slackpkg> B<[گزینه ها]> B<{search|file-search}> B<{>I<فایل>B<|>I<الگو>B<}>"
+
+#. type: Plain text
+#: slackpkg:23
+msgid ""
+"B<slackpkg> B<[OPTIONS]> B<{generate-template|install-template|remove-"
+"template}> I<TEMPLATENAME>"
+msgstr ""
+"B<slackpkg> B<[گزینه ها]> B<{generate-template|install-template|remove-"
+"template}> I<قالب>"
+
+#. type: Plain text
+#: slackpkg:26
+msgid "B<slackpkg [OPTIONS] info> I<PACKAGE>"
+msgstr "B<slackpkg [گزینه ها] info> I<پکیج>"
+
+#. type: Plain text
+#: slackpkg:28
+msgid "B<slackpkg [OPTIONS] update [gpg]>"
+msgstr "B<slackpkg [گزینه ها] update [gpg]>"
+
+#. type: Plain text
+#: slackpkg:30
+msgid "B<slackpkg [OPTIONS] {new-config|check-updates}>"
+msgstr "B<slackpkg [گزینه ها] {new-config|check-updates}>"
+
+#. type: Plain text
+#: slackpkg:32
+msgid "B<slackpkg [OPTIONS] help>"
+msgstr "B<slackpkg [گزینه ها] help>"
+
+#. type: SH
+#: slackpkg:33 slackpkg.conf:6
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "توصیف"
+
+#. type: Plain text
+#: slackpkg:38
+msgid ""
+"Slackpkg is a tool for those who want to easily install or upgrade packages "
+"via the network.  With slackpkg, you can have a minimal installation of "
+"Slackware Linux and install/upgrade only those packages you need most."
+msgstr ""
+"فرمان slackpkg یک ابزار برای کسانی است که می خواهند به راحتی از طریق شبکه "
+"پکیج ها را نصب کنند و یا ارتقا دهند. با استفاده از این ابزار شما می توانید "
+"اسلکور را به صورت حداقلی نصب کرده و صرفا پکیج هایی را نصب کرده و یا ارتقاء "
+"دهید که به آنها بیشتر نیاز دارید."
+
+#. type: Plain text
+#: slackpkg:42
+msgid ""
+"You don't need to setup NFS or make dozens of CDs for all your computers; all "
+"you need to do is to type one command and all of the latest official "
+"Slackware packages will be at your fingertips."
+msgstr ""
+"شما نیاز به تنظیم فایل سیستم شبکه (NFS) و یا ساخت تعداد زیادی CD برای تمام "
+"کامپیوترهایتان ندارید. آنچه نیاز دارید تنها تایپ یک فرمان است تا آخرین نسخه "
+"پکیج های رسمی اسلکور در اختیار شما باشد."
+
+#. type: SH
+#: slackpkg:43
+#, no-wrap
+msgid "INSTRUCTIONS"
+msgstr "راهنما"
+
+#. type: Plain text
+#: slackpkg:47
+msgid ""
+"Slackpkg has many features.  It can search for specific files, remove all "
+"third-party packages in your system, install packages added to Slackware "
+"since your last update, show package descriptions, etc."
+msgstr ""
+"ابزار Slackpkg امکانات زیادی دارد. می تواند فایل خاصی را جستجو کند، تمام پکیج "
+"های غیررسمی را از سیستم شما حذف کند، تمام پکیج های اضافه شده به اسلکور پس از "
+"آخرین بروزرسانی را روی سیستم نصب کند، توصیف پکیج را نمایش دهد و غیره."
+
+#. type: Plain text
+#: slackpkg:50
+msgid ""
+"Before you do anything, you will need to uncomment one mirror in /etc/"
+"slackpkg/mirrors file and run:"
+msgstr ""
+"قبل از اینکه عملی انجام دهید, باید یکی از مخازن واقع در فایل موجود در مسیر "
+"etc/slackpkg/mirrors/ بدون علامت کرده (علامت # را از جلوی آینه مورد نظرتان "
+"حذف کرده) و فرمان زیر را اجرا کنید: "
+
+#. type: Plain text
+#: slackpkg:53 slackpkg:91 slackpkg:137
+msgid "# slackpkg update"
+msgstr "# slackpkg update"
+
+#. type: Plain text
+#: slackpkg:58
+msgid ""
+"The \"update\" action will download and format the list of files and packages "
+"in Slackware.  Every time this list is changed, the update need to be run."
+msgstr ""
+"عملیات \"update\" لیست فایلها و پکیج ها را در اسلکور دانلود و فرمت می کند. هر "
+"زمانی که این لیست تغییر کند لازم است که update دوباره اجرا شود."
+
+#. type: Plain text
+#: slackpkg:62
+msgid ""
+"The main features of Slackpkg are the ones directly related to package "
+"management: install, upgrade, and remove packages.  To do any of these tasks, "
+"the Slackpkg syntax is:"
+msgstr ""
+"مهمترین خصوصیات slackpkg آنهایی هستند که مستقیما به مدیریت پکیج ها مربوط "
+"هستند: نصب، ارتقاء و حذف پکیج ها. برای انجام هرکدام از این موارد، فرمان "
+"slackpkg به صورت زیر می باشد:"
+
+#. type: Plain text
+#: slackpkg:65
+msgid "# slackpkg [OPTIONS] E<lt>actionE<gt> {PATTERN|FILE}"
+msgstr "# slackpkg [OPTIONS] E<lt>actionE<gt> {PATTERN|FILE}"
+
+#. type: Plain text
+#: slackpkg:73
+msgid ""
+"I<OPTIONS> can be one or more of the many configuration options listed in /"
+"etc/slackpkg/slackpkg.conf.  There are equivalent command line options for "
+"most of the configuration directives found in slackpkg.conf - see the "
+"B<slackpkg.conf(5)> man-page to see what options are available."
+msgstr ""
+"I<گزینه ها> (OPTIONS) می تواند شامل یک یا چند گزینه پیکربندی لیست شده در فایل "
+"موجود در مسیر etc/slackpkg/slackpkg.conf/ باشد. گزینه های خط فرمان مشابهی "
+"برای فرمانهای پیکربندی در فایل slackpkg.conf یافت می شود. برای مشاهده لیست "
+"گزینه های موحود به صفحه راهنمای B<slackpkg.conf> مراجعه کنید."
+
+#. type: Plain text
+#: slackpkg:77
+msgid ""
+"I<PATTERN> can be a package name or just part of package name.  It can also "
+"be a software series (like kde, a, ap, ...)."
+msgstr ""
+"I<الگو> (PATTERN) می تواند نام یک پکیج یا فقط بخشی از نام پکیج باشد. همچنین "
+"می تواند نام سری نرم افزاری (نظیر kde ،a ،ap و غیره) باشد. "
+
+#. type: Plain text
+#: slackpkg:84
+msgid ""
+"I<FILE> is a file with a list of I<PATTERNs> inside: either one per line, or "
+"several per line with spaces as separators."
+msgstr ""
+"I<فایل> (FILE) نام فایلی است که لیستی از I<الگوها> در آن چه به صورت یک الگو "
+"در هر سطر و چه به صورت چند الگو در هر سطر که بوسیله فاصله از هم جدا شده اند، "
+"قرار دارد."
+
+#. type: Plain text
+#: slackpkg:86
+msgid "Slackpkg can be used to upgrade the whole distribution."
+msgstr ""
+"ابزار Slackpkg می تواند برای ارتقاء تمام سیستم عامل مورد استفاده قرار گیرد."
+
+#. type: Plain text
+#: slackpkg:88
+msgid "The usual way is to do:"
+msgstr "روش معمول عبارت است از:"
+
+#. type: Plain text
+#: slackpkg:93
+msgid "# slackpkg install-new"
+msgstr "# slackpkg install-new"
+
+#. type: Plain text
+#: slackpkg:95
+msgid "# slackpkg upgrade-all"
+msgstr "# slackpkg upgrade-all"
+
+#. type: Plain text
+#: slackpkg:97
+msgid "# slackpkg clean-system"
+msgstr "# slackpkg clean-system"
+
+#. type: Plain text
+#: slackpkg:102
+msgid ""
+"Another feature of Slackpkg is the ability to work with templates, which can "
+"make it much easier to create different machines with the same contents of "
+"packages.  The basic steps are as follows:"
+msgstr ""
+"خصوصیت دیگر Slackpkg توانایی کار با قالب هاست که ایجاد سیستم هایی با پکیج های "
+"یکسان را امکان پذیر می سازد. مراحل اصلی کار عبارتند از:"
+
+#. type: IP
+#: slackpkg:104 slackpkg:106 slackpkg:108 slackpkg:111
+#, no-wrap
+msgid "\\(bu"
+msgstr "\\(bu"
+
+#. type: Plain text
+#: slackpkg:106
+msgid "Install one machine"
+msgstr "نصب به روی یک سیستم"
+
+#. type: Plain text
+#: slackpkg:108
+msgid "Run \"slackpkg generate-template TEMPLATENAME\""
+msgstr "اجرای فرمان \"قالب slackpkg generate-template\""
+
+#. type: Plain text
+#: slackpkg:111
+msgid ""
+"Copy /etc/slackpkg/templates/TEMPLATENAME.template to the same directory on "
+"the other machine"
+msgstr ""
+"کپی کردن \"template.قالب/etc/slackpkg/templates/\" در همان دایرکتوری در سیستم "
+"دیگر"
+
+#. type: Plain text
+#: slackpkg:113
+msgid "Run \"slackpkg install-template TEMPLATENAME\" on the other machine"
+msgstr "اجرای فرمان \"قالب slackpkg install-template\" در سیستم دیگر"
+
+#. type: Plain text
+#: slackpkg:117
+msgid "I<TEMPLATENAME> is the name of your template."
+msgstr "I<قالب> همان نام قالب مورد استفاده شماست."
+
+#. type: Plain text
+#: slackpkg:120
+msgid ""
+"Following this manual page, you can find what each of these (and other)  "
+"actions does."
+msgstr ""
+"با استفاده از این صفحه راهنما، شما می توانید بفهمید که هر کدام از این (و "
+"دیگر) گزینه ها چه عملی انجام می دهند."
+
+#. type: SH
+#: slackpkg:121
+#, no-wrap
+msgid "ACTIONS"
+msgstr "عملیاتها"
+
+#. type: TP
+#: slackpkg:122
+#, no-wrap
+msgid "B<help>"
+msgstr "B<help>"
+
+#. type: Plain text
+#: slackpkg:128
+msgid ""
+"Show slackpkg's actions and a short description of them. Useful if you need "
+"to know a little about slackpkg. The information here, on man-page is much "
+"more complete."
+msgstr ""
+"عملیاتهای slackpkg و توصیف کوتاهی از آنها را نمایش می دهد. اگر بخواهید "
+"اطلاعات مختصری از slackpkg بدست آورید مفید است. اطلاعات ارائه شده در اینجا "
+"(صفحه راهنما) بسیار کاملتر است."
+
+#. type: TP
+#: slackpkg:129
+#, no-wrap
+msgid "B<update>"
+msgstr "B<update>"
+
+#. type: Plain text
+#: slackpkg:134
+msgid ""
+"update will download the latest package lists from a Slackware mirror (or "
+"your CD).  It's a good idea to run"
+msgstr ""
+"آخرین لیست پکیج ها را از یک مخزن اسلکور (یا CD شما) دانلود می کند. اجرای این "
+"فرمان:"
+
+#. type: Plain text
+#: slackpkg:140
+msgid "before attempting to upgrade, install, or search for packages."
+msgstr "قبل از تلاش برای ارتقاء، نصب و یا جستجوی پکیج ها ایده خوبیست."
+
+#. type: Plain text
+#: slackpkg:142
+msgid "If you need to update Slackware's GPG key, run"
+msgstr ""
+"اگر نیاز دارید که کلید GPG اسلکور را بروزرسانی کنید فرمان زیر را اجرا کنید:"
+
+#. type: Plain text
+#: slackpkg:145
+msgid "# slackpkg update gpg"
+msgstr "# slackpkg update gpg"
+
+#. type: Plain text
+#: slackpkg:149
+msgid ""
+"The GPG key doesn't change. This should be a \"one time\" command - run it "
+"once and forget it..."
+msgstr ""
+"کلید GPG تغییر نمی کند. بنابراین این یک فرمان یکبار مصرف است. آن را یکبار "
+"اجرا کرده و فراموش کنید..."
+
+#. type: TP
+#: slackpkg:150
+#, no-wrap
+msgid "B<check-updates>"
+msgstr "B<check-updates>"
+
+#. type: Plain text
+#: slackpkg:155
+msgid ""
+"Verify if there is any update to ChangeLog.txt. This is good to be used from "
+"cron to alert the sysadmin about updates."
+msgstr ""
+"مشخص می کند که آیا بروزرسانی در Changelog.txt وجود دارد یا خیر. خوب است که "
+"این فرمان از cron اجرا شود تا مدیر سیستم را درباره بروزرسانیها آگاه کند."
+
+#. type: TP
+#: slackpkg:156
+#, no-wrap
+msgid "B<file-search>"
+msgstr "B<file-search>"
+
+#. type: Plain text
+#: slackpkg:161
+msgid ""
+"You can search the official Slackware packages for any file in the Slackware "
+"distribution.  Do you need a strange library? Use file-search to find it."
+msgstr ""
+"شما می توانید پکیج های رسمی اسلکور را برای هر فایلی در توزیع اسلکور مورد "
+"جستجو قرار دهید. آیا به دنبال یک کتابخانه ناآشنا هستید؟ از file-search برای "
+"پیدا کردن آن استفاده کنید."
+
+#. type: Plain text
+#: slackpkg:164
+msgid "# slackpkg file-search filename"
+msgstr "# slackpkg file-search فایل"
+
+#. type: Plain text
+#: slackpkg:169
+msgid ""
+"All packages with matching \"filename\" will be shown, thus you can see "
+"whether the packages are installed or not; if not, you can download and "
+"install them with other slackpkg actions."
+msgstr ""
+"تمام پکیج هایی که با کلمه \"فایل\" مطابقت داشته باشند، نمایش داده خواهند شد. "
+"بنابراین می توانید ببینید که آیا پکیج نصب شده یا خیر؛ در صورت عدم نصب، شما می "
+"توانید با استفاده از دیگر عملیات slackpkg آنها را دانلود و نصب کنبد."
+
+#. type: TP
+#: slackpkg:170
+#, no-wrap
+msgid "B<search>"
+msgstr "B<search>"
+
+#. type: Plain text
+#: slackpkg:174
+msgid "You can search for any package distributed in Slackware."
+msgstr ""
+"شما می توانید تمام پکیج های توزیع شده در اسلکور را مورد جستجو قرار دهید."
+
+#. type: Plain text
+#: slackpkg:177
+msgid "# slackpkg search pattern"
+msgstr "# slackpkg search الگو"
+
+#. type: Plain text
+#: slackpkg:182
+msgid ""
+"All packages names that matches with \"pattern\" will be shown.  Like file-"
+"search, you can see whether the packages are installed or not; if not, you "
+"can download and instll them with other slackpkg actions."
+msgstr ""
+"تمام پکیج هایی که نام آنها با \"الگو\" مطابقت داشته باشد نمایش داده خواهند "
+"شد. همانند file-search شما می توانید مشاهده کنید که آیا پکیج نصب است و اگر "
+"نصب نیست آن را بوسیله دیگر عملیات دانلود و نصب کنید."
+
+#. type: TP
+#: slackpkg:183
+#, no-wrap
+msgid "B<install>"
+msgstr "B<install>"
+
+#. type: Plain text
+#: slackpkg:187
+msgid "Installation of a package is very simple. You need only type:"
+msgstr "نصب یک پکیج بسیار ساده است. شما تنها نیاز به تایپ فرمان"
+
+#. type: Plain text
+#: slackpkg:190
+msgid "# slackpkg install package"
+msgstr "# slackpkg install پکیج"
+
+#. type: Plain text
+#: slackpkg:193
+msgid "and the package will be downloaded and installed."
+msgstr "دارید که پکیج را دانلود و نصب می کند."
+
+#. type: Plain text
+#: slackpkg:196
+msgid ""
+"You can't use the \"install\" option to install an already installed package, "
+"but you may reinstall or upgrade it."
+msgstr ""
+"شما نمی توانید از گزینه install برای نصب پکیجی که از قبل روی سیستم نصب شده "
+"استفاده کنید، اما می توانید آن را بازنصب کرده و یا ارتقاء دهید."
+
+#. type: TP
+#: slackpkg:197
+#, no-wrap
+msgid "B<upgrade>"
+msgstr "B<upgrade>"
+
+#. type: Plain text
+#: slackpkg:201
+msgid ""
+"upgrade installs the most recent official version of the specified package(s)."
+msgstr "جدیدترین نسخه پکیج یا پکیج های رسمی مشخص شده را نصب می کند"
+
+#. type: Plain text
+#: slackpkg:205
+msgid ""
+"upgrade will not attempt to install new packages (use the install function "
+"for that purpose; the latest official version of the package will be "
+"installed)."
+msgstr ""
+"فرمان upgrade برای نصب پکیج های جدید تلاش نمی کند (برای این منظور از دستور "
+"install استفاده کنید که باعث نصب آخرین نسخه رسمی پکیج می شود)."
+
+#. type: TP
+#: slackpkg:205
+#, no-wrap
+msgid "B<reinstall>"
+msgstr "B<reinstall>"
+
+#. type: Plain text
+#: slackpkg:210
+msgid ""
+"In case you mistakenly corrupt something, the reinstall option will allow you "
+"to reinstall the same version of a package that is currently installed."
+msgstr ""
+"اگر به اشتباه چیزی را خراب کرده باشید، گزینه reinstall به شما اجازه می دهد تا "
+"نسخه مشابه پکیجی که قبلا نصب شده است را بازنصب کنید."
+
+#. type: TP
+#: slackpkg:211
+#, no-wrap
+msgid "B<remove>"
+msgstr "B<remove>"
+
+#. type: Plain text
+#: slackpkg:215
+msgid "With remove, you can remove certain installed packages.  As an example:"
+msgstr ""
+"با remove شما می توانید پکیج های نصب شده مشخصی را حذف کنید. در مثال زیر:"
+
+#. type: Plain text
+#: slackpkg:218
+msgid "# slackpkg remove kde"
+msgstr "# slackpkg remove kde"
+
+#. type: Plain text
+#: slackpkg:221
+msgid "will remove all packages with \"kde\" in their name."
+msgstr "تمام پکیج هایی که عبارت \"kde\" در نام آنها وجود دارد، حذف خواهند شد."
+
+#. type: TP
+#: slackpkg:222
+#, no-wrap
+msgid "B<blacklist>"
+msgstr "B<blacklist>"
+
+#. type: Plain text
+#: slackpkg:226
+msgid "With this action, you can \"blacklist\" certain packages."
+msgstr "با این عملیات، شما می توانید پکیج های خاصی را وارد لیست سیاه کنید."
+
+#. type: Plain text
+#: slackpkg:230
+msgid ""
+"Blacklisted packages will not be installed, upgraded, or removed by "
+"slackpkg.  If you want to remove some package from the black list, please "
+"edit /etc/slackpkg/blacklist."
+msgstr ""
+"پکیج هایی که وارد لیست سیاه شده اند بوسیله slackpkg نصب، ارتقاء و حذف نخواهند "
+"شد. اگر می خواهید برخی پکیج ها را از لیست سیاه خارج کنید، فایل واقع در مسیر "
+"etc/slackpkg/blacklist/ را تدوین کنید."
+
+#. type: TP
+#: slackpkg:231
+#, no-wrap
+msgid "B<download>"
+msgstr "B<download>"
+
+#. type: Plain text
+#: slackpkg:237
+msgid ""
+"This action tells slackpkg to download the packages, but not to install "
+"them.  They will be placed in /var/cache/packages, and you can install/"
+"upgrade/reinstall them later (or burn them to CD)."
+msgstr ""
+"با استفاده از این گزینه slackpkg پکیج را دانلود می کند اما آن را نصب نمی کند. "
+"پکیج های دانلود شده در مسیر var/cache/packages/ ذخیره می شوند و شما می توانید "
+"آنها را بعدا نصب کنید، ارتقاء دهید و یا بازنصب نمایید (یا حتی روی CD رایت "
+"کنید)."
+
+#. type: TP
+#: slackpkg:238
+#, no-wrap
+msgid "B<info>"
+msgstr "B<info>"
+
+#. type: Plain text
+#: slackpkg:243
+msgid ""
+"This action prints information about the package(s): compressed and "
+"uncompressed size, description, etcetera..."
+msgstr ""
+"این گزینه اطلاعاتی در مورد پکیج (ها) نظیر سایز معمولی و فشرده، توصیف و غیره "
+"ارائه می کند."
+
+#. type: TP
+#: slackpkg:244
+#, no-wrap
+msgid "B<clean-system>"
+msgstr "B<clean-system>"
+
+#. type: Plain text
+#: slackpkg:251
+msgid ""
+"This action removes all of the packages that don't belong to a standard "
+"Slackware installation.  With this option, you can clean up your system, "
+"removing third-party packages as well as any packages that were removed from "
+"the official Slackware package set."
+msgstr ""
+"این عملیات تمام پکیج هایی که متعلق به نصب استاندارد اسلکور نیستند، حذف می "
+"کند. با این گزینه، شما می توانید سیستم خود را پاکسازی کرده و پکیج های غیررسمی "
+"را علاوه بر پکیج های حذف شده از سری رسمی پکیج های اسلکور (واقع در مخزن "
+"اینترنی)، حذف کنید."
+
+#. type: Plain text
+#: slackpkg:255
+msgid ""
+"If you have some third party (or custom built) packages that you would like "
+"to keep, you can temporarily add them to the list of blacklisted packages "
+"before you run the 'clean-system' action."
+msgstr ""
+"اگر برخی پکیج های غیررسمی (با سفارشی شده) دارید که تمایل به نگاهداری آنها "
+"دارید، می توانید موقتا آنها را قبل از اجرای این عملیات در لیست سیاه وارد کنید."
+
+#. type: TP
+#: slackpkg:256
+#, no-wrap
+msgid "B<upgrade-all>"
+msgstr "B<upgrade-all>"
+
+#. type: Plain text
+#: slackpkg:262
+msgid ""
+"This action upgrades every package installed on the system to the version in "
+"the official Slackware tree; this is the \"good\" way to upgrade the entire "
+"system."
+msgstr ""
+"این عملیات تمام پکیج های نصب شده روی سیستم شما را به نسخه رسمی اسلکور ارتقاء "
+"می دهد. استفاده از این گزینه یک روش خوب برای ارتقاء کلی سیستم می باشد."
+
+#. type: Plain text
+#: slackpkg:264
+msgid ""
+"Remember to use the \"install-new\" action before you use \"upgrade-all.\""
+msgstr "به یاد داشته باشید که قبل از upgrade-all از install-new استفاده کنید. "
+
+#. type: TP
+#: slackpkg:265
+#, no-wrap
+msgid "B<install-new>"
+msgstr "B<install-new>"
+
+#. type: Plain text
+#: slackpkg:270
+msgid ""
+"This action installs any new packages that are added to the official "
+"Slackware package set.  Run this if you are upgrading your system to another "
+"Slackware version or if you are using -current."
+msgstr ""
+"این عملیات هر پکیج تازه ای که به سری رسمی پکیج های اسلکور اضافه شده باشد نصب "
+"می کند. اگر می خواهید سیستم اسلکور خود را به نسخه جدیدتر ارتقاء دهید و یا اگر "
+"از نسخه current- استفاده می کنید، این عملیات را اجرا کنید."
+
+#. type: Plain text
+#: slackpkg:273
+msgid ""
+"If you want to install all uninstalled Slackware packages onto your system, "
+"use the following command instead of the install-new action:"
+msgstr ""
+"اگر می خواهید تمام پکیج های حذف شده اسلکور را روی سیستم نصب کنید، به جای "
+"install-new از فرمان زیر استفاده کنید:"
+
+#. type: Plain text
+#: slackpkg:276
+msgid "# slackpkg install slackware."
+msgstr "# slackpkg install slackware."
+
+#. type: TP
+#: slackpkg:277
+#, no-wrap
+msgid "B<new-config>"
+msgstr "B<new-config>"
+
+#. type: Plain text
+#: slackpkg:281
+msgid ""
+"This action searches for .new configuration files and ask the user what to do "
+"with those files."
+msgstr ""
+"این عملیات فایل های پیکربندی \"new.\" را جستجو کرده و از کاربر سئوال می کند "
+"که می خواهد با آنها چه کند."
+
+#. type: Plain text
+#: slackpkg:285
+msgid ""
+"new-config is very useful when you perform an upgrade and leave the "
+"configuration files to be reviewed later.  Instead of a manual search, diff, "
+"and replace; you can use the new-config action."
+msgstr ""
+"new-config برای زمانی که سیستم را ارتقاء داده و فایل های پیکربندی را برای "
+"بازبینی های بعدی رها می کنید، گزینه مفیدی است. به جای جستجوی و جایگزینی دستی "
+"می توانید از new-config استفاده کنید."
+
+#. type: TP
+#: slackpkg:285
+#, no-wrap
+msgid "B<generate-template>"
+msgstr "B<generate-template>"
+
+#. type: Plain text
+#: slackpkg:289
+msgid ""
+"This action creates a new template with all official packages that are "
+"installed in your system. The template is stored at /etc/slackpkg/templates"
+msgstr ""
+"این عملیات قالب جدیدی شامل تمام پکیج های رسمی اسلکور نصب شده روی سیستم شما "
+"ایجاد می کند. قالب در مسیر etc/slackpkg/templates/ ذخیره می شود."
+
+#. type: TP
+#: slackpkg:289
+#, no-wrap
+msgid "B<install-template>"
+msgstr "B<install-template>"
+
+#. type: Plain text
+#: slackpkg:295
+msgid ""
+"This action install the required template in the system. The template must be "
+"in /etc/slackpkg/templates. If the template \"includes\" other templates, all "
+"of them needs to be in /etc/slackpkg/templates. You can disable the \"includes"
+"\" in slackpkg.conf or in command-line."
+msgstr ""
+"این عملیات قالب درخواست شده را روی سیستم نصب می کند. قالب باید در مسیر etc/"
+"slackpkg/templates/ باشد. اگر قالب حاوی (includes) قالب های دیگر بود تمام "
+"آنها باید در مسیر etc/slackpkg/templates/ باشند. شما می توانید گزینه "
+"\"includes\" را در slackpkg.conf یا در خط فرمان غیرفعال کنید."
+
+#. type: TP
+#: slackpkg:295
+#, no-wrap
+msgid "B<remove-template>"
+msgstr "B<remove-template>"
+
+#. type: Plain text
+#: slackpkg:301
+msgid ""
+"This action remove all packages that are part of selected template. Be "
+"careful, this can put your machine in a unusable state. The \"include\" "
+"handling can be activated/deactivated in slackpkg.conf or with the "
+"appropriate option in command-line."
+msgstr ""
+"این گزینه تمام پکیج هایی که بخشی از قالب انتخاب شده هستند، حذف می کند. مراقب "
+"باشید، این گزینه می تواند سیستم شما را بلااستفاده کند. مدیریت \"include\" می "
+"تواند در slackpkg.conf یا بوسیله گزینه مناسب در خط فرمان فعال/غیرفعال شود."
+
+#. type: SH
+#: slackpkg:302 slackpkg.conf:329
+#, no-wrap
+msgid "FILES"
+msgstr "فایلها"
+
+#. type: TP
+#: slackpkg:303
+#, no-wrap
+msgid "B</etc/slackpkg/mirrors\t>"
+msgstr "B</etc/slackpkg/mirrors\t>"
+
+#. type: Plain text
+#: slackpkg:306
+msgid "File to specify the location from which to download packages"
+msgstr "این فایل محلی که پکیج ها باید از آنجا دانلود شوند، مشخص می کند."
+
+#. type: TP
+#: slackpkg:306
+#, no-wrap
+msgid "B</etc/slackpkg/slackpkg.conf\t>"
+msgstr "B</etc/slackpkg/slackpkg.conf\t>"
+
+#. type: Plain text
+#: slackpkg:309
+msgid "General configuration of slackpkg"
+msgstr "فایل پیکربندی عمومی slackpkg"
+
+#. type: TP
+#: slackpkg:309
+#, no-wrap
+msgid "B</etc/slackpkg/blacklist>"
+msgstr "B</etc/slackpkg/blacklist>"
+
+#. type: Plain text
+#: slackpkg:312
+msgid "List of packages to skip"
+msgstr "فایل حاوی لیست پکیج هایی که باید نادیده گرفته شوند."
+
+#. type: TP
+#: slackpkg:312
+#, no-wrap
+msgid "B</etc/slackpkg/templates>"
+msgstr "B</etc/slackpkg/templates>"
+
+#. type: Plain text
+#: slackpkg:315
+msgid "Contains all template files"
+msgstr "حاوی تمام فایلهای قالب ها می باشد."
+
+#. type: TP
+#: slackpkg:315
+#, no-wrap
+msgid "B</usr/libexec/slackpkg>"
+msgstr "B</usr/libexec/slackpkg>"
+
+#. type: Plain text
+#: slackpkg:318
+msgid "Contains slackpkg core and additional functions"
+msgstr "شامل هسته slackpkg و کارکردهای اضافی آن می باشد."
+
+#. type: TP
+#: slackpkg:318
+#, no-wrap
+msgid "B</var/lib/slackpkg>"
+msgstr "B</var/lib/slackpkg>"
+
+#. type: Plain text
+#: slackpkg:322
+msgid ""
+"Slackpkg internal use - Formatted package lists, copy of ChangeLog.txt, list "
+"of files, etcetera..."
+msgstr ""
+"شامل آیتم های مورد نیاز برای استفاده از slackpkg نظیر لیست پکیج ها، کپی فایل "
+"\"ChangeLog.txt\" و لیست فایل ها و غیره می باشد."
+
+#. type: SH
+#: slackpkg:323 slackpkg.conf:333
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "نگاه کنید به:"
+
+#. type: Plain text
+#: slackpkg:330
+msgid ""
+"B<slackpkg.conf>(5), B<installpkg>(8), B<upgradepkg>(8), B<explodepkg>(8), "
+"B<makepkg>(8), B<pkgtool>(8)."
+msgstr ""
+"B<slackpkg.conf>(5), B<installpkg>(8), B<upgradepkg>(8), B<explodepkg>(8), "
+"B<makepkg>(8), B<pkgtool>(8)."
+
+#. type: SH
+#: slackpkg:331
+#, no-wrap
+msgid "AUTHORS"
+msgstr "نویسندگان"
+
+#. type: TP
+#: slackpkg:332
+#, no-wrap
+msgid "Piter PUNK aka Roberto F Batista "
+msgstr "Piter PUNK aka Roberto F Batista "
+
+#. type: Plain text
+#: slackpkg:335
+msgid "E<lt>piterpk AT terra DOT com DOT brE<gt>"
+msgstr "E<lt>piterpk AT terra DOT com DOT brE<gt>"
+
+#. type: TP
+#: slackpkg:335
+#, no-wrap
+msgid "Evaldo Gardenali aka UdontKnow "
+msgstr "Evaldo Gardenali aka UdontKnow "
+
+#. type: Plain text
+#: slackpkg.conf:1
+msgid "E<lt>evaldo AT fasternet DOT com DOT brE<gt>"
+msgstr "E<lt>evaldo AT fasternet DOT com DOT brE<gt>"
+
+#. type: TH
+#: slackpkg.conf:1
+#, no-wrap
+msgid "SLACKPKG.CONF"
+msgstr "SLACKPKG.CONF"
+
+#. type: Plain text
+#: slackpkg.conf:5
+msgid "B<slackpkg.conf> - Configuration data for slackpkg"
+msgstr "؛ B<slackpkg.conf> فایل حاوی اطلاعات پیکربندی slackpkg ؛"
+
+#. type: Plain text
+#: slackpkg.conf:11
+msgid ""
+"The slackpkg.conf file contains information for B<slackpkg> (8), an automated "
+"tool for managing Slackware Linux packages."
+msgstr ""
+"فایل slackpkg.conf حاوی اطلاعاتی برای B<slackpkg> به عنوان ابزار اتوماتیک "
+"پکیج های اسلکور لینوکس می باشد."
+
+#. type: Plain text
+#: slackpkg.conf:17
+msgid ""
+"The slackpkg.conf file is a sequence of shell script variables, and each "
+"variable controls one aspect of slackpkg.  Comments begin with the # "
+"character and end at end of the line, and comments may appear anywhere inside "
+"the slackpkg.conf file.  If some variable appears more than once in the file, "
+"slackpkg will use the value that was defined last."
+msgstr ""
+"فایل slackpkg.conf گروهی از اسکریپت های shell است که هر متغیر آن جنبه ای از "
+"ابزار slackpkg را کنترل می کند. کامنت ها با کاراکتر # آغاز شده و با انتهای هر "
+"خط پایان می یابند. کامنت ها ممکن است در هر جای فایل یافت شوند. اگر برخی "
+"متغیرها در این فایل چندبار تکرار شوند، اسلکور از مقداری که آخر از همه تعیین "
+"شده استفاده می کند."
+
+#. type: Plain text
+#: slackpkg.conf:25
+msgid ""
+"Many variables can be overridden by options passed to slackpkg on the command "
+"line. If you need to override the value of B<VARIABLE> , pass B<-"
+"variable=value> on the command line just before the slackpkg action. Multiple "
+"variables may be overridden."
+msgstr ""
+"بسیاری از متغیرها با گزینه هایی که در خط فرمان برای slackpkg تعیین می'گردند، "
+"بی اثر می شوند. اگر می خواهید مقدار یک B<متغیر> را بی اثر کنید، در خط فرمان "
+"قبل از عملیات مورد نظر B<مقدار=متغیر> را وارد کنید. همچنین چندین متغیر می "
+"توانند به صورت همزمان بی اثر شوند."
+
+#. type: Plain text
+#: slackpkg.conf:27
+msgid "EXAMPLE: slackpkg -batch=on -default_answer=y upgrade-all"
+msgstr "مثال: slackpkg -batch=on -default_answer=y upgrade-all"
+
+#. type: Plain text
+#: slackpkg.conf:30
+msgid ""
+"For configuration options that have only two states, possible values are "
+"either \"on\" or \"off\" unless otherwise indicated."
+msgstr ""
+"برای گزینه های پیکربندی که تنها دو وضعیت می توانند داشته باشند، مقادیر محتمل "
+"on یا off هستند مگر اینکه مقادیر دیگری مشخص شده باشند."
+
+#. type: Plain text
+#: slackpkg.conf:32
+msgid "The different configuration options are:"
+msgstr "گزینه های مختلف پیکربندی عبارتند از:"
+
+#. type: TP
+#: slackpkg.conf:33
+#, no-wrap
+msgid "B<ARCH>"
+msgstr "B<ARCH>"
+
+#. type: Plain text
+#: slackpkg.conf:38
+msgid ""
+"Chooses the system architecture. Usually Slackpkg can found the correct value "
+"using \"uname -m\". The valid values are:"
+msgstr ""
+"معماری سیستم را انتخاب می کند. معمولا slcakpkg می تواند مقدار درست را از طریق "
+"\"uname -m\" بفهمد. مقادیر معتبر عبارتند از:"
+
+#. type: ds title
+#: slackpkg.conf:39
+#, no-wrap
+msgid "MACHINE\\t\\tVALID ARCH VALUES"
+msgstr "MACHINE\\t\\tVALID ARCH VALUES"
+
+#. type: ds arm
+#: slackpkg.conf:40
+#, no-wrap
+msgid "ARM\\t\\t\\tarm"
+msgstr "ARM\\t\\t\\tarm"
+
+#. type: ds x86
+#: slackpkg.conf:41
+#, no-wrap
+msgid "x86 (32bits)\\ti386, i486, i586 and i686"
+msgstr "x86 (32bits)\\ti386, i486, i586 and i686"
+
+#. type: ds x86_64
+#: slackpkg.conf:42
+#, no-wrap
+msgid "x86 (64bits)\\tx86_64"
+msgstr "x86 (64bits)\\tx86_64"
+
+#. type: ds ppc
+#: slackpkg.conf:43
+#, no-wrap
+msgid "PowerPC\\t\\tpowerpc"
+msgstr "PowerPC\\t\\tpowerpc"
+
+#. type: ds s390
+#: slackpkg.conf:44
+#, no-wrap
+msgid "S/390\\t\\t390"
+msgstr "S/390\\t\\t390"
+
+#. type: Plain text
+#: slackpkg.conf:47
+msgid "B<\\*[title]>"
+msgstr "B<\\*[title]>"
+
+#. type: Plain text
+#: slackpkg.conf:49
+msgid "\\*[arm]"
+msgstr "\\*[arm]"
+
+#. type: Plain text
+#: slackpkg.conf:51
+msgid "\\*[x86]"
+msgstr "\\*[x86]"
+
+#. type: Plain text
+#: slackpkg.conf:53
+msgid "\\*[x86_64]"
+msgstr "\\*[x86_64]"
+
+#. type: Plain text
+#: slackpkg.conf:55
+msgid "\\*[ppc]"
+msgstr "\\*[ppc]"
+
+#. type: Plain text
+#: slackpkg.conf:57
+msgid "\\*[s390]"
+msgstr "\\*[s390]"
+
+#. type: Plain text
+#: slackpkg.conf:62
+msgid "The default value of B<ARCH> depends on your architecture."
+msgstr "مقدار پیش فرض B<ARCH> بستگی به معماری سیستم شما دارد."
+
+#. type: TP
+#: slackpkg.conf:63
+#, no-wrap
+msgid "B<SLACKKEY>"
+msgstr "B<SLACKKEY>"
+
+#. type: Plain text
+#: slackpkg.conf:72
+msgid ""
+"Slackpkg checks the package signature file (.asc) against the GPG signature "
+"of the project. Different ports of Slackware can have different signatures, "
+"and Slackpkg tries to find the correct one based on the architecture of your "
+"system. If the automatically-detected B<SLACKKEY> isn't correct, you can "
+"change it using this option."
+msgstr ""
+"ابزار slackpkg فایل امضاء پکیج (asc.) را با امضاء GPG پروژه مطابقت می دهد. "
+"پورتهای مختلف اسلکور می توانند امضاء های مختلفی داشته باشند و slackpkg تلاش "
+"می کند که امضاء درست را براساس معماری سیستم شما تشخیص دهد. اگر B<SLACKKEY> که "
+"به صورت اتوماتیک شناسایی شده درست نباشد. شما می توانید با استفاده از این "
+"گزینه آن را تغییر دهید."
+
+#. type: Plain text
+#: slackpkg.conf:76
+msgid "The default value of B<SLACKKEY> depends on your Slackware port."
+msgstr "مقدار پیش فرض B<SLACKKEY> بستگی به پورت اسلکور شما دارد."
+
+#. type: TP
+#: slackpkg.conf:77
+#, no-wrap
+msgid "B<TEMP>"
+msgstr "B<TEMP>"
+
+#. type: Plain text
+#: slackpkg.conf:82
+msgid ""
+"Defines the location to which slackpkg will download the packages before "
+"installing/upgrading them."
+msgstr ""
+"محلی که slackpkg پکیج ها را قبل از نصب/ارتقاء در آنجا دانلود می کند، تعیین می "
+"نماید."
+
+#. type: Plain text
+#: slackpkg.conf:86
+msgid "The default value of B<TEMP> is /var/cache/packages."
+msgstr "مقدار پیش فرض B<TEMP> مسیر var/cache/packages/ می باشد."
+
+#. type: TP
+#: slackpkg.conf:87
+#, no-wrap
+msgid "B<WORKDIR>"
+msgstr "B<WORKDIR>"
+
+#. type: Plain text
+#: slackpkg.conf:93
+msgid ""
+"Defines the directory for package lists, file lists, and other information "
+"used by slackpkg as it works.  Do not change the value of this variable "
+"unless you know what you are doing."
+msgstr ""
+"محل دایرکتوری لیست پکیج ها، فایلها و دیگر اطلاعات مورد نیاز برای ابزار "
+"slackpkg را مشخص می کند. تا وقتی که کاملا از کاری که می کنید مطمئن نیستید، "
+"مقدار پیش فرض این متغیر را تغییر ندهید."
+
+#. type: Plain text
+#: slackpkg.conf:97
+msgid "The default value of B<WORKDIR> is /var/lib/slackpkg."
+msgstr "مقدار پیش فرض B<WORKDIR> مسیر var/lib/slackpkg/ می باشد."
+
+#. type: TP
+#: slackpkg.conf:98
+#, no-wrap
+msgid "B<WGETFLAGS>"
+msgstr "B<WGETFLAGS>"
+
+#. type: Plain text
+#: slackpkg.conf:103
+msgid ""
+"Selects special options for wget.  If you need to use multiple options, "
+"remember to put them between double quotes."
+msgstr ""
+"گزینه های ویژه برای wget را انتخاب می کند. اگر می خواهید که از چند گزینه "
+"استفاده کنید، آنها را مابین \" \" قرار دهید."
+
+#. type: Plain text
+#: slackpkg.conf:107
+msgid "The default value of B<WGETFLAGS> is \"--passive-ftp\""
+msgstr "مقدار پیش فرض B<WGETFLAGES> عبارت است از \"passive-ftp--\""
+
+#. type: TP
+#: slackpkg.conf:108
+#, no-wrap
+msgid "B<DELALL>"
+msgstr "B<DELALL>"
+
+#. type: Plain text
+#: slackpkg.conf:117
+msgid ""
+"If set to \"on\", all downloaded files will be removed after slackpkg "
+"performs install or upgrade (this does NOT have any impact when slackpkg is "
+"run with \"download\").  If set to \"off\", the files will be kept in the "
+"directory defined in B<TEMP> (as described above)."
+msgstr ""
+"اگر روی \"on\" تنظیم شود، تمام فایلهای دانلود شده پس از نصب یا ارتقاء پکیج ها "
+"بوسیله slackpkg حذف خواهند شد (این عمل تأثیری بر عملکرد slackpkg با گزینه "
+"\"download\" نخواهد داشت). اگر روی \"off\" تنظیم شود، تمام فایلها را در مسیر "
+"تعیین شده در متغیر B<TEMP> نگاهداری خواهد کرد."
+
+#. type: Plain text
+#: slackpkg.conf:121
+msgid "The default value of B<DELALL> is \"on\"."
+msgstr "مقدار پیش فرض B<DELALL> عبارت است از \"on\""
+
+#. type: Plain text
+#: slackpkg.conf:123
+msgid "From command line, you can use -delall=value."
+msgstr ""
+"از طریق خط فرمان، شما می توانید این متغیر را به صورت \"مقدار=delall-\" تنظیم "
+"کنید."
+
+#. type: TP
+#: slackpkg.conf:124
+#, no-wrap
+msgid "B<CHECKMD5>"
+msgstr "B<CHECKMD5>"
+
+#. type: Plain text
+#: slackpkg.conf:129
+msgid ""
+"Enables (on) or disables (off) the checking of MD5 checksums of all "
+"downloaded packages before installing or upgrading them."
+msgstr ""
+"عملیات بررسی MD5 پکیج های دانلود شده قبل از نصب و ارتقاء آنها را فعال (on) یا "
+"غیرفعال (off) می کند."
+
+#. type: Plain text
+#: slackpkg.conf:133
+msgid "The default value of B<CHECKMD5> is \"on\"."
+msgstr "مقدار پیش فرض B<CHECKMD5> عبارت است از \"on\""
+
+#. type: Plain text
+#: slackpkg.conf:135
+msgid "From command line, you can use -checkmd5=value."
+msgstr ""
+"با خط فرمان می توانید مقدار این متغیر را با استفاده از \"مقدار=checkmd5-\" "
+"تنظیم کنید."
+
+#. type: TP
+#: slackpkg.conf:136
+#, no-wrap
+msgid "B<CHECKGPG>"
+msgstr "B<CHECKGPG>"
+
+#. type: Plain text
+#: slackpkg.conf:141
+msgid ""
+"Enables (on) or disables (off) the check of GPG signature for each package "
+"before install or upgrade."
+msgstr ""
+"بررسی امضاء GPG پکیج ها را قبل از نصب یا ارتقاء آنها فعال (on) یا غیرفعال "
+"(off) می کند."
+
+#. type: Plain text
+#: slackpkg.conf:145
+msgid "The default value of B<CHECKGPG> is \"on\"."
+msgstr "مقدار پیش فرض برای B<CHECHGPG> عبارت است از \"on\""
+
+#. type: Plain text
+#: slackpkg.conf:147
+msgid "From command line, you can use -checkgpg=value."
+msgstr "تنظیم این متغیر با خط فرمان بوسیله \"مقدار=checkgpg-\" امکانپذیر است."
+
+#. type: TP
+#: slackpkg.conf:148
+#, no-wrap
+msgid "B<CHECKSIZE>"
+msgstr "B<CHECKSIZE>"
+
+#. type: Plain text
+#: slackpkg.conf:153
+msgid ""
+"Enables (on) or disables (off) the check of available disk space for each "
+"package before install or upgrade."
+msgstr ""
+"چک کردن فضای خالی موجود برای هر پکیج قبل از نصب یا ارتقاء آن را فعال (on) یا "
+"غیرفعال (off) می کند."
+
+#. type: Plain text
+#: slackpkg.conf:157
+msgid "The default value of B<CHECKSIZE> is \"off\"."
+msgstr "مقدار پیش فرض متغیر B<CHECKSIZE> عبارت است از \"off\"."
+
+#. type: Plain text
+#: slackpkg.conf:159
+msgid "From command line, you can use -checksize=value."
+msgstr ""
+"برای تنظیم این متغیر از خط فرمان می توانید از \"مقدار=checksize-\" استفاده "
+"کنید."
+
+#. type: TP
+#: slackpkg.conf:160
+#, no-wrap
+msgid "B<PKGMAIN>"
+msgstr "B<PKGMAIN>"
+
+#. type: Plain text
+#: slackpkg.conf:168
+msgid ""
+"Defines the main distribution directory. Usually, you don't need to worry "
+"about this variable, as Slackpkg tries to find it based on your "
+"architecture.  However, if you need to change it, then include this variable "
+"in your slackpkg.conf.  This should always be the directory which contains "
+"the Slackware package set series (A, AP, D, E, F, ...)."
+msgstr ""
+"دایرکتوری اصلی توزیع را مشخص می کند. معمولا، شما نباید نگران این متغیر باشید. "
+"چون slackpkg تلاش می کند که محل دایرکتوری را براساس معماری سیستم شما بیابد. "
+"به هر حال اگر نیاز یه تغییر این دایرکتوری داشتید آن را در slackpkg.conf وارد "
+"کنید. این دایرکتوری همواره باید حاوی سریهای پکیج های اسکلور (مانند A, AP, D, "
+"E, F و غیره) باشد."
+
+#. type: Plain text
+#: slackpkg.conf:170
+msgid "Default: depends on Slackware port"
+msgstr "مقدار پیش فرض بستگی به پورت اسلکور شما دارد."
+
+#. type: TP
+#: slackpkg.conf:171
+#, no-wrap
+msgid "B<PRIORITY>"
+msgstr "B<PRIORITY>"
+
+#. type: Plain text
+#: slackpkg.conf:179
+msgid ""
+"This array selects the priority at which directories on the mirror will have "
+"when slackpkg looks for packages.  If a package is found in more than one "
+"place, the package in first directory gets priority, then second, then third, "
+"then fourth and finally, the package found in last listed directory. You can "
+"use %PKGMAIN to use the contents of PKGMAIN variable."
+msgstr ""
+"این متغیر اولویت دایرکتوریهای موجود در لینک اینترنتی را به هنگام جستجوی پکیج "
+"بوسیله slackpkg مشخص می کند. اگر یک پکیج در بیش از یک مکان یافت شد، اول پکیج "
+"موجود در دایرکتوری اول، بعد دایرکتوری دوم، سوم، چهارم و نهایتا پکیج موجود در "
+"آخرین دایرکتوری لیست شده دارای اولویت خواهند بود. شما می توانید از PKGMAIN% "
+"برای استفاده از محتویات متغیر PKGMAIN استفاده کنید."
+
+#. type: Plain text
+#: slackpkg.conf:181
+msgid "Default values (in order): patches %PKGMAIN extra pasture testing"
+msgstr ""
+"مقادیر پیش فرض (به ترتیب) عبارتند از:\n"
+" patches %PKGMAIN extra pasture testing"
+
+#. type: TP
+#: slackpkg.conf:182
+#, no-wrap
+msgid "B<POSTINST>"
+msgstr "B<POSTINST>"
+
+#. type: Plain text
+#: slackpkg.conf:188
+msgid ""
+"Enables (on) or disables (off) slackpkg's post-installation features, such as "
+"checking for new (*.new) configuration files and new kernel images, and "
+"prompts you for what it should do."
+msgstr ""
+"اقدامات پس از نصب پکیج ها توسط slackpkg نظیر جستجوی فایل پیکربندی و ایمیج "
+"کرنل جدید را فعال (on) یا غیرفعال (off) کرده و در خصوص اقدامات بعدی از شما "
+"سئوال می کند."
+
+#. type: Plain text
+#: slackpkg.conf:192
+msgid "The default value of B<POSTINST> is \"on\"."
+msgstr "مقدار پیش فرض متغیر B<POSTINST> عبارت است از \"on\""
+
+#. type: Plain text
+#: slackpkg.conf:194
+msgid "From command line, you can use -postinst=value."
+msgstr "از طریق خط فرمان شما می توانید از \"مقدار=postinst-\" استفاده کنید."
+
+#. type: TP
+#: slackpkg.conf:195
+#, no-wrap
+msgid "B<ONLY_NEW_DOTNEW>"
+msgstr "B<ONLY_NEW_DOTNEW>"
+
+#. type: Plain text
+#: slackpkg.conf:206
+msgid ""
+"When B<POSTINST> is set to \"on\", slackpkg will search for all .new files "
+"inside /etc and prompt the user for what to do with them.  However, some "
+"users prefer to see only the .new files installed in slackpkg's last "
+"execution, so if this applies to you, set B<ONLY_NEW_DOTNEW> to \"on\"."
+msgstr ""
+"زمانی که B<POSTINST> روی \"on\" تنظیم شود، slackpkg تمام فایلهای \"new.\" را "
+"در مسیر etc/ جستجو کرده و به کاربر هشدار می دهد که با آنها چه کند. به هر حال، "
+"برخی ترجیح می دهند که نصب فایلهای \"new.\" را در آخرین مرحله اجرای slackpkg "
+"انجام دهند، پس اگر شما هم تمایل به اینکار دارید، مقدار B<ONLY_NEW_DOTNEW> را "
+"روی \"on\" تنظیم کنید."
+
+#. type: Plain text
+#: slackpkg.conf:210
+msgid ""
+"The default value of B<ONLY_NEW_DOTNEW> is \"off\". Only change this if you "
+"know what are you doing..."
+msgstr ""
+"مقدار پیش فرض B<ONLY_NEW_DOTNEW> روی \"off\" تنظیم شده است. تنها زمانی آن را "
+"تغییر دهید که بدانید چه دارید می کنید..."
+
+#. type: Plain text
+#: slackpkg.conf:212
+msgid "From command line, you can use -only_new_dotnew=value."
+msgstr ""
+"از طریق خط فرمان، شما می توانید از \"مقدار=only_new_dotnew-\" استفاده کنید."
+
+#. type: TP
+#: slackpkg.conf:213
+#, no-wrap
+msgid "B<ONOFF>"
+msgstr "B<ONOFF>"
+
+#. type: Plain text
+#: slackpkg.conf:221
+msgid ""
+"The B<ONOFF> variable sets the initial behavior of the dialog interface.  If "
+"you set this to \"on\" then all packages will be selected by default.  If you "
+"prefer the opposite option (all unchecked), then set this to \"off\"."
+msgstr ""
+"متغیر B<ONOFF> رفتار ابتدایی رابط کاربری مبتنی بر دیالوگ را تنظیم می کند. اگر "
+"روی \"on\" تنظیم شود، تمام پکیج ها به صورت پیش فرض انتخاب می شوند. اگر تمایل "
+"به انتخاب مقدار مخالف دارید (هیچ پکیجی انتخاب شده نباشد)، آن را روی \"off\" "
+"تنظیم کنید."
+
+#. type: Plain text
+#: slackpkg.conf:225
+msgid "The default value of B<ONOFF> is \"on\"."
+msgstr "مقدار پیش فرض B<ONOFF> روی \"on\" تنظیم شده است."
+
+#. type: Plain text
+#: slackpkg.conf:227
+msgid "From command line, you can use -onoff=value."
+msgstr "برای خط فرمان می توانید از \"مقدار=onoff-\" استفاده کنید."
+
+#. type: TP
+#: slackpkg.conf:228
+#, no-wrap
+msgid "B<DOWNLOAD_ALL>"
+msgstr "B<DOWNLOAD_ALL>"
+
+#. type: Plain text
+#: slackpkg.conf:235
+msgid ""
+"If this variable is set to \"on\", all files will be downloaded before the "
+"requested operation (install or upgrade) is performed.  If set to \"off\", "
+"then the files will be downloaded and the operation (install/upgrade) "
+"performed one by one."
+msgstr ""
+"اگر این متغیر روی \"on\" تنظیم شود، تمام فایلها قبل از اجرای عملیات مورد نیاز "
+"(نصب یا ارتقاء) دانلود می شوند. اگر روی \"off\" تنظیم شود، فرایند دانلود و "
+"نصب/ارتقاء هر فایل یکی پس از دیگری انجام می شود."
+
+#. type: Plain text
+#: slackpkg.conf:239
+msgid "The default value of B<DOWNLOAD_ALL> is \"off\"."
+msgstr "مقدار پیش فرض B<DOWNLOAD_ALL> عبارت است از \"off\""
+
+#. type: Plain text
+#: slackpkg.conf:241
+msgid "From command line, you can use -download_all=value."
+msgstr "برای خط فرمان می توانید از \"مقدار=download_all-\" استفاده کنید."
+
+#. type: TP
+#: slackpkg.conf:242
+#, no-wrap
+msgid "B<DIALOG>"
+msgstr "B<DIALOG>"
+
+#. type: Plain text
+#: slackpkg.conf:246
+msgid "Enables (on) or disables (off) the dialog interface."
+msgstr "رابط کاربری مبتنی بر دیالوگ را فعال (on) یا غیرفعال (off) می کند."
+
+#. type: Plain text
+#: slackpkg.conf:250
+msgid "The default value of B<DIALOG> is \"on\"."
+msgstr "مقدار پیش فرض متغیر B<DIALOG> عبارت است از \"on\""
+
+#. type: Plain text
+#: slackpkg.conf:252
+msgid "From command line, you can use -dialog=value."
+msgstr "برای خط فرمان می توانید از \"مقدار=dialog-\" استفاده کنید."
+
+#. type: TP
+#: slackpkg.conf:253
+#, no-wrap
+msgid "B<DIALOG_MAXARGS>"
+msgstr "B<DIALOG_MAXARGS>"
+
+#. type: Plain text
+#: slackpkg.conf:260
+msgid ""
+"Set the max number of characters that will be send to \"dialog\". If this "
+"number is reached in upgrade, slackpkg removes the information about current "
+"installed version of each package. If even without this information the "
+"number is reached again, slackpkg returns an error to the user."
+msgstr ""
+"تعداد حداکثر کاراکترهایی که به دیالوگ فرستاده خواهند شد تنظیم می کند. اگر "
+"فرایند ارتقاء به این عدد برسد، slackpkg اطلاعات مربوط به پکیج هایی که در حال "
+"حاضر روی سیستم نصب شده اند پاک می کند. حتی اگر بدون این اطلاعات این عدد "
+"دوباره بدست آید، slackpkg یک پیغام خطا به کاربر نشان می دهد."
+
+#. type: Plain text
+#: slackpkg.conf:264
+msgid "If B<DIALOG_MAXARGS> is unset, 19500 is the default value."
+msgstr "اگر B<DIALOG_MAXARGS> تنظیم نشود، مقدار پیش فرض آن \"19500\" می باشد."
+
+#. type: Plain text
+#: slackpkg.conf:266
+msgid "From command line, you can use -dialog_maxargs=value."
+msgstr "برای خط فرمان می توانید از \"مقدار=dialog_maxargs-\" استفاده کنید."
+
+#. type: TP
+#: slackpkg.conf:267
+#, no-wrap
+msgid "B<BATCH>"
+msgstr "B<BATCH>"
+
+#. type: Plain text
+#: slackpkg.conf:275
+msgid ""
+"Enables (on) or disables (off) the non-interactive mode.  When run in batch "
+"mode, slackpkg will not prompt the user for anything; instead, all questions "
+"will get B<DEFAULT_ANSWER> (see below)."
+msgstr ""
+"حالت غیرتعاملی را فعال (on) یا غیرفعال (off) می کند. زمانیکه روی مقدار \"on\" "
+"تنظیم شود، slackpkg هیچ هشداری به کاربر نداده و پاسخ تمام سئوالها را از "
+"B<DEFAULT_ANSWER> بدست می آورد (به پائین مراجعه کنید)"
+
+#. type: Plain text
+#: slackpkg.conf:278
+msgid ""
+"If you perform an upgrade using this mode, you will need to run \"slackpkg "
+"new-config\" later to find and merge .new files."
+msgstr ""
+"اگر با استفاده از این حالت عملیات ارتقاء را انجام دهید، شما نیاز دارید بعدا "
+"فرمان \"slackpkg new-config\" را برای جستجو و ادغام فایلهای \"new.\" اجرا "
+"کنید."
+
+#. type: Plain text
+#: slackpkg.conf:282
+msgid "The default value of B<BATCH> is \"off\"."
+msgstr "مقدار پیش فرض B<BATCH> عبارت است از \"off\""
+
+#. type: Plain text
+#: slackpkg.conf:284
+msgid "From command line, you can use -batch=value."
+msgstr "برای خط فرمان می توانید از \"مقدار=batch-\" استفاده کنید."
+
+#. type: TP
+#: slackpkg.conf:285
+#, no-wrap
+msgid "B<DEFAULT_ANSWER>"
+msgstr "B<DEFAULT_ANSWER>"
+
+#. type: Plain text
+#: slackpkg.conf:293
+msgid ""
+"This is the default answer to questions when slackpkg prompts the user for "
+"some information.  This is used only in non-interactive mode (when B<BATCH> "
+"is \"yes\" or the user turns batch mode on via the command line); otherwise, "
+"this variable has no effect."
+msgstr ""
+"این متغیر همان پاسخ پیش فرضی سئوالاتی است که slackpkg برای برخی اطلاعات از "
+"کاربر می پرسد. این متغیر تنها زمانی که از حالت غیرتعاملی استفاده شود (زمانی "
+"که B<BATCH> روی مقدار \"yes\" تنظیم شود و یا حالت batch از طریق خط فرمان روشن "
+"شود)، مورد استفاده قرار می گیرد. در غیر اینصورت این متغیر هیچ اثری نخواهد "
+"داشت."
+
+#. type: Plain text
+#: slackpkg.conf:295
+msgid "Valid values are \"y\" or \"n\"."
+msgstr "مقادیر معتبر \"y\" یا \"n\" هستند."
+
+#. type: Plain text
+#: slackpkg.conf:299
+msgid "The default value of B<DEFAULT_ANSWER> is \"n\"."
+msgstr "مقدار پیش فرض B<DEFAULT_ANSWER> روی \"n\" تنظیم شده است"
+
+#. type: Plain text
+#: slackpkg.conf:301
+msgid "From command line, you can use -default_answer=value."
+msgstr "برای خط فرمان می توانید از \"مقدار=default_answer-\" استفاده کنید."
+
+#. type: TP
+#: slackpkg.conf:302
+#, no-wrap
+msgid "B<USE_INCLUDES>"
+msgstr "B<USE_INCLUDES>"
+
+#. type: Plain text
+#: slackpkg.conf:309
+msgid ""
+"Slackpkg templates can include other templates. This reduces the package "
+"duplication in many templates, but it can be a problem if you want to remove "
+"only a specific template. You can disable the #include parsing by setting "
+"this option to \"off\"."
+msgstr ""
+"قالبهای slackpkg می توانند شامل قالبهای دیگر باشند. گرچه این عمل باعث عدم "
+"تکرار پکیج در بسیاری از قالبها می شود، اما اگر بخواهید تنها یک قالب مخصوص را "
+"حذف کنید. می تواند مشکل ساز شود. شما می توانید گزینه \"include#\" را با تنظیم "
+"این متغیر روی \"off\" غیرفعال کنید."
+
+#. type: Plain text
+#: slackpkg.conf:313
+msgid "The default value of B<USE_INCLUDES> is \"on\"."
+msgstr "مقدار پیش فرض B<USE_INCLUDES> روی \"on\" تنظیم شده است."
+
+#. type: Plain text
+#: slackpkg.conf:315
+msgid "From command line, you can use -use_includes=value."
+msgstr "برای خط فرمان می توانید از \"مقدار=use_includes-\" استفاده کنید."
+
+#. type: TP
+#: slackpkg.conf:316
+#, no-wrap
+msgid "B<SPINNING>"
+msgstr "B<SPINNING>"
+
+#. type: Plain text
+#: slackpkg.conf:322
+msgid ""
+"When Slackpkg is doing an activity that takes some time, it gives visual "
+"feedback with a spinning bar. If you don't like the spinning bar, it can be "
+"disabled by setting this option to \"off\"."
+msgstr ""
+"وقتی slackpkg یک کار زمانبر انجام می دهد، یک بازخورد تصویری به صورت یک میله "
+"چرخان نمایش می دهد. اگر میله چرخان را دوست ندارید، می توانید آن را با تنظیم "
+"این متغیر روی \"off\" غیرفعال کنید."
+
+#. type: Plain text
+#: slackpkg.conf:326
+msgid "The default value of B<SPINNING> is \"on\"."
+msgstr "مقدار پیش فرض B<SPINNING> روی \"on\" تنظیم شده است."
+
+#. type: Plain text
+#: slackpkg.conf:328
+msgid "From command line, you can use -spinning=value."
+msgstr "برای خط فرمان می توانید از \"مقدار=spinning-\" استفاده کنید."
+
+#. type: TP
+#: slackpkg.conf:330
+#, no-wrap
+msgid "B</etc/slackpkg/slacpkg.conf>"
+msgstr "B</etc/slackpkg/slacpkg.conf>"
+
+#. type: Plain text
+#: slackpkg.conf:338
+msgid ""
+"B<slackpkg>(8)  B<pkgtool>(8)  B<installpkg>(8)  B<upgradepkg>(8)  "
+"B<removepkg>(8)"
+msgstr ""
+"B<slackpkg>(8)  B<pkgtool>(8)  B<installpkg>(8)  B<upgradepkg>(8)  "
+"B<removepkg>(8)"

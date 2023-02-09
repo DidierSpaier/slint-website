@@ -1,0 +1,257 @@
+= Zum Slint-Projekt beitragen
+
+So, Sie wollen helfen und zum Slint-Projekt beitragen? Willkommen an Bord!
+
+Die benötigte Arbeit um Slints Produkte anbieten zu können sind vor allem
+Übersetzen und Prüfen von Shellskripten, die die Slackware
+Installationsroutinen ausmachen, und Dokumentation, die sich an
+Slackwarebenutzer richten und die Form von Textdateien oder Manualseiten
+haben.
+
+Im Idealfall wünschen wir uns, dass Übersetzer:
+[options="compact"]
+* in der Lage sind, in Englisch zu kommunizieren und sehr fließend in der
+  Zielsprache sind. Dabei wird die Muttersprache bevorzugt
+* Technisches Vokabular zu verstehen, wenn es um Installation und
+  Administration eines Linuxsystems geht
+* Slackwareuser sind
+* in der Lage sind, einfache Shellskripte zu lesen und zu verstehen
+
+Aber selbst wenn Sie nicht alle diese Erwartungen erfüllen, zögern Sie sich
+nicht, sich bereit zu erklären: Es gibt immer noch viele Aufgaben, die von
+Ihren Fähigkeiten profitieren können.
+
+== Freiwillig mitarbeiten und Definition Ihrer Beiträge
+
+Um freiwillig als Übersetzer mitzuarbeiten, benutzen Sie vorzugsweise die
+Transifex-Plattform:
+https://www.transifex.com/signup/contributor/[Registrieren] Sie sich
+kostenlos bei Transifex und gehen Sie dann auf die
+https://www.transifex.com/projects/p/slint/[Slint-Projektseite] bei
+Transifex:
+[options="compact"]
+* Wenn Ihre Sprache aufgelistet wird, klicken Sie darauf und auf der nächsten
+  Seite klicken Sie auf die Schaltfläche "Gruppe beitreten".
+* Sonst klicken Sie auf die Schaltfläche "Sprache anfragen" (im hellblauen
+  Streifen, oberhalb der Liste mit den Sprachen).
+
+Wenn Sie vorher Fragen haben oder sich bei einer anderen Aufgabe als der
+Übersetzung beteiligen möchten, schicken Sie eine E-Mail an den
+Projektleiter von Slint: didier dot spaier at epsm dot fr.
+
+Dann können Sie mit Ihrem Teamleiter oder dem Projektleiter das "Warum",
+"Was", "Wie" und "Wann" Ihres Mitwirkens an Slint besprechen.
+
+== Unsere Methoden und Werkzeuge kennen und bereit sein, innerhalb des Slint-Teams zu kommunizieren ==
+
+Lesen Sie unten bitte <<recommendations,Praktische Erwartungen an
+Übersetzer>>.
+
+Danach machen Sie sich mit den link:tools.html[Tools] vertraut, die wir
+nutzen. Um sie besser nutzen zu können, brauchen Sie eine installierte
+Linux-Distribution, vorzugsweise ein komplettes Slackware-System,
+inkl. folgender Pakete:
+
+* ../extra/aspell-words-lists/<Paket für Ihre Sprache> für Rechtschreibprüfung
+* ../kdei/<Paket kde-l10n für Ihre Sprache> um die Benutzeroberfläche für
+  Lokalize zu lokalisieren, falls Sie es nutzen
+
+Und nicht zuletzt ist es wichtig, dass wir als Team zusammenarbeiten, also:
+
+* Registrieren Sie sich bitte bei Transifex, auch wenn Sie den Online-Editor
+  nicht nutzen, dann prüfen Sie Ihre
+  https://www.transifex.com/settings/notices/[Benachrichtigungseinstellungen],
+  damit es einfacher ist, alle Mitarbeiter gleichzeitig über Angelegenheiten
+  zu informieren, die von allgemeinem Interesse sind. Bitte geben Sie Ihren
+  vollen Namen an, auch wenn Sie einen Spitznamen nutzen.
+* Wir empfehlen dringend, dass Sie der
+  https://lists.sourceforge.net/lists/listinfo/slint-translators[slint-translators
+  mailing-list] beitreten. Das erlaubt Ihnen Fragen zu stellen und zu
+  beantworten, an Diskussionen teilzunehmen, sowie Empfehlungen und Vorschläge
+  zu machen.
+* Stellen Sie Ihre E-Mail-Adresse bereit, damit die Teamleiter und der
+  Projektleiter von Slint Sie erreichen können.
+* Sie können auch die Diskussions-Funktion nutzen, die bei Transifex auf der
+  Seite Ihrer Sprache im Slint-Projekt zur Verfügung steht.
+* Sie können ebenfalls
+  http://www.linuxquestions.org/questions/slackware-14/internationalized-slackware-14-installer-what-languages-to-start-4175455701/[dieses
+  Thema] im Slackware-Forum von LinuxQuestions.org mitverfolgen. Registrieren
+  Sie sich dafür bei LQ und schreiben entweder eine Mitteilung zu diesem Thema
+  oder klicken auf "Thread Tools" => "Subscribe to this Thread" (in einem
+  dunkelblauen Querbalken oberhalb des ersten angezeigten Beitrags).
+
+== Umfang der Übersetzung
+
+=== Zielsprachen
+
+Zur Zeit des Verfassens sind der Slint-Installer und wichtige
+Administrationsprogramme komplett ins Französische, Deutsche, Polnische,
+Portugiesische, Russische, Spanische und Ukrainische übersetzt. Weitere
+Übersetzungen sind in Bearbeitung und ihr Status kann
+https://www.transifex.com/projects/p/slint/resource/slint/[hier] überprüft
+werden.
+
+Handbuchseiten sind in mehrere Sprachen übersetzt und komplette
+Übersetzungen sind in der Datei
+https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT] aufgelistet.
+
+=== Übersetzter Inhalt
+
+Die übersetzten Inhalte werden in Form von Dateien gespeichert, die die
+ursprünglichen englischen Texte neben den Übersetzungen beinhalten, genannt
+PO-Dateien. Diese werden von GNU 'Gettext' verarbeitet. Jede vorgegebene
+Reihe von Texten (im Falle von Slint auf Englisch) die übersetzt werden
+soll, ist in einer sog. POT-Datei gespeichert. Daraus erstellen die
+Übersetzer für jede Zielsprache eine PO-Datei (für mehr Details siehe
+http://docs.slackware.com/howtos:misc:internationalization_and_localization_of_shell_scripts[Internationalization
+and localization of shell scripts] auf
+http://docs.slackware.com/start[SlackDocs]).
+
+Texte in POT-Dateien werden aus einem oder mehreren Shell-Skripten oder
+Handbuchseiten erfasst. Hier ist die aktuelle Liste der POT-Dateien von
+Slint und ihre Umfänge (siehe link:tools.html[Werkzeuge] um mehr über die
+Anwendung der Werkzeuge zu erfahren).
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|POT-Dateiname|Ressourcenname (Transifex)|Umfang|passendes Werkzeug
+|slackware.pot|https://www.transifex.com/projects/p/slint/resource/slint/[slint]|Slint-Installer
+Slint-Paket (ohne Handbuchseiten)|toolbox.sh
+|pkgtools.pot|https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools]|Handbuchseiten des Pakets 'pkgtools'|gen_man_pages
+|slackpkg.pot|https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]|Hanbuchseiten des Pakets 'slackpkg'|gen_man_pages
+|slint.pot|https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/[POT-Datei für slint.sh]|Skript slint.sh, siehe link:tools.html[Werkzeuge]|toolbox_slint_sh
+|index.html.pot|https://www.transifex.com/projects/p/slint/resource/indexhtml/[index.html]|link:index.html[Alte Homepage von Slint]|(keins)
+|template.pot|https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]|Seitenleiste und Titelleiste der Webpage von Slint|(keins)
+|(keiner)|https://www.transifex.com/projects/p/slint/resource/slinttxt/[slint.txt]|link:slint.html[Homepage von Slint]|(keins)
+|(keiner)|https://www.transifex.com/projects/p/slint/resource/installertxt/[installer.txt]|link:installer.html[Slint-Installer]|(keins)
+|(keiner)|https://www.transifex.com/projects/p/slint/resource/packagetxt/[package.txt]|link:package.html[Slint-Paket]|(keins)
+|(keiner)|https://www.transifex.com/projects/p/slint/resource/translatorstxt/[translators.txt]|link:translators.html[Übersetzer]|(keins)
+|(keiner)|https://www.transifex.com/projects/p/slint/resource/contributetxt/[contribute.txt]|link:contribute.html[Beitragen]|(keins)
+|(keiner)|https://www.transifex.com/projects/p/slint/resource/toolstxt/[tools.txt]|link:tools.html[Werkzeuge]|(keins)
+|(keiner)|https://www.transifex.com/projects/p/slint/resource/changelogtxt/[changelog.txt]|link:changelog.html[ChangeLog]|(keins)
+|========
+
+=== Übergang von alten zu neuen Webseiten
+
+Unsere link:index.html[alte Homepage] wurde direkt in xhtml geschrieben. Sie
+wurde in 13 Sprachen übersetzt und wird stufenweise durch die aktuelle
+ersetzt, vorläufig link:slint.html[slint.html] genannt.
+
+Webseiten sind im Menü in der Seitenleiste gelistet. Die
+link:slint.html[Homepage] wird stufenweise die alte ersetzen, welche nicht
+mehr übersetzt und aktualisiert wird.
+
+[[new_web_pages]]
+=== Übersetzung von Webseiten
+Manche der Webseiten sind für Endbenutzer gedacht:
+link:slint.html[slint.html], link:installer.html[installer.html] und
+link:package.html[package.html]. Der Übersetzung dieser Seiten und von
+https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]
+(wird für die übersetzte Titelleiste und linke Seitenleiste der Webseite
+benutzt) sollte man Priorität geben.
+
+Andere Webseiten: link:contribute.html[Beitragen],
+link:translators.html[Übersetzer], link:tools.html[Werkzeuge] und
+link:changelog.html[ChangeLog] dürfen auch übersetzt werden, aber 'nachdem'
+die Seiten im obigen Abschnitt übersetzt wurden.
+
+NOTE: Bei der Übersetzung von template.po ist es besser, für Seiten die (noch)
+nicht übersetzt wurden, die Namen auf englisch zu lassen. So können dann
+Besucher an den Menüpunkten erkennen, dass sie beim Anklicken eine
+englischsprachige Seite angezeigt bekommen.
+
+Alle neuen Seiten werden von dem Programm http://asciidoc.org['AsciiDoc']
+erzeugt, das standardmäßig mit Slackware mitgeliefert wird (Paket
+"linuxdoc-tools"). Die Quelldateien sind Textdateien mit
+Formatierungsbefehlen für AsciiDoc. Wenn z.B. eine Zeile mit zwei gleichen
+Zeichen beginnt, wird sie als Kopfzeile zweiter Ebene interpretiert und als
+<h2>-Markierung in die XHTML-Datei geschrieben. Diese Datei wird von
+AsciiDoc generiert.
+
+Spezifische Anweisungen und Tipps zum Übersetzen von Textdateien, die von
+'AsciiDoc' verarbeitet werden, finden Sie unter
+link:tools.html#asciidoc[Übersetzen von Textdateien, aus denen 'AsciiDoc'
+Webseiten erstellt].
+
+Wenn die Datei template.po übersetzt wird, werden für jede Sprache die
+Seiten link:slint.html[slint.html], link:installer.html[installer.html] und
+link:package.html[package.html] erstellt, die alte Homepage wird durch die
+neue ersetzt, sodass die Endbenutzer von neuen Seiten in ihrer Sprache
+profitieren.
+
+[[recommendations]]
+== Praktische Empfehlungen für Übersetzer
+
+* Bedingt durch die Menge der Aufgaben und verfügbaren Ressourcen, können ein
+  oder mehrere Übersetzer(innen) an einer Sprache beteiligt sein. In allen
+  Fällen empfehle ich, dass wenigstens eine Person für die Organisation der
+  Arbeit des Teams verantwortlich ist, die Übersetzungen prüft und an den/die
+  Projektleiter weitergibt. Nennen wir ihn Team-Organisator.
+* Fühlen Sie sich nicht dazu verpflichtet wörtlich zu übersetzen. Nicht nur
+  weil das selten der beste Weg ist, sondern zusätzlich führt das oft zu
+  Sätzen, die zu lang für den verfügbaren Platz sind.
+* Benutzen Sie einen spezialisierten PO-Editor und 'nicht' einen normalen
+  Texteditor. Das vermeidet nicht nur das versehentliche bearbeiten von
+  'msgid'-Zeichenketten, sondern erleichtert auch Ihre Arbeit und
+  automatisiert zusätzliche Checks, wie das Vorkommen von Variablen in der
+  Übersetzung mit derselben Schreibweise wie im Originaltext.
+* Nehmen Sie für die Übersetzung eine Schriftart mit fester Breite, wie z.B.
+  Courier. Das ermöglicht eine optische Unterscheidung zwischen Zeichen, die
+  sonst gleich aussehen könnten. Wenn es eine Rolle spielt, prüfen Sie auch
+  die Zeilenlänge.
+Prüfen Sie, wenn möglich, auch das Layout der Übersetzung. Das könnten Sie
+machen, indem Sie die Übersetzung mit dem entsprechenden Quelltext
+vergleichen. Noch besser ist es, das übersetzte Skript auszuführen.  Das ist
+besonders wichtig, wenn Sie Dialogfenster übersetzen. Vor allem passen Sie
+auf, keine zu langen Sätze in eine Zeile zu schreiben, wenn der Text nicht
+in eine neue fließen kann.
+* Berücksichtigen Sie, dass die Zeilenbreite im VGA-Modus (der von
+  Text-basierten Installationsprogrammen verwendet wird) theoretisch auf 80
+  Zeichen beschränkt ist, praktisch aber oft auf 74.
+* Fügen Sie keine Fragezeichen hinzu, die nicht auch im Originaltext
+  vorkommen.
+* Wenn der Text eines Dialogfensters zu Tags gehört (Schaltflächentext), wie
+  "OK", "Yes", "No", "Continue", "Cancel", prüfen Sie wie diese Tags in
+  Dialogfenstern Ihrer Sprache übersetzt werden und benutzen Sie die gleichen
+  Wörter.
+* Vermeiden Sie umgangssprachliche Ausdrücke und technischen Jargon
+* Um eine Zeile in einem Dialogfensters "umzubrechen" (oder zu beenden),
+  sollten Sie \n eingeben: Durch Drücken der [Eingabetaste] wird 'kein'
+  "Zeilenumbruch" in den Text eingefügt, den der Benutzer zu sehen bekommt.
+
+Zusätzlich müssen Sie die Bedingungen von Gettext erfüllen, damit es
+funktioniert:
+
+* Wenn im Originaltext ein Wort mit einem Dollarzeichen beginnt, sollte es in
+  die Übersetzung mit genau der gleichen Zeichenfolge übernommen werden
+  (Groß-Klein-Schreibung beachten).
+* Ein Zeichen für "Zeilenumbruch" (also "\n") am Anfang oder am Ende einer
+  Zeile, sollte in der Übersetzung genau dort eingefügt werden, wie im
+  Original. Wenn der Originaltext keinen "Zeilenumbruch" hat, sollte die
+  Übersetzung auch keinen haben.
+* Ein einzelner umgekehrter Schrägstrich "\" ist in der Übersetzung nicht
+  erlaubt.
+
+Um die Übersetzung auf die Bedingungen von Gettext zu prüfen, können Sie
+folgenden Befehl aufrufen:
+
+----
+  msgfmt -c <Name der PO-Datei>
+----
+
+[[warning_man_pages]]
+=== Warnung zum Übersetzen von Handbuchseiten
+
+Behalten sie sorgfältig die Syntax der Textzeichen aus dem englischen
+Originaltext bei. Zum Beispiel übersetzen Sie nicht:
+
+* 'B<' durch 'B <' (Fügen Sie kein Leerzeichen ein)
+* 'B<' durch 'b<' (B muss ein Großbuchstabe sein - und ersetzen Sie ihn nicht
+  duch ein griechisches BETA, das ihm auf dem Bildschirm zum Verwechseln
+  ähnlich sieht).
+* 'I' durch '|' (ersetzen Sie nicht den Großbuchstaben I durch einen
+  vertikalen Strich oder umgekehrt, das gleiche gilt für das kleine L)
+
+Wenn nötig, behalten Sie beim Übersetzen von Shell-Befehlen die englischen
+Namen in Pfadangaben bei. Aber Sie können und sollten Argumente mit Werten
+wie 'packagename' übersetzen.

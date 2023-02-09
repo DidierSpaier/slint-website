@@ -1,0 +1,39 @@
+Usage of the scripts in this directory
+-------------------------------------
+
+These scripts are used to maintain the website slint.fr and manage its
+localized pages.
+
+The website is generated from the text files stored in ~/slint.fr/, using
+the asciidoc application to convert these text files to xhtml web pages.
+
+The po4a application is used to convert AsciiDooc formatted text files to
+PO files suitable for processing by gettext and back.
+
+The translations are managed and hosted using the Transifex localization
+platform.
+
+This conversion is done by the script build-site-website.sh that generates
+the web pages and store them in a subdirectory per language.
+
+Ths text files stored in ~/slint.fr/ are either "source" files (in English)
+or translations of source files.
+
+Here is the whole process of translation and site (re)building:
+
+In case of a creation or updsate of a source file:
+Writing of the text source file
+1. Generation of the POT file by the script toolbox.sh
+2. Upload on Transifex of the POT file using the Transifex client
+3. Generation of one PO file per locale by Transifex
+4. Translation of the PO file on line or uploaded to Transifex
+5. Downloading of the translated PO file from Transifex to
+  ~/MYENV/slintwebsite/translations using the Transifex client
+6. Generation of the translated text files and of coresponding web pages from
+   the translated PO file by the script update_translations.sh, respectively
+   stored in ~/slint.fr/wip_txt and ~/slint.fr/wip_html respectively
+7. Visual checking of the content of genrated files and web pages
+8. Manual move of the translated text files from ~/slint.fr/wip_txt to
+  ~/slint.fr
+
+In case of update of one or several translations the process begins at step 5.

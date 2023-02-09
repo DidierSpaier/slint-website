@@ -1,0 +1,345 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The Slint project
+# This file is distributed under the same license as the slint package.
+# 
+# Translators:
+# atlantistruva, 2013
+# kemalokmen <kemal@comu.edu.tr>, 2013
+# Kudret Emre <kudretemre@hotmail.com.tr>, 2015
+# Onur ÖZDEMİR, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: slintwebsite\n"
+"POT-Creation-Date: 2014-12-27 21:13+0100\n"
+"PO-Revision-Date: 2015-12-23 22:07+0000\n"
+"Last-Translator: Didier Spaier <didier@slint.fr>\n"
+"Language-Team: Turkish (Turkey) (http://www.transifex.com/didier_spaier/slintwebsite/language/tr_TR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#.  Before translating this file, please read instructions about it in
+#. https://slint.fr/contribute.html and https://slint.fr/tools.html. Copy this
+#. comment verbatim in your translation or just the leading // to tell it's a
+#. comment that won't be included in generated html file.
+#. type: Title =
+#: /home/didier/slint.fr/slint.en.txt:3
+#, no-wrap
+msgid "Slint home page"
+msgstr "Slint ana sayfa"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:6
+msgid ""
+"Now you can install and use http://slackware.com[Slackware] in your "
+"language!"
+msgstr "Şimdi http://slackware.com[Slackware] i kendi dilinizde kurabilir ve kullanabilirsiniz!"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:8
+msgid "At the time of writing, the following languages are available:"
+msgstr "Bu metnin yazıldığı sırada şu dilleri kullanılabilir:"
+
+#. Preferably, sort the languages by alphabetical order in your locale.
+#. Be careful to preserve the formatting with three "|" and a "\n" per line
+#. but the amount of blank spaces doesn't matter.
+#. This is a asciidoc table delimited by "|" with three columns.
+#: /home/didier/slint.fr/slint.en.txt:16
+#, no-wrap
+msgid ""
+"|'Dutch'           |'Polish'                  |'Swedish'\n"
+"|'English (USA)'   |'Portuguese (Brazil)'     |'Turkish'\n"
+"|'French'          |'Portuguese (Portugal)'   |'Ukrainian'\n"
+"|'German'          |'Russian'                 |\n"
+"|'Greek'           |'Spanish (Latin America)' |\n"
+msgstr "|'Flemenkçe'          |'Lehçe'                      |'İsveçli'\n|'İngilizce (ABD)'    |'Portekizce (Brezilya)'      |'Türkçe'  \n|'Fransızca'          |'Portekizce (Portekiz)'      |'Ukraynaca' \n|'Almanca'            |'Rusça'|                     |\n|'Yunanca'            |'İspanyolca (Latin Amerika)' |\n"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:19
+msgid ""
+"Thanks to our dozens of link:translators[benevolent translators] Slint makes"
+" that dream a reality."
+msgstr "Onlarca Slint link:translators[yardımsever çevirmenler]imize bu rüyayı gerçeğe dönüştürdükleri için teşekkürler."
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:21
+msgid ""
+"The Slint project is neither affiliated to nor endorsed by "
+"Slackware[blue]^<<note-1,[1]>>^ but need it, so we encourage all Slint users"
+" to https://store.slackware.com/cgi-bin/store[financially support] "
+"Slackware."
+msgstr "Slint projesi Slackware[blue]^<<note-1,[1]>>^ tarafından desteklenmez ve ona bağlı değildir fakat ona ihtiyaç duyar, bu nedenle Slint kullanıcılarının Slackware'i https://store.slackware.com/cgi-bin/store[finansal olarak desteklemesini] öneririz."
+
+#. type: Block title
+#: /home/didier/slint.fr/slint.en.txt:22
+#, no-wrap
+msgid "The Slint Project provides:"
+msgstr "Slint Projesi şunları sağlar:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:24
+msgid ""
+"Polyglot 'Slint installers', available for Slackware 13.37, 14.0 and 14.1"
+msgstr "Slackware 13.37, 14.0 ve 14.1 için çokdilli 'Slint kurucu'"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:25
+msgid ""
+"'Slint packages', that replace Slackware administration tools with polyglot "
+"ones and install translation files and some documents."
+msgstr "Slackware yönetim araçlarını çok dilli olanlarla değiştiren ve çevirileri kuran 'Slint paketleri'."
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:27
+msgid ""
+"All 'Slint installers' installs a 'Slint package' for the same Slackware "
+"version, that can also be installed in a genuine Slackware, and upgraded as "
+"need be."
+msgstr "Tüm 'Slint kurucuları' aynı Slackware sürümü için 'slint paketi' kurar, ki asli Slackware içinden de kurulabilir ve gerekliyse güncellenebilir."
+
+#. type: Title ==
+#: /home/didier/slint.fr/slint.en.txt:28
+#, no-wrap
+msgid "Install Slackware in your language or internationalize it afterwards"
+msgstr "Slackware'i kendi dilinizde kurun veya sonrasında yerelleştirin"
+
+#. type: Block title
+#: /home/didier/slint.fr/slint.en.txt:30
+#, no-wrap
+msgid "Install Slackware in your language using a 'Slint installer'"
+msgstr "'Slint kurucu' kullanarak Slackware'i kendi dilinizde kurun"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:32
+msgid ""
+"Two sizes of ISO images are available, both allowing to make bootable "
+"installers:"
+msgstr "İki farklı boyutta kullanılabilir ISO kalıbı var: ikisiyle de önyüklenebilir kurucular oluşturulabilir"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:34
+msgid ""
+"The http://sourceforge.net/projects/slint/files/[DVD + USB full ISO images] "
+"contain all you need to install Slackware."
+msgstr "http://sourceforge.net/projects/slint/files/[DVD + USB tam ISO kalıpları] Slackware'i yüklemek için ihtiyacınız olan her şeyi içerir."
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:35
+msgid ""
+"The https://slint.fr/installers[CD + USB small ISO images] need to be "
+"completed by a media containing the Slackware packages, for instance a "
+"Slackware DVD."
+msgstr "https://slint.fr/installers[CD + USB küçük ISO kalıpları] Slackware paketlerini içeren bir medyayla tamamlanmalıdır, örneğin bir Slackware DVD'si."
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:37
+msgid ""
+"See page link:installer.html[Slint installer] to know how to download the "
+"image, put it on a DVD or USB stick and use it."
+msgstr "See page link:installer.html[Slint installer] to know how to download the image, put it on a DVD or USB stick and use it."
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:39
+msgid ""
+"A Braille terminal can also be used to install then pilot the system. "
+"Instructions for use are available in https://slint.fr/docs/README_BRLTTY."
+msgstr "A Braille terminal can also be used to install then pilot the system. Instructions for use are available in https://slint.fr/docs/README_BRLTTY."
+
+#. type: Block title
+#: /home/didier/slint.fr/slint.en.txt:40
+#, no-wrap
+msgid ""
+"Internationalize your genuine Slackware or upgrade translations tools "
+"(re)installing a 'Slint package'"
+msgstr "Asli Slackware'i yerelleştirin veya bir 'Slint paketi' (yeniden)kurarak çevirileri güncelleyin"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:42
+msgid ""
+"Slint packages are located in directory https://slint.fr/packages[packages/]."
+" See page link:package.html[Slint package] to know how to install a Slint "
+"package for your Slackware edition and what you get for your money :-)"
+msgstr "Slint paketleri https://slint.fr/packages[packages/] dizini içine yerleştirilmiştir. Slackware yayımınız için bir Slint paketinin nasıl kurulduğunu ve paranız karşılığında ne aldığınızı :) öğrenmek için link:package.html[Slint package] sayfasına bakınız."
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:44
+msgid "Install or reinstall a 'Slint package' if you want to:"
+msgstr "Bir 'Slint paketi'ni kurun ya da yeniden kurun, eğer şunları istiyorsanız:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:46
+msgid ""
+"internationalize an already installed Slackware 13.37, 14.0 or 14.1 (if you "
+"didn't use a Slint installer)"
+msgstr "Halihazırda kurulmuş Slackware 13.37, 14.0 ya da 14.1 i yerelleştirmek için (Slint kurucu kullanmadıysanız)"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:47
+msgid "get new translated tools, fixes and translations in new languages."
+msgstr "yeni çevirilmiş araçlar, düzeltmeler ve yei dillerde çeviriler edin."
+
+#. type: Title ==
+#: /home/didier/slint.fr/slint.en.txt:48
+#, no-wrap
+msgid "Use your polyglot Slackware"
+msgstr "Çokdilli Slackware'inizi kullanın"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:51
+msgid ""
+"A locale is the definition of the subset of a user's environment that "
+"depends on language and cultural conventions."
+msgstr "Bir locale kullanıcı ortamının diline ve kültürel geleneklere bağlı olarak bir alt küme tanımlamasıdır."
+
+#. type: Block title
+#: /home/didier/slint.fr/slint.en.txt:52
+#, no-wrap
+msgid "Set up your preferred locale"
+msgstr "Tercih edilen locale nizi seçin"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:54
+msgid ""
+"The Slint installer makes default locale settings in installed system "
+"according to language used during installation, but if you installed a Slint"
+" package to internationalize a genuine Slackware you'll need to make these "
+"settings yourself."
+msgstr "Slint kurucu kurulum sırasında kullanılan dile bağlı olarak kurulu sistemde varsayılan locale ayarını yapar, fakat eğer asıl Slackware i yerelleştirmek için bir Slint paketi kurduysanız bu ayarı kendiniz yapmalısınız."
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:57
+msgid ""
+"To view messages in your preferred language, just set the LANG parameter "
+"accordingly in file /etc/profile.d/lang.sh[blue]^<<note-2,[2]>>^ For "
+"instance, to display messages in Brazilian Portuguese, you would replace the"
+" `en_US` default setting like this:"
+msgstr "Tercih ettiğiniz dilde mesajı görmek için /etc/profile.d/lang.sh[blue]^<<note-2,[2]>>^ bağlı olarak LANG parametresini ayarlayın Örneğin, mesajı Brezilya Portekizcesinde görmek için varsayılan `en_US` değerini şöyle değiştirirdiniz:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/slint.en.txt:60
+#, no-wrap
+msgid ""
+"export LANG=pt_BR.utf8 # locale  name should end in .utf8 to match UTF-8 "
+"encoding of translated messages \n"
+msgstr "export LANG=pt_BR.utf8 # locale ismi çevirilen mesajlardaki UTF-8 kodlamasıyla eşleşmesi için .utf8 ile bitmeli \n"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:62
+msgid ""
+"Also , to properly display translated manual pages that are encoded in "
+"UTF-8, insert 'one' of following commands in your ~/.bashrc:"
+msgstr "Ayrıca, UTF-8 ile kodlanmış çevirilen kılavuz sayfalarını doğru bir şekilde görüntülemek için, ~/.bashrc dosyanızın içine şu komutlardan 'birini' ekleyin:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/slint.en.txt:66
+#, no-wrap
+msgid ""
+"export GROFF_ENCODING=utf8 # If all man pages you read are either in English or encoded in UTF-8\n"
+"alias uman=\"GROFF_ENCODING=utf8 man\" # If you also read man pages in other encodings\n"
+msgstr "export GROFF_ENCODING=utf8 # eğer okuduğunuz tüm kılavuz dosyaları İngilizce ya da UTF-8 kodlanmış ise\nalias uman=\"GROFF_ENCODING=utf8 man\" # eğer kılavuz sayfalarını diğer kodlamalarda da okuyorsanız\n"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:68
+msgid ""
+"If you use the latter, you will type \"uman\" instead of \"man\" in a "
+"terminal to display manual pages encoded in UTF-8."
+msgstr "Eğer ikincisini kullanırsanız, UTF-8 kodlanmış kılavuz sayfalarını uç birimde görüntülemek için \"man\" yerine \"uman\" yazacaksınız."
+
+#. type: Block title
+#: /home/didier/slint.fr/slint.en.txt:69
+#, no-wrap
+msgid "Administrate Slackware in your language"
+msgstr "Slacware i kendi dilinizde yönetin"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:71
+msgid ""
+"'Slint installers' as well as 'Slint packages' replace main Slackware tools "
+"by polyglot ones, and add translated man pages."
+msgstr "'Slint kurucuları' 'Slint paketleri' gibi ana Slackware araçlarını çok dilli olanlarla değiştirir ve çevirilmiş kılavuz sayfalarını ekler."
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:73
+msgid ""
+"All polyglot tools currently available are listed in page "
+"link:package#what_is_translated[Slint package]. They allow you to:"
+msgstr "Şu an müsait tüm çok dilli araçlar link:package#what_is_translated[Slint package] sayfasında listelenmiştir. Bunlar şunları sağlar:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:75
+msgid "Manage software packages"
+msgstr "Yazılım paketlerini yönetin"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:76
+msgid "Add users"
+msgstr "Kullanıcı ekle"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:77
+msgid ""
+"(re)configure your system: decide which system daemons (services) to start "
+"at boot time, create new users, reconfigure your boot loader, choose default"
+" windows manager or desktop, configure your network, make an USB Linux boot "
+"stick"
+msgstr "sisteminizi (yeniden)yapılandırın: önyükleme sırasında hangi sitem düreçlerinin (hizmetler) başlayacağına karar verin, yeni kullanıcılar oluşturun, önyükleyicinizi yeniden yapılandırın, varsayılan masaüstü yöneticisini ya da masaüstünü seçin, ağınızı yapılandırın, USB önyükleme belleği oluşturun"
+
+#. type: Title ==
+#: /home/didier/slint.fr/slint.en.txt:78
+#, no-wrap
+msgid "Contribute, get help, stay tuned"
+msgstr "Katkı ver, yardım al, bağlı kal"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:81
+msgid ""
+"If want to contribute to the Slint Project, either as a translator or "
+"otherwise, see page link:contribute[Contribute]"
+msgstr "Slint projesine katkı vermek istiyorsanız, çevirmen olarak ya da başka şekilde, link:contribute[Contribute] sayfasına bakınız"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:83
+msgid ""
+"If you need help, you can post in Linux Questions' "
+"http://www.linuxquestions.org/questions/slackware-14/[Slackware forum] (in "
+"English)."
+msgstr "Eğer yardıma ihtiyacınız varsa Linux Questions'a http://www.linuxquestions.org/questions/slackware-14/[Slackware forum] (İngilizce) yazabilirsiniz."
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:85
+msgid ""
+"For general questions or suggestions, like adding new translated tools to "
+"'Slint package', register to our "
+"https://lists.sourceforge.net/lists/listinfo/slint-translators[mailing-"
+"list]."
+msgstr "Genel soru ya da öneriler için, 'Slint paketi'ne yeni çevirilmiş araçlar eklemek gibi, https://lists.sourceforge.net/lists/listinfo/slint-translators[mailing-list] e kayıt olun."
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:87
+msgid ""
+"To stay tuned and benefit of new translated tools and translations in new "
+"languages, consult the link:changelog[ChangeLog]."
+msgstr "Bağlı kalmak için ve yeni çevirilmiş araçlardan ve çevirilerden faydalanmak için link:changelog[ChangeLog] sayfasına başvurun."
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:89
+msgid "'''"
+msgstr "'''"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:91
+msgid ""
+"[[note-1]]^1. Slackware (R) is a "
+"http://slackware.com/trademark/trademark.php[registered trademark] of "
+"Slackware Linux inc.^"
+msgstr "[[note-1]]^1. Slackware (R) is a http://slackware.com/trademark/trademark.php[registered trademark] of Slackware Linux inc.^"
+
+#. type: Plain text
+#: /home/didier/slint.fr/slint.en.txt:92
+msgid ""
+"[[note-2]]^2. Due to a bug but only in Slackware 13.37, after 'su' you'll "
+"need to set LANG before each command. For instance: 'LANG=fr_FR.utf8 "
+"pkgtool'^"
+msgstr "[[note-2]]^2. Sadece Slackware 13.37'de bulunan bir hatadan dolayı, 'su' dan sonra her komuttan önce LANG i ayarlamalısınız. Örneğin: 'LANG=fr_FR.utf8 pkgtool'^"

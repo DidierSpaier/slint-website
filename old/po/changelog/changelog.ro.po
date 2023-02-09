@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The Slint project
+# This file is distributed under the same license as the changelog package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: slintwebsite\n"
+"POT-Creation-Date: 2015-01-30 22:49+0100\n"
+"PO-Revision-Date: 2015-07-22 23:15+0000\n"
+"Last-Translator: Didier Spaier <didier@slint.fr>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/slintwebsite/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#. type: Title ==
+#: /home/didier/slint.fr/changelog.en.txt:1
+#, no-wrap
+msgid "Changelog"
+msgstr ""
+
+#. type: Plain text
+#: /home/didier/slint.fr/changelog.en.txt:4
+msgid ""
+"The Changelog retracing changes that occurred before 27/09/2014 is "
+"https://slint.fr/pub/slint-history/Changelog.txt[here]."
+msgstr ""
+
+#. type: delimited block |
+#: /home/didier/slint.fr/changelog.en.txt:14
+#, no-wrap
+msgid ""
+"|Date|Changes\n"
+"|27/09/2014|\n"
+"The user is proposed to create regular users at end of installation. +\n"
+"\"Full\" ISO images (containing all packages shipped in the Slackware DVD ISO image in addition to the Slint installer) are available http://sourceforge.net/projects/slint/files/[here] +\n"
+"Dutch is now available, thanks to Dik Leenheer and Eric Hameleers. +\n"
+"The installers and packages now install some documentation in /usr/doc/slint-<version>-<date>, including a Slint-HOWTO.txt and a script reinstall-slackware-packages.sh. +\n"
+"Instructions to choose the language for installation are now provided directly in the greeting screen of the installers.\n"
+msgstr ""
+
+#. type: delimited block |
+#: /home/didier/slint.fr/changelog.en.txt:21
+#, no-wrap
+msgid ""
+"|19/12/2014|\n"
+"Swedish is now available, thanks to Ingemar Karlsson.\n"
+"Blind people can now use Slint installers (version 14.1) without help using a Braille terminal, thanks to Philippe Delavalade for testing and suggesting enhancements. +\n"
+"The software brltty that allows to use a Braille terminal during installation is also shipped and configured in the installed system, that can thus be fully run and managed from a Braille terminal. +\n"
+"dialog's program configuration file and dialog commands that display a menu or check-list have been modified, mostly to ease usage of a Braille terminal and also to customize the look of the dialog boxes. +\n"
+"Several translations of files in the installers, man pages and administrative tools have been added, reviewed and corrected, and the Slint packages have been rebuilt accordingly.\n"
+msgstr ""

@@ -1,0 +1,125 @@
+
+= Slint installerare
+
+Slint installationsprogram tillåter dig att använda önskat språk under
+installationen, och lägger till översatta administrationsverktyg och
+manualsidor till Slackware.
+
+A 'Braille terminal' can also be used to install then pilot the
+system. Instructions for use are available in
+https://slint.fr/docs/README_BRLTTY.
+
+== Ladda ner och kontrollera installations ISO-avbild
+Två storlekar på ISO-avbilder finns:
+
+* http://sourceforge.net/projects/slint/files/[DVD + USB full ISO-avbilder]
+  innehåller allt du behöver för att installera Slackware.
+* https://slint.fr/installers[CD + USB små ISO-avbilder] behöver kompletteras
+  med en media som innehåller Slackwarepaket, exempelvis en Slackware DVD.
+
+För att ladda ner hela ISO-avbilden, klicka först på dess versionsnummer,
+till exempel 14.1.
+
+Du kan kontrollera integriteten i ISO-avbilden med dess md5 checksumma.
+
+* För de små ISO-avbilderna, ladda ner och använd dess tillhörande md5-fil
+  (vars namn slutar på Md5).
+* För den kompletta ISO-avbilden kan du visa granskningssumman genom att
+  klicka på i'et i den svarta cirkel till höger om länken till ISO-avbilden.
+  Till exempel för att göra en flerspråkig installation av en
+internationaliserad Slackware64-14.1, ladda ner ISO-avbilden (och md5-filen,
+i händelse av en liten installation) kör sedan i samma katalog till exempel
+ett av följande kommandon
+----
+md5sum -c slint64-14.1.iso.md5 # svaret skall bli: OK
+md5sum slint64-14.1-full.iso # Resultatet skall vara desamma som visas på hemsidan
+----
+== Bränn ISO-avbilden på en DVD, en CD-skiva eller en USB-sticka
+
+=== Gör en bootbar USB-sticka
+
+[WARNING]
+====
+* Allt innehåll på USB-minnet kommer att gå förlorade
+* Läs noga ditt kommando för att se till att du inte skrev namnet på en
+  hårddiskpartition i stället för det USB-minnet eftersom denna partitions
+  innehåll skulle OÅTERKALLELIGT FÖRLORAS
+====
+
+På 'Linux' plugga in USB-minnet, kontrollera sedan dess namn med följande
+kommandon:
+
+----
+cat /proc/partitions
+dmesg | tail
+----
+
+Om till exempel namnet är /dev/sdc, skriv:
+
+----
+dd if=<filnamn.iso> of=/dev/sdc bs=1M
+----
+
+På "Windows" använd programet http://rufus.akeo.ie/[Rufus] som är gratis och
+öppen källkod.
+
+=== Gör en startbar CD (liten installerare) eller DVD (stor installerare)
+
+På "Linux" skriv ett kommando som den första nedan för en CD-skiva, eller
+den andra för en DVD.
+
+----
+cat slint64-14.1.iso | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso
+----
+
+
+På "Windows 2000/XP/Vista/7" använd programet
+http://infrarecorder.org/[InfraRecorder] som är gratis och öppen källkod.
+
+
+På 'Windows 7/8 "Använd
+http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file[Windows
+Disk Image Burner], som levereras med Windows 7 och 8
+
+== Använda din flerspråkiga installerare
+
+Bara sätt in installationsmediat (CD, DVD eller USB-minne) och starta om din
+maskin.
+
+På välkomstskärmen, kommer du att välja önskat språk för installation skriva
+in motsvarande två siffror.
+
+Utöver att vara flerspråkig, erbjuder Slint installationsprogram följande
+funktioner utöver de för original Slackware installationsprogram:
+
+* Standard tecken och tangentlayout är anpassade till det språk som används
+  för installation.
+* När det är möjligt, är det ett True Type teckensnitt som används under
+  installationen för att automatiskt anpassa teckenstorleken till skärmens
+  upplösning (endast för Slackware versionerna 14.0 och 14.1).
+* Alternativ att skapa vanliga användarkonton vid slutet av installationen
+  (innan omstart) finns.
+* Alternativ finns för att ställa in som standard i det installerade systemet
+  språk och tangentlayout som används under installationen och gör motsvarande
+  inställningar för tangentbordet under X om X-servern är installerad.
+* En Slint-paketet är installerat, som ger översättningar av de viktigaste
+  Slackware verktyg och deras manualsidor, som anges i länken:
+  package.html[Slint package], liksom dokument som läggs i
+  /usr/doc/slint-<version>-<datum>, däribland en Slint-HOWTO.txt och ett
+  skript reinstall-slackware-packages.sh.
+
+Om du använder den lilla versionen av installationsprogrammet, under
+installationen behöver du även ett "källmedia", med andra ord ett media
+innehållande Slackwarepaket. Paket kan installeras från Slackware
+DVD/CD-skivor, ett Slackware USB-minne, en förmonterad katalog, en
+hårddiskpartition, en Samba utdelning, NFS (Network File System), en
+FTP/HTTP-server. När du väljer SOURCE på menyn, berättar
+installationsprogrammet vad du ska göra beroende på vilken typ valda medier.
+
+För att hitta källmedia, följ denna länk:
+http://www.slackware.com/getslack/[Get Slack]
+
+TIP: Om så behövs kan du byta ut installationsmedia med ett annat som innehåller
+paketen, som vid tidpunkten för installationen av paket kommer
+installationsprogrammet redan ha lästs in i minnet.

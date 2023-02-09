@@ -1,0 +1,240 @@
+= Draag bij aan het Slint project
+
+Dus je wilt meehelpen en bijdragen aan het Slint project? Welkom aan boord!
+
+Wat we vooral nodig hebben om de Slint producten te kunnen aanbieden is het
+vertalen en controleren van de shell scripts die samen de Slackware
+installer en administratie-programma's vormen, en van de documentatie voor
+Slackware gebruikers in de vorm van tekstbestanden of manual pagina's..
+
+Het liefst willen we van vertalers zien dat ze:
+[options="compact"]
+* in staat zijn om in het Engels te communiceren en erg bedreven zijn in de
+  doel-taal, bij voorkeur hun moedertaal
+* het technische vocabulaire begrijpen dat hoort bij het installeren en
+  beheren van een Linux systeem
+* daadwerkelijk Slackware gebruikers zijn
+* in staat zijn om simpele shell scripts te lezen en te begrijpen
+
+Maar zelfs als je niet voldoet aan al deze verwachtingen, aarzel niet en
+meld je toch aan: er zijn nog altijd veel taken waarbij jouw vaardigheden
+van pas komen.
+
+== Zet je in als vrijwilliger en bepaal je bijdrage
+
+Om als een vertaler bij te dragen is het aan te raden om het Transifex
+platform te gebruiken: registreer eerst
+https://www.transifex.com/signup/contributor/[op Transifex] (dat is gratis),
+en ga daarna naar de Transifex pagina voor
+https://www.transifex.com/projects/p/slint/[het Slint project]:
+[options="compact"]
+* Klik op je taal als die al in de lijst voorkomt en klik op de pagina van die
+  taal op "Join the Team".
+* Of klik op "Request a language" (in de lichtblauwe strook net boven de
+  lijst)
+
+Maar als je vooraf vragen hebt of wilt helpen met andere zaken dan vertalen
+stuur dan een email naar de maintainer van Slint: didier dot spaier at slint
+dot fr.
+
+Overleg met je teamcoördinator of de maintainer van Slint over het "waarom",
+"wat", "hoe"' en "wanneer" van je bijdrage aan Slint.
+
+== Ken onze methoden en tools en wees bereid om te communiceren binnen het Slint-team ==
+
+Lees <<recommendations,Praktische aanbevelingen voor vertalers>> hieronder.
+
+Neem vervolgens kennis van de link:tools.html[Tools] die we gebruiken. Die
+werken het best op een Linux distributie, bij voorkeur een volledige
+Slackware-installatie inclusief de volgende pakketten:
+
+* ../extra/aspell-words-lists/<pakketten voor je taal> voor spellingscontrole
+* ../kdei/<pakket kde-l10n voor je taal> om de UI van Lokalize te localiseren
+  als je dat gebruikt
+
+Als laatste maar zeker zo belangrijk: we werken samen als een team, dus:
+
+* Registreer je bij Transifex, zelfs als je de online-editor niet gebruikt, en
+  controleer alle https://www.transifex.com/settings/notices/[notificatie
+  instellingen], omdat die het direct informeren van alle bijdragers over
+  algemene zaken vergemakkelijken. Vermeld je volledige naam, zelfs wanneer je
+  een 'nickname' gebruikt.
+* We adviseren met klem je te abonneren op
+  https://lists.sourceforge.net/lists/listinfo/slint-translators[slint-translators
+  mailing-lijst]. Hier kun je vragen stellen en beantwoorden, deelnemen aan
+  discussies en suggesties aandragen.
+* Zorg voor een e-mailadres waarop je teamcoördinator en Slint's maintainer je
+  kunnen bereiken.
+* Je kunt tevens de Discussie-functie op de Slint webpagina van jouw taal op
+  Transifex gebruiken.
+* Je kunt ook
+  http://www.linuxquestions.org/questions/slackware-14/internationalized-slackware-14-installer-what-languages-to-start-4175455701/[deze
+  topic] volgen in het Slackware forum van LinuxQuestions.org. Registreer
+  hiervoor op LQ en plaats ofwel een bericht in deze thread, of bekijk hem en
+  klik Thread Tools => Subscribe to this Thread (in de donkerblauwe strook
+  vlak boven het eerste weergegeven bericht).
+
+== Omvang van de vertaling
+
+=== Doel-talen
+
+Momenteel zijn de slint-installer en de belangrijkste Slackware beheertools
+volledig vertaald in het Duits, Frans, Nederlands, Pools, Portugees,
+Russisch, Spaans en Oekraïens. De status van de andere vertalingen is te
+controleren op
+https://www.transifex.com/projects/p/slint/resource/slint/[deze pagina].
+
+Manual pagina's zijn in meer talen vertaald. Een lijst met volledige
+vertalingen vind je op https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT]
+
+=== Vertaalde inhoud
+
+Vertaalde inhoud heeft de vorm van bestanden, PO bestanden genoemd, die de
+originele engelse berichten bevat samen met hun vertalingen, verkregen door
+GNU 'gettext';. Elke te vertalen verzameling berichten (in het engels, in
+het geval van Slint) staan in een zgn. POT-bestand waarvan voor elke
+doel-taal een PO-bestand wordt gegenereerd. Zie
+http://docs.slackware.com/howtos:misc:internationalization_and_localization_of_shell_scripts[Internationalization
+and localization of shell scripts] op
+http://docs.slackware.com/start[SlackDocs] voor meer info.
+
+Berichten in een gegeven POT-bestand zijn verzameld uit één of meer shell
+scripts of man pagina's. Hier is de actuele lijst van Slint POT-bestanden en
+hun doel (zie link:tools.html[Tools] om meer over de desbetreffende tools te
+weten te komen).
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|POT-bestandsnaam|Bronnaam (Transifex)|Doel|Betreffende tool
+|slackware.pot|https://www.transifex.com/projects/p/slint/resource/slint/[slint]|Slint installer
+Slintpakket (zonder man pages)|toolbox.sh
+|pkgtools.pot|https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools]|man pages in pakket 'pkgtools'|gen_man_pages
+|slackpkg.pot|https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]|man pages in pakket 'slackpkg'|gen_man_pages
+|slint.pot|https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/[POT file for slint.sh]|script slint.sh, zie link:tools.html[Tools]|toolbox_slint_sh
+|index.html.pot|https://www.transifex.com/projects/p/slint/resource/indexhtml/[index.html]|link:index.html[Old Slint's home page]|(none)
+|template.pot|https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]|Zijbalk en hoofd-titel van Slint web-pagina's|(none)
+|(none)|https://www.transifex.com/projects/p/slint/resource/slinttxt/[slint.txt]|link:slint.html[Slint's home page]|(none)
+|(none)|https://www.transifex.com/projects/p/slint/resource/installertxt/[installer.txt]|link:installer.html[Slint installer]|(none)
+|(none)|https://www.transifex.com/projects/p/slint/resource/packagetxt/[package.txt]|link:package.html[Slint package]|(none)
+|(none)|https://www.transifex.com/projects/p/slint/resource/translatorstxt/[translators.txt]|link:translators.html[Translators]|(none)
+|(none)|https://www.transifex.com/projects/p/slint/resource/contributetxt/[contribute.txt]|link:contribute.html[Contribute]|(none)
+|(none)|https://www.transifex.com/projects/p/slint/resource/toolstxt/[tools.txt]|link:tools.html[Tools]|(none)
+|(none)|https://www.transifex.com/projects/p/slint/resource/changelogtxt/[changelog.txt]|link:changelog.html[ChangeLog]|(none)
+|========
+
+=== Transitie van oude naar nieuwe webpagina's
+
+Onze link:index.html[oude home pagina] is rechtstreeks in xhtml
+geschreven. Deze pagina is vertaald in 13 talen en zal successievelijk
+vervangen worden door de huidige, voorlopig link:slint.html[slint.html]
+genoemd.
+
+Webpagina's staan in het menu op de zijbalk. De link:slint.html[homepage]
+zal geleidelijk de oude vervangen die niet in meer talen zal worden vertaald
+en niet meer zal worden bijgewerkt.
+
+[[new_web_pages]]
+=== Vertaling van webpagina's
+Sommige webpagina's zijn bedoeld voor eindgebruikers:
+link:slint.html[slint.tml], link:installer.html[installer.html] en
+link:package.html[package.html]. Vertaling van deze pagina's en van
+https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]
+(gebruikt om de vertaalde hoofdtitel en linker zijbalk van de webpagina's te
+genereren) hebben prioriteit.
+
+Andere webpagina's zoals link:contribute.html[Bijdragen],
+link:translators.html[Vertalers], link:tools.html[Tools] en
+link:changelog.html[ChangeLog] mogen ook worden vertaald (dat is aan elk
+vertaalteam) maar alleen nadat de pagina's hierboven genoemd vertaald zijn.
+
+NOTE: Bij het vertalen van template.po van een gegeven taal is het beter de
+engelse namen van de (nog) niet vertaalde webpagina's te behouden zodat
+bezoekers die op de overeenkomstige links in het menu klikken weten dat ze
+deze pagina's in het engels zullen zien.
+
+Alle nieuwe pagina's worden gegenereerd met de applicatie
+http://asciidoc['AsciiDoc'] die meekomt met Slackware (in het pakket
+linuxdoc-tools). De bronbestanden zijn tekstbestanden die ook de
+Asciidoc-opmaakinstructies bevatten. Bijvoorbeeld dat een regel die begint
+met twee isgelijkaan-tekens wordt beschouwd als een koptekst van niveau
+twee, geschreven als een <h2> tag in het XHTML-bestand gegenereerd door
+asciidoc.
+
+Specifieke instructies en tips voor het vertalen van tekstbestanden die door
+'AsciiDoc' verwerkt worden staan op link:tools.html#asciidoc[Vertalen van
+door 'AsciiDoc' tot webpagina's te verwerken tekstbestanden].
+
+Voor elke taal waarvan de vertaling van template.po,
+link:slint.html[slint.html], link:installer.html[installer.html] en
+link:package.html[package.html] klaar is zal de oude webpagina door de
+nieuwe vervangen worden zodat de eindgebruikers gebruik kunnen maken van de
+nieuwe pagina's in die taal..
+
+[[recommendations]]
+== Praktische aanbevelingen voor vertalers
+
+* Afhankelijk van de hoeveelheid werk en de beschikbare capaciteit kan er één
+  vertaler of een team van vertalers per taal zijn. In elk geval adviseer ik
+  dat er één persoon verantwoordelijk is voor de organisatie van het werk, de
+  controle van de vertalingen en het overbrengen van het gecontroleerde
+  PO-bestand naar de onderhouder(s). Laten we dit de teamcoördinator noemen.
+* Voel je niet verplicht alles letterlijk te vertalen. Dit is niet alleen
+  zelden de manier om de boodschap over te brengen maar leidt vaak ook tot te
+  lange zinnen voor de beschikbare ruimte.
+* Gebruik een speciale PO-editor en geen generieke tekstbewerker. Dit voorkomt
+  niet alleen het onbedoeld vertalen van 'msgid' strings maar vergemakkelijkt
+  het werk en automatiseert aanvullende controles als de aanwezigheid van
+  variabelen in de vertaling met dezelfde spelling als het origineel.
+* Kies voor het vertalen een serif font met vaste breedte (monospaced) zoals
+  Courier. Hierdoor kun je onderscheid maken tussen karakters die er anders
+  hetzelfde uit zouden zien en waar nodig de regellengte controleren.
+Controleer als het mogelijk is de layout van de teksten. Je kunt dat doen
+door het bekijken van de context in het relevante bronbestand. Of nog beter,
+door het uitvoeren van het vertaalde script.  Dit is vooral van belang bij
+vertaling van dialoogvensters. Let er vooral op niet te lange zinnen op een
+enkele regel te maken als het er op lijkt dat de tekst niet naar de volgende
+regel kan doorlopen.
+* Onthoud dat in VGA-mode (vaak gebruikt in tekst-installers) de regellengte
+  theoretisch beperkt is tot 80 karakters maar in de praktijk meestal tot 74.
+* Voeg geen vraagtekens toe die niet in de originele tekst staan.
+* Als de tekst refereert aan labels (tekst op de knoppen) of dialoogvensters,
+  zoals "OK", "Yes", "NO", "Continue", "Cancel", controleer dan hoe deze
+  labels zijn vertaald in de interface dialogen in jouw taal en gebruik
+  dezelfde woorden.
+* Voorkom plat taalgebruik en technisch jargon.
+* Om een regel in een dialoogvenster af te breken typ je \n: Het indrukken van
+  de [Enter] toets zal geen "new line" karakter invoegen in de door de
+  gebruiker bekeken tekst.
+
+Ook zal je moeten voldoen aan de vereisten van gettext voor het gebruik
+ervan:
+
+* Als een woord voorafgegaan door een dollarteken in de originele tekst staat
+  moet het exact zo in de vertaalde tekst worden gespeld (hooflettergevoelig).
+* De vertaling moet een "new line" karakter bevatten (of een line feed,
+  vertegenwoordigd door "\n") aan het begin of eind, precies als in de
+  originele tekst. Omgekeerd, als de originele tekst het karakter niet heeft
+  moet de vertaling die ook niet hebben.
+* Een enkel backslash karakter "\" is niet toegestaan in de vertaling.
+
+Om je vertaling te controleren op de vereisten van gettext geef je het
+volgende commando:
+
+----
+  msgfmt -c <naam van het PO-bestand>
+----
+
+[[warning_man_pages]]
+=== Waarschuwing betreffende de vertaling van man pagina's
+
+Behoud nauwkeurig de syntax van in het engels opgemaakte man
+pagina's. Vervang b.v. niet:
+
+* 'B<' door 'B <' (voeg geen spatie toe)
+* 'B<' door 'b<' (behoud de B als hoofdletter - en vervang hem niet door de
+  Griekse hoofdletter BETA die er op het scherm hetzelfde uit ziet)
+* "I" door '|' (vervang de hoofdletter I niet door een pipe symbool)
+
+Behoud bij het vertalen van shell commando's waar nodig de engelse
+padnamen. Maar argumenten die te vervangen zijn door een waarde zoals
+'packagename' mag en zou je moeten vertalen.

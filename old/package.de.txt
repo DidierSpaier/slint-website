@@ -1,0 +1,97 @@
+
+= Slint-Paket
+
+Das Slint-Paket enthält sowohl mehrsprachige Administrationswerkzeuge und
+Handbuchseiten als auch Übersetzungsdateien, bereitgestellt vom
+Slint-Projekt.
+
+Diese Seite erklärt, wie man es bekommt und installiert und beschreibt
+sodann seinen Inhalt, damit Sie wissen, was in welche Sprachen übersetzt
+wurde.
+
+Der Umfang des Slint Pakets wird nach und nach expandieren, somit wird
+einfaches Aktualisieren es ermöglichen, aktuelle und neu übersetzte
+Werkzeuge und Übersetzungen in mehr Sprachen zu bekommen, sobald diese
+verfügbar werden.
+
+== Herunterladen und Installation oder Upgrade eines Slint-Pakets
+
+Wenn Sie gerade den Slint-Installer benutzt haben, muss das Slint-Paket
+nicht mehr installiert werden: Das wurde bereits vom Installer erledigt.
+
+Für jede unterstützte Slackware-Ausgabe (Slackware 13.37, Slackware 14.0 und
+Slackware 14.1) wird im Verzeichnis https://slint.fr/packages[packages/] ein
+Slint-Paket angeboten. Auf 32- und 64-Bit-Versionen kann das gleiche Paket
+installiert werden. Um das 'Slint-Paket' herunterzuladen, zu überprüfen und
+zu installieren (im Beispiel Slackware 14.1), führe folgende Befehle aus:
+
+----
+wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # lädt das neuste Slint-Paket und die zugehörige md5-Datei
+md5sum -c slint-14.1*md5 # sollte "OK" ausgeben, andernfalls ist der Download korrumpiert
+su # Root-Privilegien erhalten
+upgradepkg --install-new --reinstall slint-14.1*txz # dieser Befehl installiert oder aktualisiert das Paket
+----
+
+TIP: Um 'slackpkg' davon abzuhalten, das 'Slint-Paket' zu entfernen, fügen Sie zu
+/etc/slackpkg/blacklist eine Zeile hinzu, die nur dieses Wort enthält: +
+slint
+
+[[what_is_translated]]
+== Was ist in welche Sprachen übersetzt?
+
+Ein Slint-Paket enthält mehrsprachige Werkzeuge und Übersetzungsdateien.
+
+Zum Zeitpunkt dieses Schreibens sind folgende Sprachen enthalten:
+Französisch, Deutsch, Polnisch, Portugiesisch (Brasilien), Russisch,
+Spanisch (Lateinamerika) and Ukrainisch.
+
+Einige Handbuchseiten wurden auch in andere Sprachen übersetzt, siehe
+https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT].
+
+Die untenstehende Tabelle führt mehrsprachige Administrationswerkzeuge und
+ihren Zweck auf.
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|Mehrsprachiges Werkzeug|Zweck|übersetzte Handbuchseite
+|adduser|Einen Benutzer zum System hinzufügen|
+|explodepkg|Den Inhalt eines Slackware-Pakets ins aktuelle Verzeichnis entpacken|man explodepkg
+|installpkg|Slackware-Pakete installieren|man installpkg
+|makebootdisk|Eine bootbare Linux-Diskette erstellen
+(nur in Slackware 13.37 und 14.0)|
+|makepkg|Slackware-Pakete erstellen|man makepkg
+|pkgtool|Verwalten von Softwarepaketen und Durchführung von Konfigurationsaufgaben:
+=> Setzen von Diensten, die beim Start gestartet werden sollen
+=> Erstellen eines USB-Bootsticks
+=> Setzen der Mausart|man pkgtool
+|removepkg|Entfernen von Slackwarepaketen|man removepkg
+|upgradepkg|Upgrade von Slackware Paketen|man upgradepkg
+|eliloconfig|Konfiguration des 'elilo' Bootloaders
+(nur in Slackware 14.1)|
+|liloconfig|Konfiguration des 'lilo' Bootloaders|
+|netconfig|Konfiguration des Netzwerks|
+|timeconfig|Setzt die Zeitzone|
+|setconsolefont|Setzt eine Bildschirm-Schriftart|
+|setup.mouse|Setzt die Mausart|
+|xorgsetup|Konfiguration des X-Servers|
+|xwmconfig|Setzt den standard Windowmanager oder Desktop|
+|slackpkg|Automatisierte Werkzeuge zur Verwaltung von Slackwarepaketen
+(nur Handbuchseiten werden übersetzt)|man slackpkg
+man slackpkg.conf
+|========
+ 
+NOTE: Um polyglot Werkzeuge und Handbuchseiten in Ihrer Sprache zu sehen, sollten
+Sie, wie auf der Slint Homepage angegeben link:slint.html#anchor-1[set up
+your prefered locale]
+
+Zusätzlich installiert Slint auch Dokumente im Verzeichnis
+/usr/docs/slint-<version>-<datum>, einschließlich eines Slint-HOWTO.txt und
+dem Skript reinstall-slackware-packages.sh.
+
+TIP: Um zu sehen, was ein Slint-Paket installiert hat, geben Sie in einem
+Terminal diesen Befehl ein:
+----
+less /var/log/packages/slint*
+----
+Benutzen Sie die Pfeiltasten "Hoch" und "Runter", um in der Liste zu
+navigieren und drüchen Sie 'q' zum Beenden.

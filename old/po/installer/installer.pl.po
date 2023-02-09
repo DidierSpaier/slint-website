@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR The Slint project
+# This file is distributed under the same license as the installer package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: slintwebsite\n"
+"POT-Creation-Date: 2014-12-27 18:19+0100\n"
+"PO-Revision-Date: 2014-12-27 17:28+0000\n"
+"Last-Translator: Didier Spaier <didier@slint.fr>\n"
+"Language-Team: Polish (Poland) (http://www.transifex.com/projects/p/slintwebsite/language/pl_PL/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#.  Before translating this file, please read instructions about it in
+#. https://slint.fr/contribute.html and https://slint.fr/tools.html. Copy this
+#. comment verbatim in your translation or just the leading // to tell it's a
+#. comment that won't be included in generated html file.
+#. type: Title =
+#: /home/didier/slint.fr/installer.en.txt:3
+#, no-wrap
+msgid "Slint installer"
+msgstr "Instalator Slint"
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:6
+msgid ""
+"Slint installer allows you to use your prefered language during "
+"installation, and add translated administration tools and manual pages to "
+"Slackware."
+msgstr "Instalator Slint pozwala na instalację w twoim wybranym języku oraz dodanie so systemu Slackware przetłumaczonych narzędzi administracyjnych i stron man."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:8
+msgid ""
+"A 'Braille terminal' can also be used to install then pilot the system. "
+"Instructions for use are available in https://slint.fr/docs/README_BRLTTY."
+msgstr ""
+
+#. type: Title ==
+#: /home/didier/slint.fr/installer.en.txt:9
+#, no-wrap
+msgid "Download and check installer's ISO image"
+msgstr "Pobierz i sprawdź obraz ISO instalatora"
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:11
+msgid "Two sizes of ISO images are available:"
+msgstr "Obrazy ISO dostępne są w dwóch wielkościach:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:13
+msgid ""
+"The http://sourceforge.net/projects/slint/files/[DVD + USB full ISO images] "
+"contain all you need to install Slackware."
+msgstr "http://sourceforge.net/projects/slint/files/[Pełne obrazy ISO DVD + USB] zawierają wszystko, co jest niezbędne do instalacji systemu Slackware."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:14
+msgid ""
+"The https://slint.fr/installers[CD + USB small ISO images] need to be "
+"completed by a media containing the Slackware packages, for instance a "
+"Slackware DVD."
+msgstr "https://slint.fr/installers[Małe obrazy ISO CD + USB] potrzebują nośniki zawierające pakiety systemu Slackware, na przykład płyta DVD Slackware."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:16
+msgid ""
+"To download a full ISO image, first click on its version number, for "
+"instance 14.1."
+msgstr "Aby pobrać pełny obraz ISO, naciśnij na właściwą wersję, na przykład 14.1."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:18
+msgid "You can check the integrity of the ISO image with its md5 check sum."
+msgstr "Możesz sprawdzić poprawność obrazu ISO przy użyciu sumy kontrolnej md5."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:20
+msgid ""
+"For the small ISO images, downloading and using its associated md5 file "
+"(whose name ends in .md5)."
+msgstr "Dla małych obrazów ISO, pobierz i użyj pliku md5 (plik z końcówką .md5)."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:21
+msgid ""
+"For the full ISO image, you can display the check sum clicking on the letter"
+" i in a black circle on the right of the link to the ISO image."
+msgstr "Dla pełnych obrazów ISO, możesz wyświetlić sumę kontrolną klikając na literę i w czarnym kole na prawo od linku do płyty ISO."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:23
+msgid ""
+"  For instance to make a polyglot installer of an internationalized "
+"Slackware64-14.1, download the ISO image (and the md5 file, in case of a "
+"small installer) then in the same directory type for instance one of "
+"following commands"
+msgstr "  Na przykład aby utworzyć wielojęzyczny instalator umiędzynarodowionego systemu Slackware64-14.1, pobierz obraz ISO (oraz odpowiedni plik md5 przypadku małego instalatora), następnie w tym samym katalogu wpisz następujące polecenie:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/installer.en.txt:26
+#, no-wrap
+msgid ""
+"md5sum -c slint64-14.1.iso.md5 # answer should be: OK\n"
+"md5sum slint64-14.1-full.iso # the result should be the same as displayed on the website\n"
+msgstr "md5sum -c slint64-14.1.iso.md5 # powinno zwrócić: OK\nmd5sum slint64-14.1-full.iso # wyświetlony ciąg powinien odpowiadać temu na stronie.\n"
+
+#. type: Title ==
+#: /home/didier/slint.fr/installer.en.txt:27
+#, no-wrap
+msgid "Burn the ISO image on a DVD, a CD or an USB stick"
+msgstr "Wypal obraz ISO na nośnikach DVD,  CD lub USB"
+
+#. type: Title ===
+#: /home/didier/slint.fr/installer.en.txt:29
+#, no-wrap
+msgid "Make a bootable USB stick"
+msgstr "Stwórz bootowalny nośnik USB"
+
+#. type: delimited block =
+#: /home/didier/slint.fr/installer.en.txt:34
+msgid "All previous content of the USB stick will be LOST"
+msgstr "Cała poprzednia zawartość nośnika USB zostanie UTRACONA"
+
+#. type: delimited block =
+#: /home/didier/slint.fr/installer.en.txt:35
+msgid ""
+"Re-read carefully your command to make sure that you didn't write the name "
+"of a hard disk partition instead of that of the USB stick as this "
+"partition's content would be IRRECOVERABLY LOST"
+msgstr "Dokładnie sprawdź, czy przypadkowo w twoim poleceniu nie podałeś nazwy partycji twardego dysku zamiast nośnika USB, gdyż zawartość wymienionej partycji zostanie BEZPOWROTNIE UTRACONA."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:38
+msgid ""
+"On 'Linux' plug in the USB stick, then check its name with following "
+"commands:"
+msgstr "Pod systemem 'Linux' włóż nośnik USB i sprawdź jego oznaczenie przy użyciu następujących poleceń:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/installer.en.txt:42
+#, no-wrap
+msgid ""
+"cat /proc/partitions\n"
+"dmesg | tail\n"
+msgstr "cat /proc/partitions\ndmesg | tail\n"
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:45
+msgid "If its name is /dev/sdc for instance, type:"
+msgstr "Jeśli jego nazwa to przykładowo /dev/sdc wpisz:"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/installer.en.txt:48
+#, no-wrap
+msgid "dd if=<filename.iso> of=/dev/sdc bs=1M\n"
+msgstr "dd if=<filename.iso> of=/dev/sdc bs=1M\n"
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:51
+msgid ""
+"On 'Windows' use application http://rufus.akeo.ie/[Rufus] that is free and "
+"open source."
+msgstr "Pod systemem 'Windows' użyj darmowej i wolnej aplikacji http://rufus.akeo.ie/[Rufus]"
+
+#. type: Title ===
+#: /home/didier/slint.fr/installer.en.txt:52
+#, no-wrap
+msgid "Make a bootable CD (small installer) or DVD (big installer)"
+msgstr "Utwórz bootowalną płytę CD (mały instalator) lub DVD (duży instalator)"
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:55
+msgid ""
+"On 'Linux' type a command like the first one below for a CD, or the second "
+"one for a DVD."
+msgstr "W systemie Linux wpisz jedno z poniższych poleceń (pierwsze dla płyty CD, drugie dla DVD):"
+
+#. type: delimited block -
+#: /home/didier/slint.fr/installer.en.txt:59
+#, no-wrap
+msgid ""
+"cat slint64-14.1.iso | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -\n"
+"growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso\n"
+msgstr "cat slint64-14.1.iso | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -\ngrowisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso\n"
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:63
+msgid ""
+"On 'Windows 2000/XP/Vista/7' use application "
+"http://infrarecorder.org/[InfraRecorder] that is free and open source."
+msgstr "Na systemach 'Windows 2000/XP/Vista/7' użyj darmowej i wolnej aplikacji http://infrarecorder.org/[InfraRecorder]."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:66
+msgid ""
+"On 'Windows 7/8' use http://windows.microsoft.com/en-US/windows7/Burn-a-CD-"
+"or-DVD-from-an-ISO-file[Windows Disk Image Burner], shipped with Windows 7 "
+"and 8"
+msgstr "Na systemach 'Windows 7/8' użyj aplikacji http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file[Windows Disk Image Burner], która jest częścią tych systemów."
+
+#. type: Title ==
+#: /home/didier/slint.fr/installer.en.txt:67
+#, no-wrap
+msgid "Use your polyglot installer"
+msgstr "Użyj wielojęzycznego instalatora"
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:70
+msgid ""
+"Just insert the installation media (CD, DVD or USB stick) and reboot your "
+"machine."
+msgstr "Włóż nośnik instalacyjny (CD, DVD lub USB) oraz zrestartuj komputer."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:72
+msgid ""
+"On the greeting screen, you will choose your prefered language for "
+"installation typing the corresponding two digits code."
+msgstr "Na ekranie powitalnym, wybierzesz język dla instalacji wpisując dwucyfrowy kod:"
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:74
+msgid ""
+"Beyond being polyglot, the Slint installers offer following features in "
+"addition to those of the genuine Slackware installers:"
+msgstr "Oprócz bycia wielojęzycznym, instalatory Slint oferują następujące funkcje ponad te istniejące w oryginalnym instalatorze Slackware."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:76
+msgid ""
+"Default font and keymap are adapted to the language used for installation."
+msgstr "Domyślna czcionka i mapa klawiatury dopasowana jest do języka używanego przy instalacji."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:77
+msgid ""
+"Whenever possible, a True Type font is used during installation, to "
+"automatically adapt the font size to the screen's resolution (for Slackware "
+"versions 14.0 and 14.1 only)."
+msgstr "Gdzie tylko możliwe, czcionka True Type jest używana w czasie instalacji w celu automatycznego dopasowania wielkości czcionki do rozdzielczości ekranu (wyłącznie dla wersji 14.0 oraz 14.1)"
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:78
+msgid ""
+"Option to create regular user accounts at end of installation (before "
+"rebooting) is provided."
+msgstr "Istnieje opcja utworzenia konta zwykłego użytkownika pod koniec instalacji (przed ponownym uruchomieniem komputera)."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:79
+msgid ""
+"Options are provided to set as defaults in the installed system the language"
+" and keymap used during installation, and make corresponding settings of "
+"keyboard under X if the X server is installed."
+msgstr "Podczas instalacji dostępne są opcje ustawienia domyślnego języka i mapy klawiatury oraz zapisania ich dla X (jeśli X jest zainstalowany)"
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:80
+msgid ""
+"A Slint package is installed, that provides translations of the main "
+"Slackware tools and their manual pages, listed in link:package.html[Slint "
+"package], as well as documents put in /usr/doc/slint-<version>-<date>, "
+"including a Slint-HOWTO.txt and a script reinstall-slackware-packages.sh."
+msgstr "Pakiet Slint zapewnia tłumaczenia głównych narzędzi systemu Slackware oraz stron man wyszczególnionych w link:package.html[Pakiet Slint] oraz dokumentów umieszczonych w folderze /usr/docs/slint-<version>-<date>, włączając Slint-HOWTO.txt oraz skrypt reinstall-slackware-packages.sh."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:82
+msgid ""
+"If you use the small version of the installer, during installation you will "
+"also need a 'source media', in other words a media containing Slackware "
+"packages. Packages can be installed from a Slackware DVD/CDs, a Slackware "
+"USB stick, a pre-mounted directory, a hard drive partition, a Samba share, "
+"NFS (Network File System), a FTP/HTTP server. When choosing the SOURCE in "
+"the menu, the installer tells you what to do according to the kind of "
+"selected media."
+msgstr "Jeśli używasz mayłej wersji instalatora, podczas instalacji będziesz potrzebował 'nośnika źródłowego', czyli nośnika zawierającego pakiety Slackware. Pakiety mogą być zainstalowane z płyty CD/DVD systemu Slackware, zasobu Samba, NFS, lub serwera FTP/HTTP. W zależności od wyboru ŹRÓDŁA w menu, instalator podejmie odpowiednie kroki."
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:84
+msgid ""
+"To get a source media, follow this link: "
+"http://www.slackware.com/getslack/[Get Slack]"
+msgstr "Aby pobrać nośnik źródłowy, odwiedź http://www.slackware.com/getslack/[Get Slack]"
+
+#. type: Plain text
+#: /home/didier/slint.fr/installer.en.txt:85
+msgid ""
+"If need be you can replace the installation media by another one containing "
+"the packages, as at time of installing the packages the installer will have "
+"been already loaded in memory."
+msgstr "Jeśli zajdzie potrzeba, możesz zastąpić nośnik instalacyjny innym nośnikiem zawierającym pakiety (w trakie instalacji pakietów, installator będzie już załadowany do pamięci)."

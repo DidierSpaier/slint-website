@@ -1,0 +1,164 @@
+:stylesheet: ../css/slint.css
+:toc: macro
+:toclevels: 2
+[.liens]
+--
+[.mainmen]
+* link:../en/home.html[Home]
+* link:../en/HandBook.html[Documentation 15.0]
+* link:../en/oldHandBook.html[Documentation 14.2.1]
+* https://slackware.uk/slint/x86_64/slint-15.0/iso/[Download 15.0]
+* link:../en/support.html[Support]
+* link:../doc/translate_slint.html[Translate]
+* link:../old/en/slint.html[Old Versions]
+--
+
+toc::[]
+
+[.translate]
+== Translate Slint
+So, you want to help translating the Slint project? Welcome on board!
+
+The stuff to be translated mainly consists in shell scripts, that make up Slint's installers and administration tools, and of the Slint HandBook and the home page of this web site in asciidoc format, converted in html for publication.
+
+We appy a policy of "contiuous translation", meaning that new or updated translations are integrated as soon as possible:
+[options="compact"]
+* updating this website (translations of the HandBook in link:../en/HandBook.html[Documentation 15.0]
+* updating the Slint package "slint-docs" that alows to read the HandBook locally
+* providing a new installation ISO when a new translation of one of the files rc.S or auto is available.
+
+To provide accurate and well formatted translations, it is preferable that translators:
+[options="compact"]
+* be fluent in English and very fluent in the target language, preferably their native language
+* understand technical vocabulary associated to installation and administration of a Linux system
+* be able to read and understand simple shell scripts
+
+Running Slint, possibly in a virtual machine, while not mandatory helps understanding the context.
+
+
+=== Getting started
+
+To know what the Slint project is about, please read first if not yet done in this link:../en//HandBook.html#_introduction_to_slint[introduction to Slint] at least link:../en/HandBook.html#_about_slint[About Slint] and link:../en/HandBook.html#_support_and_contributions[Support and contributions]
+
+Translations are managed using the The Crowdin platform. The Slint project has an open policy on Crowding, meaning that anyone can join and start contributing to the translation right away.
+
+Anyone can read the files of the https://crowdin.com/project/slint[Slint project on Crowdin]. Translate needs to be logged in on Crowdin. On the https://accounts.crowdin.com/register?continue=https%3A%2F%2Fcrowdin.com%2Fproject%2Fslint[sign up] page, you can create an account on the platform; alternatively you can log in directly through an existing account on another platform.
+
+To get acquainted with the Crowdin platform, you can follow the links under "For translators" in their https://support.crowdin.com/[knowledge base], like about the https://support.crowdin.com/online-editor/[on line editor]. Once logged in you are presented the project page with these sections:
+
+Home Activity Discussions Content Resources Members Tasks Reports Integrations Applications Settings
+
+In the Home section clicking on a language link opens the translation page for this language, from where you can select a file to translate. If you to translate into a language not listed in the home page, open a discussion about it in the https://crowdin.com/project/slint/discussions[Discussions] page.
+
+It will help, especially the blind translators, to know the https://support.crowdin.com/online-editor/#keyboard-shortcuts[keyboard shortcuts]. You can review them pressing Ctrl+Shift+/
+
+Before you begin, please read <<recommendations,Practical recommendations>> below.
+
+Files to be translated, tools to manage localization of shell scripts and documentation are available in the GitHub repository https://github.com/DidierSpaier/slint-translations[slint-translations]
+
+=== Communicate with other Slint translators
+
+The https://crowdin.com/project/slint/discussions[Discussions] page allows you to open an new topic and answer existing ones. All translators listed in https://crowdin.com/project/slint/members[Members] are notified, but you can specify the language for a new topic, to draw attention of translators into this language.
+
+Fell free to introduce yourself to your colleagues opening a new topic.
+
+If you want to continue a translation, we suggest that you consult with other translators for the same language. You can find them  going to the https://crowdin.com/project/slint/activity-stream[Activity] page, then selecting in the drop down lists "Translation activity" and the target language. To send a message to a translator, go to https://crowdin.com/project/slint/members[Members], select this person and click Contact.
+
+=== Translation scope and content
+
+The sources files are in English:
+
+* HandBook.adoc and homepage.adoc are in asciidoc format. They are converted to html using https://asciidoctor.org/[Asciidoctor] to provide the link:../en/HandBook.html[Slint HandBook] and the link:../en/home.html[home page] of this website. +
+* All other files are PO (Portable Objects) files, extracted from shell scripts and converted back and forth using the *gettext* and *po4a* software. To know more read link:../doc/doc/internationalization_and_localization_of_shell_scripts.adoc[Internationalization and localization of shell scripts]
+
+[NOTE]
+====
+To display your translation of the HandBook in a web browser you can do this, assuming that the packages gettext, gettext-tools and po4a are installed:
+
+* Download your translation, like for instance pt_PT.HandBook.po, and store in the same directory the file https://raw.githubusercontent.com/DidierSpaier/slint-translations/main/source/HandBook.adoc[HandBook.adoc]
+* Convert your translation from the PO to the asciidoc format typing from this directory::
++
+----
+  po4a-translate -f asciidoc -m HandBook.adoc -M UTF-8 -p pt_PT.HandBook.po -l pt_PT.HandBook.adoc
+----
++
+* Convert the asciidoc file to html typing "asciidoc pt_PT.HandBook.adoc" or "asciidoctor pt_PT.HandBook.adoc"
+* Load the converted file pt_PT.HandBook.html in a web browser
+====
+
+Here is the list of files to translate and their content at time of writing:
+
+[[auto]]auto::
+Messages from the *functions* script of the Slint installer, which superseded the *auto* script used in previous version of the installer. We kept the old name of the POT file to allow a smooth transition
+
+[[rc_S]]rc.S::
+Messages from the init script *rc.S* in the installer, modified from the one in the Slackware installer.
+
+[[slint-scripts]]slint-scripts::
+This files gather messages from various shell scripts written for and used in Slint.
+
+[[HandBook]]HandBook::
+This file is the source in Asciidoc format of the Slint link:../en/HandBook.html[Slint HandBook (version 15.0)].
+
+[[homepage]]homepage::
+This file is the source in Asciidoc format of the link:../en/home.html[home page] of this website.
+
+[[recommendations]]
+=== Practical recommendations
+
+==== Carefully check machine translations
+
+Several files, like the HandBook, are partially pre-translated through machine translation, using the Crowdin Translate translation engine: the translated messages come from using exiting translation of identical or very similar messages found in other files hosted in the platform. This save time for translators, however there are important caveats.
+
+The Crowdin engine provide machine translation for following languages: Chinese simplified,
+Dutch,
+French,
+German,
+Greek,
+Italian,
+Japanese,
+Portuguese,
+Portuguese (Brazil),
+Russian,
+Spanish,
+Swedish,
+Turkish,
+Ukrainian.
+
+
+[WARNING]
+====
+* When working on a machine translated file, the translator acts as a proofreader and as such should *review every translated string*.
+* Pay special attention to commands: if options or arguments of a command have been translated, this command  will most often fail when executed. If you find a machine translated, please replace the translation by the source in English.
+* If a command expect answers like "y", "n", "yes" or "no", these answers should *not* be translated, else the scripts which expect this answer will fail.
+* When using the Crowdin text editor for a fle in asciidoc format like HandBook and homepage, set HTML tags displaying to "SHOW" and when you find a markup like <<text1,text2>>, translate the text after te comma only (text2 in this example).
+====
+
+The recommendations about the translation of shell scripts below also apply to commands written in the HandBook and the home page
+
+==== Translation of shell scripts
+
+* Don't feel obliged to translate verbatim. Not only is this rarely the best way to convey the meaning, but in addition this often leads to sentences too long to fit in allowed space.
+This is especially important if you are translating dialog boxes. In particular, take care not to write too long sentences on one single line if it appears that the text can't flow on next one.
+* Bear in mind that in VGA mode (used in text installers, in particular), line's width is limited theoretically to 80 characters, but practically often to 74.
+* Do not add question marks that are not present in the original message.
+* If the message refers to tags (text on the buttons) of dialog boxes, like "OK", "Yes", "NO", "Continue", "Cancel", check how theses tags are translated in your language in dialog's interface and use the same words.
+* Avoid colloquialisms and technical slang.
+* To "cut" (or end) a line inside a "dialog" box you should type \n: pressing [Enter] will 'not' insert a "new line" character in the text viewed by user.
+* If a word beginning with a dollar sign is included in the original text it should be present in the translation with exactly the same spelling (case matters).
+* The translation text should include a "new line" character (or line feed, represented by "\n") at the beginning or at the end, exactly as the original text does. Conversely, if the original text doesn't have the character, then the translation shouldn't have it.
+* A single backslash character "\" is not allowed in the translation.
+* When translating shell commands, preserve English names of paths when needed. But you may and should translate arguments to be replaced by a value like 'packagename'
+* If translating locally a downloaded file:
+** Use a specialized PO editor, 'not' a general text editor. This will not only prevent inadvertently editing 'msgid' strings but also facilitate their work and automatize additional checks, as the presence of a variable in the translation with the same spelling as in the original.
+** Choose a serif fixed width (or "monospaced") font, like Courier. That allow to visually distinguish characters that otherwise would look the same, and check line's length when that matters.
+** If possible, check the layout of the messages. You could do that looking at the context in the relevant source file. Even better, simply run the translated script.
+In addition, you will have to comply to gettext's requirements for it to work:
++
+To check your translation against gettext's requirements you could run following command:
++
+----
+  msgfmt -c <name of the PO file>
+----
+
+Didier Spaier

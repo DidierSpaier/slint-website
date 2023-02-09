@@ -1,0 +1,124 @@
+
+= Slint installer
+
+Slint installer maakt het mogelijk je voorkeurstaal te gebruiken voor de
+installatie en vertaalde beheertools en man pages toe te voegen aan
+Slackware.
+
+Een 'Braille terminal' kan eveneens gebruikt worden om het systeem te
+installeren en daarna te besturen. Gebruiksinstructies zijn te vinden in
+https://slint.fr/docs/README_BRLTTY.
+
+== Download en controleer het ISO-image van de installer
+Er zijn ISO-images beschikbaar in twee grootten:
+
+* De http://sourceforge.net/projects/slint/files/[DVD + USB volledige ISO
+  images] met alles wat nodig is voor een volledige Slackware installatie.
+* De https://slint.fr/installers[CD + USB mini ISO images] welke moeten worden
+  aangevuld met media die de Slackware pakketten bevat, bijvoorbeeld een
+  Slackware DVD.
+
+Om een volledige ISO-image te downloaden klik je eerst op het versienummer,
+bijvoorbeeld 14.1.
+
+Je kunt de integriteit van het ISO-image controleren met z'n md5 checksum.
+
+* Voor de kleine ISO-images download en gebruik je het bijbehorende
+  md5-bestand (dat eindigt op .md5).
+* Voor het volledige ISO-image kun je de checksum weergeven door te klikken op
+  de letter i in de zwarte cirkel rechts naast de link naar het ISO-image.
+  Om bijvoorbeeld een anderstalige installer te maken van een
+geïnternationaliseerde Slackware64-14.1 download je het ISO-image (en het
+md5-bestand in het geval van de mini installer) en typ je in dezelfde
+directory bijvoorbeeld één van de volgende commando's:
+----
+md5sum -c slint64-14.1.iso.md5 # resultaat moet zijn: OK
+md5sum slint64-14.1-full.iso # het resultaat moet gelijk zijn aan wat wordt weergegeven op de website
+----
+== Brand het ISO-image op een DVD, een CD of een USB stick
+
+=== Maak een opstart-USB-stick
+
+[WARNING]
+====
+* De huidige inhoud van de USB-stick zal VERLOREN GAAN
+* Controleer nogmaals aandachtig je commando om er zeker van te zijn dat je
+  niet de naam van een harddisk partitie in plaats van die van de USB-stick
+  ingeeft, omdat de inhoud van deze partitie ONHERSTELBAAR GEWIST zal worden.
+====
+
+Plug de USB-stick in een Linux-systeem en stel de device-naam ervan vast met
+de commando's:
+
+----
+cat /proc/partitions
+dmesg | tail
+----
+
+Als de naam bijvoorbeeld /dev/sdc is, typ dan:
+
+----
+dd if=<filename.iso> of=/dev/sdc bs=1M
+----
+
+Gebruik op MS Windows computers het programma http://rufus.akeo.ie/[Rufus]
+dat gratis en open source is.
+
+=== Maak een opstart-CD (mini installer) of -DVD (grote installer)
+
+Type op een Linux systeem voor een CD het eerste van onderstaande commando's
+en voor een DVD het tweede.
+
+----
+cat slint64-14.1.iso | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso
+----
+
+
+Gebruik op een MS Windows 2000/XP/Vista/7 systeem het programma
+http://infrarecorder.org/[InfraRecorder] dat gratis en open source is.
+
+
+Gebruik op  een MS Windows 7/8 systeem
+http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file[Windows
+Disk Image Burner], meegeleverd met MS Windows 7 en 8
+
+== Gebruik van je anderstalige installer
+
+Plaats het installatiemedium (CD, DVD of USB-stick) en herstart je machine.
+
+Op het welkomstscherm kun je de gewenste taal voor de installatie kiezen
+door het typen van de overeenkomstige tweelettercode.
+
+Verder biedt de anderstalige Slint-installer je de volgende opties in
+aanvulling op die van de standaard Slackware-installer:
+
+* Standaard lettertype en toetsenbordindeling worden aangepast aan de
+  gebruikte installatietaal.
+* Indien mogelijk wordt tijdens de installatie een TrueType lettertype
+  gebruikt om automatisch de lettergrootte aan te passen aan de
+  schermresolutie (alleen voor Slackware 14.0 en 14.1).
+* Optie om na de installatie (voor het herstarten) een regulier
+  gebruikersaccount aan te maken.
+* Naar keuze kan de taal en toetsenbordindeling die is gebruikt tijdens de
+  installatie ook worden ingesteld als standaard voor het geïnstalleerde
+  systeem, evenals het toetsenbord onder X als de X-server is geïnstalleerd.
+* Er wordt een Slint-pakket geïnstalleerd met de vertalingen van de
+  voornaamste Slackware-tools en hun man pages (zie: link:package.html[Slint
+  package]) en documentatie (geplaatst in /usr/doc/slint-<version>-<date>) met
+  Slint-HOWTO.txt en het script reinstall-slackware-packages.sh.
+
+Bij gebruik van de mini installer heb je tijdens de installatie een
+'bronmedium' nodig, d.w.z. een medium dat de Slackware-pakketten bevat. Deze
+pakketten kunnen worden geïnstalleerd vanaf een Slackware DVD of CD's, een
+Slackware USB-stick, een aangekoppelde directory, een harddisk-partitie, een
+Samba-share, NFS (Network File System) of een FTP/HTTP-server. Na het kiezen
+van de BRON vertelt de installer je wat je verder moet doen afhankelijk van
+het gekozen medium.
+
+Om de bronmedia te verkrijgen volg je deze link:
+http://www.slackware.com/getslack/[Get Slack]
+
+TIP: Indien nodig kun je het installatiemedium vervangen door een ander medium
+dat de pakketten bevat, omdat de installer op het moment van installatie van
+de pakketten al in het geheugen geladen is.

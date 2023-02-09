@@ -1,0 +1,91 @@
+
+= Paket Slint
+
+Paket Slint berisi tool administrasi polyglot dan halaman manual serta
+berkas terjemahan, yang disediakan oleh proyek Slint.
+
+Halaman ini menjelaskan bagaimana mendapatkan dan menginstallnya, lalu
+menjelaskan kontennya sehingga Anda tahu apa yang diterjemahkan dan dalam
+bahasa apa.
+
+Batas paket Slint akan bertambah secara bertahap, sehingga cukup dengan
+upgrade, Anda akan mendapatkan versi dan tool yang terbaru serta terjemahan
+dalam lebih banyak bahasa ketika mereka tersedia.
+
+== Download dan install atau upgrade paket Slint
+
+Jika Anda baru saja menggunakan installer Slint, tidak perlu menginstall
+paket Slint: hal ini sudah dilakukan oleh installer.
+
+Paket Slint disediakan untuk setiap edisi Slackware yang didukung (Slackware
+13.37, Slackware 14.0 dan Slackware 14.1) pada direktori
+https://slint.fr/packages[packages/]. Paket yang sama bisa diinstall pada
+versi 32 dan 64 bit. Untuk mendapatkan, memeriksa, dan menginstall (atau
+upgrade) 'paket Slint' (untuk Slackware 14.1 pada contoh ini), lakukan:
+
+----
+wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # Anda akan mendapatkan paket Slint terbaru dan juga berkas md5 yang relevan
+md5sum -c slint-14.1*md5 # jawaban harus bernilai "OK", jika tidak paket yang didownload rusak
+su # mendapatkan hak akses root
+upgradepkg --install-new --reinstall slint-14.1*txz # perintah ini menginstall atau mengupgrade paket
+----
+
+TIP: Untuk mencegah 'slackpkg' menghapus 'paket Slint', tambahkan baris pada
+/etc/slackpkg/blacklist dengan hanya kata ini: + slint
+
+[[what_is_translated]]
+== Apa yang diterjemahkan, dalam bahasa apa?
+
+Paket Slint berisi tools polyglot dan berkas terjemahan.
+
+Saat ini ditulis, bahasa berikut sudah tersedia: Perancis, Jerman, Polandia,
+Portugis (Brazil), Rusia, Spanyol (Amerika Latin) dan Ukraina.
+
+Beberapa halaman manual juga diterjemahkan pada bahasa lain, seperti yang
+tertulis pada https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT].
+
+Tabel dibawah berisi tool administrasi polyglot dan tujuannya.
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|Tool Polyglot|Tujuan|Halaman manual yang diterjemahkan
+|adduser|Menambahkan pengguna pada sistem|
+|explodepkg|Mengekstrasi konten paket Slackware pada direktori aktual|man explodepkg
+|installpkg|Menginstall paket Slackware|man installpkg
+|makebootdisk|Membuat disket boot Linux
+(hanya pada Slackware 13.37 dan 14.0)|
+|makepkg|Membuat paket Slackware|man makepkg
+|pkgtool|Mengelola paket perangkat lunak dan melakukan tugas konfigurasi:
+=> menentukan layanan yang aktif saat awal
+=> membuat USB boot
+=> menentukan jenis mouse|man pkgtool
+|removepkg|Menghapus paket Slackware|man removepkg
+|upgradepkg|Upgrade paket Slackware|man upgradepkg
+|eliloconfig|Konfigurasi boot loader 'elilo'
+(hanya pada Slackware 14.1)|
+|liloconfig|Konfigurasi boot loader 'lilo'|
+|netconfig|Konfigurasi jaringan|
+|timeconfig|Menentukan zona waktu|
+|setconsolefont|Menentukan font layar|
+|setup.mouse|Menentukan jenis mouse|
+|xorgsetup|Konfigurasi server X|
+|xwmconfig|Menentukan window manager default atau desktop|
+|slackpkg|Tool otomatis untuk mengelola paket Slackware
+(hanya halaman manual yang diterjemahkan)|man slackpkg
+man slackpkg.conf
+|========
+ 
+NOTE: Untuk melihat pesan tool dan halaman manual pada bahasa Anda, Anda harus,
+seperti tertulis pada home page Slint, link:slint.html#anchor-1[tentukan
+lokal Anda]
+
+In addition, the Slint package also installs documents in the folder
+/usr/docs/slint-<version>-<date>, including a Slint-HOWTO.txt and a script
+reinstall-slackware-packages.sh.
+
+TIP: to list what a Slint package has installed, just type in a terminal:
+----
+less /var/log/packages/slint*
+----
+Use the up and down arrows to navigate in the list, press the letter 'q' to
+quit.

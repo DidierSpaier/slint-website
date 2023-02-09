@@ -1,0 +1,235 @@
+= Slint projesine katkıda bulun
+
+Slint projesine yardım etmek ve katkıda bulunmak mı istiyorsunuz? Gemiye
+hoşgeldiniz!
+
+Slint ürünleri sağlamak için gerekli iş çoğunlukla çeviri ve, Slackware
+kurucularını, yönetim araçlarını oluşturan kabuk betikletinin gözden
+geçirilmesi, ve Slackware kullanıcıları için metin dosyaları veya kılavuz
+sayfaları biçiminde olan belgelendirmedir.
+
+İdeal olarak çevirmenlerin şunları yapmasını isteriz:
+[options="compact"]
+* İngilizce iletişim kurabilin ve hedef dilde, tercihen doğal dilde, çok akıcı
+  olun,
+* Bir Linux sisteminin kurulumu ve yönetini ile ilgili teknik terimleri
+  anlayın
+* Slackware kullanıcısı olun
+* basit kabuk betiklerini okuyabilir ve anlayabilir olun
+
+Fakat tüm bu beklentileri karşılamıyorsanız da, gönüllü olmaya çekinmeyin:
+hala yeteneklerinizin faydalı olabileceği görevler olabilir.
+
+== Gönüllü olun ve katkınızı tanımlayın
+
+Tercihen Tansifex kullanan çeviri gönüllüleri: İlk olarak
+https://www.transifex.com/signup/contributor/[register on Transifex] kayıt
+olunuz (ücretsizdir), sonra
+https://www.transifex.com/projects/p/slint/[Slint projesi ev sayfası]na
+gidin:
+[options="compact"]
+* Eğer diliniz listelenmişse, üzerine tıklayın, sonra o dilin sayfasında
+  "Takıma katılın"a tıklayın.
+* Değilse, "Dil iste"ye tıklayın (diller listesinin hemen üzerindeki açık mavi
+  şerit)
+
+Fakat önce soru sormak isterseniz, ya da çeviri dışındaki yardımları önermek
+isterseniz, Slint bakımcısına e-posta gönderin: didier dot spaier at epsm
+dot fr.
+
+Sonra takım koordinatorü ya da Slint bakımcısına ile danışıp Slint'e
+katkınızın "neden", "ne", "nasıl" ve "ne zaman" olacağını tanımlayacaksınız.
+
+== Metodlarımızı ve araçlarımızı öğrenin ve Slint takımı içinde iletişime hazır olun ==
+
+Lütfen aşağıdaki <<tavsiyeler,Çevirmenler için Pratik tavsiyeler>> i okuyun.
+
+Sonra, kullandığımız link:tools.html[Tools] a alışınız. Onları daha iyi
+kullanmak için aşağıdaki paketleri içerecek şekilde bir Linux sistemine,
+tercihen tam Slackware sistemine sahip olmalısınız:
+
+* ../extra/aspell-words-lists/<diliniz için paketler> yazım denetimleri için
+* ../kdei/<package kde-l10n sizin diliniz için> yerelleştirme için
+  Lokalize'nin kullanıcı arayüzü, eğer bunu kullanırsanız
+
+Sonuncusu birlikte bir takım olarak çalışmamız gerekir, yani:
+
+* Lütfen çevrimiçi düzenleyici olarak kullanmasanız da Transifex'e üye olunuz,
+  sonra, tüm katkı verenlerin tek seferde bilgilendirilmesini sağlamak için
+  daha kolay bir yol olduğu için tüm
+  https://www.transifex.com/settings/notices/[notification settings] i kontrol
+  ediniz. Lütfen takma isim kullansanız bile tam isminizi belirtiniz.
+* https://lists.sourceforge.net/lists/listinfo/slint-translators[slint-translators
+  mailing-list] listesine üye olmanızı şiddetle öneririz. Bu soru sormanızı ve
+  cevaplamanızı, tartışmalarda yer almanızı, öneri ve teklifte bulunmanızı
+  sağlayacaktır.
+* Takım koordinatörünün ya da Slint bakımcısının size ulşabileceği bir e-posta
+  adresi sağlamaya hazır olun.
+* Ayrıca Transifex üzerinde Slint projesinin kendi dilinizdeki sayfasındaki
+  Tartışma özelliğini de kullanabilirsiniz.
+* Ayrıca LinuxQuestions.org'un Slackware forumunda
+  http://www.linuxquestions.org/questions/slackware-14/internationalized-slackware-14-installer-what-languages-to-start-4175455701/[this
+  thread] i takip edebilirsiniz. Bunun için, LQ'ya kayıt olun ve bir
+  tartışmaya mesaj gönderin ya da Thread Tools => Subscribe to this Thread
+  (gösterilen ilk mesajın hemen üzerindeki koyu mavi şerit) e tıklayarak
+  mesajı görüntüleyin.
+
+== Çeviri kapsamı
+
+=== Hedef diller
+
+Slint kurucunun yazıldığı sıralarda ana Slackware yönetim araçları
+Fransızca, Almanca, Portekizce, Rusça, İspanyolca ve Ukraynaca dillerine tam
+olarak çecrilmişti. Diğer çeviriler devam ediyor, şu anki durumları
+https://www.transifex.com/projects/p/slint/resource/slint/[this page]
+üzerinden kontrol edilebilir.
+
+Kılavuz sayfalar daha fazla dile çevirilmiştir, tüm çeviriler
+https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT] dosyası içinde
+listelenmiştir
+
+=== Çevirilen içerik
+
+Çevirilen içerik PO dosyaları denen, GNU 'gettext' tarafından üretilen ve
+işlenen, çevirilerin yanında orjinal İngilizce mesajların da dahil edildiği
+dosyalar biçimindedir. Çevirilecek olan verilen her mesaj kümesi (Slint'in
+durumunda İngilizce), POT dosyası denen, her bir hedef dil için ilişkili PO
+dosyasından üretilen dosya içine kaydedilir, daha fazlası için bakınız
+http://docs.slackware.com/howtos:misc:internationalization_and_localization_of_shell_scripts[Internationalization
+and localization of shell scripts] on
+http://docs.slackware.com/start[SlackDocs].
+
+Verilen POT dosyasına dahil edilen mesajlar bir ya da bir çok kabuk
+betiğinden ya da kılavuz sayfasından elde edilmiştir. Burada Slint'in aktif
+POT dosyaları ve bunların kapsamları vardır (eşleşen araçların nasıl
+kullanıldığını öğrenmek için bakınız link:tools.html[Tools] ).
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|POT Dosya ismi|Kaynak adı (Transifex)|Kapsam|Eşleşen araç
+|slackware.pot|https://www.transifex.com/projects/p/slint/resource/slint/[slint]|Slint kurucu
+Slint paketi (kılavuz sayfaları olmadan)|toolbox.sh
+|pkgtools.pot|https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools]|man sayfaları 'pkgtools' içinde bulunur|gen_man_pages
+|slackpkg.pot|https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]|man sayfaları 'slackpkg' paketi içinde bulunur|gen_man_pages
+|slint.pot|https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/[POT file for slint.sh]|slint.sh betiği, bakınız sayfa link:tools.html[Tools]|toolbox_slint_sh
+|index.html.pot|https://www.transifex.com/projects/p/slint/resource/indexhtml/[index.html]|link:index.html[Old Slint's home page]|(yok)
+|template.pot|https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]|Sidebar and top title of Slint web pages|(yok)
+|(yok)|https://www.transifex.com/projects/p/slint/resource/slinttxt/[slint.txt]|link:slint.html[Slint's home page]|(yok)
+|(none)|https://www.transifex.com/projects/p/slint/resource/installertxt/[installer.txt]|link:installer.html[Slint kurucu]|(yok)
+|(yok)|https://www.transifex.com/projects/p/slint/resource/packagetxt/[package.txt]|link:package.html[Slint package]|(yok)
+|(yok)|https://www.transifex.com/projects/p/slint/resource/translatorstxt/[translators.txt]|link:translators.html[Translators]|(none)
+|(yok)|https://www.transifex.com/projects/p/slint/resource/contributetxt/[contribute.txt]|link:contribute.html[Contribute]|(none)
+|(yok)|https://www.transifex.com/projects/p/slint/resource/toolstxt/[tools.txt]|link:tools.html[Tools]|(none)
+|(yok)|https://www.transifex.com/projects/p/slint/resource/changelogtxt/[changelog.txt]|link:changelog.html[ChangeLog]|(none)
+|========
+
+=== Eskisinden yeni sayfalara çeviriler
+
+link:index.html[old home page] sayfamız doğrudan xhtml ile yazılmıştır. Bu
+13 dile çevirilmiştir ve sürekli olarak şu anki geçici olarak
+isimlendirilmiş link:slint.html[slint.html] ile değiştirilecektir.
+
+Web sayfaları kenar çubuğu üzerindeki menüde
+listelenmiştir. link:slint.html[home page] sürekli olarak, daha fazla dile
+çevrilmeyecek ya da artık güncellenmeyecek, eski olanı değiştirir,
+
+[[new_web_pages]]
+=== Web sayfalarının çevirisi
+Bazı sayfalar son kullanıcılar içindir: link:slint.html[slint.html],
+link:installer.html[installer.html] ve link:package.html[package.html]. Bu
+dosyaların çevirilmesine ve
+https://www.transifex.com/projects/p/slint/resource/templatepo/[template.po]
+ya öncelik verilmelidir.
+
+Diğer web sayfaları: link:contribute.html[Contribute],
+link:translators.html[Translators], link:tools.html[Tools] ve
+link:changelog.html[ChangeLog] da ayrıca çevirilebilir (bu her bir çeviri
+takımına kalmıştır) fakat yukarıdaki paragrafta listelenen sayfalar
+çevirildikten 'sonra'.
+
+NOTE: Bir dil için, template.po'yu çevirirken henüz çevirilmemiş bir sayfanın
+isminin İngilizce olarak brakılması, kullanıcı ona tıkladığında
+karşılaşacağı sayfanın İnngilizce olacağını anlayacağı için, daha iyidir.
+
+Tüm yeni sayfalar Slackware içindeki (linuxdoc-tools paketi içinde gelen)
+http://asciidoc.org['AsciiDoc'] uygulaması kullanılarak üretildi. Kaynak
+dosyalar metin dosyalarıdır, AsciiDoc için, örn. iki eşit işaret ile
+başlayan satırlar ikinci seviye başlık olarak ele alnırlar, bunlar asciidoc
+tarafından üretilen XHTML dosyası içine  <h2>etiketi olarak yazılır, gibi
+biçimlendirme yönergeleri dahil edilmiştir.
+
+Özel yönergeler ve 'AsciiDoc' yarafından işlenecek çevirilecek metin
+dosyaları link:tools.html#asciidoc[Translation of text files to be processed
+by 'AsciiDoc' to generate web pages] içinde bulunmaktadır.
+
+Her bir dil için, template.po, link:slint.html[slint.html],
+link:installer.html[installer.html] ve link:package.html[package.html]
+çevirisi bittiğinde, eski sayfa , son kullanıcı o dilde yeni sayfalardan
+faydalansın diye, yenisi ile değiştirilecektir.
+
+[[recommendations]]
+== Çevirmenler için pratik tavsiyeler
+
+* İhtiyaç duyulan iş miktarına ve eldeki kaynağa bağlı olarak, hedeflenen dil
+  başına bir çevirici ya da bir takım olabilir. Her durumda, takım işleri
+  organizasyonundan sorumlu, çevirilerin denetlenmesi ve PO dosyasının
+  bakımcılara gönderilmesinden sorumlu en azından bir kişi tavsiye
+  edilir. Buna takım koordinatörü diyelim.
+* Kendinizi kelimesi kelimesine çevirmeye mecbur hissetmeyin. Bunun sadece
+  anlamı ifade etmenin en iyi yolu olmadığından değil, fakat buna ek olarak
+  cümlenin sıklıkla izin verilen boşluktan daha uzun olmasına yol açtığı için.
+* Özel bir PO düzenleyici kullanın, bir metin düzenleyici 'değil'. Bu sadece
+  'msgid' dizilerinin yanlışla değiştirlmesini engellemeyecek, ayrıca
+  değişkenin çeviri içinde orjinali ile aynı yazımda bulunması gibi ek
+  denetimleri de mümkün kılar.
+* Çevirirken, Courier gibi, serif sabit genişlikli ("monospaced" değil) bir
+  fontu seçin. Bu görsel olarak, aksi halde aynı gözükecek karakterleri ayırt
+  etmenizi ve önemli olduğunda satır uzunluğunu denetleminizi sağlar,
+Eğer mümkünse, mesajın yerleşimini denetleyin. Bunu ilgili kaynak dosyadaki
+bağlama bakarak yapabilirsiniz. Daha da iyisi, çevirilen betiği çalıştırın.
+Bu özellikle dialog kutularını çevirirken önemlidir. Özellikle, eğer metin
+bir sonraki üzerine gelmiyorsa tek bir satırda çok uzun bir cümle yazmamaya
+özen gösterin.
+* Aklınızdan çıkarmayın, VGA modunda (özellikle metin kurucularda kullanılır),
+  satır genişliği teorik olarak 80 karakter ile, fakat pratikte sıklıkla 74
+  karakter ile sınırlandırılmıştır.
+* Orjinal mesajda olmayan soru işaretlerini eklemeyin
+* Eğer mesaj etiketleri (düğme üzerindeki yazılar) referans veriyorsa, "OK",
+  "Yes", "NO", "Continue", "Cancel" gibi, bu etiketlerin diyaloglarda dilinize
+  nasıl çevirildiğini kontrol edin ve aynı kelimeleri kullanın.
+* Konuşma dili üslubundan ve teknik dilden kaçının
+* Bir "dialog" içinde bir satırı "kesmek" (ya da sonlandırmak) için \n
+  karakteri eklemelisiniz: [Enter] a basmak kullanıcı tarafından görülen
+  "satır başı" karakterini 'eklemez'.
+
+Ek olarak, bunun çalışması için gettext'in gerekliliklerine uyun
+
+* Eğer orjinal mesaja dolar işareti ile başlayab bir mesaj eklenmişse bu
+  çeviride tamamen aynı yazımla bulunmalıdır (büyük küçük harf önemlidir).
+* Çevirilen metin başta ya da sonda, tam olarak orjinal metinde olduğu gibi,
+  "yeni satır" karakteri içermeli (ya da "\n" ile gösterilen satır
+  sonu). Diğer taraftan orjinal metinde bu karakter yoksa çevirilen metinde de
+  olmamalı.
+* Tek bir ters slaş karakterine "\" çevirilerde izin verilmez.
+
+Çevirinizin gettext'in gerekliliklerine uyumunu denetlemek için şu komutu
+çalıştırabilirsiniz:
+
+----
+  msgfmt -c <name of the PO file>
+----
+
+[[warning_man_pages]]
+=== Kılavuz sayfalarının çevirisi ile ilgili uyarılar
+
+İngilizce işaretlede bulunan kılavuz sayfalarının sözdizimini dikkatlice
+koruyun. Örneğin şunları değiştirmeyin:
+
+* 'B<' with 'B <' (boşluk eklemeyin)
+* 'B<' with 'b<' (B'yi büyük harf olarak tutun - ve onu yunan alfabesindeki
+  aynı şekilde gözüken BETA ile değiştirmeyin)
+* "I" with '|' (büyük harf I ile boru sembolünü değiştirmeyin)
+
+Kabuk komutlarını çevirirken, İngilizce yol isimlerini gerekliyse
+değiştirmeyin. Fakat argümanları 'paketismi' gibi bir değerle
+değiştirebilirsiniz ve değiştirmelisiniz

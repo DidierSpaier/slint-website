@@ -1,0 +1,38 @@
+== 更新日志
+
+注意：2013年12月19日之前的更新记录在 https://slint.fr/pub/slint-history/Changelog.txt[这里]
+
+[format="psv",options="header,autowidth"]
+|========
+|日期|变更
+|20/12/2013|
+ ./data/locales/SeTLocales 中添加土耳其语 (tr_TR.utf8) 相关设置 +
+添加 slackpkg{,.conf} 的希腊语手册 +
+添加 slint.sh 的希腊语翻译 +
+修复几处翻译问题 +
+新脚本 ./build/make_packages 能构建出只包含全部国际化文件和翻译的包，替代了原来的完整包 +
+重建 Slint 网站
+|05/02/2014|
+纠正 ./data/locales/SeTLocales 中的错误(感谢Zhang Min) +
+移除 slint 软件包中的无用文件夹 +
+添加安装程序和管理脚本的希腊语翻译(感谢George Vlahavas) +
+添加 slint.sh 翻译 (意大利语，土耳其语，乌克兰语)
+添加 pkgtools 的土耳其语和乌克兰语手册
+添加 slackpkg 的乌克兰语手册
+添加/更新旧主页的翻译(德语，波兰语，土耳其语，乌克兰语)
+为新网站添加更多翻译
+|06/02/2014|
+添加 slackpkg 的土耳其语手册
+|06/04/2014|
+Slint 安装程序已被翻译成土耳其语和葡萄牙语（葡萄牙），感谢Kemal Okmen 和 Hugo Carvalho. +
+pkgtools 中新增已本地化的 man 页面 ：pt_PT +
+slackpkg 中新增已本地化的 man 页面 ：pt_PT +
+slint.sh 脚本新增翻译：id, it, pt_PT +
+为了区分 pt_PT，将原来的 pt 重命名成为 pt_BR ，并更新相关文件。 +
+更新已翻译的 man 页面：installpkg (tr), makepkg (de) +
+下列文件还未被本地化，因此用户不会看到安装时显示的信息：/etc/rc.dropbear /etc/rc.udev /etc/rc.usb /sbin/probe +
+修改了 slint/data/locales/SeTlocales ：纠正排印错误，添加Bulgarian, Chinese, Portuguese (Portugal) 的设置，为表意文字对应的语言添加 true type 字体 +
+修复 /etc/rc.S 文件，使其在安装程序的欢迎信息中能正常显示 Slackeware 的版本号( 感谢Miguel De Anda 提交bug ) +
+修复安装程序的配置文件，可以在所有命令行中正确设置 SLACK_KERNEL 变量。
+为新网站添加更多翻译
+|========

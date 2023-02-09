@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="fr">
+<head>
+	<title>Slint: le projet d'internationalisation de Slackware </title>
+    <meta name="google-site-verification" content="LmAtE9by4Mg59SwZ0LyQq730fGtMZ0r0fqgkVurfPhc" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Slackware internationalization Project" />
+    <link rel="stylesheet" href="css/fp.css" type="text/css" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <div class="entete"> 
+	Choisissez votre langue => | <a href="index.html.bs">bs</a> | <a
+href="index.html.de">de</a> | <a href="index.html.el">el</a> | <a
+href="index.html.en">en</a> | <a href="index.html.es">es</a> | <a
+href="index.html.fr">fr</a> | <a href="index.html.id">id</a> | <a
+href="index.html.it">it</a> | <a href="index.html.nl">nl</a> | <a
+href="index.html.pl_PL">pl</a> | <a href="index.html.pt">pt</a> | <a
+href="index.html.ru">ru</a> | <a href="index.html.tr_TR">tr</a> | <a
+href="index.html.uk">uk</a> | 
+  </div>
+	<div id="hautdepage"></div>
+	<h1>Le projet d'internationalisation de Slackware</h1>
+	<div class="cadre w100">
+		<h2 class="premierh2 center">A propos de slint</h2>
+		<p>Le but ultime de ce projet est que tous les utilisateurs puissent installer
+et utiliser Slackware Linux dans leur langue maternelle.</p>
+		<p>Cela pourrait contribuer à élargir la base d'utilisateurs de Slackware, tout
+comme le projet de documentation Slackware qui fournit déjà des documents en
+beaucoup de langues.</p>
+		<p>Ce n'est pas encore dans le périmètre de Slackware, que seul son mainteneur
+peut décider d'étendre.</p>
+		<p>Néanmoins le projet slint, qui n'est ni affilié à ni approuvé par Slackware,
+est un pas dans cette direction.</p>
+	</div>
+	<div class="cadre w50">
+		<h2 class="premierh2">Utiliser slint</h2>
+		<p>Le projet fournit :</p>
+		<ul>
+			<li>un paquet logiciel permettant d'une part d'inclure un installateur
+internationalisé dans un DVD Slackware, d'autre part de le traduire dans
+davantage de langues.</li>
+			<li>Des installateurs internationalisés sous deux formes : image ISO à graver
+sur CD ou DVD et image à écrire sur une clef USB.</li>
+		</ul>
+		<p>Au moment où nous écrivons l'installateur comporte :</p>
+		<ul>
+			<li>des variantes pour Slackware-13.37, Slackware-14.0 et Slackware-14.1 (32 et
+64 bits),</li>
+			<li>une traduction en Allemand, Français, Espagnol (Amérique latine), Polonais,
+Portugais (Brésil), Russe et Ukrainien.</li>
+		</ul>
+        <h3><span>Utilisation des images USB et ISO d'installateurs
+internationalisés</span></h3>
+        <p>Rendez-vous dans le sous-répertoire de <a
+href="https://slint.fr/pub">https://slint.fr/pub</a> correspondant à l'édition
+pour laquelle vous voulez un installateur, par exemple <a
+href="https://slint.fr/pub/64-14.1">https://slint.fr/pub/64-14.1</a> pour
+Slackware64-14.1 et suivez le mode d'emploi.
+        </p>
+        <p>Pour graver un CD ou un DVD de l'installateur internationalisé pour
+Slackware64-14.1 :</p>
+        <ul>
+            <li>growisofs -speed=2 -dvd-compat -Z /dev/dvd=[nom du fichier se terminant en
+.iso]</li>
+        </ul>
+        <p>Pour transférer l'installateur internationalisé pour Slackware64-14.1 sur
+une clef USB désignée par /dev/sdc (exemple à remplacer par  le nom trouvé
+en tapant 'cat /proc/partitions' ou 'dmesg|tail') :</p>
+        <ul>
+           <li>dd if=[nom du fichier se terminant par .img] of=/dev/sdc bs=512</li>
+        </ul>
+        <p>ATTENTION :</p>
+        <ul>
+          <li>vérifiez bien que /dev/sdc (ou autre) ne désigne pas un disque dur, son
+contenu SERAIT IRRÉMÉDIABLEMENT EFFACÉ ! </li>
+          <li>le contenu précédent de la clef USB sera effacé, sauvagardez-le ailleurs
+avant de commencer.</li>
+        </ul>
+        <p>NOTA. Pour effectuer l'installation vous aurez besoin, en plus
+l'installateur, d'un support contenant les paquets logiciels pour la même
+version, par exemple un DVD Slackware ou un miroir local. En effet, ces
+paquets ne sont pas inclus dans les images ISO et USB proposées. 
+        </p>
+		<h3><span>Utilisation du paquet logiciel <a
+href="https://slint.fr/pub/slint-20140206.tar.xz">slint-[date].tar.xz</a></span></h3>
+		<p>Vous aurez besoin, en plus du paquet lui-même, de :</p>
+		<ol>
+			<li>Un miroir complet de l'édition de Slackware que vous voulez
+internationaliser (un DVD Slackware, une image ISO ou un miroir local).
+			</li>
+			<li>Une distribution Linux, y compris les outils 'gettext' et les fichiers
+nécessaires à l'internationalisation. Bien sûr, une Slackware complète est
+préférée, mais vous pouvez télécharger slint et l'utiliser dans un autre
+système Linux.
+			</li>
+		</ol>
+		<p>Téléchargez <a href="https://slint.fr/pub/slint-20140206.tar.xz">le paquet
+logiciel</a>, ainsi que <a
+href="https://slint.fr/pub/slint-20140206.tar.xz.md5">le fichier de contrôle
+md5</a> et tapez la commande suivante:</p>
+		<ul>
+			<li>md5sum -c slint-[date].tar.xz.md5 # le résultat doit être "OK"</li>
+		</ul>
+		<p>Puis déballez le paquet:</p>
+		<ul>
+		   <li>tar xf slint-[date].tar.xz # cela créera le sous-répertoire slint-[date]</li>
+		</ul>
+		<p>Ensuite tapez, comme root:</p>
+		<ul>
+			<li>slint-[date]/slint.sh</li>
+		</ul>
+		<p>Suivez les instructions du script. Vous indiquerez dans le commande quelle
+édition de Slackware vous voulez internationaliser. Le script vous demandera
+alors :</p>
+		<ul>
+			<li>le chemin vers le miroir local de l'édition de Slackware à
+internationaliser,
+			</li>
+			<li>quelles langues inclure dans l'installateur internationalisé (l'Anglais des
+USA n'est pas proposé car il est toujours inclus :-)
+			</li>
+		</ul>
+    </div>
+	<div class="w50 cadresuivant">
+		<h2 class="premierh2">Contribuer à slint</h2>
+		<h3><span>A l'aide</span></h3>
+		<p>Nous avons encore besoin de traducteurs pour renforcer les équipes
+existantes et pour traduire dans plus de langues.</p>
+		<p>Vous pouvez demander à rejoindre ou créer une équipe de traduction dans
+l'espace du projet sur <a
+href="https://www.transifex.com/projects/p/slint/">Transifex</a>, voir le
+fichier <a href="https://slint.fr/pub/TRANSLATORS">TRANSLATORS</a> pour plus
+de précisions.</p>
+		<p>Mais d'abord, jetez un œil aux <a href="https://slint.fr/slint">fichiers de
+slint</a> pour vous faire une idée du genre et du volume de travail
+nécessaires.</p>
+		<h3><span>Traducteurs et réviseurs inscrits sur Transifex</span></h3>
+		<table border="1">
+			<tr><th>Traducteur</th><th>Langue</th><th>Locale</th></tr>
+			<tr><td>dlee99</td><td>Néerlandais</td><td>nl_NL</td></tr>
+			<tr><td>Eric Hameleers</td><td>Néerlandais</td><td>nl_NL</td></tr>
+			<tr><td>ponce</td><td>Italien</td><td>it_IT</td></tr>
+			<tr><td>celyr</td><td>Italien</td><td>it_IT</td></tr>
+			<tr><td>Sébastien Boillod</td><td>Français</td><td>fr_FR</td></tr>
+			<tr><td>Didier Spaier</td><td>Français</td><td>fr_FR</td></tr>
+			<tr><td>Marcin Herda</td><td>Polonais</td><td>pl_PL</td></tr>
+			<tr><td>Piotr Maksymiec</td><td>Polonais</td><td>pl_PL</td></tr>
+			<tr><td>elesmod</td><td>Polonais</td><td>pl_PL</td></tr>
+			<tr><td>Christian Ruesch</td><td>Allemand</td><td>de_DE</td></tr>
+			<tr><td>franzen</td><td>Allemand</td><td>de_DE</td></tr>
+			<tr><td>Johannes Georgi</td><td>Allemand</td><td>de_DE</td></tr>
+			<tr><td>Maik Wagner</td><td>Allemand</td><td>de_DE</td></tr>
+			<tr><td>Marcel Saegebarth</td><td>Allemand</td><td>de_DE</td></tr>
+			<tr><td>spongetron</td><td>Allemand</td><td>de_DE</td></tr>
+			<tr><td>titopoquito</td><td>Allemand</td><td>de_DE</td></tr>
+			<tr><td>Adriano Balani</td><td>Portugais du Brésil</td><td>pt_BR</td></tr>
+			<tr><td>Enrico Nicoletto</td><td>Portugais du Brésil</td><td>pt_BR</td></tr>
+			<tr><td>Fela</td><td>Portugais du Brésil</td><td>pt_BR</td></tr>
+			<tr><td>Gabriel Magno</td><td>Portugais du Brésil</td><td>pt_BR</td></tr>
+			<tr><td>Icavalheiro</td><td>Portugais du Brésil</td><td>pt_BR</td></tr>
+			<tr><td>Retalhador</td><td>Portugais du Brésil</td><td>pt_BR</td></tr>
+			<tr><td>br_Orion</td><td>Portugais du Brésil</td><td>pt_BR</td></tr>
+			<tr><td>igaldino</td><td>Portugais du Brésil</td><td>pt_BR</td></tr>
+			<tr><td>Malkon Rodrigo</td><td>Portugais du Brésil</td><td>pt_BR</td></tr>
+			<tr><td>marcelo.castro</td><td>Portugais du Brésil</td><td>pt_BR</td></tr>
+			<tr><td>Xerxes Lins</td><td>Portugais du Brésil</td><td>pt_BR</td></tr>
+			<tr><td>Dimitris Tzemos</td><td>Grec</td><td>el_GR</td></tr>
+			<tr><td>dreamwalking</td><td>Grec</td><td>el_GR</td></tr>
+			<tr><td>George Vlahavas</td><td>Grec</td><td>el_GR</td></tr>
+			<tr><td>Diantre</td><td>Espagnol (Amérique latine)</td><td>es_419</td></tr>
+			<tr><td>AlvaroG</td><td>Espagnol (Amérique latine)</td><td>es_419</td></tr>
+			<tr><td>ecoslacker</td><td>Espagnol (Amérique latine)</td><td>es_419</td></tr>
+			<tr><td>sombragris</td><td>Espagnol (Amérique latine)</td><td>es_419</td></tr>
+			<tr><td>Serg Bormant</td><td>Russe</td><td>ru_RU</td></tr>
+			<tr><td>Sergey Ignatev</td><td>Russe</td><td>ru_RU</td></tr>
+			<tr><td>Yaroslav Shmelev</td><td>Russe</td><td>ru_RU</td></tr>
+			<tr><td>Graf</td><td>Russe</td><td>ru_RU</td></tr>
+			<tr><td>adioe3</td><td>Bosniaque (Bosnie et Herzégovine)</td><td>bs_BA</td></tr>
+			<tr><td>willysr</td><td>Indonésien</td><td>id_ID</td></tr>
+			<tr><td>kisil</td><td>Ukrainien</td><td>uk_UA</td></tr>
+			<tr><td>uatech</td><td>Ukrainien</td><td>uk_UA</td></tr>
+			<tr><td>xuser13</td><td>Ukrainien</td><td>uk_UA</td></tr>
+			<tr><td>Koljan1970</td><td>Ukrainien</td><td>uk_UA</td></tr>
+			<tr><td>Kemal Ökmen</td><td>Tirc</td><td>tr_TR</td></tr>
+		</table>
+		<p>Toute langue nouvellement disponible sera ajoutée à l'installateur, dont une
+nouvelle version sera fournie dans <a href="https://slint.fr/pub">ce
+répertoire.</a></p>
+		<h3><span>Travaillons en équipe</span></h3>
+		<p>Toute sorte de contribution ou d'implication est la bienvenue.</p>
+		<p>L'installateur internationalisé pourrait être également utile aux
+distributions basées sur Slackware.</p>
+		<p> Leurs utilisateurs et contributeurs sont invités à s'en servir et à
+contribuer au projet slint.</p>
+	</div>
+</body>
+</html>

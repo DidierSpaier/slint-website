@@ -1,0 +1,68 @@
+# Written by Didier Spaier 2014
+# Public domain
+# this file is intended to be used with an Apache server, version 2.2 or 2.4.
+# This .htaccess file is at the root of slint.fr website.
+# Its goal is to send pages in language preferred by the user:
+# * in the language chosen by clicking on an hyper link that displays a
+#   two characters language code
+# * else in a language found in the Accept-Language HTTP header, if a page
+#   is available in that language
+# * else (as a fall back) in English
+# All pages are in per language subdirectories
+#Rewrite everything to https
+RewriteEngine On
+RewriteBase /
+#Redirect /mailman/listinfo/slint_slint.fr 109.234.160.36/mailman/listinfo/slint_slint.fr
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+
+# Be kind with visitors clicking on broken links
+FallbackResource /sorry_the_requested_resource_was_not_found.html
+
+# Options that follow are mandatory for Rewrite to work in a .htaccess context
+Options  FollowSymLinks
+
+# Avoid caching pages in the browser to make sure they are displayed in the
+# preferred language, possibly just set or changed
+ExpiresActive On
+ExpiresByType text/html A1
+
+# Set the language when user clicks on a language link, recording it in a cookie
+RewriteCond %{THE_REQUEST} .*/(bs|de|en|es|fa_IR|fr|ia|id|it|nl|pl|pt_BR|pt|ru|sr|sv|tr|uk|zh_CN)/.*html
+RewriteRule ([a-z]*.html) - [L,CO=lang:%1:slint.fr]
+
+# Send localized page corresponding to language setting
+RewriteCond %{REQUEST_URI} !^/slint.fr/(bs|de|en|fa_IR|fr|ia|id|it|nl|pl|pt_BR|pt|ru|sr|sv|tr|uk|zh_CN)/(.*$)
+RewriteCond %{THE_REQUEST} .*html
+RewriteCond %{HTTP_COOKIE} lang=(bs|de|en|es|fa_IR|fr|ia|id|it|nl|pl|pt|ru|tr|uk|zh_CN)
+# We'll skip the next rule if this one is applied, as language chosen by user
+# is preferred to the one set in the Accept-Language header
+RewriteRule ([a-z]*.html) %1/$1 [S=1]
+
+# If the language is not set, but a preferred language is set and we have the
+# requested page in that language, send it
+RewriteCond %{REQUEST_URI} !^/slint.fr/(bs|de|en|es|fa_IR|fr|ia|id|it|nl|pl|pt_BR|pt|ru|sr|sv|tr|uk|zh_CN)/.*$
+RewriteCond %{THE_REQUEST} .*html
+RewriteCond %{HTTP_COOKIE} !lang=([^;]+) [NC]
+# The condition pattern below is of course perfectible, to say it kindly.
+# Refining it to better take in account details clause 14.4 of RFC 2616 is
+# left to the reader as an exercise ;)
+# I don't feel too ashamed as the user can easily set his or her preferred
+# language anyway.
+RewriteCond %{HTTP:Accept-Language} ^(bs|de|en|es|fa_IR|fr|ia|id|it|nl|pl|pt|ru|sr|sv|tr|uk|zh_CN).*$
+RewriteRule ([a-z]*.html) %1/$1
+
+# Fallback in case of wrong URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /sorry_the_requested_resource_was_not_found.html [PT]
+
+# Tentative rewrite old => new main page
+
+Redirect "/slint.html" "/"
+

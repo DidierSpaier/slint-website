@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Handige tools voor Slint-medevertalers</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Home</a></div>
+      <div><a href="installer.html">Slint installer</a></div>
+      <div><a href="package.html">Slint-pakket</a></div>
+      <div><a href="translators.html">Vertalers</a></div>
+      <div><a href="contribute.html">Draag bij</a></div>
+      <div><a href="tools.html">Tools</a></div>
+      <div><a href="changelog.html">ChangeLog</a></div>
+      <div id="page-source"><a href="../tools.nl.txt">Bronpagina</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Het Slackware Internationaliserings Project</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/tools.html">de</a> | <a href="../en/tools.html">en</a> | <a href="../es/tools.html">es</a> | <a href="../fr/tools.html">fr</a> | <a href="../it/tools.html">it</a> | <a href="../nl/tools.html">nl</a> | <a href="../pl/tools.html">pl</a> | <a href="../pt_PT/tools.html">pt_PT</a> | <a href="../ru/tools.html">ru</a> | <a href="../tr/tools.html">tr</a> | <a href="../uk/tools.html">uk</a> |</div>
+        <h1>Handige tools voor Slint-medevertalers</h1>
+      </div>
+<div class="sect1">
+<h2 id="_transifex">Transifex</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Het Transifex-platform vergemakkelijkt de samenwerking tussen vertalers als
+een plaats waar ieder vertaal-team zijn PO-bestanden kan centraliseren en
+informatie kan delen. Het biedt een online editor die eveneens gebruikt kan
+worden om vertalingen te controleren.</p></div>
+<div class="paragraph"><p>Bezoek <a href="http://support.transifex.com/">Transifex Help Desk</a> om te leren hoe je
+het gebruikt.</p></div>
+<div class="paragraph"><p>Je kunt de online-editor van Transifex gebruiken als je dat makkelijk vindt,
+maar:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+vergeet niet regelmatig lokaal een backup te maken, voor het geval dat
+</p>
+</li>
+<li>
+<p>
+de tekstindeling van vertalingen is lokaal eenvoudiger te doen en te
+  controleren met een gespecialiseerde PO-editor als <strong>Lokalize</strong> of
+  <strong>Poedit</strong>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Voor vertaling van webpagina&#8217;s in asciidoc-formaat is gebruik van Transifex
+verplicht (zie hieronder).</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">Als je lokaal wilt vertalen gebruik dan <em>Download for translation</em> (niet
+<em>Download for use</em>) en <em>Lock this translation to notify others you're
+working on it</em>. Dit voorkomt dubbel werk&#8230; Twee teamleden kunnen wel
+eenzelfde groot PO-bestand delen zolang ze maar eerst afspreken wie wat
+vertaalt.</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Transifex heeft geen automatische terugloop. Dit kan leiden tot zeer lange
+zinnen die lastig te lezen zijn in een tekstverwerker en die hem zelfs kan
+laten crashen. Om dit te voorkomen typ je na het downloaden van het
+PO-bestand:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  msgcat van_Transifex_gedownload_bestand &gt; hernoemd_bestand</code></pre>
+</div></div>
+<div class="paragraph"><p>gebruik dan <em>Lokalize</em> of <em>Poedit</em> om <em>hernoemd_bestand</em> te vertalen. Dit
+bestand heeft automatisch teruglopende regels maar is verder gelijk aan het
+eerder gedownloade.</p></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Als je lokaal vertaalt vergeet dan niet het bewerkte bestand weer naar
+Transifex te uploaden om het niet onnodig als <em>locked</em> te laten staan.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lokalize">Lokalize</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>Lokalize</em> komt mee met Slackware. Je kunt
+<a href="http://docs.kde.org/development/en/kdesdk/lokalize/index.html">online</a> of via
+het Help-menu of door het drukken van [F1] het Lokalize Handboek
+lezen. Aanbevolen instellingen:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Instellingen &#8658; Instellen &#8658; Identiteit: Standaardtaal.
+</p>
+</li>
+<li>
+<p>
+Instellingen &#8658; Instellen &#8658; Uiterlijk: Kies een serif font met vaste
+  breedte zoals Courier. Dit laat je duidelijker het verschil zien tussen 0
+  (het getal) en O (de letter) of tussen | (pipe) en I (de letter) en beter de
+  tekstindeling controleren zoals bijvoorbeeld de uitlijning van de eerste
+  woorden van opeenvolgende regels.
+</p>
+</li>
+<li>
+<p>
+Instellingen &#8658; Instellen &#8658; Uiterlijk: Vink aan <em>LED&#8217;s voor het aangeven
+  van de status voor niet gereed en onvertaald en ook een kolomteller</em>. Handig
+  voor het controleren van de regellengte als dat nodig is.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_poedit">Poedit</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>Poedit</em> zit niet standaard bij Slackware maar is beschikbaar @
+<a href="http://slackbuilds.org">SlackBuilds.org</a>.</p></div>
+<div class="paragraph"><p>Het heeft geen handige manier om regellengten te controleren maar verder
+heeft het dezelfde mogelijkheden als Lokalize. Het kiezen voor de één of de
+ander is een kwestie van persoonlijke voorkeur.</p></div>
+<div class="paragraph"><p>In Bewerken &#8658; Voorkeuren &#8658; Editor: Vink aan <em>Automatische
+spellingcontrole</em> en kies net als Lokalize een serif lettertype met vaste
+breedte.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gebruik_van_scripts_meegeleverd_in_slint_8217_s_tarball">Gebruik van scripts meegeleverd in Slint&#8217;s tarball</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Dit gecomprimeerd archief bevat alles wat nodig is om slint producten te
+compileren net als tools voor slint-bijdragers. Het heet slint-[date].tar.xz
+en is beschikbaar in directory <a href="https://slint.fr/pub">pub/</a>.</p></div>
+<div class="paragraph"><p>Om het uit te pakken, typ je:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  tar xf slint-[date].tar.xz</code></pre>
+</div></div>
+<div class="paragraph"><p>Dit maakt een directory slint-[date]. Zie het bestand CONTENT.TXT hierin
+voor details. In de tabel hieronder zie je alleen scripts om slint producten
+mee te compileren en tools voor vertalers. Alle aangegeven paden zijn
+relatief aan deze directory.</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Scriptnaam en locatie</th>
+<th align="left" valign="top">Doel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">build/slint.sh</p></td>
+<td align="left" valign="top"><p class="table">Maakt een hybride (CD/DVD or USB)-image van de Slackware-installer of van een Slackware distributie waar het bij zit</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">build/make_slint_packages</p></td>
+<td align="left" valign="top"><p class="table">Internationaliseert een aantal Slackware pakketten en maakt het pakket SlintLocales.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">build/slintLocales</p></td>
+<td align="left" valign="top"><p class="table">Maakt een pakket met alle up to date vertalingen van Slackware scripts meegeleverd in Slint installers (alle versies) of in tools voor Slackware.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tools_for_translators/toolbox.sh</p></td>
+<td align="left" valign="top"><p class="table">Deze toolbox beheert vertalingen van meldingen verzameld in slackware.pot.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tools_for_translators/toolbox_slint_sh</p></td>
+<td align="left" valign="top"><p class="table">Deze toolbox beheert vertalingen van meldingen gegenereerd door het script slint.sh .</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tools_for_translators/generate_man_pages</p></td>
+<td align="left" valign="top"><p class="table">Genereert gelocaliseerde man pages voor enkele tools voor Slackware. Laat je PO-bestanden controleren. Voor gebruik van dit script moet je het pakket po4a geïnstalleerd hebben, beschikbaar in directory <a href="https://slint.fr/packages/extra">extra/</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_de_vertaling_van_slackware_8217_s_installer_en_beheerscripts_controleren">De vertaling van Slackware&#8217;s installer en beheerscripts controleren</h3>
+<div class="paragraph"><p>Bron <a href="https://www.transifex.com/projects/p/slint/resource/slint/">slint</a>,
+bestand slackware.pot</p></div>
+<div class="paragraph"><p>Zet het bestand als je klaar bent met vertalen in directoty wip/, en
+(her)noem het bijvoorbeeld nl_NL.slackware.po. Voer vervolgens
+/pad/naar/tools_for_translators/toolbox.sh uit en kies check_PO in het
+menu. Als alles goed gaat:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+kopieer je nl_NL.slackware.po naar directory po/ (vertaling in Nederlands in
+  dit voorbeeld).
+</p>
+</li>
+<li>
+<p>
+voer je uit: /pad/naar/build/SlintLocales.SlackBuild om je bijgewerkte
+  vertaling in het pakket SlintLocales op te nemen.
+</p>
+</li>
+<li>
+<p>
+voer je uit: /pad/naar/build/slint.sh om een hybride CD of USB-image van de
+  installer te maken.
+</p>
+</li>
+<li>
+<p>
+brand je het image op een CD of USB-stick.
+</p>
+</li>
+<li>
+<p>
+probeer je de installer uit (in het Nederlands in dit geval uiteraard) op
+  een virtuele of echte machine.
+</p>
+</li>
+</ol></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">Om de installer in een virtuele machine uit te voeren kun je direct het
+ISO-image als virtueel medium gebruiken en hoef je het niet op een fysiek
+medium te branden.</td>
+</tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_de_vertaling_van_het_bestand_slint_sh_controleren">De vertaling van het bestand slint.sh controleren</h3>
+<div class="paragraph"><p>Bron
+<a href="https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/">POT
+bestand voor slint.sh</a></p></div>
+<div class="paragraph"><p>Wanneer je klaar bent met vertalen zet je het bestand in directoty wip/,
+(her)noem het bijvoorbeeld de_DE.slint.po voor Duits. Voer vervolgens uit:
+/pad/naar/tools_for_translators/toolbox.sh en kies in het menu check_PO.</p></div>
+<div class="paragraph"><p>Als alles goed gaat voer dan uit:
+/pad/naar/tools_for_translators/toolbox_slint_sh maar kies format_PO in het
+menu. Als alles goed gaat genereert dit het bestand slint.mo en zet dit op
+zijn plaats in de slint-[date] boom (in directory
+slint_locales/de/LC_MESSAGES in dit voorbeeld)</p></div>
+<div class="paragraph"><p>Probeer vervolgens je vertaling door Engelse en Duitse versies te
+vergelijken met de volgende commando&#8217;s:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  /pad/naar/build/slint.sh
+  LANG=de_DE.utf8 /pad/naar/build/slint.sh</code></pre>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_de_vertaling_van_man_pagina_8217_s_meegeleverd_in_pakketten_pkgtools_en_slackpkg_controleren">De vertaling van man pagina&#8217;s meegeleverd in pakketten pkgtools en slackpkg controleren</h3>
+<div class="paragraph"><p>Bronnen:
+<a href="https://www.transifex.com/projects/p/slint/resource/pkgtools/">pkgtools</a> en
+<a href="https://www.transifex.com/projects/p/slint/resource/slackpkg/">slackpkg</a></p></div>
+<div class="paragraph"><p>Zet het PO-bestand weer in directory wip/, en (her)noem het bijvoorbeeld
+es.pkgtools.po (man pagina&#8217;s meegeleverd met het pakket pkgtools in het
+Spaans). Voer dan dit commando uit:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>   /pad/naar/tools_for_translators/generate_man_pages es.pkgtools</code></pre>
+</div></div>
+<div class="paragraph"><p>Als alles goed gaat genereert dit alle inbegrepen man pages (in dit geval:
+es.explodepkg, es.installpkg, es.makepkg, es.pkgtool, es.removepkg,
+es.upgradepkg). Lees anders de foutmeldingen, corrigeer waar nodig en
+probeer het nog eens. De meeste fouten zijn te voorkomen door het volgen van
+deze <a href="contribute.html#warning_man_pages">Waarschuwing</a>.</p></div>
+<div class="paragraph"><p>Om gelocaliseerde met originele man pageina&#8217;s te vergelijken doe je dit
+(voor bijvoobeeld de Oekraïense vertaling):</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  cd /pad/naar/wip/
+  LANG=uk_UA.utf8 GROFF_ENCODING=utf8 man ./installpkg # gelocaliseerde man page
+  GROFF_ENCODING=utf8 man installpkg # originele man page</code></pre>
+</div></div>
+<div class="paragraph"><p>Om het steeds moeten typen van "GROFF_ENCODING=utf8" te voorkomen plaats je
+de volgende regel in ~/.bashrc:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  export GROFF_ENCODING=utf8</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="asciidoc">Vertaling van tekstbestanden die door <em>AsciiDoc</em> worden omgezet naar webpagina&#8217;s</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Zoals aangegeven in <a href="contribute.html#new_web_pages">Vertaling van
+webpagina&#8217;s</a> worden de volgende webpagina&#8217;s middels <em>asciidoc</em>  vanuit
+tekstbestanden gegenereerd: <a href="slint.html">slint.html</a>,
+<a href="installer.html">installer.html</a>, <a href="package.html">package.html</a>,
+<a href="contribute.html">Draag Bij</a>, <a href="translators.html">Vertalers</a>,
+<a href="tools.html">Tools</a>, <a href="changelog.html">ChangeLog</a> en
+<a href="https://www.transifex.com/projects/p/slint/resource/templatepo/">template.po</a>.</p></div>
+<div class="paragraph"><p>Deze bron-tekstbestanden moeten worden vertaald met de Transifex
+online-editor: het uploaden van een vertaald tekstbestand naar Transifex
+mislukt met onbekende reden dus het lokaal vertalen van bestanden en ze dan
+naar Transifex uploaden is geen optie.</p></div>
+<div class="paragraph"><p>Maar de Transifex online-editor heeft het voordeel regels of paragrafen te
+kunnen toevoegen die gelinkt blijven aan een string in het originele engelse
+bestand.</p></div>
+<div class="paragraph"><p>Dit geeft vertalers de mogelijkheid hun vertalingen door het toevoegen van
+informatie specifiek voor hun locale aan te passen; bijvoorbeeld hoe
+gebruikers hulp in hun eigen taal of land kunnen krijgen of verwijzingen
+naar gelocaliseerde documentatie, enz.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Na een update van een origineel engels tekstbestand zullen de vertalingen
+van de tekstregels overeenkomend met de aangepaste regels in het engelse
+bestand verdwijnen uit de Transifex editor.</p></div>
+<div class="paragraph"><p>Je kunt je wat typwerk besparen als je van een lokale kopie (gedownload van
+Transifex) de oude vertaling kopieert en plakt in de Transifex editor en
+deze waar nodig aanpast.</p></div>
+<div class="paragraph"><p>Nog gemakkelijker: wanneer je vertaling al naar de website is geüpload klik
+je op "Bronpagina" onderaan het menu op deze pagina en de desbetreffende
+brontekst wordt weergegeven.</p></div>
+<div class="paragraph"><p>De Transifex-editor heeft een "Suggesties" feature (vergelijkbaar met het
+"Vertaal-geheugen" in Lokalize) die vergelijkbare oude vertalingen van een
+regel "onthoudt". Deze feature is echt handig wanneer een webpagina wordt
+bijgewerkt. Transifex onthoudt je laatste vertaling van de regel en
+presenteert een "Use This" link naast de suggestie. Je kunt die overnemen en
+daarna aanpassen zodat je weer door kunt naar de volgende vertaling.</p></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><div class="title">Neem kennis van de AsciiDoc opmaak-syntax</div><p>Het referentiedocument is <a href="http://asciidoc.org/userguide.html">AsciiDoc
+Gebruikershandleiding</a> maar een beginner leest beter
+<a href="http://powerman.name/doc/asciidoc">AsciiDoc cheatsheet</a>. Of nog sneller,
+ervan uitgaand dat <em>AsciiDoc</em> is geïnstalleerd, schrijft het commando:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>asciidoc --help syntax &gt; asciidoc.txt</code></pre>
+</div></div>
+<div class="paragraph"><p>de AsciiDoc Markup Syntax Samenvatting naar bestand asciidoc.txt, dat je
+vervolgens kunt weergeven met een pager of afdrukken.</p></div>
+<div class="paragraph"><div class="title">Hou de originele opmaak</div><p>Hou de opmaak zoals die is. Toevoegen of verwijderen van spaties of
+"newline"-karakters bijvoorbeeld kunnen onverwachte effecten
+teweegbrengen. Hier zijn een paar voorbeelden :</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Een paragraaf beginnen met een spatie genereert een <em>literal paragraph</em>
+  weergegeven met een specifiek lettertype
+</p>
+</li>
+<li>
+<p>
+"= een tekst" genereert een niveau 0 kop (documenttitel), maar alleen
+  wanneer "=" het eerste karakter van een regel is, er een spatie achter staat
+  en een lege regel vóór.
+</p>
+</li>
+<li>
+<p>
+" +" aan een regel toegevoegd genereert een "regelafbreuk" maar alleen met
+  een spatie vóór de "+" en als laatste karakter van een regel
+</p>
+</li>
+</ul></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">Om gedoe met opmaakinstructies te voorkomen adviseren we je eerst de
+bronregel (in het engels) in de vertaling te kopiëren (klik op het
+twee-pagina&#8217;s icoon rechtsboven de bronregel) en deze vervolgens te
+bewerken.</td>
+</tr></table>
+</div>
+<div class="paragraph"><div class="title">Controleer de weergave van uw vertaling</div><p>Je kunt de weergave van de webpagina gegenereerd vanuit jouw vertaling van
+het brontekstbestand gemakkelijk als volgt controleren:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>lftp -c "mirror https://slint.fr/website/"
+# Download je vertaling van Transifex (die we &lt;translation.txt&gt; noemen&gt; naar de zojuist gecreëerde directory website/
+cd website
+CONFIG_FILE=slint.conf.en
+# Optioneel, als de bovenste titel en het menu vertaald in jouw taal al zijn geüpload naar de website:
+wget https://slint.fr/slint.conf.tt; CONFIG_FILE=slint.conf.tt # vervang "tt" met jouw taalcode (twee letters)
+# genereer dan de webpagina
+asciidoc -b xhtml11 -a icons -f $CONFIG_FILE &lt;translation.txt&gt; # dit commando genereert &lt;translation.html&gt;
+firefox &lt;translation.html&gt; &amp;</code></pre>
+</div></div>
+<div class="paragraph"><div class="title">Vertalen of niet vertalen, dat is de vraag</div><p>De volgende woorden hebben een speciale betekenis voor AsciiDoc en mogen
+niet worden vertaald als ze een waarschuwings-paragraaf beginnen (en vaak
+worden vervangen door iconen): TIP, NOTE, IMPORTANT, WARNING en CAUTION.</p></div>
+<div class="paragraph"><p>In het algemeen mogen links en URL&#8217;s niet worden vertaald, behalve het
+geassocieerde bijschrift, afhankelijk van de context. In de volgende
+voorbeelden (uit <em>asciidoc --help syntax</em>) mag alleen <em>bijschrift</em> vertaald
+worden:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Documentlinks:
+[[id]]                      (definieer link target)
+&lt;&lt;id,bijschrift&gt;&gt;              (link naar target id)
+link:filename#id[bijschrift]   (link naar extern HTML-bestand)
+
+URL's:
+http:address[bijschrift]       (link naar webpagina)
+mailto:address[bijschrift]     (link naar mailontvanger)
+
+Afbeeldingen:
+image:filename[bijschrift]     (inline afbeelding)
+image::filename[bijschrift]    (blokafbeelding)</code></pre>
+</div></div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Laatst gewijzigd 2016-04-23 16:20:49 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

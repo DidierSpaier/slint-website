@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Slint projesine katkıda bulun</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Anasayfa</a></div>
+      <div><a href="installer.html">Slint yükleyici</a></div>
+      <div><a href="package.html">Slint paketi</a></div>
+      <div><a href="translators.html">Çevirmenler</a></div>
+      <div><a href="contribute.html">Katkıda bulun</a></div>
+      <div><a href="tools.html">Araçlar</a></div>
+      <div><a href="changelog.html">Değişiklik Listesi</a></div>
+      <div id="page-source"><a href="../contribute.tr.txt">Sayfa Kaynağı</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Slackware Yerelleştirme Projesi</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/contribute.html">de</a> | <a href="../en/contribute.html">en</a> | <a href="../es/contribute.html">es</a> | <a href="../fr/contribute.html">fr</a> | <a href="../ia/contribute.html">ia</a> | <a href="../it/contribute.html">it</a> | <a href="../nl/contribute.html">nl</a> | <a href="../pl/contribute.html">pl</a> | <a href="../pt_PT/contribute.html">pt_PT</a> | <a href="../ru/contribute.html">ru</a> | <a href="../tr/contribute.html">tr</a> | <a href="../uk/contribute.html">uk</a> |</div>
+        <h1>Slint projesine katkıda bulun</h1>
+      </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Slint projesine yardım etmek ve katkıda bulunmak mı istiyorsunuz? Gemiye
+hoşgeldiniz!</p></div>
+<div class="paragraph"><p>Slint ürünleri sağlamak için gerekli iş çoğunlukla çeviri ve, Slackware
+kurucularını, yönetim araçlarını oluşturan kabuk betikletinin gözden
+geçirilmesi, ve Slackware kullanıcıları için metin dosyaları veya kılavuz
+sayfaları biçiminde olan belgelendirmedir.</p></div>
+<div class="paragraph"><p>İdeal olarak çevirmenlerin şunları yapmasını isteriz:</p></div>
+<div class="ulist compact"><ul>
+<li>
+<p>
+İngilizce iletişim kurabilin ve hedef dilde, tercihen doğal dilde, çok akıcı
+  olun,
+</p>
+</li>
+<li>
+<p>
+Bir Linux sisteminin kurulumu ve yönetini ile ilgili teknik terimleri
+  anlayın
+</p>
+</li>
+<li>
+<p>
+Slackware kullanıcısı olun
+</p>
+</li>
+<li>
+<p>
+basit kabuk betiklerini okuyabilir ve anlayabilir olun
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Fakat tüm bu beklentileri karşılamıyorsanız da, gönüllü olmaya çekinmeyin:
+hala yeteneklerinizin faydalı olabileceği görevler olabilir.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gönüllü_olun_ve_katkınızı_tanımlayın">Gönüllü olun ve katkınızı tanımlayın</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Tercihen Tansifex kullanan çeviri gönüllüleri: İlk olarak
+<a href="https://www.transifex.com/signup/contributor/">register on Transifex</a> kayıt
+olunuz (ücretsizdir), sonra
+<a href="https://www.transifex.com/projects/p/slint/">Slint projesi ev sayfası</a>na
+gidin:</p></div>
+<div class="ulist compact"><ul>
+<li>
+<p>
+Eğer diliniz listelenmişse, üzerine tıklayın, sonra o dilin sayfasında
+  "Takıma katılın"a tıklayın.
+</p>
+</li>
+<li>
+<p>
+Değilse, "Dil iste"ye tıklayın (diller listesinin hemen üzerindeki açık mavi
+  şerit)
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Fakat önce soru sormak isterseniz, ya da çeviri dışındaki yardımları önermek
+isterseniz, Slint bakımcısına e-posta gönderin: didier dot spaier at epsm
+dot fr.</p></div>
+<div class="paragraph"><p>Sonra takım koordinatorü ya da Slint bakımcısına ile danışıp Slint&#8217;e
+katkınızın "neden", "ne", "nasıl" ve "ne zaman" olacağını tanımlayacaksınız.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_metodlarımızı_ve_araçlarımızı_öğrenin_ve_slint_takımı_içinde_iletişime_hazır_olun">Metodlarımızı ve araçlarımızı öğrenin ve Slint takımı içinde iletişime hazır olun</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Lütfen aşağıdaki <a href="#tavsiyeler">Çevirmenler için Pratik tavsiyeler</a> i okuyun.</p></div>
+<div class="paragraph"><p>Sonra, kullandığımız <a href="tools.html">Tools</a> a alışınız. Onları daha iyi
+kullanmak için aşağıdaki paketleri içerecek şekilde bir Linux sistemine,
+tercihen tam Slackware sistemine sahip olmalısınız:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+../extra/aspell-words-lists/&lt;diliniz için paketler&gt; yazım denetimleri için
+</p>
+</li>
+<li>
+<p>
+../kdei/&lt;package kde-l10n sizin diliniz için&gt; yerelleştirme için
+  Lokalize&#8217;nin kullanıcı arayüzü, eğer bunu kullanırsanız
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Sonuncusu birlikte bir takım olarak çalışmamız gerekir, yani:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Lütfen çevrimiçi düzenleyici olarak kullanmasanız da Transifex&#8217;e üye olunuz,
+  sonra, tüm katkı verenlerin tek seferde bilgilendirilmesini sağlamak için
+  daha kolay bir yol olduğu için tüm
+  <a href="https://www.transifex.com/settings/notices/">notification settings</a> i kontrol
+  ediniz. Lütfen takma isim kullansanız bile tam isminizi belirtiniz.
+</p>
+</li>
+<li>
+<p>
+<a href="https://lists.sourceforge.net/lists/listinfo/slint-translators">slint-translators
+  mailing-list</a> listesine üye olmanızı şiddetle öneririz. Bu soru sormanızı ve
+  cevaplamanızı, tartışmalarda yer almanızı, öneri ve teklifte bulunmanızı
+  sağlayacaktır.
+</p>
+</li>
+<li>
+<p>
+Takım koordinatörünün ya da Slint bakımcısının size ulşabileceği bir e-posta
+  adresi sağlamaya hazır olun.
+</p>
+</li>
+<li>
+<p>
+Ayrıca Transifex üzerinde Slint projesinin kendi dilinizdeki sayfasındaki
+  Tartışma özelliğini de kullanabilirsiniz.
+</p>
+</li>
+<li>
+<p>
+Ayrıca LinuxQuestions.org&#8217;un Slackware forumunda
+  <a href="http://www.linuxquestions.org/questions/slackware-14/internationalized-slackware-14-installer-what-languages-to-start-4175455701/">this
+  thread</a> i takip edebilirsiniz. Bunun için, LQ&#8217;ya kayıt olun ve bir
+  tartışmaya mesaj gönderin ya da Thread Tools &#8658; Subscribe to this Thread
+  (gösterilen ilk mesajın hemen üzerindeki koyu mavi şerit) e tıklayarak
+  mesajı görüntüleyin.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_çeviri_kapsamı">Çeviri kapsamı</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_hedef_diller">Hedef diller</h3>
+<div class="paragraph"><p>Slint kurucunun yazıldığı sıralarda ana Slackware yönetim araçları
+Fransızca, Almanca, Portekizce, Rusça, İspanyolca ve Ukraynaca dillerine tam
+olarak çecrilmişti. Diğer çeviriler devam ediyor, şu anki durumları
+<a href="https://www.transifex.com/projects/p/slint/resource/slint/">this page</a>
+üzerinden kontrol edilebilir.</p></div>
+<div class="paragraph"><p>Kılavuz sayfalar daha fazla dile çevirilmiştir, tüm çeviriler
+<a href="https://slint.fr/packages/MAN_PAGES.TXT">MAN_PAGES.TXT</a> dosyası içinde
+listelenmiştir</p></div>
+</div>
+<div class="sect2">
+<h3 id="_çevirilen_içerik">Çevirilen içerik</h3>
+<div class="paragraph"><p>Çevirilen içerik PO dosyaları denen, GNU <em>gettext</em> tarafından üretilen ve
+işlenen, çevirilerin yanında orjinal İngilizce mesajların da dahil edildiği
+dosyalar biçimindedir. Çevirilecek olan verilen her mesaj kümesi (Slint&#8217;in
+durumunda İngilizce), POT dosyası denen, her bir hedef dil için ilişkili PO
+dosyasından üretilen dosya içine kaydedilir, daha fazlası için bakınız
+<a href="http://docs.slackware.com/howtos:misc:internationalization_and_localization_of_shell_scripts">Internationalization
+and localization of shell scripts</a> on
+<a href="http://docs.slackware.com/start">SlackDocs</a>.</p></div>
+<div class="paragraph"><p>Verilen POT dosyasına dahil edilen mesajlar bir ya da bir çok kabuk
+betiğinden ya da kılavuz sayfasından elde edilmiştir. Burada Slint&#8217;in aktif
+POT dosyaları ve bunların kapsamları vardır (eşleşen araçların nasıl
+kullanıldığını öğrenmek için bakınız <a href="tools.html">Tools</a> ).</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">POT Dosya ismi</th>
+<th align="left" valign="top">Kaynak adı (Transifex)</th>
+<th align="left" valign="top">Kapsam</th>
+<th align="left" valign="top">Eşleşen araç</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><div class="verse">slackware.pot</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/slint/">slint</a></div></td>
+<td align="left" valign="top"><div class="verse">Slint kurucu
+Slint paketi (kılavuz sayfaları olmadan)</div></td>
+<td align="left" valign="top"><div class="verse">toolbox.sh</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">pkgtools.pot</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/pkgtools/">pkgtools</a></div></td>
+<td align="left" valign="top"><div class="verse">man sayfaları <em>pkgtools</em> içinde bulunur</div></td>
+<td align="left" valign="top"><div class="verse">gen_man_pages</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">slackpkg.pot</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/slackpkg/">slackpkg</a></div></td>
+<td align="left" valign="top"><div class="verse">man sayfaları <em>slackpkg</em> paketi içinde bulunur</div></td>
+<td align="left" valign="top"><div class="verse">gen_man_pages</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">slint.pot</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/pot-file-for-slintsh/">POT file for slint.sh</a></div></td>
+<td align="left" valign="top"><div class="verse">slint.sh betiği, bakınız sayfa <a href="tools.html">Tools</a></div></td>
+<td align="left" valign="top"><div class="verse">toolbox_slint_sh</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">index.html.pot</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/indexhtml/">index.html</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="index.html">Old Slint&#8217;s home page</a></div></td>
+<td align="left" valign="top"><div class="verse">(yok)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">template.pot</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/templatepo/">template.po</a></div></td>
+<td align="left" valign="top"><div class="verse">Sidebar and top title of Slint web pages</div></td>
+<td align="left" valign="top"><div class="verse">(yok)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(yok)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/slinttxt/">slint.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="slint.html">Slint&#8217;s home page</a></div></td>
+<td align="left" valign="top"><div class="verse">(yok)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(none)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/installertxt/">installer.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="installer.html">Slint kurucu</a></div></td>
+<td align="left" valign="top"><div class="verse">(yok)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(yok)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/packagetxt/">package.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="package.html">Slint package</a></div></td>
+<td align="left" valign="top"><div class="verse">(yok)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(yok)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/translatorstxt/">translators.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="translators.html">Translators</a></div></td>
+<td align="left" valign="top"><div class="verse">(none)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(yok)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/contributetxt/">contribute.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="contribute.html">Contribute</a></div></td>
+<td align="left" valign="top"><div class="verse">(none)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(yok)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/toolstxt/">tools.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="tools.html">Tools</a></div></td>
+<td align="left" valign="top"><div class="verse">(none)</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">(yok)</div></td>
+<td align="left" valign="top"><div class="verse"><a href="https://www.transifex.com/projects/p/slint/resource/changelogtxt/">changelog.txt</a></div></td>
+<td align="left" valign="top"><div class="verse"><a href="changelog.html">ChangeLog</a></div></td>
+<td align="left" valign="top"><div class="verse">(none)</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_eskisinden_yeni_sayfalara_çeviriler">Eskisinden yeni sayfalara çeviriler</h3>
+<div class="paragraph"><p><a href="index.html">old home page</a> sayfamız doğrudan xhtml ile yazılmıştır. Bu
+13 dile çevirilmiştir ve sürekli olarak şu anki geçici olarak
+isimlendirilmiş <a href="slint.html">slint.html</a> ile değiştirilecektir.</p></div>
+<div class="paragraph"><p>Web sayfaları kenar çubuğu üzerindeki menüde
+listelenmiştir. <a href="slint.html">home page</a> sürekli olarak, daha fazla dile
+çevrilmeyecek ya da artık güncellenmeyecek, eski olanı değiştirir,</p></div>
+</div>
+<div class="sect2">
+<h3 id="new_web_pages">Web sayfalarının çevirisi</h3>
+<div class="paragraph"><p>Bazı sayfalar son kullanıcılar içindir: <a href="slint.html">slint.html</a>,
+<a href="installer.html">installer.html</a> ve <a href="package.html">package.html</a>. Bu
+dosyaların çevirilmesine ve
+<a href="https://www.transifex.com/projects/p/slint/resource/templatepo/">template.po</a>
+ya öncelik verilmelidir.</p></div>
+<div class="paragraph"><p>Diğer web sayfaları: <a href="contribute.html">Contribute</a>,
+<a href="translators.html">Translators</a>, <a href="tools.html">Tools</a> ve
+<a href="changelog.html">ChangeLog</a> da ayrıca çevirilebilir (bu her bir çeviri
+takımına kalmıştır) fakat yukarıdaki paragrafta listelenen sayfalar
+çevirildikten <em>sonra</em>.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/note.png" alt="Note" />
+</td>
+<td class="content">Bir dil için, template.po&#8217;yu çevirirken henüz çevirilmemiş bir sayfanın
+isminin İngilizce olarak brakılması, kullanıcı ona tıkladığında
+karşılaşacağı sayfanın İnngilizce olacağını anlayacağı için, daha iyidir.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Tüm yeni sayfalar Slackware içindeki (linuxdoc-tools paketi içinde gelen)
+<a href="http://asciidoc.org"><em>AsciiDoc</em></a> uygulaması kullanılarak üretildi. Kaynak
+dosyalar metin dosyalarıdır, AsciiDoc için, örn. iki eşit işaret ile
+başlayan satırlar ikinci seviye başlık olarak ele alnırlar, bunlar asciidoc
+tarafından üretilen XHTML dosyası içine  &lt;h2&gt;etiketi olarak yazılır, gibi
+biçimlendirme yönergeleri dahil edilmiştir.</p></div>
+<div class="paragraph"><p>Özel yönergeler ve <em>AsciiDoc</em> yarafından işlenecek çevirilecek metin
+dosyaları <a href="tools.html#asciidoc">Translation of text files to be processed
+by <em>AsciiDoc</em> to generate web pages</a> içinde bulunmaktadır.</p></div>
+<div class="paragraph"><p>Her bir dil için, template.po, <a href="slint.html">slint.html</a>,
+<a href="installer.html">installer.html</a> ve <a href="package.html">package.html</a>
+çevirisi bittiğinde, eski sayfa , son kullanıcı o dilde yeni sayfalardan
+faydalansın diye, yenisi ile değiştirilecektir.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="recommendations">Çevirmenler için pratik tavsiyeler</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+İhtiyaç duyulan iş miktarına ve eldeki kaynağa bağlı olarak, hedeflenen dil
+  başına bir çevirici ya da bir takım olabilir. Her durumda, takım işleri
+  organizasyonundan sorumlu, çevirilerin denetlenmesi ve PO dosyasının
+  bakımcılara gönderilmesinden sorumlu en azından bir kişi tavsiye
+  edilir. Buna takım koordinatörü diyelim.
+</p>
+</li>
+<li>
+<p>
+Kendinizi kelimesi kelimesine çevirmeye mecbur hissetmeyin. Bunun sadece
+  anlamı ifade etmenin en iyi yolu olmadığından değil, fakat buna ek olarak
+  cümlenin sıklıkla izin verilen boşluktan daha uzun olmasına yol açtığı için.
+</p>
+</li>
+<li>
+<p>
+Özel bir PO düzenleyici kullanın, bir metin düzenleyici <em>değil</em>. Bu sadece
+  <em>msgid</em> dizilerinin yanlışla değiştirlmesini engellemeyecek, ayrıca
+  değişkenin çeviri içinde orjinali ile aynı yazımda bulunması gibi ek
+  denetimleri de mümkün kılar.
+</p>
+</li>
+<li>
+<p>
+Çevirirken, Courier gibi, serif sabit genişlikli ("monospaced" değil) bir
+  fontu seçin. Bu görsel olarak, aksi halde aynı gözükecek karakterleri ayırt
+  etmenizi ve önemli olduğunda satır uzunluğunu denetleminizi sağlar,
+Eğer mümkünse, mesajın yerleşimini denetleyin. Bunu ilgili kaynak dosyadaki
+bağlama bakarak yapabilirsiniz. Daha da iyisi, çevirilen betiği çalıştırın.
+Bu özellikle dialog kutularını çevirirken önemlidir. Özellikle, eğer metin
+bir sonraki üzerine gelmiyorsa tek bir satırda çok uzun bir cümle yazmamaya
+özen gösterin.
+</p>
+</li>
+<li>
+<p>
+Aklınızdan çıkarmayın, VGA modunda (özellikle metin kurucularda kullanılır),
+  satır genişliği teorik olarak 80 karakter ile, fakat pratikte sıklıkla 74
+  karakter ile sınırlandırılmıştır.
+</p>
+</li>
+<li>
+<p>
+Orjinal mesajda olmayan soru işaretlerini eklemeyin
+</p>
+</li>
+<li>
+<p>
+Eğer mesaj etiketleri (düğme üzerindeki yazılar) referans veriyorsa, "OK",
+  "Yes", "NO", "Continue", "Cancel" gibi, bu etiketlerin diyaloglarda dilinize
+  nasıl çevirildiğini kontrol edin ve aynı kelimeleri kullanın.
+</p>
+</li>
+<li>
+<p>
+Konuşma dili üslubundan ve teknik dilden kaçının
+</p>
+</li>
+<li>
+<p>
+Bir "dialog" içinde bir satırı "kesmek" (ya da sonlandırmak) için \n
+  karakteri eklemelisiniz: [Enter] a basmak kullanıcı tarafından görülen
+  "satır başı" karakterini <em>eklemez</em>.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Ek olarak, bunun çalışması için gettext&#8217;in gerekliliklerine uyun</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Eğer orjinal mesaja dolar işareti ile başlayab bir mesaj eklenmişse bu
+  çeviride tamamen aynı yazımla bulunmalıdır (büyük küçük harf önemlidir).
+</p>
+</li>
+<li>
+<p>
+Çevirilen metin başta ya da sonda, tam olarak orjinal metinde olduğu gibi,
+  "yeni satır" karakteri içermeli (ya da "\n" ile gösterilen satır
+  sonu). Diğer taraftan orjinal metinde bu karakter yoksa çevirilen metinde de
+  olmamalı.
+</p>
+</li>
+<li>
+<p>
+Tek bir ters slaş karakterine "\" çevirilerde izin verilmez.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Çevirinizin gettext&#8217;in gerekliliklerine uyumunu denetlemek için şu komutu
+çalıştırabilirsiniz:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  msgfmt -c &lt;name of the PO file&gt;</code></pre>
+</div></div>
+<div class="sect2">
+<h3 id="warning_man_pages">Kılavuz sayfalarının çevirisi ile ilgili uyarılar</h3>
+<div class="paragraph"><p>İngilizce işaretlede bulunan kılavuz sayfalarının sözdizimini dikkatlice
+koruyun. Örneğin şunları değiştirmeyin:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<em>B&lt;</em> with <em>B &lt;</em> (boşluk eklemeyin)
+</p>
+</li>
+<li>
+<p>
+<em>B&lt;</em> with <em>b&lt;</em> (B&#8217;yi büyük harf olarak tutun - ve onu yunan alfabesindeki
+  aynı şekilde gözüken BETA ile değiştirmeyin)
+</p>
+</li>
+<li>
+<p>
+"I" with <em>|</em> (büyük harf I ile boru sembolünü değiştirmeyin)
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Kabuk komutlarını çevirirken, İngilizce yol isimlerini gerekliyse
+değiştirmeyin. Fakat argümanları <em>paketismi</em> gibi bir değerle
+değiştirebilirsiniz ve değiştirmelisiniz</p></div>
+</div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Son güncelleme 2016-04-23 16:20:24 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

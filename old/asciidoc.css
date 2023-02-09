@@ -1,0 +1,182 @@
+body {
+  font-family: Georgia,serif;
+}
+
+h1, h2, h3,
+div.title, caption.title,
+thead, p.table.header,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+/* set font sizes for headers - Didier Spaier */
+h1 {font-size: 1.7em}
+h2 {font-size: 1.3em}
+h3 {font-size: 1.1em}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+/* Removed h3 - Didier Spaier */
+h1, h2 {
+  border-bottom: 2px solid silver;
+}
+/* Removed - Didier Spaier */
+/*
+h2 {
+  padding-top: 0.5em;
+}
+*/
+/* Added h2 - Didier Spaier */
+h2, h3 {
+  float: left;
+}
+/* Added h2 - Didier Spaier */
+h3 + *, h2 + * {
+  clear: left;
+}
+/* underline only the title, not the whole line as for h2 - Didier Spaier */
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+  margin-left: 1em; /* ZAdded - Didier Spaier */
+}
+
+#footer-text {
+  padding-bottom: 0.5em;
+  float: left;
+}
+
+div.listingblock, div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.content { padding-left: 0; }
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+tt {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+}
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+
+

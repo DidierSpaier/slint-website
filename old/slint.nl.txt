@@ -1,0 +1,134 @@
+
+= Slint homepage
+
+Nu kun je http://slackware.com[Slackware] installeren en gebruiken in je
+eigen taal!
+
+Op het moment van schrijven zijn de volgende talen beschikbaar:
+
+[format="psv", grid="none", frame="none"]
+|========
+|'Nederlands'           |'Pools'                  |'Zweeds'
+|'Engels (USA)'   |'Portugees (Braziliaans)'     |'Turks'
+|'Frans'          |'Portugees (Portugal)'   |'Oekraiens'
+|'Duits'          |'Russisch'                 |
+|'Grieks'           |'Spaans (Latiijns Amerika)' |
+|========
+
+Dankzij talloze link:translators[welwillende vertalers] maakt Slint deze
+droom werkelijkheid.
+
+Het Slint-project maakt geen deel uit van en wordt niet erkend door
+Slackware[blue]^<<note-1,[1]>>^ maar heeft het wel nodig dus moedigen we
+alle Slint-gebruikers aan om Slackware
+https://store.slackware.com/cgi-bin/store[financieel te steunen]
+
+.Het Slint-project biedt:
+* Anderstalige 'Slint installers', beschikbaar voor Slackware 13.37, 14.0 en
+  14.1
+* 'Slint-pakketten' die de Slackware beheer-tools vervangen voor hun
+  anderstalige-versies en vertaalbestanden en wat documentatie installeren.
+
+Alle 'Slint-installers' installeren een 'Slint-pakket' voor dezelfde
+Slackware-versie welke ook in een orginele Slackware kan worden
+geïnstalleerd en geüpgrade wanneer nodig.
+
+== Installeer Slackware in je eigen taal of internationaliseer het achteraf
+
+.Installeer Slackware in jouw taal met een 'Slint-installer'
+Er zijn twee formaten ISO-images beschikbaar voor het maken van
+opstart-installers:
+
+* De http://sourceforge.net/projects/slint/files/[DVD + USB volledige ISO
+  images] met alles nodig voor een volledige Slackware-installatie.
+* De https://slint.fr/installers[CD + USB mini ISO images] welke moeten worden
+  aangevuld met media met de Slackware-pakketten, bijvoorbeeld een Slackware
+  DVD.
+
+Op pagina link:installer.html[Slint installer] staan instructies omtrent het
+downloaden van het image, hoe het op een DVD of USB stick gezet kan worden
+en hoe het te gebruiken.
+
+Een Braille terminal kan eveneens worden gebruikt voor het installeren en
+daarna besturen van het systeem. GebruiksInstructies staan in
+https://slint.fr/docs/README_BRLTTY.
+
+.Internationaliseer je orginele Slackware of upgrade vertaal-tools door het (her)installeren van een 'Slint-pakket'
+Slint-pakketten staan in directory https://slint.fr/packages[packages/]. Zie
+pagina link:package.html[Slint-pakket] hoe je een Slint-pakket voor jouw
+Slackware-versie installeert en wat je krijgt voor je geld :-)
+
+(Her)installeer een 'Slint-pakket' wanneer je:
+
+* een reeds geïnstalleerde Slackware 13.37, 14.0 of 14.1 wilt
+  internationaliseren (en je hebt geen Slint Installer gebruikt)
+* nieuw vertaalde tools, fixes en nieuwe talen wilt installeren.
+
+== Gebruik je anderstalige Slackware
+[horizontal]
+NOTE: Een locale is de definitie van de subset van de gebruikersomgeving die
+afhangt van taal en culturele conventies.
+[[anchor-1]]
+.Stel je gewenste locale in
+De Slint installer configureert in een systeem de standaard locale
+instellingen op basis van de taal die tijdens de installatie werd
+gekozen. Als je Slint installeert om een orgineel Slackware systeem te
+internationaliseren zul je deze instellingen zelf moeten aanpassen.
+
+Om berichten in de taal van je keuze te zien configureer je de LANG
+parameter overeenkomstig in het bestand
+/etc/profile.d/lang.sh[blue]^<<note-2,[2]>>^ Om bijvoorbeeld meldingen in
+Braziliaans Portugees te zien moet je de standaardwaarde `en_US` vervangen:
+
+----
+export LANG=pt_BR.utf8 # locale naam eindigt op .utf8 overeenkomend met de UTF-8 codering van de vertaalde teksten. 
+----
+Om ook vertaalde man pages die UTF-8 gecodeerd zijn correct weer te geven
+moet je een van de volgende commando's in je ~/.bashrc opnemen:
+
+----
+export GROFF_ENCODING=utf8 # Als alle man pages in het Engels of UTF-8 gecodeerd zijn.
+alias uman="GROFF_ENCODING=utf8 man" # Als je ook anders gecodeerde man pages leest. 
+----
+Bij gebruik van de laatste zul je "uman" in plaats van "man" in een terminal
+moeten gebruiken om UTF-8 gecodeerde man pages weer te geven.
+
+.Beheer Slackware in je eigen taal
+Zowel 'Slint installers' als 'Slint pakketten' vervangen de Slackware tools
+door anderstalige versies en voegen vertaalde man pages toe.
+
+Alle momenteel beschikbare anderstalige tools staan op pagina
+link:package#what_is_translated[Slint pakket]. Ze stellen je in staat om:
+[options="compact"]
+* Software pakketten te beheren
+* Gebruikers toe te voegen
+* Je systeem te (her)configureren: bepalen welke system daemons starten
+  tijdens het booten, nieuwe gebruikers toevoegen, je boot loader opnieuw
+  instellen, je standaard window manager of desktop kiezen, je netwerk
+  instellen of een Linux USB-stick maken om op te starten.
+
+== Draag bij, zoek hulp, blijf op de hoogte
+
+Als je iets bij wilt dragen aan het Slint Project als vertaler of
+anderszins, kijk dan op link:contribute[Draag Bij]
+
+Als je hulp nodig hebt kun je terecht op Linux Questions'
+http://www.linuxquestions.org/questions/slackware-14/[Slackware forum] (in
+het Engels).
+
+Voor algemene vragen of suggesties zoals het toevoegen van nieuwe vertaalde
+tools aan 'Slint pakket' moet je je registreren op onze
+https://lists.sourceforge.net/lists/listinfo/slint-translators[mailing-lijst].
+
+Om op de hoogte te blijven van veranderingen en nieuwe vertalingen lees je
+de link:changelog[ChangeLog].
+
+'''
+
+[[note-1]]^1. Slackware (R) is een
+http://slackware.com/trademark/trademark.php[registered trademark] van
+Patrick Volkerding en Slackware Linux, Inc.^
+
+[[note-2]]^2. Door een bug in alleen Slackware 13.37, moet je na 'su' elke
+keer opnieuw LANG instellen voor elk commando. Bijvoorbeeld:
+'LANG=fr_FR.utf8 pkgtool'^

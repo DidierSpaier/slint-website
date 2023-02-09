@@ -1,0 +1,232 @@
+= Contribue al projecto Slint
+
+Esque tu vole adjutar e contribuer al projecto Slint? Benvenite a bordo!
+
+The work needed to provide Slint's products mainly consists in translating
+and reviewing shell scripts, that make up Slackware's installers and
+administration tools, and documentation intended for Slackware users taking
+the form of text files or manual pages.
+
+Idealmente, nos desirarea que traductores:
+[options="compact"]
+* sia capace communicar in Anglese e multe fluente in le linguage objectivo,
+  preferibilemente lor linguage native
+* comprende le vocabulario technic associate al installation e administration
+  de un systema Linux
+* sia usatores de Slackware
+* sia capace de leger e comprender simple scripts de shell
+
+Ma anque si tu non incontra omne de iste expectationes, non hesita esser
+voluntari: il ha multe cargas que pote beneficiar de tu habilitates.
+
+== Face voluntari e defini tu contributiones
+
+To volunteer as a translator, preferably use the Transifex platform: first
+https://www.transifex.com/signup/[register on Transifex] (it's free), then
+go to Transifex' https://www.transifex.com/projects/p/slint/[Slint project
+page] and click on HELP TRANSLATE "SLINT"
+[options="compact"]
+* Si tu linguage es listate, pulsa sur illo, post in le pagina de celle
+  linguage pulsa "unite al equipa".
+* Alteremente, pulsa "Require un linguage (in le lista blau clar justo super
+  le lista de linguages 
+
+But if you'd like to ask questions before, or propose your help for other
+tasks than translation, send an email to Slint's maintainer: didier (at)
+slint (dot) fr.
+
+Postea tu consultara con tu coordinator de equipa o le mantenitor de Slint
+pro defini le "perque", "cosa", "como" e "quando" de tu contributiones a
+Slint.
+
+== Cognosce nostre methodos & instrumentos de es preste pro communicar intra le equipa de Slint ==
+
+Pro favor lege <<recommendations,Practical recommendations for translators>>
+a basso.
+
+Postea, deveni informate con le ligamine link:tools.html[Tools] que nos
+usa. Pro usar los meliormente tu necessitara haber installate un
+distribution de Linux, preferibilemente un compete systema Slackware,
+includente le sequente pacchettos:
+
+* ../extra/aspell-words-lists/<pacchettos per tu linguage> per controlos
+  orthographic
+* ../kdei/<package kde-l10n pro tu linguage> pro localisar UI de Lokalize si
+  tu lo usa
+
+In le ultime loco, ma non minus importante, nos necessita travaliar insimul
+como equipa, assi:
+
+* Per favor registra te sur Transifex, anque si tu non usa su editor de rango,
+  postea verifica omne
+  https://www.transifex.com/settings/notices/[notification settings], perque
+  illo te face plus facile mantener omne contribuitores informate
+  immediatemente re alique de interesse general. Per favor, indica tu nomine
+  complete, anque si tu usa un pseudonymo.
+* Nos solidemente suggere que tu subscribe a
+  https://lists.sourceforge.net/lists/listinfo/slint-translators[slint-translators
+  mailing-list]. Isto permittera demandar e responder questiones, participar
+  in discussiones, facer suggestiones e  propositiones.
+* Sia preste per fornir un adresse de e-posta per permitter tu coordinator de
+  equipa e le mantenitor de Slint per attinger te.
+* Tu anque pote usar le characteristica de Discussion disponibile in Transifex
+  in le pagina de tu linguage del projecto Slint.
+* You can also follow
+  http://www.linuxquestions.org/questions/slackware-14/slint-the-slackware-internationalization-project-4175455701/[this
+  thread] in Slackware forum of LinuxQuestions.org. For that, register to LQ
+  and either post a message in the thread, or display it then click Thread
+  Tools => Subscribe to this Thread (in the dark blue stripe just above the
+  first message displayed).
+
+== Scopo del traduction
+
+=== Linguages objecto
+
+At time of writing the Slint installers and main Slackware administration
+tools are fully translated in Langues listed in our
+https://slint.fr/slint.html[home page]. Other translations are in progress,
+their current status can be checked on
+https://www.transifex.com/projects/p/slint/resource/slint/[this page].
+
+Paginas de manual es traducite in plure linguages, traductiones complete es
+listate in le file https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT]
+
+=== Contento traducite
+
+Contento traducite prende le forma de files includente messages Anglese
+original al latere de lor traductiones, appellate files PO, producite e
+processate per GNU 'gettext'. Cata date insimul de messages (in Anglese in
+caso de Slint) que debe esser traducite es registrate in un si-nominate file
+POT, ex le qual es generate un correspondente file PO pro cata linguage
+objectivo, vide see
+http://docs.slackware.com/howtos:misc:internationalisation_e_localisation_de_scripts
+de_shell[Internationalization and localization of shell scripts] sur
+http://docs.slackware.com/start[SlackDocs] pro cognoscer plus.
+
+On Transifex you will find two sets of files to translate, that Transifex
+calls "projects", that share their language teams:
+
+* The https://www.transifex.com/projects/p/slint/['slint'] space host POT
+  files gathering messages from one or several shell scripts or manual pages,
+  that allow localization of the installers and administration tools. Please
+  take care of these files priority.
+* The https://www.transifex.com/projects/p/slintwebsite/['slintwebsite']
+  spaces hosts one POT file for each of our web pages plus one for the
+  template used to uniformize the look and layout of all pages.
+
+Here is the current list of the POT files in the 'slint' space and their
+scopes (see page link:tools.html[Tools] to know how to use associated
+tools).
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|POT File name|Resource name (Transifex)|Scope|Associated tool
+|slackware.pot|https://www.transifex.com/projects/p/slint/resource/slint/[slint]|Slint installer
+Slint package (without man pages)|toolbox.sh
+|pkgtools.pot|https://www.transifex.com/projects/p/slint/resource/pkgtools/[pkgtools]|man pages contained in package 'pkgtools'|gen_man_pages
+|slackpkg.pot|https://www.transifex.com/projects/p/slint/resource/slackpkg/[slackpkg]|man pages contained in package 'slackpkg'|gen_man_pages
+|========
+
+In the 'slintwebsite' pages, the first part of each page name (before .pot)
+refers to the corresponding web page.
+
+[[new_web_pages]]
+=== Traduction de paginas web
+The web pages: link:slint.html[slint.html],
+link:installer.html[installer.html] and link:package.html[package.html] are
+intended to end users who do not speak English, so please translate them
+priority as well as
+https://www.transifex.com/projects/p/slint/resource/templatepo/[template.pot]
+after the files in the https://www.transifex.com/projects/p/slint/['slint']
+space.
+
+The other web pages: link:contribute.html[Contribute],
+link:translators.html[Translators], link:tools.html[Tools] and
+link:changelog.html[ChangeLog] 'may' also be translated, that's up to each
+translation team.
+
+NOTE: Per un date linguage, quando on traduce template.po il es melior lassar in
+anglese  nomine de paginas web non (ancora) traducite, assi que visitatores
+comprendera que pulsar sur ligamines correspondente in le menu monstrara
+iste paginas in anglese.
+
+For your information, the web pages are generated from text files using the
+'asciidoc' software, and the PO and POT files converted back and forth using
+the 'po4a' software.
+
+[[recommendations]]
+== Recommendationes practic pro traductores
+
+* Depending on the amount of work needed and available resources, there can be
+  one translator or a team of translators per target language. In all cases, I
+  recommend that at least one person be responsible for organizing the team's
+  work, checking the translations and transmitting the checked PO file to the
+  maintainer(s). Let's call this person the team coordinator.
+* Non sentir te obligate a traducer parola pro parola. Non solmente iste
+  rarmente es le modo melior de transmitter le significato, ma in addition
+  isto sovente duce a phrases troppo longe per adaptar se in le spatio
+  permittite.
+* Usa un editor specific de PO, 'non' un editor general de texto. Isto non
+  solmente preveni de modificar inadvertentemente  catenas 'msgid' ma anque
+  facilita lor travalio e automatisa controlos additional, como le presentia
+  de un variabile in le traduction con le mesme orthographia del original.
+* Quando on traduce, selige un font serif fde largessa fixate (o "monospaced")
+  , como. Celle permitte distinger visualmente characteres que alteremente
+  semblarea le mesme, e controla le longitude del linea quando illo es
+  importante.
+Si possibile, verifica le disposition del. Tu pote facer illo per observar
+le contexto in le file fonte relevante. anque melior, simplemente executa le
+script traducite. Isto es specialmente importante si tu es traducente
+quadratos de dialogo. In particular, assecura te non scriber sententias
+troppo longe sur un singule linea si illo appare que le texto non pote fluer
+sur le proxime 
+* Tene in mente que in modo VGA (usate in installatores de texto, in
+  particular), le largor es limitate theoricamente a 80 characteres, ma
+  practicamente sovente a 74.
+* Non adde puncto de interrogation que non es presente in le message original.
+* Si le message refere a etiquettas o tags (texto sur le buttones) de quadros
+  de dialogo, com "OK", "SI", "NO", "Continua", "Annulla", verifica como iste
+  tags es traducite in tu linguage in le interfacie de dialogo e usa le mesme
+  parolas.
+* Evita colloquialismos e argot technic
+* Per "taliar" (o terminar) un rango intra un quadrato de  "dialogo" tu typara
+  \n: pressante [Enter] 'non' insertara un character dev"nove rango o newline"
+  in le texto vidite per le usator.
+
+In addition, tu debera conformar te al requirimentos de gettext proque il
+pote functionar:
+
+* Si un parola initiante con un signo de dollar es includite in le texto
+  original il deberea esser presente in le traduction con exactemente le mesme
+  orthographia (le differentia inter majusculas e minusculas es importante).
+* Le texto de traduction deberea includer un character de "nove rango o
+  newline"  (o line feed, representate per "\n") al initio o al fin,
+  exactemente como le texto original face. Reciprocamente, si le texto
+  original non ha le character, alora le traduction non deberea haber lo.
+* Un singule character de barra oblique inverse  "\" non es permittite in le
+  traduction.
+
+Pro verificar tu traduction con le requirimentos de gettext tu poterea
+executar le sequente commando:
+
+----
+  msgfmt -c <nomine del file PO>
+----
+
+[[warning_man_pages]]
+=== Attention re traduction de paginas de man
+
+Preserva accuratemente le syntaxe  del paginas de man trovate in le
+marcation Anglese. Per exemplo non reimplacia:
+
+* 'B<' con 'B <' (non inserta un spatio)
+* 'B<' con 'b<' (mantene le B como majuscula - e non reimplacia lo per le
+  littera majuscula Grec BETA que sembla le mesme sur le schermo)
+* "I" con '|' (non reimplacia le majuscula I con le symbolo de tubo pipe)
+
+TIP: Using a monospace serif font helps in that matter, whatever be the tool you
+use: Transifex' UI or a specialzed PO editor.
+
+Quando on traduce commandos de shell , preserva nomines Anglese de percursos
+quando il necessita. Ma tu pote e deberea traducer argumentos de esser
+reimplaciate per un valor como 'packagename'

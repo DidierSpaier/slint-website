@@ -1,0 +1,84 @@
+= Översättare och andra Slint bidragsgivare
+
+Denna sida listar alla Slint översättare och granskare registrerade på
+Transifex plattformen.
+
+Stort tack till alla!
+
+Didier Spaier
+
+[cols="50,50", format="csv", width="80%", options="header"]
+|========
+Översättare,Språk
+dlee99 (Dik Leenheer), holländska
+Eric Hameleers,holländska
+Kaj Huisman,holländska
+ponce,italienska
+celyr,italienska
+giogio,italienska
+giuseppep (Giuseppe Pignataro),italienska
+ihaveadrin,italienska
+kooru,italienska
+Sébastien Boillod,franska
+Didier Spaier,franska
+Nicolas Kovacs,franska
+Marcin Herda,polska
+Piotr Maksymiec,polska
+elesmod,polska
+lukkon,polska
+Christian Ruesch,tyska
+franzen,tyska
+Johannes Georgi,tyska
+Maik Wagner,tyska
+Marcel Saegebarth,tyska
+spongetron,tyska
+Sammyboy (Marek Srejma),tyska
+titopoquito,tyska
+Adriano Balani,brasiliansk portugisiska
+Enrico Nicoletto,brasiliansk portugisiska
+Fela,brasiliansk portugisiska
+Gabriel Magno,brasiliansk portugisiska
+Icavalheiro,brasiliansk portugisiska
+Retalhador,brasiliansk portugisiska
+br_Orion,brasiliansk portugisiska
+igaldino,brasiliansk portugisiska
+Malkon Rodrigo,brasiliansk portugisiska
+marcelo.castro,brasiliansk portugisiska
+Xerxes Lins,brasiliansk portugisiska
+hugok (Hugo Carvalho), portugisiska (Portugal)
+Dimitris Tzemos,grekiska
+dreamwalking,grekiska
+George Vlahavas,grekiska
+Efstathios Iosifidis,grekiska
+Constantine Mousafiris,grekiska
+Diantre,spanska (Latinamerika)
+AlvaroG,spanska (Latinamerika)
+ecoslacker,spanska (Latinamerika)
+sombragris,spanska (Latinamerika)
+Serg Bormant,ryska
+Sergey Ignatev,ryska
+Yaroslav Shmelev,ryska
+Graf,ryska
+adioe3,bosniska (Bosnien och Hercegovina)
+Malsasa,indonesiska
+willysr,indonesiska
+tuapembual,indonesiska
+kisil,ukrainska
+uatech,ukrainska
+xuser13,ukrainska
+Koljan1970 (Микола Ткач),ukrainska
+AaLeSsHhKka (Oleh Tsyupka),ukrainska
+StreamThreader,ukrainska
+Ekin Akoğlu,turkiska
+kaanureyen07,turkiska
+Kemal Ökmen,turkiska
+Orhan Orhan,turkiska
+Onur Özdemir,turkiska
+Samet Yilmaz,turkiska
+Vilender,turkiska
+zm1990s (Zhang Min),kinesiska (Kina)
+guanx,kinesiska (Kina)
+Smokey,rumänska
+tuxbg (Krustio),bulgariska
+giogio,interlingua
+|========

@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Installator de Slint</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Domo o Initio</a></div>
+      <div><a href="installer.html">Installator de Slint</a></div>
+      <div><a href="package.html">Pacchetto de Slint </a></div>
+      <div><a href="translators.html">Traductores</a></div>
+      <div><a href="contribute.html">Contribution</a></div>
+      <div><a href="tools.html">Instrumentos</a></div>
+      <div><a href="changelog.html">ChangeLog - Lista de modificationes</a></div>
+      <div id="page-source"><a href="../installer.ia.txt">Fonte de pagina</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Le Projecto de internationalisation de Slackware</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/installer.html">de</a> | <a href="../en/installer.html">en</a> | <a href="../es/installer.html">es</a> | <a href="../fr/installer.html">fr</a> | <a href="../ia/installer.html">ia</a> | <a href="../id/installer.html">id</a> | <a href="../it/installer.html">it</a> | <a href="../nl/installer.html">nl</a> | <a href="../pl/installer.html">pl</a> | <a href="../pt_BR/installer.html">pt_BR</a> | <a href="../pt_PT/installer.html">pt_PT</a> | <a href="../ru/installer.html">ru</a> | <a href="../sv/installer.html">sv</a> | <a href="../tr/installer.html">tr</a> | <a href="../uk/installer.html">uk</a> |</div>
+        <h1>Installator de Slint</h1>
+      </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Installator de Slint permitte te usar tu linguage preferite durante le
+installation, e adder instrumentos de administration e paginas de manual
+traducite a Slackware.</p></div>
+<div class="paragraph"><p>Un <em>terminal Braille</em> anque pote esser usate pro installar e postea pilotar
+le systema. Instructiones pro usar es disponibile in
+<a href="https://slint.fr/docs/README_BRLTTY">https://slint.fr/docs/README_BRLTTY</a>.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_discarga_e_verifica_le_imagine_iso_del_installator">Discarga e verifica le imagine ISO del installator</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Imagines ISO de duo grandor es disponibile:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Le <a href="http://sourceforge.net/projects/slint/files/">DVD + USB plen imagines ISO</a>
+  contine omne cosas tu necessita pro installar.
+</p>
+</li>
+<li>
+<p>
+Le <a href="https://slint.fr/installers">CD + parve imagines ISO de USB</a> necessita
+  esser completate per un medio continente le pacchettos de Slackware, pro
+  exemplo un DVD de Slackware.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Pro discargar un imagine ISO complete, in prime loco pulsa sur su numero de
+version, per exemplo 14.1</p></div>
+<div class="paragraph"><p>Tu pote verificar le integritate del imagine ISO per su summa de verifica
+md5.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Pro le parve imagines ISO, discarga e usa su associate file md5 (cuje nomine
+  termina in .md5).
+</p>
+</li>
+<li>
+<p>
+Pro le imagine ISO complete, tu pote monstrar le summa de controlo check-sum
+  per pulsar sur le littera i in un circulo nigre al dextera del ligamine al
+  imagine ISO.
+  Pro exemplo per facer un installator polyglotte de un Slackware64-14.1
+internationalisate, discarga le imagine ISO (e le file  md5, in caso de un
+parve installator) postea in le mesme directorio typa pro exemplo un del
+sequente commandos
+</p>
+</li>
+</ul></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>md5sum -c slint64-14.1.iso.md5 # responsa deberea esser: OK
+md5sum slint64-14.1-full.iso # le exito deberea esser le mesme como monstrate in le website</code></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_grava_le_imagine_iso_sur_un_dvd_un_cd_o_un_clave_usb">Grava le imagine ISO sur un DVD, un CD o un clave USB</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_crea_un_clave_usb_bootabile">Crea un clave USB bootabile</h3>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">
+<div class="ulist"><ul>
+<li>
+<p>
+Omne previe contentos del clave USB essera PERDITE
+</p>
+</li>
+<li>
+<p>
+Relege con attention tu commando pro esser secur que tu non habeva scribite
+  le nomine de un partition de disco fixate in loco de lo del clave USB perque
+  le contento de iste partition essera PERDITE IRREPARABILEMENTE
+</p>
+</li>
+</ul></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>In <em>Linux</em> inserta  le clave USB, postea controla su nomine con le sequente
+commandos:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cat /proc/partitions
+dmesg | tail</code></pre>
+</div></div>
+<div class="paragraph"><p>Si su nomine es /dev/sdc pro exemplo, typa:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>dd if=&lt;filename.iso&gt; of=/dev/sdc bs=1M</code></pre>
+</div></div>
+<div class="paragraph"><p>In <em>Windows</em> usa application <a href="http://rufus.akeo.ie/">Rufus</a> que es gratuite e
+open source, i.e. de software aperite.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_crea_un_cd_installator_parve_o_un_dvd_installator_grande_que_pote_facer_le_boot">Crea un CD (installator parve) o un DVD (installator grande) que pote facer le boot</h3>
+<div class="paragraph"><p>In <em>Linux</em> typa un commando como le prime a basso pro un CD, o le secunde
+pro un DVD.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cat slint64-14.1.iso | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso</code></pre>
+</div></div>
+<div class="paragraph"><p>In <em>Windows 2000/XP/Vista/7</em> usa application
+<a href="http://infrarecorder.org/">InfraRecorder</a> que es gratuite e de software
+aperite.</p></div>
+<div class="paragraph"><p>In <em>Windows 7/8</em> usa
+<a href="http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file">Windows
+Disk Image Burner</a>, fornite con Windows 7 e 8</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usa_tu_installator_polyglotte">Usa tu installator polyglotte</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Solmente inserta le medio de installation (CD,DVD o clave USB) e face de
+novemente le boot de tu machina.</p></div>
+<div class="paragraph"><p>Sur le schermo de benvenite, tu seligera tu linguage preferite pro le
+installation per typar le correspondente codice de duo digitos.</p></div>
+<div class="paragraph"><p>Ultra esser polyglotte, le installatores de Slint offere le sequente
+characteristicas in addition a illos del genuin installatores de Slackware:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Font predefinite e mappa de claviero es adaptate al linguage usate per le
+  installation.
+</p>
+</li>
+<li>
+<p>
+Quandocunque possibile, un font de typo True Type es usate durante le
+  installation, pro adaptar automaticamente le grandor del font al resolution
+  del schermo (solmente per versiones de Slackware 14.0 e 14.1).
+</p>
+</li>
+<li>
+<p>
+Il es fornite un option pro crear contos de usator regular al fin del
+  installation (ante refacer le boot).
+</p>
+</li>
+<li>
+<p>
+Optiones es fornite pro fixar como predefinite in le systema installate le
+  linguage e le mappa de claviero usate durante le installation, e facer
+  preferentias de claviero correspondente sub X si le servitor de X es
+  installate.
+</p>
+</li>
+<li>
+<p>
+Un pacchetto de Slint es installate, illo forni traductiones del principal
+  instrumentos de Slackware e de lor paginas de manual, listate in
+  <a href="package.html">Slint package</a>, assi como documentos ponite  in
+  /usr/doc/slint-&lt;version&gt;-&lt;date&gt;, includente un Slint-HOWTO.txt e un script
+  reinstall-slackware-packages.sh.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Si tu usa le parve version del installator, durante le installation tu anque
+necessitara  <em>medio de fonte</em>, in altere parolas un medio continente
+pacchettos de Slackware. Pacchettos pote esser installate ex un DVD/CD de
+Slackware, un clave USB de Slackware, un directorio pre-montate, un
+partition de disco fixate, un quota de Samba,NFS (Network File System), un
+servitor FTP/HTTP. Quando on selige le FONTE in le menu, le installator dice
+te que facer secundo le typo de medio seligite.</p></div>
+<div class="paragraph"><p>Pro obtener un medio de fonte, seque iste ligamine:
+<a href="http://www.slackware.com/getslack/">Get Slack</a></p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">Si tu necessita tu pote reimplaciar le medio de installation per un altere
+continente le pacchettos, perque al momento de installar le pacchettos, le
+installator ja habera essite cargate in memoria.</td>
+</tr></table>
+</div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Ultime actualisation 2016-04-23 16:20:27 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

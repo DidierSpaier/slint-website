@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>Slint-Paket</title>
+<link rel="stylesheet" href="../asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="../slint.css" type="text/css" />
+</head>
+<body>
+  <div id="layout-menu-box">
+    <div id="layout-menu">
+      <div><a href="slint.html">Startseite</a></div>
+      <div><a href="installer.html">Slint-Installer</a></div>
+      <div><a href="package.html">Slint-Paket</a></div>
+      <div><a href="translators.html">Übersetzer</a></div>
+      <div><a href="contribute.html">Beitragen</a></div>
+      <div><a href="tools.html">Werkzeuge</a></div>
+      <div><a href="changelog.html">ChangeLog</a></div>
+      <div id="page-source"><a href="../package.de.txt">Seitenquelltext</a></div>
+    </div>
+  </div>
+  <div id="layout-content-box">
+    <div id="layout-banner">
+      <div id="layout-title">This a previous, archived Slint website.<br />Das Slackware-Internationalisierungs-Projekt</div>
+    </div>
+    <div id="layout-content">
+      <div id="header">
+        <div>| <a href="../de/package.html">de</a> | <a href="../en/package.html">en</a> | <a href="../es/package.html">es</a> | <a href="../fr/package.html">fr</a> | <a href="../ia/package.html">ia</a> | <a href="../id/package.html">id</a> | <a href="../it/package.html">it</a> | <a href="../nl/package.html">nl</a> | <a href="../pl/package.html">pl</a> | <a href="../pt_BR/package.html">pt_BR</a> | <a href="../pt_PT/package.html">pt_PT</a> | <a href="../ru/package.html">ru</a> | <a href="../sv/package.html">sv</a> | <a href="../tr/package.html">tr</a> | <a href="../uk/package.html">uk</a> |</div>
+        <h1>Slint-Paket</h1>
+      </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Das Slint-Paket enthält sowohl mehrsprachige Administrationswerkzeuge und
+Handbuchseiten als auch Übersetzungsdateien, bereitgestellt vom
+Slint-Projekt.</p></div>
+<div class="paragraph"><p>Diese Seite erklärt, wie man es bekommt und installiert und beschreibt
+sodann seinen Inhalt, damit Sie wissen, was in welche Sprachen übersetzt
+wurde.</p></div>
+<div class="paragraph"><p>Der Umfang des Slint Pakets wird nach und nach expandieren, somit wird
+einfaches Aktualisieren es ermöglichen, aktuelle und neu übersetzte
+Werkzeuge und Übersetzungen in mehr Sprachen zu bekommen, sobald diese
+verfügbar werden.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_herunterladen_und_installation_oder_upgrade_eines_slint_pakets">Herunterladen und Installation oder Upgrade eines Slint-Pakets</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Wenn Sie gerade den Slint-Installer benutzt haben, muss das Slint-Paket
+nicht mehr installiert werden: Das wurde bereits vom Installer erledigt.</p></div>
+<div class="paragraph"><p>Für jede unterstützte Slackware-Ausgabe (Slackware 13.37, Slackware 14.0 und
+Slackware 14.1) wird im Verzeichnis <a href="https://slint.fr/packages">packages/</a> ein
+Slint-Paket angeboten. Auf 32- und 64-Bit-Versionen kann das gleiche Paket
+installiert werden. Um das <em>Slint-Paket</em> herunterzuladen, zu überprüfen und
+zu installieren (im Beispiel Slackware 14.1), führe folgende Befehle aus:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/ # lädt das neuste Slint-Paket und die zugehörige md5-Datei
+md5sum -c slint-14.1*md5 # sollte "OK" ausgeben, andernfalls ist der Download korrumpiert
+su # Root-Privilegien erhalten
+upgradepkg --install-new --reinstall slint-14.1*txz # dieser Befehl installiert oder aktualisiert das Paket</code></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">Um <em>slackpkg</em> davon abzuhalten, das <em>Slint-Paket</em> zu entfernen, fügen Sie zu
+/etc/slackpkg/blacklist eine Zeile hinzu, die nur dieses Wort enthält:<br />
+slint</td>
+</tr></table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="what_is_translated">Was ist in welche Sprachen übersetzt?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Ein Slint-Paket enthält mehrsprachige Werkzeuge und Übersetzungsdateien.</p></div>
+<div class="paragraph"><p>Zum Zeitpunkt dieses Schreibens sind folgende Sprachen enthalten:
+Französisch, Deutsch, Polnisch, Portugiesisch (Brasilien), Russisch,
+Spanisch (Lateinamerika) and Ukrainisch.</p></div>
+<div class="paragraph"><p>Einige Handbuchseiten wurden auch in andere Sprachen übersetzt, siehe
+<a href="https://slint.fr/packages/MAN_PAGES.TXT">MAN_PAGES.TXT</a>.</p></div>
+<div class="paragraph"><p>Die untenstehende Tabelle führt mehrsprachige Administrationswerkzeuge und
+ihren Zweck auf.</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Mehrsprachiges Werkzeug</th>
+<th align="left" valign="top">Zweck</th>
+<th align="left" valign="top">übersetzte Handbuchseite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><div class="verse">adduser</div></td>
+<td align="left" valign="top"><div class="verse">Einen Benutzer zum System hinzufügen</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">explodepkg</div></td>
+<td align="left" valign="top"><div class="verse">Den Inhalt eines Slackware-Pakets ins aktuelle Verzeichnis entpacken</div></td>
+<td align="left" valign="top"><div class="verse">man explodepkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">installpkg</div></td>
+<td align="left" valign="top"><div class="verse">Slackware-Pakete installieren</div></td>
+<td align="left" valign="top"><div class="verse">man installpkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">makebootdisk</div></td>
+<td align="left" valign="top"><div class="verse">Eine bootbare Linux-Diskette erstellen
+(nur in Slackware 13.37 und 14.0)</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">makepkg</div></td>
+<td align="left" valign="top"><div class="verse">Slackware-Pakete erstellen</div></td>
+<td align="left" valign="top"><div class="verse">man makepkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">pkgtool</div></td>
+<td align="left" valign="top"><div class="verse">Verwalten von Softwarepaketen und Durchführung von Konfigurationsaufgaben:
+&#8658; Setzen von Diensten, die beim Start gestartet werden sollen
+&#8658; Erstellen eines USB-Bootsticks
+&#8658; Setzen der Mausart</div></td>
+<td align="left" valign="top"><div class="verse">man pkgtool</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">removepkg</div></td>
+<td align="left" valign="top"><div class="verse">Entfernen von Slackwarepaketen</div></td>
+<td align="left" valign="top"><div class="verse">man removepkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">upgradepkg</div></td>
+<td align="left" valign="top"><div class="verse">Upgrade von Slackware Paketen</div></td>
+<td align="left" valign="top"><div class="verse">man upgradepkg</div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">eliloconfig</div></td>
+<td align="left" valign="top"><div class="verse">Konfiguration des <em>elilo</em> Bootloaders
+(nur in Slackware 14.1)</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">liloconfig</div></td>
+<td align="left" valign="top"><div class="verse">Konfiguration des <em>lilo</em> Bootloaders</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">netconfig</div></td>
+<td align="left" valign="top"><div class="verse">Konfiguration des Netzwerks</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">timeconfig</div></td>
+<td align="left" valign="top"><div class="verse">Setzt die Zeitzone</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">setconsolefont</div></td>
+<td align="left" valign="top"><div class="verse">Setzt eine Bildschirm-Schriftart</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">setup.mouse</div></td>
+<td align="left" valign="top"><div class="verse">Setzt die Mausart</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">xorgsetup</div></td>
+<td align="left" valign="top"><div class="verse">Konfiguration des X-Servers</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">xwmconfig</div></td>
+<td align="left" valign="top"><div class="verse">Setzt den standard Windowmanager oder Desktop</div></td>
+<td align="left" valign="top"><div class="verse"></div></td>
+</tr>
+<tr>
+<td align="left" valign="top"><div class="verse">slackpkg</div></td>
+<td align="left" valign="top"><div class="verse">Automatisierte Werkzeuge zur Verwaltung von Slackwarepaketen
+(nur Handbuchseiten werden übersetzt)</div></td>
+<td align="left" valign="top"><div class="verse">man slackpkg
+man slackpkg.conf</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/note.png" alt="Note" />
+</td>
+<td class="content">Um polyglot Werkzeuge und Handbuchseiten in Ihrer Sprache zu sehen, sollten
+Sie, wie auf der Slint Homepage angegeben <a href="slint.html#anchor-1">set up
+your prefered locale</a></td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Zusätzlich installiert Slint auch Dokumente im Verzeichnis
+/usr/docs/slint-&lt;version&gt;-&lt;datum&gt;, einschließlich eines Slint-HOWTO.txt und
+dem Skript reinstall-slackware-packages.sh.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="../images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">Um zu sehen, was ein Slint-Paket installiert hat, geben Sie in einem
+Terminal diesen Befehl ein:</td>
+</tr></table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre><code>less /var/log/packages/slint*</code></pre>
+</div></div>
+<div class="paragraph"><p>Benutzen Sie die Pfeiltasten "Hoch" und "Runter", um in der Liste zu
+navigieren und drüchen Sie <em>q</em> zum Beenden.</p></div>
+</div>
+</div>
+    </div>
+    <div id="footer">
+      <div id="footer-text">
+        Letzte Aktualisierung am 2016-04-23 um 16:20:32 CEST
+      </div>
+    </div>
+  </div>
+</body>
+</html>

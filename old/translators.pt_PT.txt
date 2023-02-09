@@ -1,0 +1,84 @@
+= Tradutores e outros colaboradores Slint
+
+Esta página mostra uma listagem de todos os tradutores e revisores Slint
+registados na plataforma Transifex.
+
+Um grande obrigado a todos!
+
+Didier Spaier
+
+[cols="50,50", format="csv", width="80%", options="header"]
+|========
+Tradutor,Idioma
+dlee99 (Dik Leenheer),Holandês
+Eric Hameleers,Holandês
+Kaj Huisman,Holandês
+ponce,Italiano
+celyr,Italiano
+giogio, Italiano
+giuseppep (Giuseppe Pignataro),Italiano
+ihaveadrin,Italiano
+kooru,Italiano
+Sébastien Boillod,Francês
+Didier Spaier,Francês
+Nicolas Kovacs, Francês
+Marcin Herda,Polaco
+Piotr Maksymiec,Polaco
+elesmod,Polaco
+lukkon,Polaco
+Christian Ruesch,Alemão
+franzen,Alemão
+Johannes Georgi,Alemão
+Maik Wagner,Alemão
+Marcel Saegebarth,Alemão
+spongetron,Alemão
+Sammyboy (Marek Srejma),Alemão
+titopoquito,Alemão
+Adriano Balani,Português (Brasil)
+Enrico Nicoletto,Português (Brasil)
+Fela,Português (Brasil)
+Gabriel Magno,Português (Brasil)
+Icavalheiro,Português (Brasil)
+Retalhador,Português (Brasil)
+br_Orion,Português (Brasil)
+igaldino,Português (Brasil)
+Malkon Rodrigo,Português (Brasil)
+marcelo.castro,Português (Brasil)
+Xerxes Lins,Português (Brasil)
+hugok (Hugo Carvalho), Português (Portugal)
+Dimitris Tzemos,Grego
+dreamwalking,Grego
+George Vlahavas,Grego
+Efstathios Iosifidis,Grego
+Constantine Mousafiris,Grego
+Diantre,Espanhol (América Latina)
+AlvaroG,Espanhol (América Latina)
+ecoslacker,Espanhol (América Latina)
+sombragris,Espanhol (América Latina)
+Serg Bormant,Russo
+Sergey Ignatev,Russo
+Yaroslav Shmelev,Russo
+Graf,Russo
+adioe3,Bósnio (Bósnia e Herzegovina)
+Malsasa,Indonésio
+willysr,Indonésio
+tuapembual,Indonésio
+kisil,Ucraniano
+uatech,Ucraniano
+xuser13,Ucraniano
+Koljan1970 (Микола Ткач),Ucraniano
+AaLeSsHhKka (Oleh Tsyupka),Ucraniano
+StreamThreader,Ucraniano
+Ekin Akoğlu,Turco
+kaanureyen07, Turco
+Kemal Ökmen,Turco
+Orhan Orhan, Turco
+Onur Özdemir,Turco
+Samet Yilmaz,Turco
+Vilender,Turco
+zm1990s (Zhang Min),Chinês (China)
+guanx,Chinês (China)
+Smokey,Romeno
+tuxbg (Krustio),Búlgaro
+giogio, Interlíngua
+|========

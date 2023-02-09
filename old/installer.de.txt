@@ -1,0 +1,130 @@
+
+= Slint-Installationsprogramm
+
+Das Slint-Installationsprogramm erlaubt Ihnen, während der Installation Ihre
+bevorzugte Sprache zu benutzen und übersetzte Administrationswerkzeuge und
+Handbuchseiten zu Slackware hinzuzufügen.
+
+Zum installieren und steuern des Systems kann auch ein 'Braille terminal'
+verwendet werden. Eine Bedienungsanleitung ist unter
+https://slint.fr/docs/README_BRLTTY verfügbar.
+
+== Herunterladen und Überprüfen des ISO-Abbilds des Installers
+ISO-Abbilder sind in zwei Größen verfügbar:
+
+* Die großen http://sourceforge.net/projects/slint/files/[DVD- +
+  USB-ISO-Abbilder] beinhalten alles Notwendige für die Installation von
+  Slackware.
+* Die kleinen https://slint.fr/installers[CD- + USB-ISO-Abbilder] müssen durch
+  ein Medium ergänzt werden, das die Slackwarepakete enthält, wie z.B. die
+  Slackware-DVD.
+
+Um ein großes ISO-Abbild herunterzuladen, klicken Sie zuerst auf die
+Versionsnummer von Slackware, z.B. 14.1.
+
+Sie können die Integrität des ISO-Abbilds über dessen md5-Prüfsumme prüfen.
+
+* Für die kleinen ISO-Abbilder nutzen Sie nach dem Herunterladen die
+  entsprechende md5-Datei (deren Name mit .md5 endet).
+* Für das große ISO-Abbild können Sie sich die Prüfsumme durch einen Klick auf
+  das i im schwarzen Kreis anzeigen lassen, das rechts vom Link zum ISO-Abbild
+  zu sehen ist.
+  Um z.B. einen mehrsprachigen Installer für ein internationalisiertes
+Slackware64-14.1 zu erstellen, laden Sie das ISO-Abbild herunter (und für
+das kleine Abbild auch die md5-Datei) und geben in der Kommandozeile (aus
+demselben Verzeichnis, in dem das Abbild liegt) folgenden Befehl ein:
+----
+md5sum -c slint64-14.1.iso.md5 # Antwort sollte sein: OK
+md5sum slint64-14.1-full.iso # das Ergebnis sollte das gleiche sein, das auf der Website angezeigt wird
+----
+== ISO-Abbild auf CD bzw. DVD brennen oder einen bootbaren USB-Stick erstellen
+
+=== Einen bootbaren USB-Stick erstellen
+
+[WARNING]
+====
+* Alle vorherigen Inhalte auf dem USB-Stick werden VERLOREN gehen.
+* Lesen Sie mit Bedacht den eingegebenen Befehl ein, um sich zu vergewissen,
+  dass Sie nicht den Namen einer Festplattenpartition anstelle des USB-Sticks
+  angegeben haben, da der Inhalt dieser Partition UNWIDERRUFLICH VERLOREN
+  geht.
+====
+
+In 'Linux' stecken Sie den USB-Stick ein und prüfen Sie den Namen mit den
+folgenden Befehlen:
+
+----
+cat /proc/partitions
+dmesg | tail
+----
+
+Wenn der Name beispielsweise /dev/sdc ist, geben Sie folgendes ein:
+
+----
+dd if=<filename.iso> of=/dev/sdc bs=1M
+----
+
+In 'Windows' verwenden Sie die Anwendung http://rufus.akeo.ie/[Rufus] die
+frei und Open Source ist.
+
+=== Erstellen einer bootbaren CD (kleines Abbild) oder DVD (grosses Abbild)
+
+Unter 'Linux' rufen Sie in der Kommandozeile den ersten der beiden folgenden
+Befehle zum Erstellen einer CD auf, oder den zweiten zum Erstellen einer
+DVD.
+
+----
+cat slint64-14.1.iso | cdrecord -v dev=/dev/cdrw speed=10 fs=8m -tao -eject -data -
+growisofs -speed=2 -dvd-compat -Z /dev/sr0=slint64-14.1-full.iso
+----
+
+
+Unter 'Windows 2000/XP/Vista/7' nutzen Sie eine Anwendung wie
+http://infrarecorder.org/[InfraRecorder], die frei und quelloffen ist.
+
+
+Unter 'Windows 7/8' nutzen Sie den
+http://windows.microsoft.com/en-US/windows7/Burn-a-CD-or-DVD-from-an-ISO-file[Windows
+Disk Image Burner], der mit Windows 7 und 8 mitgeliefert wird.
+
+== Verwendung Ihres mehrsprachigen Installers
+
+Legen Sie das Installationsmedium ein (CD, DVD oder USB-Stick) und starten
+Sie Ihren Rechner neu.
+
+Auf dem Begrüßungsbildschirm wählen Sie Ihre bevorzugte Sprache, indem Sie
+die beiden entsprechenden Ziffern eingeben.
+
+Ausser der Mehrsprachigkeit, bietet der Slint-Installer folgende Funktionen,
+zusätzlich zu denen des eigentlichen Slackware-Installers:
+
+* Schriftart und Tastenbelegung werden an die gewählte Sprache angepasst.
+* Sofern es möglich ist, wird eine TrueType-Schriftart bei der Installation
+  benutzt, um die Schriftgröße automatisch an die Bildschirmauflösung
+  anzupassen (gilt nur für die Versionen 14.0 und 14.1 von Slackware).
+* Option zum Erstellen normaler Benutzerkonten am Ende der Installation (vor
+  dem Neustart).
+* Optionen, um während der Installation die Sprache und Tastenbelegung als
+  Standard im installierten System zu setzen und entsprechende Einstellungen
+  für die Tastatur unter X vorzunehmen, wenn der X-Server installiert wird.
+* Ein Slint-Paket wird installiert, das die Übersetzungen der Hauptprogramme
+  von Slackware und Handbuchseiten enthält (siehe
+  link:package.html[Slint-Paket]), sowie Dokumente im Verzeichnis
+  /usr/docs/slint-<version>-<datum>, einschließlich eines Slint-HOWTO.txt und
+  dem Skript reinstall-slackware-packages.sh.
+
+Wenn Sie die kleine Version des Installers nutzen, benötigen Sie während der
+Installation auch ein 'Quellmedium', also ein Medium mit den
+Slackwarepaketen. Pakete können von der Slackware-DVD, den Slackware-CDs,
+einem Slackware-USB-Stick, einem eingebundenen Verzeichnis, einem
+Samba-Server, NFS (Network File System) oder einem FTP/HTTP-Server
+installiert werden. Wenn Sie im Menü SOURCE wählen, sagt Ihnen der
+Installer, entsprechend des Typs des gewählten Mediums, was zu tun ist.
+
+Um ein Quellmedium zu bekommen, folgen Sie diesem Link:
+http://www.slackware.com/getslack/[Get Slack]
+
+TIP: Falls nötig, können Sie das Installationsmedium vor der Paketinstallation
+gegen ein anderes tauschen, welches die Pakete enthält, da der Installer
+bereits vor dem Installieren der Pakete in den Arbeitsspeicher geladen
+wurde.

@@ -1,0 +1,94 @@
+
+= Pakiet Slint
+
+Pakiet Slint zawiera narzędzia administracyjne polyglot, strony man, jak
+również pliki tłumaczenia zawarte w projekcie Slint.
+
+Strona ta wyjaśnia jak go pobrać i zainstalować. Następnie opisuje jego
+zawartość oraz co zastało prztłumaczone w danym języku.
+
+Zakres pakietu Slint stopniowo będzie się zwiększał, tak więc aktualizując
+go otrzymasz nowe narzędzia translatorskie oraz tłumaczenia w nowych
+językach gdy tylko staną się one dostępne.
+
+== Pobierz i zainstaluj lub aktualizuj pakiet Slint
+
+Jeśli wlaśnie użyleś instalatora Slint, nie ma potrzeby dodatkowego
+instalowania pakietu Slint. Został on zainstalowany przez instalator.
+
+Pakiet Slint jest dostępny dla każdej wspieranej edycji systemu Slackware
+(Slackware 13.37, Slackware 14.0 i Slackware 14.1) w katalogu
+https://slint.fr/packages[packages/]. Ten sam pakiet może być zainstalowany
+na systemach 32 oraz 64 bitowych. Aby pobrać, sprawdzić i zainstalować (lub
+zaktualizować) pakiet Slint (w poniższym przykładzie dla systemu Slackware
+14.1) wykonaj następujące kroki:
+
+----
+wget -r -l1 -np -nd -A slint-14.1*  https://slint.fr/packages/  # pobierzesz najnowszą wersję pakietu Slint wraz z towarzyszącym plikiem md5
+md5sum -c slint-14.1*md5 # jeśli odpowiedź nie jest "OK", pakiet może być uszkodzony
+su # uzyskaj prawa użytkownika root
+upgradepkg --install-new --reinstall slint-14.1*txz # polecenie to instaluje bądź też aktualizuje pakiet
+----
+
+TIP: By zapobiedz usunięciu pakietu Slint przez 'slackpkg', dodaj następujący
+ciąg do /etc/slackpkg/blacklist: + slint
+
+[[what_is_translated]]
+== Co zostało przetłumaczone w danym języku?
+
+Pakiet Slint zawiera narzędzia polyglot oraz pliki tłumaczeniowe.
+
+W momencie pisania tego, załączone są następujące języki: francuski,
+niemiecki, polski, portugalski (Brazylia), rosyjski, hiszpański (Ameryka
+Południowa) oraz ukraiński.
+
+Niektóre pliki man zostały także przetłumaczone na inne języki. Zobacz
+https://slint.fr/packages/MAN_PAGES.TXT[MAN_PAGES.TXT].
+
+Poniższa tablica wyszczególnia narzędzia administracyjne polyglot oraz ich
+zastosowanie.
+
+[format="psv", options="header,autowidth", style="verse"]
+|========
+|Narzędzie Polyglot|Zastosowanie|Przetłumaczona strona man
+|adduser|Dodaj konto użytkownika do systemu|
+|explodepkg|Rozpakuj zawartość pakietu systemu Slackware w bieżącym katalogu|man explodepkg
+|installpkg|Instaluj pakiety systemu Slackware|man installpkg
+|makebootdisk|Utwórz bootowalną dyskietkę systemu Linux
+(wyłącznie w systemach Slackware 13.37 i 14.0)
+|makepkg|Utwórz pakiety systemu Slackware|man makepkg
+|pkgtool|Zarządzaj pakietami i wykonuj zadania konfiguracyjne:
+=> ustaw usługi działające przy starcie systemu
+=> utwórz dysk bootowalny USB
+=> określ rodzaj myszy|man pkgtool
+|removepkg|Usuń pakiety systemu Slackware|man removepkg
+|upgradepkg|Aktualizuj pakiety systemu Slackware|man upgradepkg
+|eliloconfig|Konfiguruj program rozruchowy 'elilo'
+(wyłącznie w systemie Slackware 14.1)|
+|liloconfig|Konfiguruj program rozruchowy 'lilo'|
+|netconfig|Konfiguruj sieć|
+|timeconfig|Ustaw strefę czasową|
+|setconsolefont|ustaw czcionkę|
+|setup.mouse|Ustaw rodzaj myszy|
+|xorgsetup|Konfiguruj serwer X|
+|xwmconfig|Ustaw domyślny menedżer okien lub desktop|
+|slackpkg|Zautomatyzowane narzędzia do zarządzania pakietami systemu Slackware
+(przetłumaczono wyłącznie strony man)|man slackpkg
+man slackpkg.conf
+|========
+ 
+NOTE: Aby komunikaty narzędzia polyglot oraz strony man były wyświetlane w twoim
+języku, powinienieś, zgodnie z zaleceniami strony projektu Slint,
+link:slint.html#anchor-1[ustawić swoje lokale]
+
+Dodatkowo pakiet Slint instaluje dokumenty do folderu
+/usr/docs/slint-<version>-<date>, włączając Slint-HOWTO.txt oraz skrypt
+reinstall-lackware-packages.sh.
+
+TIP: aby wyświetlić, która wersja pakietu Slint jest zainstalowana, wpisz
+komendę:
+----
+less /var/log/packages/slint*
+----
+Użyj klawiszy strzałek w górę/dół by poruszać się po liście, naciśnij 'q' w
+celu wyjścia.

@@ -1,4 +1,31 @@
 #!/bin/sh
+# We assume that the repository https://github.com/DidierSpaier/slint-translations has been cloned
+# alongside https://github.com/DidierSpaier/slint-website
+# Run this script from  the root of the clone of: https://github.com/DidierSpaier/slint-website
+
+# The whole website accessed from https://slint.fr can be rebuilt locally after an update.
+# We make a local rsync on the apache server: $WIP/html => /var/www/htdocs
+# All pages are in folders by language, not in the web site directory.
+# The header of each page will include the list of languages in which it is available
+# This is true for:
+# homepage => home.html
+# support => support.html
+# If a page is not translated in a given language, it will be displayed in English
+# (through a hard link if that works).
+# The list of languages will not be included in the header of the non tahbslated pages only,
+# i.e. translate and ChangeLog.
+# All pages include a header with links to:
+# Home Documentation Download Support Translate
+# TODO: write a Packages and/or Software page.
+
+# PO files use the ll_TT scheme, but unless there be several locales per language,
+# We store the web pages in directories named $ll the per language directories we create, to store
+# in them the English # verson of files not available in this language.
+# We first need to build the header.html files. they include a line of links, then a line of
+# languages in other languages in which each page is available
+# To select the languages to include we need to know in which languages # each page has been
+# translated. but as the 'support' pages are built extracting parts of the handbook we need only
+# to check HandBook and homepage.
 CWD="$(pwd)"
 github=$(cd "$CWD" && cd .. && pwd)
 ALL_LANGUAGES="de el en es fr it ja nl pl pt pt_BR ru sv uk"
@@ -6,43 +33,32 @@ WIP="$CWD/wip"
 rm -rf "$WIP"
 rm -rf "$CWD"/HandBook  "$CWD"/homepage
 mkdir -p "$WIP/html"
-#mkdir -p "$WIP/html" "$WIP/css" "$WIP/doc" "$WIP/$ALL_LANGUAGES"
-# We assume that the repository https://github.com/DidierSpaier/slint-translations has been cloned
-# alongside https://github.com/DidierSpaier/slint-website
+
 SLINTDOCS="$github/slint-translations"
 PAGES="home HandBook oldHandBook support"
 # We rebuild the whole website locally from scratch upon each update.
-# But we will make a local rsync on the server html => server root
-# We assume that this directory includes in ./adoc
-# all .adoc files in the same hierarchy as in the website
-# the stylesheet is stored in ./css
+# But we will make a local rsync on the ap&che server: $WIP/html => /var/www/htdocs
 # All pages are in folders by language, not in the web site directory
-# as in the website up to slint-14.1.
-# LANGUAGES="de el en es fa_IR fr ia id it nl pl pt_BR pt_PT ru sv tr uk"
 # The header of each page will include the list of languages in which it is available
 # This is true for:
 # homepage => home.html
 # support => support.html
 # If a page is not translated in a given language, it will be displayed in English
 # (through a hard link if that works).
-# The list of languages will not be included in the header of the pages only
-# in Englsh, i.e. translate and ChangeLog.
+# The list of languages will not be included in the header of the non tahbslated pages only,
+# i.e. translate and ChangeLog.
 # All pages include a header with links to:
-# Home Documentation Download Support Translate ChangeLog
-# I am unsure if I should include all unformation in the Home page or make a separate About
-# as Crux https://crux.nu/Main/About
-# Maybe also rename Support as Community and later write a Packages or Software page.
+# Home Documentation Download Support Translate
+# TODO: write a Packages and/or Software page.
 
 # PO files use the ll_TT scheme, but unless there be several locales per language,
-# We store the web pages in directories named $ll
-# list the per language directories we create, to store in them the English
-# verson of files not available in this language.
-# We first need to build the header.html files. they include a line of links,
-# then a line of languages in other languages in which each page is available
-# To select the languages to include we need to know in which languages
-# each page has been translated. but as the support pages are built extracting
-# parts of the handbook we need only to check HandBook and homepage.
-# Use pocount to check the %translated, see also msgattrib.
+# We store the web pages in directories named $ll the per language directories we create, to store
+# in them the English # verson of files not available in this language.
+# We first need to build the header.html files. they include a line of links, then a line of
+# languages in other languages in which each page is available
+# To select the languages to include we need to know in which languages # each page has been
+# translated. but as the 'support' pages are built extracting parts of the handbook we need only
+# to check HandBook and homepage.
 feed_support_and_documentation() {
 	# support is extracted from HandBook
 	cp -a "$SLINTDOCS"/HandBook/ "$CWD"/
@@ -142,7 +158,6 @@ feed_HandBook14_2_1() {
 complete_missing_with_english() {
 	for i in $ALL_LANGUAGES; do
 		for j in $PAGES; do
-		[ ! -f "$WIP/html/$i/${j}.html" ] && echo "cp $WIP/html/en/${j}.html $WIP/html/$i/${j}.html"
 		[ ! -f "$WIP/html/$i/${j}.html" ] && cp "$WIP"/html/en/"${j}".html "$WIP"/html/"$i"/"${j}".html
 		done
 	done
@@ -158,6 +173,9 @@ asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$
 sed -i 's@<p><a@<a@;s@</a></p>@</a>@;/"toc"/s@.*@<p></p>\n&@;/"toc"/s@.*@<p></p>\n&@' "$WIP"/html/doc/translate_slint.html
 asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$CWD"/css/slint.css -D "$WIP" "$CWD"/doc/internationalization_and_localization_of_shell_scripts.adoc -o "$WIP"/html/doc/internationalization_and_localization_of_shell_scripts.html
 cp "$CWD"/doc/shell_and_bash_scripts.html "$WIP"/html/doc/ || exit 1
-cp -r "$CWD"/old "$WIP"/html/
+(
+cd "$CWD" || exit 1
+cp -r forSlackware old pub "$WIP"/html/ || exit 1
+)
 sudo rsync --verbose -avP --exclude-from="$CWD"/exclude -H --delete-after "$CWD"/wip/html/ /var/www/htdocs/ 
 rm -rf "$CWD"/homepage "$CWD"/HandBook "$WIP"

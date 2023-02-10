@@ -12,7 +12,7 @@
 # support => support.html
 # If a page is not translated in a given language, it will be displayed in English
 # (through a hard link if that works).
-# The list of languages will not be included in the header of the non tahbslated pages only,
+# The list of languages will not be included in the header of the non translated pages only,
 # i.e. translate and ChangeLog.
 # All pages include a header with links to:
 # Home Documentation Download Support Translate
@@ -36,29 +36,7 @@ mkdir -p "$WIP/html"
 
 SLINTDOCS="$github/slint-translations"
 PAGES="home HandBook oldHandBook support"
-# We rebuild the whole website locally from scratch upon each update.
-# But we will make a local rsync on the ap&che server: $WIP/html => /var/www/htdocs
-# All pages are in folders by language, not in the web site directory
-# The header of each page will include the list of languages in which it is available
-# This is true for:
-# homepage => home.html
-# support => support.html
-# If a page is not translated in a given language, it will be displayed in English
-# (through a hard link if that works).
-# The list of languages will not be included in the header of the non tahbslated pages only,
-# i.e. translate and ChangeLog.
-# All pages include a header with links to:
-# Home Documentation Download Support Translate
-# TODO: write a Packages and/or Software page.
 
-# PO files use the ll_TT scheme, but unless there be several locales per language,
-# We store the web pages in directories named $ll the per language directories we create, to store
-# in them the English # verson of files not available in this language.
-# We first need to build the header.html files. they include a line of links, then a line of
-# languages in other languages in which each page is available
-# To select the languages to include we need to know in which languages # each page has been
-# translated. but as the 'support' pages are built extracting parts of the handbook we need only
-# to check HandBook and homepage.
 feed_support_and_documentation() {
 	# support is extracted from HandBook
 	cp -a "$SLINTDOCS"/HandBook/ "$CWD"/

@@ -151,9 +151,9 @@ asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$
 sed -i 's@<p><a@<a@;s@</a></p>@</a>@;/"toc"/s@.*@<p></p>\n&@;/"toc"/s@.*@<p></p>\n&@' "$WIP"/html/doc/translate_slint.html
 asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$CWD"/css/slint.css -D "$WIP" "$CWD"/doc/internationalization_and_localization_of_shell_scripts.adoc -o "$WIP"/html/doc/internationalization_and_localization_of_shell_scripts.html
 cp "$CWD"/doc/shell_and_bash_scripts.html "$WIP"/html/doc/ || exit 1
-(
-cd "$CWD" || exit 1
-cp -r forSlackware old pub "$WIP"/html/ || exit 1
-)
-sudo rsync --verbose -avP --exclude-from="$CWD"/exclude -H --delete-after "$CWD"/wip/html/ /var/www/htdocs/ 
-rm -rf "$CWD"/homepage "$CWD"/HandBook "$WIP"
+#(
+#cd "$CWD" || exit 1
+#cp -r forSlackware old pub "$WIP"/html/ || exit 1
+#)
+#sudo rsync --verbose -avP --exclude-from="$CWD"/exclude -H --delete-after "$CWD"/wip/html/ /var/www/htdocs/ 
+# rm -rf "$CWD"/homepage "$CWD"/HandBook "$WIP"

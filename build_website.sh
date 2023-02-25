@@ -108,6 +108,7 @@ feed_homepage() {
 	done
 }
 feed_HandBook14_2_1() {
+	cp -a "$SLINTDOCS"/sources/HandBook14.2.1 "$CWD"/ || exit 1
 	cd "$CWD"/HandBook14.2.1 || exit 1
 	langs=$(echo "de el en es fr it ja jp nl pl pt pt_BR pt_PT ru sv uk"|sed "s/ /\n/g")
 	header_oldhandbook="$(echo "$langs"|while read -r i; do echo "* link:../$i/oldHandBook.html[${i#./}] "; done)"
@@ -156,4 +157,4 @@ cp "$CWD"/doc/shell_and_bash_scripts.html "$WIP"/html/doc/ || exit 1
 #cp -r forSlackware old pub "$WIP"/html/ || exit 1
 #)
 #sudo rsync --verbose -avP --exclude-from="$CWD"/exclude -H --delete-after "$CWD"/wip/html/ /var/www/htdocs/ 
-# rm -rf "$CWD"/homepage "$CWD"/HandBook "$WIP"
+rm -rf "$CWD"/homepage "$CWD"/HandBook "$CWD"/HandBook14.2.1 "$WIP"

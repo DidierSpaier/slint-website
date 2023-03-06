@@ -2,10 +2,8 @@
 :stylesheet: ./css/slint.css
 :toc: macro
 :toclevels: 2
-:toc-title: Content
 :pdf-themesdir: themes
 :pdf-theme: default
-:sectnums:
 [.liens]
 --
 [.mainmen]

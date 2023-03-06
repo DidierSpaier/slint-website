@@ -10,7 +10,7 @@
 * https://slackware.uk/slint/x86_64/slint-15.0/iso/[Download 15.0]
 * link:../en/support.html[Support]
 * link:../doc/translate_slint.html[Translate]
-* link:../old/en/slint.html[Old Versions]
+* link:../en/wiki.html[WiKi]
 --
 
 toc::[]
@@ -88,6 +88,9 @@ To display your translation of the HandBook in a web browser you can do this, as
 
 Here is the list of files to translate and their content at time of writing:
 
+[[a001]]a001::
+Messages from the first article of the link:../en/wiki.html[WiKi]. In Crowdin the POT file is wiki/a001/a001.pot. Following articles will be named a002, a003 and so on. 
+ 
 [[auto]]auto::
 Messages from the *functions* script of the Slint installer, which superseded the *auto* script used in previous version of the installer. We kept the old name of the POT file to allow a smooth transition
 
@@ -131,7 +134,7 @@ Ukrainian.
 * When working on a machine translated file, the translator acts as a proofreader and as such should *review every translated string*.
 * Pay special attention to commands: if options or arguments of a command have been translated, this command  will most often fail when executed. If you find a machine translated, please replace the translation by the source in English.
 * If a command expect answers like "y", "n", "yes" or "no", these answers should *not* be translated, else the scripts which expect this answer will fail.
-* When using the Crowdin text editor for a fle in asciidoc format like HandBook and homepage, set HTML tags displaying to "SHOW" and when you find a markup like <<text1,text2>>, translate the text after te comma only (text2 in this example).
+* When using the Crowdin text editor for a file in asciidoc format like HandBook and homepage, set HTML tags displaying to "SHOW" and when you find a markup like <<text1,text2>>, translate the text after te comma only (text2 in this example).
 ====
 
 The recommendations about the translation of shell scripts below also apply to commands written in the HandBook and the home page

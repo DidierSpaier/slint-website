@@ -31,11 +31,11 @@ github=$(cd "$CWD" && cd .. && pwd)
 ALL_LANGUAGES="de el en es fr it ja nl pl pt pt_BR ru sv uk"
 WIP="$CWD/wip"
 rm -rf "$WIP"
-rm -rf "$CWD"/HandBook  "$CWD"/homepage
+rm -rf "$CWD"/HandBook  "$CWD"/homepage "$CWD"/wiki
 mkdir -p "$WIP/html"
 
 SLINTDOCS="$github/slint-translations"
-PAGES="home HandBook oldHandBook support"
+PAGES="home HandBook oldHandBook support wiki"
 
 feed_support_and_documentation() {
 	# support is extracted from HandBook
@@ -85,7 +85,7 @@ feed_homepage() {
 	cp -a "$SLINTDOCS"/homepage/ "$CWD"/ || exit
 	cd "$CWD"/homepage || exit 1
 	msgen ./homepage.pot -o en_US.homepage.po
-	langs="$(find . -name  "*po"|cut -d_ -f1)"
+	langs="$(find . -name  "*po"|sed "s@..@@"|cut -d_ -f1)"
 	header_homepage="$(echo "$langs"|sort|while read -r i; do echo "* link:../$i/home.html[${i#./}] "; done)"
 	for homepagepo in *.homepage.po; do
 		ll_TT=${homepagepo%.*.*}
@@ -100,17 +100,61 @@ feed_homepage() {
 		echo
 		} >> "$WIP"/"$ll_TT".header.adoc
 		pwd
-		po4a-translate -M UTF-8 -m "$SLINTDOCS"/sources//homepage/homepage.adoc -f asciidoc -p "$homepagepo" -l "$WIP"/"${ll_TT}".homepage.part.adoc
+		po4a-translate -M UTF-8 -m "$SLINTDOCS"/sources/homepage/homepage.adoc -f asciidoc -p "$homepagepo" -l "$WIP"/"${ll_TT}".homepage.part.adoc
 		cat "$WIP"/"$ll_TT".header.adoc "$WIP"/"${ll_TT}".homepage.part.adoc > "$WIP"/"${ll_TT}".homepage.adoc
 		asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$SLINTDOCS"/css/slint.css -D "$WIP" -a doctype=book "$WIP"/"${ll_TT}".homepage.adoc -o "$WIP"/html/"$ll"/home.html
 		sed -i 's@<p><a@<a@;s@</a></p>@</a>@;/langmen/s@.*@<p></p>\n&@;/"toc"/s@.*@<p></p>\n&@' "$WIP"/html/"$ll"/home.html
 		sleep 1
 	done
 }
+feed_wiki() {
+	# Article of the wiki are translated one by one, not the wiki as whole.
+	# We will mention the wiki as translated in a given language as soon as one of the articles has been translated.
+	cp -a "$SLINTDOCS"/wiki/ "$CWD"/ || exit
+	cd "$CWD"/wiki || exit 1
+	locales="$(find . -name  "*po"|sed "s@.*/@@"|cut -d"." -f1|sort|uniq)"
+locales="$locales
+en_US"
+	langs="$(find . -name  "*po"|sed "s@.*/@@"|cut -d_ -f1|sort|uniq)"
+langs="$langs
+en"
+	# langs lists the two characters languages code in which at least one article has been translated.
+	header_wiki="$(echo "$langs"|sort|while read -r i; do echo "* link:../$i/wiki.html[${i#./}] "; done)"
+#echo "$header_wiki"
+#echo "$langs"|sort|while read -r i; do echo "* link:../$i/wiki.html[${i#./}] "; done
+	for ll_TT in $locales; do
+		cp ../headers_nonum/"$ll_TT".header.adoc "$WIP"/"$ll_TT".wiki.adoc
+		{
+		echo "$header_wiki"
+		echo
+		echo "--"
+		echo
+		echo 'toc::[]'
+		echo
+		echo [.debut]
+		} >> "$WIP"/"$ll_TT".wiki.adoc
+		for article in $(ls); do
+			articlepo="$SLINTDOCS"/wiki/"$article"/"${ll_TT}"."${article}".po
+			if [ ! -f "$articlepo" ]; then
+			# use the source asciidoc file for $article if not translated into $locale 
+				cp "$SLINTDOCS/sources/wiki/$article/${article}.adoc" "$WIP"/"${ll_TT}"."${article}".adoc
+			else
+			# convert the PO file to asciidoc
+			po4a-translate -M UTF-8 -m "$SLINTDOCS"/sources/wiki/$article/$article.adoc -f asciidoc -p "$articlepo" -l "$WIP"/"${ll_TT}"."$article".adoc
+			fi
+			# add the placeholder for $WIP"/"${ll_TT}".article.adoc in "WIP"/"$ll_TT".wiki.adoc
+			echo "include::$WIP/${ll_TT}.${article}.adoc[ ]" >>"$WIP"/"$ll_TT".wiki.adoc
+			echo >> "$WIP"/"$ll_TT".wiki.adoc
+		done
+		ll="${ll_TT%_*}"
+		asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$SLINTDOCS"/css/slint.css -D "$WIP" -a doctype=book "$WIP"/"${ll_TT}".wiki.adoc -o "$WIP"/html/"$ll"/wiki.html
+		sed -i 's@<p><a@<a@;s@</a></p>@</a>@;/langmen/s@.*@<p></p>\n&@;/"toc"/s@.*@<p></p>\n&@' "$WIP"/html/"$ll"/wiki.html
+	done
+}
 feed_HandBook14_2_1() {
 	cp -a "$SLINTDOCS"/sources/HandBook14.2.1 "$CWD"/ || exit 1
 	cd "$CWD"/HandBook14.2.1 || exit 1
-	langs=$(echo "de el en es fr it ja jp nl pl pt pt_BR pt_PT ru sv uk"|sed "s/ /\n/g")
+	langs=$(echo "de el en es fr it ja nl pl pt pt_BR ru sv uk"|sed "s/ /\n/g")
 	header_oldhandbook="$(echo "$langs"|while read -r i; do echo "* link:../$i/oldHandBook.html[${i#./}] "; done)"
 	for handbookadoc in *.HandBook.adoc; do
 		ll_TT=${handbookadoc%.*.*}
@@ -143,6 +187,7 @@ complete_missing_with_english() {
 }
 
 cp "$CWD"/htaccess/.htaccess "$WIP"/html
+feed_wiki
 feed_homepage
 feed_support_and_documentation
 feed_HandBook14_2_1
@@ -156,5 +201,5 @@ cp "$CWD"/doc/shell_and_bash_scripts.html "$WIP"/html/doc/ || exit 1
 #cd "$CWD" || exit 1
 #cp -r forSlackware old pub "$WIP"/html/ || exit 1
 #)
-#sudo rsync --verbose -avP --exclude-from="$CWD"/exclude -H --delete-after "$CWD"/wip/html/ /var/www/htdocs/ 
-rm -rf "$CWD"/homepage "$CWD"/HandBook "$CWD"/HandBook14.2.1 "$WIP"
+sudo rsync --verbose -avP --exclude-from="$CWD"/exclude -H --delete-after "$CWD"/wip/html/ /var/www/htdocs/ 
+#rm -rf "$CWD"/homepage "$CWD"/wiki "$CWD"/HandBook "$CWD"/HandBook14.2.1

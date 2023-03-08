@@ -13,6 +13,6 @@
 * https://slackware.uk/slint/x86_64/slint-15.0/iso/[Transferir 15.0]
 * link:../pt/support.html[Suporte]
 * link:../doc/translate_slint.html[Traduzir]
-* link:../pt_PT/wiki.html[WiKi]
+* link:../pt/wiki.html[WiKi]
 
 [.langmen]

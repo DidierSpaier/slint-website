@@ -31,7 +31,9 @@ github=$(cd "$CWD" && cd .. && pwd)
 ALL_LANGUAGES="de el en es fr it ja nl pl pt pt_BR ru sv uk"
 WIP="$CWD/wip"
 rm -rf "$WIP"
-rm -rf "$CWD"/HandBook  "$CWD"/homepage "$CWD"/wiki
+rm -rf "$CWD"/HandBook "$CWD"/HandBook14.2.1 "$CWD"/homepage "$CWD"/wiki
+echo "Press Enter to continue or Ctrl+C to bail out."
+read -r
 mkdir -p "$WIP/html"
 
 SLINTDOCS="$github/slint-translations"

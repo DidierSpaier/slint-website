@@ -1,6 +1,7 @@
 // all pages are in folders by language, not in the web site directory
 :stylesheet: ./css/slint.css
 :toc: macro
+:toc-title: WiKi
 :toclevels: 2
 :pdf-themesdir: themes
 :pdf-theme: default

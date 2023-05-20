@@ -1,19 +1,15 @@
 :stylesheet: ../css/slint.css
-:toc: macro
-:toclevels: 2
 [.liens]
 --
 [.mainmen]
 * link:../en/home.html[Home]
 * link:../en/HandBook.html[Documentation 15.0]
-* link:../en/oldHandBook.html[Documentation 14.2.1]
-* https://slackware.uk/slint/x86_64/slint-15.0/iso/[Download 15.0]
+* link:../doc/News.html[News]
+* https://slackware.uk/slint/x86_64/slint-15.0/iso/[Download]
 * link:../en/support.html[Support]
 * link:../doc/translate_slint.html[Translate]
 * link:../en/wiki.html[WiKi]
 --
-
-toc::[]
 
 [.translate]
 == Translate Slint

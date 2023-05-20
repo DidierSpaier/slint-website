@@ -34,10 +34,10 @@ rm -rf "$WIP"
 rm -rf "$CWD"/HandBook "$CWD"/HandBook14.2.1 "$CWD"/homepage "$CWD"/wiki
 echo "Press Enter to continue or Ctrl+C to bail out."
 read -r
-mkdir -p "$WIP/html"
+mkdir -p "$WIP/html/doc"
 
 SLINTDOCS="$github/slint-translations"
-PAGES="home HandBook oldHandBook support wiki"
+PAGES="home HandBook oldHandBook support wiki news"
 
 feed_support_and_documentation() {
 	# support is extracted from HandBook
@@ -58,7 +58,7 @@ feed_support_and_documentation() {
 		echo
 		echo 'toc::[left]'
 		} >> "$WIP"/"$ll_TT".header.adoc
-		po4a-translate -M UTF-8 -m "$SLINTDOCS"/sources/HandBook/HandBook.adoc -f asciidoc -p "$handbookpo" -l "$WIP"/"${ll_TT}".HandBook.part.adoc
+		po4a-translate -k 60 -M UTF-8 -m "$SLINTDOCS"/sources/HandBook/HandBook.adoc -f asciidoc -p "$handbookpo" -l "$WIP"/"${ll_TT}".HandBook.part.adoc
 		cat "$WIP"/"$ll_TT".header.adoc "$WIP"/"${ll_TT}".HandBook.part.adoc > "$WIP"/"${ll_TT}".HandBook.adoc
 		asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$SLINTDOCS"/css/slint.css -D "$WIP" -a doctype=book "$WIP"/"${ll_TT}".HandBook.adoc -o "$WIP"/html/"$ll"/HandBook.html
 		sed -i 's@<p><a@<a@;s@</a></p>@</a>@;/langmen/s@.*@<p></p>\n&@;/"toc"/s@.*@<p></p>\n&@'  "$WIP"/html/"$ll"/HandBook.html
@@ -83,6 +83,32 @@ feed_support_and_documentation() {
 		sed -i 's@<p><a@<a@;s@</a></p>@</a>@;/langmen/s@.*@<p></p>\n&@;/"toc"/s@.*@<p></p>\n&@'  "$WIP"/html/"$ll"/support.html
 	done
 }
+feed_news() {
+	cp -a "$SLINTDOCS"/news/ "$CWD"/ || exit
+	cd "$CWD"/news || exit 1
+	msgen ./news.pot -o en_US.news.po
+	langs="$(find . -name  "*po"|sed "s@..@@"|cut -d_ -f1)"
+	header_news="$(echo "$langs"|sort|while read -r i; do echo "* link:../$i/news.html[${i#./}] "; done)"
+	for newspo in *.news.po; do
+		ll_TT=${newspo%.*.*}
+		ll="${ll_TT%_*}"
+		cp ../headers/"$ll_TT".header.adoc "$WIP"
+		{
+		echo "$header_news"
+		echo
+		echo "--"
+		echo
+		echo
+		} >> "$WIP"/"$ll_TT".header.adoc
+		pwd
+		po4a-translate -k 40 -M UTF-8 -m "$SLINTDOCS"/sources/news/news.adoc -f asciidoc -p "$newspo" -l "$WIP"/"${ll_TT}".news.part.adoc
+		sed "/:toc/d;/:sectnum/d" "$WIP"/"$ll_TT".header.adoc >"$WIP"/prov.adoc
+		cat "$WIP"/prov.adoc "$WIP"/"${ll_TT}".news.part.adoc > "$WIP"/"${ll_TT}".news.adoc
+		asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$SLINTDOCS"/css/slint.css -D "$WIP" -a doctype=book "$WIP"/"${ll_TT}".news.adoc -o "$WIP"/html/"$ll"/news.html
+		sed -i 's@<p><a@<a@;s@</a></p>@</a>@;/langmen/s@.*@<p></p>\n&@;/"toc"/s@.*@<p></p>\n&@' "$WIP"/html/"$ll"/news.html
+		sleep 1
+	done
+}
 feed_homepage() {
 	cp -a "$SLINTDOCS"/homepage/ "$CWD"/ || exit
 	cd "$CWD"/homepage || exit 1
@@ -98,12 +124,12 @@ feed_homepage() {
 		echo
 		echo "--"
 		echo
-		echo 'toc::[]'
 		echo
 		} >> "$WIP"/"$ll_TT".header.adoc
 		pwd
-		po4a-translate -M UTF-8 -m "$SLINTDOCS"/sources/homepage/homepage.adoc -f asciidoc -p "$homepagepo" -l "$WIP"/"${ll_TT}".homepage.part.adoc
-		cat "$WIP"/"$ll_TT".header.adoc "$WIP"/"${ll_TT}".homepage.part.adoc > "$WIP"/"${ll_TT}".homepage.adoc
+		po4a-translate -k 40 -M UTF-8 -m "$SLINTDOCS"/sources/homepage/homepage.adoc -f asciidoc -p "$homepagepo" -l "$WIP"/"${ll_TT}".homepage.part.adoc
+		sed "/:toc/d;/:sectnum/d" "$WIP"/"$ll_TT".header.adoc >"$WIP"/prov.adoc
+		cat "$WIP"/prov.adoc "$WIP"/"${ll_TT}".homepage.part.adoc > "$WIP"/"${ll_TT}".homepage.adoc
 		asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$SLINTDOCS"/css/slint.css -D "$WIP" -a doctype=book "$WIP"/"${ll_TT}".homepage.adoc -o "$WIP"/html/"$ll"/home.html
 		sed -i 's@<p><a@<a@;s@</a></p>@</a>@;/langmen/s@.*@<p></p>\n&@;/"toc"/s@.*@<p></p>\n&@' "$WIP"/html/"$ll"/home.html
 		sleep 1
@@ -125,7 +151,7 @@ en"
 #echo "$header_wiki"
 #echo "$langs"|sort|while read -r i; do echo "* link:../$i/wiki.html[${i#./}] "; done
 	for ll_TT in $locales; do
-		cp ../headers_nonum/"$ll_TT".header.adoc "$WIP"/"$ll_TT".wiki.adoc
+		sed "/:toclevels: 2/d;/:sectnums:/d" ../headers/"$ll_TT".header.adoc > "$WIP"/"$ll_TT".wiki.adoc
 		{
 		echo "$header_wiki"
 		echo
@@ -189,19 +215,18 @@ complete_missing_with_english() {
 }
 
 cp "$CWD"/htaccess/.htaccess "$WIP"/html
+cd "$CWD"/doc || exit 1
+feed_news
 feed_wiki
 feed_homepage
 feed_support_and_documentation
 feed_HandBook14_2_1
 complete_missing_with_english
 cd "$CWD"/doc || exit 1
+cp *.png "$WIP"/html/doc/
 asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$CWD"/css/slint.css -D "$WIP" "$CWD"/doc/translate_slint.adoc -o "$WIP"/html/doc/translate_slint.html
 sed -i 's@<p><a@<a@;s@</a></p>@</a>@;/"toc"/s@.*@<p></p>\n&@;/"toc"/s@.*@<p></p>\n&@' "$WIP"/html/doc/translate_slint.html
 asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$CWD"/css/slint.css -D "$WIP" "$CWD"/doc/internationalization_and_localization_of_shell_scripts.adoc -o "$WIP"/html/doc/internationalization_and_localization_of_shell_scripts.html
 cp "$CWD"/doc/shell_and_bash_scripts.html "$WIP"/html/doc/ || exit 1
-#(
-#cd "$CWD" || exit 1
-#cp -r forSlackware old pub "$WIP"/html/ || exit 1
-#)
 sudo rsync --verbose -avP --exclude-from="$CWD"/exclude -H --delete-after "$CWD"/wip/html/ /var/www/htdocs/ 
-#rm -rf "$CWD"/homepage "$CWD"/wiki "$CWD"/HandBook "$CWD"/HandBook14.2.1
+rm -rf "$CWD"/homepage "$CWD"/wiki "$CWD"/HandBook "$CWD"/HandBook14.2.1 "$CWD"/news

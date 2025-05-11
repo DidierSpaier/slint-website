@@ -4,7 +4,8 @@
 # Run this script from  the root of the clone of: https://github.com/DidierSpaier/slint-website
 
 # The whole website accessed from https://slint.fr can be rebuilt locally after an update.
-# We make a local rsync on the apache server: $WIP/html => /var/www/htdocs
+# You can make a local rsync on the apache server: $WIP/html => /var/www/htdocs to check the
+# website locally, uncommenting line 233
 # All pages are in folders by language, not in the web site directory.
 # The header of each page will include the list of languages in which it is available
 # This is true for:
@@ -19,13 +20,14 @@
 # TODO: write a Packages and/or Software page.
 
 # PO files use the ll_TT scheme, but unless there be several locales per language,
-# We store the web pages in directories named $ll the per language directories we create, to store
-# in them the English # verson of files not available in this language.
+# we store the web pages in directories named $ll the per language directories we create, to store
+# in them the English version of files not available in this language.
 # We first need to build the header.html files. they include a line of links, then a line of
 # languages in other languages in which each page is available
-# To select the languages to include we need to know in which languages # each page has been
+# To select the languages to include we need to know in which languages each page has been
 # translated. but as the 'support' pages are built extracting parts of the handbook we need only
 # to check HandBook and homepage.
+[ "$(id -u)" -eq 0 ] && echo "Please run this script as regular user."
 CWD="$(pwd)"
 github=$(cd "$CWD" && cd .. && pwd)
 ALL_LANGUAGES="de el en es fr it ja nl pl pt pt_BR ru sv uk"
@@ -228,5 +230,6 @@ asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$
 sed -i 's@<p><a@<a@;s@</a></p>@</a>@;/"toc"/s@.*@<p></p>\n&@;/"toc"/s@.*@<p></p>\n&@' "$WIP"/html/doc/translate_slint.html
 asciidoctor -a stylesdir=../css -a stylesheet=slint.css -a linkcss -a copycss="$CWD"/css/slint.css -D "$WIP" "$CWD"/doc/internationalization_and_localization_of_shell_scripts.adoc -o "$WIP"/html/doc/internationalization_and_localization_of_shell_scripts.html
 cp "$CWD"/doc/shell_and_bash_scripts.html "$WIP"/html/doc/ || exit 1
-sudo rsync --verbose -avP --exclude-from="$CWD"/exclude -H --delete-after "$CWD"/wip/html/ /var/www/htdocs/ 
+# Uncomment the folowing line to  
+# sudo rsync --verbose -avP --exclude-from="$CWD"/exclude -H --delete-after "$CWD"/wip/html/ /var/www/htdocs/ 
 rm -rf "$CWD"/homepage "$CWD"/wiki "$CWD"/HandBook "$CWD"/HandBook14.2.1 "$CWD"/news
